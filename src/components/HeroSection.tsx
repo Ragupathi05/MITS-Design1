@@ -73,7 +73,7 @@ const HeroSection = () => {
           style={{ zIndex: i === current ? 1 : 0 }}
         >
           <img src={s.image} alt={s.alt} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,31,58,0.82),rgba(11,31,58,0.58))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,31,58,0.88),rgba(11,31,58,0.62))]" />
         </motion.div>
       ))}
 
@@ -91,7 +91,7 @@ const HeroSection = () => {
               <p className="text-secondary font-body font-semibold tracking-[0.16em] uppercase text-xs md:text-sm mb-4">
                 Madanapalle Institute of Technology & Science
               </p>
-              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5 leading-tight max-w-4xl mx-auto">
+              <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-5 leading-tight max-w-5xl mx-auto">
                 {slide.headline}
               </h1>
               <AnimatePresence mode="wait">
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.45 }}
-                  className="text-secondary text-sm md:text-base max-w-2xl mx-auto mb-3 font-semibold"
+                  className="text-secondary text-sm md:text-base max-w-3xl mx-auto mb-3 font-semibold"
                 >
                   {authorityLines[authorityIndex]}
                 </motion.p>
@@ -146,7 +146,7 @@ const HeroSection = () => {
           <a
             href="#about"
             aria-label="Scroll to About section"
-            className="text-primary-foreground/75 hover:text-secondary transition-colors animate-bounce"
+            className="text-primary-foreground/75 hover:text-secondary transition-colors"
           >
             <ChevronDown className="w-5 h-5" />
           </a>

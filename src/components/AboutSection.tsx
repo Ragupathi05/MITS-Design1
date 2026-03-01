@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
@@ -21,29 +21,29 @@ const AboutSection = () => {
               research, and industry collaboration work together to prepare students for global careers and societal impact.
             </p>
             <div className="space-y-6">
-              <div className="flex gap-4 group cursor-pointer">
-                <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
+              <div className="flex gap-4 group">
+                <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-secondary transition-all duration-300">
                   <Target className="w-6 h-6 text-primary-foreground group-hover:text-secondary-foreground transition-colors" />
                 </div>
-                <div className="group-hover:translate-x-1 transition-all duration-300">
+                <div>
                   <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">Our Mission</h3>
                   <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">To impart quality education, foster innovation, and develop skilled professionals who contribute to society.</p>
                 </div>
               </div>
-              <div className="flex gap-4 group cursor-pointer">
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <div className="flex gap-4 group">
+                <div className="w-12 h-12 rounded-md bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
                   <Eye className="w-6 h-6 text-secondary-foreground group-hover:text-primary-foreground transition-colors" />
                 </div>
-                <div className="group-hover:translate-x-1 transition-all duration-300">
+                <div>
                   <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">Our Vision</h3>
                   <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">To be a globally recognized institution of excellence in education, research, and innovation.</p>
                 </div>
               </div>
-              <div className="flex gap-4 group cursor-pointer">
-                <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
+              <div className="flex gap-4 group">
+                <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-secondary transition-all duration-300">
                   <Award className="w-6 h-6 text-primary-foreground group-hover:text-secondary-foreground transition-colors" />
                 </div>
-                <div className="group-hover:translate-x-1 transition-all duration-300">
+                <div>
                   <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">NAAC A+ Accredited</h3>
                   <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">Recognized for academic excellence and quality standards by the National Assessment and Accreditation Council.</p>
                 </div>
@@ -59,8 +59,8 @@ const AboutSection = () => {
           </ScrollReveal>
           <ScrollReveal direction="right" delay={0.2}>
             <div className="relative group">
-              <img src={campusBuilding} alt="MITS Campus Building" className="rounded-2xl shadow-2xl w-full group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300" />
-              <div className="absolute -bottom-6 -left-6 bg-primary rounded-xl p-6 shadow-xl hidden md:block group-hover:bg-secondary group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
+              <img src={campusBuilding} alt="MITS Campus Building" className="rounded-lg shadow-xl w-full group-hover:shadow-2xl transition-all duration-300" />
+              <div className="absolute -bottom-6 -left-6 bg-primary rounded-md p-6 shadow-lg hidden md:block group-hover:bg-secondary transition-all duration-300">
                 <p className="text-secondary font-display text-3xl font-bold group-hover:text-secondary-foreground">25+</p>
                 <p className="text-primary-foreground/80 text-sm group-hover:text-primary/80">Years of Excellence</p>
               </div>

@@ -50,7 +50,7 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
 
 const RankingsSection = () => {
   return (
-    <section className="py-20 bg-background" id="trust">
+    <section className="py-24 bg-muted" id="trust">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
@@ -64,8 +64,8 @@ const RankingsSection = () => {
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {rankings.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 0.1}>
-              <div className="text-center group bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
-                <div className="w-16 h-16 mx-auto rounded-xl bg-secondary/15 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+              <div className="text-center group bg-card rounded-lg p-6 border border-border shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
+                <div className="w-16 h-16 mx-auto rounded-md bg-secondary/15 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
                   <item.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <p className="font-display text-2xl font-bold text-primary mb-1">
@@ -79,7 +79,7 @@ const RankingsSection = () => {
         </div>
 
         <ScrollReveal delay={0.2}>
-          <div className="mt-10 border border-border rounded-2xl bg-card p-6 md:p-8 shadow-sm">
+          <div className="mt-10 border border-border rounded-lg bg-card p-6 md:p-8 shadow-sm">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {institutionalCounters.map((counter) => (
                 <div key={counter.label} className="text-center">

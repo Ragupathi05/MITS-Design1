@@ -40,7 +40,7 @@ const CountUp = ({ target, suffix, duration = 2 }: { target: number; suffix: str
 
 const PlacementsSection = () => {
   return (
-    <section className="py-20 bg-navy-gradient text-primary-foreground">
+    <section className="py-24 bg-navy-gradient text-primary-foreground">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
@@ -51,14 +51,14 @@ const PlacementsSection = () => {
             </p>
           </div>
         </ScrollReveal>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 0.1}>
-              <div className="text-center bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-5">
-                <div className="w-16 h-16 mx-auto rounded-full bg-secondary/20 flex items-center justify-center mb-4">
+              <div className="text-center bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-6 md:p-7">
+                <div className="w-16 h-16 mx-auto rounded-md bg-secondary/20 flex items-center justify-center mb-4">
                   <stat.icon className="w-8 h-8 text-secondary" />
                 </div>
-                <p className="font-display text-3xl font-bold text-secondary">
+                <p className="font-display text-4xl md:text-5xl font-bold text-secondary leading-none">
                   <CountUp target={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="text-primary-foreground/70 text-sm mt-1">{stat.label}</p>
@@ -70,11 +70,11 @@ const PlacementsSection = () => {
         <ScrollReveal delay={0.25}>
           <div className="max-w-4xl mx-auto mt-12 text-center">
             <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-4">Top Recruiters</p>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
               {recruiters.map((name) => (
                 <div
                   key={name}
-                  className="px-4 py-2 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground/90 text-sm font-semibold"
+                  className="px-4 py-3 rounded-sm border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground/90 text-sm font-semibold"
                 >
                   {name}
                 </div>

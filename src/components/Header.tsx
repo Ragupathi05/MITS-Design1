@@ -78,7 +78,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-3 group min-w-0 flex-1 lg:flex-none" onClick={() => setMobileOpen(false)}>
           <div className="rounded-md bg-white p-1.5 shadow-sm transition-all duration-300 shrink-0">
             <img
-              src="/mits-logo.jfif"
+              src={`${import.meta.env.BASE_URL}mits-logo.jfif`}
               alt="MITS logo"
               className="w-8 h-8 object-contain"
             />
