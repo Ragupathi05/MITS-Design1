@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 98%;
+    --foreground: 217 58% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 45% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 45% 12%;
+
+    --primary: 215 69% 14%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 46 71% 47%;
+    --secondary-foreground: 214 53% 11%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 46 71% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 46 71% 47%;
+
+    --radius: 0.5rem;
+
+    --gold: 46 71% 47%;
+    --gold-light: 46 71% 58%;
+    --gold-dark: 46 71% 38%;
+    --navy: 215 69% 14%;
+    --navy-light: 215 56% 23%;
+    --navy-dark: 215 72% 10%;
+    --brand-red: 359 79% 39%;
+    --brand-navy: 215 69% 14%;
+    --brand-gold: 46 71% 47%;
+    --brand-muted: 220 20% 96%;
+    --brand-text: 214 53% 11%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Source Sans 3', sans-serif;
+  }
+
+  .dark {
+    --background: 216 70% 6%;
+    --foreground: 210 40% 95%;
+    --card: 216 60% 10%;
+    --card-foreground: 210 40% 95%;
+    --popover: 216 60% 10%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 45 85% 55%;
+    --primary-foreground: 216 60% 12%;
+    --secondary: 216 50% 25%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 216 50% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 45 85% 55%;
+    --accent-foreground: 216 60% 12%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 216 40% 20%;
+    --input: 216 40% 20%;
+    --ring: 45 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+  }
+  .bg-navy-gradient {
+    background: linear-gradient(135deg, hsl(var(--navy-dark)) 0%, hsl(var(--navy)) 50%, hsl(var(--navy-light)) 100%);
+  }
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)) 0%, hsl(var(--gold)) 50%, hsl(var(--gold-light)) 100%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
