@@ -6,18 +6,24 @@ const programs = {
   undergraduate: {
     icon: GraduationCap,
     title: "Undergraduate",
+    programCount: 18,
+    departmentCount: 9,
     description: "Comprehensive B.Tech pathways with strong academic mentoring and outcome-based curriculum.",
     highlights: ["Industry-aligned curriculum", "Project-based learning", "Internship pathways", "Modern laboratory infrastructure"],
   },
   postgraduate: {
     icon: BookOpen,
     title: "Postgraduate",
+    programCount: 10,
+    departmentCount: 7,
     description: "Advanced M.Tech, MBA, and interdisciplinary programs focused on specialization and leadership.",
     highlights: ["Advanced specialization tracks", "Research-integrated coursework", "Management and technology blend", "Academic-industry interface"],
   },
   phd: {
     icon: FlaskConical,
     title: "PhD",
+    programCount: 12,
+    departmentCount: 8,
     description: "Doctoral research opportunities with faculty mentorship, funded projects, and publication support.",
     highlights: ["Interdisciplinary research", "Sponsored projects", "Publication ecosystem", "Innovation and patent support"],
   },
@@ -27,19 +33,33 @@ const ProgramPane = ({
   title,
   description,
   highlights,
+  programCount,
+  departmentCount,
   icon: Icon,
 }: {
   title: string;
   description: string;
   highlights: string[];
+  programCount: number;
+  departmentCount: number;
   icon: typeof GraduationCap;
 }) => (
-  <div className="bg-card rounded-2xl p-8 shadow-md border border-secondary/35">
-    <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-6">
+  <div className="bg-card rounded-lg p-8 shadow-sm border border-secondary/35">
+    <div className="w-14 h-14 rounded-md bg-primary flex items-center justify-center mb-6">
       <Icon className="w-7 h-7 text-primary-foreground" />
     </div>
     <h3 className="font-display text-2xl font-bold text-card-foreground mb-3">{title}</h3>
     <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
+    <div className="grid grid-cols-2 gap-3 mb-6">
+      <div className="border border-border rounded-sm px-3 py-2 bg-muted/40">
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">Programs</p>
+        <p className="font-display text-xl font-bold text-primary">{programCount}+</p>
+      </div>
+      <div className="border border-border rounded-sm px-3 py-2 bg-muted/40">
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">Departments</p>
+        <p className="font-display text-xl font-bold text-primary">{departmentCount}+</p>
+      </div>
+    </div>
     <ul className="grid md:grid-cols-2 gap-3">
       {highlights.map((item) => (
         <li key={item} className="text-sm text-foreground/80 flex items-center gap-2">
@@ -53,7 +73,7 @@ const ProgramPane = ({
 
 const AcademicsSection = () => {
   return (
-    <section id="academics" className="py-20 bg-muted">
+    <section id="academics" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
@@ -68,7 +88,7 @@ const AcademicsSection = () => {
         </ScrollReveal>
         <ScrollReveal>
           <Tabs defaultValue="undergraduate" className="max-w-5xl mx-auto">
-            <TabsList className="grid grid-cols-3 w-full h-auto bg-primary/10 p-1.5 rounded-xl">
+            <TabsList className="grid grid-cols-3 w-full h-auto bg-primary/10 p-1.5 rounded-md">
               <TabsTrigger value="undergraduate" className="py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 Undergraduate
               </TabsTrigger>

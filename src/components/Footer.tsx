@@ -52,6 +52,7 @@ const Footer = () => {
                 { label: "Prospectus", href: "/admissions" },
                 { label: "Important Dates", href: "/admissions" },
                 { label: "Scholarships", href: "/admissions" },
+                { label: "Mandatory Disclosure", href: "/about" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link to={link.href} className="text-primary-foreground/70 hover:text-secondary transition-colors">{link.label}</Link>
@@ -61,7 +62,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-display font-semibold text-secondary mb-4">Academics Links</h3>
+            <h3 className="font-display font-semibold text-secondary mb-4">Academics & Compliance</h3>
             <ul className="space-y-2 text-sm">
               {[
                 { label: "Departments", href: "/departments" },
@@ -69,6 +70,8 @@ const Footer = () => {
                 { label: "Examinations", href: "/examinations" },
                 { label: "Research", href: "/research" },
                 { label: "Campus Life", href: "/campus-life" },
+                { label: "NAAC", href: "/about" },
+                { label: "NIRF", href: "/about" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link to={link.href} className="text-primary-foreground/70 hover:text-secondary transition-colors">{link.label}</Link>
@@ -92,6 +95,7 @@ const Footer = () => {
             </div>
             <div className="mt-6 text-sm space-y-2">
               <a href="#" className="block text-primary-foreground/70 hover:text-secondary transition-colors">Privacy Policy</a>
+              <a href="#" className="block text-primary-foreground/70 hover:text-secondary transition-colors">Mandatory Disclosure</a>
               <a href="#" className="block text-primary-foreground/70 hover:text-secondary transition-colors">Sitemap</a>
             </div>
           </div>

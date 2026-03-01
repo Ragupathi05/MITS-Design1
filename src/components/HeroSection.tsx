@@ -11,8 +11,8 @@ const slides = [
   {
     image: campusHero,
     alt: "MITS Campus Aerial View",
-    headline: "Welcome to MITS – Excellence in Education & Innovation",
-    sub: "A premier institution with NAAC A+ accreditation, blending academic rigor, research excellence, and value-driven learning.",
+    headline: "MITS: Academic Excellence, Research, and Institutional Leadership",
+    sub: "Madanapalle Institute of Technology & Science advances rigorous education, credible research output, and outcome-based learning for national and global impact.",
   },
   {
     image: campusLibrary,
@@ -31,12 +31,6 @@ const slides = [
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [authorityIndex, setAuthorityIndex] = useState(0);
-
-  const authorityLines = [
-    "NAAC A+ Accredited | UGC Recognized | 25+ Years of Excellence",
-    "Outcome-Based Education | Research Excellence | Strong Industry Connect",
-  ];
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
 
@@ -45,14 +39,6 @@ const HeroSection = () => {
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
   }, [next, paused]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setAuthorityIndex((prev) => (prev + 1) % authorityLines.length);
-    }, 4200);
-
-    return () => clearInterval(timer);
-  }, [authorityLines.length]);
 
   const slide = slides[current];
 
@@ -94,18 +80,14 @@ const HeroSection = () => {
               <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-5 leading-tight max-w-5xl mx-auto">
                 {slide.headline}
               </h1>
-              <AnimatePresence mode="wait">
-                <motion.p
-                  key={authorityIndex}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.45 }}
-                  className="text-secondary text-sm md:text-base max-w-3xl mx-auto mb-3 font-semibold"
-                >
-                  {authorityLines[authorityIndex]}
-                </motion.p>
-              </AnimatePresence>
+              <motion.p
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-secondary text-sm md:text-base max-w-3xl mx-auto mb-3 font-semibold"
+              >
+                NAAC A+ Accredited | UGC Recognized | AICTE Approved
+              </motion.p>
               <p className="text-primary-foreground/90 text-base md:text-lg max-w-3xl mx-auto mb-2 font-body">
                 {slide.sub}
               </p>

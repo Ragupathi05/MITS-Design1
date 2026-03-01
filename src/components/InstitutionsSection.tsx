@@ -7,6 +7,8 @@ const institutions = [
   {
     icon: Building2,
     title: "MITS Deemed to be University",
+    established: "Established: 1998",
+    accreditationInfo: "Accreditation: NAAC A+ | UGC Recognized",
     description: "MITS Deemed to be University advances multidisciplinary education with a strong focus on research outcomes, international partnerships, and governance aligned to national quality standards.",
     points: ["Research-driven programs", "Global collaborations", "Outcome-based academic regulations"],
     badges: ["NAAC A+", "UGC Recognized", "NIRF Participating"],
@@ -16,6 +18,8 @@ const institutions = [
   {
     icon: GraduationCap,
     title: "MITS Autonomous Institute",
+    established: "Established: 1998",
+    accreditationInfo: "Accreditation: AICTE Approved | NBA Accredited",
     description: "MITS Autonomous Institute delivers a rigorous, industry-oriented academic model with curriculum flexibility, contemporary pedagogy, and consistent student outcomes.",
     points: ["Industry-oriented curriculum", "Strong placements", "Continuous academic quality assurance"],
     badges: ["AICTE Approved", "NBA Accredited", "Autonomous Status"],
@@ -44,6 +48,8 @@ const InstitutionsSection = () => {
                   <inst.icon className={`w-8 h-8 ${inst.iconColor}`} />
                 </div>
                 <h3 className="font-display text-3xl font-bold text-card-foreground mb-4 leading-tight">{inst.title}</h3>
+                <p className="text-xs uppercase tracking-wider text-primary/80 font-semibold mb-1">{inst.established}</p>
+                <p className="text-sm text-primary mb-4 font-medium">{inst.accreditationInfo}</p>
                 <p className="text-muted-foreground leading-relaxed mb-5">{inst.description}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {inst.badges.map((item) => (
