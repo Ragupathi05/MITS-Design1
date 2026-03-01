@@ -11,6 +11,13 @@ const rankings = [
   { icon: Award, title: "NIRF Ranking", subtitle: "National Presence", value: 100, suffix: " Top" },
 ];
 
+const institutionalCounters = [
+  { label: "Years of Excellence", value: 25, suffix: "+" },
+  { label: "Students", value: 12000, suffix: "+" },
+  { label: "Faculty", value: 600, suffix: "+" },
+  { label: "Recruiters", value: 200, suffix: "+" },
+];
+
 const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -70,6 +77,21 @@ const RankingsSection = () => {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.2}>
+          <div className="mt-10 border border-border rounded-2xl bg-card p-6 md:p-8 shadow-sm">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {institutionalCounters.map((counter) => (
+                <div key={counter.label} className="text-center">
+                  <p className="font-display text-3xl md:text-4xl font-bold text-primary mb-1">
+                    <CountUp target={counter.value} suffix={counter.suffix} />
+                  </p>
+                  <p className="text-muted-foreground text-sm md:text-base">{counter.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

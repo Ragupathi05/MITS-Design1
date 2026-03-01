@@ -1,19 +1,24 @@
 import { Building2, GraduationCap, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const institutions = [
   {
     icon: Building2,
     title: "MITS Deemed to be University",
+    description: "A research-oriented institutional ecosystem focused on advanced academics, interdisciplinary inquiry, and global engagement.",
     points: ["Research-driven programs", "Global collaborations"],
+    badges: ["NAAC A+", "UGC Recognized", "NIRF Participating"],
     color: "bg-primary",
     iconColor: "text-primary-foreground",
   },
   {
     icon: GraduationCap,
     title: "MITS Autonomous Institute",
+    description: "An industry-aligned autonomous institution delivering outcome-based curriculum and consistent placement outcomes.",
     points: ["Industry-oriented curriculum", "Strong placements"],
+    badges: ["AICTE Approved", "NBA Accredited", "Autonomous Status"],
     color: "bg-secondary",
     iconColor: "text-secondary-foreground",
   },
@@ -39,6 +44,14 @@ const InstitutionsSection = () => {
                   <inst.icon className={`w-8 h-8 ${inst.iconColor}`} />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-card-foreground mb-4">{inst.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-5">{inst.description}</p>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {inst.badges.map((item) => (
+                    <Badge key={item} variant="outline" className="border-secondary/50 text-foreground">
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
                 <ul className="space-y-2 mb-8">
                   {inst.points.map((point) => (
                     <li key={point} className="text-muted-foreground flex items-center gap-2">

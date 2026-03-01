@@ -1,7 +1,9 @@
 import { TrendingUp, Users, Building, IndianRupee } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
+import { Button } from "@/components/ui/button";
 
 const stats = [
   { icon: IndianRupee, value: 21, suffix: " LPA", label: "Highest Package" },
@@ -77,6 +79,13 @@ const PlacementsSection = () => {
                   {name}
                 </div>
               ))}
+            </div>
+            <div className="mt-8">
+              <Link to="/placements">
+                <Button className="bg-secondary text-secondary-foreground hover:bg-gold-light font-semibold px-6 text-sm">
+                  Explore Placements
+                </Button>
+              </Link>
             </div>
           </div>
         </ScrollReveal>

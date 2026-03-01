@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer id="footer" className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-11 h-11 rounded-md bg-white p-1.5 flex items-center justify-center">
@@ -45,6 +45,23 @@ const Footer = () => {
               {["Apply Now", "Prospectus", "Important Dates", "Scholarships", "Eligibility"].map((link) => (
                 <li key={link}>
                   <a href="#" className="text-primary-foreground/70 hover:text-secondary transition-colors">{link}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-display font-semibold text-secondary mb-4">Academics Links</h3>
+            <ul className="space-y-2 text-sm">
+              {[
+                { label: "Departments", href: "/departments" },
+                { label: "Library", href: "/library" },
+                { label: "Examinations", href: "/examinations" },
+                { label: "Research", href: "/research" },
+                { label: "Campus Life", href: "/campus-life" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link to={link.href} className="text-primary-foreground/70 hover:text-secondary transition-colors">{link.label}</Link>
                 </li>
               ))}
             </ul>
