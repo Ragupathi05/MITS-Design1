@@ -22,11 +22,11 @@ const navItems = [
   { label: "Campus Life", href: "/campus-life" },
   {
     label: "News",
-    href: "/",
+    href: "/news-events",
     children: [
-      { label: "Latest News", href: "/#news" },
-      { label: "Events", href: "/#news" },
-      { label: "Announcements", href: "/#news" },
+      { label: "Latest News", href: "/news-events" },
+      { label: "Events", href: "/news-events" },
+      { label: "Announcements", href: "/news-events" },
     ],
   },
   { label: "Contact", href: "/contact" },

@@ -117,3 +117,33 @@ html {
 body {
   overflow-x: hidden;
 }
+
+@keyframes recruiter-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .recruiter-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: max-content;
+    animation: recruiter-marquee 28s linear infinite;
+  }
+
+  .recruiter-logo-card {
+    @apply h-16 w-36 md:w-40 rounded-md border border-primary-foreground/20 bg-white flex items-center justify-center px-3 shadow-sm;
+    flex-shrink: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recruiter-marquee-track {
+    animation: none;
+  }
+}

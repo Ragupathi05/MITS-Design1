@@ -12,7 +12,26 @@ const stats = [
   { icon: Building, value: 200, suffix: "+", label: "Recruiters" },
 ];
 
-const recruiters = ["TCS", "Infosys", "Wipro", "Accenture", "Cognizant", "Capgemini"];
+const recruiters = [
+  { name: "Accenture", logo: "accenture.png" },
+  { name: "Amazon", logo: "amazon.png" },
+  { name: "Bosch", logo: "bosch.png" },
+  { name: "Capgemini", logo: "capgemini.png" },
+  { name: "Cognizant", logo: "congnizant.png" },
+  { name: "Deloitte", logo: "Deloitte.png" },
+  { name: "Google", logo: "google.webp" },
+  { name: "HCLTech", logo: "hcltech.png" },
+  { name: "IBM", logo: "IBM.png" },
+  { name: "Infosys", logo: "infosys.png" },
+  { name: "L&T", logo: "L&T.png" },
+  { name: "Mahindra", logo: "mahindra.png" },
+  { name: "Microsoft", logo: "microsoft.png" },
+  { name: "TCS", logo: "tcs.png" },
+  { name: "Wipro", logo: "wipro.png" },
+  { name: "Zoho", logo: "zoho.png" },
+];
+
+const getRecruiterLogoSrc = (logo: string) => `${import.meta.env.BASE_URL}recruiters/${logo}`;
 
 const CountUp = ({ target, suffix, duration = 2 }: { target: number; suffix: string; duration?: number }) => {
   const ref = useRef<HTMLSpanElement>(null);
@@ -70,16 +89,27 @@ const PlacementsSection = () => {
         <ScrollReveal delay={0.25}>
           <div className="max-w-4xl mx-auto mt-12 text-center">
             <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-4">Top Recruiters</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-              {recruiters.map((name) => (
-                <div
-                  key={name}
-                  className="px-4 py-3 rounded-sm border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground/90 text-sm font-semibold"
-                >
-                  {name}
-                </div>
-              ))}
+            <div className="relative overflow-hidden rounded-xl border border-primary-foreground/20 bg-primary-foreground/5 py-4">
+              <div className="recruiter-marquee-track">
+                {[...recruiters, ...recruiters].map((company, index) => (
+                  <div
+                    key={`${company.name}-${index}`}
+                    className="recruiter-logo-card"
+                    aria-hidden={index >= recruiters.length}
+                  >
+                    <img
+                      src={getRecruiterLogoSrc(company.logo)}
+                      alt={company.name}
+                      className="h-10 w-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
+            <p className="text-xs text-primary-foreground/60 mt-3">
+              Logos shown in original company colors.
+            </p>
             <div className="mt-8">
               <Link to="/placements">
                 <Button className="bg-secondary text-secondary-foreground hover:bg-gold-light font-semibold px-6 text-sm">

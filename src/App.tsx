@@ -14,6 +14,8 @@ import Contact from "./pages/Contact";
 import Departments from "./pages/Departments";
 import Library from "./pages/Library";
 import Examinations from "./pages/Examinations";
+import NewsEvents from "./pages/NewsEvents";
+import NewsEventDetail from "./pages/NewsEventDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +41,8 @@ const App = () => (
           <Route path="/departments" element={<Departments />} />
           <Route path="/library" element={<Library />} />
           <Route path="/examinations" element={<Examinations />} />
+          <Route path="/news-events" element={<NewsEvents />} />
+          <Route path="/news-events/:slug" element={<NewsEventDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
