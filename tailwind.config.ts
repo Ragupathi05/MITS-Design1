@@ -14,16 +14,14 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Source Sans 3', 'sans-serif'],
+        display: ['Cormorant Garamond', 'serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
-        brand: {
-          red: "#B31317",
-          navy: "#0B1F3A",
-          gold: "#C9A227",
-          muted: "#F8F9FB",
-          text: "#0B1B2B",
+        "brand-red": {
+          DEFAULT: "hsl(var(--brand-red))",
+          light: "hsl(var(--brand-red-light))",
+          dark: "hsl(var(--brand-red-dark))",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

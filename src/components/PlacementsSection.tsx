@@ -44,12 +44,7 @@ const CountUp = ({ target, suffix, duration = 2 }: { target: number; suffix: str
     const step = Math.ceil(target / (duration * 60));
     const timer = setInterval(() => {
       start += step;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(start);
-      }
+      if (start >= target) { setCount(target); clearInterval(timer); } else { setCount(start); }
     }, 1000 / 60);
     return () => clearInterval(timer);
   }, [isInView, target, duration]);
@@ -59,13 +54,13 @@ const CountUp = ({ target, suffix, duration = 2 }: { target: number; suffix: str
 
 const PlacementsSection = () => {
   return (
-    <section className="py-24 bg-navy-gradient text-primary-foreground">
+    <section className="py-24 bg-navy-gradient text-white">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">Career Success</p>
+            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-2">Career Success</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Placement Highlights</h2>
-            <p className="text-primary-foreground/70 text-lg max-w-xl mx-auto">
+            <p className="text-white/70 text-lg max-w-xl mx-auto">
               Our students are recruited by top companies across the globe.
             </p>
           </div>
@@ -73,14 +68,14 @@ const PlacementsSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 0.1}>
-              <div className="text-center bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-6 md:p-7">
-                <div className="w-16 h-16 mx-auto rounded-md bg-secondary/20 flex items-center justify-center mb-4">
-                  <stat.icon className="w-8 h-8 text-secondary" />
+              <div className="text-center bg-white/5 border border-white/10 rounded-lg p-6 md:p-7 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto rounded-md bg-accent/20 flex items-center justify-center mb-4">
+                  <stat.icon className="w-8 h-8 text-accent" />
                 </div>
-                <p className="font-display text-4xl md:text-5xl font-bold text-secondary leading-none">
+                <p className="font-display text-4xl md:text-5xl font-bold text-accent leading-none">
                   <CountUp target={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="text-primary-foreground/70 text-sm mt-1">{stat.label}</p>
+                <p className="text-white/70 text-sm mt-1">{stat.label}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -88,31 +83,19 @@ const PlacementsSection = () => {
 
         <ScrollReveal delay={0.25}>
           <div className="max-w-4xl mx-auto mt-12 text-center">
-            <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-4">Top Recruiters</p>
-            <div className="relative overflow-hidden rounded-xl border border-primary-foreground/20 bg-primary-foreground/5 py-4">
+            <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-4">Top Recruiters</p>
+            <div className="relative overflow-hidden rounded-xl border border-white/15 bg-white/5 py-4">
               <div className="recruiter-marquee-track">
                 {[...recruiters, ...recruiters].map((company, index) => (
-                  <div
-                    key={`${company.name}-${index}`}
-                    className="recruiter-logo-card"
-                    aria-hidden={index >= recruiters.length}
-                  >
-                    <img
-                      src={getRecruiterLogoSrc(company.logo)}
-                      alt={company.name}
-                      className="h-10 w-auto object-contain"
-                      loading="lazy"
-                    />
+                  <div key={`${company.name}-${index}`} className="recruiter-logo-card" aria-hidden={index >= recruiters.length}>
+                    <img src={getRecruiterLogoSrc(company.logo)} alt={company.name} className="h-10 w-auto object-contain" loading="lazy" />
                   </div>
                 ))}
               </div>
             </div>
-            <p className="text-xs text-primary-foreground/60 mt-3">
-              Logos shown in original company colors.
-            </p>
             <div className="mt-8">
               <Link to="/placements">
-                <Button className="bg-secondary text-secondary-foreground hover:bg-gold-light font-semibold px-6 text-sm">
+                <Button className="bg-accent text-accent-foreground hover:bg-gold-light font-bold px-6 text-sm rounded-full shadow-lg">
                   Explore Placements
                 </Button>
               </Link>

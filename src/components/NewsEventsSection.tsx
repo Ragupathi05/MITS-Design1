@@ -16,7 +16,7 @@ const NewsEventsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">Stay Updated</p>
+            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Stay Updated</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">News & Events</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Highlights from campus achievements, academic events, and institutional announcements.

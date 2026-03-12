@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">Student Voices</p>
+            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Student Voices</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Testimonials</h2>
           </div>
         </ScrollReveal>
@@ -55,11 +55,11 @@ const TestimonialsSection = () => {
                   transition={{ duration: 0.45 }}
                   className="w-full"
                 >
-                  <Quote className="w-8 h-8 text-secondary mb-4" />
+                  <Quote className="w-8 h-8 text-accent mb-4" />
                   <p className="text-muted-foreground mb-6 leading-relaxed italic text-lg">"{testimonials[active].text}"</p>
                   <div>
                     <p className="font-display font-semibold text-card-foreground text-xl">{testimonials[active].name}</p>
-                    <p className="text-muted-foreground text-sm">{testimonials[active].type} • {testimonials[active].role}</p>
+                    <p className="text-primary text-sm font-medium">{testimonials[active].type} • {testimonials[active].role}</p>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
                   key={i}
                   onClick={() => setActive(i)}
                   aria-label={`Go to testimonial ${i + 1}`}
-                  className={`h-2.5 rounded-full transition-all ${active === i ? "w-8 bg-secondary" : "w-2.5 bg-primary/25"}`}
+                  className={`h-2.5 rounded-full transition-all ${active === i ? "w-8 bg-primary" : "w-2.5 bg-secondary/25"}`}
                 />
               ))}
             </div>

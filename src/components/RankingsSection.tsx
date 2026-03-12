@@ -30,23 +30,13 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
     const step = Math.max(1, Math.ceil(target / 45));
     const timer = setInterval(() => {
       current += step;
-      if (current >= target) {
-        setCount(target);
-        clearInterval(timer);
-        return;
-      }
+      if (current >= target) { setCount(target); clearInterval(timer); return; }
       setCount(current);
     }, 16);
-
     return () => clearInterval(timer);
   }, [inView, target]);
 
-  return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
-  );
+  return <span ref={ref}>{count}{suffix}</span>;
 };
 
 const RankingsSection = () => {
@@ -61,17 +51,14 @@ const RankingsSection = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(11,31,58,0.87)_0%,rgba(11,31,58,0.72)_50%,rgba(11,31,58,0.87)_100%)]" />
-
-      {/* Glowing accent orbs for depth */}
-      <div className="absolute top-10 left-1/4 w-72 h-72 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-primary-foreground/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(11,31,58,0.90)_0%,rgba(11,31,58,0.75)_50%,rgba(11,31,58,0.90)_100%)]" />
+      <div className="absolute top-10 left-1/4 w-72 h-72 bg-accent/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-white/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">Trust & Accreditation</p>
+            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-2">Trust & Accreditation</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Institutional Credentials</h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
               MITS upholds national quality standards through accredited programs, strong governance, and consistent academic outcomes.
@@ -79,16 +66,15 @@ const RankingsSection = () => {
           </div>
         </ScrollReveal>
 
-        {/* Glassmorphism credential cards */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
           {rankings.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 0.1}>
-              <div className="text-center group rounded-xl p-6 border border-white/15 bg-white/8 backdrop-blur-md hover:bg-white/14 hover:-translate-y-1 hover:border-secondary/50 transition-all duration-300 h-full"
+              <div className="text-center group rounded-xl p-6 border border-white/15 backdrop-blur-md hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 h-full"
                 style={{ background: "rgba(255,255,255,0.07)" }}>
-                <div className="w-14 h-14 mx-auto rounded-lg bg-secondary/20 border border-secondary/30 flex items-center justify-center mb-4 group-hover:bg-secondary/40 transition-colors">
-                  <item.icon className="w-7 h-7 text-secondary" />
+                <div className="w-14 h-14 mx-auto rounded-lg bg-accent/20 border border-accent/30 flex items-center justify-center mb-4 group-hover:bg-accent/40 transition-colors">
+                  <item.icon className="w-7 h-7 text-accent" />
                 </div>
-                <p className="font-display text-2xl font-bold text-secondary mb-1">
+                <p className="font-display text-2xl font-bold text-accent mb-1">
                   <CountUp target={item.value} suffix={item.suffix} />
                 </p>
                 <p className="font-display text-base font-bold text-white leading-tight mb-1">{item.title}</p>
@@ -98,14 +84,13 @@ const RankingsSection = () => {
           ))}
         </div>
 
-        {/* Stats bar — glass strip */}
         <ScrollReveal delay={0.2}>
           <div className="mt-8 rounded-xl border border-white/15 backdrop-blur-md p-6 md:p-8"
             style={{ background: "rgba(255,255,255,0.06)" }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-x-0 md:divide-x md:divide-white/15">
               {institutionalCounters.map((counter, i) => (
                 <div key={counter.label} className={`text-center ${i > 0 ? "md:pl-6" : ""}`}>
-                  <p className="font-display text-3xl md:text-4xl font-bold text-secondary mb-1">
+                  <p className="font-display text-3xl md:text-4xl font-bold text-accent mb-1">
                     <CountUp target={counter.value} suffix={counter.suffix} />
                   </p>
                   <p className="text-white/65 text-sm md:text-base">{counter.label}</p>
