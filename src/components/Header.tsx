@@ -74,22 +74,38 @@ const Header = () => {
       </div>
 
       <div className={`bg-primary/95 backdrop-blur-md border-b border-primary-foreground/10 ${scrolled ? "" : ""}`}>
-      <div className="container mx-auto flex items-center justify-between h-16 lg:h-[72px] px-4 gap-3">
-        <Link to="/" className="flex items-center gap-3 group min-w-0 flex-1 lg:flex-none" onClick={() => setMobileOpen(false)}>
-          <div className="rounded-md bg-white p-1.5 shadow-sm transition-all duration-300 shrink-0">
+      <div className="container mx-auto flex items-center justify-between h-16 lg:h-20 px-4 gap-3">
+        <Link to="/" className="flex items-center min-w-0 flex-1 lg:flex-none" onClick={() => setMobileOpen(false)}>
+          <div className="flex items-center gap-2 sm:gap-3 transition-all duration-300 shrink-0 max-w-full">
             <img
               src={`${import.meta.env.BASE_URL}mits-logo.png`}
               alt="MITS logo"
-              className="w-8 h-8 object-contain"
+              className="h-11 sm:h-13 lg:h-16 w-auto object-contain shrink-0"
             />
-          </div>
-          <div className="hidden sm:block min-w-0">
-            <p className="font-display font-bold text-primary-foreground text-xl md:text-2xl leading-none group-hover:text-secondary transition-colors">
-              MITS
-            </p>
-            <p className="text-primary-foreground/75 leading-tight transition-all duration-300 text-[10px] md:text-xs max-w-[200px] md:max-w-[300px] lg:max-w-[360px] break-words">
-              Madanapalle Institute of Technology & Science (Deemed to be University)
-            </p>
+            <div className="hidden sm:flex items-center gap-3 min-w-0">
+              <div className="min-w-0">
+                <p className="text-secondary font-black text-2xl lg:text-4xl leading-none tracking-tight" style={{fontFamily:"var(--font-display)"}}>
+                  MITS
+                </p>
+                {/* underline below MITS */}
+                <div className="h-[2px] bg-secondary rounded-full mt-1 mb-0.5 w-full" />
+                <p className="text-secondary/90 font-extrabold text-[10px] lg:text-sm leading-none tracking-widest">
+                  MADANAPALLE
+                </p>
+              </div>
+              <div className="h-10 lg:h-12 w-px bg-primary-foreground/25 shrink-0" />
+              <div className="min-w-0 leading-none">
+                <p className="text-primary-foreground font-bold text-[10px] lg:text-[0.95rem] tracking-wide" style={{fontFamily:"var(--font-body)", letterSpacing:"0.04em"}}>
+                  Madanapalle Institute of
+                </p>
+                <p className="text-primary-foreground font-bold text-[10px] lg:text-[0.95rem] tracking-wide mt-0.5" style={{fontFamily:"var(--font-body)", letterSpacing:"0.04em"}}>
+                  Technology &amp; Science
+                </p>
+                <p className="text-secondary/80 font-semibold text-[8px] lg:text-[11px] uppercase tracking-[0.14em] mt-1" style={{fontFamily:"var(--font-body)"}}>
+                  Deemed to be University
+                </p>
+              </div>
+            </div>
           </div>
         </Link>
 
@@ -97,7 +113,7 @@ const Header = () => {
           {navItems.map((item) => (
             item.children ? (
               <DropdownMenu key={item.label}>
-                <DropdownMenuTrigger className="text-primary-foreground/85 hover:text-secondary transition-colors text-sm font-medium font-body flex items-center gap-1 outline-none">
+                <DropdownMenuTrigger className="text-primary-foreground/85 hover:text-secondary transition-colors text-base font-semibold font-body flex items-center gap-1 outline-none">
                   {item.label}
                   <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
@@ -115,7 +131,7 @@ const Header = () => {
               <Link
                 key={item.label}
                 to={item.href}
-                className="text-primary-foreground/85 hover:text-secondary transition-colors text-sm font-medium font-body relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-secondary after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+                className="text-primary-foreground/85 hover:text-secondary transition-colors text-base font-semibold font-body relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-secondary after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
               >
                 {item.label}
               </Link>

@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import campusHero from "@/assets/campus-hero.png";
 import campusLibrary from "@/assets/campus-library.png";
@@ -44,7 +44,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative h-[78vh] md:h-[84vh] min-h-[560px] flex items-center justify-center overflow-hidden pt-16 md:pt-24"
+      className="relative h-[78vh] md:h-[84vh] min-h-[560px] md:min-h-[680px] flex items-center justify-center overflow-hidden pt-[4.5rem] md:pt-24"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -63,35 +63,47 @@ const HeroSection = () => {
         </motion.div>
       ))}
 
+      <div className="absolute inset-y-0 right-3 md:right-6 z-20 hidden md:flex items-center">
+        <button
+          type="button"
+          onClick={next}
+          aria-label="Next slide"
+          className="w-11 h-11 rounded-full border border-primary-foreground/20 bg-primary/30 backdrop-blur-sm text-primary-foreground hover:bg-primary/50 hover:border-secondary/60 transition-all duration-200 flex items-center justify-center"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 h-full flex flex-col">
         <div className="flex-1 flex items-center justify-center text-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
+              exit={{ opacity: 0, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
+              className="pt-4 md:pt-5"
             >
-              <p className="text-secondary font-body font-semibold tracking-[0.16em] uppercase text-xs md:text-sm mb-4">
+              <p className="text-secondary font-body font-semibold tracking-[0.16em] uppercase text-xs md:text-sm mb-3 md:mb-4">
                 Madanapalle Institute of Technology & Science
               </p>
-              <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-5 leading-tight max-w-5xl mx-auto">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground mb-4 leading-[1.02] max-w-5xl mx-auto text-balance">
                 {slide.headline}
               </h1>
               <motion.p
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-secondary text-sm md:text-base max-w-3xl mx-auto mb-3 font-semibold"
+                className="text-secondary text-sm md:text-base max-w-3xl mx-auto mb-2 md:mb-3 font-semibold"
               >
                 NAAC A+ Accredited | UGC Recognized | AICTE Approved
               </motion.p>
               <p className="text-primary-foreground/90 text-base md:text-lg max-w-3xl mx-auto mb-2 font-body">
                 {slide.sub}
               </p>
-              <p className="text-primary-foreground/80 text-sm md:text-base max-w-2xl mx-auto mb-8 font-medium">
+              <p className="text-primary-foreground/80 text-sm md:text-base max-w-2xl mx-auto mb-6 md:mb-7 font-medium">
                 NBA Accredited Programs | NIRF Participating Institution
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
