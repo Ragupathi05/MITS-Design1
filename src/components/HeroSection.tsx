@@ -48,7 +48,7 @@ const HeroSection = () => {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Background carousel - all images stacked, opacity-driven for no flash */}
+      {/* Background carousel */}
       {slides.map((s, i) => (
         <motion.div
           key={i}
@@ -59,7 +59,7 @@ const HeroSection = () => {
           style={{ zIndex: i === current ? 1 : 0 }}
         >
           <img src={s.image} alt={s.alt} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,31,58,0.88),rgba(11,31,58,0.62))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,31,58,0.85),rgba(11,31,58,0.55))]" />
         </motion.div>
       ))}
 
@@ -68,7 +68,7 @@ const HeroSection = () => {
           type="button"
           onClick={next}
           aria-label="Next slide"
-          className="w-11 h-11 rounded-full border border-primary-foreground/20 bg-primary/30 backdrop-blur-sm text-primary-foreground hover:bg-primary/50 hover:border-secondary/60 transition-all duration-200 flex items-center justify-center"
+          className="w-11 h-11 rounded-full border border-white/20 bg-secondary/40 backdrop-blur-sm text-white hover:bg-accent hover:border-accent hover:text-accent-foreground transition-all duration-200 flex items-center justify-center"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
@@ -86,34 +86,34 @@ const HeroSection = () => {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="pt-4 md:pt-5"
             >
-              <p className="text-secondary font-body font-semibold tracking-[0.16em] uppercase text-xs md:text-sm mb-3 md:mb-4">
+              <p className="text-accent font-body font-semibold tracking-[0.16em] uppercase text-xs md:text-sm mb-3 md:mb-4">
                 Madanapalle Institute of Technology & Science
               </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground mb-4 leading-[1.02] max-w-5xl mx-auto text-balance">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-[1.02] max-w-5xl mx-auto text-balance">
                 {slide.headline}
               </h1>
               <motion.p
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-secondary text-sm md:text-base max-w-3xl mx-auto mb-2 md:mb-3 font-semibold"
+                className="text-accent font-semibold text-sm md:text-base max-w-3xl mx-auto mb-2 md:mb-3"
               >
                 NAAC A+ Accredited | UGC Recognized | AICTE Approved
               </motion.p>
-              <p className="text-primary-foreground/90 text-base md:text-lg max-w-3xl mx-auto mb-2 font-body">
+              <p className="text-white/90 text-base md:text-lg max-w-3xl mx-auto mb-2 font-body">
                 {slide.sub}
               </p>
-              <p className="text-primary-foreground/80 text-sm md:text-base max-w-2xl mx-auto mb-6 md:mb-7 font-medium">
+              <p className="text-white/75 text-sm md:text-base max-w-2xl mx-auto mb-6 md:mb-7 font-medium">
                 NBA Accredited Programs | NIRF Participating Institution
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link to="/admissions">
-                  <Button className="bg-secondary text-secondary-foreground hover:bg-gold-light font-semibold px-6 py-2.5 text-sm transition-all duration-200">
+                  <Button className="bg-accent text-accent-foreground hover:bg-gold-light font-bold px-7 py-2.5 text-sm rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
                     Apply Now
                   </Button>
                 </Link>
                 <a href="#academics">
-                  <Button variant="outline" className="border-secondary text-secondary bg-secondary/10 hover:bg-secondary hover:text-secondary-foreground font-semibold px-6 py-2.5 text-sm transition-all duration-200">
+                  <Button className="bg-white/15 text-white border-2 border-white/40 hover:bg-white hover:text-secondary font-semibold px-7 py-2.5 text-sm rounded-full backdrop-blur-sm transition-all duration-200">
                     Explore Programs
                   </Button>
                 </a>
@@ -128,8 +128,8 @@ const HeroSection = () => {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 hover:bg-secondary ${
-                i === current ? "bg-secondary w-8" : "bg-primary-foreground/40"
+              className={`w-3 h-3 rounded-full transition-all duration-300 hover:bg-accent ${
+                i === current ? "bg-accent w-8" : "bg-white/40"
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />
@@ -140,7 +140,7 @@ const HeroSection = () => {
           <a
             href="#about"
             aria-label="Scroll to About section"
-            className="text-primary-foreground/75 hover:text-secondary transition-colors"
+            className="text-white/75 hover:text-accent transition-colors"
           >
             <ChevronDown className="w-5 h-5" />
           </a>

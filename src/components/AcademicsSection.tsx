@@ -30,23 +30,13 @@ const programs = {
 };
 
 const ProgramPane = ({
-  title,
-  description,
-  highlights,
-  programCount,
-  departmentCount,
-  icon: Icon,
+  title, description, highlights, programCount, departmentCount, icon: Icon,
 }: {
-  title: string;
-  description: string;
-  highlights: string[];
-  programCount: number;
-  departmentCount: number;
-  icon: typeof GraduationCap;
+  title: string; description: string; highlights: string[]; programCount: number; departmentCount: number; icon: typeof GraduationCap;
 }) => (
-  <div className="bg-card rounded-lg p-8 shadow-sm border border-secondary/35">
-    <div className="w-14 h-14 rounded-md bg-primary flex items-center justify-center mb-6">
-      <Icon className="w-7 h-7 text-primary-foreground" />
+  <div className="bg-card rounded-lg p-8 shadow-sm border border-border hover:shadow-md transition-shadow duration-300">
+    <div className="w-14 h-14 rounded-md bg-secondary flex items-center justify-center mb-6">
+      <Icon className="w-7 h-7 text-secondary-foreground" />
     </div>
     <h3 className="font-display text-2xl font-bold text-card-foreground mb-3">{title}</h3>
     <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
@@ -63,7 +53,7 @@ const ProgramPane = ({
     <ul className="grid md:grid-cols-2 gap-3">
       {highlights.map((item) => (
         <li key={item} className="text-sm text-foreground/80 flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-secondary" />
+          <span className="w-2 h-2 rounded-full bg-accent" />
           {item}
         </li>
       ))}
@@ -77,7 +67,7 @@ const AcademicsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">Academics</p>
+            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Academics</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Programs That Shape Leaders
             </h2>
@@ -88,27 +78,20 @@ const AcademicsSection = () => {
         </ScrollReveal>
         <ScrollReveal>
           <Tabs defaultValue="undergraduate" className="max-w-5xl mx-auto">
-            <TabsList className="grid grid-cols-3 w-full h-auto bg-primary/10 p-1.5 rounded-md">
-              <TabsTrigger value="undergraduate" className="py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+            <TabsList className="grid grid-cols-3 w-full h-auto bg-secondary/10 p-1.5 rounded-md">
+              <TabsTrigger value="undergraduate" className="py-2.5 data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground font-semibold">
                 Undergraduate
               </TabsTrigger>
-              <TabsTrigger value="postgraduate" className="py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              <TabsTrigger value="postgraduate" className="py-2.5 data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground font-semibold">
                 Postgraduate
               </TabsTrigger>
-              <TabsTrigger value="phd" className="py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              <TabsTrigger value="phd" className="py-2.5 data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground font-semibold">
                 PhD
               </TabsTrigger>
             </TabsList>
-
-            <TabsContent value="undergraduate">
-              <ProgramPane {...programs.undergraduate} />
-            </TabsContent>
-            <TabsContent value="postgraduate">
-              <ProgramPane {...programs.postgraduate} />
-            </TabsContent>
-            <TabsContent value="phd">
-              <ProgramPane {...programs.phd} />
-            </TabsContent>
+            <TabsContent value="undergraduate"><ProgramPane {...programs.undergraduate} /></TabsContent>
+            <TabsContent value="postgraduate"><ProgramPane {...programs.postgraduate} /></TabsContent>
+            <TabsContent value="phd"><ProgramPane {...programs.phd} /></TabsContent>
           </Tabs>
         </ScrollReveal>
       </div>

@@ -18,35 +18,18 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        {/* Accent separator between hero and rankings */}
-        <div className="relative z-10 bg-white">
+        {/* Accent ticker bar - MITS red like official site */}
+        <div className="relative z-10 bg-primary">
           <div className="container mx-auto px-4 py-3 flex items-center justify-center gap-6 flex-wrap">
-            <span className="flex items-center gap-2 text-xs font-semibold text-primary/80 uppercase tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-secondary inline-block" />
-              NAAC A+ Accredited
-            </span>
-            <span className="w-px h-4 bg-border hidden sm:block" />
-            <span className="flex items-center gap-2 text-xs font-semibold text-primary/80 uppercase tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-secondary inline-block" />
-              UGC Recognized
-            </span>
-            <span className="w-px h-4 bg-border hidden sm:block" />
-            <span className="flex items-center gap-2 text-xs font-semibold text-primary/80 uppercase tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-secondary inline-block" />
-              AICTE Approved
-            </span>
-            <span className="w-px h-4 bg-border hidden sm:block" />
-            <span className="flex items-center gap-2 text-xs font-semibold text-primary/80 uppercase tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-secondary inline-block" />
-              NBA Accredited
-            </span>
-            <span className="w-px h-4 bg-border hidden sm:block" />
-            <span className="flex items-center gap-2 text-xs font-semibold text-primary/80 uppercase tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-secondary inline-block" />
-              NIRF Ranked
-            </span>
+            {["NAAC A+ Accredited", "UGC Recognized", "AICTE Approved", "NBA Accredited", "NIRF Ranked"].map((label, i) => (
+              <span key={label} className="flex items-center gap-2 text-xs font-semibold text-primary-foreground uppercase tracking-widest">
+                <span className="w-2 h-2 rounded-full bg-accent inline-block" />
+                {label}
+                {i < 4 && <span className="w-px h-4 bg-primary-foreground/25 ml-4 hidden sm:block" />}
+              </span>
+            ))}
           </div>
-          <div className="h-[3px] bg-gradient-to-r from-transparent via-secondary to-transparent" />
+          <div className="h-[3px] bg-gradient-to-r from-transparent via-accent to-transparent" />
         </div>
         <RankingsSection />
         <AboutSection />

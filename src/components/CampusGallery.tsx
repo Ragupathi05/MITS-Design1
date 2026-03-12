@@ -19,7 +19,7 @@ const CampusGallery = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">Campus Life</p>
+            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Campus Life</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Campus Gallery</h2>
           </div>
         </ScrollReveal>
@@ -27,13 +27,9 @@ const CampusGallery = () => {
           {images.map((img, i) => (
             <ScrollReveal key={img.alt} delay={i * 0.1} className={img.span}>
               <div className="overflow-hidden rounded-xl group relative cursor-pointer">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-300 flex items-end">
-                  <p className="text-primary-foreground font-semibold text-sm p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <img src={img.src} alt={img.alt} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/50 transition-all duration-300 flex items-end">
+                  <p className="text-white font-semibold text-sm p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     {img.alt}
                   </p>
                 </div>
