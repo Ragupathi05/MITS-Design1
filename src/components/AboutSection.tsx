@@ -10,20 +10,19 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
-            <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">About Us</p>
+            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">About Us</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Shaping Futures Since 1998
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Madanapalle Institute of Technology & Science (MITS) is a premier institution committed to providing quality education
               in engineering, sciences, and management. With NAAC A+ accreditation and NBA-approved programs, MITS advances
-              outcome-based learning, innovation, and responsible leadership. The institute fosters an ecosystem where teaching,
-              research, and industry collaboration work together to prepare students for global careers and societal impact.
+              outcome-based learning, innovation, and responsible leadership.
             </p>
             <div className="space-y-6">
               <div className="flex gap-4 group">
-                <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-secondary transition-all duration-300">
-                  <Target className="w-6 h-6 text-primary-foreground group-hover:text-secondary-foreground transition-colors" />
+                <div className="w-12 h-12 rounded-md bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
+                  <Target className="w-6 h-6 text-secondary-foreground group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">Our Mission</h3>
@@ -31,8 +30,8 @@ const AboutSection = () => {
                 </div>
               </div>
               <div className="flex gap-4 group">
-                <div className="w-12 h-12 rounded-md bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
-                  <Eye className="w-6 h-6 text-secondary-foreground group-hover:text-primary-foreground transition-colors" />
+                <div className="w-12 h-12 rounded-md bg-accent flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
+                  <Eye className="w-6 h-6 text-accent-foreground group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">Our Vision</h3>
@@ -40,8 +39,8 @@ const AboutSection = () => {
                 </div>
               </div>
               <div className="flex gap-4 group">
-                <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-secondary transition-all duration-300">
-                  <Award className="w-6 h-6 text-primary-foreground group-hover:text-secondary-foreground transition-colors" />
+                <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-accent transition-all duration-300">
+                  <Award className="w-6 h-6 text-primary-foreground group-hover:text-accent-foreground transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">NAAC A+ Accredited</h3>
@@ -60,9 +59,9 @@ const AboutSection = () => {
           <ScrollReveal direction="right" delay={0.2}>
             <div className="relative group">
               <img src={campusBuilding} alt="MITS Campus Building" className="rounded-lg shadow-xl w-full group-hover:shadow-2xl transition-all duration-300" />
-              <div className="absolute -bottom-6 -left-6 bg-primary rounded-md p-6 shadow-lg hidden md:block group-hover:bg-secondary transition-all duration-300">
-                <p className="text-secondary font-display text-3xl font-bold group-hover:text-secondary-foreground">25+</p>
-                <p className="text-primary-foreground/80 text-sm group-hover:text-primary/80">Years of Excellence</p>
+              <div className="absolute -bottom-6 -left-6 bg-primary rounded-md p-6 shadow-lg hidden md:block group-hover:bg-accent transition-all duration-300">
+                <p className="text-accent font-display text-3xl font-bold group-hover:text-accent-foreground">25+</p>
+                <p className="text-primary-foreground/80 text-sm group-hover:text-accent-foreground/80">Years of Excellence</p>
               </div>
             </div>
           </ScrollReveal>
