@@ -11,36 +11,36 @@ import ScrollReveal from "@/components/ScrollReveal";
 type Program = { name: string; icon: React.ElementType };
 
 const ugPrograms: Program[] = [
-  { name: "B.Tech – CSE", icon: Code2 },
-  { name: "B.Tech – CSE (AI & DS)", icon: Database },
-  { name: "B.Tech – CSE (AI and ML)", icon: BrainCircuit },
-  { name: "B.Tech – CSE (AI and Robotics)", icon: Bot },
-  { name: "B.Tech – Bioinformatics", icon: Dna },
-  { name: "B.Tech – ECE", icon: Radio },
-  { name: "B.Tech – EEE", icon: Zap },
-  { name: "B.Tech – CIVIL", icon: Landmark },
-  { name: "B.Tech – MECH", icon: Wrench },
+  { name: "B.Tech - CSE", icon: Code2 },
+  { name: "B.Tech - CSE (AI & DS)", icon: Database },
+  { name: "B.Tech - CSE (AI and ML)", icon: BrainCircuit },
+  { name: "B.Tech - CSE (AI and Robotics)", icon: Bot },
+  { name: "B.Tech - Bioinformatics", icon: Dna },
+  { name: "B.Tech - ECE", icon: Radio },
+  { name: "B.Tech - EEE", icon: Zap },
+  { name: "B.Tech - CIVIL", icon: Landmark },
+  { name: "B.Tech - MECH", icon: Wrench },
   { name: "BBA", icon: Briefcase },
   { name: "BCA", icon: Laptop2 },
 ];
 
 const pgPrograms: Program[] = [
-  { name: "M.Tech – ECE (VLSI & ES)", icon: CircuitBoard },
-  { name: "M.Tech – CIVIL (CEM)", icon: HardHat },
-  { name: "M.Tech – MECH (Automation and Robotics)", icon: Settings2 },
-  { name: "M.Tech – EEE (EV Tech)", icon: BatteryCharging },
-  { name: "M.Tech – CSE", icon: Network },
-  { name: "M.Tech – CSE (AI and ML)", icon: BrainCircuit },
+  { name: "M.Tech - ECE (VLSI & ES)", icon: CircuitBoard },
+  { name: "M.Tech - CIVIL (CEM)", icon: HardHat },
+  { name: "M.Tech - MECH (Automation and Robotics)", icon: Settings2 },
+  { name: "M.Tech - EEE (EV Tech)", icon: BatteryCharging },
+  { name: "M.Tech - CSE", icon: Network },
+  { name: "M.Tech - CSE (AI and ML)", icon: BrainCircuit },
   { name: "MBA", icon: GraduationCap },
   { name: "MCA", icon: AppWindow },
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.07, duration: 0.5, ease: "easeOut" as const },
+    transition: { delay: i * 0.06, duration: 0.45, ease: "easeOut" as const },
   }),
 };
 
@@ -51,33 +51,34 @@ const ProgramCard = ({ program, index }: { program: Program; index: number }) =>
       custom={index}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
+      viewport={{ once: true, margin: "-30px" }}
       variants={cardVariants}
       className="group cursor-pointer"
     >
-      <div className="flex items-center gap-5 bg-card border border-border rounded-lg p-4 pr-6
+      <div className="flex items-center gap-4 bg-card rounded-md p-3.5 pr-5 shadow-sm
+        border border-transparent
         transition-all duration-300
-        hover:shadow-lg hover:-translate-y-1 hover:border-primary/30 hover:bg-primary/[0.02]"
+        hover:shadow-md hover:-translate-y-0.5 hover:border-primary/20"
       >
-        {/* Icon Box */}
-        <div className="flex-shrink-0 w-16 h-16 rounded-md border border-border bg-muted/50
-          flex items-center justify-center
+        {/* Icon Box — red-bordered square like the reference */}
+        <div className="flex-shrink-0 w-[60px] h-[60px] rounded border-2 border-primary/60
+          bg-primary/[0.04] flex items-center justify-center
           transition-all duration-300
-          group-hover:border-primary/40 group-hover:bg-secondary/5 group-hover:scale-105"
+          group-hover:border-primary group-hover:bg-primary/[0.08] group-hover:scale-105"
         >
-          <Icon className="w-7 h-7 text-secondary transition-colors duration-300 group-hover:text-primary" />
+          <Icon className="w-7 h-7 text-primary transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
         </div>
 
         {/* Text */}
         <div className="flex-1 min-w-0">
-          <h4 className="font-display text-base font-semibold text-foreground leading-snug truncate">
+          <h4 className="font-semibold text-[15px] text-foreground leading-snug mb-1">
             {program.name}
           </h4>
-          <span className="inline-flex items-center gap-1 text-xs font-medium text-primary/70 mt-1.5
+          <span className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground
             transition-colors duration-300 group-hover:text-primary"
           >
             View More
-            <ArrowRight className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </span>
         </div>
       </div>
@@ -86,11 +87,11 @@ const ProgramCard = ({ program, index }: { program: Program; index: number }) =>
 };
 
 const ProgramGrid = ({ title, programs }: { title: string; programs: Program[] }) => (
-  <div className="mb-16 last:mb-0">
-    <div className="flex items-center gap-3 mb-8">
-      <div className="w-1 h-8 rounded-full bg-primary" />
-      <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">{title}</h3>
-    </div>
+  <div className="mb-14 last:mb-0">
+    <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+      {title.split("Offered")[0]}
+      <span className="text-primary">Offered</span>
+    </h3>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {programs.map((program, i) => (
         <ProgramCard key={program.name} program={program} index={i} />
@@ -100,13 +101,12 @@ const ProgramGrid = ({ title, programs }: { title: string; programs: Program[] }
 );
 
 const AcademicsSection = () => (
-  <section id="academics" className="py-24 bg-muted/40">
+  <section id="academics" className="py-24 bg-muted/30">
     <div className="container mx-auto px-4">
       <ScrollReveal>
-        <div className="text-center mb-16">
-          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Academics</p>
+        <div className="text-center mb-14">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Programmes Offered
+            Programmes <span className="text-primary">Offered</span>
           </h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-4" />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
