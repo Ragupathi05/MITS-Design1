@@ -1,36 +1,38 @@
 
 import { motion } from "framer-motion";
 import {
-  Cpu, Cog, CircuitBoard, HardHat, GraduationCap, Monitor,
-  BrainCircuit, Bot, Dna, Zap, ArrowRight, BarChart3
+  Code2, Database, BrainCircuit, Bot, Dna, Radio, Zap,
+  Landmark, Wrench, Briefcase, Laptop2, CircuitBoard,
+  HardHat, Settings2, BatteryCharging, Network,
+  GraduationCap, AppWindow, ArrowRight
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 type Program = { name: string; icon: React.ElementType };
 
 const ugPrograms: Program[] = [
-  { name: "B.Tech – CSE", icon: Monitor },
-  { name: "B.Tech – CSE (AI & DS)", icon: BrainCircuit },
-  { name: "B.Tech – CSE (AI and ML)", icon: Cpu },
+  { name: "B.Tech – CSE", icon: Code2 },
+  { name: "B.Tech – CSE (AI & DS)", icon: Database },
+  { name: "B.Tech – CSE (AI and ML)", icon: BrainCircuit },
   { name: "B.Tech – CSE (AI and Robotics)", icon: Bot },
   { name: "B.Tech – Bioinformatics", icon: Dna },
-  { name: "B.Tech – ECE", icon: CircuitBoard },
+  { name: "B.Tech – ECE", icon: Radio },
   { name: "B.Tech – EEE", icon: Zap },
-  { name: "B.Tech – CIVIL", icon: HardHat },
-  { name: "B.Tech – MECH", icon: Cog },
-  { name: "BBA", icon: BarChart3 },
-  { name: "BCA", icon: Monitor },
+  { name: "B.Tech – CIVIL", icon: Landmark },
+  { name: "B.Tech – MECH", icon: Wrench },
+  { name: "BBA", icon: Briefcase },
+  { name: "BCA", icon: Laptop2 },
 ];
 
 const pgPrograms: Program[] = [
   { name: "M.Tech – ECE (VLSI & ES)", icon: CircuitBoard },
   { name: "M.Tech – CIVIL (CEM)", icon: HardHat },
-  { name: "M.Tech – MECH (Automation and Robotics)", icon: Bot },
-  { name: "M.Tech – EEE (EV Tech)", icon: Zap },
-  { name: "M.Tech – CSE", icon: Monitor },
+  { name: "M.Tech – MECH (Automation and Robotics)", icon: Settings2 },
+  { name: "M.Tech – EEE (EV Tech)", icon: BatteryCharging },
+  { name: "M.Tech – CSE", icon: Network },
   { name: "M.Tech – CSE (AI and ML)", icon: BrainCircuit },
   { name: "MBA", icon: GraduationCap },
-  { name: "MCA", icon: Monitor },
+  { name: "MCA", icon: AppWindow },
 ];
 
 const cardVariants = {
