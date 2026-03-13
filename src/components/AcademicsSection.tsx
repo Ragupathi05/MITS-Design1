@@ -1,38 +1,39 @@
 
 import { motion } from "framer-motion";
 import {
-  Code2, Database, BrainCircuit, Bot, Dna, Radio, Zap,
-  Landmark, Wrench, Briefcase, Laptop2, CircuitBoard,
-  HardHat, Settings2, BatteryCharging, Network,
-  GraduationCap, AppWindow, ArrowRight
+  MonitorSmartphone, Brain, Cpu, BotMessageSquare, HeartPulse,
+  Antenna, Cable, Building2, CogIcon, TrendingUp, ScreenShare,
+  Microchip, HardHat, Joystick, PlugZap, ServerCog,
+  Sparkles, GraduationCap, TabletSmartphone, ArrowRight
 } from "lucide-react";
+
 import ScrollReveal from "@/components/ScrollReveal";
 
 type Program = { name: string; icon: React.ElementType };
 
 const ugPrograms: Program[] = [
-  { name: "B.Tech - CSE", icon: Code2 },
-  { name: "B.Tech - CSE (AI & DS)", icon: Database },
-  { name: "B.Tech - CSE (AI and ML)", icon: BrainCircuit },
-  { name: "B.Tech - CSE (AI and Robotics)", icon: Bot },
-  { name: "B.Tech - Bioinformatics", icon: Dna },
-  { name: "B.Tech - ECE", icon: Radio },
-  { name: "B.Tech - EEE", icon: Zap },
-  { name: "B.Tech - CIVIL", icon: Landmark },
-  { name: "B.Tech - MECH", icon: Wrench },
-  { name: "BBA", icon: Briefcase },
-  { name: "BCA", icon: Laptop2 },
+  { name: "B.Tech - CSE", icon: MonitorSmartphone },
+  { name: "B.Tech - CSE (AI & DS)", icon: Brain },
+  { name: "B.Tech - CSE (AI and ML)", icon: Cpu },
+  { name: "B.Tech - CSE (AI and Robotics)", icon: BotMessageSquare },
+  { name: "B.Tech - Bioinformatics", icon: HeartPulse },
+  { name: "B.Tech - ECE", icon: Antenna },
+  { name: "B.Tech - EEE", icon: Cable },
+  { name: "B.Tech - CIVIL", icon: Building2 },
+  { name: "B.Tech - MECH", icon: CogIcon },
+  { name: "BBA", icon: TrendingUp },
+  { name: "BCA", icon: ScreenShare },
 ];
 
 const pgPrograms: Program[] = [
-  { name: "M.Tech - ECE (VLSI & ES)", icon: CircuitBoard },
+  { name: "M.Tech - ECE (VLSI & ES)", icon: Microchip },
   { name: "M.Tech - CIVIL (CEM)", icon: HardHat },
-  { name: "M.Tech - MECH (Automation and Robotics)", icon: Settings2 },
-  { name: "M.Tech - EEE (EV Tech)", icon: BatteryCharging },
-  { name: "M.Tech - CSE", icon: Network },
-  { name: "M.Tech - CSE (AI and ML)", icon: BrainCircuit },
+  { name: "M.Tech - MECH (Automation and Robotics)", icon: Joystick },
+  { name: "M.Tech - EEE (EV Tech)", icon: PlugZap },
+  { name: "M.Tech - CSE", icon: ServerCog },
+  { name: "M.Tech - CSE (AI and ML)", icon: Sparkles },
   { name: "MBA", icon: GraduationCap },
-  { name: "MCA", icon: AppWindow },
+  { name: "MCA", icon: TabletSmartphone },
 ];
 
 const cardVariants = {
