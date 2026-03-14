@@ -1,25 +1,31 @@
-import { Award, Shield, Star, Trophy } from "lucide-react";
+import { Award, BadgeCheck, Building2, GraduationCap, Shield, Star, Trophy, Users } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 const BASE = import.meta.env.BASE_URL;
 
-const rankings = [
-  { icon: Award, title: "NAAC A+ Grade", subtitle: "Accredited", value: 1, suffix: "" },
-  { icon: Trophy, title: "UGC Recognition", subtitle: "Recognized", value: 100, suffix: "%" },
-  { icon: Shield, title: "AICTE Approval", subtitle: "Approved Programs", value: 25, suffix: "+" },
-  { icon: Star, title: "NBA Accreditation", subtitle: "Eligible Programs", value: 12, suffix: "+" },
-  { icon: Award, title: "NIRF Ranking", subtitle: "National Presence", value: 100, suffix: " Top" },
+type CredentialCard = {
+  icon: typeof Award;
+  title: string;
+  subtitle: string;
+  displayValue?: string;
+  value?: number;
+  suffix?: string;
+};
+
+const credentials: CredentialCard[] = [
+  { icon: Award, title: "NAAC A+", subtitle: "Accredited by NAAC", displayValue: "NAAC A+" },
+  { icon: BadgeCheck, title: "UGC", subtitle: "Recognized under Sections 2(f) & 12(B)", displayValue: "UGC" },
+  { icon: Shield, title: "AICTE", subtitle: "Approved Engineering Programs", displayValue: "AICTE" },
+  { icon: Star, title: "7+", subtitle: "NBA Accredited Programs", value: 7, suffix: "+" },
+  { icon: Trophy, title: "201-300", subtitle: "NIRF Engineering Ranking Band", displayValue: "201-300" },
+  { icon: Building2, title: "27+", subtitle: "Years of Excellence (Established 1998)", value: 27, suffix: "+" },
+  { icon: GraduationCap, title: "12000+", subtitle: "Students", value: 12000, suffix: "+" },
+  { icon: Users, title: "600+", subtitle: "Faculty Members", value: 600, suffix: "+" },
+  { icon: BadgeCheck, title: "200+", subtitle: "Recruiters", value: 200, suffix: "+" },
 ];
 
-const institutionalCounters = [
-  { label: "Years of Excellence", value: 25, suffix: "+" },
-  { label: "Students", value: 12000, suffix: "+" },
-  { label: "Faculty", value: 600, suffix: "+" },
-  { label: "Recruiters", value: 200, suffix: "+" },
-];
-
-const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
+const CountUp = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const [count, setCount] = useState(0);
@@ -66,8 +72,8 @@ const RankingsSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
-          {rankings.map((item, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 max-w-6xl mx-auto">
+          {credentials.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 0.1}>
               <div className="text-center group rounded-xl p-6 border border-white/15 backdrop-blur-md hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 h-full"
                 style={{ background: "rgba(255,255,255,0.07)" }}>
@@ -75,30 +81,13 @@ const RankingsSection = () => {
                   <item.icon className="w-7 h-7 text-accent" />
                 </div>
                 <p className="font-display text-2xl font-bold text-accent mb-1">
-                  <CountUp target={item.value} suffix={item.suffix} />
+                  {typeof item.value === "number" ? <CountUp target={item.value} suffix={item.suffix} /> : item.displayValue}
                 </p>
-                <p className="font-display text-base font-bold text-white leading-tight mb-1">{item.title}</p>
-                <p className="text-white/55 text-xs">{item.subtitle}</p>
+                <p className="text-white/70 text-xs md:text-sm leading-relaxed">{item.subtitle}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
-
-        <ScrollReveal delay={0.2}>
-          <div className="mt-8 rounded-xl border border-white/15 backdrop-blur-md p-6 md:p-8"
-            style={{ background: "rgba(255,255,255,0.06)" }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-x-0 md:divide-x md:divide-white/15">
-              {institutionalCounters.map((counter, i) => (
-                <div key={counter.label} className={`text-center ${i > 0 ? "md:pl-6" : ""}`}>
-                  <p className="font-display text-3xl md:text-4xl font-bold text-accent mb-1">
-                    <CountUp target={counter.value} suffix={counter.suffix} />
-                  </p>
-                  <p className="text-white/65 text-sm md:text-base">{counter.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );
