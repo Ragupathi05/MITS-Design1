@@ -1,127 +1,102 @@
-
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { GraduationCap, BookOpen, FlaskConical } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import {
-  IconCSE, IconAIDS, IconAIML, IconRobotics, IconBioinfo,
-  IconECE, IconEEE, IconCivil, IconMech, IconBBA, IconBCA,
-  IconVLSI, IconCEM, IconAutoRobot, IconEVTech, IconCSEPG,
-  IconMBA, IconMCA
-} from "@/components/icons/ProgramIcons";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-type Program = { name: string; icon: React.ElementType };
-
-const ugPrograms: Program[] = [
-  { name: "B.Tech - CSE", icon: IconCSE },
-  { name: "B.Tech - CSE (AI & DS)", icon: IconAIDS },
-  { name: "B.Tech - CSE (AI and ML)", icon: IconAIML },
-  { name: "B.Tech - CSE (AI and Robotics)", icon: IconRobotics },
-  { name: "B.Tech - Bioinformatics", icon: IconBioinfo },
-  { name: "B.Tech - ECE", icon: IconECE },
-  { name: "B.Tech - EEE", icon: IconEEE },
-  { name: "B.Tech - CIVIL", icon: IconCivil },
-  { name: "B.Tech - MECH", icon: IconMech },
-  { name: "BBA", icon: IconBBA },
-  { name: "BCA", icon: IconBCA },
-];
-
-const pgPrograms: Program[] = [
-  { name: "M.Tech - ECE (VLSI & ES)", icon: IconVLSI },
-  { name: "M.Tech - CIVIL (CEM)", icon: IconCEM },
-  { name: "M.Tech - MECH (Automation and Robotics)", icon: IconAutoRobot },
-  { name: "M.Tech - EEE (EV Tech)", icon: IconEVTech },
-  { name: "M.Tech - CSE", icon: IconCSEPG },
-  { name: "M.Tech - CSE (AI and ML)", icon: IconAIML },
-  { name: "MBA", icon: IconMBA },
-  { name: "MCA", icon: IconMCA },
-];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.06, duration: 0.45, ease: "easeOut" as const },
-  }),
+const programs = {
+  undergraduate: {
+    icon: GraduationCap,
+    title: "Undergraduate",
+    programCount: 18,
+    departmentCount: 9,
+    description: "Comprehensive B.Tech pathways with strong academic mentoring and outcome-based curriculum.",
+    highlights: ["Industry-aligned curriculum", "Project-based learning", "Internship pathways", "Modern laboratory infrastructure"],
+  },
+  postgraduate: {
+    icon: BookOpen,
+    title: "Postgraduate",
+    programCount: 10,
+    departmentCount: 7,
+    description: "Advanced M.Tech, MBA, and interdisciplinary programs focused on specialization and leadership.",
+    highlights: ["Advanced specialization tracks", "Research-integrated coursework", "Management and technology blend", "Academic-industry interface"],
+  },
+  phd: {
+    icon: FlaskConical,
+    title: "PhD",
+    programCount: 12,
+    departmentCount: 8,
+    description: "Doctoral research opportunities with faculty mentorship, funded projects, and publication support.",
+    highlights: ["Interdisciplinary research", "Sponsored projects", "Publication ecosystem", "Innovation and patent support"],
+  },
 };
 
-const ProgramCard = ({ program, index }: { program: Program; index: number }) => {
-  const Icon = program.icon;
-  return (
-    <motion.div
-      custom={index}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-30px" }}
-      variants={cardVariants}
-      className="group cursor-pointer"
-    >
-      <div className="flex items-center gap-4 bg-card rounded-md p-3.5 pr-5 shadow-sm
-        border border-transparent
-        transition-all duration-300
-        hover:shadow-md hover:-translate-y-0.5 hover:border-primary/20"
-      >
-        {/* Icon Box */}
-        <div className="flex-shrink-0 w-[62px] h-[62px] rounded border-2 border-primary/50
-          bg-primary/[0.03] flex items-center justify-center
-          transition-all duration-300
-          group-hover:border-primary group-hover:bg-primary/[0.07] group-hover:scale-105"
-        >
-          <Icon className="w-9 h-9 text-primary transition-transform duration-300 group-hover:scale-110" />
-        </div>
-
-        {/* Text */}
-        <div className="flex-1 min-w-0">
-          <h4 className="font-semibold text-[15px] text-foreground leading-snug mb-1">
-            {program.name}
-          </h4>
-          <span className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground
-            transition-colors duration-300 group-hover:text-primary"
-          >
-            View More
-            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-          </span>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-const ProgramGrid = ({ title, programs }: { title: string; programs: Program[] }) => (
-  <div className="mb-14 last:mb-0">
-    <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-      {title.split("Offered")[0]}
-      <span className="text-primary">Offered</span>
-    </h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {programs.map((program, i) => (
-        <ProgramCard key={program.name} program={program} index={i} />
-      ))}
+const ProgramPane = ({
+  title, description, highlights, programCount, departmentCount, icon: Icon,
+}: {
+  title: string; description: string; highlights: string[]; programCount: number; departmentCount: number; icon: typeof GraduationCap;
+}) => (
+  <div className="bg-card rounded-lg p-8 shadow-sm border border-border hover:shadow-md transition-shadow duration-300">
+    <div className="w-14 h-14 rounded-md bg-secondary flex items-center justify-center mb-6">
+      <Icon className="w-7 h-7 text-secondary-foreground" />
     </div>
+    <h3 className="font-display text-2xl font-bold text-card-foreground mb-3">{title}</h3>
+    <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
+    <div className="grid grid-cols-2 gap-3 mb-6">
+      <div className="border border-border rounded-sm px-3 py-2 bg-muted/40">
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">Programs</p>
+        <p className="font-display text-xl font-bold text-primary">{programCount}+</p>
+      </div>
+      <div className="border border-border rounded-sm px-3 py-2 bg-muted/40">
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">Departments</p>
+        <p className="font-display text-xl font-bold text-primary">{departmentCount}+</p>
+      </div>
+    </div>
+    <ul className="grid md:grid-cols-2 gap-3">
+      {highlights.map((item) => (
+        <li key={item} className="text-sm text-foreground/80 flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-accent" />
+          {item}
+        </li>
+      ))}
+    </ul>
   </div>
 );
 
-const AcademicsSection = () => (
-  <section id="academics" className="py-24 bg-muted/30">
-    <div className="container mx-auto px-4">
-      <ScrollReveal>
-        <div className="text-center mb-14">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Programmes <span className="text-primary">Offered</span>
-          </h2>
-          <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-4" />
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Explore our AICTE-approved, outcome-based programmes designed to shape future-ready professionals.
-          </p>
-        </div>
-      </ScrollReveal>
-
-      <div className="max-w-6xl mx-auto">
-        <ProgramGrid title="UG Programmes Offered" programs={ugPrograms} />
-        <ProgramGrid title="PG Programmes Offered" programs={pgPrograms} />
+const AcademicsSection = () => {
+  return (
+    <section id="academics" className="py-24 bg-background">
+      <div className="container mx-auto px-4">
+        <ScrollReveal>
+          <div className="text-center mb-14">
+            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Academics</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Programs That Shape Leaders
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Choose from a wide range of accredited programs designed to prepare you for a successful career.
+            </p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal>
+          <Tabs defaultValue="undergraduate" className="max-w-5xl mx-auto">
+            <TabsList className="grid grid-cols-3 w-full h-auto bg-secondary/10 p-1.5 rounded-md">
+              <TabsTrigger value="undergraduate" className="py-2.5 data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground font-semibold">
+                Undergraduate
+              </TabsTrigger>
+              <TabsTrigger value="postgraduate" className="py-2.5 data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground font-semibold">
+                Postgraduate
+              </TabsTrigger>
+              <TabsTrigger value="phd" className="py-2.5 data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground font-semibold">
+                PhD
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="undergraduate"><ProgramPane {...programs.undergraduate} /></TabsContent>
+            <TabsContent value="postgraduate"><ProgramPane {...programs.postgraduate} /></TabsContent>
+            <TabsContent value="phd"><ProgramPane {...programs.phd} /></TabsContent>
+          </Tabs>
+        </ScrollReveal>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default AcademicsSection;
