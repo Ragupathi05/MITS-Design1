@@ -27,7 +27,7 @@ const NewsEventDetail = () => {
             <Button asChild variant="outline" className="mb-6">
               <Link to="/news-events" className="inline-flex items-center gap-2">
                 <ChevronLeft className="w-4 h-4" />
-                Back to News & Events
+                Back to Events
               </Link>
             </Button>
 
