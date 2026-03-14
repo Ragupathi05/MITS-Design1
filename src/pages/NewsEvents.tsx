@@ -13,9 +13,9 @@ const NewsEvents = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">MITS Updates</p>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">News & Events</h1>
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Latest Events</h1>
               <p className="text-muted-foreground text-lg">
-                Explore recent events, announcements, and campus highlights from MITS.
+                Explore recent campus events and institutional activity highlights from MITS.
               </p>
             </div>
 
