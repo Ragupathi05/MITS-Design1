@@ -125,28 +125,12 @@ const AboutSection = () => {
           {/* ── RIGHT SIDE: 3D CAROUSEL ── */}
           <ScrollReveal direction="right" delay={0.2}>
             <div
-<<<<<<< HEAD
               className="relative pt-6 pl-6"
-=======
-<<<<<<< HEAD
-              className="relative"
-=======
-              className="relative pt-6 pl-6"
->>>>>>> d332adf7abdd367be2b1dd1e65c83abd81f34ed5
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
               {/* 25+ badge – pinned top-left, always on top */}
-<<<<<<< HEAD
               <div className="absolute top-0 left-0 bg-primary rounded-md px-5 py-4 shadow-xl hidden md:block z-10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent group/badge">
-=======
-<<<<<<< HEAD
-              <div className="absolute -top-5 -left-5 bg-primary rounded-md px-5 py-4 shadow-xl hidden md:block z-50 transition-all duration-300 hover:-translate-y-1 hover:bg-accent group/badge">
-=======
-              <div className="absolute top-0 left-0 bg-primary rounded-md px-5 py-4 shadow-xl hidden md:block z-10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent group/badge">
->>>>>>> d332adf7abdd367be2b1dd1e65c83abd81f34ed5
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
                 <p className="text-accent font-display text-3xl font-bold leading-none group-hover/badge:text-accent-foreground">25+</p>
                 <p className="text-primary-foreground/80 text-sm mt-1 group-hover/badge:text-accent-foreground/80">Years of Excellence</p>
               </div>

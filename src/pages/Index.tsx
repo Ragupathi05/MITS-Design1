@@ -14,7 +14,6 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen">
       <Header />
       <main>
@@ -33,29 +32,15 @@ const Index = () => {
           <div className="h-[3px] bg-gradient-to-r from-transparent via-accent to-transparent" />
         </div>
         <RankingsSection />
-=======
-    <div className="bg-background">
-      <Header />
-      <main>
-        <HeroSection />
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
         <AboutSection />
         <AcademicsSection />
         <AdmissionHighlight />
         <InstitutionsSection />
         <PlacementsSection />
-<<<<<<< HEAD
         <NewsEventsSection />
         <ResearchInnovationSection />
         <TestimonialsSection />
         <CampusGallery />
-=======
-        <RankingsSection />
-        <ResearchInnovationSection />
-        <CampusGallery />
-        <NewsEventsSection />
-        <TestimonialsSection />
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
       </main>
       <Footer />
     </div>

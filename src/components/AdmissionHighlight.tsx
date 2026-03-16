@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 import { useState } from "react";
-=======
-<<<<<<< HEAD
-=======
-import { useState } from "react";
->>>>>>> d332adf7abdd367be2b1dd1e65c83abd81f34ed5
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -20,13 +13,6 @@ import {
   Building2,
   BookOpen,
   RefreshCw,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ChevronDown,
-=======
->>>>>>> d332adf7abdd367be2b1dd1e65c83abd81f34ed5
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -56,19 +42,11 @@ const processSteps = [
 ];
 
 const AdmissionHighlight = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
   const [form, setForm] = useState({ name: "", email: "", phone: "", otp: "", state: "", city: "", program: "", course: "", admissionType: "", captcha: "", agree: false });
   const u = (k: string, v: string | boolean) => setForm(p => ({ ...p, [k]: v }));
   const inputCls = "w-full h-10 rounded-md border border-white/20 bg-white/10 px-3 text-white text-sm placeholder:text-white/40 outline-none focus:border-white/50 focus:bg-white/15 transition-all";
   const selectCls = "w-full h-10 rounded-md border border-white/20 bg-white/10 px-3 text-white text-sm outline-none focus:border-white/50 focus:bg-white/15 transition-all appearance-none [&>option]:bg-[#0f2a44] [&>option]:text-white";
-<<<<<<< HEAD
-=======
->>>>>>> d332adf7abdd367be2b1dd1e65c83abd81f34ed5
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
+
   return (
     <section
       id="admissions"
@@ -142,19 +120,16 @@ const AdmissionHighlight = () => {
                 <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-4">Register for Admissions 2026</h3>
 
                 <div className="grid grid-cols-2 gap-2">
-                  {/* Name */}
                   <div className="col-span-2 relative">
                     <UserRoundPlus className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
                     <input className={`${inputCls} pl-9`} placeholder="Enter Name *" value={form.name} onChange={e => u("name", e.target.value)} />
                   </div>
 
-                  {/* Email */}
                   <div className="col-span-2 relative">
                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
                     <input type="email" className={`${inputCls} pl-9`} placeholder="Enter Email Address *" value={form.email} onChange={e => u("email", e.target.value)} />
                   </div>
 
-                  {/* Phone */}
                   <div className="col-span-2 flex gap-2">
                     <div className="h-10 px-3 rounded-md border border-white/20 bg-white/10 flex items-center gap-1 text-white text-sm shrink-0">
                       <Phone className="w-3 h-3" /> +91
@@ -162,13 +137,11 @@ const AdmissionHighlight = () => {
                     <input type="tel" className={inputCls} placeholder="Enter Mobile Number *" value={form.phone} onChange={e => u("phone", e.target.value)} />
                   </div>
 
-                  {/* OTP */}
                   <div className="relative">
                     <KeyRound className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
                     <input className={`${inputCls} pl-9`} placeholder="Enter OTP" value={form.otp} onChange={e => u("otp", e.target.value)} />
                   </div>
 
-                  {/* State */}
                   <div className="relative">
                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 z-10" />
                     <select className={`${selectCls} pl-9`} value={form.state} onChange={e => u("state", e.target.value)}>
@@ -181,13 +154,11 @@ const AdmissionHighlight = () => {
                     </select>
                   </div>
 
-                  {/* City */}
                   <div className="relative">
                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 z-10" />
                     <input className={`${inputCls} pl-9`} placeholder="Enter City *" value={form.city} onChange={e => u("city", e.target.value)} />
                   </div>
 
-                  {/* Program */}
                   <div className="relative">
                     <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 z-10" />
                     <select className={`${selectCls} pl-9`} value={form.program} onChange={e => u("program", e.target.value)}>
@@ -200,7 +171,6 @@ const AdmissionHighlight = () => {
                     </select>
                   </div>
 
-                  {/* Course */}
                   <div className="relative">
                     <BookOpen className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 z-10" />
                     <select className={`${selectCls} pl-9`} value={form.course} onChange={e => u("course", e.target.value)}>
@@ -213,7 +183,6 @@ const AdmissionHighlight = () => {
                     </select>
                   </div>
 
-                  {/* Admission Type */}
                   <div className="col-span-2">
                     <select className={selectCls} value={form.admissionType} onChange={e => u("admissionType", e.target.value)}>
                       <option value="">Select Admission Type *</option>
@@ -223,14 +192,12 @@ const AdmissionHighlight = () => {
                     </select>
                   </div>
 
-                  {/* Captcha */}
                   <div className="h-10 rounded-md border border-white/20 bg-white/10 px-3 flex items-center justify-between text-white text-sm">
                     <span className="font-semibold tracking-widest">dc253c</span>
                     <RefreshCw className="w-4 h-4 text-white/60 cursor-pointer hover:text-white transition-colors" />
                   </div>
                   <input className={inputCls} placeholder="Enter Captcha" value={form.captcha} onChange={e => u("captcha", e.target.value)} />
 
-                  {/* Agree */}
                   <label className="col-span-2 flex items-start gap-2 text-white/70 text-xs pt-1 cursor-pointer">
                     <input type="checkbox" className="mt-0.5 accent-yellow-400" checked={form.agree} onChange={e => u("agree", e.target.checked)} />
                     <span>I agree to receive information by signing up on MITS Deemed to be University *</span>
@@ -243,115 +210,6 @@ const AdmissionHighlight = () => {
                   <p className="col-span-2 text-center text-sm font-semibold text-white/70 mt-1">Already have an Account? <span className="text-[#ffd600] underline cursor-pointer">Login</span></p>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-              <div className="lg:col-span-5 w-full rounded-xl p-4 md:p-5 border border-white/20 shadow-2xl backdrop-blur-md" style={{background: "rgba(15,42,68,0.55)"}}>
-                <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-4">Register for Admissions 2026</h3>
-
-                <div className="grid grid-cols-2 gap-2">
-                  {/* Name */}
-                  <div className="col-span-2 relative">
-                    <UserRoundPlus className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
-                    <input className={`${inputCls} pl-9`} placeholder="Enter Name *" value={form.name} onChange={e => u("name", e.target.value)} />
-                  </div>
-
-                  {/* Email */}
-                  <div className="col-span-2 relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
-                    <input type="email" className={`${inputCls} pl-9`} placeholder="Enter Email Address *" value={form.email} onChange={e => u("email", e.target.value)} />
-                  </div>
-
-                  {/* Phone */}
-                  <div className="col-span-2 flex gap-2">
-                    <div className="h-10 px-3 rounded-md border border-white/20 bg-white/10 flex items-center gap-1 text-white text-sm shrink-0">
-                      <Phone className="w-3 h-3" /> +91
-                    </div>
-                    <input type="tel" className={inputCls} placeholder="Enter Mobile Number *" value={form.phone} onChange={e => u("phone", e.target.value)} />
-                  </div>
-
-                  {/* OTP */}
-                  <div className="relative">
-                    <KeyRound className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
-                    <input className={`${inputCls} pl-9`} placeholder="Enter OTP" value={form.otp} onChange={e => u("otp", e.target.value)} />
-                  </div>
-
-                  {/* State */}
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 z-10" />
-                    <select className={`${selectCls} pl-9`} value={form.state} onChange={e => u("state", e.target.value)}>
-                      <option value="">Select State *</option>
-                      <option>Andhra Pradesh</option>
-                      <option>Telangana</option>
-                      <option>Karnataka</option>
-                      <option>Tamil Nadu</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-
-                  {/* City */}
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 z-10" />
-                    <input className={`${inputCls} pl-9`} placeholder="Enter City *" value={form.city} onChange={e => u("city", e.target.value)} />
-                  </div>
-
-                  {/* Program */}
-                  <div className="relative">
-                    <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 z-10" />
-                    <select className={`${selectCls} pl-9`} value={form.program} onChange={e => u("program", e.target.value)}>
-                      <option value="">Select Program *</option>
-                      <option>B.Tech</option>
-                      <option>M.Tech</option>
-                      <option>MBA</option>
-                      <option>MCA</option>
-                      <option>Ph.D.</option>
-                    </select>
-                  </div>
-
-                  {/* Course */}
-                  <div className="relative">
-                    <BookOpen className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 z-10" />
-                    <select className={`${selectCls} pl-9`} value={form.course} onChange={e => u("course", e.target.value)}>
-                      <option value="">Select Course *</option>
-                      <option>Computer Science</option>
-                      <option>Electronics</option>
-                      <option>Mechanical</option>
-                      <option>Civil</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-
-                  {/* Admission Type */}
-                  <div className="col-span-2">
-                    <select className={selectCls} value={form.admissionType} onChange={e => u("admissionType", e.target.value)}>
-                      <option value="">Select Admission Type *</option>
-                      <option>Management Quota</option>
-                      <option>Convener Quota</option>
-                      <option>NRI Quota</option>
-                    </select>
-                  </div>
-
-                  {/* Captcha */}
-                  <div className="h-10 rounded-md border border-white/20 bg-white/10 px-3 flex items-center justify-between text-white text-sm">
-                    <span className="font-semibold tracking-widest">dc253c</span>
-                    <RefreshCw className="w-4 h-4 text-white/60 cursor-pointer hover:text-white transition-colors" />
-                  </div>
-                  <input className={inputCls} placeholder="Enter Captcha" value={form.captcha} onChange={e => u("captcha", e.target.value)} />
-
-                  {/* Agree */}
-                  <label className="col-span-2 flex items-start gap-2 text-white/70 text-xs pt-1 cursor-pointer">
-                    <input type="checkbox" className="mt-0.5 accent-yellow-400" checked={form.agree} onChange={e => u("agree", e.target.checked)} />
-                    <span>I agree to receive information by signing up on MITS Deemed to be University *</span>
-                  </label>
-
-                  <button type="button" className="col-span-2 h-11 rounded-xl bg-[#ffd600] text-[#0f2a44] hover:bg-[#ffe066] font-bold text-base tracking-wide transition-colors duration-300 shadow-lg">
-                    REGISTER
-                  </button>
-
-                  <p className="col-span-2 text-center text-sm font-semibold text-white/70 mt-1">Already have an Account? <span className="text-[#ffd600] underline cursor-pointer">Login</span></p>
->>>>>>> d332adf7abdd367be2b1dd1e65c83abd81f34ed5
-                </div>
-              </div>
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
             </div>
           </div>
         </ScrollReveal>

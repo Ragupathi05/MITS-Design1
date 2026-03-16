@@ -72,8 +72,4 @@ const InstitutionsSection = () => {
   );
 };
 
-<<<<<<< HEAD
 export default InstitutionsSection;
-=======
-export default InstitutionsSection;
->>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
