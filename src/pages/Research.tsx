@@ -1,223 +1,137 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ArrowRight, Microscope, TrendingUp, Users, Award, Zap, Target, BookOpen, Globe } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import ScrollReveal from "@/components/ScrollReveal";
+import { BookOpen, FlaskConical, Handshake, Lightbulb, Microscope, FileText, Award, Building2 } from "lucide-react";
+
+const BASE = import.meta.env.BASE_URL;
+
+const researchCenters = [
+  { icon: FlaskConical, title: "Advanced Materials Research", desc: "Research on nano-materials, composites, and sustainable engineering materials." },
+  { icon: Microscope, title: "Signal Processing & VLSI", desc: "Advanced research in signal processing, embedded systems, and VLSI design." },
+  { icon: Lightbulb, title: "AI & Machine Learning Lab", desc: "Deep learning, NLP, computer vision, and data science research." },
+  { icon: Building2, title: "Renewable Energy Center", desc: "Solar energy, wind power, and sustainable energy systems research." },
+];
+
+const stats = [
+  { value: "500+", label: "Research Publications" },
+  { value: "50+", label: "Funded Projects" },
+  { value: "25+", label: "Patents Filed" },
+  { value: "30+", label: "Industry Collaborations" },
+];
+
+const collaborations = [
+  "International academic exchange programs with universities worldwide",
+  "Industry-sponsored research projects with leading corporations",
+  "MoUs with national laboratories and research institutions",
+  "Collaborative PhD programs with partner universities",
+  "Joint publications and conference presentations",
+];
 
 const Research = () => {
-  const researchAreas = [
-    {
-      icon: Zap,
-      title: "Artificial Intelligence & Machine Learning",
-      description: "Developing cutting-edge AI solutions for real-world problems including computer vision, NLP, autonomous systems, and healthcare AI.",
-      publications: "65+ Publications",
-      funding: "$3.2M",
-      highlights: ["Deep Learning", "Computer Vision", "NLP", "Robotics"],
-      faculty: 12
-    },
-    {
-      icon: Target,
-      title: "Renewable Energy & Sustainability",
-      description: "Research in solar energy, wind power, energy storage, sustainable materials, and carbon footprint reduction for a greener future.",
-      publications: "48+ Publications",
-      funding: "$2.4M",
-      highlights: ["Solar Energy", "Wind Power", "Energy Storage", "Green Materials"],
-      faculty: 9
-    },
-    {
-      icon: Microscope,
-      title: "Biomedical Engineering",
-      description: "Innovation in medical devices, tissue engineering, diagnostic systems, and healthcare technology solutions for better patient outcomes.",
-      publications: "42+ Publications",
-      funding: "$1.9M",
-      highlights: ["Medical Devices", "Tissue Engineering", "Diagnostics", "Healthcare IT"],
-      faculty: 8
-    },
-    {
-      icon: Users,
-      title: "Internet of Things (IoT)",
-      description: "Developing smart systems, connected devices, edge computing, and industry 4.0 applications for intelligent automation.",
-      publications: "52+ Publications",
-      funding: "$1.8M",
-      highlights: ["Smart Cities", "Industrial IoT", "Edge Computing", "Wireless Sensor Networks"],
-      faculty: 10
-    },
-    {
-      icon: Award,
-      title: "Nanotechnology",
-      description: "Exploring nanostructured materials for electronics, energy storage, environmental remediation, and medical applications.",
-      publications: "38+ Publications",
-      funding: "$1.5M",
-      highlights: ["Nanomaterials", "Nanoelectronics", "Drug Delivery", "Environmental Applications"],
-      faculty: 7
-    },
-    {
-      icon: BookOpen,
-      title: "Cybersecurity & Data Privacy",
-      description: "Advanced research in securing digital infrastructure, protecting sensitive information, and developing secure communication protocols.",
-      publications: "56+ Publications",
-      funding: "$2.1M",
-      highlights: ["Network Security", "Cryptography", "Data Privacy", "Threat Detection"],
-      faculty: 9
-    },
-  ];
-
-  const facilities = [
-    { name: "Advanced Computing Lab", desc: "High-performance computing systems, AI accelerators, and server infrastructure", icon: Zap },
-    { name: "Electronics Research Center", desc: "State-of-the-art fabrication and testing equipment for semiconductor research", icon: Microscope },
-    { name: "Biotechnology Lab", desc: "Modern facilities for biological research, cell culture, and biomedical analysis", icon: Microscope },
-    { name: "Mechanical Testing Lab", desc: "Comprehensive material testing and mechanical analysis equipment", icon: Award },
-    { name: "AI/ML Innovation Hub", desc: "GPU clusters, deep learning infrastructure, and computational resources", icon: Zap },
-    { name: "Environmental Research Center", desc: "Facilities for sustainability studies and environmental impact analysis", icon: Target },
-  ];
-
-  const stats = [
-    { number: "320+", label: "Research Publications" },
-    { number: "68+", label: "Active Research Projects" },
-    { number: "45+", label: "Industry Partnerships" },
-    { number: "$15.9M", label: "Research Funding" },
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Header />
-      <main className="pt-24 pb-20">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 py-20 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 right-10 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-3xl"></div>
-            <div className="absolute bottom-10 left-10 w-72 h-72 bg-secondary/50 rounded-full mix-blend-multiply filter blur-3xl"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-4xl mx-auto">
-              <p className="text-secondary/80 font-semibold tracking-widest uppercase text-sm mb-4">Research & Innovation</p>
-              <h1 className="font-display text-5xl md:text-6xl font-bold text-primary-foreground mb-6">
-                Advancing Knowledge, Shaping Future
-              </h1>
-              <p className="text-xl text-primary-foreground/90">
-                Cutting-edge research driving technological innovation and solving real-world challenges through collaborative excellence and world-class infrastructure.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-4 gap-6">
-            {stats.map((stat, i) => (
-              <div key={i} className="bg-card border border-border rounded-xl p-8 text-center hover:border-secondary/50 hover:shadow-lg transition-all">
-                <p className="text-3xl md:text-4xl font-bold text-secondary mb-2">{stat.number}</p>
-                <p className="text-muted-foreground font-medium">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Research Areas */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-3">Focus Areas</p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">Research Domains</h2>
-            <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">Leading interdisciplinary research initiatives addressing global challenges</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, i) => {
-              const Icon = area.icon;
-              return (
-                <Card key={i} className="border-border hover:border-secondary/50 transition-all hover:shadow-xl hover:-translate-y-2 p-8">
-                  <Icon className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-lg font-bold text-foreground mb-3">{area.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{area.description}</p>
-                  
-                  <div className="mb-6 pb-6 border-t border-border">
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {area.highlights.map((h, j) => (
-                        <span key={j} className="px-3 py-1 bg-secondary/10 text-secondary text-xs font-bold rounded-full">
-                          {h}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex justify-between items-center pt-4 border-t border-border text-xs">
-                    <span className="text-secondary font-semibold">{area.publications}</span>
-                    <span className="text-muted-foreground">|</span>
-                    <span className="text-secondary font-semibold">{area.funding}</span>
-                    <span className="text-muted-foreground">|</span>
-                    <span className="text-muted-foreground">{area.faculty} Faculty</span>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Research Facilities */}
-        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-3">Infrastructure</p>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">Research Facilities</h2>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {facilities.map((facility, i) => {
-                const Icon = facility.icon;
-                return (
-                  <Card key={i} className="border-border hover:border-secondary/50 hover:shadow-lg transition-all p-6">
-                    <Icon className="w-10 h-10 text-secondary mb-4" />
-                    <h3 className="text-lg font-bold text-foreground mb-2">{facility.name}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{facility.desc}</p>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        {/* Collaborations */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">Global Collaborations</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-card border border-border rounded-xl p-8 hover:border-secondary/50 transition-all">
-              <Users className="w-12 h-12 text-secondary mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-3">Industry Partnerships</h3>
-              <p className="text-muted-foreground mb-4">Collaborations with leading Fortune 500 companies for applied research and technology transfer</p>
-              <p className="text-secondary font-bold text-lg">45+ Partners</p>
-            </div>
-            <div className="bg-card border border-border rounded-xl p-8 hover:border-secondary/50 transition-all">
-              <Globe className="w-12 h-12 text-secondary mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-3">International Collaborations</h3>
-              <p className="text-muted-foreground mb-4">Research partnerships with 60+ universities across USA, Europe, Asia, and other continents</p>
-              <p className="text-secondary font-bold text-lg">60+ Countries</p>
-            </div>
-            <div className="bg-card border border-border rounded-xl p-8 hover:border-secondary/50 transition-all">
-              <TrendingUp className="w-12 h-12 text-secondary mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-3">Innovation Hubs</h3>
-              <p className="text-muted-foreground mb-4">Joint research centers with government agencies and international research organizations</p>
-              <p className="text-secondary font-bold text-lg">15+ Centers</p>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="bg-gradient-to-r from-secondary to-secondary/80 rounded-2xl p-16 text-center max-w-3xl mx-auto border border-secondary/40">
-            <h2 className="text-4xl font-bold text-secondary-foreground mb-4">Join Our Research Community</h2>
-            <p className="text-secondary-foreground/90 text-lg mb-10">
-              Collaborate with leading researchers and contribute to breakthrough innovations shaping the future.
+      <main>
+        <section
+          className="relative pt-32 md:pt-40 pb-20 overflow-hidden"
+          style={{
+            backgroundImage: `url(${BASE}Hero-Section/image%203.JPG)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-secondary/85" />
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Research</p>
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Research & Innovation</h1>
+            <p className="text-white/80 text-lg max-w-3xl mx-auto">
+              MITS fosters a vibrant research ecosystem through advanced labs, funded projects, and industry collaborations.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90 font-semibold text-lg px-8 py-6 inline-flex items-center gap-2">
-                Explore Opportunities <ArrowRight size={20} />
-              </Button>
-              <Button variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground/10 font-semibold text-lg px-8 py-6">
-                Research Publications
-              </Button>
+          </div>
+        </section>
+
+        <section className="py-16 bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <p className="font-display text-4xl font-bold text-accent">{stat.value}</p>
+                  <p className="text-primary-foreground/70 text-sm mt-1">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
+
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <div className="text-center mb-14">
+                <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Centers of Excellence</p>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Research Centers</h2>
+              </div>
+            </ScrollReveal>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {researchCenters.map((item, i) => (
+                <ScrollReveal key={item.title} delay={i * 0.1}>
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group h-full">
+                    <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+                      <item.icon className="w-6 h-6 text-secondary-foreground group-hover:text-primary-foreground transition-colors" />
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-card-foreground mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-muted">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <ScrollReveal direction="left">
+                <div className="bg-card border border-border rounded-xl p-8 shadow-sm h-full">
+                  <FileText className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="font-display text-2xl font-bold text-card-foreground mb-3">Research Publications</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    MITS faculty and scholars publish consistently in reputed journals including IEEE, Elsevier, Springer, and Taylor & Francis. Over 500 publications in the last five years demonstrate the institution's commitment to advancing knowledge.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal direction="right">
+                <div className="bg-card border border-border rounded-xl p-8 shadow-sm h-full">
+                  <Award className="w-10 h-10 text-accent mb-4" />
+                  <h3 className="font-display text-2xl font-bold text-card-foreground mb-3">Patents & Projects</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Innovation at MITS has resulted in 25+ patents filed across domains including IoT, AI, materials science, and renewable energy. Funded projects from DST, AICTE, and industry partners drive applied research outcomes.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <div className="text-center mb-14">
+                <Handshake className="w-10 h-10 text-primary mx-auto mb-3" />
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Industry Collaborations</h2>
+              </div>
+            </ScrollReveal>
+            <div className="max-w-3xl mx-auto space-y-3">
+              {collaborations.map((item, i) => (
+                <ScrollReveal key={i} delay={i * 0.06}>
+                  <div className="bg-card border border-border rounded-lg p-4 flex items-center gap-3 shadow-sm">
+                    <BookOpen className="w-5 h-5 text-accent shrink-0" />
+                    <p className="text-muted-foreground text-sm">{item}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
