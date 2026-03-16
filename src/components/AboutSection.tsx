@@ -57,7 +57,7 @@ const AboutSection = () => {
 
   useEffect(() => {
     if (isPaused) return;
-    timerRef.current = window.setInterval(() => paginate(1), SLIDE_INTERVAL);
+    timerRef.current = setInterval(() => paginate(1), SLIDE_INTERVAL);
     return () => {
       if (timerRef.current !== null) window.clearInterval(timerRef.current);
     };
