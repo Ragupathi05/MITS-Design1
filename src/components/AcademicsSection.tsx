@@ -164,7 +164,7 @@ const cardVariants = {
     scale: 1,
     filter: "blur(0px)",
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 130,
       damping: 17,
       mass: 0.8,

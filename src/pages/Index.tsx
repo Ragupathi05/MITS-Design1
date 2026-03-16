@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import AcademicsSection from "@/components/AcademicsSection";
-import ResearchInnovationSection from "@/components/ResearchInnovationSection";
 import AdmissionHighlight from "@/components/AdmissionHighlight";
 import InstitutionsSection from "@/components/InstitutionsSection";
 import NewsEventsSection from "@/components/NewsEventsSection";
@@ -18,7 +17,7 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        {/* Accent ticker bar - MITS red like official site */}
+        {/* Accent ticker bar */}
         <div className="relative z-10 bg-primary">
           <div className="container mx-auto px-4 py-3 flex items-center justify-center gap-6 flex-wrap">
             {["NAAC A+ Accredited", "UGC Recognized", "AICTE Approved", "NBA Accredited", "NIRF Ranked"].map((label, i) => (
@@ -38,7 +37,6 @@ const Index = () => {
         <InstitutionsSection />
         <PlacementsSection />
         <NewsEventsSection />
-        <ResearchInnovationSection />
         <TestimonialsSection />
         <CampusGallery />
       </main>

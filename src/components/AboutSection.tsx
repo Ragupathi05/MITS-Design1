@@ -21,14 +21,14 @@ const slideVariants = {
     rotateY: 0,
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.95, ease: [0.22, 0.61, 0.36, 1] },
+    transition: { duration: 0.95, ease: [0.22, 0.61, 0.36, 1] as [number, number, number, number] },
   },
   exit: (dir: number) => ({
     x: dir < 0 ? "108%" : "-108%",
     rotateY: dir < 0 ? 22 : -22,
     scale: 0.88,
     opacity: 0,
-    transition: { duration: 0.72, ease: [0.55, 0, 1, 0.45] },
+    transition: { duration: 0.72, ease: [0.55, 0, 1, 0.45] as [number, number, number, number] },
   }),
 };
 
@@ -57,7 +57,7 @@ const AboutSection = () => {
 
   useEffect(() => {
     if (isPaused) return;
-    timerRef.current = window.setInterval(() => paginate(1), SLIDE_INTERVAL);
+    timerRef.current = setInterval(() => paginate(1), SLIDE_INTERVAL);
     return () => {
       if (timerRef.current !== null) window.clearInterval(timerRef.current);
     };

@@ -1,40 +1,48 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
-const navItems = [
+type NavChild = { label: string; href: string };
+type NavItem = { label: string; href: string; children?: NavChild[] };
+
+const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   {
     label: "Academics",
     href: "/academics",
     children: [
-      { label: "Departments", href: "/departments" },
+      { label: "Schools & Departments", href: "/departments" },
+      { label: "Programs Offered", href: "/academics" },
       { label: "Library", href: "/library" },
       { label: "Examinations", href: "/examinations" },
     ],
   },
-  { label: "Admissions", href: "/admissions" },
+  {
+    label: "Admissions",
+    href: "/admissions",
+    children: [
+      { label: "Admission Process", href: "/admissions" },
+      { label: "Apply Online", href: "/admissions" },
+      { label: "Eligibility & Fees", href: "/admissions" },
+    ],
+  },
   { label: "Research", href: "/research" },
   { label: "Placements", href: "/placements" },
   { label: "Campus Life", href: "/campus-life" },
-  {
-    label: "News",
-    href: "/news-events",
-    children: [
-      { label: "Latest News", href: "/news-events" },
-      { label: "Events", href: "/news-events" },
-      { label: "Announcements", href: "/news-events" },
-    ],
-  },
+  { label: "Examinations", href: "/examinations" },
+  { label: "Library", href: "/library" },
   { label: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -42,28 +50,42 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setMobileOpen(false);
+    setOpenDropdown(null);
+  }, [location.pathname]);
+
+  const handleMouseEnter = (label: string) => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setOpenDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeout.current = setTimeout(() => setOpenDropdown(null), 150);
+  };
+
+  const isActive = (href: string) => location.pathname === href;
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? "shadow-xl" : ""}`}
-    >
-      {/* Top bar - Admissions ticker */}
+    <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? "shadow-xl" : ""}`}>
+      {/* Top ticker bar */}
       <div className="bg-primary text-primary-foreground hidden md:block overflow-hidden">
         <div className="h-9 flex items-center">
           <div className="bg-accent text-accent-foreground font-bold text-xs px-4 h-full flex items-center shrink-0 z-10">
-            🎓 ADMISSIONS
+            🎓 ADMISSIONS 2026
           </div>
           <div className="overflow-hidden flex-1 relative">
             <div className="flex whitespace-nowrap animate-marquee">
               {[1, 2].map((n) => (
                 <span key={n} className="inline-flex items-center gap-6 px-8 text-sm font-semibold">
-                  <span className="text-yellow-300 font-bold tracking-wide">🌟 Admissions for 2026 are NOW OPEN!</span>
-                  <span className="text-primary-foreground/80">•</span>
-                  <span>Apply today and secure your seat at MITS — Madanapalle Institute of Technology &amp; Science</span>
-                  <span className="text-primary-foreground/80">•</span>
-                  <span className="text-yellow-300 font-bold">🚀 Limited seats available — Don't miss out!</span>
-                  <span className="text-primary-foreground/80">•</span>
-                  <span>Deemed to be University | NAAC Accredited | Top Rankings</span>
-                  <span className="text-primary-foreground/80">•</span>
+                  <span className="text-accent font-bold tracking-wide">🌟 Admissions for 2026 are NOW OPEN!</span>
+                  <span className="text-primary-foreground/60">•</span>
+                  <span>Apply today at MITS — Deemed to be University</span>
+                  <span className="text-primary-foreground/60">•</span>
+                  <span className="text-accent font-bold">🚀 Limited seats — Don't miss out!</span>
+                  <span className="text-primary-foreground/60">•</span>
+                  <span>NAAC A+ Accredited | UGC Recognized | AICTE Approved</span>
+                  <span className="text-primary-foreground/60">•</span>
                 </span>
               ))}
             </div>
@@ -71,9 +93,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main nav - White background matching official MITS site */}
+      {/* Main navigation */}
       <div className="bg-white border-b border-border shadow-sm">
         <div className="container mx-auto flex items-center justify-between h-16 lg:h-20 px-4 gap-3">
+          {/* Logo */}
           <Link to="/" className="flex items-center min-w-0 flex-1 lg:flex-none" onClick={() => setMobileOpen(false)}>
             <div className="flex items-center gap-2 sm:gap-3 transition-all duration-300 shrink-0 max-w-full">
               <img
@@ -107,29 +130,56 @@ const Header = () => {
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5">
             {navItems.map((item) =>
               item.children ? (
-                <DropdownMenu key={item.label}>
-                  <DropdownMenuTrigger className="text-secondary hover:text-primary transition-colors text-sm font-semibold font-body flex items-center gap-1 outline-none">
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(item.label)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <Link
+                    to={item.href}
+                    className={`flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-md
+                      ${isActive(item.href) ? "text-primary bg-primary/5" : "text-secondary hover:text-primary hover:bg-primary/5"}
+                      relative after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100
+                    `}
+                    style={{ fontFamily: "var(--font-body)" }}
+                  >
                     {item.label}
-                    <ChevronDown className="w-4 h-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-white border-border">
-                    {item.children.map((child) => (
-                      <DropdownMenuItem key={child.label} asChild>
-                        <Link to={child.href} className="cursor-pointer text-sm text-foreground hover:text-primary">
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
+                  </Link>
+                  {/* Dropdown */}
+                  <div
+                    className={`absolute top-full left-0 mt-0 pt-1 min-w-[220px] z-50 transition-all duration-200 ${
+                      openDropdown === item.label ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
+                    }`}
+                  >
+                    <div className="bg-white rounded-lg border border-border shadow-xl py-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          to={child.href}
+                          className="block px-4 py-2.5 text-sm text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                          style={{ fontFamily: "var(--font-body)" }}
+                        >
                           {child.label}
                         </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="text-secondary hover:text-primary transition-colors text-sm font-semibold font-body relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+                  className={`px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-md
+                    ${isActive(item.href) ? "text-primary bg-primary/5" : "text-secondary hover:text-primary hover:bg-primary/5"}
+                    relative after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100
+                  `}
+                  style={{ fontFamily: "var(--font-body)" }}
                 >
                   {item.label}
                 </Link>
@@ -137,9 +187,10 @@ const Header = () => {
             )}
           </nav>
 
+          {/* Right: Apply + Mobile toggle */}
           <div className="flex items-center gap-3">
             <Link to="/admissions">
-              <Button className="bg-accent text-accent-foreground hover:bg-gold-light font-bold text-sm px-5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg">
+              <Button className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-sm px-5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg">
                 Apply Now
               </Button>
             </Link>
@@ -153,18 +204,46 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-border shadow-lg">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-3">
+        <div className="lg:hidden bg-white border-t border-border shadow-lg max-h-[70vh] overflow-y-auto">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-1">
             {navItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.href}
-                className="text-secondary hover:text-primary transition-colors text-sm font-medium py-2"
-                onClick={() => setMobileOpen(false)}
-              >
-                {item.label}
-              </Link>
+              <div key={item.label}>
+                <div className="flex items-center justify-between">
+                  <Link
+                    to={item.href}
+                    className={`flex-1 text-sm font-semibold py-2.5 transition-colors ${
+                      isActive(item.href) ? "text-primary" : "text-secondary hover:text-primary"
+                    }`}
+                    onClick={() => !item.children && setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                  {item.children && (
+                    <button
+                      className="p-2 text-secondary hover:text-primary"
+                      onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+                    >
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileExpanded === item.label ? "rotate-180" : ""}`} />
+                    </button>
+                  )}
+                </div>
+                {item.children && mobileExpanded === item.label && (
+                  <div className="pl-4 pb-2 space-y-1">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.label}
+                        to={child.href}
+                        className="block text-sm text-muted-foreground hover:text-primary py-1.5 transition-colors"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
         </div>
