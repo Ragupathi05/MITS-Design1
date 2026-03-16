@@ -13,10 +13,11 @@ const navItems: NavItem[] = [
     label: "Academics",
     href: "/academics",
     children: [
-      { label: "Schools & Departments", href: "/departments" },
       { label: "Programs Offered", href: "/academics" },
-      { label: "Library", href: "/library" },
+      { label: "Departments", href: "/departments" },
+      { label: "Academic Calendar", href: "/academics" },
       { label: "Examinations", href: "/examinations" },
+      { label: "Library", href: "/library" },
     ],
   },
   {
@@ -31,8 +32,6 @@ const navItems: NavItem[] = [
   { label: "Research", href: "/research" },
   { label: "Placements", href: "/placements" },
   { label: "Campus Life", href: "/campus-life" },
-  { label: "Examinations", href: "/examinations" },
-  { label: "Library", href: "/library" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -95,9 +94,9 @@ const Header = () => {
 
       {/* Main navigation */}
       <div className="bg-white border-b border-border shadow-sm">
-        <div className="container mx-auto flex items-center justify-between h-16 lg:h-20 px-4 gap-3">
+        <div className="w-full flex items-center justify-between h-16 lg:h-20 px-[10px] md:px-[15px] sm:px-[20px] gap-3">
           {/* Logo */}
-          <Link to="/" className="flex items-center min-w-0 flex-1 lg:flex-none" onClick={() => setMobileOpen(false)}>
+          <Link to="/" className="flex items-center min-w-0 shrink-0" onClick={() => setMobileOpen(false)}>
             <div className="flex items-center gap-2 sm:gap-3 transition-all duration-300 shrink-0 max-w-full">
               <img
                 src={`${import.meta.env.BASE_URL}mits-logo.png`}
@@ -131,7 +130,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 flex-1 justify-end">
             {navItems.map((item) =>
               item.children ? (
                 <div
@@ -142,7 +141,7 @@ const Header = () => {
                 >
                   <Link
                     to={item.href}
-                    className={`flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-md
+                    className={`flex items-center gap-1 px-3 py-2 text-base font-semibold transition-colors duration-200 rounded-md
                       ${isActive(item.href) ? "text-primary bg-primary/5" : "text-secondary hover:text-primary hover:bg-primary/5"}
                       relative after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100
                     `}
@@ -162,7 +161,7 @@ const Header = () => {
                         <Link
                           key={child.label}
                           to={child.href}
-                          className="block px-4 py-2.5 text-sm text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                          className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
                           style={{ fontFamily: "var(--font-body)" }}
                         >
                           {child.label}
@@ -175,7 +174,7 @@ const Header = () => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-md
+                  className={`px-3 py-2 text-base font-semibold transition-colors duration-200 rounded-md
                     ${isActive(item.href) ? "text-primary bg-primary/5" : "text-secondary hover:text-primary hover:bg-primary/5"}
                     relative after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100
                   `}
@@ -188,7 +187,7 @@ const Header = () => {
           </nav>
 
           {/* Right: Apply + Mobile toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0 ml-auto lg:ml-0">
             <Link to="/admissions">
               <Button className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-sm px-5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg">
                 Apply Now
@@ -207,7 +206,7 @@ const Header = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-border shadow-lg max-h-[70vh] overflow-y-auto">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-1">
+          <nav className="w-full px-[20px] py-4 flex flex-col gap-1">
             {navItems.map((item) => (
               <div key={item.label}>
                 <div className="flex items-center justify-between">
