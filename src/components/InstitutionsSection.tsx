@@ -7,8 +7,6 @@ const institutions = [
   {
     icon: Building2,
     title: "MITS Deemed to be University",
-    established: "Established: 1998",
-    accreditationInfo: "Accreditation: NAAC A+ | UGC Recognized",
     description: "MITS Deemed to be University advances multidisciplinary education with a strong focus on research outcomes, international partnerships, and governance aligned to national quality standards.",
     points: ["Research-driven programs", "Global collaborations", "Outcome-based academic regulations"],
     badges: ["NAAC A+", "UGC Recognized", "NIRF Participating"],
@@ -18,8 +16,6 @@ const institutions = [
   {
     icon: GraduationCap,
     title: "MITS Autonomous Institute",
-    established: "Established: 1998",
-    accreditationInfo: "Accreditation: AICTE Approved | NBA Accredited",
     description: "MITS Autonomous Institute delivers a rigorous, industry-oriented academic model with curriculum flexibility, contemporary pedagogy, and consistent student outcomes.",
     points: ["Industry-oriented curriculum", "Strong placements", "Continuous academic quality assurance"],
     badges: ["AICTE Approved", "NBA Accredited", "Autonomous Status"],
@@ -42,31 +38,29 @@ const InstitutionsSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {institutions.map((inst, i) => (
             <ScrollReveal key={inst.title} delay={i * 0.2} direction={i === 0 ? "left" : "right"}>
-              <div className="bg-card border border-border rounded-lg p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group h-full cursor-pointer">
-                <div className={`w-16 h-1 rounded-sm ${i === 0 ? 'bg-primary' : 'bg-accent'} mb-6`} />
-                <div className={`w-14 h-14 rounded-md ${inst.accentColor} flex items-center justify-center mb-6 transition-all duration-300`}>
-                  <inst.icon className={`w-8 h-8 ${inst.iconColor}`} />
+              <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group h-full cursor-pointer">
+                <div className={`w-10 h-1 rounded-sm ${i === 0 ? 'bg-primary' : 'bg-accent'} mb-4`} />
+                <div className={`w-10 h-10 rounded-md ${inst.accentColor} flex items-center justify-center mb-4 transition-all duration-300`}>
+                  <inst.icon className={`w-5 h-5 ${inst.iconColor}`} />
                 </div>
-                <h3 className="font-display text-3xl font-bold text-card-foreground mb-4 leading-tight">{inst.title}</h3>
-                <p className="text-xs uppercase tracking-wider text-primary/80 font-semibold mb-1">{inst.established}</p>
-                <p className="text-sm text-secondary mb-4 font-medium">{inst.accreditationInfo}</p>
-                <p className="text-muted-foreground leading-relaxed mb-5">{inst.description}</p>
-                <div className="flex flex-wrap gap-2 mb-5">
+                <h3 className="font-display text-xl font-bold text-card-foreground mb-2 leading-tight">{inst.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{inst.description}</p>
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {inst.badges.map((item) => (
                     <Badge key={item} variant="outline" className="border-primary/30 rounded-sm text-foreground text-xs">
                       {item}
                     </Badge>
                   ))}
                 </div>
-                <ul className="space-y-2 mb-8">
+                <ul className="space-y-1.5 mb-5">
                   {inst.points.map((point) => (
-                    <li key={point} className="text-muted-foreground flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-accent" />
+                    <li key={point} className="text-muted-foreground text-sm flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                       {point}
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold transition-all duration-200">
+                <Button variant="outline" size="sm" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold transition-all duration-200">
                   Enter Portal <ArrowUpRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>
