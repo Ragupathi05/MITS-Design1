@@ -43,10 +43,15 @@ const Header = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <header
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         scrolled ? "shadow-xl" : ""
       }`}
+=======
+        <header
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? "shadow-xl" : ""}`}
+>>>>>>> 0d4056c349f384a67be56b93fddbf97736de7866
     >
       {/* Top bar - Admissions ticker */}
       <div className="bg-primary text-primary-foreground hidden md:block overflow-hidden">
