@@ -13,22 +13,10 @@ import CampusGallery from "@/components/CampusGallery";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  import HeroSection from "../components/HeroSection";
-  import AboutSection from "../components/AboutSection";
-  import AcademicsSection from "../components/AcademicsSection";
-  import AdmissionHighlight from "../components/AdmissionHighlight";
-  import InstitutionsSection from "../components/InstitutionsSection";
-  import PlacementsSection from "../components/PlacementsSection";
-  import RankingsSection from "../components/RankingsSection";
-  import ResearchInnovationSection from "../components/ResearchInnovationSection";
-  import CampusGallery from "../components/CampusGallery";
-  import NewsEventsSection from "../components/NewsEventsSection";
-  import TestimonialsSection from "../components/TestimonialsSection";
-  import Footer from "../components/Footer";
-
-  export default function Index() {
-    return (
-      <main className="bg-background">
+  return (
+    <div className="bg-background">
+      <Header />
+      <main>
         <HeroSection />
         <AboutSection />
         <AcademicsSection />
@@ -40,11 +28,6 @@ const Index = () => {
         <CampusGallery />
         <NewsEventsSection />
         <TestimonialsSection />
-        <Footer />
-      </main>
-    );
-  }
-        <CampusGallery />
       </main>
       <Footer />
     </div>
