@@ -14,14 +14,24 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Cormorant Garamond', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Playfair Display', 'Georgia', 'serif'],
+        body: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       colors: {
         "brand-red": {
-          DEFAULT: "hsl(var(--brand-red))",
-          light: "hsl(var(--brand-red-light))",
-          dark: "hsl(var(--brand-red-dark))",
+          DEFAULT: "#b30000",
+          light: "#d93030",
+          dark: "#7a0000",
+        },
+        "mits-gold": {
+          DEFAULT: "#caa74d",
+          light: "#e8c97a",
+          dark: "#8a6a1a",
+        },
+        "mits-navy": {
+          DEFAULT: "#0f2a44",
+          light: "#1a3d5c",
+          dark: "#071525",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

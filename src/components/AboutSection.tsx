@@ -74,11 +74,11 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
-            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">About Us</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">About Us</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6 leading-tight">
               Shaping Futures Since 1998
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="font-body text-[#1a1a1a] text-base md:text-lg mb-8 leading-[1.8] max-w-prose">
               Madanapalle Institute of Technology & Science (MITS), now MITS - Deemed to be University,
               was established in 1998 and has grown into a leading center for engineering, sciences, and
               management education. With NAAC A+ accreditation and NBA-recognized programs, MITS advances
@@ -90,8 +90,8 @@ const AboutSection = () => {
                   <Target className="w-6 h-6 text-secondary-foreground group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">Our Mission</h3>
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">To serve region, nation, and world through academic excellence, research relevance, and community engagement.</p>
+                  <h3 className="font-display font-bold text-[#0f172a] text-lg mb-1 group-hover:text-[#b30000] transition-colors">Our Mission</h3>
+                  <p className="font-body text-[#1a1a1a] text-sm md:text-base leading-relaxed group-hover:text-[#0f172a] transition-colors">To serve region, nation, and world through academic excellence, research relevance, and community engagement.</p>
                 </div>
               </div>
               <div className="flex gap-4 group">
@@ -99,8 +99,8 @@ const AboutSection = () => {
                   <Eye className="w-6 h-6 text-accent-foreground group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">Our Vision</h3>
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">To be a globally respected institution known for innovation, ethics, and future-ready education.</p>
+                  <h3 className="font-display font-bold text-[#0f172a] text-lg mb-1 group-hover:text-[#b30000] transition-colors">Our Vision</h3>
+                  <p className="font-body text-[#1a1a1a] text-sm md:text-base leading-relaxed group-hover:text-[#0f172a] transition-colors">To be a globally respected institution known for innovation, ethics, and future-ready education.</p>
                 </div>
               </div>
               <div className="flex gap-4 group">
@@ -108,8 +108,8 @@ const AboutSection = () => {
                   <Award className="w-6 h-6 text-primary-foreground group-hover:text-accent-foreground transition-colors" />
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-foreground text-lg group-hover:text-primary transition-colors">NAAC A+ Accredited</h3>
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">Recognized for academic excellence and quality standards by the National Assessment and Accreditation Council.</p>
+                  <h3 className="font-display font-bold text-[#0f172a] text-lg mb-1 group-hover:text-[#b30000] transition-colors">NAAC A+ Accredited</h3>
+                  <p className="font-body text-[#1a1a1a] text-sm md:text-base leading-relaxed group-hover:text-[#0f172a] transition-colors">Recognized for academic excellence and quality standards by the National Assessment and Accreditation Council.</p>
                 </div>
               </div>
             </div>

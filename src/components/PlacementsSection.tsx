@@ -58,9 +58,9 @@ const PlacementsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-2">Career Success</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Placement Highlights</h2>
-            <p className="text-white/70 text-lg max-w-xl mx-auto">
+            <p className="text-[#caa74d] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Career Success</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">Placement Highlights</h2>
+            <p className="font-body text-white/80 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
               Our students are recruited by top companies across the globe.
             </p>
           </div>
@@ -68,14 +68,14 @@ const PlacementsSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 0.1}>
-              <div className="text-center bg-white/5 border border-white/10 rounded-lg p-6 md:p-7 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto rounded-md bg-accent/20 flex items-center justify-center mb-4">
-                  <stat.icon className="w-8 h-8 text-accent" />
+              <div className="text-center bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-[#caa74d]/40 hover:-translate-y-2 hover:shadow-[0_16px_32px_rgba(0,0,0,0.3),0_0_20px_rgba(202,167,77,0.1)] transition-all duration-300">
+                <div className="w-16 h-16 mx-auto rounded-xl bg-[#caa74d]/20 flex items-center justify-center mb-4 group-hover:bg-[#caa74d]/35 transition-colors">
+                  <stat.icon className="w-8 h-8 text-[#caa74d]" aria-hidden="true" />
                 </div>
-                <p className="font-display text-4xl md:text-5xl font-bold text-accent leading-none">
+                <p className="font-display text-4xl md:text-5xl font-bold text-[#caa74d] leading-none">
                   <CountUp target={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="text-white/70 text-sm mt-1">{stat.label}</p>
+                <p className="font-body text-white/80 text-sm md:text-base mt-2">{stat.label}</p>
               </div>
             </ScrollReveal>
           ))}

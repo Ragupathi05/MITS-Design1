@@ -193,11 +193,11 @@ const AcademicsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Academics</p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-[#0f2a44] mb-4">
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Academics</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-[#0f172a] mb-4 leading-tight">
               Programs Offered
             </h2>
-            <p className="text-[#405266] text-lg max-w-3xl mx-auto leading-relaxed">
+            <p className="font-body text-[#1a1a1a] text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
               Explore MITS academic pathways across engineering, computing, management, and science through a structured institutional catalog.
             </p>
           </div>

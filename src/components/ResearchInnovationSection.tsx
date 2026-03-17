@@ -14,11 +14,11 @@ const ResearchInnovationSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Research & Innovation</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Research &amp; Innovation</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-4 leading-tight">
               Advancing Knowledge Through Innovation
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="font-body text-[#1a1a1a] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               MITS cultivates an academic research culture through advanced labs, collaborative projects, and innovation-led outcomes.
             </p>
           </div>
@@ -31,8 +31,8 @@ const ResearchInnovationSection = () => {
                 <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-secondary-foreground group-hover:text-primary-foreground transition-colors" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                <h3 className="font-display text-xl font-bold text-[#0f172a] mb-2">{item.title}</h3>
+                <p className="font-body text-[#1a1a1a] text-sm md:text-base leading-relaxed">{item.description}</p>
               </div>
             </ScrollReveal>
           ))}

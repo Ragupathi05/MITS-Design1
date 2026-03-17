@@ -19,8 +19,8 @@ const CampusGallery = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Campus Life</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Campus Gallery</h2>
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Campus Life</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-4 leading-tight">Campus Gallery</h2>
           </div>
         </ScrollReveal>
         <div className="grid md:grid-cols-3 gap-4">

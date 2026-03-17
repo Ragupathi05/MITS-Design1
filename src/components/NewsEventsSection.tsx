@@ -10,9 +10,9 @@ const NewsEventsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Stay Updated</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Trending, News & Events</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Stay Updated</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-4 leading-tight">Trending, News &amp; Events</h2>
+            <p className="font-body text-[#1a1a1a] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               Institutional updates in separate sections inspired by the official MITS portal.
             </p>
           </div>
@@ -21,8 +21,8 @@ const NewsEventsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 mb-12">
           <ScrollReveal className="lg:col-span-7">
             <div className="bg-white border border-border rounded-2xl p-5 shadow-sm lg:h-[600px] flex flex-col">
-              <h3 className="font-display text-4xl md:text-[2.4rem] font-bold text-secondary mb-5">
-                Whats Trending <span className="text-primary">On</span>
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-[#0f172a] mb-5">
+                What's Trending <span className="text-[#b30000]">On</span>
               </h3>
               <div className="overflow-x-auto pb-3 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-muted/60 [&::-webkit-scrollbar-thumb]:bg-primary/45 [&::-webkit-scrollbar-thumb]:rounded-full">
                 <div className="flex gap-3 min-w-max pr-2">
@@ -63,8 +63,8 @@ const NewsEventsSection = () => {
 
           <ScrollReveal className="lg:col-span-5" delay={0.08}>
             <div className="bg-white border border-border rounded-2xl p-5 shadow-sm h-full lg:h-[600px] flex flex-col">
-              <h3 className="font-display text-4xl md:text-[2.4rem] font-bold text-secondary mb-5">
-                Latest <span className="text-primary">News</span>
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-[#0f172a] mb-5">
+                Latest <span className="text-[#b30000]">News</span>
               </h3>
               <div className="flex-1 overflow-y-auto pr-1 space-y-3 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-muted/60 [&::-webkit-scrollbar-thumb]:bg-secondary/40 [&::-webkit-scrollbar-thumb]:rounded-full">
                 {latestNews.map((item) => (
@@ -80,8 +80,8 @@ const NewsEventsSection = () => {
                       className="w-28 h-20 object-cover object-center rounded-md border border-border shrink-0"
                     />
                     <div className="min-w-0">
-                      <h4 className="text-primary font-semibold text-lg leading-snug line-clamp-2 mb-1">{item.title}</h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">{item.summary}</p>
+                      <h4 className="font-display text-[#b30000] font-bold text-base leading-snug line-clamp-2 mb-1">{item.title}</h4>
+                      <p className="font-body text-[#1a1a1a] text-sm leading-relaxed line-clamp-3">{item.summary}</p>
                     </div>
                   </Link>
                 ))}
@@ -92,8 +92,8 @@ const NewsEventsSection = () => {
 
         <ScrollReveal>
           <div className="flex items-center gap-2 mb-5">
-            <PartyPopper className="w-6 h-6 text-primary" />
-            <h3 className="font-display text-3xl md:text-4xl font-bold text-secondary">Latest Events</h3>
+            <PartyPopper className="w-6 h-6 text-[#b30000]" aria-hidden="true" />
+            <h3 className="font-display text-3xl md:text-4xl font-bold text-[#0f172a]">Latest Events</h3>
           </div>
         </ScrollReveal>
 
@@ -169,7 +169,7 @@ const NewsEventsSection = () => {
             <Button
               asChild
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6"
+              className="border-[#b30000] text-[#b30000] hover:bg-[#b30000] hover:text-white font-body font-semibold px-6 rounded-full"
             >
               <Link to="/news-events">View All Events</Link>
             </Button>

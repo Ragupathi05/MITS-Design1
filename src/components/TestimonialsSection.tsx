@@ -39,8 +39,8 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-2">Student Voices</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Testimonials</h2>
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Student Voices</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-4 leading-tight">Testimonials</h2>
           </div>
         </ScrollReveal>
         <ScrollReveal>
@@ -55,11 +55,11 @@ const TestimonialsSection = () => {
                   transition={{ duration: 0.45 }}
                   className="w-full"
                 >
-                  <Quote className="w-8 h-8 text-accent mb-4" />
-                  <p className="text-muted-foreground mb-6 leading-relaxed italic text-lg">"{testimonials[active].text}"</p>
+                  <Quote className="w-8 h-8 text-[#caa74d] mb-4" aria-hidden="true" />
+                  <p className="font-body text-[#1a1a1a] mb-6 leading-[1.8] italic text-base md:text-lg">"{testimonials[active].text}"</p>
                   <div>
-                    <p className="font-display font-semibold text-card-foreground text-xl">{testimonials[active].name}</p>
-                    <p className="text-primary text-sm font-medium">{testimonials[active].type} • {testimonials[active].role}</p>
+                    <p className="font-display font-bold text-[#0f172a] text-xl">{testimonials[active].name}</p>
+                    <p className="font-body text-[#b30000] text-sm font-semibold mt-1">{testimonials[active].type} • {testimonials[active].role}</p>
                   </div>
                 </motion.div>
               </AnimatePresence>

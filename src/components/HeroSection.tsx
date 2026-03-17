@@ -84,25 +84,25 @@ const HeroSection = () => {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="pt-4 md:pt-5"
             >
-              <p className="text-accent font-body font-semibold tracking-[0.16em] uppercase text-xs md:text-sm mb-3 md:mb-4">
+              <p className="text-[#caa74d] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3 md:mb-4">
                 Madanapalle Institute of Technology & Science
               </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-[1.02] max-w-5xl mx-auto text-balance">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 leading-[1.1] max-w-5xl mx-auto">
                 {slide.headline}
               </h1>
               <motion.p
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-accent font-semibold text-sm md:text-base max-w-3xl mx-auto mb-2 md:mb-3"
+                className="text-[#caa74d] font-body font-semibold text-sm md:text-base max-w-3xl mx-auto mb-2 md:mb-3"
               >
-                NAAC A+ Accredited | UGC Recognized | AICTE Approved
+                NAAC A+ Accredited | UGC Recognized | NBA Accredited
               </motion.p>
-              <p className="text-white/90 text-base md:text-lg max-w-3xl mx-auto mb-2 font-body">
+              <p className="text-white/90 font-body text-base md:text-lg max-w-3xl mx-auto mb-2 leading-relaxed">
                 {slide.sub}
               </p>
-              <p className="text-white/75 text-sm md:text-base max-w-2xl mx-auto mb-6 md:mb-7 font-medium">
-                NBA Accredited Programs | NIRF Participating Institution
+              <p className="text-white/75 font-body text-sm md:text-base max-w-2xl mx-auto mb-7 font-medium">
+                NIRF Ranking 201–300 | 27+ Years of Excellence
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link to="/admissions">
