@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 
 const sections = [
   { icon: Calendar, title: "Exam Schedules", desc: "Semester-wise examination timetables published well in advance for all UG, PG, and PhD programs.", color: "from-blue-500 to-cyan-500" },
-  { icon: ClipboardCheck, title: "Results", desc: "Semester results published on the official portal with grade cards and consolidated marksheets.", color: "from-green-500 to-emerald-500" },
-  { icon: FileText, title: "Academic Regulations", desc: "Outcome-based education (OBE) framework with choice-based credit system (CBCS) and continuous evaluation.", color: "from-purple-500 to-pink-500" },
+  { icon: FileText, title: "Exam Payment", desc: "Secure online payment portal for examination fees with multiple payment options and instant confirmation.", color: "from-purple-500 to-pink-500" },
   { icon: Download, title: "Hall Ticket Download", desc: "Students can download hall tickets from the examination portal before the commencement of exams.", color: "from-orange-500 to-red-500" },
+  { icon: ClipboardCheck, title: "Results", desc: "Semester results published on the official portal with grade cards and consolidated marksheets.", color: "from-green-500 to-emerald-500" },
   { icon: Shield, title: "Examination Cell", desc: "Dedicated examination cell handling scheduling, invigilation, evaluation, and grievance redressal.", color: "from-indigo-500 to-blue-500" },
   { icon: GraduationCap, title: "Convocation", desc: "Annual convocation ceremony for conferring degrees to graduating students.", color: "from-yellow-500 to-orange-500" },
 ];
@@ -58,10 +58,12 @@ const Examinations = () => {
                   <Download className="w-4 h-4 mr-2" />
                   Download Hall Ticket
                 </Button>
-                <Button variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm">
-                  <BarChart3 className="w-4 h-4 mr-2" />
-                  Check Results
-                </Button>
+                <a href="https://mits.ac.in/results">
+                  <Button variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm">
+                    <BarChart3 className="w-4 h-4 mr-2" />
+                    Check Results
+                  </Button>
+                </a>
               </div>
             </ScrollReveal>
           </div>
