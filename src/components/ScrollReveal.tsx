@@ -23,7 +23,7 @@ const ScrollReveal = ({ children, className = "", delay = 0, direction = "up" }:
       className={className}
       initial={{ opacity: 0, ...offset }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 0.7, delay, ease: "easeOut" }}
     >
       {children}
