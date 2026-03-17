@@ -105,7 +105,7 @@ const HeroSection = () => {
                 NIRF Ranking 201–300 | 27+ Years of Excellence
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link to="/admissions">
+                <Link to="https://admission.mits.ac.in/">
                   <Button className="bg-accent text-accent-foreground hover:bg-gold-light font-bold px-7 py-2.5 text-sm rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
                     Apply Now
                   </Button>
