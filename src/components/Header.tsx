@@ -26,7 +26,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Admission Process", href: "/admissions" },
       { label: "Apply Online", href: "/admissions" },
-      { label: "Eligibility & Fees", href: "/admissions" },
+      { label: "Eligibility & Fees", href: "/eligibility-and-fees" },
     ],
   },
   { label: "Research", href: "/research" },
