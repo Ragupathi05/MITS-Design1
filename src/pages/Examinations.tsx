@@ -41,11 +41,8 @@ const Examinations = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="relative pt-32 md:pt-40 pb-20 bg-gradient-to-br from-secondary via-secondary/95 to-primary/20 overflow-hidden">
-          <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:30px_30px]"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent"></div>
-          <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <section className="relative pt-32 md:pt-40 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <ScrollReveal>
               <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3 animate-fade-in">Examinations</p>
@@ -66,6 +63,17 @@ const Examinations = () => {
                 </a>
               </div>
             </ScrollReveal>
+          </div>
+          <div className="absolute bottom-4 left-6 z-10">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-1.5 text-sm">
+                <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li className="text-white/50">/</li>
+                <li><a href="/academics" className="text-white/70 hover:text-white transition-colors">Academics</a></li>
+                <li className="text-white/50">/</li>
+                <li className="text-white font-semibold">Examinations</li>
+              </ol>
+            </nav>
           </div>
         </section>
 

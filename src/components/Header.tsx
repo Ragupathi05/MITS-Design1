@@ -94,34 +94,34 @@ const Header = () => {
 
       {/* Main navigation */}
       <div className="bg-white border-b border-border shadow-sm">
-        <div className="w-full flex items-center justify-between h-16 lg:h-20 px-[10px] md:px-[15px] sm:px-[20px] gap-3">
+        <div className="w-full flex items-center justify-between h-16 lg:h-20 px-2 sm:px-4 md:px-6 gap-2 sm:gap-3">
           {/* Logo */}
           <Link to="/" className="flex items-center min-w-0 shrink-0" onClick={() => setMobileOpen(false)}>
             <div className="flex items-center gap-2 sm:gap-3 transition-all duration-300 shrink-0 max-w-full">
               <img
                 src={`${import.meta.env.BASE_URL}mits-logo.png`}
                 alt="MITS logo"
-                className="h-11 sm:h-13 lg:h-16 w-auto object-contain shrink-0"
+                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain shrink-0"
               />
-              <div className="hidden sm:flex items-center gap-3 min-w-0">
+              <div className="hidden sm:flex items-center gap-2 md:gap-3 min-w-0">
                 <div className="min-w-0">
-                  <p className="text-primary font-black text-2xl lg:text-4xl leading-none tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-                    MITS
+                  <p className="text-primary font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-none tracking-tight mt-0.5 sm:mt-1" style={{ fontFamily: "var(--font-display)" }}>
+                    &nbsp;&nbsp;MITS
                   </p>
                   <div className="h-[2px] bg-primary rounded-full mt-1 mb-0.5 w-full" />
-                  <p className="text-primary/80 font-extrabold text-[10px] lg:text-sm leading-none tracking-widest">
+                  <p className="text-primary/80 font-extrabold text-[9px] sm:text-[10px] lg:text-sm leading-none tracking-widest">
                     MADANAPALLE
                   </p>
                 </div>
-                <div className="h-10 lg:h-12 w-px bg-secondary/25 shrink-0" />
-                <div className="min-w-0 leading-none">
-                  <p className="text-secondary font-bold text-[10px] lg:text-[0.95rem] tracking-wide" style={{ fontFamily: "var(--font-body)", letterSpacing: "0.04em" }}>
+                <div className="h-8 md:h-10 lg:h-12 w-px bg-secondary/25 shrink-0" />
+                <div className="min-w-0 leading-none hidden md:block">
+                  <p className="text-secondary font-bold text-[9px] sm:text-[10px] lg:text-[0.95rem] tracking-wide" style={{ fontFamily: "var(--font-body)", letterSpacing: "0.04em" }}>
                     Madanapalle Institute of
                   </p>
-                  <p className="text-secondary font-bold text-[10px] lg:text-[0.95rem] tracking-wide mt-0.5" style={{ fontFamily: "var(--font-body)", letterSpacing: "0.04em" }}>
+                  <p className="text-secondary font-bold text-[9px] sm:text-[10px] lg:text-[0.95rem] tracking-wide mt-0.5" style={{ fontFamily: "var(--font-body)", letterSpacing: "0.04em" }}>
                     Technology &amp; Science
                   </p>
-                  <p className="text-primary/70 font-semibold text-[8px] lg:text-[11px] uppercase tracking-[0.14em] mt-1" style={{ fontFamily: "var(--font-body)" }}>
+                  <p className="text-primary/70 font-semibold text-[7px] sm:text-[8px] lg:text-[11px] uppercase tracking-[0.14em] mt-1" style={{ fontFamily: "var(--font-body)" }}>
                     Deemed to be University
                   </p>
                 </div>

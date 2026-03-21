@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 
+const BASE = import.meta.env.BASE_URL;
+
 const contactInfo = [
   { icon: MapPin, title: "Address", lines: ["Post Box No. 4, Angallu", "Madanapalle – 517325", "Annamayya District, Andhra Pradesh"] },
   { icon: Phone, title: "Phone", lines: ["+91 8571 280255", "+91 8571 280256"] },
@@ -31,13 +33,29 @@ const Contact = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="relative pt-32 md:pt-40 pb-20 bg-secondary">
+        <section className="relative pt-32 md:pt-40 pb-20 overflow-hidden"
+          style={{
+            backgroundImage: `url(${BASE}Hero-Section/image%201.JPG)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Reach Us</p>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Contact Us</h1>
             <p className="text-white/80 text-lg max-w-3xl mx-auto">
               We'd love to hear from you. Reach out for admissions, academic queries, or general information.
             </p>
+          </div>
+          <div className="absolute bottom-4 left-6 z-10">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-1.5 text-sm">
+                <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li className="text-white/50">/</li>
+                <li className="text-white font-semibold">Contact</li>
+              </ol>
+            </nav>
           </div>
         </section>
 

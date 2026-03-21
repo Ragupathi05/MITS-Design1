@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+const BASE = import.meta.env.BASE_URL;
 import { ArrowRight, Search, Filter, Cpu, Building2, Zap, CircuitBoard, Microscope, Database, Shield, Code, Briefcase, Brain, GraduationCap, Beaker, TrendingUp, Users, BookOpen, Award, Target, Activity, Factory, Construction, Globe, Sparkles, FlaskConical, LineChart, GraduationCap as Cap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,26 +16,22 @@ const THEME = {
   lightGray: "#f8f9fa"
 };
 
-// Department background images
+// Department background images — local files from /public/departments/
 const deptImages: Record<string, string> = {
-  // Engineering
-  ce: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
-  eee: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-  me: "https://images.unsplash.com/photo-1565680018093-ebb6b9ab5460?w=800&q=80",
-  ece: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-  bioinfo: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
-  // Computing
-  cse: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
-  cseds: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-  csecs: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
-  bca: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
-  mca: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
-  // Management
-  bba: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-  mba: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-  // AI & ML
-  aiml: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-  ai: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
+  ce:       `${BASE}departments/civil.jpg`,
+  eee:      `${BASE}departments/eee.jpg`,
+  me:       `${BASE}departments/mech.jpg`,
+  ece:      `${BASE}departments/ece.jpg`,
+  bioinfo:  `${BASE}departments/bioinformatics.jpg`,
+  cse:      `${BASE}departments/cse.jpg`,
+  cseds:    `${BASE}departments/csd.jpg`,
+  csecs:    `${BASE}departments/csc.jpg`,
+  bca:      `${BASE}departments/bca.jpg`,
+  mca:      `${BASE}departments/mca.jpg`,
+  bba:      `${BASE}departments/bba.jpg`,
+  mba:      `${BASE}departments/mba.jpg`,
+  aiml:     `${BASE}departments/ai&ml.jpg`,
+  ai:       `${BASE}departments/ai.jpg`,
 };
 
 // Schools data structure - Corrected as per MITS college
@@ -275,7 +272,7 @@ const schools = [
     departments: [
       {
         key: "aiml",
-        name: "AI and Machine Learning",
+        name: "Artificial Intelligence\n& Machine Learning",
         shortName: "AI & ML",
         established: "2020",
         description: "Cutting-edge curriculum in deep learning, NLP, and computer vision",
@@ -388,38 +385,43 @@ const Departments = () => {
         <div className="relative h-[300px] md:h-[350px] overflow-hidden">
           <div className="absolute inset-0">
             <img 
-              src="/Hero-Section/image 1.JPG" 
-              alt="MITS Campus" 
+              src={`${BASE}Hero-Section/image%206.jpg`}
+              alt="MITS Departments & Schools" 
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
           </div>
 
-          <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
-            <ScrollReveal>
-              <div className="flex items-center gap-2 text-white/60 text-sm mb-2">
-                <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                <span>/</span>
-                <span className="text-white">Departments</span>
-              </div>
-              
+          <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">
+            <div>
               <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-2xl">
-                Departments & Schools
+                Departments &amp; Schools
               </h1>
-              
               <p className="text-base md:text-lg text-white/85 max-w-xl mx-auto">
                 Explore our academic excellence across disciplines
               </p>
-
               <div className="w-20 h-0.5 bg-gradient-to-r from-amber-400 via-red-500 to-amber-400 mx-auto mt-3 rounded-full" />
-            </ScrollReveal>
+            </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0">
-            <svg viewBox="0 0 1440 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-10">
-              <path d="M0 50L60 42C120 33 240 17 360 12C480 7 600 7 720 12C840 17 960 25 1080 33C1200 42 1320 45 1380 47L1440 48V50H1380C1320 50 1200 50 1080 50C960 50 840 50 720 50C600 50 480 50 360 50C240 50 120 50 60 50H0Z" fill="#f8f9fa"/>
-            </svg>
+          {/* Breadcrumb — bottom-left */}
+          <div className="absolute bottom-4 left-6">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-1.5 text-sm">
+                <li>
+                  <Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
+                </li>
+                <li className="text-white/50">/</li>
+                <li>
+                  <Link to="/academics" className="text-white/70 hover:text-white transition-colors">Academics</Link>
+                </li>
+                <li className="text-white/50">/</li>
+                <li className="text-white font-semibold">Departments</li>
+              </ol>
+            </nav>
           </div>
+
+
         </div>
 
         {/* ==================== SEARCH & FILTER SECTION ==================== */}

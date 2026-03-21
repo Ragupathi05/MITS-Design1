@@ -39,8 +39,9 @@ const Library = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 md:pt-40 pb-20 bg-gradient-to-br from-secondary via-secondary/95 to-primary/20 overflow-hidden">
-          <img src={galleryImages[0]} alt="Library Hero" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <section className="relative pt-32 md:pt-40 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
+          <img src={galleryImages[0]} alt="Library Hero" className="absolute inset-0 w-full h-full object-cover -z-10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <ScrollReveal>
               <Badge className="mb-4 text-lg bg-accent/80">Knowledge Hub</Badge>
@@ -49,6 +50,17 @@ const Library = () => {
                 A modern library supporting academic excellence with print, digital, and research resources.
               </p>
             </ScrollReveal>
+          </div>
+          <div className="absolute bottom-4 left-6 z-10">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-1.5 text-sm">
+                <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li className="text-white/50">/</li>
+                <li><a href="/academics" className="text-white/70 hover:text-white transition-colors">Academics</a></li>
+                <li className="text-white/50">/</li>
+                <li className="text-white font-semibold">Library</li>
+              </ol>
+            </nav>
           </div>
         </section>
 

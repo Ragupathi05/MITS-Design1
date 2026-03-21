@@ -1,114 +1,225 @@
-import { Building2, GraduationCap, ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const institutions = [
+// ── CountUp ──────────────────────────────────────────────────────────────────
+const CountUp = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!inView) return;
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 55));
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { setCount(target); clearInterval(timer); return; }
+      setCount(current);
+    }, 16);
+    return () => clearInterval(timer);
+  }, [inView, target]);
+
+  return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
+};
+
+// ── Data ──────────────────────────────────────────────────────────────────────
+const trustCards = [
   {
-    icon: Building2,
-    title: "MITS Deemed to be University",
-    description:
-      "MITS Deemed to be University advances multidisciplinary education with a strong focus on research outcomes, international partnerships, and governance aligned to national quality standards. Our programs are designed to cultivate critical thinking, innovation, and leadership in every graduate.",
-    points: ["Research-driven programs", "Global collaborations", "Outcome-based academic regulations"],
-    badges: ["NAAC A+", "UGC Recognized", "NIRF Participating"],
-    accentColor: "bg-[#b30000]",
-    iconColor: "text-white",
-    borderAccent: "border-[#b30000]/30",
-    barColor: "bg-[#b30000]",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none" opacity="0.25"/></svg>`,
+    value: "NAAC A+",
+    label: "Accreditation",
+    sub: "Highest grade by National Assessment & Accreditation Council",
+    isStatic: true,
   },
   {
-    icon: GraduationCap,
-    title: "MITS Autonomous Institute",
-    description:
-      "MITS Autonomous Institute delivers a rigorous, industry-oriented academic model with curriculum flexibility, contemporary pedagogy, and consistent student outcomes. Students benefit from hands-on learning, strong industry ties, and a culture of continuous improvement.",
-    points: ["Industry-oriented curriculum", "Strong placements", "Continuous academic quality assurance"],
-    badges: ["AICTE Approved", "NBA Accredited", "Autonomous Status"],
-    accentColor: "bg-[#0f2a44]",
-    iconColor: "text-white",
-    borderAccent: "border-[#0f2a44]/30",
-    barColor: "bg-[#caa74d]",
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12l3 3 5-5"/><path d="M3 9h18"/></svg>`,
+    value: "UGC",
+    label: "Recognition",
+    sub: "Recognized under Sections 2(f) & 12(B) of the UGC Act",
+    isStatic: true,
+  },
+  {
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21l4-18 4 18"/><path d="M6 15h12"/><circle cx="12" cy="3" r="1.5" fill="currentColor" stroke="none" opacity="0.3"/></svg>`,
+    value: "201–300",
+    label: "NIRF Ranking",
+    sub: "Consistently ranked in NIRF Engineering category",
+    isStatic: true,
   },
 ];
 
+const successCards = [
+  {
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
+    target: 4401,
+    suffix: "+",
+    label: "Student Scholarships",
+    sub: "Financial support empowering deserving students",
+  },
+  {
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>`,
+    target: 9599,
+    suffix: "+",
+    label: "Student Internships",
+    sub: "Industry internships building real-world experience",
+  },
+  {
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
+    target: 600,
+    suffix: "+",
+    label: "International Internships",
+    sub: "Global exposure through international placements",
+  },
+  {
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+    target: 144,
+    suffix: "+",
+    label: "MoUs with Industries",
+    sub: "Strategic partnerships with leading industry players",
+  },
+];
+
+// ── Component ─────────────────────────────────────────────────────────────────
 const InstitutionsSection = () => {
   return (
-    <section className="py-20 bg-white" aria-labelledby="institutions-heading">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-[#0a1929] relative overflow-hidden" aria-labelledby="excellence-heading">
+      {/* Ambient glows */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#b30000]/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#caa74d]/6 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative z-10 container mx-auto px-4">
+
+        {/* ── Section Header ── */}
         <ScrollReveal>
-          <div className="text-center mb-14">
-            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">
-              Our Institutions
+          <div className="text-center mb-12">
+            <p className="text-[#caa74d] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">
+              Our Achievements
             </p>
             <h2
-              id="institutions-heading"
-              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-4 leading-tight"
+              id="excellence-heading"
+              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight"
             >
-              Two Pathways, One Vision
+              Excellence &amp; Student Opportunities
             </h2>
-            <p className="font-body text-[#1a1a1a] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Two academic pathways, one shared commitment to excellence.
+            <p className="font-body text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              Recognized for quality education and committed to student success and global exposure
             </p>
+            <div className="w-20 h-0.5 bg-gradient-to-r from-[#caa74d] via-[#b30000] to-[#caa74d] mx-auto mt-5 rounded-full" />
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {institutions.map((inst, i) => (
-            <ScrollReveal key={inst.title} delay={i * 0.2} direction={i === 0 ? "left" : "right"}>
-              <div
-                className={`bg-white border-2 ${inst.borderAccent} rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 group h-full cursor-pointer`}
-              >
-                {/* Top accent bar */}
-                <div className={`w-12 h-1 rounded-full ${inst.barColor} mb-6`} />
+        {/* ── ROW 1: Trust & Accreditation ── */}
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="h-px flex-1 bg-white/10" />
+            <span className="text-[#caa74d] font-body font-semibold tracking-widest uppercase text-xs px-3">
+              Trust &amp; Accreditation
+            </span>
+            <div className="h-px flex-1 bg-white/10" />
+          </div>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto mb-10">
+          {trustCards.map((card, i) => (
+            <ScrollReveal key={card.label} delay={i * 0.1}>
+              <div className="group relative rounded-2xl p-7 text-center cursor-default h-full
+                bg-white/5 border border-white/10 backdrop-blur-sm
+                hover:bg-white/10 hover:border-[#caa74d]/40 hover:-translate-y-1.5
+                hover:shadow-[0_8px_32px_rgba(202,167,77,0.15)]
+                transition-all duration-300">
+
+                {/* Top gold accent */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-0.5 bg-[#caa74d] rounded-full opacity-50 group-hover:opacity-100 group-hover:w-16 transition-all duration-300" />
 
                 {/* Icon */}
-                <div className={`w-12 h-12 rounded-xl ${inst.accentColor} flex items-center justify-center mb-5 shadow-md group-hover:scale-105 transition-transform duration-300`}>
-                  <inst.icon className={`w-6 h-6 ${inst.iconColor}`} aria-hidden="true" />
+                <div className="w-16 h-16 mx-auto rounded-2xl mb-5 flex items-center justify-center
+                  bg-gradient-to-br from-[#caa74d]/20 to-[#caa74d]/5
+                  border border-[#caa74d]/30
+                  group-hover:scale-110 group-hover:from-[#caa74d]/35
+                  transition-all duration-300
+                  shadow-[0_4px_20px_rgba(202,167,77,0.1)]">
+                  <span
+                    className="w-8 h-8 text-[#caa74d] block"
+                    dangerouslySetInnerHTML={{ __html: card.svg }}
+                    aria-hidden="true"
+                  />
                 </div>
 
-                {/* Title */}
-                <h3 className="font-display text-xl md:text-2xl font-bold text-[#0f172a] mb-4 leading-snug">
-                  {inst.title}
-                </h3>
-
-                {/* Description — improved readability */}
-                <p className="font-body text-[#1a1a1a] text-base md:text-[1.05rem] leading-[1.8] mb-6 max-w-prose">
-                  {inst.description}
+                {/* Value */}
+                <p className="font-display text-3xl md:text-4xl font-bold text-[#caa74d] mb-1 leading-none">
+                  {card.value}
                 </p>
 
-                {/* Badges */}
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {inst.badges.map((item) => (
-                    <Badge
-                      key={item}
-                      variant="outline"
-                      className="border-[#b30000]/40 text-[#0f172a] font-body font-medium text-xs px-3 py-1 rounded-full"
-                    >
-                      {item}
-                    </Badge>
-                  ))}
-                </div>
+                {/* Label */}
+                <p className="font-body font-semibold text-white text-sm md:text-base mb-2">
+                  {card.label}
+                </p>
 
-                {/* Points */}
-                <ul className="space-y-2 mb-7" aria-label={`Key features of ${inst.title}`}>
-                  {inst.points.map((point) => (
-                    <li key={point} className="font-body text-[#1a1a1a] text-sm md:text-base flex items-center gap-2.5">
-                      <span className="w-2 h-2 rounded-full bg-[#caa74d] flex-shrink-0" aria-hidden="true" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-[#0f2a44] text-[#0f2a44] hover:bg-[#0f2a44] hover:text-white font-body font-semibold transition-all duration-200 rounded-full px-5"
-                >
-                  Enter Portal <ArrowUpRight className="ml-2 w-4 h-4" aria-hidden="true" />
-                </Button>
+                {/* Sub */}
+                <p className="font-body text-white/55 text-xs leading-relaxed">
+                  {card.sub}
+                </p>
               </div>
             </ScrollReveal>
           ))}
         </div>
+
+        {/* ── ROW 2: Student Success ── */}
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="h-px flex-1 bg-white/10" />
+            <span className="text-[#b30000] font-body font-semibold tracking-widest uppercase text-xs px-3">
+              Student Success
+            </span>
+            <div className="h-px flex-1 bg-white/10" />
+          </div>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+          {successCards.map((card, i) => (
+            <ScrollReveal key={card.label} delay={i * 0.1}>
+              <div className="group relative rounded-2xl p-6 text-center cursor-default h-full
+                bg-white/5 border border-white/10 backdrop-blur-sm
+                hover:bg-white/10 hover:border-[#b30000]/40 hover:-translate-y-1.5
+                hover:shadow-[0_8px_32px_rgba(179,0,0,0.15)]
+                transition-all duration-300">
+
+                {/* Top red accent */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-0.5 bg-[#b30000] rounded-full opacity-50 group-hover:opacity-100 group-hover:w-16 transition-all duration-300" />
+
+                {/* Icon */}
+                <div className="w-14 h-14 mx-auto rounded-2xl mb-4 flex items-center justify-center
+                  bg-gradient-to-br from-[#b30000]/20 to-[#b30000]/5
+                  border border-[#b30000]/30
+                  group-hover:scale-110 group-hover:from-[#b30000]/35
+                  transition-all duration-300
+                  shadow-[0_4px_20px_rgba(179,0,0,0.1)]">
+                  <span
+                    className="w-7 h-7 text-[#b30000] block"
+                    dangerouslySetInnerHTML={{ __html: card.svg }}
+                    aria-hidden="true"
+                  />
+                </div>
+
+                {/* CountUp value */}
+                <p className="font-display text-3xl md:text-4xl font-bold text-[#caa74d] mb-1 leading-none">
+                  <CountUp target={card.target} suffix={card.suffix} />
+                </p>
+
+                {/* Label */}
+                <p className="font-body font-semibold text-white text-sm mb-2">
+                  {card.label}
+                </p>
+
+                {/* Sub */}
+                <p className="font-body text-white/55 text-xs leading-relaxed">
+                  {card.sub}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
       </div>
     </section>
   );

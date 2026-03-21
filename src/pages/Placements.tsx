@@ -66,13 +66,22 @@ const Placements = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-secondary/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Career Success</p>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Placement Highlights</h1>
             <p className="text-white/80 text-lg max-w-3xl mx-auto">
               MITS students are placed in top companies globally with strong industry partnerships and comprehensive training.
             </p>
+          </div>
+          <div className="absolute bottom-4 left-6 z-10">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-1.5 text-sm">
+                <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li className="text-white/50">/</li>
+                <li className="text-white font-semibold">Placements</li>
+              </ol>
+            </nav>
           </div>
         </section>
 

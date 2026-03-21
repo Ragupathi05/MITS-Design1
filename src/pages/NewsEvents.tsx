@@ -12,6 +12,13 @@ const NewsEvents = () => {
         <section className="py-14 bg-muted/40">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-12">
+              <nav aria-label="Breadcrumb" className="flex justify-center mb-4">
+                <ol className="flex items-center gap-1.5 text-sm">
+                  <li><a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a></li>
+                  <li className="text-muted-foreground">/</li>
+                  <li className="text-foreground font-semibold">News &amp; Events</li>
+                </ol>
+              </nav>
               <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-2">MITS Updates</p>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Latest Events</h1>
               <p className="text-muted-foreground text-lg">
