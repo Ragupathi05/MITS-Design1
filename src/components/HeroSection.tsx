@@ -98,7 +98,6 @@ const textVariants = {
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
-  const [paused,  setPaused]  = useState(false);
   const [dir,     setDir]     = useState(1);
 
   const go = useCallback((next: number) => {
@@ -110,10 +109,9 @@ const HeroSection = () => {
   const next = useCallback(() => go((current + 1) % slides.length), [current, go]);
 
   useEffect(() => {
-    if (paused) return;
-    const t = setInterval(next, 6000);
+    const t = setInterval(next, 5000);
     return () => clearInterval(t);
-  }, [next, paused]);
+  }, [next]);
 
   const slide = slides[current];
 
@@ -124,9 +122,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden mt-[80px]"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      className="relative h-screen min-h-[500px] max-h-[650px] overflow-hidden mt-[80px]"
     >
 
       {/* ── Background images (static for admissions/placements) ── */}
@@ -164,7 +160,7 @@ const HeroSection = () => {
           className="h-full bg-[#caa74d]"
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
-          transition={{ duration: 6, ease: "linear" }}
+          transition={{ duration: 5, ease: "linear" }}
         />
       </div>
 
@@ -190,7 +186,7 @@ const HeroSection = () => {
                 initial="hidden"
                 animate="show"
                 exit="exit"
-                transition={{ duration: 0.5, delay: 0.05 }}
+                transition={{ duration: 0.3 }}
                 className="font-body font-semibold text-[#caa74d] tracking-[0.22em] uppercase text-xs md:text-sm mb-4"
               >
                 {slide.eyebrow}
@@ -202,7 +198,7 @@ const HeroSection = () => {
                 initial="hidden"
                 animate="show"
                 exit="exit"
-                transition={{ duration: 0.55, delay: 0.15 }}
+                transition={{ duration: 0.3 }}
                 className={`font-display font-bold text-white leading-[1.05] ${
                   slide.id === "placements" ? "mb-2 text-7xl md:text-8xl" : "mb-4"
                 }`}
@@ -217,7 +213,7 @@ const HeroSection = () => {
                 initial="hidden"
                 animate="show"
                 exit="exit"
-                transition={{ duration: 0.5, delay: 0.25 }}
+                transition={{ duration: 0.3 }}
                 className="font-body text-white/80 text-lg md:text-2xl font-light mb-3 tracking-wide"
               >
                 {slide.tagline}
@@ -230,7 +226,7 @@ const HeroSection = () => {
                   initial="hidden"
                   animate="show"
                   exit="exit"
-                  transition={{ duration: 0.5, delay: 0.32 }}
+                  transition={{ duration: 0.3 }}
                   className="font-body text-[#caa74d] text-lg md:text-2xl font-bold tracking-wider max-w-3xl mx-auto text-center"
                 >
                   {slide.highlight}
@@ -244,7 +240,7 @@ const HeroSection = () => {
                   initial="hidden"
                   animate="show"
                   exit="exit"
-                  transition={{ duration: 0.5, delay: 0.38 }}
+                  transition={{ duration: 0.3 }}
                   className="font-body text-white/80 text-sm md:text-lg font-medium tracking-wider mt-3 mb-6 text-center"
                 >
                   {slide.subHighlight}
@@ -258,7 +254,7 @@ const HeroSection = () => {
                   initial="hidden"
                   animate="show"
                   exit="exit"
-                  transition={{ duration: 0.5, delay: 0.35 }}
+                  transition={{ duration: 0.3 }}
                   className={`flex flex-wrap gap-3 mt-6 ${slide.align === "center" ? "justify-center" : slide.align === "right" ? "justify-end" : "justify-start"}`}
                 >
                   {slide.buttons.map((btn) => {
@@ -300,7 +296,7 @@ const HeroSection = () => {
                     className="h-20 sm:h-28 md:h-36 lg:h-48 w-auto object-contain"
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.3 }}
                   />
                 )}
               </div>
@@ -312,7 +308,7 @@ const HeroSection = () => {
                     className="h-20 sm:h-28 md:h-36 lg:h-48 w-auto object-contain"
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.3 }}
                   />
                 )}
               </div>
@@ -328,7 +324,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.3 }}
               className="mx-3 sm:mx-6 md:mx-16 mb-12 md:mb-20"
             >
               <div

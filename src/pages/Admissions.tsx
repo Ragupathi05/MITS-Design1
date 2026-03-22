@@ -82,6 +82,7 @@ const Admissions = () => {
   useEffect(() => {
     autoRef.current = setInterval(() => setSlide((s) => (s >= MAX ? 0 : s + 1)), 3000);
     return () => { if (autoRef.current) clearInterval(autoRef.current); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const manualNav = (n: number) => {

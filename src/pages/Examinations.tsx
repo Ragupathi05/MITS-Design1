@@ -46,7 +46,7 @@ const Examinations = () => {
           <div className="relative z-10 container mx-auto px-4 text-center">
             <ScrollReveal>
               <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3 animate-fade-in">Examinations</p>
-              <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">Examinations Cell</h1>
+              <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Examinations <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Cell</span></h1>
               <p className="text-white/80 text-lg max-w-3xl mx-auto mb-8">
                 Managing all aspects of the examination process with transparency, efficiency, and academic integrity.
               </p>
@@ -68,9 +68,9 @@ const Examinations = () => {
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li><a href="/academics" className="text-white/70 hover:text-white transition-colors">Academics</a></li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">Examinations</li>
               </ol>
             </nav>

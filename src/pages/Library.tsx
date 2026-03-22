@@ -45,7 +45,7 @@ const Library = () => {
           <div className="relative z-10 container mx-auto px-4 text-center">
             <ScrollReveal>
               <Badge className="mb-4 text-lg bg-accent/80">Knowledge Hub</Badge>
-              <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">Central Library</h1>
+              <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-4">Central <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Library</span></h1>
               <p className="text-white/80 text-xl max-w-3xl mx-auto mb-8">
                 A modern library supporting academic excellence with print, digital, and research resources.
               </p>
@@ -55,9 +55,9 @@ const Library = () => {
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li><a href="/academics" className="text-white/70 hover:text-white transition-colors">Academics</a></li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">Library</li>
               </ol>
             </nav>

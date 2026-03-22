@@ -45,7 +45,7 @@ const About = () => {
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">About MITS</p>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">
-              Shaping Futures Since 1998
+              Shaping Futures <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Since 1998</span>
             </h1>
             <p className="text-white/80 text-lg max-w-3xl mx-auto">
               Madanapalle Institute of Technology & Science — a premier institution committed to academic excellence, research innovation, and holistic development.
@@ -55,7 +55,7 @@ const About = () => {
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">About</li>
               </ol>
             </nav>

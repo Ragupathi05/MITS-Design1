@@ -43,7 +43,7 @@ const Research = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Research</p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Research & Innovation</h1>
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">& Innovation</span></h1>
             <p className="text-white/80 text-lg max-w-3xl mx-auto">
               MITS fosters a vibrant research ecosystem through advanced labs, funded projects, and industry collaborations.
             </p>
@@ -52,7 +52,7 @@ const Research = () => {
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">Research</li>
               </ol>
             </nav>

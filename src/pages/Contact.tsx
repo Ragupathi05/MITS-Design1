@@ -43,7 +43,7 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Reach Us</p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Contact Us</h1>
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Us</span></h1>
             <p className="text-white/80 text-lg max-w-3xl mx-auto">
               We'd love to hear from you. Reach out for admissions, academic queries, or general information.
             </p>
@@ -52,7 +52,7 @@ const Contact = () => {
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">Contact</li>
               </ol>
             </nav>

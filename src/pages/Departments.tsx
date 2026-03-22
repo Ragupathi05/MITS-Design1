@@ -395,7 +395,7 @@ const Departments = () => {
           <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">
             <div>
               <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-2xl">
-                Departments &amp; Schools
+                Departments <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">&amp; Schools</span>
               </h1>
               <p className="text-base md:text-lg text-white/85 max-w-xl mx-auto">
                 Explore our academic excellence across disciplines
@@ -411,11 +411,11 @@ const Departments = () => {
                 <li>
                   <Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
                 </li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li>
                   <Link to="/academics" className="text-white/70 hover:text-white transition-colors">Academics</Link>
                 </li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">Departments</li>
               </ol>
             </nav>

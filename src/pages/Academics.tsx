@@ -54,7 +54,7 @@ const Academics = () => {
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Academics</p>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">
-              Academic Excellence at MITS
+              Academic Excellence <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">at MITS</span>
             </h1>
             <p className="text-white/80 text-lg max-w-3xl mx-auto mb-6">
               Explore programs across four schools with outcome-based education, industry alignment, and research integration.
@@ -69,7 +69,7 @@ const Academics = () => {
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li><Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
-                <li className="text-white/50">/</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">Academics</li>
               </ol>
             </nav>
