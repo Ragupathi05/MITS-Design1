@@ -57,7 +57,8 @@ const schools = [
         areas: ["Structural Design", "BIM", "Infrastructure"],
         labHighlights: ["Structural Lab", "BIM Center", "Geotech Lab"],
         placementStrength: "80% | ₹9 LPA Avg",
-        mission: "To prepare civil engineers for designing and constructing sustainable infrastructure."
+        mission: "To prepare civil engineers for designing and constructing sustainable infrastructure.",
+        externalLink: "http://www.mits.ac.in/department/6",
       },
       {
         key: "eee",
@@ -74,7 +75,8 @@ const schools = [
         areas: ["Power Systems", "Renewable Energy", "Smart Grids"],
         labHighlights: ["Power Systems Lab", "Renewable Energy Lab", "HV Lab"],
         placementStrength: "85% | ₹10 LPA Avg",
-        mission: "To produce electrical engineers capable of designing and implementing electrical systems for sustainable energy."
+        mission: "To produce electrical engineers capable of designing and implementing electrical systems for sustainable energy.",
+        externalLink: "http://www.mits.ac.in/department/11",
       },
       {
         key: "me",
@@ -91,7 +93,8 @@ const schools = [
         areas: ["CAD/CAM", "Automotive", "Thermal Engineering"],
         labHighlights: ["CAD/CAM Lab", "Manufacturing Workshop", "Thermal Lab"],
         placementStrength: "88% | ₹11 LPA Avg",
-        mission: "To develop mechanical engineers with strong fundamentals and expertise in design, manufacturing, and thermal systems."
+        mission: "To develop mechanical engineers with strong fundamentals and expertise in design, manufacturing, and thermal systems.",
+        externalLink: "http://www.mits.ac.in/department/8",
       },
       {
         key: "ece",
@@ -108,7 +111,8 @@ const schools = [
         areas: ["5G & IoT", "Embedded Systems", "VLSI Design"],
         labHighlights: ["RF Lab", "IoT Center", "VLSI Design Lab"],
         placementStrength: "90% | ₹12 LPA Avg",
-        mission: "To nurture skilled engineers in electronics and communication with expertise in modern communication systems."
+        mission: "To nurture skilled engineers in electronics and communication with expertise in modern communication systems.",
+        externalLink: "https://mits.ac.in/electronics-communication-engineering",
       },
       {
         key: "bioinfo",
@@ -150,7 +154,8 @@ const schools = [
         areas: ["AI & ML", "Cloud Computing", "Cyber Security"],
         labHighlights: ["AI Research Lab", "Cloud Center", "Cyber Security Ops"],
         placementStrength: "98% | ₹18 LPA Avg",
-        mission: "To prepare students as world-class computer science professionals with expertise in emerging technologies."
+        mission: "To prepare students as world-class computer science professionals with expertise in emerging technologies.",
+        externalLink: "https://www.mits.ac.in/department/9",
       },
       {
         key: "cseds",
@@ -167,7 +172,8 @@ const schools = [
         areas: ["Data Analytics", "Big Data", "ML"],
         labHighlights: ["Big Data Lab", "Data Viz Center", "ML Research Lab"],
         placementStrength: "95% | ₹16 LPA Avg",
-        mission: "To develop data-driven problem solvers equipped with analytical skills for the modern data economy."
+        mission: "To develop data-driven problem solvers equipped with analytical skills for the modern data economy.",
+        externalLink: "http://www.mits.ac.in/department/26",
       },
       {
         key: "csecs",
@@ -184,7 +190,8 @@ const schools = [
         areas: ["Ethical Hacking", "Network Security", "Forensics"],
         labHighlights: ["SOC Center", "Ethical Hacking Lab", "Forensics Lab"],
         placementStrength: "92% | ₹15 LPA Avg",
-        mission: "To produce cybersecurity professionals capable of protecting digital infrastructure."
+        mission: "To produce cybersecurity professionals capable of protecting digital infrastructure.",
+        externalLink: "http://www.mits.ac.in/department/27",
       },
       {
         key: "bca",
@@ -218,7 +225,8 @@ const schools = [
         areas: ["Enterprise Software", "Cloud Computing", "AI"],
         labHighlights: ["Research Lab", "Dev Center", "AI Cloud Lab"],
         placementStrength: "95% | ₹14 LPA Avg",
-        mission: "To produce highly skilled computing professionals with advanced knowledge in software engineering."
+        mission: "To produce highly skilled computing professionals with advanced knowledge in software engineering.",
+        externalLink: "http://www.mits.ac.in/department/18",
       }
     ]
   },
@@ -260,7 +268,8 @@ const schools = [
         areas: ["Finance", "Marketing", "Operations"],
         labHighlights: ["Bloomberg Lab", "Analytics Center", "Leadership Lab"],
         placementStrength: "90% | ₹12 LPA Avg",
-        mission: "To cultivate strategic thinkers and ethical business leaders for global environments."
+        mission: "To cultivate strategic thinkers and ethical business leaders for global environments.",
+        externalLink: "http://www.mits.ac.in/department/5",
       }
     ]
   },
@@ -285,7 +294,8 @@ const schools = [
         areas: ["Deep Learning", "NLP", "Computer Vision"],
         labHighlights: ["GPU Cluster", "Computer Vision Lab", "NLP Center"],
         placementStrength: "96% | ₹20 LPA Avg",
-        mission: "To produce AI engineers and researchers capable of building intelligent systems."
+        mission: "To produce AI engineers and researchers capable of building intelligent systems.",
+        externalLink: "http://www.mits.ac.in/department/32",
       },
       {
         key: "ai",
@@ -302,7 +312,8 @@ const schools = [
         areas: ["AI Research", "Knowledge Systems", "Explainable AI"],
         labHighlights: ["Research Lab", "XAI Center", "Agent Systems Lab"],
         placementStrength: "94% | ₹18 LPA Avg",
-        mission: "To train students in the theoretical and applied foundations of artificial intelligence."
+        mission: "To train students in the theoretical and applied foundations of artificial intelligence.",
+        externalLink: "https://www.mits.ac.in/department/28",
       }
     ]
   }
@@ -368,9 +379,15 @@ const Departments = () => {
             <p className="text-white/80 text-xs text-center mb-3 line-clamp-2">
               {dept.description}
             </p>
-            <button className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
-              Explore Department
-            </button>
+            {(dept as any).externalLink ? (
+              <a href={(dept as any).externalLink} target="_blank" rel="noreferrer" className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
+                Explore Department
+              </a>
+            ) : (
+              <button className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
+                Explore Department
+              </button>
+            )}
           </div>
         </div>
       </ScrollReveal>
