@@ -295,7 +295,7 @@ const schools = [
         labHighlights: ["GPU Cluster", "Computer Vision Lab", "NLP Center"],
         placementStrength: "96% | ₹20 LPA Avg",
         mission: "To produce AI engineers and researchers capable of building intelligent systems.",
-        externalLink: "http://www.mits.ac.in/department/32",
+        externalLink: "https://mits.ac.in/cse-ai-ml",
       },
       {
         key: "ai",
