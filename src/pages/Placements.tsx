@@ -15,9 +15,22 @@ const stats = [
 ];
 
 const recruiters = [
-  "Accenture", "Amazon", "Bosch", "Capgemini", "Cognizant", "Deloitte",
-  "Google", "HCLTech", "IBM", "Infosys", "L&T", "Mahindra",
-  "Microsoft", "TCS", "Wipro", "Zoho",
+  { name: "Accenture", logo: `${BASE}placement/Accenture.webp` },
+  { name: "Amazon",    logo: `${BASE}recruiters/amazon.png` },
+  { name: "Bosch",     logo: `${BASE}recruiters/bosch.png` },
+  { name: "Capgemini", logo: `${BASE}recruiters/capgemini.png` },
+  { name: "Cognizant", logo: `${BASE}recruiters/congnizant.png` },
+  { name: "Deloitte",  logo: `${BASE}recruiters/Deloitte.png` },
+  { name: "Google",    logo: `${BASE}recruiters/google.webp` },
+  { name: "HCL Tech",  logo: `${BASE}recruiters/hcltech.png` },
+  { name: "IBM",       logo: `${BASE}recruiters/IBM.png` },
+  { name: "Infosys",   logo: `${BASE}recruiters/infosys.png` },
+  { name: "L&T",       logo: `${BASE}recruiters/L&T.png` },
+  { name: "Mahindra",  logo: `${BASE}recruiters/mahindra.png` },
+  { name: "Microsoft", logo: `${BASE}recruiters/microsoft.png` },
+  { name: "TCS",       logo: `${BASE}recruiters/tcs.png` },
+  { name: "Wipro",     logo: `${BASE}recruiters/wipro.png` },
+  { name: "Zoho",      logo: `${BASE}recruiters/zoho.png` },
 ];
 
 const training = [
@@ -112,10 +125,15 @@ const Placements = () => {
               </div>
             </ScrollReveal>
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 max-w-5xl mx-auto">
-              {recruiters.map((name, i) => (
-                <ScrollReveal key={name} delay={i * 0.04}>
-                  <div className="bg-card border border-border rounded-lg p-4 flex items-center justify-center h-20 shadow-sm hover:shadow-md transition-all">
-                    <p className="text-card-foreground font-bold text-xs text-center">{name}</p>
+              {recruiters.map((rec, i) => (
+                <ScrollReveal key={rec.name} delay={i * 0.04}>
+                  <div className="bg-card border border-border rounded-lg p-4 flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                    <img
+                      src={rec.logo}
+                      alt={rec.name + " logo"}
+                      className="max-h-16 max-w-[110px] object-contain"
+                      title={rec.name}
+                    />
                   </div>
                 </ScrollReveal>
               ))}
