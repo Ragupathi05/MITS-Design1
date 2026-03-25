@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
@@ -67,6 +67,7 @@ const slides = [
   // 5 — Campus Life
   {
     id: "campus",
+    video: `${BASE}Hero-Section/college%20video.mp4`,
     image: `${BASE}Hero-Section/image%206.jpg`,
     overlay: "bg-[linear-gradient(160deg,rgba(7,21,37,0.78)_0%,rgba(15,42,68,0.55)_100%)]",
     eyebrow: "Life at MITS",
@@ -99,6 +100,7 @@ const textVariants = {
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const [dir,     setDir]     = useState(1);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const go = useCallback((next: number) => {
     setDir(next > current ? 1 : -1);
@@ -109,9 +111,19 @@ const HeroSection = () => {
   const next = useCallback(() => go((current + 1) % slides.length), [current, go]);
 
   useEffect(() => {
+    // If current slide has a video, wait for it to end before advancing
+    const currentSlide = slides[current];
+    if ((currentSlide as any).video) {
+      const video = videoRef.current;
+      if (!video) return;
+      const onEnded = () => next();
+      video.addEventListener("ended", onEnded);
+      return () => video.removeEventListener("ended", onEnded);
+    }
+    // Otherwise use 5s timer
     const t = setInterval(next, 5000);
     return () => clearInterval(t);
-  }, [next]);
+  }, [next, current]);
 
   const slide = slides[current];
 
@@ -135,20 +147,39 @@ const HeroSection = () => {
           animate={{ opacity: i === current ? 1 : 0 }}
           transition={{ duration: 1.1, ease: "easeInOut" }}
         >
-          <motion.img
-            src={s.image}
-            alt={s.id}
-            className={`w-full h-full object-cover ${
-              s.id === "admissions" ? "object-top" // Show more of the top part of the image
-                : s.id === "placements" ? "object-[center_top_-20px]" // Move placements image up
-                : "" // Normal center positioning for other slides
-            }`}
-            initial={false}
-            animate={{ 
-              scale: (s.id === "admissions" || s.id === "placements") ? 1 : (i === current ? 1.06 : 1)
-            }}
-            transition={{ duration: 7, ease: "easeOut" }}
-          />
+          {(s as any).video ? (
+            <video
+              ref={i === current ? videoRef : undefined}
+              autoPlay
+              loop={false}
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+              style={{
+                imageRendering: "auto",
+                filter: "contrast(1.08) brightness(1.05) saturate(1.1)",
+                transform: "translateZ(0) scale(1.0)",
+                backfaceVisibility: "hidden",
+                WebkitBackfaceVisibility: "hidden",
+              }}
+              src={(s as any).video}
+            />
+          ) : (
+            <motion.img
+              src={s.image}
+              alt={s.id}
+              className={`w-full h-full object-cover ${
+                s.id === "admissions" ? "object-top"
+                  : s.id === "placements" ? "object-[center_top_-20px]"
+                  : ""
+              }`}
+              initial={false}
+              animate={{
+                scale: (s.id === "admissions" || s.id === "placements") ? 1 : (i === current ? 1.06 : 1)
+              }}
+              transition={{ duration: 7, ease: "easeOut" }}
+            />
+          )}
           {s.overlay && <div className={`absolute inset-0 ${s.overlay}`} />}
         </motion.div>
       ))}

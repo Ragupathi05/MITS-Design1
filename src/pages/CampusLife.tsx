@@ -199,54 +199,25 @@ const facilities = [
 
 // Cinematic Hero Section
 const CinematicHero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const heroImages = [
-    `${BASE}Hero-Section/image%201.JPG`,
-    `${BASE}Hero-Section/image%202.JPG`,
-    `${BASE}Hero-Section/image%203.JPG`,
-    `${BASE}Hero-Section/image%204.JPG`,
-  ];
-
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 500], [0, 150]);
   const y2 = useTransform(scrollY, [0, 500], [0, -100]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [heroImages.length]);
-
   const scrollToContent = () => {
-    const contentSection = document.getElementById("experience-cards");
-    contentSection?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("experience-cards")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Images with Ken Burns Effect */}
-      {heroImages.map((img, index) => (
-        <motion.div
-          key={index}
-          className="absolute inset-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: currentSlide === index ? 1 : 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <motion.div
-            style={{ y: index === currentSlide ? y1 : 0 }}
-            className="absolute inset-0 w-full h-[120%]"
-          >
-            <img
-              src={img}
-              alt="Campus Life"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-        </motion.div>
-      ))}
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src={`${BASE}Hero-Section/college%20video.mp4`}
+      />
 
       {/* Dark Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
@@ -317,19 +288,6 @@ const CinematicHero = () => {
             Explore Campus
           </button>
         </motion.div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-32 left-1/2 -translate-x-1/2 flex gap-2">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-12 h-1.5 rounded-full transition-all duration-300 ${
-                currentSlide === index ? "bg-accent w-16" : "bg-white/30 hover:bg-white/50"
-              }`}
-            />
-          ))}
-        </div>
       </motion.div>
 
       {/* Scroll Indicator */}
