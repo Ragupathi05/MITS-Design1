@@ -79,7 +79,6 @@ const slides: Slide[] = [
   },
   {
     id: "campus",
-    video: `${BASE}Hero-Section/campuse.webm`,
     image: `${BASE}Hero-Section/image%206.jpg`,
     overlay: "",
     eyebrow: "Life at MITS",
