@@ -249,15 +249,7 @@ const HeroSection = () => {
               transition={{ duration: 7, ease: "easeOut" }}
             />
           )}
-          {/* Campus: solid black shade that fades out when title moves */}
-          {s.id === "campus" ? (
-            <motion.div
-              className="absolute inset-0"
-              animate={{ opacity: campusShrunk ? 0 : 1 }}
-              transition={{ duration: 3, ease: "easeInOut" }}
-              style={{ background: "rgba(0,0,0,0.72)" }}
-            />
-          ) : s.overlay ? (
+          {s.overlay ? (
             <div className={`absolute inset-0 ${s.overlay}`} />
           ) : null}
         </motion.div>
