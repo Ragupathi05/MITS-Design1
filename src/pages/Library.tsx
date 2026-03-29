@@ -5,7 +5,7 @@ import { BookOpen, Clock, Globe, Monitor, Search, Users, Wifi, Star } from "luci
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import campusLibrary from "@/assets/campus-library.png";
+const campusLibrary = "/Campus Gallery/DSC_1862.JPG";
 
 const resources = [
   { icon: BookOpen, title: "50,000+ Volumes", desc: "Extensive collection of textbooks, reference books, and periodicals across all disciplines." },

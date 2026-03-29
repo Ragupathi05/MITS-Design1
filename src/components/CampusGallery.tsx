@@ -1,16 +1,14 @@
-import campusHero from "@/assets/campus-hero.png";
-import campusBuilding from "@/assets/campus-building.png";
-import studentsLearning from "@/assets/students-learning.png";
-import campusLibrary from "@/assets/campus-library.png";
-import campusGraduation from "@/assets/campus-graduation.png";
+import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 
+const BASE = import.meta.env.BASE_URL;
+
 const images = [
-  { src: campusHero, alt: "MITS Campus Aerial View", span: "md:col-span-2" },
-  { src: campusBuilding, alt: "MITS Main Building", span: "" },
-  { src: studentsLearning, alt: "Students in Lab", span: "" },
-  { src: campusLibrary, alt: "MITS Library", span: "" },
-  { src: campusGraduation, alt: "Graduation Ceremony", span: "md:col-span-2" },
+  { src: `${BASE}Campus Gallery/DJI_20250312173138_0088_D.JPG`, alt: "MITS Campus Aerial View", span: "md:col-span-2" },
+  { src: `${BASE}Campus Gallery/DSC_1805.JPG`, alt: "MITS Main Building", span: "" },
+  { src: `${BASE}Campus Gallery/DSC_1825.JPG`, alt: "Students in Campus", span: "" },
+  { src: `${BASE}Campus Gallery/DSC_1862.JPG`, alt: "MITS Library", span: "" },
+  { src: `${BASE}Campus Gallery/DSC_6397.JPG`, alt: "Campus Event", span: "md:col-span-2" },
 ];
 
 const CampusGallery = () => {
@@ -36,6 +34,16 @@ const CampusGallery = () => {
               </div>
             </ScrollReveal>
           ))}
+          <ScrollReveal delay={images.length * 0.1}>
+            <Link to="/gallery">
+              <div className="overflow-hidden rounded-xl group relative cursor-pointer h-64 bg-gradient-to-br from-[#0f2a44] to-[#1a3d5c] flex items-center justify-center hover:from-[#b30000] hover:to-[#d40000] transition-all duration-500">
+                <div className="text-center">
+                  <p className="text-white font-display text-2xl md:text-3xl font-bold mb-2">View All</p>
+                  <p className="text-white/80 font-body text-sm">Images →</p>
+                </div>
+              </div>
+            </Link>
+          </ScrollReveal>
         </div>
       </div>
     </section>

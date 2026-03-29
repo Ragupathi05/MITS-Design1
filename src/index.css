@@ -24,8 +24,8 @@
     --muted: 210 20% 96%;
     --muted-foreground: 210 15% 35%;
 
-    /* Accent = Gold #caa74d */
-    --accent: 40 57% 55%;
+    /* Accent = Bright Gold #FFC000 */
+    --accent: 45 100% 50%;
     --accent-foreground: 210 30% 10%;
 
     --destructive: 0 84% 60%;

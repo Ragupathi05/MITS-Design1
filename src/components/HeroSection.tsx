@@ -4,55 +4,68 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 const BASE = import.meta.env.BASE_URL;
 
-// ── Slide data ────────────────────────────────────────────────────────────────
-const slides = [
-  // 1 — College Identity
+interface Slide {
+  id: string;
+  video?: string;
+  image: string;
+  overlay: string;
+  eyebrow: string;
+  title: string;
+  tagline: string;
+  highlight?: string;
+  subHighlight?: string;
+  leftLogo?: string;
+  rightLogo?: string;
+  buttons: Array<{ label: string; href: string; style: string; external?: boolean }>;
+  align: string;
+  showCredentials?: boolean;
+}
+
+const slides: Slide[] = [
   {
     id: "identity",
+    video: `${BASE}Hero-Section/MITS%20first-Slide.mp4`,
     image: `${BASE}Hero-Section/image%201.JPG`,
-    overlay: "bg-[linear-gradient(160deg,rgba(7,21,37,0.82)_0%,rgba(15,42,68,0.65)_100%)]",
-    eyebrow: "ESTABLISHED 1998",
-    title: "MITS",
+    overlay: "",
+    eyebrow: "",
+    title: "",
     tagline: "",
-    highlight: "Madanapalle Institute of Technology & Science",
-    subHighlight: "Deemed to be University",
-    leftLogo: `${BASE}mits-logo.png`,
-    rightLogo: `${BASE}estd.png`,
+    highlight: "",
+    subHighlight: "",
+    leftLogo: "",
+    rightLogo: "",
     buttons: [
       { label: "Explore", href: "#about", style: "outline" },
       { label: "Apply Now", href: "https://admission.mits.ac.in/", style: "primary", external: true },
     ],
     align: "center",
   },
-  // 2 — Admissions
   {
     id: "admissions",
-    image: `${BASE}Hero-Section/admissions.jpg`,
-    overlay: "", // No overlay for admissions image
-    eyebrow: "Academic Year 2026–27",
-    title: "Admissions 2026",
-    tagline: "Start Your Journey",
+    image: `${BASE}Hero-Section/admissions.png`,
+    overlay: "",
+    eyebrow: "",
+    title: "",
+    tagline: "",
     buttons: [
       { label: "Apply Now", href: "https://admission.mits.ac.in/", style: "primary", external: true },
       { label: "Prospectus", href: "#admissions", style: "outline" },
     ],
     align: "right",
   },
-  // 3 — Placements
   {
     id: "placements",
-    image: `${BASE}Hero-Section/placements.png`,
-    overlay: "", // No overlay for placements image
-    eyebrow: "Career Success",
-    title: "Placements",
-    tagline: "Industry Ready Graduates",
-    highlight: "Top Recruiters  •  Strong Outcomes",
+    image: `${BASE}Hero-Section/placements2.png`,
+    overlay: "",
+    eyebrow: "",
+    title: "",
+    tagline: "",
+    highlight: "",
     buttons: [
       { label: "View Placements", href: "/placements", style: "primary" },
     ],
     align: "right",
   },
-  // 4 — Credentials
   {
     id: "credentials",
     image: `${BASE}Hero-Section/image%205.JPG`,
@@ -64,33 +77,29 @@ const slides = [
     align: "center",
     showCredentials: true,
   },
-  // 5 — Campus Life
   {
     id: "campus",
-    video: `${BASE}Hero-Section/college%20video.mp4`,
+    video: `${BASE}Hero-Section/campuse.webm`,
     image: `${BASE}Hero-Section/image%206.jpg`,
-    overlay: "bg-[linear-gradient(160deg,rgba(7,21,37,0.78)_0%,rgba(15,42,68,0.55)_100%)]",
+    overlay: "",
     eyebrow: "Life at MITS",
     title: "Campus Life",
     tagline: "Vibrant  •  Dynamic  •  Inspiring",
-    buttons: [
-      { label: "Explore Campus", href: "/campus-life", style: "outline" },
-    ],
+    buttons: [{ label: "Explore Campus", href: "/campus-life", style: "outline" }],
     align: "center",
   },
 ];
 
 const credentials = [
-  { label: "NAAC A+",             gold: true  },
-  { label: "UGC Recognized",      gold: false },
-  { label: "NIRF 201–300",        gold: true  },
-  { label: "4,401+ Scholarships",  gold: false },
-  { label: "9,599+ Internships",  gold: true  },
-  { label: "600+ International",    gold: false },
-  { label: "144+ MoUs",            gold: true  },
+  { label: "NAAC A+",            gold: true  },
+  { label: "UGC Recognized",     gold: false },
+  { label: "NIRF 201–300",       gold: true  },
+  { label: "4,401+ Scholarships", gold: false },
+  { label: "9,599+ Internships", gold: true  },
+  { label: "600+ International",  gold: false },
+  { label: "144+ MoUs",          gold: true  },
 ];
 
-// ── Text animation variants ───────────────────────────────────────────────────
 const textVariants = {
   hidden: { opacity: 0, y: 28 },
   show:   { opacity: 1, y: 0 },
@@ -98,9 +107,13 @@ const textVariants = {
 };
 
 const HeroSection = () => {
-  const [current, setCurrent] = useState(0);
-  const [dir,     setDir]     = useState(1);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [current, setCurrent]           = useState(0);
+  const [dir,     setDir]               = useState(1);
+  const [campusShrunk, setCampusShrunk] = useState(false);
+  const [isVisible, setIsVisible]       = useState(true);
+  const [videoSize, setVideoSize]       = useState<{ w: number; h: number } | null>(null);
+  const videoRef   = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const go = useCallback((next: number) => {
     setDir(next > current ? 1 : -1);
@@ -110,23 +123,78 @@ const HeroSection = () => {
   const prev = () => go((current - 1 + slides.length) % slides.length);
   const next = useCallback(() => go((current + 1) % slides.length), [current, go]);
 
+  // IntersectionObserver
   useEffect(() => {
-    // If current slide has a video, wait for it to end before advancing
+    const section = sectionRef.current;
+    if (!section) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.3 }
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  // Play/pause video on visibility and move to next slide when scrolled down
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
     const currentSlide = slides[current];
-    if ((currentSlide as any).video) {
+    if (!currentSlide.video) return;
+    if (isVisible) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+      // Move to next slide when user scrolls down
+      next();
+    }
+  }, [isVisible, current, next]);
+
+  // Reset + restart when campus becomes active
+  useEffect(() => {
+    if (slides[current].id === "campus") {
+      setCampusShrunk(false);
+      const video = videoRef.current;
+      if (video) { video.currentTime = 0; video.play().catch(() => {}); }
+    }
+    // Also play video for identity slide
+    if (slides[current].id === "identity") {
+      const video = videoRef.current;
+      if (video) { video.currentTime = 0; video.play().catch(() => {}); }
+    }
+    // Reset campusShrunk when navigating away from campus slide
+    if (slides[current].id !== "campus") {
+      setCampusShrunk(false);
+    }
+  }, [current]);
+
+  // Slide timer / video-end
+  useEffect(() => {
+    const currentSlide = slides[current];
+    if (currentSlide.video) {
       const video = videoRef.current;
       if (!video) return;
-      const onEnded = () => next();
+      let shrinkTimer: ReturnType<typeof setTimeout> | null = null;
+      if (!campusShrunk) {
+        shrinkTimer = setTimeout(() => setCampusShrunk(true), 5500);
+      }
+      let fallbackTimer: ReturnType<typeof setTimeout> | null = null;
+      if (!isVisible) {
+        fallbackTimer = setTimeout(() => next(), 5000);
+      }
+      const onEnded = () => { if (isVisible) next(); };
       video.addEventListener("ended", onEnded);
-      return () => video.removeEventListener("ended", onEnded);
+      return () => {
+        if (shrinkTimer) clearTimeout(shrinkTimer);
+        if (fallbackTimer) clearTimeout(fallbackTimer);
+        video.removeEventListener("ended", onEnded);
+      };
     }
-    // Otherwise use 5s timer
     const t = setInterval(next, 5000);
     return () => clearInterval(t);
-  }, [next, current]);
+  }, [next, current, isVisible, campusShrunk]);
 
   const slide = slides[current];
-
   const contentAlign =
     slide.align === "left"  ? "items-start text-left"  :
     slide.align === "right" ? "items-end   text-right" :
@@ -134,10 +202,15 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative h-screen min-h-[500px] max-h-[650px] overflow-hidden mt-[80px]"
+      ref={sectionRef}
+      className="relative w-full overflow-hidden"
+      style={
+        videoSize
+          ? { height: `${Math.round((videoSize.h / videoSize.w) * 100)}vw`, maxHeight: "100vh", width: "100%" }
+          : { height: "clamp(460px, 58vw, calc(100vh - 80px))" }
+      }
     >
-
-      {/* ── Background images (static for admissions/placements) ── */}
+      {/* Backgrounds */}
       {slides.map((s, i) => (
         <motion.div
           key={s.id}
@@ -147,229 +220,220 @@ const HeroSection = () => {
           animate={{ opacity: i === current ? 1 : 0 }}
           transition={{ duration: 1.1, ease: "easeInOut" }}
         >
-          {(s as any).video ? (
+          {s.video ? (
             <video
               ref={i === current ? videoRef : undefined}
-              autoPlay
-              loop={false}
-              muted
-              playsInline
+              autoPlay loop={false} muted playsInline
               className="w-full h-full object-cover"
+              onLoadedMetadata={(e) => {
+                const v = e.currentTarget;
+                setVideoSize({ w: v.videoWidth, h: v.videoHeight });
+              }}
               style={{
-                imageRendering: "auto",
+                objectPosition: "center 50%",
                 filter: "contrast(1.08) brightness(1.05) saturate(1.1)",
-                transform: "translateZ(0) scale(1.0)",
+                transform: "translateZ(0)",
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
               }}
-              src={(s as any).video}
+              src={s.video}
             />
           ) : (
             <motion.img
-              src={s.image}
-              alt={s.id}
+              src={s.image} alt={s.id}
               className={`w-full h-full object-cover ${
-                s.id === "admissions" ? "object-top"
-                  : s.id === "placements" ? "object-[center_top_-20px]"
-                  : ""
+                s.id === "admissions" ? "object-top" : s.id === "placements" ? "object-center-top" : "object-center"
               }`}
               initial={false}
-              animate={{
-                scale: (s.id === "admissions" || s.id === "placements") ? 1 : (i === current ? 1.06 : 1)
-              }}
+              animate={{ scale: (s.id === "admissions" || s.id === "placements") ? 1 : (i === current ? 1.04 : 1) }}
               transition={{ duration: 7, ease: "easeOut" }}
             />
           )}
-          {s.overlay && <div className={`absolute inset-0 ${s.overlay}`} />}
+          {/* Campus: solid black shade that fades out when title moves */}
+          {s.id === "campus" ? (
+            <motion.div
+              className="absolute inset-0"
+              animate={{ opacity: campusShrunk ? 0 : 1 }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+              style={{ background: "rgba(0,0,0,0.72)" }}
+            />
+          ) : s.overlay ? (
+            <div className={`absolute inset-0 ${s.overlay}`} />
+          ) : null}
         </motion.div>
       ))}
 
-      {/* ── Progress bar ── */}
-      <div className="absolute top-0 left-0 right-0 z-30 h-[3px] bg-white/10">
-        <motion.div
-          key={current}
-          className="h-full bg-[#caa74d]"
-          initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 5, ease: "linear" }}
-        />
-      </div>
-
-      {/* ── Main content ── */}
+      {/* Main content */}
       <div className="absolute inset-0 z-10 flex flex-col">
         <div className={`flex-1 flex flex-col justify-center ${
-          slide.id === "admissions" || slide.id === "placements" 
-            ? "px-2 sm:px-4" // Reduced padding for admissions/placements on smaller screens
-            : "px-4 sm:px-8 md:px-16 lg:px-24" // Responsive padding for other slides
+          slide.id === "admissions" || slide.id === "placements"
+            ? "px-2 sm:px-4"
+            : "px-4 sm:px-8 md:px-16 lg:px-24"
         } ${contentAlign}`}>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              className={`flex flex-col ${contentAlign} ${
-                slide.id === "admissions" || slide.id === "placements"
-                  ? "absolute right-0 top-1/2 -translate-y-1/2 w-full sm:w-[40%] md:w-[35%] pr-4 sm:pr-6 md:pr-12 text-right items-end" // Responsive width for admissions/placements
-                  : slide.align === "right" ? "max-w-2xl md:max-w-3xl ml-auto" : slide.align === "left" ? "max-w-2xl md:max-w-3xl" : "max-w-2xl md:max-w-3xl mx-auto" // Responsive max-width
-              }`}
-            >
+
+          {/* ── Campus slide: all stacked together, title animates out ── */}
+          {slide.id === "campus" && (
+            <div className="flex flex-col items-center text-center">
               {/* Eyebrow */}
               <motion.p
-                variants={textVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                transition={{ duration: 0.3 }}
-                className="font-body font-semibold text-[#caa74d] tracking-[0.22em] uppercase text-xs md:text-sm mb-4"
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: campusShrunk ? 0 : 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="font-body font-semibold text-[#caa74d] tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-3"
               >
-                {slide.eyebrow}
+                Life at MITS
               </motion.p>
 
-              {/* Title */}
+              {/* Title — moves to bottom-right after 5.5s */}
               <motion.h1
-                variants={textVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                transition={{ duration: 0.3 }}
-                className={`font-display font-bold text-white leading-[1.05] ${
-                  slide.id === "placements" ? "mb-2 text-7xl md:text-8xl" : "mb-4"
-                }`}
-                style={slide.id === "placements" ? {} : { fontSize: "clamp(3rem, 8vw, 6.5rem)" }}
+                initial={{ opacity: 0, y: 28 }}
+                animate={
+                  campusShrunk
+                    ? { opacity: 1, y: "22vh", x: "28vw", scale: 0.75 }
+                    : { opacity: 1, y: 0, x: 0, scale: 1 }
+                }
+                transition={
+                  campusShrunk
+                    ? { duration: 12, ease: [0.25, 0.1, 0.25, 1] }
+                    : { duration: 0.4, ease: "easeOut" }
+                }
+                className="font-display font-bold text-white leading-[1.05] mb-2 sm:mb-3 md:mb-4 origin-center whitespace-nowrap"
+                style={{ fontSize: "clamp(2rem, 6vw, 5.5rem)" }}
               >
-                {slide.title}
+                Campus Life
               </motion.h1>
 
               {/* Tagline */}
               <motion.p
-                variants={textVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                transition={{ duration: 0.3 }}
-                className="font-body text-white/80 text-lg md:text-2xl font-light mb-3 tracking-wide"
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: campusShrunk ? 0 : 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                className="font-body text-white/80 text-sm sm:text-base md:text-xl font-light mb-3 tracking-wide"
               >
-                {slide.tagline}
+                Vibrant  •  Dynamic  •  Inspiring
               </motion.p>
 
-              {/* Optional highlight */}
-              {"highlight" in slide && slide.highlight && (
-                <motion.p
-                  variants={textVariants}
-                  initial="hidden"
-                  animate="show"
-                  exit="exit"
-                  transition={{ duration: 0.3 }}
-                  className="font-body text-[#caa74d] text-lg md:text-2xl font-bold tracking-wider max-w-3xl mx-auto text-center"
-                >
-                  {slide.highlight}
+              {/* Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: campusShrunk ? 0 : 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
+                <Link to="/campus-life">
+                  <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                    className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 hover:border-white backdrop-blur-sm font-body font-bold px-6 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-base transition-all">
+                    Explore Campus
+                  </motion.button>
+                </Link>
+              </motion.div>
+            </div>
+          )}
+
+          {/* ── Non-campus slides ── */}
+          {slide.id !== "campus" && (
+            <AnimatePresence mode="wait">
+              <div
+                key={current}
+                className={`flex flex-col ${contentAlign} ${
+                  slide.id === "admissions"
+                    ? "absolute right-32 top-3/4 -translate-y-[calc(50%+10px)] w-[55%] sm:w-[45%] md:w-[38%] pr-3 sm:pr-6 md:pr-10 text-right items-end"
+                    : slide.id === "placements"
+                    ? "absolute right-32 top-3/4 -translate-y-[calc(50%+60px)] w-[55%] sm:w-[45%] md:w-[38%] pr-3 sm:pr-6 md:pr-10 text-right items-end"
+                    : slide.id === "identity"
+                    ? "absolute bottom-8 sm:bottom-10 md:bottom-40 left-1/2 -translate-x-1/2 w-full px-4"
+                    : slide.align === "right" 
+                    ? "max-w-xl md:max-w-2xl ml-auto"
+                    : slide.align === "left"  
+                    ? "max-w-xl md:max-w-2xl"
+                    : "max-w-xl md:max-w-2xl mx-auto"
+                }`}
+              >
+                <motion.p variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
+                  className="font-body font-semibold text-[#caa74d] tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-3 md:mb-4">
+                  {slide.eyebrow}
                 </motion.p>
-              )}
-
-              {/* Optional sub-highlight */}
-              {"subHighlight" in slide && slide.subHighlight && (
-                <motion.p
-                  variants={textVariants}
-                  initial="hidden"
-                  animate="show"
-                  exit="exit"
-                  transition={{ duration: 0.3 }}
-                  className="font-body text-white/80 text-sm md:text-lg font-medium tracking-wider mt-3 mb-6 text-center"
-                >
-                  {slide.subHighlight}
+                <motion.h1 variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
+                  className={`font-display font-bold text-white leading-[1.05] ${slide.id === "placements" ? "mb-1 sm:mb-2" : "mb-2 sm:mb-3 md:mb-4"}`}
+                  style={{ fontSize: slide.id === "placements" ? "clamp(2.2rem, 5.5vw, 5rem)" : "clamp(2rem, 6vw, 5.5rem)" }}>
+                  {slide.title}
+                </motion.h1>
+                <motion.p variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
+                  className="font-body text-white/80 text-sm sm:text-base md:text-xl font-light mb-2 sm:mb-3 tracking-wide">
+                  {slide.tagline}
                 </motion.p>
-              )}
-
-              {/* Buttons */}
-              {slide.buttons.length > 0 && (
-                <motion.div
-                  variants={textVariants}
-                  initial="hidden"
-                  animate="show"
-                  exit="exit"
-                  transition={{ duration: 0.3 }}
-                  className={`flex flex-wrap gap-3 mt-6 ${slide.align === "center" ? "justify-center" : slide.align === "right" ? "justify-end" : "justify-start"}`}
-                >
-                  {slide.buttons.map((btn) => {
-                    const isAdmissions = slide.id === "admissions";
-                    const cls = btn.style === "primary"
-                      ? isAdmissions
-                        ? "bg-[#caa74d] hover:bg-[#ddb85e] text-white border-2 border-[#caa74d] hover:border-[#ddb85e] shadow-[0_4px_24px_rgba(202,167,77,0.4)] hover:shadow-[0_6px_32px_rgba(202,167,77,0.55)]"
-                        : "bg-[#b30000] hover:bg-[#d40000] text-white border-2 border-[#b30000] hover:border-[#d40000] shadow-[0_4px_24px_rgba(179,0,0,0.4)] hover:shadow-[0_6px_32px_rgba(179,0,0,0.55)]"
-                      : "bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 hover:border-white backdrop-blur-sm";
-                    const inner = (
-                      <motion.button
-                        whileHover={{ scale: 1.04 }}
-                        whileTap={{ scale: 0.97 }}
-                        className={`${cls} font-body font-bold px-8 py-3 rounded-full text-sm md:text-base transition-all duration-250`}
-                      >
-                        {btn.label}
-                      </motion.button>
-                    );
-                    return btn.external
-                      ? <a key={btn.label} href={btn.href} target="_blank" rel="noreferrer">{inner}</a>
-                      : btn.href.startsWith("#")
-                        ? <a key={btn.label} href={btn.href}>{inner}</a>
-                        : <Link key={btn.label} to={btn.href}>{inner}</Link>;
-                  })}
-                </motion.div>
-              )}
-
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Logos for identity slide - positioned next to text */}
-          {slide.id === "identity" && (
-            <div className="absolute inset-0 flex items-center justify-between px-4 sm:px-8 md:px-16 pointer-events-none">
-              <div className="pointer-events-auto ml-2 sm:ml-4 md:ml-12 lg:ml-20">
-                {"leftLogo" in slide && slide.leftLogo && (
-                  <motion.img
-                    src={slide.leftLogo}
-                    alt="MITS Logo"
-                    className="h-20 sm:h-28 md:h-36 lg:h-48 w-auto object-contain"
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3 }}
-                  />
+                {"highlight" in slide && slide.highlight && (
+                  <motion.p variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
+                    className="font-body text-[#caa74d] text-sm sm:text-base md:text-xl font-bold tracking-wider mx-auto text-center">
+                    {slide.highlight}
+                  </motion.p>
+                )}
+                {"subHighlight" in slide && slide.subHighlight && (
+                  <motion.p variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
+                    className="font-body text-white/80 text-xs sm:text-sm md:text-base font-medium tracking-wider mt-2 mb-3 sm:mb-4 text-center">
+                    {slide.subHighlight}
+                  </motion.p>
+                )}
+                {slide.buttons.length > 0 && (
+                  <motion.div variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
+                    className={`flex flex-wrap gap-2 sm:gap-3 ${slide.id === "identity" ? "mt-2 sm:mt-3" : "mt-3 sm:mt-4 md:mt-6"} ${slide.align === "center" ? "justify-center" : slide.align === "right" ? "justify-end" : "justify-start"}`}>
+                    {slide.buttons.map((btn) => {
+                      const isAdmissions = slide.id === "admissions";
+                      const cls = btn.style === "primary"
+                        ? isAdmissions
+                          ? "bg-[#caa74d] hover:bg-[#ddb85e] text-white border-2 border-[#caa74d] hover:border-[#ddb85e] shadow-[0_4px_24px_rgba(202,167,77,0.4)]"
+                          : "bg-[#b30000] hover:bg-[#d40000] text-white border-2 border-[#b30000] hover:border-[#d40000] shadow-[0_4px_24px_rgba(179,0,0,0.4)]"
+                        : "bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 hover:border-white backdrop-blur-sm";
+                      const inner = (
+                        <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                          className={`${cls} font-body font-bold px-3 sm:px-4 md:px-6 lg:px-8 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-full text-[10px] sm:text-xs md:text-sm lg:text-base transition-all duration-250`}>
+                          {btn.label}
+                        </motion.button>
+                      );
+                      return btn.external
+                        ? <a key={btn.label} href={btn.href} target="_blank" rel="noreferrer">{inner}</a>
+                        : btn.href.startsWith("#")
+                          ? <a key={btn.label} href={btn.href}>{inner}</a>
+                          : <Link key={btn.label} to={btn.href}>{inner}</Link>;
+                    })}
+                  </motion.div>
                 )}
               </div>
-              <div className="pointer-events-auto mr-2 sm:mr-4 md:mr-8 lg:mr-12">
+            </AnimatePresence>
+          )}
+
+          {/* Logos for identity slide - hidden */}
+          {false && slide.id === "identity" && (
+            <div className="absolute inset-0 flex items-center justify-between px-3 sm:px-8 md:px-16 pointer-events-none">
+              <div className="pointer-events-auto ml-1 sm:ml-4 md:ml-12 lg:ml-20">
+                {"leftLogo" in slide && slide.leftLogo && (
+                  <motion.img src={slide.leftLogo} alt="MITS Logo"
+                    className="h-14 sm:h-24 md:h-32 lg:h-44 w-auto object-contain"
+                    initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} />
+                )}
+              </div>
+              <div className="pointer-events-auto mr-1 sm:mr-4 md:mr-8 lg:mr-12">
                 {"rightLogo" in slide && slide.rightLogo && (
-                  <motion.img
-                    src={slide.rightLogo}
-                    alt="ESTD Logo"
-                    className="h-20 sm:h-28 md:h-36 lg:h-48 w-auto object-contain"
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3 }}
-                  />
+                  <motion.img src={slide.rightLogo} alt="ESTD Logo"
+                    className="h-14 sm:h-24 md:h-32 lg:h-44 w-auto object-contain"
+                    initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} />
                 )}
               </div>
             </div>
           )}
         </div>
 
-        {/* ── Credential bar (slide 4 only) ── */}
+        {/* Credential bar */}
         <AnimatePresence>
           {slide.showCredentials && (
-            <motion.div
-              key="cred-bar"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
+            <motion.div key="cred-bar"
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3 }}
-              className="mx-3 sm:mx-6 md:mx-16 mb-12 md:mb-20"
-            >
-              <div
-                className="rounded-2xl border border-white/15 px-3 sm:px-6 py-3 sm:py-4 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-6 gap-y-2 sm:gap-y-3 overflow-x-auto"
-                style={{ background: "rgba(7,21,37,0.65)", backdropFilter: "blur(14px)" }}
-              >
+              className="mx-2 sm:mx-6 md:mx-16 mb-4 sm:mb-8 md:mb-14">
+              <div className="rounded-xl border border-white/15 px-2 sm:px-4 md:px-6 py-2 sm:py-3 flex flex-wrap items-center justify-center gap-x-2 sm:gap-x-4 md:gap-x-6 gap-y-1 sm:gap-y-2 overflow-x-auto"
+                style={{ background: "rgba(7,21,37,0.65)", backdropFilter: "blur(14px)" }}>
                 {credentials.map((c, i) => (
-                  <div key={c.label} className="flex items-center gap-2 sm:gap-3 shrink-0">
-                    <span className={`font-body font-bold text-xs sm:text-sm md:text-base whitespace-nowrap ${c.gold ? "text-[#caa74d]" : "text-white"}`}>
+                  <div key={c.label} className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+                    <span className={`font-body font-bold text-[9px] sm:text-xs md:text-sm whitespace-nowrap ${c.gold ? "text-[#caa74d]" : "text-white"}`}>
                       {c.label}
                     </span>
-                    {i < credentials.length - 1 && (
-                      <span className="w-px h-3 sm:h-4 bg-white/20 shrink-0" />
-                    )}
+                    {i < credentials.length - 1 && <span className="w-px h-3 bg-white/20 shrink-0" />}
                   </div>
                 ))}
               </div>
@@ -377,58 +441,31 @@ const HeroSection = () => {
           )}
         </AnimatePresence>
 
-        {/* ── Bottom controls ── */}
-        <div className="relative z-20 flex items-center justify-between px-4 sm:px-6 md:px-16 pb-4 sm:pb-6 md:pb-8">
-
-          {/* Dot indicators */}
-          <div className="flex items-center gap-2 mx-auto">
+        {/* Bottom controls */}
+        <div className="relative z-20 flex items-center justify-between px-3 sm:px-6 md:px-16 pb-3 sm:pb-4 md:pb-6">
+          <div className="flex items-center gap-1.5 sm:gap-2 mx-auto">
             {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => go(i)}
-                aria-label={`Go to slide ${i + 1}`}
+              <button key={i} onClick={() => go(i)} aria-label={`Go to slide ${i + 1}`}
                 className={`rounded-full transition-all duration-400 ${
-                  i === current
-                    ? "w-8 h-2 bg-[#caa74d]"
-                    : "w-2 h-2 bg-white/35 hover:bg-white/60"
-                }`}
-              />
+                  i === current ? "w-6 sm:w-8 h-1.5 sm:h-2 bg-[#caa74d]" : "w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white/35 hover:bg-white/60"
+                }`} />
             ))}
           </div>
-
-          {/* Scroll down */}
           <a href="#about" aria-label="Scroll down" className="text-white/50 hover:text-[#caa74d] transition-colors hidden md:block">
-            <ChevronDown className="w-5 h-5" />
+            <ChevronDown className="w-4 h-4 md:w-5 md:h-5" />
           </a>
         </div>
       </div>
 
-      {/* ── Prev / Next arrows ── */}
-      <button
-        onClick={prev}
-        aria-label="Previous slide"
-        className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20
-          w-10 h-10 md:w-12 md:h-12 rounded-full
-          bg-black/30 hover:bg-[#b30000] border border-white/20 hover:border-[#b30000]
-          text-white backdrop-blur-sm
-          flex items-center justify-center
-          transition-all duration-250 hover:scale-110"
-      >
-        <ChevronLeft className="w-5 h-5" />
+      {/* Prev / Next arrows */}
+      <button onClick={prev} aria-label="Previous slide"
+        className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-black/30 hover:bg-[#b30000] border border-white/20 hover:border-[#b30000] text-white backdrop-blur-sm flex items-center justify-center transition-all duration-250 hover:scale-110">
+        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
       </button>
-      <button
-        onClick={next}
-        aria-label="Next slide"
-        className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20
-          w-10 h-10 md:w-12 md:h-12 rounded-full
-          bg-black/30 hover:bg-[#b30000] border border-white/20 hover:border-[#b30000]
-          text-white backdrop-blur-sm
-          flex items-center justify-center
-          transition-all duration-250 hover:scale-110"
-      >
-        <ChevronRight className="w-5 h-5" />
+      <button onClick={next} aria-label="Next slide"
+        className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-black/30 hover:bg-[#b30000] border border-white/20 hover:border-[#b30000] text-white backdrop-blur-sm flex items-center justify-center transition-all duration-250 hover:scale-110">
+        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
       </button>
-
     </section>
   );
 };

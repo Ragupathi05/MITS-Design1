@@ -19,6 +19,7 @@ import NewsEvents from "./pages/NewsEvents";
 import NewsEventDetail from "./pages/NewsEventDetail";
 import EligibilityAndFees from "./pages/EligibilityAndFees";
 import AcademicCalendar from "./pages/AcademicCalendar";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/library" element={<Library />} />
           <Route path="/examinations" element={<Examinations />} />
           <Route path="/academic-calendar" element={<AcademicCalendar />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/news-events" element={<NewsEvents />} />
           <Route path="/news-events/:slug" element={<NewsEventDetail />} />
           <Route path="/eligibility-and-fees" element={<EligibilityAndFees />} />
