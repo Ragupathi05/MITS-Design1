@@ -14,22 +14,41 @@ const stats = [
 
 const recruiters = [
   { name: "Accenture", logo: "accenture.png" },
+  { name: "Akkodis", logo: "akkodis.png" },
   { name: "Amazon", logo: "amazon.png" },
   { name: "Bosch", logo: "bosch.png" },
+  { name: "Broadridge", logo: "broadridge.png" },
   { name: "Capgemini", logo: "capgemini.png" },
-  { name: "Cognizant", logo: "congnizant.png" },
+  { name: "Capsitech", logo: "capsitech.png" },
+  { name: "Cognizant", logo: "cognizant.png" },
   { name: "Deloitte", logo: "Deloitte.png" },
+  { name: "Finbox", logo: "finbox.png" },
   { name: "Google", logo: "google.webp" },
-  { name: "HCLTech", logo: "hcltech.png" },
+  { name: "HCL Tech", logo: "hcltech.png" },
+  { name: "Hexaware", logo: "hexaware.png" },
   { name: "IBM", logo: "IBM.png" },
   { name: "Infosys", logo: "infosys.png" },
+  { name: "ITC", logo: "itc.png" },
+  { name: "JLL", logo: "jll.png" },
+  { name: "Kewaunee", logo: "kewaunee.png" },
+  { name: "Knowledge Lens", logo: "knowledge lens.png" },
   { name: "L&T", logo: "L&T.png" },
+  { name: "LTIMindtree", logo: "ltimindtree.png" },
+  { name: "Lumen", logo: "lumen.png" },
   { name: "Mahindra", logo: "mahindra.png" },
   { name: "Microsoft", logo: "microsoft.png" },
+  { name: "PeopleTech", logo: "peopletech.png" },
+  { name: "Recruit", logo: "recruit.png" },
+  { name: "Regami", logo: "regami.png" },
+  { name: "SBI General", logo: "SBI General.png" },
   { name: "TCS", logo: "tcs.png" },
+  { name: "Tech Mahindra", logo: "tech mahindra.png" },
+  { name: "Wiley", logo: "wiley.png" },
   { name: "Wipro", logo: "wipro.png" },
+  { name: "Yash Tech", logo: "yash tech.png" },
   { name: "Zoho", logo: "zoho.png" },
 ];
+
 
 const getRecruiterLogoSrc = (logo: string) => `${import.meta.env.BASE_URL}recruiters/${logo}`;
 
