@@ -109,7 +109,7 @@ const textVariants = {
 const HeroSection = () => {
   const [current, setCurrent]           = useState(0);
   const [dir,     setDir]               = useState(1);
-
+  const [campusShrunk, setCampusShrunk] = useState(false);
   const [isVisible, setIsVisible]       = useState(true);
   const videoRef   = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
