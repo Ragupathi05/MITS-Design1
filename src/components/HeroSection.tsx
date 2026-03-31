@@ -111,7 +111,6 @@ const HeroSection = () => {
   const [dir,     setDir]               = useState(1);
   const [campusShrunk, setCampusShrunk] = useState(false);
   const [isVisible, setIsVisible]       = useState(true);
-  const [videoSize, setVideoSize]       = useState<{ w: number; h: number } | null>(null);
   const videoRef   = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -204,11 +203,10 @@ const HeroSection = () => {
     <section
       ref={sectionRef}
       className="relative w-full overflow-hidden"
-      style={
-        videoSize
-          ? { height: `${Math.round((videoSize.h / videoSize.w) * 100)}vw`, maxHeight: "100vh", width: "100%" }
-          : { height: "clamp(460px, 58vw, calc(100vh - 80px))" }
-      }
+      style={{
+        height: "clamp(220px, 50vw, 90vh)",
+        width: "100%",
+      }}
     >
       {/* Backgrounds */}
       {slides.map((s, i) => (
@@ -224,32 +222,41 @@ const HeroSection = () => {
             <video
               ref={i === current ? videoRef : undefined}
               autoPlay loop={false} muted playsInline
-              className="w-full h-full object-cover"
-              onLoadedMetadata={(e) => {
-                const v = e.currentTarget;
-                setVideoSize({ w: v.videoWidth, h: v.videoHeight });
-              }}
+              className="w-full h-full"
               style={{
-                objectPosition: "center 50%",
+                objectFit: "cover",
+                objectPosition: "center center",
                 filter: "contrast(1.08) brightness(1.05) saturate(1.1)",
                 transform: "translateZ(0)",
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
+                width: "100%",
+                height: "100%",
               }}
               src={s.video}
             />
           ) : (
             <motion.img
               src={s.image} alt={s.id}
-              className={`w-full h-full object-cover ${
-                s.id === "admissions" ? "object-top" : s.id === "placements" ? "object-center-top" : "object-center"
-              }`}
+              className="w-full h-full"
+              style={{
+                objectFit: "cover",
+                objectPosition: s.id === "admissions" ? "center 30%" : s.id === "placements" ? "center 20%" : "center center",
+              }}
               initial={false}
               animate={{ scale: (s.id === "admissions" || s.id === "placements") ? 1 : (i === current ? 1.04 : 1) }}
               transition={{ duration: 7, ease: "easeOut" }}
             />
           )}
-          {s.overlay ? (
+          {/* Campus: solid black shade that fades out when title moves */}
+          {s.id === "campus" ? (
+            <motion.div
+              className="absolute inset-0"
+              animate={{ opacity: campusShrunk ? 0 : 1 }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+              style={{ background: "rgba(0,0,0,0.72)" }}
+            />
+          ) : s.overlay ? (
             <div className={`absolute inset-0 ${s.overlay}`} />
           ) : null}
         </motion.div>
