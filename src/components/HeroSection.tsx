@@ -81,7 +81,7 @@ const slides: Slide[] = [
     id: "campus",
     video: `${BASE}Hero-Section/campuse.mp4`,
     image: `${BASE}Hero-Section/image%206.jpg`,
-    overlay: "",
+    overlay: "bg-[linear-gradient(to_bottom,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.25)_50%,rgba(0,0,0,0.55)_100%)]",
     eyebrow: "Life at MITS",
     title: "Campus Life",
     tagline: "Vibrant  •  Dynamic  •  Inspiring",
@@ -109,7 +109,7 @@ const textVariants = {
 const HeroSection = () => {
   const [current, setCurrent]           = useState(0);
   const [dir,     setDir]               = useState(1);
-  const [campusShrunk, setCampusShrunk] = useState(false);
+
   const [isVisible, setIsVisible]       = useState(true);
   const videoRef   = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -149,21 +149,11 @@ const HeroSection = () => {
     }
   }, [isVisible, current, next]);
 
-  // Reset + restart when campus becomes active
+  // Reset + restart video when slide changes
   useEffect(() => {
-    if (slides[current].id === "campus") {
-      setCampusShrunk(false);
+    if (slides[current].video) {
       const video = videoRef.current;
       if (video) { video.currentTime = 0; video.play().catch(() => {}); }
-    }
-    // Also play video for identity slide
-    if (slides[current].id === "identity") {
-      const video = videoRef.current;
-      if (video) { video.currentTime = 0; video.play().catch(() => {}); }
-    }
-    // Reset campusShrunk when navigating away from campus slide
-    if (slides[current].id !== "campus") {
-      setCampusShrunk(false);
     }
   }, [current]);
 
@@ -173,10 +163,6 @@ const HeroSection = () => {
     if (currentSlide.video) {
       const video = videoRef.current;
       if (!video) return;
-      let shrinkTimer: ReturnType<typeof setTimeout> | null = null;
-      if (!campusShrunk) {
-        shrinkTimer = setTimeout(() => setCampusShrunk(true), 5500);
-      }
       let fallbackTimer: ReturnType<typeof setTimeout> | null = null;
       if (!isVisible) {
         fallbackTimer = setTimeout(() => next(), 5000);
@@ -184,14 +170,13 @@ const HeroSection = () => {
       const onEnded = () => { if (isVisible) next(); };
       video.addEventListener("ended", onEnded);
       return () => {
-        if (shrinkTimer) clearTimeout(shrinkTimer);
         if (fallbackTimer) clearTimeout(fallbackTimer);
         video.removeEventListener("ended", onEnded);
       };
     }
     const t = setInterval(next, 5000);
     return () => clearInterval(t);
-  }, [next, current, isVisible, campusShrunk]);
+  }, [next, current, isVisible]);
 
   const slide = slides[current];
   const contentAlign =
@@ -203,10 +188,7 @@ const HeroSection = () => {
     <section
       ref={sectionRef}
       className="relative w-full overflow-hidden"
-      style={{
-        height: "clamp(220px, 50vw, 90vh)",
-        width: "100%",
-      }}
+style={{ height: "clamp(460px, 58vw, calc(100vh - 80px))" }}
     >
       {/* Backgrounds */}
       {slides.map((s, i) => (
@@ -222,7 +204,7 @@ const HeroSection = () => {
             <video
               ref={i === current ? videoRef : undefined}
               autoPlay loop={false} muted playsInline
-              className="w-full h-full"
+className="w-full h-full object-cover"
               style={{
                 objectFit: "cover",
                 objectPosition: "center center",
@@ -273,46 +255,30 @@ const HeroSection = () => {
           {/* ── Campus slide: all stacked together, title animates out ── */}
           {slide.id === "campus" && (
             <div className="flex flex-col items-center text-center">
-              {/* Eyebrow */}
               <motion.p
-                initial={{ opacity: 0, y: 20 }} animate={{ opacity: campusShrunk ? 0 : 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
                 className="font-body font-semibold text-[#caa74d] tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-3"
               >
                 Life at MITS
               </motion.p>
-
-              {/* Title — moves to bottom-right after 5.5s */}
               <motion.h1
-                initial={{ opacity: 0, y: 28 }}
-                animate={
-                  campusShrunk
-                    ? { opacity: 1, y: "22vh", x: "28vw", scale: 0.75 }
-                    : { opacity: 1, y: 0, x: 0, scale: 1 }
-                }
-                transition={
-                  campusShrunk
-                    ? { duration: 12, ease: [0.25, 0.1, 0.25, 1] }
-                    : { duration: 0.4, ease: "easeOut" }
-                }
-                className="font-display font-bold text-white leading-[1.05] mb-2 sm:mb-3 md:mb-4 origin-center whitespace-nowrap"
+                initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="font-display font-bold text-white leading-[1.05] mb-2 sm:mb-3 md:mb-4"
                 style={{ fontSize: "clamp(2rem, 6vw, 5.5rem)" }}
               >
                 Campus Life
               </motion.h1>
-
-              {/* Tagline */}
               <motion.p
-                initial={{ opacity: 0, y: 20 }} animate={{ opacity: campusShrunk ? 0 : 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
                 className="font-body text-white/80 text-sm sm:text-base md:text-xl font-light mb-3 tracking-wide"
               >
                 Vibrant  •  Dynamic  •  Inspiring
               </motion.p>
-
-              {/* Button */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }} animate={{ opacity: campusShrunk ? 0 : 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
               >
                 <Link to="/campus-life">

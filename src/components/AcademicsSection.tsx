@@ -39,6 +39,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 type Program = {
   name: string;
   icon: LucideIcon;
+  link?: string;
 };
 
 type SchoolGroup = {
@@ -59,21 +60,21 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
     {
       school: "School of Engineering",
       courses: [
-        { name: "B.Tech in Electronics & Communication Engineering", icon: CircuitBoard },
-        { name: "B.Tech in Civil Engineering", icon: HardHat },
-        { name: "B.Tech in Mechanical Engineering", icon: Cog },
-        { name: "B.Tech in Electrical & Electronics Engineering", icon: Zap },
+        { name: "B.Tech in Electronics & Communication Engineering", icon: CircuitBoard, link: "https://mits.ac.in/electronics-communication-engineering" },
+        { name: "B.Tech in Civil Engineering", icon: HardHat, link: "http://www.mits.ac.in/department/6" },
+        { name: "B.Tech in Mechanical Engineering", icon: Cog, link: "http://www.mits.ac.in/department/8" },
+        { name: "B.Tech in Electrical & Electronics Engineering", icon: Zap, link: "http://www.mits.ac.in/department/11" },
         { name: "B.Tech in Bioinformatics", icon: Dna },
       ],
     },
     {
       school: "School of Computing",
       courses: [
-        { name: "B.Tech Computer Science & Engineering", icon: Cpu },
-        { name: "B.Tech CSE (AI & Data Science)", icon: ChartNoAxesCombined },
-        { name: "B.Tech CSE (AI & ML)", icon: BrainCircuit },
+        { name: "B.Tech Computer Science & Engineering", icon: Cpu, link: "https://www.mits.ac.in/department/9" },
+        { name: "B.Tech CSE (AI & Data Science)", icon: ChartNoAxesCombined, link: "http://www.mits.ac.in/department/26" },
+        { name: "B.Tech CSE (AI & ML)", icon: BrainCircuit, link: "https://mits.ac.in/cse-ai-ml" },
         { name: "B.Tech CSE (AI & Robotics)", icon: Bot },
-        { name: "B.Tech CSE (Cyber Security)", icon: ShieldCheck },
+        { name: "B.Tech CSE (Cyber Security)", icon: ShieldCheck, link: "http://www.mits.ac.in/department/27" },
       ],
     },
     {
@@ -98,17 +99,17 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
     {
       school: "School of Computing",
       courses: [
-        { name: "M.Tech Computer Science & Engineering", icon: Network },
-        { name: "M.Tech CSE (AI & ML)", icon: Sparkles },
+        { name: "M.Tech Computer Science & Engineering", icon: Network, link: "https://www.mits.ac.in/department/9" },
+        { name: "M.Tech CSE (AI & ML)", icon: Sparkles, link: "https://mits.ac.in/cse-ai-ml" },
       ],
     },
     {
       school: "School of Management",
-      courses: [{ name: "MBA - Master of Business Administration", icon: Landmark }],
+      courses: [{ name: "MBA - Master of Business Administration", icon: Landmark, link: "http://www.mits.ac.in/department/5" }],
     },
     {
       school: "School of Science",
-      courses: [{ name: "MCA - Master of Computer Applications", icon: Code2 }],
+      courses: [{ name: "MCA - Master of Computer Applications", icon: Code2, link: "http://www.mits.ac.in/department/18" }],
     },
   ],
   phd: [
@@ -297,6 +298,9 @@ const AcademicsSection = () => {
                           whileTap={shouldReduceMotion ? undefined : { scale: 0.995 }}
                           className="group relative overflow-hidden rounded-2xl border border-[#dde2e9] bg-[#f3f5f8] shadow-[0_6px_18px_rgba(15,42,68,0.09)] px-4 py-3.5 flex items-center gap-3.5 transition-shadow duration-300 hover:shadow-[0_16px_30px_rgba(15,42,68,0.16)]"
                         >
+                          {course.link && (
+                            <a href={course.link} target="_blank" rel="noreferrer" className="absolute inset-0 z-20" aria-label={course.name} />
+                          )}
                           <span className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 bg-[linear-gradient(105deg,rgba(255,255,255,0.12)_0%,rgba(179,0,0,0.06)_35%,rgba(15,42,68,0.04)_100%)] transition-opacity duration-300" />
                           <div className="relative z-10 w-12 h-12 shrink-0 rounded-xl border border-[#b30000]/40 bg-white flex items-center justify-center shadow-[0_3px_10px_rgba(179,0,0,0.08)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                             <Icon className="w-5 h-5 text-[#b30000]" />

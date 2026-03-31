@@ -1,150 +1,345 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Trophy, Bus, Heart, UtensilsCrossed, Library, Radio, Lightbulb, Monitor, MessageSquare, Wifi } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
 
 const BASE = import.meta.env.BASE_URL;
 
-const contactInfo = [
-  { icon: MapPin, title: "Address", lines: ["Post Box No. 4, Angallu", "Madanapalle – 517325", "Annamayya District, Andhra Pradesh"] },
-  { icon: Phone, title: "Phone", lines: ["+91 8571 280255", "+91 8571 280256"] },
-  { icon: Mail, title: "Email", lines: ["info@mits.ac.in", "admissions@mits.ac.in"] },
-  { icon: Clock, title: "Office Hours", lines: ["Mon – Fri: 9:00 AM – 5:00 PM", "Sat: 9:00 AM – 1:00 PM"] },
+const infrastructureItems = [
+  {
+    key: "sports",
+    label: "Sports",
+    icon: Trophy,
+    title: "Sports & Athletics",
+    desc: "MITS offers world-class sports infrastructure to promote physical fitness and competitive spirit among students.",
+    points: [
+      "Cricket ground with practice nets and pavilion",
+      "Football, volleyball, and basketball courts",
+      "Badminton and table tennis halls",
+      "Athletics track and field facilities",
+      "Indoor gymnasium with modern equipment",
+      "Annual sports meet and inter-collegiate tournaments",
+    ],
+  },
+  {
+    key: "transport",
+    label: "Transport",
+    icon: Bus,
+    title: "Transport Facilities",
+    desc: "MITS provides safe and reliable transportation services covering Madanapalle and surrounding areas.",
+    points: [
+      "Fleet of 40+ buses covering 80+ km radius",
+      "Routes covering Madanapalle, Tirupati, Chittoor, and nearby towns",
+      "GPS-enabled buses for real-time tracking",
+      "Dedicated routes for day scholars and staff",
+      "Well-maintained vehicles with trained drivers",
+      "Special transport for examination and events",
+    ],
+  },
+  {
+    key: "dispensary",
+    label: "Dispensary",
+    icon: Heart,
+    title: "Health & Dispensary",
+    desc: "A fully equipped on-campus dispensary ensures the health and well-being of all students and staff.",
+    points: [
+      "24/7 medical assistance on campus",
+      "Qualified doctors and nursing staff",
+      "First aid and emergency care facilities",
+      "Tie-ups with nearby hospitals for referrals",
+      "Regular health check-up camps",
+      "Mental health and counseling support",
+    ],
+  },
+  {
+    key: "canteen",
+    label: "Canteen",
+    icon: UtensilsCrossed,
+    title: "Canteen & Dining",
+    desc: "Hygienic and affordable food services are available across the campus to cater to diverse tastes.",
+    points: [
+      "Main canteen with seating capacity of 500+",
+      "Multiple food stalls across campus",
+      "Vegetarian and non-vegetarian options",
+      "Hygienic food preparation with regular audits",
+      "Affordable meal plans for hostel students",
+      "Special dietary options available on request",
+    ],
+  },
+  {
+    key: "wifi",
+    label: "Wi-Fi",
+    icon: Wifi,
+    title: "Wi-Fi & Connectivity",
+    desc: "High-speed internet connectivity is available across the entire campus for seamless academic and research activities.",
+    points: [
+      "Campus-wide Wi-Fi with 1 Gbps internet bandwidth",
+      "500+ access points across academic and hostel blocks",
+      "24/7 connectivity for students and faculty",
+      "Secure network with firewall and content filtering",
+      "Dedicated bandwidth for research and labs",
+      "NKN (National Knowledge Network) connectivity",
+    ],
+  },
+  {
+    key: "library",
+    label: "Library",
+    icon: Library,
+    title: "Central Library",
+    desc: "The MITS Central Library is a knowledge hub with an extensive collection of books, journals, and digital resources.",
+    points: [
+      "50,000+ volumes across all disciplines",
+      "Subscriptions to 100+ national and international journals",
+      "Spacious reading halls with seating for 400+ students",
+      "Separate sections for reference, periodicals, and thesis",
+      "OPAC (Online Public Access Catalogue) system",
+      "Extended library hours during examination periods",
+    ],
+  },
+  {
+    key: "digital-library",
+    label: "Digital Library",
+    icon: Monitor,
+    title: "Digital Library",
+    desc: "The Digital Library provides access to a vast repository of e-resources, online databases, and research tools.",
+    points: [
+      "Access to NPTEL, DELNET, and INFLIBNET N-LIST",
+      "IEEE, Springer, Elsevier, and Scopus database access",
+      "E-books and e-journals across all disciplines",
+      "Dedicated digital library lab with 100+ terminals",
+      "Remote access for students and faculty",
+      "Plagiarism detection tools (Turnitin/iThenticate)",
+    ],
+  },
+  {
+    key: "radio",
+    label: "Radio Station",
+    icon: Radio,
+    title: "Campus Radio Station",
+    desc: "MITS operates a vibrant campus radio station that serves as a creative and communicative platform for students.",
+    points: [
+      "Licensed FM community radio station",
+      "Student-run programming and content creation",
+      "Broadcasts news, music, and educational content",
+      "Platform for developing communication and media skills",
+      "Regular shows on campus events and achievements",
+      "Training in audio production and broadcasting",
+    ],
+  },
+  {
+    key: "aicte-idea",
+    label: "AICTE Idea Lab",
+    icon: Lightbulb,
+    title: "AICTE Idea Library",
+    desc: "The AICTE Idea Lab at MITS is a state-of-the-art innovation hub that fosters creativity, prototyping, and entrepreneurship.",
+    points: [
+      "Equipped with 3D printers, laser cutters, and CNC machines",
+      "Electronics prototyping and IoT development kits",
+      "Dedicated space for student startups and projects",
+      "Workshops on design thinking and innovation",
+      "Collaboration with AICTE's national innovation network",
+      "Mentorship from industry experts and entrepreneurs",
+    ],
+  },
+  {
+    key: "computer",
+    label: "Computer Infrastructure",
+    icon: Monitor,
+    title: "Computer Infrastructure",
+    desc: "MITS maintains cutting-edge computing infrastructure to support academic, research, and innovation activities.",
+    points: [
+      "3000+ computing systems across departments",
+      "High-performance GPU servers for AI/ML research",
+      "Licensed software: MATLAB, AutoCAD, ANSYS, and more",
+      "Cloud computing lab with AWS and Azure access",
+      "24/7 lab access for project and research work",
+      "Regular hardware and software upgrades",
+    ],
+  },
+  {
+    key: "comm-lab",
+    label: "Communication Lab",
+    icon: MessageSquare,
+    title: "Communication Lab",
+    desc: "The Communication Lab at MITS is designed to enhance the language, presentation, and interpersonal skills of students.",
+    points: [
+      "State-of-the-art language lab with 60+ terminals",
+      "Software for pronunciation, listening, and speaking practice",
+      "Group discussion and debate practice rooms",
+      "Regular workshops on business communication",
+      "Mock interview and presentation training sessions",
+      "English proficiency programs for all students",
+    ],
+  },
 ];
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
-      toast({ title: "Please fill required fields", variant: "destructive" });
-      return;
-    }
-    toast({ title: "Message sent!", description: "We will get back to you shortly." });
-    setForm({ name: "", email: "", phone: "", subject: "", message: "" });
-  };
+  const [activeInfra, setActiveInfra] = useState(infrastructureItems[0].key);
+  const current = infrastructureItems.find(i => i.key === activeInfra)!;
+  const CurrentIcon = current.icon;
+  const currentIdx = infrastructureItems.findIndex(i => i.key === activeInfra);
 
   return (
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="relative pt-32 md:pt-40 pb-20 overflow-hidden"
-          style={{
-            backgroundImage: `url(${BASE}Hero-Section/image%201.JPG)`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
-          <div className="relative z-10 container mx-auto px-4 text-center">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Reach Us</p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Us</span></h1>
-            <p className="text-white/80 text-lg max-w-3xl mx-auto">
-              We'd love to hear from you. Reach out for admissions, academic queries, or general information.
-            </p>
+        {/* Hero Banner */}
+        <div className="relative h-72 md:h-80 bg-primary overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/80" />
+          <div className="absolute inset-0 opacity-10"
+            style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "60px 60px" }}
+          />
+          <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
+            <ScrollReveal>
+              <p className="text-secondary font-semibold tracking-widest uppercase text-sm mb-3 opacity-90">Campus Life</p>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                Infrastructure
+              </h1>
+              <p className="text-lg text-white/80 max-w-2xl mx-auto">
+                World-class facilities designed for academic excellence and holistic development.
+              </p>
+            </ScrollReveal>
           </div>
-          <div className="absolute bottom-4 left-6 z-10">
-            <nav aria-label="Breadcrumb">
-              <ol className="flex items-center gap-1.5 text-sm">
-                <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
-                <li className="text-white/50">›</li>
-                <li className="text-white font-semibold">Contact</li>
-              </ol>
-            </nav>
+          <div className="absolute bottom-4 left-6">
+            <ol className="flex items-center gap-1.5 text-sm">
+              <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
+              <li className="text-white/50">›</li>
+              <li className="text-white font-semibold">Infrastructure</li>
+            </ol>
           </div>
-        </section>
+        </div>
 
-        <section className="py-20 bg-background">
+        {/* Quick Stats Bar */}
+        <div className="bg-secondary text-white">
           <div className="container mx-auto px-4">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              {contactInfo.map((item, i) => (
-                <ScrollReveal key={item.title} delay={i * 0.1}>
-                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm text-center h-full hover:shadow-lg transition-all">
-                    <div className="w-12 h-12 mx-auto rounded-lg bg-primary flex items-center justify-center mb-4">
-                      <item.icon className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-card-foreground mb-2">{item.title}</h3>
-                    {item.lines.map((line, j) => (
-                      <p key={j} className="text-muted-foreground text-sm">{line}</p>
-                    ))}
-                  </div>
-                </ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/20">
+              {[
+                { value: "100+", label: "Acre Campus" },
+                { value: "40+", label: "Buses" },
+                { value: "3000+", label: "Computers" },
+                { value: "1 Gbps", label: "Internet Speed" },
+              ].map((stat) => (
+                <div key={stat.label} className="py-5 px-6 text-center">
+                  <p className="font-display text-2xl font-bold text-white">{stat.value}</p>
+                  <p className="text-white/70 text-sm">{stat.label}</p>
+                </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        <section className="py-20 bg-muted">
+        {/* Infrastructure Sidebar Layout */}
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <ScrollReveal direction="left">
-                <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
-                  <h2 className="font-display text-2xl font-bold text-card-foreground mb-6">Send us a Message</h2>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <input
-                        type="text"
-                        placeholder="Full Name *"
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full h-11 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                      />
-                      <input
-                        type="email"
-                        placeholder="Email Address *"
-                        value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full h-11 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                      />
-                    </div>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <input
-                        type="tel"
-                        placeholder="Phone Number"
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full h-11 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Subject"
-                        value={form.subject}
-                        onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                        className="w-full h-11 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                      />
-                    </div>
-                    <textarea
-                      placeholder="Your Message *"
-                      rows={5}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
-                    />
-                    <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-6 rounded-full">
-                      Send Message <Send className="ml-2 w-4 h-4" />
-                    </Button>
-                  </form>
+            <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
+
+              {/* Sidebar */}
+              <aside className="lg:w-72 flex-shrink-0">
+                <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-md sticky top-24">
+                  <div className="bg-gradient-to-r from-primary to-primary/80 px-5 py-4">
+                    <p className="text-primary-foreground font-bold text-sm uppercase tracking-widest">Facilities</p>
+                  </div>
+                  <nav>
+                    {infrastructureItems.map((item, idx) => {
+                      const ItemIcon = item.icon;
+                      const isActive = activeInfra === item.key;
+                      return (
+                        <button
+                          key={item.key}
+                          onClick={() => setActiveInfra(item.key)}
+                          className={`w-full flex items-center gap-3 px-5 py-3.5 text-left transition-all duration-200 group relative ${
+                            isActive
+                              ? "bg-primary/10 text-primary font-semibold"
+                              : "hover:bg-muted text-foreground"
+                          } ${idx !== 0 ? "border-t border-border" : ""}`}
+                        >
+                          {isActive && (
+                            <span className="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-r-full" />
+                          )}
+                          <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all ${
+                            isActive ? "bg-primary text-white" : "bg-muted text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
+                          }`}>
+                            <ItemIcon className="w-4 h-4" />
+                          </div>
+                          <span className="text-sm">{item.label}</span>
+                          {isActive && <span className="ml-auto text-primary">›</span>}
+                        </button>
+                      );
+                    })}
+                  </nav>
                 </div>
-              </ScrollReveal>
-              <ScrollReveal direction="right">
-                <div className="bg-card border border-border rounded-xl overflow-hidden shadow-sm h-full min-h-[400px]">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.5!2d78.4867!3d13.5535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb28cb0e7c5b5e7%3A0xae7e3e8c1b9e3f47!2sMadanapalle%20Institute%20of%20Technology%20%26%20Science!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0, minHeight: "400px" }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="MITS Location"
-                  />
+              </aside>
+
+              {/* Content Panel */}
+              <div className="flex-1 min-w-0">
+                {/* Header Card */}
+                <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 mb-6 text-white shadow-lg relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+                  <div className="relative flex items-start gap-5">
+                    <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center flex-shrink-0 shadow-inner">
+                      <CurrentIcon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">
+                        {currentIdx + 1} of {infrastructureItems.length}
+                      </p>
+                      <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-2">{current.title}</h2>
+                      <p className="text-white/80 text-sm leading-relaxed max-w-xl">{current.desc}</p>
+                    </div>
+                  </div>
                 </div>
-              </ScrollReveal>
+
+                {/* Points Grid */}
+                <div className="bg-card border border-border rounded-2xl shadow-sm overflow-hidden mb-6">
+                  <div className="px-6 py-4 border-b border-border bg-muted/50">
+                    <h3 className="font-display font-bold text-foreground">Key Highlights</h3>
+                  </div>
+                  <div className="p-6 grid sm:grid-cols-2 gap-4">
+                    {current.points.map((point, i) => (
+                      <div
+                        key={i}
+                        className="flex items-start gap-3 p-4 rounded-xl border border-border bg-background hover:border-primary/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
+                      >
+                        <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xs font-bold group-hover:bg-primary group-hover:text-white transition-colors">
+                          {i + 1}
+                        </span>
+                        <p className="text-foreground/80 text-sm leading-relaxed group-hover:text-foreground transition-colors">{point}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Prev / Next */}
+                <div className="flex items-center justify-between">
+                  <button
+                    onClick={() => { if (currentIdx > 0) setActiveInfra(infrastructureItems[currentIdx - 1].key); }}
+                    disabled={currentIdx === 0}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border text-sm font-semibold text-foreground hover:bg-card hover:shadow-sm disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+                  >
+                    ← Previous
+                  </button>
+                  <div className="flex gap-1.5">
+                    {infrastructureItems.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setActiveInfra(infrastructureItems[i].key)}
+                        className={`rounded-full transition-all duration-200 ${
+                          i === currentIdx ? "w-6 h-2.5 bg-primary" : "w-2.5 h-2.5 bg-border hover:bg-primary/40"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => { if (currentIdx < infrastructureItems.length - 1) setActiveInfra(infrastructureItems[currentIdx + 1].key); }}
+                    disabled={currentIdx === infrastructureItems.length - 1}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border text-sm font-semibold text-foreground hover:bg-card hover:shadow-sm disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+                  >
+                    Next →
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
