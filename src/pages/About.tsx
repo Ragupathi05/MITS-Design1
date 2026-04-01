@@ -20,7 +20,7 @@ const achievements = [
 const leadership = [
   { name: "Dr. N. Vijaya Bhaskar Choudary", role: "Chancellor", desc: "Visionary leader guiding MITS towards global academic excellence." },
   { name: "Dr. C. Yuvaraj", role: "Vice-Chancellor", desc: "Driving academic reforms and research initiatives across all schools." },
-  { name: "Dr. S. Nagaprasad", role: "Registrar", desc: "Overseeing administrative operations and institutional governance." },
+  { name: "Dr. Pradeep Kumar", role: "Registrar", desc: "Overseeing administrative operations and institutional governance." },
 ];
 
 const infrastructure = [
