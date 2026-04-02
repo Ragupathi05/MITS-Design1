@@ -77,52 +77,87 @@ export const projectsData = {
   },
 };
 
+export type Publication = {
+  name: string;
+  dept: string;
+  details: string;
+  ifPublisher: string;
+};
+
+export type PublicationYear = {
+  year: string;
+  entries: Publication[];
+};
+
 export const publicationsData = {
   title: "Research Publications",
-  subtitle: "MITS Affiliated Publications",
-  yearWise: [
-    { year: "2022", links: [
-      { type: "Scopus", link: "https://ibeesmedia.com/mits/pdf/research/scopus%202022-%20july%2027th.pdf" },
-    ]},
-    { year: "2021", links: [
-      { type: "Web of Science", link: "https://ibeesmedia.com/mits/pdf/research/SCI%202021%20till%20August.pdf" },
-      { type: "Scopus", link: "https://ibeesmedia.com/mits/pdf/research/scopus%202021.pdf" },
-    ]},
-    { year: "2020", links: [
-      { type: "Web of Science", link: "https://ibeesmedia.com/mits/pdf/research/wos2020.pdf" },
-      { type: "Scopus", link: "https://ibeesmedia.com/mits/pdf/research/scopus2020.pdf" },
-    ]},
-    { year: "2019", links: [
-      { type: "Web of Science", link: "https://ibeesmedia.com/mits/pdf/research/WOS%202019.pdf" },
-      { type: "Scopus", link: "https://ibeesmedia.com/mits/pdf/research/SCOPUS-2019.pdf" },
-    ]},
-    { year: "2018", links: [
-      { type: "Web of Science", link: "https://ibeesmedia.com/mits/pdf/research/sp/WOS%202018.pdf" },
-      { type: "Scopus", link: "https://ibeesmedia.com/mits/pdf/research/sp/SCOPUS-2018.pdf" },
-    ]},
-    { year: "2017", links: [
-      { type: "Web of Science", link: "https://ibeesmedia.com/mits/pdf/research/sp/WOS2017.pdf" },
-      { type: "Scopus", link: "https://ibeesmedia.com/mits/pdf/research/sp/SCOPUS-2017.pdf" },
-    ]},
-    { year: "2016", links: [
-      { type: "Web of Science", link: "https://ibeesmedia.com/mits/pdf/research/sp/WOS2016.pdf" },
-      { type: "Scopus", link: "https://ibeesmedia.com/mits/pdf/research/sp/SCOPUS-2016.pdf" },
-    ]},
+  subtitle: "Top Rated Journals — MITS Affiliated Publications",
+  topRated: [
+    {
+      year: "2024-25",
+      entries: [
+        { name: "Sonu Kumar Gupta, et al.", dept: "CE", details: "An overview of recent trends and future prospects of sustainable natural fiber-reinforced polymeric composites for tribological applications. Industrial Crops and Products 222 (2024): 119501.", ifPublisher: "6.2 (Elsevier)" },
+        { name: "Kumar, Vineet, et al.", dept: "EEE", details: "Optimal voltage and frequency control strategy for renewable-dominated deregulated power network. Scientific Reports 15.1 (2025): 398.", ifPublisher: "3.8 (Scientific Reports)" },
+        { name: "Veeresalingam Guruguntla et al.", dept: "MECH", details: "Advanced chatter detection in internal turning for industry 4.0: Adaptive Threshold Wavelet De-noising with enhanced ICEEMDAN–Hilbert fusion using Adaptive Probabilistic Neural Network. Journal of Manufacturing Processes 149 (2025): 1078-1105.", ifPublisher: "6.8 (Elsevier)" },
+        { name: "Rakesh Nath Tiwari et al.", dept: "ECE", details: "An improved gain antenna array for telehealth monitoring on the Internet of Things platform. IEEE Internet of Things Journal 12.3 (2025): 3055-3066.", ifPublisher: "8.9 (IEEE)" },
+        { name: "Sudhakar Kothandapani et al.", dept: "CSE", details: "Enhancing radiographic image interpretation: WARES-PRS model for knee bone tumour detection. Network: Computation in Neural Systems 36.3 (2025): 1107-1137.", ifPublisher: "1.6 (TF)" },
+        { name: "Lakshmiramana, P et al.", dept: "CST", details: "Secuyolo: Secure Object Detection Framework With Darknet-53 and CBAM in Edge Devices. Concurrency and Computation: Practice and Experience 37.15-17 (2025): e70118.", ifPublisher: "1.5 (WILEY)" },
+        { name: "Sreenath Kocharla et al.", dept: "CSE-AI", details: "EHA-LNN: Optimized light gradient-boosting machine enabled neural network for cancer detection using mammography. Biomedical Signal Processing and Control 105 (2025): 107540.", ifPublisher: "4.9 (Elsevier)" },
+        { name: "Sandhya, E., et al.", dept: "CSE - AI&ML", details: "Enhancing security and efficiency in Mobile Ad Hoc Networks using a hybrid deep learning model for flooding attack detection. Scientific Reports 15.1 (2025): 818.", ifPublisher: "4.3 (Scientific Reports)" },
+        { name: "S. Gopalakrishnan et al.", dept: "CSE - DS", details: "An efficient data mining technique and privacy preservation model for healthcare data using improved darts game optimizer-based weighted deep neural network and hybrid encryption. Biomedical Signal Processing and Control 100 (2025): 107168.", ifPublisher: "4.9 (Elsevier)" },
+        { name: "Saini, Kezia, et al.", dept: "Maths", details: "A hybrid machine learning framework for predicting moisture-induced pavement failure: integrating sensitivity analysis and data augmentation. Road Materials and Pavement Design (2025): 1-26.", ifPublisher: "4.9 (TF)" },
+        { name: "Chandra Sekhar Musalikunta et al.", dept: "Physics", details: "Recent breakthroughs in non-conjugated polymers for thermally activated delayed fluorescent OLEDs: emitters, hosts, and hole-transport materials. Materials Chemistry Frontiers (2025).", ifPublisher: "6.4 (RSC)" },
+        { name: "Pitchamuthu Amaladass, et al.", dept: "Chemistry", details: "Recent synthetic strategies for the functionalization of fused bicyclic heteroaromatics using organo-Li,-Mg and-Zn reagents. Chemical Society Reviews (2024).", ifPublisher: "39 (RSC)" },
+      ],
+    },
+    {
+      year: "2023-24",
+      entries: [
+        { name: "Vijayakumar Natesan et al.", dept: "CE", details: "Numerical investigation of cold formed steel sleeve connection for channel sections subjected to combined bending and shear. Journal of Constructional Steel Research, 217, p.108588.", ifPublisher: "4 (Elsevier)" },
+        { name: "Damodhar, T.B et al.", dept: "EEE", details: "A mutual certificate-based data privacy scheme for ubiquitous and sustainable computing system users. Sustainable Energy Technologies and Assessments, 58, p.103356.", ifPublisher: "7.1 (Elsevier)" },
+        { name: "S. Baskaran et al.", dept: "MECH", details: "Identification of tool wear and surface morphology measurements in sustainable milling of Al 6082 hybrid metal matrix composite. Journal of Materials Research and Technology, 27, pp.7570-7581.", ifPublisher: "6.2 (Elsevier)" },
+        { name: "Rakesh Nath Tiwari et al.", dept: "ECE", details: "Dual-Band MIMO Antenna Data Telemetry for Dual-Chamber Leadless Cardiac Pacing on Internet of Things Environment. IEEE Internet of Things Journal.", ifPublisher: "8.2 (IEEE)" },
+        { name: "Mohan M et al.", dept: "CSE", details: "Hybrid deep learning enabled breast cancer detection using mammogram images. Biomedical Signal Processing and Control, 95, p.106310.", ifPublisher: "4.9 (Elsevier)" },
+        { name: "Manikandan Rajagopal et al.", dept: "CST", details: "An Integration of Digital Twin and 6G Edge Computing Approach to Secure Cyber Physical Systems. Wireless Personal Communications, pp.1-17.", ifPublisher: "1.9 (Springer)" },
+        { name: "K. V. Narasimha Murthy et al.", dept: "MATHS", details: "Characterization and prediction of southwest monsoon rainfall patterns in Central India as a linear state space modeling. Natural Hazards, 120(3), pp.2553-2569.", ifPublisher: "3.3 (Springer)" },
+        { name: "Chandrasekar Perumalveeramalaiet al.", dept: "PHYSICS", details: "Monolithically grown CSPbBr3 by chemical vapor deposition for Self-Powered photodetector. Chemical Engineering Journal, 492, p.152213.", ifPublisher: "13.3 (Elsevier)" },
+        { name: "Chikkili Venkateswara Raju et al.", dept: "CHEMISTRY", details: "Simultaneous electrochemical detection of dopamine and uric acid based on tri-composite of poly-pyrrole and α-Fe2O3 embedded MoS2 sheets modified electrode. Microchemical Journal, 198, p.110189.", ifPublisher: "4.9 (Elsevier)" },
+      ],
+    },
+    {
+      year: "2022-23",
+      entries: [
+        { name: "Roy D et al.", dept: "CIVIL", details: "Impact of temperature and precipitation lapse rate on hydrological modelling over Himalayan Gandak River Basin. Journal of Mountain Science, 19(12), pp.3487-3502.", ifPublisher: "2.3 (Springer)" },
+        { name: "K Lakshmikhandan et al.", dept: "EEE", details: "A hybrid technique for grid-connected solar–wind hybrid system with electric vehicles. Energy & Environment, 35(5), pp.2753-2789.", ifPublisher: "4.0 (SAGE)" },
+        { name: "Satyajit Pattanayak et al.", dept: "MECH", details: "Optimizing pyrolysis process parameters of plastic grocery bag, with mass–energy assessment and characterization of oil at optimal condition. Clean Technologies and Environmental Policy, 24(6), pp.1927-1944.", ifPublisher: "4.2 (Springer)" },
+        { name: "M. Velumani et al.", dept: "ECE", details: "A bilayer SnO2/MoS2-coated evanescent wave fiber optic sensor for acetone detection—an experimental study. Biosensors, 12(9), p.734.", ifPublisher: "4.9 (MDPI)" },
+        { name: "P. V. Venkateswara Rao et al.", dept: "CSE", details: "Secure authentication and key management protocol for deployment of internet of vehicles (IoV) concerning intelligent transport systems. IEEE Transactions on Intelligent Transportation Systems, 23(12), pp.24698-24713.", ifPublisher: "7.9 (IEEE)" },
+        { name: "U. Padmavathi et al.", dept: "CSE-AI", details: "AE-LEACH: an incremental clustering approach for reducing the energy consumption in WSN. Microprocessors and Microsystems, 93, p.104602.", ifPublisher: "1.9 (Elsevier)" },
+        { name: "Rajakumar Ramalingam et al.", dept: "CST", details: "Routing protocol for MANET based on QoS-aware service composition with dynamic secured broker selection. Electronics, 11(17), p.2637.", ifPublisher: "2.6 (MDPI)" },
+        { name: "Ahsan Mahboob et al.", dept: "Mathematics", details: "On new filters in ordered semigroups. Symmetry, 14(8), p.1564.", ifPublisher: "2.7 (MDPI)" },
+        { name: "V.K. Verma et al.", dept: "PHYSICS", details: "Effect of Cr-substitution on vanadium dioxide thin films studied by soft X-ray magnetic circular dichroism. Journal of Alloys and Compounds, 918, p.165515.", ifPublisher: "5.8 (Elsevier)" },
+        { name: "Sumanta Sahoo et al.", dept: "CHEMISTRY", details: "Animal- and human-inspired nanostructures as supercapacitor electrode materials: a review. Nano-Micro Lett. 14, 199 (2022).", ifPublisher: "31.6 (Springer)" },
+        { name: "K. Chokkanathan et al.", dept: "MCA", details: "Hybridization of mean shift clustering and deep packet inspected classification for network traffic analysis. Wireless Personal Communications, pp.1-17.", ifPublisher: "1.9 (Springer)" },
+      ],
+    },
   ],
+  moreLink: "https://mits.ac.in/publications",
 };
 
 export const patentsData = {
   title: "Patent Details",
+  description: "MITS faculty and students have filed patents across various engineering and science disciplines. The details of patents filed, published, and granted are listed below.",
   patentDetailsLink: "https://mits.ac.in/assets/pdf/patent/Patent_2024.xlsx",
-  iprCellLink: "https://mits.ac.in/ipr",
+  iprCellLink: "https://mits.ac.in/researchpatents",
+  moreLink: "https://mits.ac.in/researchpatents",
 };
 
 export const policiesData = [
-  { title: "Publication Incentive Policy", link: "https://mits.ac.in/assets/pdf/research/Incentive%20Policy%202025-26.pdf" },
-  { title: "Seed Money Policy", link: "https://mits.ac.in/seed-money-policy" },
-  { title: "MITS Startup Policy", link: "https://mits.ac.in/assets/pdf/research/MITS-Startup-Policy.pdf" },
-  { title: "MITS Intellectual Property Rights Policy", link: "https://mits.ac.in/assets/pdf/admin/MITS-IPR-Policy.pdf" },
-  { title: "MITS Benefits", link: "https://mits.ac.in/mits-benefits" },
+  { sno: 1, title: "Publication Incentive Policy", link: "https://mits.ac.in/assets/pdf/research/Incentive%20Policy%202025-26.pdf" },
+  { sno: 2, title: "Seed Money Policy", link: "https://mits.ac.in/assets/pdf/research/Seed%20Money%20Policy.pdf" },
+  { sno: 3, title: "MITS Startup Policy", link: "https://mits.ac.in/assets/pdf/research/MITS-Startup-Policy.pdf" },
+  { sno: 4, title: "MITS Intellectual Property Rights Policy", link: "https://mits.ac.in/assets/pdf/admin/MITS-IPR-Policy.pdf" },
+  { sno: 5, title: "MITS-Benefits", link: "https://mits.ac.in/assets/pdf/research/MITS-Benefits.pdf" },
 ];
 
 export const eventsData = [

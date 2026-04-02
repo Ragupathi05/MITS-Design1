@@ -172,45 +172,85 @@ const ProjectsSection = () => (
 );
 
 /* ─── PUBLICATIONS TAB ─── */
-const PublicationsSection = () => (
-  <ScrollReveal>
-    <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-      <SectionHeading title={publicationsData.title} subtitle={publicationsData.subtitle + " — Year-wise Scopus & Web of Science indexed publications."} />
-      <div className="space-y-4">
-        {publicationsData.yearWise.map((yr) => (
-          <div key={yr.year} className="border border-border rounded-xl p-4 hover:shadow-sm transition-shadow">
-            <h3 className="font-display text-lg font-bold text-foreground mb-3 flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-primary" /> {yr.year}
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {yr.links.map((l) => (
-                <a
-                  key={l.type}
-                  href={l.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-primary/10 text-primary font-medium text-sm px-4 py-2 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all"
+const PublicationsSection = () => {
+  const [openYear, setOpenYear] = useState<string>(publicationsData.topRated[0].year);
+  return (
+    <div className="space-y-6">
+      <ScrollReveal>
+        <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+          <SectionHeading title={publicationsData.title} subtitle={publicationsData.subtitle} />
+          <div className="space-y-4">
+            {publicationsData.topRated.map((yr) => (
+              <div key={yr.year} className="border border-border rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenYear(openYear === yr.year ? "" : yr.year)}
+                  className="w-full flex items-center justify-between px-5 py-4 bg-muted hover:bg-primary/10 transition-colors"
                 >
-                  <Download className="w-4 h-4" /> {l.type}
-                </a>
-              ))}
-            </div>
+                  <span className="font-display font-bold text-foreground flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-primary" /> Academic Year: {yr.year}
+                  </span>
+                  <ChevronDown className={`w-4 h-4 text-primary transition-transform ${openYear === yr.year ? "rotate-180" : ""}`} />
+                </button>
+                {openYear === yr.year && (
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="bg-primary/5 border-b border-border">
+                          <th className="text-left px-4 py-3 font-semibold text-foreground">Name</th>
+                          <th className="text-left px-4 py-3 font-semibold text-foreground">Dept</th>
+                          <th className="text-left px-4 py-3 font-semibold text-foreground">Publication Details</th>
+                          <th className="text-left px-4 py-3 font-semibold text-foreground whitespace-nowrap">IF & Publisher</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {yr.entries.map((pub, i) => (
+                          <tr key={i} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
+                            <td className="px-4 py-3 font-medium text-foreground align-top whitespace-nowrap">{pub.name}</td>
+                            <td className="px-4 py-3 text-primary font-semibold align-top whitespace-nowrap">{pub.dept}</td>
+                            <td className="px-4 py-3 text-muted-foreground align-top leading-relaxed">{pub.details}</td>
+                            <td className="px-4 py-3 text-foreground font-medium align-top whitespace-nowrap">{pub.ifPublisher}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+          <div className="mt-6">
+            <a
+              href={publicationsData.moreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
+            >
+              <ExternalLink className="w-4 h-4" /> View All Publications on mits.ac.in
+            </a>
+          </div>
+        </div>
+      </ScrollReveal>
     </div>
-  </ScrollReveal>
-);
+  );
+};
 
 /* ─── PATENTS TAB ─── */
 const PatentsSection = () => (
   <ScrollReveal>
     <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-      <SectionHeading title={patentsData.title} subtitle="Patent details filed by MITS faculty and students." />
-      <div className="grid sm:grid-cols-2 gap-4">
+      <SectionHeading title={patentsData.title} subtitle={patentsData.description} />
+      <div className="grid sm:grid-cols-2 gap-4 mb-6">
         <LinkCard title="Download Patent Details (Excel)" link={patentsData.patentDetailsLink} icon={Download} />
-        <LinkCard title="Visit IPR Cell for More Information" link={patentsData.iprCellLink} icon={Scale} />
+        <LinkCard title="View All Patents on mits.ac.in" link={patentsData.moreLink} icon={ExternalLink} />
       </div>
+      <a
+        href={patentsData.iprCellLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
+      >
+        <ExternalLink className="w-4 h-4" /> More details at mits.ac.in/researchpatents
+      </a>
     </div>
   </ScrollReveal>
 );
@@ -220,10 +260,34 @@ const PoliciesSection = () => (
   <ScrollReveal>
     <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
       <SectionHeading title="Policies" subtitle="Research and innovation policies governing MITS R&D activities." />
-      <div className="grid sm:grid-cols-2 gap-3">
-        {policiesData.map((p) => (
-          <LinkCard key={p.title} title={p.title} link={p.link} icon={Shield} />
-        ))}
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-primary/5 border-b border-border">
+              <th className="text-left px-4 py-3 font-semibold text-foreground w-16">S.No</th>
+              <th className="text-left px-4 py-3 font-semibold text-foreground">Name of the Policy</th>
+              <th className="text-left px-4 py-3 font-semibold text-foreground">View</th>
+            </tr>
+          </thead>
+          <tbody>
+            {policiesData.map((p, i) => (
+              <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
+                <td className="px-4 py-3 text-muted-foreground">{p.sno}</td>
+                <td className="px-4 py-3 font-medium text-foreground">{p.title}</td>
+                <td className="px-4 py-3">
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" /> View
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   </ScrollReveal>
