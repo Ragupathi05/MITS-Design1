@@ -19,21 +19,6 @@ export default {
         body: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       colors: {
-        "brand-red": {
-          DEFAULT: "#b30000",
-          light: "#d93030",
-          dark: "#7a0000",
-        },
-        "mits-gold": {
-          DEFAULT: "#caa74d",
-          light: "#e8c97a",
-          dark: "#8a6a1a",
-        },
-        "mits-navy": {
-          DEFAULT: "#0f2a44",
-          light: "#1a3d5c",
-          dark: "#071525",
-        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -67,16 +52,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
-        },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          light: "hsl(var(--navy-light))",
-          dark: "hsl(var(--navy-dark))",
-        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -87,6 +62,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // MITS Maroon Palette
+        'mits-900': '#4A0E0E',
+        'mits-800': '#7B1C1C',
+        'mits-700': '#8B2020',
+        'mits-600': '#9B2525',
+        'mits-100': '#fef0f0',
+        'mits-50':  '#fff8f8',
+        // Border
+        'border-maroon': '#e8d0d0',
+        'border-neutral': '#e5e7eb',
       },
       borderRadius: {
         lg: "var(--radius)",

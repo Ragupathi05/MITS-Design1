@@ -34,12 +34,13 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 
 type Program = {
   name: string;
   icon: LucideIcon;
-  link?: string;
+  route?: string;
 };
 
 type SchoolGroup = {
@@ -60,21 +61,21 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
     {
       school: "School of Engineering",
       courses: [
-        { name: "B.Tech in Electronics & Communication Engineering", icon: CircuitBoard, link: "https://mits.ac.in/electronics-communication-engineering" },
-        { name: "B.Tech in Civil Engineering", icon: HardHat, link: "http://www.mits.ac.in/department/6" },
-        { name: "B.Tech in Mechanical Engineering", icon: Cog, link: "http://www.mits.ac.in/department/8" },
-        { name: "B.Tech in Electrical & Electronics Engineering", icon: Zap, link: "http://www.mits.ac.in/department/11" },
+        { name: "B.Tech in Electronics & Communication Engineering", icon: CircuitBoard, route: "/department/9/ece" },
+        { name: "B.Tech in Civil Engineering", icon: HardHat, route: "/department/11/civil" },
+        { name: "B.Tech in Mechanical Engineering", icon: Cog, route: "/department/8/mechanical" },
+        { name: "B.Tech in Electrical & Electronics Engineering", icon: Zap, route: "/department/5/eee" },
         { name: "B.Tech in Bioinformatics", icon: Dna },
       ],
     },
     {
       school: "School of Computing",
       courses: [
-        { name: "B.Tech Computer Science & Engineering", icon: Cpu, link: "https://www.mits.ac.in/department/9" },
-        { name: "B.Tech CSE (AI & Data Science)", icon: ChartNoAxesCombined, link: "http://www.mits.ac.in/department/26" },
-        { name: "B.Tech CSE (AI & ML)", icon: BrainCircuit, link: "https://mits.ac.in/cse-ai-ml" },
-        { name: "B.Tech CSE (AI & Robotics)", icon: Bot },
-        { name: "B.Tech CSE (Cyber Security)", icon: ShieldCheck, link: "http://www.mits.ac.in/department/27" },
+        { name: "B.Tech Computer Science & Engineering", icon: Cpu, route: "/department/4/cse" },
+        { name: "B.Tech CSE (AI & Data Science)", icon: ChartNoAxesCombined, route: "/department/26/cse-data-science" },
+        { name: "B.Tech CSE (AI & ML)", icon: BrainCircuit, route: "/department/28/cse-ai-ml" },
+        { name: "B.Tech CSE (AI & Robotics)", icon: Bot, route: "/department/18/cse-ai" },
+        { name: "B.Tech CSE (Cyber Security)", icon: ShieldCheck, route: "/department/27/cse-cyber-security" },
       ],
     },
     {
@@ -90,26 +91,26 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
     {
       school: "School of Engineering",
       courses: [
-        { name: "M.Tech Civil Engineering (Construction Engineering & Management)", icon: Construction },
-        { name: "M.Tech Automation and Robotics", icon: Rocket },
-        { name: "M.Tech Electric Vehicle Technology", icon: Gauge },
-        { name: "M.Tech VLSI Design & Embedded Systems", icon: Cable },
+        { name: "M.Tech Civil Engineering (Construction Engineering & Management)", icon: Construction, route: "/department/30/mtech" },
+        { name: "M.Tech Automation and Robotics", icon: Rocket, route: "/department/30/mtech" },
+        { name: "M.Tech Electric Vehicle Technology", icon: Gauge, route: "/department/30/mtech" },
+        { name: "M.Tech VLSI Design & Embedded Systems", icon: Cable, route: "/department/30/mtech" },
       ],
     },
     {
       school: "School of Computing",
       courses: [
-        { name: "M.Tech Computer Science & Engineering", icon: Network, link: "https://www.mits.ac.in/department/9" },
-        { name: "M.Tech CSE (AI & ML)", icon: Sparkles, link: "https://mits.ac.in/cse-ai-ml" },
+        { name: "M.Tech Computer Science & Engineering", icon: Network, route: "/department/30/mtech" },
+        { name: "M.Tech CSE (AI & ML)", icon: Sparkles, route: "/department/30/mtech" },
       ],
     },
     {
       school: "School of Management",
-      courses: [{ name: "MBA - Master of Business Administration", icon: Landmark, link: "http://www.mits.ac.in/department/5" }],
+      courses: [{ name: "MBA - Master of Business Administration", icon: Landmark, route: "/department/6/mba" }],
     },
     {
       school: "School of Science",
-      courses: [{ name: "MCA - Master of Computer Applications", icon: Code2, link: "http://www.mits.ac.in/department/18" }],
+      courses: [{ name: "MCA - Master of Computer Applications", icon: Code2, route: "/department/29/mca" }],
     },
   ],
   phd: [
@@ -276,6 +277,7 @@ const AcademicsSection = () => {
                   >
                     {group.courses.map((course) => {
                       const Icon = course.icon;
+                      const linkTo = course.route || "/departments";
 
                       return (
                         <motion.article
@@ -298,9 +300,7 @@ const AcademicsSection = () => {
                           whileTap={shouldReduceMotion ? undefined : { scale: 0.995 }}
                           className="group relative overflow-hidden rounded-2xl border border-[#dde2e9] bg-[#f3f5f8] shadow-[0_6px_18px_rgba(15,42,68,0.09)] px-4 py-3.5 flex items-center gap-3.5 transition-shadow duration-300 hover:shadow-[0_16px_30px_rgba(15,42,68,0.16)]"
                         >
-                          {course.link && (
-                            <a href={course.link} target="_blank" rel="noreferrer" className="absolute inset-0 z-20" aria-label={course.name} />
-                          )}
+                          <Link to={linkTo} className="absolute inset-0 z-20" aria-label={course.name} />
                           <span className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 bg-[linear-gradient(105deg,rgba(255,255,255,0.12)_0%,rgba(179,0,0,0.06)_35%,rgba(15,42,68,0.04)_100%)] transition-opacity duration-300" />
                           <div className="relative z-10 w-12 h-12 shrink-0 rounded-xl border border-[#b30000]/40 bg-white flex items-center justify-center shadow-[0_3px_10px_rgba(179,0,0,0.08)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                             <Icon className="w-5 h-5 text-[#b30000]" />
