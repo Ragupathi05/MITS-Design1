@@ -561,9 +561,9 @@ const DepartmentPage = () => {
                     <p className="text-xs text-muted-foreground">Avg Package</p>
                   </CardContent>
                 </Card>
-                <Card className="text-center bg-gradient-to-br from-green-50 to-green-100">
+                <Card className="text-center bg-gradient-to-br from-muted to-muted/50">
                   <CardContent className="p-4">
-                    <p className="text-2xl font-bold text-green-700">{dept.placement.highestPackage}</p>
+                    <p className="text-2xl font-bold text-secondary">{dept.placement.highestPackage}</p>
                     <p className="text-xs text-muted-foreground">Highest</p>
                   </CardContent>
                 </Card>
