@@ -380,15 +380,9 @@ const Departments = () => {
             <p className="text-white/80 text-xs text-center mb-3 line-clamp-2">
               {dept.description}
             </p>
-            {(dept as any).externalLink ? (
-              <a href={(dept as any).externalLink} target="_blank" rel="noreferrer" className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
+            <Link to={`/department/${dept.key}`} className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
                 Explore Department
-              </a>
-            ) : (
-              <button className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
-                Explore Department
-              </button>
-            )}
+              </Link>
           </div>
         </div>
       </ScrollReveal>
