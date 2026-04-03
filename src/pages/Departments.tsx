@@ -34,24 +34,6 @@ const deptImages: Record<string, string> = {
   ai:       `${BASE}departments/ai.jpg`,
 };
 
-// Department route mapping
-const deptRoutes: Record<string, string> = {
-  ce: "/department/11/civil",
-  eee: "/department/5/eee",
-  me: "/department/8/mechanical",
-  ece: "/department/9/ece",
-  bioinfo: "/departments",
-  cse: "/department/4/cse",
-  cseds: "/department/26/cse-data-science",
-  csecs: "/department/27/cse-cyber-security",
-  bca: "/departments",
-  mca: "/department/29/mca",
-  bba: "/departments",
-  mba: "/department/6/mba",
-  aiml: "/department/28/cse-ai-ml",
-  ai: "/department/18/cse-ai",
-};
-
 // Schools data structure - Corrected as per MITS college
 const schools = [
   {
@@ -76,7 +58,7 @@ const schools = [
         labHighlights: ["Structural Lab", "BIM Center", "Geotech Lab"],
         placementStrength: "80% | ₹9 LPA Avg",
         mission: "To prepare civil engineers for designing and constructing sustainable infrastructure.",
-
+        externalLink: "http://www.mits.ac.in/department/6",
       },
       {
         key: "eee",
@@ -94,7 +76,7 @@ const schools = [
         labHighlights: ["Power Systems Lab", "Renewable Energy Lab", "HV Lab"],
         placementStrength: "85% | ₹10 LPA Avg",
         mission: "To produce electrical engineers capable of designing and implementing electrical systems for sustainable energy.",
-
+        externalLink: "http://www.mits.ac.in/department/11",
       },
       {
         key: "me",
@@ -112,7 +94,7 @@ const schools = [
         labHighlights: ["CAD/CAM Lab", "Manufacturing Workshop", "Thermal Lab"],
         placementStrength: "88% | ₹11 LPA Avg",
         mission: "To develop mechanical engineers with strong fundamentals and expertise in design, manufacturing, and thermal systems.",
-
+        externalLink: "http://www.mits.ac.in/department/8",
       },
       {
         key: "ece",
@@ -130,7 +112,7 @@ const schools = [
         labHighlights: ["RF Lab", "IoT Center", "VLSI Design Lab"],
         placementStrength: "90% | ₹12 LPA Avg",
         mission: "To nurture skilled engineers in electronics and communication with expertise in modern communication systems.",
-
+        externalLink: "https://mits.ac.in/electronics-communication-engineering",
       },
       {
         key: "bioinfo",
@@ -173,7 +155,7 @@ const schools = [
         labHighlights: ["AI Research Lab", "Cloud Center", "Cyber Security Ops"],
         placementStrength: "98% | ₹18 LPA Avg",
         mission: "To prepare students as world-class computer science professionals with expertise in emerging technologies.",
-
+        externalLink: "https://www.mits.ac.in/department/9",
       },
       {
         key: "cseds",
@@ -191,7 +173,7 @@ const schools = [
         labHighlights: ["Big Data Lab", "Data Viz Center", "ML Research Lab"],
         placementStrength: "95% | ₹16 LPA Avg",
         mission: "To develop data-driven problem solvers equipped with analytical skills for the modern data economy.",
-
+        externalLink: "http://www.mits.ac.in/department/26",
       },
       {
         key: "csecs",
@@ -209,7 +191,7 @@ const schools = [
         labHighlights: ["SOC Center", "Ethical Hacking Lab", "Forensics Lab"],
         placementStrength: "92% | ₹15 LPA Avg",
         mission: "To produce cybersecurity professionals capable of protecting digital infrastructure.",
-
+        externalLink: "http://www.mits.ac.in/department/27",
       },
       {
         key: "bca",
@@ -244,7 +226,7 @@ const schools = [
         labHighlights: ["Research Lab", "Dev Center", "AI Cloud Lab"],
         placementStrength: "95% | ₹14 LPA Avg",
         mission: "To produce highly skilled computing professionals with advanced knowledge in software engineering.",
-
+        externalLink: "http://www.mits.ac.in/department/18",
       }
     ]
   },
@@ -287,7 +269,8 @@ const schools = [
         labHighlights: ["Bloomberg Lab", "Analytics Center", "Leadership Lab"],
         placementStrength: "90% | ₹12 LPA Avg",
         mission: "To cultivate strategic thinkers and ethical business leaders for global environments.",
-
+ 
+       externalLink: "http://www.mits.ac.in/department/5",
       }
     ]
   },
@@ -313,7 +296,7 @@ const schools = [
         labHighlights: ["GPU Cluster", "Computer Vision Lab", "NLP Center"],
         placementStrength: "96% | ₹20 LPA Avg",
         mission: "To produce AI engineers and researchers capable of building intelligent systems.",
-
+        externalLink: "https://mits.ac.in/cse-ai-ml",
       },
       {
         key: "ai",
@@ -331,7 +314,7 @@ const schools = [
         labHighlights: ["Research Lab", "XAI Center", "Agent Systems Lab"],
         placementStrength: "94% | ₹18 LPA Avg",
         mission: "To train students in the theoretical and applied foundations of artificial intelligence.",
-
+        externalLink: "https://www.mits.ac.in/department/28",
       }
     ]
   }
@@ -360,51 +343,54 @@ const Departments = () => {
     schoolAccent: string;
   }) => {
     const imageUrl = deptImages[dept.key] || "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80";
-    const deptRoute = deptRoutes[dept.key] || "/departments";
 
     return (
       <ScrollReveal delay={index * 0.05}>
-        <Link to={deptRoute}>
-          <div 
-            className="group relative h-[220px] md:h-[250px] rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            style={{ boxShadow: '0 0 0 0 transparent' }}
-          >
-            {/* Background Image */}
-            <img 
-              src={imageUrl} 
-              alt={dept.name}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-            />
-            
-            {/* Dynamic Overlay with school color */}
-            <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:opacity-90 transition-opacity duration-300`} />
+        <div 
+          className="group relative h-[220px] md:h-[250px] rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          style={{ boxShadow: '0 0 0 0 transparent' }}
+        >
+          {/* Background Image */}
+          <img 
+            src={imageUrl} 
+            alt={dept.name}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          
+          {/* Dynamic Overlay with school color */}
+          <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:opacity-90 transition-opacity duration-300`} />
 
-            {/* School color accent border on hover */}
-            <div className={`absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-transparent transition-all duration-300 bg-gradient-to-r ${schoolAccent} opacity-0 group-hover:opacity-100`} style={{ padding: '2px' }}>
-              <div className="w-full h-full rounded-xl bg-black/80" />
-            </div>
-
-            {/* Department Name - Centered (default) */}
-            <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
-              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center px-3 drop-shadow-lg">
-                {dept.name}
-              </h3>
-            </div>
-
-            {/* Hover Content - Shows on hover with school color */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-lg">
-                {dept.name}
-              </h3>
-              <p className="text-white/80 text-xs text-center mb-3 line-clamp-2">
-                {dept.description}
-              </p>
-              <button className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
-                  Explore Department
-                </button>
-            </div>
+          {/* School color accent border on hover */}
+          <div className={`absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-transparent transition-all duration-300 bg-gradient-to-r ${schoolAccent} opacity-0 group-hover:opacity-100`} style={{ padding: '2px' }}>
+            <div className="w-full h-full rounded-xl bg-black/80" />
           </div>
-        </Link>
+
+          {/* Department Name - Centered (default) */}
+          <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
+            <h3 className="font-display text-lg md:text-xl font-bold text-white text-center px-3 drop-shadow-lg">
+              {dept.name}
+            </h3>
+          </div>
+
+          {/* Hover Content - Shows on hover with school color */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-lg">
+              {dept.name}
+            </h3>
+            <p className="text-white/80 text-xs text-center mb-3 line-clamp-2">
+              {dept.description}
+            </p>
+            {(dept as any).externalLink ? (
+              <a href={(dept as any).externalLink} target="_blank" rel="noreferrer" className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
+                Explore Department
+              </a>
+            ) : (
+              <button className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
+                Explore Department
+              </button>
+            )}
+          </div>
+        </div>
       </ScrollReveal>
     );
   };
