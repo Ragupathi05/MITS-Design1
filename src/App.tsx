@@ -58,6 +58,7 @@ const App = () => (
           <Route path="/news-events" element={<NewsEvents />} />
           <Route path="/news-events/:slug" element={<NewsEventDetail />} />
           <Route path="/eligibility-and-fees" element={<EligibilityAndFees />} />
+          <Route path="/department/:deptKey" element={<DepartmentPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
