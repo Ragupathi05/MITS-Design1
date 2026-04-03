@@ -20,6 +20,7 @@ import NewsEventDetail from "./pages/NewsEventDetail";
 import EligibilityAndFees from "./pages/EligibilityAndFees";
 import AcademicCalendar from "./pages/AcademicCalendar";
 import Gallery from "./pages/Gallery";
+import DepartmentPage from "./pages/DepartmentPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
