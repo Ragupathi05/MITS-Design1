@@ -13,7 +13,6 @@ dist-ssr
 *.local
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -25,3 +24,4 @@ dist-ssr
 
 # Large source video files
 college main video.mp4
+config.bat
