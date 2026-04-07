@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDepartmentByKey } from "@/data/departmentData";
 import { Card, CardContent } from "@/components/ui/card";
+import FacultyProfilePanel from "@/components/FacultyProfilePanel";
+import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfileData";
 import {
   Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone
 } from "lucide-react";
