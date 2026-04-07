@@ -30,6 +30,7 @@ const DepartmentPage = () => {
   const { deptKey } = useParams<{ deptKey: string }>();
   const [activeSection, setActiveSection] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedProfile, setSelectedProfile] = useState<FacultyProfile | null>(null);
   const dept = getDepartmentByKey(deptKey || "");
 
   const handleSectionChange = (sectionId: string) => {
