@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDepartmentByKey } from "@/data/departmentData";
 import { Card, CardContent } from "@/components/ui/card";
-import FacultyProfilePanel from "@/components/FacultyProfilePanel";
+import InlineFacultyProfile from "@/components/InlineFacultyProfile";
 import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfileData";
 import {
   Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone
@@ -128,6 +128,7 @@ const DepartmentPage = () => {
 
       <div className="container mx-auto px-4 py-8">
         <div className="flex gap-8">
+          {!selectedProfile && (
           <aside className="hidden lg:block w-64 shrink-0">
             <div className="sticky top-[140px]">
               <nav className="bg-card rounded-xl border border-border shadow-sm overflow-hidden">
@@ -151,6 +152,7 @@ const DepartmentPage = () => {
               </nav>
             </div>
           </aside>
+          )}
 
           <main className="flex-1 min-w-0 space-y-10">
             {activeSection === "about" && (
@@ -292,40 +294,57 @@ const DepartmentPage = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>People / Faculty</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {dept.faculty.map((f, i) => {
-                    const hasProfile = !!getFacultyProfile(deptKey || "", f.name);
-                    return (
-                      <Card
-                        key={i}
-                        className={`text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${hasProfile ? "cursor-pointer ring-1 ring-transparent hover:ring-primary/30" : ""}`}
-                        onClick={() => {
-                          if (hasProfile) {
-                            const profile = getFacultyProfile(deptKey || "", f.name);
-                            if (profile) setSelectedProfile(profile);
-                          }
-                        }}
-                      >
-                        <CardContent className="p-4">
-                          <div className="w-16 h-16 mx-auto rounded-full bg-muted flex items-center justify-center mb-2 overflow-hidden">
-                            {f.image ? (
-                              <img src={f.image} alt={f.name} className="w-full h-full object-cover" />
-                            ) : (
-                              <Users className="w-6 h-6 text-muted-foreground" />
-                            )}
+                {selectedProfile ? (
+                  <InlineFacultyProfile 
+                    profile={selectedProfile}
+                    onBack={() => setSelectedProfile(null)}
+                  />
+                ) : (
+                  <>
+                    <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>People / Faculty</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                      {dept.faculty.map((f, i) => {
+                        return (
+                          <div
+                            key={i}
+                            className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary/30 flex flex-col items-center text-center cursor-pointer"
+                            onClick={() => {
+                              let profile = getFacultyProfile(deptKey || "", f.name);
+                              if (!profile) {
+                                profile = {
+                                  name: f.name,
+                                  designation: f.designation,
+                                  department: dept.name,
+                                  image: f.image,
+                                  education: f.qualification ? [{ degree: f.qualification, specialization: "", institution: "", year: "" }] : []
+                                };
+                              }
+                              setSelectedProfile(profile);
+                              window.scrollTo({ top: 350, behavior: 'smooth' });
+                            }}
+                          >
+                            <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
+                              {f.image ? (
+                                <img src={f.image} alt={f.name} className="w-full h-full object-cover" />
+                              ) : (
+                                <Users className="w-8 h-8 text-slate-300" />
+                              )}
+                            </div>
+                            <h4 className="font-extrabold text-secondary mb-1" style={{ fontFamily: "var(--font-display)" }}>{f.name}</h4>
+                            <p className="text-[13px] text-primary font-semibold mb-0.5">{f.designation}</p>
+                            <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{f.qualification}</p>
+
+                            <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">
+                              <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest">
+                                View Profile <ChevronRight className="w-3 h-3" />
+                              </span>
+                            </div>
                           </div>
-                          <h4 className="font-semibold text-sm text-secondary">{f.name}</h4>
-                          <p className="text-xs text-muted-foreground">{f.designation}</p>
-                          <p className="text-xs text-primary/70 mt-0.5">{f.qualification}</p>
-                          {hasProfile && (
-                            <p className="text-xs text-primary mt-2 font-medium">View Profile →</p>
-                          )}
-                        </CardContent>
-                      </Card>
-                    );
-                  })}
-                </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
               </motion.div>
             )}
 
@@ -622,11 +641,6 @@ const DepartmentPage = () => {
           </main>
         </div>
       </div>
-
-      <FacultyProfilePanel
-        profile={selectedProfile}
-        onClose={() => setSelectedProfile(null)}
-      />
 
       <Footer />
     </div>
