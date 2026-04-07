@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDepartmentByKey } from "@/data/departmentData";
 import { Card, CardContent } from "@/components/ui/card";
+import FacultyProfilePanel from "@/components/FacultyProfilePanel";
+import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfileData";
 import {
   Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone
 } from "lucide-react";
@@ -28,6 +30,7 @@ const DepartmentPage = () => {
   const { deptKey } = useParams<{ deptKey: string }>();
   const [activeSection, setActiveSection] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedProfile, setSelectedProfile] = useState<FacultyProfile | null>(null);
   const dept = getDepartmentByKey(deptKey || "");
 
   const handleSectionChange = (sectionId: string) => {
@@ -291,18 +294,37 @@ const DepartmentPage = () => {
               >
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>People / Faculty</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {dept.faculty.map((f, i) => (
-                    <Card key={i} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                      <CardContent className="p-4">
-                        <div className="w-16 h-16 mx-auto rounded-full bg-muted flex items-center justify-center mb-2">
-                          <Users className="w-6 h-6 text-muted-foreground" />
-                        </div>
-                        <h4 className="font-semibold text-sm text-secondary">{f.name}</h4>
-                        <p className="text-xs text-muted-foreground">{f.designation}</p>
-                        <p className="text-xs text-primary/70 mt-0.5">{f.qualification}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
+                  {dept.faculty.map((f, i) => {
+                    const hasProfile = !!getFacultyProfile(deptKey || "", f.name);
+                    return (
+                      <Card
+                        key={i}
+                        className={`text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${hasProfile ? "cursor-pointer ring-1 ring-transparent hover:ring-primary/30" : ""}`}
+                        onClick={() => {
+                          if (hasProfile) {
+                            const profile = getFacultyProfile(deptKey || "", f.name);
+                            if (profile) setSelectedProfile(profile);
+                          }
+                        }}
+                      >
+                        <CardContent className="p-4">
+                          <div className="w-16 h-16 mx-auto rounded-full bg-muted flex items-center justify-center mb-2 overflow-hidden">
+                            {f.image ? (
+                              <img src={f.image} alt={f.name} className="w-full h-full object-cover" />
+                            ) : (
+                              <Users className="w-6 h-6 text-muted-foreground" />
+                            )}
+                          </div>
+                          <h4 className="font-semibold text-sm text-secondary">{f.name}</h4>
+                          <p className="text-xs text-muted-foreground">{f.designation}</p>
+                          <p className="text-xs text-primary/70 mt-0.5">{f.qualification}</p>
+                          {hasProfile && (
+                            <p className="text-xs text-primary mt-2 font-medium">View Profile →</p>
+                          )}
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
                 </div>
               </motion.div>
             )}
@@ -600,6 +622,11 @@ const DepartmentPage = () => {
           </main>
         </div>
       </div>
+
+      <FacultyProfilePanel
+        profile={selectedProfile}
+        onClose={() => setSelectedProfile(null)}
+      />
 
       <Footer />
     </div>
