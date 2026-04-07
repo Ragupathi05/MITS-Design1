@@ -623,6 +623,11 @@ const DepartmentPage = () => {
         </div>
       </div>
 
+      <FacultyProfilePanel
+        profile={selectedProfile}
+        onClose={() => setSelectedProfile(null)}
+      />
+
       <Footer />
     </div>
   );
