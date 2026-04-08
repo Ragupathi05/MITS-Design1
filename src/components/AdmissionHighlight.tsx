@@ -14,12 +14,9 @@ const processSteps = [
 const AdmissionHighlight = () => (
   <section
     id="admissions"
-    className="relative py-12 md:py-14 overflow-hidden"
+    className="relative py-12 md:py-14 overflow-hidden bg-cover bg-center bg-no-repeat"
     style={{
       backgroundImage: `url(${BASE}admissions/admission1.jpg)`,
-      backgroundAttachment: "fixed",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
     }}
   >
     <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(10,24,41,0.82)_0%,rgba(10,24,41,0.74)_45%,rgba(125,0,0,0.64)_100%)]" />
