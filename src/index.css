@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
+/* Prevent horizontal overflow globally */
+html, body, #root {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
     --background: 0 0% 99%;
     --foreground: 0 0% 10%;
 
