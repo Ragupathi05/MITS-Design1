@@ -55,7 +55,7 @@ const DepartmentPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <div className="relative h-[300px] md:h-[380px] overflow-hidden">
+      <div className="relative h-[240px] sm:h-[300px] md:h-[380px] overflow-hidden">
         <img src={dept.bannerImage} alt={dept.name} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
         <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">
@@ -90,7 +90,7 @@ const DepartmentPage = () => {
         </div>
       </div>
 
-      <div className="lg:hidden sticky top-[100px] z-40 bg-card border-b border-border shadow-sm">
+      <div className="xl:hidden sticky top-16 md:top-[100px] z-40 bg-card border-b border-border shadow-sm">
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-secondary"
