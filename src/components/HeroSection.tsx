@@ -188,7 +188,7 @@ const HeroSection = () => {
     <section
       ref={sectionRef}
       className="relative w-full overflow-hidden"
-      style={{ height: "clamp(320px, 56vh, calc(100vh - 80px))" }}
+      style={{ height: "calc(100vh - 80px)" }}
     >
       {/* Backgrounds */}
       {slides.map((s, i) => (
