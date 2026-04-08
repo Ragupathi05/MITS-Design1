@@ -188,7 +188,7 @@ const HeroSection = () => {
     <section
       ref={sectionRef}
       className="relative w-full overflow-hidden"
-style={{ height: "clamp(460px, 58vw, calc(100vh - 80px))" }}
+      style={{ height: "clamp(320px, 56vh, calc(100vh - 80px))" }}
     >
       {/* Backgrounds */}
       {slides.map((s, i) => (
@@ -245,11 +245,11 @@ className="w-full h-full object-cover"
       ))}
 
       {/* Main content */}
-      <div className="absolute inset-0 z-10 flex flex-col">
+      <div className="absolute inset-0 z-10 flex flex-col overflow-hidden">
         <div className={`flex-1 flex flex-col justify-center ${
           slide.id === "admissions" || slide.id === "placements"
             ? "px-2 sm:px-4"
-            : "px-4 sm:px-8 md:px-16 lg:px-24"
+            : "px-3 sm:px-8 md:px-16 lg:px-24"
         } ${contentAlign}`}>
 
           {/* ── Campus slide: all stacked together, title animates out ── */}
@@ -298,11 +298,11 @@ className="w-full h-full object-cover"
                 key={current}
                 className={`flex flex-col ${contentAlign} ${
                   slide.id === "admissions"
-                    ? "absolute right-32 top-3/4 -translate-y-[calc(50%+10px)] w-[55%] sm:w-[45%] md:w-[38%] pr-3 sm:pr-6 md:pr-10 text-right items-end"
+                    ? "absolute right-4 sm:right-16 md:right-32 top-1/2 sm:top-3/4 -translate-y-1/2 sm:-translate-y-[calc(50%+10px)] w-[85%] sm:w-[45%] md:w-[38%] pr-2 sm:pr-6 md:pr-10 text-right items-end"
                     : slide.id === "placements"
-                    ? "absolute right-32 top-3/4 -translate-y-[calc(50%+60px)] w-[55%] sm:w-[45%] md:w-[38%] pr-3 sm:pr-6 md:pr-10 text-right items-end"
+                    ? "absolute right-4 sm:right-16 md:right-32 top-1/2 sm:top-3/4 -translate-y-1/2 sm:-translate-y-[calc(50%+60px)] w-[85%] sm:w-[45%] md:w-[38%] pr-2 sm:pr-6 md:pr-10 text-right items-end"
                     : slide.id === "identity"
-                    ? "absolute bottom-8 sm:bottom-10 md:bottom-40 left-1/2 -translate-x-1/2 w-full px-4"
+                    ? "absolute bottom-4 sm:bottom-10 md:bottom-40 left-1/2 -translate-x-1/2 w-full px-3 sm:px-4"
                     : slide.align === "right" 
                     ? "max-w-xl md:max-w-2xl ml-auto"
                     : slide.align === "left"  
