@@ -129,7 +129,7 @@ const DepartmentPage = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex gap-8">
           {!selectedProfile && (
-          <aside className="hidden lg:block w-64 shrink-0">
+          <aside className="hidden xl:block w-64 shrink-0">
             <div className="sticky top-[140px]">
               <nav className="bg-card rounded-xl border border-border shadow-sm overflow-hidden">
                 <div className="bg-primary px-4 py-3">
