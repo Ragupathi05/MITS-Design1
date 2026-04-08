@@ -103,7 +103,7 @@ const PlacementsSection = () => {
         <ScrollReveal delay={0.25}>
           <div className="max-w-4xl mx-auto mt-12 text-center">
             <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-4">Top Recruiters</p>
-            <div className="relative overflow-hidden rounded-xl border border-white/15 bg-white/5 py-4">
+            <div className="relative overflow-hidden rounded-xl border border-white/15 bg-white/5 py-4 max-w-full">
               <div className="recruiter-marquee-track">
                 {[...recruiters, ...recruiters].map((company, index) => (
                   <div key={`${company.name}-${index}`} className="recruiter-logo-card" aria-hidden={index >= recruiters.length}>
