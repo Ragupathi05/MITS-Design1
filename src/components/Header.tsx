@@ -203,7 +203,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-border shadow-lg max-h-[70vh] overflow-y-auto">
+        <div className="xl:hidden bg-white border-t border-border shadow-lg max-h-[70vh] overflow-y-auto">
           <nav className="w-full px-[20px] py-4 flex flex-col gap-1">
             {navItems.map((item) => (
               <div key={item.label}>

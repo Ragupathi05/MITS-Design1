@@ -53,12 +53,9 @@ const RankingsSection = () => {
     <section
       id="trust"
       aria-labelledby="trust-heading"
-      className="relative py-12 overflow-hidden"
+      className="relative py-12 overflow-hidden bg-cover bg-center bg-fixed md:bg-fixed bg-no-repeat"
       style={{
         backgroundImage: `url(/Hero-Section/image%204.JPG)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
       }}
     >
       {/* Dark blue gradient overlay */}

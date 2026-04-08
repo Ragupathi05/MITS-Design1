@@ -15,7 +15,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       {/* Spacer: mobile = h-16 (64px nav only), md = h-16+h-9 (100px), lg = h-20+h-9 (116px) */}
-      <div className="h-16 md:h-[100px] lg:h-[116px] shrink-0" />
+      <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
       <main>
         <HeroSection />
         {/* Accent ticker bar */}
