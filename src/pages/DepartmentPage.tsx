@@ -1,5 +1,5 @@
-import { useState, useCallback } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -28,27 +28,45 @@ const sidebarItems = [
 
 const DepartmentPage = () => {
   const { deptKey } = useParams<{ deptKey: string }>();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProfile, setSelectedProfile] = useState<FacultyProfile | null>(null);
   const dept = getDepartmentByKey(deptKey || "");
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    if (!dept && deptKey) {
+      navigate('/departments', { replace: true });
+      return;
+    }
+    const hash = location.hash.replace('#', '');
+    if (hash && sidebarItems.some(item => item.id === hash)) {
+      setActiveSection(hash);
+    }
+  }, [location.hash]);
+
   const handleSectionChange = (sectionId: string) => {
     setActiveSection(sectionId);
     setMobileMenuOpen(false);
+    window.history.replaceState(null, '', `#${sectionId}`);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 10);
   };
 
+  useEffect(() => {
+    if (!dept) {
+      navigate('/departments', { replace: true });
+    }
+  }, [dept]);
+
   if (!dept) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        <div className="pt-40 text-center">
-          <h1 className="text-2xl font-bold text-secondary">Department Not Found</h1>
-          <Link to="/departments" className="text-primary underline mt-4 inline-block">← Back to Departments</Link>
-        </div>
-        <Footer />
-      </div>
-    );
+    return null;
   }
 
   return (
@@ -154,7 +172,7 @@ const DepartmentPage = () => {
           </aside>
           )}
 
-          <main className="flex-1 min-w-0 space-y-10">
+          <main id="department-content" className="flex-1 min-w-0 space-y-10">
             {activeSection === "about" && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -314,13 +332,11 @@ const DepartmentPage = () => {
                                 profile = {
                                   name: f.name,
                                   designation: f.designation,
-                                  department: dept.name,
                                   image: f.image,
-                                  education: f.qualification ? [{ degree: f.qualification, specialization: "", institution: "", year: "" }] : []
+                                  sections: []
                                 };
                               }
                               setSelectedProfile(profile);
-                              window.scrollTo({ top: 350, behavior: 'smooth' });
                             }}
                           >
                             <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">

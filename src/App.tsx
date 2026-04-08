@@ -27,10 +27,14 @@ const queryClient = new QueryClient();
 const Router = HashRouter;
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+  
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
+
   return null;
 };
 
