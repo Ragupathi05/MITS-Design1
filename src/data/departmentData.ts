@@ -6,6 +6,14 @@ export interface FacultyMember {
   designation: string;
   qualification: string;
   image?: string;
+  email?: string;
+  profile?: {
+    researchAreas?: string;
+    publications?: { title: string; year: string; index: string }[];
+    patents?: { title: string; year: string; status: string }[];
+    awards?: string[];
+    education?: { degree: string; specializatio: string; university: string; year: string }[];
+  };
 }
 
 export interface Achievement {
@@ -526,24 +534,60 @@ export const departmentsData: Record<string, DepartmentData> = {
       "To produce industry-ready engineers with innovative capabilities."
     ],
     nbaAccredited: true,
-    hod: { name: "Dr. M. Venkata Reddy", designation: "Professor & Head", qualification: "Ph.D. (ECE)" },
+    hod: { name: "Dr. S. Rajasekaran", designation: "Professor & Head", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg" },
     achievements: { consultancyAmount: "₹15+ Lakhs", researchProjects: "12+", patents: "8+", publications: "150+" },
     teachingApproach: { description: "The department integrates simulation-based learning with hands-on hardware projects.", points: ["VLSI design with Cadence tools", "IoT prototyping with Arduino/Raspberry Pi", "PCB design and fabrication", "Communication system simulation", "MATLAB & Simulink projects"] },
     courses: ["B.Tech in Electronics & Communication Engineering"],
     contactInfo: { email: "hod_ece@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. M. Venkata Reddy", designation: "Professor & Head", qualification: "Ph.D." },
-      { name: "Dr. B. Prabhakara Rao", designation: "Professor", qualification: "Ph.D." },
-      { name: "Dr. K. Chandra Bhushana Rao", designation: "Associate Professor", qualification: "Ph.D." },
-      { name: "Mr. S. Venkateshwarlu", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mrs. N. Padmavathi", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mr. G. Ramesh", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mrs. K. Sunitha", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mr. P. Sreekanth", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mrs. V. Durga Bhavani", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mr. M. Rajendra Prasad", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mrs. S. Madhavi", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mr. R. Krishna Prasad", designation: "Assistant Professor", qualification: "M.Tech" },
+      { 
+        name: "Dr. Rama S Komaragiri", designation: "Professor & Dean-Academics", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/rama.jpg",
+        email: "rama@mits.ac.in",
+        profile: {
+          researchAreas: "VLSI, NEMS/MEMS, Semiconductor Devices, Biomedical Systems, Pedagogy",
+          education: [
+            { degree: "Ph.D.", specializatio: "Microelectronics and VLSI", university: "Technical University of Darmstadt, Germany", year: "2005" },
+            { degree: "M.Tech.", specializatio: "Solid State Technology", university: "IIT Madras", year: "2002" },
+            { degree: "M.Sc.", specializatio: "Physics", university: "IIT Bombay", year: "2000" }
+          ],
+          publications: [
+            { title: "Cascaded Approach to Estimate HR Using Remote PPG, 2025 International Conference", year: "2025-26", index: "Scopus" },
+            { title: "Cuffless Monitoring of Blood Pressure Using Photoplethysmography Signal, Archives of Computational Methods in Engineering", year: "2025-26", index: "Scopus" },
+            { title: "A cascaded approach of group sparse mode decomposition and deep neural network for heart rate estimation, Measurement Journal", year: "2024", index: "SCI" }
+          ],
+          patents: [
+            { title: "ELECTROENCEPHALOGRAPHY (EEG) MONITORING DEVICE", year: "2020-21", status: "Granted" },
+            { title: "SELF-STARTING ENERGY HARVESTING SYSTEM", year: "2020-21", status: "Application Hearing" },
+            { title: "AN AUTOMATED SYSTEM AND METHOD FOR MONITORING HEALTH CONDITION OF A USER", year: "2021-22", status: "Granted" }
+          ]
+        }
+      },
+      { 
+        name: "Dr. P. Ramanathan", designation: "Professor & Principal", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/Dr. P. Ramanathan.JPG",
+        profile: {
+          researchAreas: "VLSI Design & Biomedical Engineering",
+          education: [
+            { degree: "Ph.D.", specializatio: "Information & Communication Engineering", university: "PSG College of Technology & Anna University", year: "2010" },
+            { degree: "M.E.", specializatio: "VLSI Design", university: "PSG College of Technology", year: "2006" },
+            { degree: "B.E.", specializatio: "Electronics and Instrumentation", university: "Tamilnadu College of Engineering", year: "1997" }
+          ],
+          publications: [
+            { title: "Low Power Parallel Prefix Adders Design and Power Estimation, IEEE Conference 2025", year: "2025-26", index: "Scopus" },
+            { title: "Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm, IEEE ICSSEECC 2024", year: "2024-25", index: "Scopus" },
+            { title: "Multi-Class Skin Disease Classification: A Study of Transfer Learning Strategies, IEEE IConSCEPT 2024", year: "2024-25", index: "Scopus" }
+          ]
+        }
+      },
+      { name: "Dr. Sanjay Kumar C. Gowre", designation: "Professor", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/sanjay.JPG" },
+      { name: "Dr. S. Rajasekaran", designation: "Professor & Head", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg" },
+      { name: "Dr. Nehru Kandasamy", designation: "Professor", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/nehru.jpg" },
+      { name: "Dr. Murli Manohar", designation: "Assoc. Professor", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/murli.jpg" },
+      { name: "Dr. V. Jayaprakasan", designation: "Assoc. Professor & Associate Dean", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/jayaprakasan.jpg" },
+      { name: "Dr. K. Sathesh", designation: "Assoc. Professor", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/sathesh.jpg" },
+      { name: "Dr. Maneesh Kumar Singh", designation: "Assoc. Professor", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/maneesh.jpg" },
+      { name: "Dr. Grande Naga Jyothi", designation: "Assoc. Professor", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/jyothi.jpg" },
+      { name: "Dr. Rakesh Nath Tiwari", designation: "Assoc. Professor", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/1120faf5d8ab8c822818d9c4034e8f1f.jpg" },
+      { name: "Dr. Vivek Jain", designation: "Asst. Professor", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/vivek.JPG" },
     ],
     detailedAchievements: [
       { title: "NBA Accredited Program", description: "B.Tech ECE accredited by National Board of Accreditation", type: "faculty" },

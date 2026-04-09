@@ -44,16 +44,24 @@ const DepartmentPage = () => {
       navigate('/departments', { replace: true });
       return;
     }
-    const hash = location.hash.replace('#', '');
-    if (hash && sidebarItems.some(item => item.id === hash)) {
-      setActiveSection(hash);
+    const pathParts = location.pathname.split('/');
+    const lastPart = pathParts[pathParts.length - 1];
+    if (lastPart && sidebarItems.some(item => item.id === lastPart)) {
+      setActiveSection(lastPart);
+    } else if (location.hash) {
+      const hash = location.hash.replace('#', '');
+      if (hash && sidebarItems.some(item => item.id === hash)) {
+        setActiveSection(hash);
+      }
     }
-  }, [location.hash]);
+  }, [location.pathname, location.hash]);
 
   const handleSectionChange = (sectionId: string) => {
     setActiveSection(sectionId);
     setMobileMenuOpen(false);
-    window.history.replaceState(null, '', `#${sectionId}`);
+    const basePath = `/department/${deptKey}`;
+    const newPath = sectionId === "about" ? basePath : `${basePath}/${sectionId}`;
+    navigate(newPath, { replace: true });
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 10);
@@ -329,11 +337,37 @@ const DepartmentPage = () => {
                             onClick={() => {
                               let profile = getFacultyProfile(deptKey || "", f.name);
                               if (!profile) {
+                                const sections = [];
+                                if (f.profile?.education) {
+                                  sections.push({
+                                    title: "Details of Educational Qualification",
+                                    content: f.profile.education.map((e, i) => ({ "S.No": String(i+1), Course: e.degree, Specialization: e.specializatio, "College Name/University": e.university, "Year of Passing": e.year }))
+                                  });
+                                }
+                                if (f.profile?.researchAreas) {
+                                  sections.push({ title: "Research Areas", content: f.profile.researchAreas });
+                                }
+                                if (f.profile?.publications) {
+                                  sections.push({
+                                    title: "Publication Details",
+                                    content: f.profile.publications.map((p, i) => ({ "S.No": String(i+1), "Publication Affiliation": "MITS", "Academic Year": p.year, "Author Position": "1", "Details of Research Publication": p.title, Indexing: p.index, Publication: "Article", "Journal Quartile": "None" }))
+                                  });
+                                }
+                                if (f.profile?.patents) {
+                                  sections.push({
+                                    title: "Patents",
+                                    content: f.profile.patents.map((p, i) => ({ "S.No": String(i+1), Affiliation: "MITS", "Academic Year": p.year, "Title of the Patent": p.title, Status: p.status }))
+                                  });
+                                }
+                                if (f.profile?.awards) {
+                                  sections.push({ title: "Awards/Achievements", content: f.profile.awards });
+                                }
                                 profile = {
                                   name: f.name,
                                   designation: f.designation,
                                   image: f.image,
-                                  sections: []
+                                  email: f.email,
+                                  sections: sections.length > 0 ? sections : []
                                 };
                               }
                               setSelectedProfile(profile);

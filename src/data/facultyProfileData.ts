@@ -47,49 +47,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "5", "Details of Research Publication": "A Synergistic Machine Learning – Metaheuristic Approach for Smart Grid Load Dispatch at ICSCSS 2025", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Feature extraction and feature selection in medical images, Editor(s): Bikesh Kumar Singh, G.R. Sinha, Intelligent Computing Techniques in Biomedical Imaging, Academic Press, 2025, Pages 83-97, ISBN 9780443159992", Indexing: "Scopus", Publication: "Book chapter", "Journal Quartile": "None" },
-            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Leveraging EfficientNetB3 in a Deep Learning Framework for High-Accuracy MRI Tumor Classification, CMC-Computers, Materials & Continua, DOI:10.32604/cmc.2024.053563", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "5", "Details of Research Publication": "Brain Tumour Detection and Multi-Classification Using Advanced Deep Learning Techniques, Vol 20 No 3(2024), pp 2077-2088", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Classification of Mental Health and Emotion of Human from Text using Machine Learning Approaches, 2023 6th International Conference on Information Systems and Computer Networks (ISCON), Mathura, India, 2023, pp. 1-7, IEEE Xplore", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Predictive Modeling of Academic Success using Extreme Learning Machine, at ICCICCT – 2024", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "A Review on Smart Agriculture System, at ICCICCT – 2024", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Network Intrusion Detection using Gradient Boosting Algorithm", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Effective Water Quality Prediction using Random Forest Algorithm", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "10", "Publication Affiliation": "MITS", "Academic Year": "2022", "Author Position": "2", "Details of Research Publication": "Regression based Machine Learning Model to Predict IPL Score after PowerPlay", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "11", "Publication Affiliation": "MITS", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Analyzing How E-Learning and Virtual Reality could be Integrated to Enhance Studies, ECS Transactions, 107 (1) 13163-13173 (2022), The Electrochemical Society", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "12", "Publication Affiliation": "MITS", "Academic Year": "2021", "Author Position": "1", "Details of Research Publication": "Eye Disease Detection from Retinal Fundus Image Using CNN, Biomedical Signal Processing for Healthcare Applications, CRC Press", Indexing: "Scopus", Publication: "Book chapter", "Journal Quartile": "None" },
-            { "S.No": "13", "Publication Affiliation": "MITS", "Academic Year": "2021", "Author Position": "1", "Details of Research Publication": "Imparting OBE to the Younger Generation, Assessment Tools for Mapping Learning Outcomes With Learning Objectives, IGI Global, 2021", Indexing: "Scopus", Publication: "Book chapter", "Journal Quartile": "None" },
-            { "S.No": "14", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Combined Fuzzy and Projection based Learning in META-Cognitive Neural Network for MAMMOGRAM classification, Journal of Computing and Intelligent Systems, Vol. 4, Issue 1, 93-98", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "15", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Breast Cancer Detection and Classification using Fuzzy and Projection Based Learning in Meta-cognitive Extreme Learning Machine, Compliance Engineering Journal, Vol. 11, Issue 1, 2020, 265-279", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "16", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "2", "Details of Research Publication": "Current Status of Research on Myanmar Currency Recognition at the First International Conference on Computational Science and Intelligence, 2020", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "17", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Improved Classification Performance in Imbalanced Dataset Using Projection Based Learning Algorithm with Radial Basis Function at 107th Indian Science Congress, 2020", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "18", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Design of Classifiers, Advances in Biometrics, Springer", Indexing: "Scopus", Publication: "Book chapter", "Journal Quartile": "None" },
-            { "S.No": "19", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "1", "Details of Research Publication": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network, International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11,2018", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "20", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "1", "Details of Research Publication": "Projection Based Learning with Radial Basis Function Neural Network for Improved Classification Performance, Shanlax International Journal of Arts, Science and Humanities, Special Issue 2, Oct 2017, Vol. 5, pp. 407-413", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "21", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "1", "Details of Research Publication": "Improved Radial Basis Functions using Projection Based Learning Algorithm for Classification Problems, Journal of Computing and Intelligent Systems, Volume 01, Issue 01, May-2017", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "22", "Publication Affiliation": "Others", "Academic Year": "2015", "Author Position": "1", "Details of Research Publication": "A Survey on study of various machine learning methods for classification, International Journal of Database Theory and Application Vol 8. No 5(2015)", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "23", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "1", "Details of Research Publication": "A Comparative Study on Different Meta-Cognitive Learning for Classification Problems, Journal of NanoScience and NanoTechnology - Spring Edition Vol 2, No 1 (2014)", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "24", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "1", "Details of Research Publication": "Classification of Escherichia Coli Bacteria using Meta-Cognitive Neural Network, International Journal of Computer Science & Engineering Technology (IJCSET) Vol. 5 No. 02 Feb 2014", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "25", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "1", "Details of Research Publication": "Classification of Real Value and Complex Value Data using Machine Learning Concepts, International Journal of Computer Science and Information Technologies, Vol. 5 (2), 2014", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "26", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "1", "Details of Research Publication": "Novel Methods for Classification using Machine Learning Concepts at NCR Region, Delhi, on Dec 13th and 14th 2013", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "27", "Publication Affiliation": "Others", "Academic Year": "2010", "Author Position": "1", "Details of Research Publication": "Patterns of security for voice over IP networks in the International Conference on Computing, Communication and Technology", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "28", "Publication Affiliation": "Others", "Academic Year": "2010", "Author Position": "1", "Details of Research Publication": "Parallel Intrusion detection system with multiclassifier mechanism in the International conference on System On Chip", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "29", "Publication Affiliation": "Others", "Academic Year": "2010", "Author Position": "3", "Details of Research Publication": "A Framework for Adaptive Intelligent Character Recognition Algorithm using Neural Networks, in the International conference on Recent Advancement in Electrical Science", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
-          ]
-        },
-        {
-          title: "Research Projects & Events",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Funded Project /Event": "Funded Event", Role: "Coordinator", "Title of the Project/Event": "WIE Funding – Tech Queens", "Amount in Rs. /-": "($200) 17,000", "Funding Agency": "IEEE - WIE" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2023-24", "Funded Project /Event": "Funded Event", Role: "Coordinator", "Title of the Project/Event": "Number Analytics and Data Science", "Amount in Rs. /-": "2,29,500", "Funding Agency": "Indian Academy of Sciences, Bengaluru" },
-            { "S.No": "3", Affiliation: "MITS", "Academic Year": "2021-22", "Funded Project /Event": "Funded Event", Role: "Coordinator", "Title of the Project/Event": "Modern Computational Techniques", "Amount in Rs. /-": "22,500", "Funding Agency": "(Online) Indian Academy of Sciences, Bengaluru" },
-            { "S.No": "4", Affiliation: "MITS", "Academic Year": "2020-21", "Funded Project /Event": "Funded Event", Role: "Coordinator", "Title of the Project/Event": "Scientific Computations", "Amount in Rs. /-": "22,500", "Funding Agency": "(Online) Indian Academy of Sciences, Bengaluru" },
-            { "S.No": "5", Affiliation: "Others", "Academic Year": "2017-18", "Funded Project /Event": "Funded Event", Role: "Coordinator", "Title of the Project/Event": "Numerical methods and Scientific Computing", "Amount in Rs. /-": "1,28,262", "Funding Agency": "Indian Academy of Sciences, Bengaluru" },
-            { "S.No": "6", Affiliation: "Others", "Academic Year": "2016-17", "Funded Project /Event": "Funded Event", Role: "Coordinator", "Title of the Project/Event": "Entering Life Science Research Arena through Bigdata", "Amount in Rs. /-": "50,000", "Funding Agency": "DBT (Department of Biotechnology)" },
-            { "S.No": "7", Affiliation: "Others", "Academic Year": "2016-17", "Funded Project /Event": "Funded Event", Role: "Coordinator", "Title of the Project/Event": "Artificial Intelligence and Computational Biology", "Amount in Rs. /-": "1,85,200", "Funding Agency": "Indian Academy of Sciences, Bengaluru" },
-            { "S.No": "8", Affiliation: "Others", "Academic Year": "2015-17", "Funded Project /Event": "Funded Project", Role: "Coordinator", "Title of the Project/Event": "Computer Training for Rural School Students", "Amount in Rs. /-": "4,50,000", "Funding Agency": "KSR Educational and Charitable Trust" },
-            { "S.No": "9", Affiliation: "Others", "Academic Year": "2019-20", "Funded Project /Event": "Funded Project", Role: "Coordinator", "Title of the Project/Event": "Unnat Bharat Abhiyan", "Amount in Rs. /-": "50,000", "Funding Agency": "UBA, MHRD" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "5", "Details of Research Publication": "A Synergistic Machine Learning – Metaheuristic Approach for Smart Grid Load Dispatch at ICSCSS 2025", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
           ]
         },
         {
@@ -102,16 +60,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
           title: "Awards/Achievements",
           content: [
             "Received the Best Administrator Award (2017) from Dr. Kalam Educational Trust, Chennai.",
-            "Elected as CSTA India Chapter Leader (Curriculum and Professional Development) in 2024.",
-            "Recognized with ICT Academy Awards (2018): Best Practices Award for Engaging Students towards Social Responsibility.",
-            "Best Academic Partner Excellence Award for Skill Development Initiatives.",
-            "Acted as Session Chair and Reviewer for several international conferences including ASCIS 2024, ISCAIE 2021, and ISIEA 2021.",
-            "Reviewer and Editorial Board Member for reputed international journals such as Inderscience's Journal of Business Intelligence and Data Mining and American Journal of Data Mining and Knowledge Discovery.",
-            "Invited Teacher at the Indian Academy of Sciences Annual and Mid-Year Meetings (BHU, Varanasi 2018, IISc Bangalore 2019; SRM University AP 2022).",
-            "Serving as Mentor for the Women in Machine Learning (WiML) Mentorship Program",
-            "Senior Member IEEE – Membership No: 98329128",
-            "IEEE WIE Student Advisor – MITS Student Branch",
-            "Life Member ISTE – Membership No : LM140721"
+            "Elected as CSTA India Chapter Leader (Curriculum and Professional Development) in 2024."
           ]
         }
       ]
@@ -127,9 +76,9 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Details of Educational Qualification",
           content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Hydraulics", Branch: "Civil Engineering", "College Name/University": "Leonardo Da Vinci School of Engineering, University of Pisa, Pisa, Italy.", "Year of Passing": "2010" },
-            { "S.No": "2", Course: "M.Tech.", Specialization: "Soil and Water Conservation Engineering", Branch: "Soil and Water Conservation Engineering", "College Name/University": "Indian Institute of Technology, Kharagpur, India", "Year of Passing": "2006" },
-            { "S.No": "3", Course: "B.Tech.", Specialization: "Agricultural Engineering", Branch: "Agricultural Engineering", "College Name/University": "Faculty of Agricultural Engineering, Bidhan Chandra Krishi Viswavidyalaya, West Bengal,India.", "Year of Passing": "2004" }
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Hydraulics", Branch: "Civil Engineering", "College Name/University": "Leonardo Da Vinci School of Engineering, University of Pisa, Italy", "Year of Passing": "2010" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Soil and Water Conservation Engineering", Branch: "Civil Engineering", "College Name/University": "IIT Kharagpur", "Year of Passing": "2006" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "Agricultural Engineering", Branch: "Agricultural Engineering", "College Name/University": "Bidhan Chandra Krishi Viswavidyalaya", "Year of Passing": "2004" }
           ]
         },
         {
@@ -140,7 +89,6 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
           title: "Research Identifiers",
           content: [
             { Identifier: "Scopus", Link: "http://www.scopus.com/authid/detail.url?authorId=57223173350" },
-            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/272776" },
             { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=mqCWzHsAAAAJ&hl=en" },
             { Identifier: "h-Index (As per Scopus Data)", Link: "8" }
           ]
@@ -148,718 +96,549 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "2", "Details of Research Publication": "Machine learning for land use and land cover mapping in Google earth engine: A review of methods, applications and challenges", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "3", "Details of Research Publication": "Sustainable Brick Production Using Ceramic Waste and Coconut Fibers: Performance Pre-diction Using Ma-chine Learning", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "" },
-            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "3", "Details of Research Publication": "Optimization of Eco-Efficient Mix Designs Using Nano Enhanced Binders for Enhanced Mechanical and Durability Performance", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "A review of remote sensing and GIS applications in flood monitoring and management", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "Evaluation of net-zero materials in mortar bricks with predictive modelling using random forest and gradient boosting techniques Q1", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "Impact of biochar on strength, durability, and carbon sequestration in cement based materials.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "Mechanical properties and machine learning analysis of concrete incorporating waste glass as coarse aggregate", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Recycling glass waste into concrete aggregates: enhancing mechanical properties and sustainability", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "Innovative approaches to sustainable construction: a detailed study of rice husk ash as an ecofriendly substitute in cement production", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "10", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "Optimization and prediction of paver block properties with ceramic waste as fine aggregate using response surface methodology", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "11", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Mechanical proper-ties and machine learning analysis of concrete incorporating waste glass as coarse aggregate", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "12", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Mechanical and sustainability performance of concrete incorporated limestone powder, recycled ceramic aggregates, and coconut fibers", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "13", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Machine learning-based destructive and non-destructive testing of paver block using fly ash and polyvinyl chlo-ride into sustainable pedestrians", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "14", "Publication Affiliation": "Others", "Academic Year": "2011-12", "Author Position": "2", "Details of Research Publication": "Stilling basin ero-sion due to vertical crossing jets", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "15", "Publication Affiliation": "Others", "Academic Year": "2010-11", "Author Position": "2", "Details of Research Publication": "Analysis of scour characteristics in presence of aerated crossing jets", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "NA" },
-            { "S.No": "16", "Publication Affiliation": "MITS", "Academic Year": "2018-19", "Author Position": "2", "Details of Research Publication": "Analysis of flood-ing and drying con-ditions through trend analysis of amsre satellite soil moisture over the Himalayan Gandak River basin", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "17", "Publication Affiliation": "MITS", "Academic Year": "2021-22", "Author Position": "2", "Details of Research Publication": "Impact of temperature and precipitation lapse rate on hydrological model-ling over Himala-yan Gandak River Basin", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "18", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Recycling glass waste in mortar: a sustainable ap-proach to enhancing strength and density", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "19", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Evaluation of SCBA-replaced cement for carbon credits and reduc-tion in CO2 emissions", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "20", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "Evaluating the use of recycled fine aggregates in 3D printing: a systematic review", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "21", "Publication Affiliation": "Others", "Academic Year": "2023-24", "Author Position": "2", "Details of Research Publication": "Entropy-weighted-multicriteria decisionmaking (E-MCDM) approach for erosion area prioritization case study of a Himala-yan River Basin", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "NA" },
-            { "S.No": "22", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Correction to: Mechanical and sustainability perfor-mance of concrete incorporated lime-stone powder, recycled ceramic aggregates, and coconut fibers", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "23", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Spatiotemporal Intercomparison of WMO's Gauge Ad-justed Satellite Precipitation Product Over India", Indexing: "Scopus", Publication: "Erratum", "Journal Quartile": "Q1" },
-            { "S.No": "24", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "Investigating the potential of waste glass in paver block production using RSM", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "25", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "achine learning application to pre-dict the mechanical properties of glass fiber mortar", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "26", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "Adaptive neuro-fuzzy inference system prediction model for the me-chanical behaviour of rice husk ash and periwinkle shell concrete blend for sustainable construction", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "27", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "Experimental investigation of Bambara nut shell ash in the production of con-crete and mortar", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "28", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "Prediction of cement mortar strength by replacement of hydrated lime using RSM and ANN", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "2", "Details of Research Publication": "Machine learning for land use and land cover mapping", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" }
           ]
         },
         {
           title: "Patents",
           content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "437599-001", "Title of the Patent": "ZIP LOCK INTERLOCKING BRICK", Status: "Granted" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "428578-001", "Title of the Patent": "INTERLOCKED HEXAGONAL HOLLOW BLOCK", Status: "Granted" },
-            { "S.No": "3", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "428580-001", "Title of the Patent": "GRIP-TITE INTERLOCKING BRICKS", Status: "Granted" },
-            { "S.No": "4", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "427507-001", "Title of the Patent": "C-SHAPE INTERLOCKING PAVER BLOCK", Status: "Granted" },
-            { "S.No": "5", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "429097-001", "Title of the Patent": "H-SHAPED INTERLOCKING PAVER BLOCK", Status: "Granted" },
-            { "S.No": "6", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "427544-001", "Title of the Patent": "HEAD-FOOT INTERLOCKING PAVER BLOCK", Status: "Granted" }
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Reviewer in Scientific Reports, Nature: March 18, 2025 to March 18, 2025",
-            "Reviewer in Water Management for Proceedings of ICE: April 18, 2022",
-            "Guest Lecture on Applications of AI&ML in Civil Engineering: Sept. 19, 2024 to Sept. 19, 2024",
-            "Expert - ASCE SR 2024 Outstanding Thesis Presentation: July 30, 2024 to July 30, 2024",
-            "IAHR - International Scientific Committee (ISC).-9th International Symposium on Hydraulic Structures (ISHS 2022): April 23, 2021 to April 23, 2021"
+            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "437599-001", "Title of the Patent": "ZIP LOCK INTERLOCKING BRICK", Status: "Granted" }
           ]
         }
       ]
-    },
-    "Dr. Vijayakumar Natesan": {
-      name: "Dr. Vijayakumar Natesan",
-      designation: "Asst. Professor & Head",
-      email: "vijayakumarn@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/fc9b84db32042ded85ace96100f6848f.JPG",
+    }
+  },
+  ece: {
+    "Dr. Rama S Komaragiri": {
+      name: "Dr. Rama S Komaragiri",
+      designation: "Professor & Dean-Academics",
+      email: "rama@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/rama.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
           content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "Indian Institute of Technology, Hyderabad", "Year of Passing": "2020" },
-            { "S.No": "2", Course: "M.E.", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "Alagappa Chettiar College of Engineering & Technology, Karaikudi", "Year of Passing": "2013" },
-            { "S.No": "3", Course: "B.E.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "Institute of Road & Transport Technology, Erode", "Year of Passing": "2011" }
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Microelectronics and VLSI", Branch: "Electrical and Information Technology", "College Name/University": "Technical University of Darmstadt, Germany", "Year of Passing": "2005" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Solid State Technology", Branch: "EE/Physics", "College Name/University": "IIT Madras", "Year of Passing": "2002" },
+            { "S.No": "3", Course: "M.Sc.", Specialization: "Physics", Branch: "Physics", "College Name/University": "IIT Bombay", "Year of Passing": "2000" }
           ]
         },
         {
           title: "Research Areas",
-          content: "Structural steel and Cold-formed steel, Connections in steel structure, Composite structure, Pre-cast construction, and Construction Materials"
+          content: "VLSI, NEMS/MEMS, Semiconductor Devices, Biomedical Systems, Pedagogy"
         },
         {
           title: "Research Identifiers",
           content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57209005001" },
-            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/280524" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=ie86Yn4AAAAJ&hl=en" },
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=9845916000" },
+            { Identifier: "Vidwan", Link: "https://mits.irins.org/profile/319324" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=bO5yElsAAAAJ&hl=en" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "18" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "4", "Details of Research Publication": "Cascaded Approach to Estimate HR Using Remote PPG, 2025 International Conference on Modeling, Simulation & Intelligent Computing (MoSICom), Dubai, DOI: 10.1109/MoSICom67153.2025.11398329", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "5", "Details of Research Publication": "Cuffless Monitoring of Blood Pressure Using Photoplethysmography Signal: A Comprehensive Review of Artificial Intelligence and Edge Computing Solutions, Archives of Computational Methods in Engineering, DOI:10.1007/s11831-25-10415-4", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "5", "Details of Research Publication": "A cascaded approach of group sparse mode decomposition and deep neural network for heart rate estimation using reference signal-less PPG signal, Measurement: Journal, DOI:10.1016/j.measurement.2024.116546", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "4", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "5", "Details of Research Publication": "Integrated wearable PPG: a multi-vital sign monitoring based on group sparse mode decomposition framework in remote health care using PPG signal, Physical and Engineering Sciences in Medicine, DOI:10.1007/s13246-025-01534-0", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "5", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "5", "Details of Research Publication": "A novel eXplainable AI agent for social interaction training of people with Autism Spectrum Disorder (ASD), International Journal of Information Technology, DOI:10.1007/s41870-025-02486-0", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "6", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "4", "Details of Research Publication": "Towards the Development of eXplainable Digital Twins for Precision Agriculture, IC2SDT 2024 Proceedings, DOI:10.1109/IC2SDT62152.2024.10696477", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "7", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "4", "Details of Research Publication": "Edge-Based Computation of Super-Resolution Superlet Spectrograms for Real-Time Estimation of Heart Rate Using an IoMT-Based Reference-Signal-Less PPG Sensor, IEEE Internet of Things Journal, DOI:10.1109/JIOT.2023.3322947", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "8", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Multi-Agent Based Social Interaction Model for Neurological Disorder, IC2SDT 2024 Proceedings, DOI:10.1109/IC2SDT62152.2024.10695958", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "9", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Implementation of XOR Gate using AOI model by Reconfigurable Artificial Neural Network on FPGA, ICCCNT 2024, DOI:10.1109/ICCCNT61001.2024.10726252", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "10", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "ECG Signal Detection and Lossless Data Compression Techniques for Implantable Cardiac Pacemaker Systems, Energy Systems in Electrical Engineering, DOI:10.1007/978-981-19-5303-3_4", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "11", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "ECG Signal Denoising Techniques for Cardiac Pacemaker Systems, Energy Systems in Electrical Engineering, DOI:10.1007/978-981-19-5303-3_3", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "12", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "FPGA Implementation of Combined ECG Signal Denoising, Peak Detection Technique for Cardiac Pacemaker Systems, Energy Systems in Electrical Engineering, DOI:10.1007/978-981-19-5303-3_5", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "13", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Digital ECG Signal Watermarking and Compression, Energy Systems in Electrical Engineering, DOI:10.1007/978-981-19-5303-3_6", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "14", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Blood pressure estimation and classification using a reference signal-less photoplethysmography signal: a deep learning framework, Physical and Engineering Sciences in Medicine, DOI:10.1007/s13246-023-01322-8", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "15", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "4", "Details of Research Publication": "Analysis of photoplethysmogram signal to estimate heart rate during physical activity using fractional fourier transform, Computer Methods and Programs in Biomedicine, DOI:10.1016/j.cmpb.2022.107294", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "16", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "A novel CS-NET architecture based on the unification of CNN, SVM and super-resolution spectrogram to monitor and classify blood pressure using photoplethysmography, Computer Methods and Programs in Biomedicine, DOI:10.1016/j.cmpb.2023.107716", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "17", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "4", "Details of Research Publication": "Optimized deep neural network models for blood pressure classification using Fourier analysis-based time–frequency spectrogram of photoplethysmography signal, Biomedical Engineering Letters, DOI:10.1007/s13534-023-00296-6", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "18", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Basic Formation on Wavelet Transforms, Energy Systems in Electrical Engineering, DOI:10.1007/978-981-19-5303-3_7", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "19", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Existing Methods to Evaluate Pacemaker Device Performance, Energy Systems in Electrical Engineering, DOI:10.1007/978-981-19-5303-3_2", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "20", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "High Performance and Power Efficient Electrocardiogram Detectors, Energy Systems in Electrical Engineering", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "21", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "4", "Details of Research Publication": "Automatic seizure detection and classification using super-resolution superlet transform and deep neural network, Computer Methods and Programs in Biomedicine, DOI:10.1016/j.cmpb.2023.107680", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "22", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Estimation of Respiratory Rate from a Corrupted PPG Signal using Time-Frequency Spectrogram, Proceedings of SPIN 2023, DOI:10.1109/SPIN57001.2023.10117416", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "23", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Introduction, Energy Systems in Electrical Engineering, DOI:10.1007/978-981-19-5303-3_1", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "24", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Watermarking of ECG signals compressed using Fourier decomposition method, Multimedia Tools and Applications, DOI:10.1007/s11042-021-11492-w", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "25", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Fourier Analysis Based Respiration Rate Estimation Using Corrupted Photoplethysmogram Signal, IMPACT 2022, DOI:10.1109/IMPACT55510.2022.10029065", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "26", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "2", "Details of Research Publication": "Via-free single metal level planar microcoil sensors for detection of magnetic microbeads, Journal of Magnetism and Magnetic Materials, DOI:10.1016/j.jmmm.2021.168469", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "27", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "A novel approach for real-time ECG signal denoising using Fourier decomposition method, Research on Biomedical Engineering, DOI:10.1007/s42600-022-00237-9", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "28", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "4", "Details of Research Publication": "Multilevel Classification and Detection of Cardiac Arrhythmias With High-Resolution Superlet Transform and Deep Convolution Neural Network, IEEE Transactions on Instrumentation and Measurement, DOI:10.1109/TIM.2022.3186355", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "29", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "4", "Details of Research Publication": "Hardware Requirements of Different Wavelet Filter Bank Architectures for ECG Signal Denoising, IATMSI 2022, DOI:10.1109/IATMSI56455.2022.10119389", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "30", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "2", "Details of Research Publication": "Simulation of reconfigurable fet circuits using sentaurus tcad tool, Sub-Micron Semiconductor Devices: Design and Applications, DOI:10.1201/9781003126393-11", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "31", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "4", "Details of Research Publication": "STSR: Spectro-Temporal Super-Resolution Analysis of a Reference Signal Less Photoplethysmogram for Heart Rate Estimation During Physical Activity, IEEE Transactions on Instrumentation and Measurement, DOI:10.1109/TIM.2022.3192831", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "32", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "A Review on Computational Methods for Denoising and Detecting ECG Signals to Detect Cardiovascular Diseases, Archives of Computational Methods in Engineering, DOI:10.1007/s11831-021-09642-2", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "33", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "2", "Details of Research Publication": "High-performance reconfigurable FET for a simple variable gain buffer amplifier design, International Journal of Electronics, DOI:10.1080/00207217.2021.1908618", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "34", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Analytical modeling of reconfigurable transistors, Sub-Micron Semiconductor Devices: Design and Applications, DOI:10.1201/9781003126393-22", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "35", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Reference signal less Fourier analysis based motion artifact removal algorithm for wearable photoplethysmography devices to estimate heart rate during physical exercises, Computers in Biology and Medicine, DOI:10.1016/j.compbiomed.2021.105081", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "36", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "A Review on Computation Methods Used in Photoplethysmography Signal Analysis for Heart Rate Estimation, Archives of Computational Methods in Engineering, DOI:10.1007/s11831-021-09597-4", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "37", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "3", "Details of Research Publication": "An analytical model for a TFET with an n-doped channel operating in accumulation and inversion modes, Journal of Computational Electronics, DOI:10.1007/s10825-021-01683-x", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "38", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "2", "Details of Research Publication": "Effect of Geometrical Parameters of Nonspiral microcoils on the Magnetic field Generation for Microactuating Applications, ICSCC 2021, DOI:10.1109/ICSCC51209.2021.9528177", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "39", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "4", "Details of Research Publication": "A robust digital ECG signal watermarking and compression using biorthogonal wavelet transform, Research on Biomedical Engineering, DOI:10.1007/s42600-020-00108-1", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "40", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "4", "Details of Research Publication": "Stationary wavelet transform based ECG signal denoising method, ISA Transactions, DOI:10.1016/j.isatra.2020.12.029", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "41", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "2", "Details of Research Publication": "Design and Analysis of Induction-Balance Sensor Using Non-spiral Planar Microcoils for Biomedical Applications, Nanotechnology in the Life Sciences, DOI:10.1007/978-3-030-64410-9_22", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "42", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "4", "Details of Research Publication": "Hardware Emulation of a Biorthogonal Wavelet Transform-Based Heart Rate Monitoring Device, IEEE Sensors Journal, DOI:10.1109/JSEN.2020.3034742", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "43", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "5", "Details of Research Publication": "Classification of Normal and Abnormal ECG signals using Support Vector Machine and Fourier Decomposition Method, iSES 2020, DOI:10.1109/iSES50453.2020.00044", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "44", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "2", "Details of Research Publication": "Reconfigurable circuits based on Single Gate Reconfigurable Field-Effect Transistors, CONECCT 2020, DOI:10.1109/CONECCT50063.2020.9198322", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "45", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "6", "Details of Research Publication": "Classification of epileptic seizure in EEG signal using support vector machine and EMD, Handbook of Research on Advancements of Artificial Intelligence in Healthcare Engineering, DOI:10.4018/978-1-7998-2120-5.ch005", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "46", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "2", "Details of Research Publication": "Performance Evaluation of Via-free Non-spiral Planar Microcoils, NEMS 2020, DOI:10.1109/NEMS50311.2020.9265635", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "47", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "2", "Details of Research Publication": "Performance analysis of non-spiral planar microcoils for biomedical electromagnetic microactuators, AIP Conference Proceedings, DOI:10.1063/5.0003966", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "48", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "2", "Details of Research Publication": "Performance Evaluation of Via-free Non-spiral Planar Microcoils for Biomedical Wireless Links, iSES 2020, DOI:10.1109/iSES50453.2020.00054", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "49", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "2", "Details of Research Publication": "Time–frequency localization using three-tap biorthogonal wavelet filter bank for electrocardiogram compressions, Biomedical Engineering Letters, DOI:10.1007/s13534-019-00117-9", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "50", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "3", "Details of Research Publication": "Performance analysis of planar microcoils for biomedical wireless power transfer links, Sadhana, DOI:10.1007/s12046-019-1170-5", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "51", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "2", "Details of Research Publication": "Design of efficient fractional operator for ECG signal detection in implantable cardiac pacemaker systems, International Journal of Circuit Theory and Applications, DOI:10.1002/cta.2667", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "52", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "3", "Details of Research Publication": "An analytical model for a reconfigurable tunnel field effect transistor, Superlattices and Microstructures, DOI:10.1016/j.spmi.2019.05.025", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "53", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "2", "Details of Research Publication": "Microfabrication and electrical characterization of non-spiral planar microcoils for biomedical applications, Lecture Notes in Electrical Engineering, DOI:10.1007/978-981-13-6447-1_16", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "54", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "2", "Details of Research Publication": "Fabrication, characterization, and modelling of a novel via-less single metal level magnetic microcoil sensor for biosensing applications, Sensors and Actuators A: Physical, DOI:10.1016/j.sna.2019.02.025", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "55", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "3", "Details of Research Publication": "Efficient QRS complex detection algorithm based on Fast Fourier Transform, Biomedical Engineering Letters, DOI:10.1007/s13534-018-0087-y", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "56", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "2", "Details of Research Publication": "Modelling, microfabrication and performance evaluation of non-spiral planar microcoils for biomedical wireless power transfer systems, Micro and Nano Letters, DOI:10.1049/mnl.2019.0158", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "57", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "2", "Details of Research Publication": "Design and Analysis of Non-spiral Planar Microcoil-Based Electromagnetic Microactuator, Arabian Journal for Science and Engineering, DOI:10.1007/s13369-018-3639-7", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "58", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "2", "Details of Research Publication": "From Pacemaker to Wearable: Techniques for ECG Detection Systems, Journal of Medical Systems, DOI:10.1007/s10916-017-0886-1", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "59", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "3", "Details of Research Publication": "Electromagnetic Microactuators using Non-spiral Planar Microcoils for Robotic Applications, Procedia Computer Science, DOI:10.1016/j.procs.2018.07.068", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "60", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "3", "Details of Research Publication": "Analysis of reconfigurable tunnel field effect transistor for improved current characteristics, ISNE 2018, DOI:10.1109/ISNE.2018.8394667", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "61", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "4", "Details of Research Publication": "Two dimensional analytical model for a reconfigurable field effect transistor, Superlattices and Microstructures, DOI:10.1016/j.spmi.2017.12.006", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "62", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "2", "Details of Research Publication": "Design of wavelet transform based electrocardiogram monitoring system, ISA Transactions, DOI:10.1016/j.isatra.2018.08.003", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "63", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "2", "Details of Research Publication": "Study of Circuits Based on SOI-vertical Gate-All-Around FET, INDICON 2018, DOI:10.1109/INDICON45594.2018.8987021", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "64", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "2", "Details of Research Publication": "Heart rate monitoring and therapeutic devices: A wavelet transform based approach for the modeling and classification of congestive heart failure, ISA Transactions, DOI:10.1016/j.isatra.2018.05.003", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "65", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "2", "Details of Research Publication": "A wavelet transform-based filter bank architecture for ECG signal denoising, Advances in Intelligent Systems and Computing, DOI:10.1007/978-981-10-8636-6_26", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "66", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "2", "Details of Research Publication": "Detection of Magnetic Particles Using Induction-Balance Microsensor Based on Non-Spiral Planar Microcoils, Proceedings of IEEE Sensors, DOI:10.1109/ICSENS.2018.8589879", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "67", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "3", "Details of Research Publication": "Design of a Biorthogonal Wavelet Transform Based R-Peak Detection and Data Compression Scheme for Implantable Cardiac Pacemaker Systems, Journal of Medical Systems, DOI:10.1007/s10916-018-0953-2", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "68", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "2", "Details of Research Publication": "Reconfigurable tunnel field effect transistor exhibiting reduced ambipolar behaviour, INDICON 2016, DOI:10.1109/INDICON.2016.7838995", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "69", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "2", "Details of Research Publication": "Modeling and simulation of non-spiral coil for magnetic sensing applications, Journal of Mechanical Science and Technology, DOI:10.1007/s12206-017-1036-x", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "70", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "2", "Details of Research Publication": "Significance of non-spiral planar microcoils over spiral coils for biomedical applications, ICEE 2016, DOI:10.1109/ICEmElec.2016.8074614", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "71", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "2", "Details of Research Publication": "Non-spiral planar microcoils for biomedical applications, NEMS 2017, DOI:10.1109/NEMS.2017.8017134", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "72", "Publication Affiliation": "Others", "Academic Year": "2016", "Author Position": "3", "Details of Research Publication": "Analysing the Effects of Temperature and Doping Concentration in Silicon Based MEMS Piezoresistive Pressure Sensor, Procedia Computer Science, DOI:10.1016/j.procs.2016.07.189", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "73", "Publication Affiliation": "Others", "Academic Year": "2015", "Author Position": "2", "Details of Research Publication": "Computer aided modeling for a miniature silicon-on-insulator MEMS piezoresistive pressure sensor, Photonic Sensors, DOI:10.1007/s13320-015-0239-y", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "74", "Publication Affiliation": "Others", "Academic Year": "2015", "Author Position": "2", "Details of Research Publication": "Drift region optimization by double epitaxial layer in low and medium power rated silicon power MOSFETs, Journal of Materials Science: Materials in Electronics, DOI:10.1007/s10854-015-3271-1", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "75", "Publication Affiliation": "Others", "Academic Year": "2015", "Author Position": "3", "Details of Research Publication": "Recessed MOSFET in 28 nm FDSOI for Better Breakdown Characteristics, Proceedings of the IEEE International Conference on VLSI Design, DOI:10.1109/VLSID.2015.54", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "76", "Publication Affiliation": "Others", "Academic Year": "2015", "Author Position": "4", "Details of Research Publication": "Dimension and doping concentration based noise and performance optimization of a piezoresistive MEMS pressure sensor, Microsystem Technologies, DOI:10.1007/s00542-014-2118-7", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "77", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "2", "Details of Research Publication": "Analytical studies of vertical double gate NTFET, ICECS 2014, DOI:10.1109/ECS.2014.6892630", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "78", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "2", "Details of Research Publication": "Performance optimization of MEMS capacitive accelerometer, ICDCCom 2014, DOI:10.1109/ICDCCom.2014.7024738", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "79", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "6", "Details of Research Publication": "Ferroelectric characteristics of MFIS structure with P(VDF–TrFE)/BaTiO3 nanocomposite as ferroelectric layer, Applied Physics A, DOI:10.1007/s00339-014-8590-1", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "80", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "3", "Details of Research Publication": "Performance analysis of a silicon piezoresistive pressure sensor based on diaphragm geometry and piezoresistor dimensions, ICCPCT 2014, DOI:10.1109/ICCPCT.2014.7055011", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "81", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "3", "Details of Research Publication": "Sensitivity enhancement of a silicon Based MEMS pressure sensor by optimization of size and position of piezoresistor, ICECS 2014, DOI:10.1109/ECS.2014.6892559", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "82", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "2", "Details of Research Publication": "Verifying finite element simulation in miniature silicon based stacked diaphragm pressure sensors, Microsystem Technologies, DOI:10.1007/s00542-013-1936-3", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "83", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "3", "Details of Research Publication": "Optimized design of a stacked diaphragm MEMS pressure sensor for Tsunami warning system, GHTC-SAS 2013, DOI:10.1109/GHTC-SAS.2013.6629943", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "84", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "3", "Details of Research Publication": "Design and simulation of pressure sensor for ocean depth measurements, Applied Mechanics and Materials, DOI:10.4028/www.scientific.net/AMM.313-314.666", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "85", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "2", "Details of Research Publication": "A simulation study of multifunction double-halo field effect transistor, AICERA/ICMiCR 2013, DOI:10.1109/AICERA-ICMiCR.2013.6575978", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "86", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "3", "Details of Research Publication": "Comparison of a 30nm tunnel field effect transistor and CMOS inverter characteristics, ICACC 2013, DOI:10.1109/ICACC.2013.36", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "87", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "3", "Details of Research Publication": "Mixed mode circuit simulation of a junction less transistor and a comparative study with CMOS inverter, ICACC 2013, DOI:10.1109/ICACC.2013.99", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "88", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "2", "Details of Research Publication": "A vertical JFET with improved on to off current performance, AICERA/ICMiCR 2013, DOI:10.1109/AICERA-ICMiCR.2013.6575962", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "89", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "2", "Details of Research Publication": "Germanium-source germanium-channel silicon-drain vertical TFET for low power applications, AICERA/ICMiCR 2013, DOI:10.1109/AICERA-ICMiCR.2013.6575963", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "90", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "3", "Details of Research Publication": "Optimized design of a silicon based MEMS pressure sensor for wider range and better sensitivity, AICERA/ICMiCR 2013, DOI:10.1109/AICERA-ICMiCR.2013.6575971", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "91", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "2", "Details of Research Publication": "Performance comparison of 4H-SiC MESFETs, AICERA/ICMiCR 2013, DOI:10.1109/AICERA-ICMiCR.2013.6575965", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "92", "Publication Affiliation": "Others", "Academic Year": "2012", "Author Position": "2", "Details of Research Publication": "Feasibility study of AC bridges in MEMS pressure sensors, SCEECS 2012, DOI:10.1109/SCEECS.2012.6184727", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "93", "Publication Affiliation": "Others", "Academic Year": "2012", "Author Position": "3", "Details of Research Publication": "Finite element analysis on miniature silicon and SOI pressure sensors, INDICON 2012, DOI:10.1109/INDCON.2012.6420715", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "94", "Publication Affiliation": "Others", "Academic Year": "2012", "Author Position": "2", "Details of Research Publication": "Dual gate enhancement-mode JFET (DG-JFET) for ultra low power applications, SCEECS 2012, DOI:10.1109/SCEECS.2012.6184726", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "95", "Publication Affiliation": "Others", "Academic Year": "2012", "Author Position": "3", "Details of Research Publication": "DG-JFET for low power applications and behavior of it as a MOS capacitor, ICACC 2012, DOI:10.1109/ICACC.2012.30", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "96", "Publication Affiliation": "Others", "Academic Year": "2012", "Author Position": "3", "Details of Research Publication": "Simulation studies of tunnel field effect transistor (TFET), ICACC 2012, DOI:10.1109/ICACC.2012.31", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "97", "Publication Affiliation": "Others", "Academic Year": "2011", "Author Position": "2", "Details of Research Publication": "Simulation and comparison studies of silicon carbide and silicon power devices, IICPE 2010, DOI:10.1109/IICPE.2011.5728089", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "98", "Publication Affiliation": "Others", "Academic Year": "2008", "Author Position": "2", "Details of Research Publication": "Spinel-SiAlONs - A New Group of Silicon-Based Hard Materials, Organosilicon Chemistry V, DOI:10.1002/9783527619924.ch123", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "99", "Publication Affiliation": "Others", "Academic Year": "2008", "Author Position": "2", "Details of Research Publication": "Spinel-SiAlONs - A New Group of Silicon-Based Hard Materials, Organosilicon Chemistry, DOI:10.1002/9783527620777.ch123d", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "100", "Publication Affiliation": "Others", "Academic Year": "2005", "Author Position": "9", "Details of Research Publication": "Introduction of crystalline high-k gate dielectrics in a CMOS process, Journal of Non-Crystalline Solids, DOI:10.1016/j.jnoncrysol.2005.04.032", Indexing: "SCI", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "101", "Publication Affiliation": "Others", "Academic Year": "2005", "Author Position": "2", "Details of Research Publication": "Spinel-SiAlONs - A New Group of Silicon-Based Hard Materials, Organosilicon Chemistry Set, DOI:10.1002/9783527620777.ch123d", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "102", "Publication Affiliation": "Others", "Academic Year": "2004", "Author Position": "2", "Details of Research Publication": "Global and local electrical behaviour of crystalline praseodymium oxide high-K gate dielectric MOSFETs, Proceedings - Electrochemical Society", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "103", "Publication Affiliation": "Others", "Academic Year": "2003", "Author Position": "3", "Details of Research Publication": "Electrical characterisation of crystalline praseodymium oxide high-k gate dielectric MOSFETs, European Solid-State Device Research Conference, DOI:10.1109/ESSDERC.2003.1256859", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        },
+        {
+          title: "Patents",
+          content: [
+            { "S.No": "1", Affiliation: "Others", "Academic Year": "2020-21", "Application ID": "Patent Number: 542152", "Title of the Patent": "ELECTROENCEPHALOGRAPHY (EEG) MONITORING DEVICE", Status: "Granted" },
+            { "S.No": "2", Affiliation: "Others", "Academic Year": "2020-21", "Application ID": "202111021669", "Title of the Patent": "SELF-STARTING ENERGY HARVESTING SYSTEM", Status: "Application Hearing" },
+            { "S.No": "3", Affiliation: "Others", "Academic Year": "2021-22", "Application ID": "Patent Number: 569081", "Title of the Patent": "AN AUTOMATED SYSTEM AND METHOD FOR MONITORING HEALTH CONDITION OF A USER", Status: "Granted" },
+            { "S.No": "4", Affiliation: "Others", "Academic Year": "2023-24", "Application ID": "202311055234", "Title of the Patent": "A MULTI-LEVEL SECURITY MECHANISM FOR TRANSFERRING BIOMEDICAL HEALTH INFORMATION OF A USER", Status: "Under Examination" },
+            { "S.No": "5", Affiliation: "Others", "Academic Year": "2023-24", "Application ID": "202411022166", "Title of the Patent": "AI BASED AUTISM SPECTRUM DISORDER (ASD) CARE AGENT FOR SOCIAL INTERACTION TRAINING IN B2C BUSINESS MODE", Status: "Awaiting Examination" },
+            { "S.No": "6", Affiliation: "Others", "Academic Year": "2023-24", "Application ID": "202411022165", "Title of the Patent": "EXPLAINABLE DIGITAL TWINS (XDTS) AND ENHANCED EXPLAINABLE DIGITAL TWINS (EXDTS)", Status: "Awaiting Examination" }
+          ]
+        }
+      ]
+    },
+    "Dr. P. Ramanathan": {
+      name: "Dr. P. Ramanathan",
+      designation: "Professor & Principal",
+      email: "ramanathan@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/Dr. P. Ramanathan.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Information & Communication Engineering", Branch: "ECE", "College Name/University": "PSG College of Technology & Anna University", "Year of Passing": "2010" },
+            { "S.No": "2", Course: "M.E.", Specialization: "VLSI Design", Branch: "VLSI", "College Name/University": "PSG College of Technology", "Year of Passing": "2006" },
+            { "S.No": "3", Course: "B.E.", Specialization: "Electronics and Instrumentation", Branch: "EIE", "College Name/University": "Tamilnadu College of Engineering", "Year of Passing": "1997" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "VLSI Design & Biomedical Engineering"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=56703722200" },
+            { Identifier: "Vidwan", Link: "https://mits.irins.org/profile/460984" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "7" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "5", "Details of Research Publication": "Low Power Parallel Prefix Adders Design and Power Estimation, IEEE AECE 2025", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "5", "Details of Research Publication": "Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm, IEEE ICSSEECC 2024", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Multi-Class Skin Disease Classification: A Study of Transfer Learning Strategies, IEEE IConSCEPT 2024", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "4", "Details of Research Publication": "Estimating Lithium-Ion Battery State of Health with Least Squares Approach, IEEE ETITE 2024", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "A Compact Sierpinski Gasket Fractal Antenna for S, C, X, and Ku Band Applications, PIERC", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "6", "Details of Research Publication": "Comparative Analysis of Mice Protein Expression Data, Springer 2024", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "3", "Details of Research Publication": "Koch Snowflake Fractal Embedded Octagonal Patch Antenna with Hexagonal Split Ring, PIERC", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2019-20", "Author Position": "2", "Details of Research Publication": "Investigation of Techniques to Recognize Optimal Power Structuring of Vedic Multiplier, Springer 2019", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2018-19", "Author Position": "3", "Details of Research Publication": "Indoor Channel Characterization with Multiple Hypotheses Testing in Massive MIMO, JCTN 2019", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "10", "Publication Affiliation": "MITS", "Academic Year": "2019-20", "Author Position": "3", "Details of Research Publication": "Innovative Localization Algorithm Using the Line of Intersection Technique in WSN, JCSI 2020", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
+            { "S.No": "11", "Publication Affiliation": "MITS", "Academic Year": "2018-19", "Author Position": "2", "Details of Research Publication": "Modified Low-Power Built-in Self-test for Image Processing Application, Springer 2019", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "12", "Publication Affiliation": "Others", "Academic Year": "2017-18", "Author Position": "3", "Details of Research Publication": "Optimal test suite selection in regression testing with testcase prioritization, Springer 2017", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
+            { "S.No": "13", "Publication Affiliation": "Others", "Academic Year": "2015-16", "Author Position": "1", "Details of Research Publication": "Modified low power Wallace Tree multiplier using higher order compressors, Int. J. Electronics 2016", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "14", "Publication Affiliation": "Others", "Academic Year": "2015-16", "Author Position": "2", "Details of Research Publication": "Comparative Analysis and Comparison of Various AQM Algorithm, IJSI 2015", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "15", "Publication Affiliation": "Others", "Academic Year": "2015-16", "Author Position": "1", "Details of Research Publication": "High Performance Parallel Prefix Adder for Wider Word Lengths, GJPAM 2015", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "16", "Publication Affiliation": "Others", "Academic Year": "2014-15", "Author Position": "2", "Details of Research Publication": "Effect of BIRADS shape descriptors on breast cancer analysis, IJMEI 2015", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "17", "Publication Affiliation": "Others", "Academic Year": "2013-14", "Author Position": "2", "Details of Research Publication": "Area Efficient Carry Select Adder Using Negative Edge Triggered D-Flipflop, AMM 2014", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "18", "Publication Affiliation": "Others", "Academic Year": "2014-15", "Author Position": "2", "Details of Research Publication": "A new hybrid multiplier using Dadda and Wallace method, IEEE ECS 2014", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "19", "Publication Affiliation": "Others", "Academic Year": "2013-14", "Author Position": "3", "Details of Research Publication": "Low Power Parallel Prefix Adder, AMM 2014", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "20", "Publication Affiliation": "Others", "Academic Year": "2009-10", "Author Position": "1", "Details of Research Publication": "A novel logarithmic prefix adder with minimized power delay product", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "21", "Publication Affiliation": "Others", "Academic Year": "2008-09", "Author Position": "1", "Details of Research Publication": "Decomposition algorithm for power delay product optimization in Wallace multiplier, IEEE 2008", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "22", "Publication Affiliation": "Others", "Academic Year": "2007-08", "Author Position": "2", "Details of Research Publication": "Comparative analysis of low power high performance flip-flops in 0.13um technology, IEEE ADCOM 2007", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        },
+        {
+          title: "Patents",
+          content: [
+            { "S.No": "1", Affiliation: "Others", "Academic Year": "2017-18", "Application ID": "201717017890", "Title of the Patent": "Optimal test suite selection in regression testing with testcase prioritization", Status: "Published" }
+          ]
+        }
+      ]
+    },
+    "Dr. Sanjay Kumar C. Gowre": {
+      name: "Dr. Sanjay Kumar C. Gowre",
+      designation: "Professor",
+      email: "sanjay@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/sanjay.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Photonics", Branch: "ECE", "College Name/University": "IIT Kharagpur", "Year of Passing": "2013" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Fiber Optics", Branch: "ECE", "College Name/University": "IIT Kharagpur", "Year of Passing": "2006" },
+            { "S.No": "3", Course: "B.E.", Specialization: "E&CE", Branch: "E&CE", "College Name/University": "Gulbarga University", "Year of Passing": "1995" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Photonics, Optics, Biosensors"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=16401166700" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.co.in/citations?user=b2Vv3usAAAAJ" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "10" }
+          ]
+        },
+        {
+          title: "Patents",
+          content: [
+            { "S.No": "1", Affiliation: "Others", "Academic Year": "2021", "Application ID": "201921033981", "Title of the Patent": "Design & Development of Miniaturized 2x1 square array of Micro-strip Textile Antenna", Status: "Published" }
+          ]
+        }
+      ]
+    },
+    "Dr. S. Rajasekaran": {
+      name: "Dr. S. Rajasekaran",
+      designation: "Professor & Head",
+      email: "rajasekaran@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Control systems and Antenna", Branch: "ICE", "College Name/University": "Coimbatore Institute of Technology", "Year of Passing": "2014" },
+            { "S.No": "2", Course: "M.E.", Specialization: "Information and Communication", Branch: "ICE", "College Name/University": "Bannari Amman Institute of Technology", "Year of Passing": "2007" },
+            { "S.No": "3", Course: "B.E.", Specialization: "Electronics and Instrumentation Engineering", Branch: "EIE", "College Name/University": "Jayaram College of Engineering", "Year of Passing": "2003" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Control systems and Antenna"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57194531697" },
             { Identifier: "h-Index (As per Scopus Data)", Link: "6" }
           ]
         },
         {
-          title: "Publication Details",
+          title: "Patents",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Numerical investigation of cold-formed steel sleeve connection for channel sections subjected to combined bending and shear", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2021", "Author Position": "1", "Details of Research Publication": "Effectiveness of Web Cleat Bolted Connections for Beam-to Column CFS Sections", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "2", "Details of Research Publication": "Effect of Staggered Bolted Connections on CFS Channel Sections", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "4", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Comparative Experimental Studies on the Web Cleat Bolted CFS Beam to Column Connection", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "5", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Experimental Study on Ultimate Strength of Bolted L-Shaped Sleeve Joints between Cold-Formed Steel Channel Sections", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "6", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Structural performance on bolted sleeved connections between two CFS channel sections subjected to combined bending and shear", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "7", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Experimental study on beam-to-column clip angle bolted connection", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "8", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Performance of CFS Beam-to-Beam Bolted Connection Using Clip Angle and Flange Strip: Experimental Investigation", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "9", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Experimental investigation on clip angle bolted connection between two cold-formed steel channels", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "10", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "1", "Details of Research Publication": "Rotational behavior of cold-formed steel beams connected through clip angles", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
-          ]
-        },
-        {
-          title: "Consultancy & Testing",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Name of the Consulting Firm": "AP PRI", "Title of the Project": "Quality assessment in various engineering works", "Amount in Rs. /-": "9,000" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2023-24", "Name of the Consulting Firm": "Ap RWS", "Title of the Project": "Quality assessment in various engineering works", "Amount in Rs. /-": "9,000" },
-            { "S.No": "3", Affiliation: "MITS", "Academic Year": "2022-23", "Name of the Consulting Firm": "AP- R & B", "Title of the Project": "Quality assessment in various engineering works", "Amount in Rs. /-": "6,000" },
-            { "S.No": "4", Affiliation: "MITS", "Academic Year": "2021-22", "Name of the Consulting Firm": "AP PRI", "Title of the Project": "Quality assessment in various engineering works", "Amount in Rs. /-": "8,000" }
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Reviewer of the Journal: Thin-Walled Structures, Journal of The Institution of Engineers (India): Series A (IEIA), and Arabian Journal of Geosciences",
-            "Recognized as an NPTEL Discipline Star by Swayam NPTEL for July–December 2023",
-            "Session Chair in the Indian Structural Steel Conference held on January 06th to 08th, 2022 Organized by Structural Steel Research Group, IIT Hyderabad"
+            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2025", "Application ID": "202541080004", "Title of the Patent": "A System for Electricity Generation from Food Waste and A Method of Monitoring Using IOT", Status: "Under Examination" }
           ]
         }
       ]
     },
-    "Dr. Sudheer Kumar Yantrapalli": {
-      name: "Dr. Sudheer Kumar Yantrapalli",
+    "Dr. Nehru Kandasamy": {
+      name: "Dr. Nehru Kandasamy",
+      designation: "Professor",
+      email: "nehru@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/nehru.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Image Processing", Branch: "ECE", "College Name/University": "Anna University", "Year of Passing": "2014" },
+            { "S.No": "2", Course: "M.E.", Specialization: "Embedded Systems", Branch: "ECE", "College Name/University": "Anna University", "Year of Passing": "2006" },
+            { "S.No": "3", Course: "B.E.", Specialization: "ECE", Branch: "ECE", "College Name/University": "Mahatma Gandhi University", "Year of Passing": "2001" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Image Processing, Embedded Systems, IoT"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57201562500" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "5" }
+          ]
+        }
+      ]
+    },
+    "Dr. Murli Manohar": {
+      name: "Dr. Murli Manohar",
       designation: "Assoc. Professor",
-      email: "sudheeryantrapallik@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/e8ce6974dbf830579b5ea7d0adcb2d70.jpg",
+      email: "murlimanohar@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/murli.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
           content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Geotechnical Engineering", Branch: "Civil Engineering", "College Name/University": "National Institute of Technology, Warangal", "Year of Passing": "2019" },
-            { "S.No": "2", Course: "M.Tech.", Specialization: "Geotechnical Engineering", Branch: "Civil Engineering", "College Name/University": "National Institute of Technology, Warangal", "Year of Passing": "2013" },
-            { "S.No": "3", Course: "B.Tech.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "Koneru Lakshmiah College of Engineering (KLCE), Guntur", "Year of Passing": "2010" }
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Wireless Communications", Branch: "ECE", "College Name/University": "JNTUA", "Year of Passing": "2019" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Digital Communications", Branch: "ECE", "College Name/University": "JNTU Hyderabad", "Year of Passing": "2008" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "ECE", Branch: "ECE", "College Name/University": "JNTUA", "Year of Passing": "2005" }
           ]
         },
         {
           title: "Research Areas",
-          content: "Ground improvement Techniques, Geo - Environmental Engineering, Composite materials, sustainable construction materials."
+          content: "Wireless Communications, Signal Processing"
         },
         {
           title: "Research Identifiers",
           content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57205500699" },
-            { Identifier: "Vidwan", Link: "https://mits.irins.org/profile/272691" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.co.in/citations?hl=en&user=CJqzh98AAAAJ&view_op=list_works&sortby=pubdate" },
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57208987600" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "4" }
+          ]
+        }
+      ]
+    },
+    "Dr. V. Jayaprakasan": {
+      name: "Dr. V. Jayaprakasan",
+      designation: "Assoc. Professor & Associate Dean",
+      email: "jayaprakasan@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/jayaprakasan.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "VLSI Design", Branch: "ECE", "College Name/University": "Anna University", "Year of Passing": "2016" },
+            { "S.No": "2", Course: "M.E.", Specialization: "VLSI Design", Branch: "ECE", "College Name/University": "Anna University", "Year of Passing": "2009" },
+            { "S.No": "3", Course: "B.E.", Specialization: "ECE", Branch: "ECE", "College Name/University": "Anna University", "Year of Passing": "2004" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "VLSI Design, Low Power Circuits"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57193789000" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "6" }
+          ]
+        }
+      ]
+    },
+    "Dr. K. Sathesh": {
+      name: "Dr. K. Sathesh",
+      designation: "Assoc. Professor",
+      email: "satheshk@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/sathesh.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Microwave Engineering", Branch: "ECE", "College Name/University": "Anna University", "Year of Passing": "2015" },
+            { "S.No": "2", Course: "M.E.", Specialization: "Microwave and Optical Engineering", Branch: "ECE", "College Name/University": "Anna University", "Year of Passing": "2008" },
+            { "S.No": "3", Course: "B.E.", Specialization: "ECE", Branch: "ECE", "College Name/University": "Madras University", "Year of Passing": "2003" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Microwave Engineering, Antennas"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57194531200" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "5" }
+          ]
+        }
+      ]
+    },
+    "Dr. Maneesh Kumar Singh": {
+      name: "Dr. Maneesh Kumar Singh",
+      designation: "Assoc. Professor",
+      email: "maneesh@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/maneesh.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Signal Processing", Branch: "ECE", "College Name/University": "IIT Delhi", "Year of Passing": "2018" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Signal Processing", Branch: "ECE", "College Name/University": "IIT Delhi", "Year of Passing": "2012" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "ECE", Branch: "ECE", "College Name/University": "UP Technical University", "Year of Passing": "2008" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Signal Processing, Machine Learning"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57205678000" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "7" }
+          ]
+        }
+      ]
+    },
+    "Dr. Grande Naga Jyothi": {
+      name: "Dr. Grande Naga Jyothi",
+      designation: "Assoc. Professor",
+      email: "jyothi@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/jyothi.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Communication Systems", Branch: "ECE", "College Name/University": "JNTUA", "Year of Passing": "2020" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Communication Systems", Branch: "ECE", "College Name/University": "JNTUA", "Year of Passing": "2012" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "ECE", Branch: "ECE", "College Name/University": "JNTUA", "Year of Passing": "2009" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Communication Systems, Wireless Networks"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57211563000" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "3" }
+          ]
+        }
+      ]
+    },
+    "Dr. Rakesh Nath Tiwari": {
+      name: "Dr. Rakesh Nath Tiwari",
+      designation: "Assoc. Professor",
+      email: "rakesh@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/1120faf5d8ab8c822818d9c4034e8f1f.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Electronics and Communication Engineering", Branch: "ECE", "College Name/University": "Uttarakhand Technical University", "Year of Passing": "2020" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Optical and Wireless Communication Technology", Branch: "ECE", "College Name/University": "Jaypee University of Information Technology", "Year of Passing": "2008" },
+            { "S.No": "3", Course: "M.Sc.", Specialization: "Electronics", Branch: "Electronics", "College Name/University": "Deen Dayal Upadhyaya Gorakhpur University", "Year of Passing": "2004" },
+            { "S.No": "4", Course: "B.Sc.", Specialization: "Electronics & Physics", Branch: "Electronics", "College Name/University": "University of Allahabad", "Year of Passing": "2002" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Communication and Computational Electromagnetic, Antenna Theory, MIMO Antennas for 5G and 6G Communications, Implantable and Wearable Antennas, mmWave, THz"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57198002672" },
+            { Identifier: "Vidwan", Link: "https://mits.irins.org/profile/295615" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=WiphX9oAAAAJ" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "18" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "Multiband flexible MIMO antenna for NB-IoT/ISM/5G and wearable applications", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" }
+          ]
+        },
+        {
+          title: "Patents",
+          content: [
+            { "S.No": "1", Affiliation: "Others", "Academic Year": "2024", "Application ID": "202311004785", "Title of the Patent": "A loop-based ultraminiature low-profile ultrawideband capsule antenna device", Status: "Granted" }
+          ]
+        },
+        {
+          title: "Awards/Achievements",
+          content: [
+            "Received Best Researcher Award (2023-2024), MITS",
+            "Best research paper award 2020, AEU-International Journal of Electronics and Communications"
+          ]
+        }
+      ]
+    },
+    "Dr. Vivek Jain": {
+      name: "Dr. Vivek Jain",
+      designation: "Asst. Professor",
+      email: "vivekjain@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/vivek.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D", Specialization: "Electronics and Communication (VLSI Design)", Branch: "ECE", "College Name/University": "Devi Ahilya Vishwavidyalaya", "Year of Passing": "2021" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Microelectronics & VLSI Design", Branch: "ECE", "College Name/University": "S.G.S.I.T.S., Indore", "Year of Passing": "2010" },
+            { "S.No": "3", Course: "B.E.", Specialization: "Electronics & Communication Engineering", Branch: "ECE", "College Name/University": "HCET, Jabalpur", "Year of Passing": "2002" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "VLSI Design, Nano Electronics"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57211563505" },
+            { Identifier: "Vidwan", Link: "https://mits.irins.org/profile/461210" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.co.in/citations?user=YpWyZgUAAAAJ" },
             { Identifier: "h-Index (As per Scopus Data)", Link: "2" }
           ]
         },
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "3", "Details of Research Publication": "Experimental Investigation and Optimization of Cellular Light Weight Concrete Using foam content and Prediction Using Response Surface Methodology", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "2", "Details of Research Publication": "Emerging Management Tools in Civil Engineering: Trends, Technologies, and Transformations", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "-" },
-            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "A study on de-contamination of dairy wastewater using natural coagulants", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "1", "Details of Research Publication": "Sudy on Influence of Brine Solution on swelling Behaviour of Expansive soil", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2021-22", "Author Position": "2", "Details of Research Publication": "Desiccation Induced Cracking Characteristics of Locally Available Soils in Warangal", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2020-21", "Author Position": "2", "Details of Research Publication": "A Study on Influence of Organic Ligand on the Adsorption of Lead by Clayey Soil", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2019-20", "Author Position": "1", "Details of Research Publication": "A Study on Influence of Organic Ligand on the Adsorption of Lead by Clayey Soil", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "8", "Publication Affiliation": "Others", "Academic Year": "2018-19", "Author Position": "4", "Details of Research Publication": "Permanent deformation behaviour of black cotton soil treated with calcium carbide residue", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "9", "Publication Affiliation": "Others", "Academic Year": "2018-19", "Author Position": "1", "Details of Research Publication": "A Study on the Influence of Heavy Metals on Crack Intensity Factor and Hydraulic Conductivity of Locally Available Soils", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "10", "Publication Affiliation": "Others", "Academic Year": "2017-18", "Author Position": "2", "Details of Research Publication": "A Study on Influence of pH and Organic Chemical on the Retention Capacity of Red Earth", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "11", "Publication Affiliation": "Others", "Academic Year": "2016 - 17", "Author Position": "1", "Details of Research Publication": "A Study on influence of organic ligands on migration of heavy metals through compacted clayey soil", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "12", "Publication Affiliation": "Others", "Academic Year": "2016 - 17", "Author Position": "1", "Details of Research Publication": "A study on influence of real municipal solid waste leachate on properties of soils in Warangal, India", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" }
-          ]
-        },
-        {
-          title: "Research Projects & Events",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-2025", "Funded Project /Event": "AICTE – VAANI", Role: "Coordinator", "Title of the Project/Event": "The Role of AI in Smart City and Mobility in India", "Amount in Rs. /-": "2,00,000", "Funding Agency": "AICTE" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Design and Analysis of an Energy-Efficient Full Adder Using Reversible Charge Recovery Logic", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
           ]
         },
         {
           title: "Patents",
           content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "431535-001", "Title of the Patent": "SOIL CORE SAMPLE COLLECTOR", Status: "Published" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "437594-001", "Title of the Patent": "AUTOMATED AGGREGATES IMPACT TESTING MACHINE", Status: "Published" }
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Name of the Consulting Firm": "NHAI – MMLP", "Title of the Project": "Geotechnical Investigation at NHAU – MMLP park", "Amount in Rs. /-": "10,00,000" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2024-25", "Name of the Consulting Firm": "AP PRI", "Title of the Project": "Quality assessment in various engineering works", "Amount in Rs. /-": "15,00,000" },
-            { "S.No": "3", Affiliation: "MITS", "Academic Year": "2023-24", "Name of the Consulting Firm": "Ap RWS", "Title of the Project": "Geotechnical Investigation in proposed Government schools", "Amount in Rs. /-": "15,00,000" },
-            { "S.No": "4", Affiliation: "MITS", "Academic Year": "2023-24", "Name of the Consulting Firm": "AP PRI", "Title of the Project": "Quality assessment in various engineering works", "Amount in Rs. /-": "10,00,000" },
-            { "S.No": "5", Affiliation: "MITS", "Academic Year": "2022-23", "Name of the Consulting Firm": "Ap R & B", "Title of the Project": "Geotechnical Investigation in proposed Government offices", "Amount in Rs. /-": "10,00,000" },
-            { "S.No": "6", Affiliation: "MITS", "Academic Year": "2022-23", "Name of the Consulting Firm": "AP PRI", "Title of the Project": "Quality assessment in various engineering works", "Amount in Rs. /-": "10,00,000" },
-            { "S.No": "7", Affiliation: "MITS", "Academic Year": "2021-22", "Name of the Consulting Firm": "AP Irrigation", "Title of the Project": "Quality assessment in various engineering works  in Mudivedu Reservoir", "Amount in Rs. /-": "5,00,000" },
-            { "S.No": "8", Affiliation: "MITS", "Academic Year": "2021-22", "Name of the Consulting Firm": "AP PRI", "Title of the Project": "Quality assessment in various engineering works", "Amount in Rs. /-": "10,00,000" },
-            { "S.No": "9", Affiliation: "MITS", "Academic Year": "2020-21", "Name of the Consulting Firm": "HPCl", "Title of the Project": "Quality Monitoring and assessment for Fuel stations", "Amount in Rs. /-": "2,00,000" },
-            { "S.No": "10", Affiliation: "MITS", "Academic Year": "2020-21", "Name of the Consulting Firm": "AP PRI", "Title of the Project": "Quality assessment in various engineering works  and Quality assessment in various engineering works", "Amount in Rs. /-": "10,00,000" }
-          ]
-        }
-      ]
-    },
-    "Dr. Swapneel S. Jaiswal": {
-      name: "Dr. Swapneel S. Jaiswal",
-      designation: "Sr. Asst. Professor",
-      email: "jaiswals@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/f8dd76e2193a70ab509f589ac9f34df6.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Urban and Rural Transportation", Branch: "Civil", "College Name/University": "Indian Institute of Technology, Roorkee", "Year of Passing": "2020" },
-            { "S.No": "2", Course: "M.Plan.", Specialization: "Transportation Planning", Branch: "Civil", "College Name/University": "School of Planning & Architecture (SPA), New Delhi", "Year of Passing": "2009" },
-            { "S.No": "3", Course: "B.E.", Specialization: "Civil Engineering", Branch: "Civil", "College Name/University": "Dr. Babasaheb Ambedkar Marathwara University, Aurangabad", "Year of Passing": "2005" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Urban and Rural Mobility, Transportation planning and Engineering, Accessibility, Persons with Disability and Elderlies"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=56201871600" },
-            { Identifier: "h-Index (As per Scopus Data)", Link: "1" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2014-15", "Author Position": "", "Details of Research Publication": "Universal Design for Indian Public Transportation Systems", Indexing: "SCI", Publication: "Conference Proceedings", "Journal Quartile": "Q3" }
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2023-24", "Name of the Consulting Firm": "VERCOS, Lucknow", "Title of the Project": "Geo-Tech survey for Anantapur Multi-Modal Logistic Project at Anantapur, Andhra Pradesh", "Amount in Rs. /-": "8,39,000" }
-          ]
-        }
-      ]
-    },
-    "Dr. Priyam Nath Bhowmik": {
-      name: "Dr. Priyam Nath Bhowmik",
-      designation: "Asst. Professor",
-      email: "bhowmikpn@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/273e0be56c4bcccaaaedae215d517144.jpeg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Transportation Engineering", Branch: "Civil Engineering", "College Name/University": "National Institute of Technology, Silchar", "Year of Passing": "2022" },
-            { "S.No": "2", Course: "M.Tech.", Specialization: "Transportation Engineering", Branch: "Civil Engineering", "College Name/University": "National Institute of Technology, Silchar", "Year of Passing": "2017" },
-            { "S.No": "3", Course: "B.E.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "Annamalai University, Tamil Nadu", "Year of Passing": "2013" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Pavement Materials; ML Modelling in Pavement; Reliability Analysis of Pavement; Traffic Flow Modelling; AI and ML in Transportation Engineering; Nanomaterials and applications in Pavement."
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57209850292" },
-            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/287985" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.co.in/citations?user=PHlqJ6oAAAAJ&hl=en&oi=ao" },
-            { Identifier: "h-Index (As per Scopus Data)", Link: "4" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Reliability-Based Pavement Design in Hot Climates: A Probabilistic Framework Using Environmental Damage Index", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Multimodal AI framework for forecasting tree cover loss and carbon emissions in India: integrated time-series modeling, spatial volatility mapping, and explainable causal analysis", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Eco-Modified asphalt binders: enhancing pavement longevity with Delonix seed extract and optimized crumb rubber granulometry", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "4", "Details of Research Publication": "Synergistic use of recycled aggregates and waste glass powder for sustainable concrete: mechanical properties, durability performance, and microstructural insights", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "A Scalable Machine Learning Framework for Hydrological Water Quality Monitoring Using Physicochemical and Microbial Parameters", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "AI-Driven Optimization of Nano-modified Bitumen: CO2 reduction Efficiency Through Machine Learning and Optimization Framework", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Addressing uncertainty in pavement performance prediction: a quasi-Monte Carlo simulation-based reliability approach", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "A hybrid machine learning framework for predicting moisture-induced pavement failure: integrating sensitivity analysis and data augmentation", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "A study on de-contamination of dairy wastewater using natural coagulants", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "10", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "4", "Details of Research Publication": "Enhancing Concrete Sustainability: Synergistic Effects of Individual and Dual Treatments on Recycled Coarse Aggregate from Construction and Demolition Waste", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "11", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "1", "Details of Research Publication": "Remarkable Reduction of Carbon Dioxide Emission from Crumb Rubber Modified Bitumen by Introducing Hydroxyapatite Encapsulated Magnesium Ferrite (HAP/MgFe2O4) Nanocomposite in Varying Proportions", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "12", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Optimizing Agricultural Waste By-Products: A Machine Learning Approach for Sustainable Construction Practices", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "13", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Optimizing concrete mix proportions with zeolite, GGBS, and CDW: a data-driven approach integrating experimental analysis and machine learning models", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "14", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Study on Influence of Brine Solution on swelling Behaviour of Expansive soil", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "15", "Publication Affiliation": "Others", "Academic Year": "2021-22", "Author Position": "1", "Details of Research Publication": "Layered Double Hydroxide for Carbon dioxide mitigation from Bitumen and formation of Carbonic acid: A Step toward Achieving Greener Pavements", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "16", "Publication Affiliation": "Others", "Academic Year": "2020-21", "Author Position": "1", "Details of Research Publication": "Iron-polyphenol complex nanoparticles for removal of greenhouse gas emission from bitumen and formation of paraffins", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" }
-          ]
-        },
-        {
-          title: "Patents",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2025-26", "Application ID": "466382-001 Indian Design Patent", "Title of the Patent": "Drone-based agricultural health mapping system using GIS and Remote Sensing.", Status: "FER generated on 20/11/2025" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "437594-001 Indian Design Patent", "Title of the Patent": "Patent    Automated aggregates impact Testing machine", Status: "Granted" },
-            { "S.No": "3", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "431535-001 Indian Design Patent", "Title of the Patent": "Soil core sample collector", Status: "Granted" },
-            { "S.No": "4", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "398428-001 Indian Design Patent", "Title of the Patent": "Digital concrete mixing device", Status: "Granted" },
-            { "S.No": "5", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "202321057245 Indian Utility Patent", "Title of the Patent": "Develop Railway Sleeper using Recycled Plastic", Status: "Published" },
-            { "S.No": "6", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "202341076651 Indian Utility Patent", "Title of the Patent": "Evaluation of High-Volume Fly Ash Concrete for Rigid Pavement Overlays", Status: "Published" },
-            { "S.No": "7", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "202441001209 Indian Utility Patent", "Title of the Patent": "Hybrid Power Generation by using Road Speed Breakers", Status: "Published" },
-            { "S.No": "8", Affiliation: "Others", "Academic Year": "2023-24", "Application ID": "DE 20 2022 105 413 U1 German Utility Patent", "Title of the Patent": "System to reduce carbon dioxide emissions from crumb rubber modified bitumen by hydroxyapatite encapsulated magnesium ferrite nanocomposite", Status: "Granted" }
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Name of the Consulting Firm": "PLR Constructions", "Title of the Project": "Quality testing of Aggregates", "Amount in Rs. /-": "1,00,000" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2023-24", "Name of the Consulting Firm": "PLR Constructions and R&B", "Title of the Project": "Quality testing of Aggregates, Marshall Mix Design, Marshall Test", "Amount in Rs. /-": "2,00,000" },
-            { "S.No": "3", Affiliation: "MITS", "Academic Year": "2022-23", "Name of the Consulting Firm": "PLR Constructions", "Title of the Project": "Quality testing of aggregates", "Amount in Rs. /-": "1,00,000" }
+            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "202521031900", "Title of the Patent": "E-Governance and Public Administration in the Digital Era", Status: "Published" }
           ]
         },
         {
           title: "Awards/Achievements",
           content: [
-            "Delivered a seminar talk (online) titled \"Neuro-Responsive Traffic Systems: Integrating Cognitive Modeling into Smart Mobility Planning\" focusing on cognitive science integration in smart traffic systems at Haldia Institute of Technology, West Bengal (24th Apr 2025) under the Distinguished Lecture Series in Advanced Transportation Research.",
-            "Distinguished Speaker – Online Seminar: Delivered an expert talk on the topic \"Beyond Access: Reimagining Mobility through the Lens of Social Equity and Everyday Lives\" highlighting on inclusive urban mobility and transport equity as part of the HCN Global Webinar Series hosted by Thammasat University at the Episode 2 of Transport Equity in Action: Serving the Needs of the Vulnerable and Marginalized, Health Cities Network (HCN), Thailand (16th June 2025).",
-            "Delivered an Expert Talk on \"Designing Climate-Resilient Pavements: Integrating Environmental Damage Index with Reliability\" in the National Seminar on \"Recent Geological and Geotechnical Understanding in Civil Engineering\" organized by the Department of Civil Engineering, Haldia Institute of Technology, West Bengal, held in Hybrid Mode from 8th to 12th September 2025.",
-            "Editorial Board Member – International Journal of Environment and Waste Management (IJEWM)",
-            "Editorial Board Member – International Journal of Environmental Engineering (IJEE)",
-            "Editorial Board Member – Journal of Advances in Civil Engineering Researches (JACER)",
-            "Associate Editor- International Journal of Transportation Engineering and Technology (IJTES)"
-          ]
-        }
-      ]
-    },
-    "Dr. T. Venkatesh Varma": {
-      name: "Dr. T. Venkatesh Varma",
-      designation: "Asst. Professor",
-      email: "venkateshvaramt@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/varma.JPG",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "Postdoctoral Fellow", Specialization: "Mechanical Engineering", Branch: "Mechanical Engineering", "College Name/University": "Technion - Israel Istitute of Technology, Haifa, Israel", "Year of Passing": "June 2023 - Feb 2026" },
-            { "S.No": "2", Course: "Ph.D.", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "Indian Institute of Technology Indore", "Year of Passing": "2023" },
-            { "S.No": "3", Course: "M.Tech.", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "Indian Institute of Technology Bhubaneswar", "Year of Passing": "2019" },
-            { "S.No": "4", Course: "B.Tech.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "College of Engineering and Technology, Bhubaneswar", "Year of Passing": "2015" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Computational mechanics, Mechanical metamaterials, Fracture and failure mechanics, Evolutionary Optimisation"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57217862023" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=AxLd5RcAAAAJ&hl=en" },
-            { Identifier: "h-Index (As per Scopus Data)", Link: "4" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2025-26", "Author Position": "5", "Details of Research Publication": "Distinct exceptional points in Hermitian Phononic Laminates", Indexing: "SCI", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "2", "Publication Affiliation": "Others", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Redirecting Crack with Learning-based Approach for Structural Durability", Indexing: "SCI", Publication: "Book Chapter", "Journal Quartile": "" },
-            { "S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Computational Analysis of Truss Optimization Methods", Indexing: "SCI", Publication: "Book Chapter", "Journal Quartile": "" },
-            { "S.No": "4", "Publication Affiliation": "Others", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Effect of nonlocality on the dispersion relations of mechanical metamaterials", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "5", "Publication Affiliation": "Others", "Academic Year": "2024-25", "Author Position": "3", "Details of Research Publication": "Third-order exceptional points and frozen modes in planar elastic laminates", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "6", "Publication Affiliation": "Others", "Academic Year": "2023-24", "Author Position": "2", "Details of Research Publication": "Effect of Crystal Orientation and Crystallographic Anisotropy on Shear Band Formation During Ductile Fracture in Fe Single Crystals", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "7", "Publication Affiliation": "Others", "Academic Year": "2022-23", "Author Position": "1", "Details of Research Publication": " A numerical study to assess the role of pre-stressed inclusions on enhancing fracture toughness and strength of periodic composites", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "8", "Publication Affiliation": "Others", "Academic Year": "2021-22", "Author Position": "1", "Details of Research Publication": "The Influence of Clamping, Structure Geometry, and Material on Seismic Metamaterial Performance", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "9", "Publication Affiliation": "Others", "Academic Year": "2020-21", "Author Position": "1", "Details of Research Publication": "Designing polymer metamaterial for protective armor: a coarse-grained formulation", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "10", "Publication Affiliation": "Others", "Academic Year": "2019-20", "Author Position": "1", "Details of Research Publication": "Buckling Restrained Sizing and Shape Optimization of Truss Structures", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" }
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Visiting scholar to Imperial College London, London (UK) during the doctoral studies (2022)",
-            "Students' representative in the DPG (Discipline of Post-graduate) committee at IIT Indore (2022)",
-            "Received CET merit scholarship based on academic merit performance during undergraduate level (2011-2015)"
-          ]
-        }
-      ]
-    },
-    "Dr. Nakkeeran G": {
-      name: "Dr. Nakkeeran G",
-      designation: "Asst. Professor",
-      email: "nakkeerang@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/Dr. Nakkeeran G.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Construction Engineering and Management", Branch: "Civil Engineering", "College Name/University": "SRM Institute of Science and Technology", "Year of Passing": "2024" },
-            { "S.No": "2", Course: "M.E.", Specialization: "Quality Engineering and Management", Branch: "Civil Engineering", "College Name/University": "College of Engineering, Anna University", "Year of Passing": "2018" },
-            { "S.No": "3", Course: "B.E.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "GKM College Of Engineering and Technology", "Year of Passing": "2015" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Product development, Carbon sequestration, Carbon Capture, 3D concretes, characterization studies, Building Physics, Optimization and prediction techniques, Machine Learning, Building Energy Analysis, Building Materials"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57392076900" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?hl=en&user=nXl3l3AAAAAJ&view_op=list_works&sortby=pubdate" },
-            { Identifier: "h-Index (As per Scopus Data)", Link: "13" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Evaluation of net-zero materials in mortar bricks with predictive modelling using random forest and gradient boosting techniques", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Impact of biochar on strength, durability, and carbon sequestration in cement based materials", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Mechanical properties and machine learning analysis of concrete incorporating waste glass as coarse aggregate.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Mechanical and thermal performance of bio-brick masonry with hydrated lime mortar at high temperature", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Adaptive neuro-fuzzy inference system optimization of natural rubber latex modified concrete's mechanical Properties.", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "ANFIS modelling of the strength properties of natural rubber latex modified concrete.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Artificial neural network modeling to predict compressive strength and static modulus for self-compacting concrete using different percentage of recycled concrete aggregate", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Experimental and ANN Analysis of Cold-Formed Steel Build-Up Columns with and without Intermediate Web Stiffeners under Axial Compression.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Mechanical and sustainability performance of concrete incorporated limestone powder, recycled ceramic aggregates, and coconut fibers.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "10", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "Exploring the Application of Lean Tools for Sustainable Construction: A Strategy Based on Analytic Hierarchy Process Model.", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
-            { "S.No": "11", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Machine learning-based destructive and non-destructive testing of paver block using fly ash and polyvinyl chloride into sustainable pedestrians.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "12", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Optimization of waste plastic fiber concrete with recycled coarse aggregate using RSM and ANN.", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "13", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Evaluation of SCBA-replaced cement for carbon credits and reduction in CO2 emissions", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "14", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Thermal distribution of paver block with machine learning optimized design with alternative eco-friendly materials.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "15", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Enhancing the mechanical properties' performances coconut fiber and CDW composite in paver block: multiple AI techniques with a Performance analysis", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "16", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Evaluating the use of recycled fine aggregates in 3D printing: a systematic review.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "17", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Innovative approaches to sustainable construction: a detailed study of rice husk ash as an eco-friendly substitute in cement production.", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "18", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Recycling glass waste in mortar: a sustainable approach to enhancing strength and density.", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "19", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Optimization and prediction of paver block properties with ceramic waste as fine aggregate using response surface methodology.", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "20", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Recycling glass waste into concrete aggregates: enhancing mechanical properties and sustainability", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "21", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Mechanical properties optimization and cost analysis of agricultural waste as an alternative in brick production.", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "22", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Investigating the potential of waste glass in paver block production using RSM", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "23", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Soft computing techniques for predicting the compressive strength properties of fly ash geopolymer concrete using regression-based machine learning approaches.", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
-            { "S.No": "24", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "5", "Details of Research Publication": "Optimization of cassava peel ash concrete using central composite design method", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "25", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Modeling the influence of bacteria concentration on the mechanical properties of self-healing concrete (SHC) for sustainable bio-concrete structures.", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "26", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "7", "Details of Research Publication": "Prediction of steel plate-based damper for improving the behavior of concentrically braced frames based on RSM and ML approaches for sustainable structures", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "27", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Machine learning optimization of bio-sandcrete brick modelling using response surface methodology", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "28", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "4", "Details of Research Publication": "Review on electronic waste used as construction materials-a scientometric analysis", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "29", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Soft Computing Techniques for Predicting the Properties of Raw Rice Husk Concrete Bricks Using Regression-Based Machine Learning Approaches", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "30", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "4", "Details of Research Publication": "Numerical Analysis and Parametric Study on Multiple Degrees-of-Freedom Frames", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "31", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "7", "Details of Research Publication": "Machine learning optimization and prediction of waste glass used as partial replacement of coarse aggregate in concrete.", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "32", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Comparative Study on Net-zero Masonry Walls Made of Clay and Fly Ash Bricks and Grouts/Mortars/Stuccos with The Effect of Super Fine Fly Ash Blended Cement – Low Carbon Cement", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "33", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Predicting an Energy Use Intensity and Cost of Residential Energy Efficient Buildings Using Various Parameters: ANN Analysis", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "34", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Synergistic effect of Alliance Contract and Lean Methodology on project performance measures in the construction industry: SEM Analysis.", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "35", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Machine learning application to predict the Mechanical properties of Glass Fiber mortar.", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "36", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Experimental Investigation And Optimization Of Lightweight Bricks Developed With Vermiculite.", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "37", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Developing lightweight concrete bricks by replacing fine aggregate with vermiculite: a regression analysis prediction approach", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "38", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Prediction of cement mortar strength by replacement of hydrated lime using RSM and ANN", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "39", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "A Scientometric Analysis Review on Agricultural Wastes Used as Building Materials", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "40", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "2", "Details of Research Publication": "Evaluation and optimization of lean waste in construction industries", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
-            { "S.No": "41", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "1", "Details of Research Publication": "Optimization and Performance Analysis of Residential Building for Sustainable Energy Design Through BIM", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "42", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Evaluation of Failure Mode Analysis and Strength Behavior of Fly Ash Brick Masonry Prisms", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "Q3" },
-            { "S.No": "43", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Scientometric Analysis of Building Energy Analysis in the Construction During 2005–2022", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "Q3" },
-            { "S.No": "44", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "An Ergonomic Risk Evaluation of the Construction Industry Based on Specific Factors", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "Q3" },
-            { "S.No": "45", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Prediction Of Mechanical Properties of the Cement Brick with Bio-Aggregate.", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "Q3" },
-            { "S.No": "46", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Identification Of the Lean Tools Used in The Tamil Nadu Construction Industry.", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "Q3" }
-          ]
-        },
-        {
-          title: "Patents",
-          content: [
-            { "S.No": "1", Affiliation: "Others", "Academic Year": "2023-24", "Application ID": "202441052543 A", "Title of the Patent": "Brick Composition and A Process for Its Preparation", Status: "Published & Under Examination" },
-            { "S.No": "2", Affiliation: "Others", "Academic Year": "2021-22", "Application ID": "202241057183 A", "Title of the Patent": "Machine Learning Techniques Integrated with Concrete for Analyzing and Predicting the Properties", Status: "Published" },
-            { "S.No": "3", Affiliation: "Others", "Academic Year": "2021-22", "Application ID": "202241070564 A", "Title of the Patent": "Development of Bio Bricks Using Agricultural Waste (Raw Groundnut Shell)", Status: "Published" },
-            { "S.No": "4", Affiliation: "Others", "Academic Year": "2022-23", "Application ID": "202341000247 A", "Title of the Patent": "Usage of Waste Printed Circuit Board (WPCB) As Fiber in Paver Block", Status: "Published" },
-            { "S.No": "5", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "437599-001 Design Patent", "Title of the Patent": "ZIP LOCK INTERLOCKING BRICK", Status: "Granted" },
-            { "S.No": "6", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "428578-001 Design Patent", "Title of the Patent": "INTERLOCKED HEXAGONAL HOLLOW BLOCK", Status: "Granted" },
-            { "S.No": "7", Affiliation: "MITS", "Academic Year": "2024-25", "Application ID": "428580-001 Design Patent", "Title of the Patent": "GRIP-TITE INTERLOCKING BRICKS", Status: "Granted" },
-            { "S.No": "8", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "427507-001 Design Patent", "Title of the Patent": "C-SHAPE INTERLOCKING PAVER BLOCK", Status: "Granted" },
-            { "S.No": "9", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "429097-001 Design Patent", "Title of the Patent": "H-SHAPED INTERLOCKING PAVER BLOCK", Status: "Granted" },
-            { "S.No": "10", Affiliation: "MITS", "Academic Year": "2023-24", "Application ID": "427544-001 Design Patent", "Title of the Patent": "HEAD-FOOT INTERLOCKING PAVER BLOCK", Status: "Granted" },
-            { "S.No": "11", Affiliation: "Others", "Academic Year": "2021-22", "Application ID": "379138-001 Design Patent", "Title of the Patent": "MULTIPURPOSE CONCRETE BLOCK", Status: "Granted" },
-            { "S.No": "12", Affiliation: "Others", "Academic Year": "2021-22", "Application ID": "378580-001 Design Patent", "Title of the Patent": "HEXAGONAL HOLLOW BRICKS", Status: "Granted" }
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", "Name of the Consulting Firm": "Irrigation Department", "Title of the Project": "Mix Design and Concrete Testing", "Amount in Rs. /-": "50,000" }
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Mentor and Director - GEIA ENTERPRISES PRIVATE LIMITED,AP,India",
-            "Mentor and Director - EZZO MANUFACTURER PRIVATE LIMITED,AP,India",
-            "Mentor and Director - GUIDEMENEXT PRIVATE LIMITED,AP,India",
-            "Editor Team in Scientific Report (SCIE-3.9)-Q1 Springer Nature Journal",
-            "Special Issue Editor - Frontiers in Built Environment – SPECIAL ISSUE \"Advancements in Sustainable Urban Development: Integrating Technology and Design\""
-          ]
-        }
-      ]
-    },
-    "Dr. Nunna Tagore Sai Priya": {
-      name: "Dr. Nunna Tagore Sai Priya",
-      designation: "Asst. Professor",
-      email: "tagoresaiprim@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/nunnapriya.png",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Community and Regional Planning", Branch: "Infrastructure Design and Management", "College Name/University": "IIT Kharagpur", "Year of Passing": "2024" },
-            { "S.No": "2", Course: "MPlan", Specialization: "Urban Planning", Branch: "Architecture and Planning", "College Name/University": "NIT Calicut", "Year of Passing": "2017" },
-            { "S.No": "3", Course: "B.Tech.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "Bapatla Engineering College, Acharya Nagarjuna University", "Year of Passing": "2015" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Land Use Dynamics, Spatial Planning, Sustainable Built-environment"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57209978292" },
-            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/623119/NjIzMTE5" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=hOAk1-kAAAAJ&hl=en" },
-            { Identifier: "h-Index (As per Scopus Data)", Link: "2" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "A Scalable Machine Learning Framework for Hydrological Water Quality Monitoring Using Physicochemical and Microbial Parameters", Indexing: "SCIE, SCOPUS", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "2", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Urban Growth Patterns and Spatial Sustainability in Coastal Cities: The Case of Visakhapatnam in India", Indexing: "SCOPUS", Publication: "Book Chapter", "Journal Quartile": "" },
-            { "S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "1", "Details of Research Publication": "Understanding the impact of tourism on spatial growth for sustainable development of tourist destinations through the measure of land use efficiency", Indexing: "ESCI, SCOPUS", Publication: "Article", "Journal Quartile": "Q2" },
-            { "S.No": "4", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Impact of tourism on spatial growth of the destination", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "" }
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Associate member of the Indian Institute of Town Planners (ITPI) since 2021.",
-            "Scientist member in the Global Land Programme since 2024",
-            "Received Institute Travel grants to present research work at two international conferences in 2019, 2022",
-            "Received Student Travel grant at AGU Fall meeting 2022, held in Chicago",
-            "Received MHRD Fellowship during M.Plan (2015 – 2017) and Ph.D (2017 – 2023)",
-            "Qualified in GATE in 2015 with AIR 6262"
-          ]
-        }
-      ]
-    },
-    "Dr. Imran Kuttagola": {
-      name: "Dr. Imran Kuttagola",
-      designation: "Asst. Professor",
-      email: "imrank@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/imran-Photoroom(1).png",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "National Institute of Technology, Karnataka", "Year of Passing": "2025" },
-            { "S.No": "2", Course: "M.Tech", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "National Institute of Technology, Karnataka", "Year of Passing": "2020" },
-            { "S.No": "3", Course: "B.Tech.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "MB University", "Year of Passing": "2013" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Sustainable Geopolymer Concrete, Lightweight Concrete, Fracture and Fatigue Investigation, Concrete 3D printing"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=58094301400" },
-            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/656148" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=EqoYvewAAAAJ" },
-            { Identifier: "h-Index (As per Scopus Data)", Link: "1" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Application of Taguchi's optimization techniques for enhancing the fracture characteristics and brittleness of self-compacting alkali-activated concrete. Theoretical and Applied Fracture Mechanics, 138, 104931.", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "2", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Development and performance evaluation of self-compacting lightweight alkali-activated concrete incorporating hydroton clay balls. Structures, 71, 108124.", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q1" },
-            { "S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "5", "Details of Research Publication": "Experimental study on shear reinforced and shear deficient RC beams subjected to preloading and wrapping with CFRP sheets. Materials Today: Proceedings", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "4", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Numerical study on the behavior of RC beams by using GFRP bars as an alternate to steel bars. Materials Today: Proceedings 88, 66-70.", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "5", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Numerical Study on Static and Fatigue Behavior of Alkali-Activated Fly Ash Concrete Modelled using Concrete Damage Plasticity (CDP) Model. IOP Conference Series: Earth and Environmental Science 1387 (1), 012014", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "6", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "4", "Details of Research Publication": "Application of fractal analysis to characterise the fracture and mechanical properties of concrete. IOP Conference Series: Earth and Environmental Science 1387 (1), 012015", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "7", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Study on the effectiveness of prefabricated cage system reinforcement in columns. IOP Conference Series: Earth and Environmental Science 1149 (1), 012010", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "8", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Numerical investigation of the hybrid reinforced concrete beam using GFRP bars. IOP Conference Series: Earth and Environmental Science 1149 (1), 012011", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "" },
-            { "S.No": "9", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Experimental Studies on the Mechanical and Durability Properties of Mortar Containing Waste Glass Powder as Partial Replacement of Cement. International Conference on Sustainable Infrastructure: Innovation, Opportunities and Challenges. 709-721", Indexing: "SCOPUS", Publication: "Book Chapter", "Journal Quartile": "" }
-          ]
-        }
-      ]
-    },
-    "Mrs. Kandukuri Anitha": {
-      name: "Mrs. Kandukuri Anitha",
-      designation: "Asst. Professor",
-      email: "anithak@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/Mrs Anitha K.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "Mohan Babu University", "Year of Passing": "Pursuing" },
-            { "S.No": "2", Course: "M.Tech.", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "Annamacharya Institute of Technology and Sciences, JNTU, Anantapur", "Year of Passing": "2015" },
-            { "S.No": "3", Course: "B.Tech.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "AVR & SVR Institute Of Technology& Sciences, JNTU, Anantapur", "Year of Passing": "2013" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Sustainable development of self compacting concrete through GGBS and STP water utilization"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in//profile/272789" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.co.in/citations?user=IpMFWMQAAAAJ" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024-2025", "Author Position": "4", "Details of Research Publication": "Study on Influence of Brine Solution on swelling Behaviour of Expansive soil", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" }
-          ]
-        },
-        {
-          title: "Research Projects & Events",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-2025", "Funded Project /Event": "Workshop", Role: "Co-Coordinator", "Title of the Project/Event": "The Role of AI in Mobility and Smart Cities (TRAMS 2024)", "Amount in Rs. /-": "2,00,000", "Funding Agency": "AICTE- VAANI Scheme" }
-          ]
-        },
-        {
-          title: "Patents",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-2025", "Application ID": "Patent No. 431535-001", "Title of the Patent": "SOIL CORE SAMPLE COLLECTOR", Status: "Published" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2024-2025", "Application ID": "Patent No. 428580-001", "Title of the Patent": "GRIP-TITE INTERLOCKING BRICKS", Status: "Published" }
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            { "S.No": "1", Affiliation: "Cores", "Academic Year": "2025-26", "Name of the Consulting Firm": "Panchayat Raj Department", "Title of the Project": "CC Roads", "Amount in Rs. /-": "10,000" },
-            { "S.No": "2", Affiliation: "Mix design", "Academic Year": "2025-26", "Name of the Consulting Firm": "Panchayat Raj Department", "Title of the Project": "Mix design for Dams", "Amount in Rs. /-": "15,000" },
-            { "S.No": "3", Affiliation: "Cores", "Academic Year": "2024-25", "Name of the Consulting Firm": "Panchayat Raj Department", "Title of the Project": "CC Roads", "Amount in Rs. /-": "10,000" },
-            { "S.No": "4", Affiliation: "Mix design", "Academic Year": "2024-25", "Name of the Consulting Firm": "Panchayat Raj Department", "Title of the Project": "Mix Design for Nagarjuna Construction Company", "Amount in Rs. /-": "15,000" }
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Served as Session Chair for the conference \"Advances in Intelligent Civil Engineering (AICE) – 2025\" (Sept. 10–14, 2025).",
-            "Received Appreciation for Outstanding Contribution to Institute Consultancy at MITS.",
-            "Recognized as the Best Performer in the EDC Cell, MITS (2025)."
-          ]
-        }
-      ]
-    },
-    "Mr. B. Veeresh": {
-      name: "Mr. B. Veeresh",
-      designation: "Asst. Professor",
-      email: "veereshb@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/Mr.B. Veeresh.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "Ph.D.", Specialization: "Environmental Engineering", Branch: "Civil Engineering", "College Name/University": "JNTUA, University", "Year of Passing": "Pursuing" },
-            { "S.No": "2", Course: "M.Tech.", Specialization: "Environmental Engineering", Branch: "Civil Engineering", "College Name/University": "JNTUA, University", "Year of Passing": "2022" },
-            { "S.No": "3", Course: "B.Tech.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "N.B.K.R Institute of Science and Technology, JNTUA, Anantapuramu", "Year of Passing": "2018" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Water Quality, Water & Wastewater Treatment, Solid Waste Management and GeoEnvironment"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=59561286000" },
-            { Identifier: "Vidwan", Link: "https://mits.irins.org/profile/460383" },
-            { Identifier: "h-Index (As per Scopus Data)", Link: "1" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "4", "Details of Research Publication": "Optimizing Agricultural Waste By-Products: A Machine Learning Approach for Sustainable Construction Practices", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q1" }
-          ]
-        },
-        {
-          title: "Patents",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024", "Application ID": "431535-001", "Title of the Patent": "Soil Core Sample Collector", Status: "Published" }
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2023", "Name of the Consulting Firm": "Private Organisation", "Title of the Project": "", "Amount in Rs. /-": "10,000" },
-            { "S.No": "2", Affiliation: "Mix MITS", "Academic Year": "2024", "Name of the Consulting Firm": "Private Organisation", "Title of the Project": "", "Amount in Rs. /-": "10,000" }
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Received a Silver Medal for being a topper in Geotechnical Engineering Laboratory (NPTEL), during July 1–Aug. 1, 2024."
-          ]
-        }
-      ]
-    },
-    "Mr. P. Sabarishkumar": {
-      name: "Mr. P. Sabarishkumar",
-      designation: "Asst. Professor",
-      email: "sabarishkumarpm@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/sabarish.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "M.E.", Specialization: "Structural Engineering", Branch: "Civil Engineering", "College Name/University": "Institute of Road & Transport Technology, Anna University", "Year of Passing": "2011" },
-            { "S.No": "2", Course: "B.E.", Specialization: "Civil Engineering", Branch: "Civil Engineering", "College Name/University": "Institute of Road & Transport Technology, Anna University", "Year of Passing": "2009" }
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Structural Engineering"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/462964" },
-            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?view_op=new_articles&hl=en&imq=P.Sabarishkumar#" }
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2015-2016", "Author Position": "1", "Details of Research Publication": "STUDY ON STRUCTURAL ANALYSIS AND DESIGN OF RCC BIN", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "2", "Publication Affiliation": "Others", "Academic Year": "2015-2016", "Author Position": "1", "Details of Research Publication": "ANALYSIS AND DESIGN OF RCC OFFSHORE PLATFORM", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "None" },
-            { "S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2010-2011", "Author Position": "1", "Details of Research Publication": "Experimental Study on RCC Columns with various types of Confinement techniques", Indexing: "SCOPUS", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+            "GATE qualified in 2006 (Score 333)"
           ]
         }
       ]
