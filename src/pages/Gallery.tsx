@@ -88,7 +88,7 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="bg-[#0f2a44] py-6">
+      <div className="bg-[#b30000] py-6">
         <div className="container mx-auto px-4">
           <Link to="/" className="inline-flex items-center text-white hover:text-[#caa74d] transition-colors mb-4">
             <ChevronLeft className="w-5 h-5 mr-1" />
@@ -113,11 +113,7 @@ const Gallery = () => {
                   alt={img.alt} 
                   className="w-full h-48 md:h-56 object-cover group-hover:scale-110 transition-transform duration-700" 
                 />
-                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/50 transition-all duration-300 flex items-end">
-                  <p className="text-white font-semibold text-xs md:text-sm p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    {img.alt}
-                  </p>
-                </div>
+                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/50 transition-all duration-300" />
               </div>
             </ScrollReveal>
           ))}

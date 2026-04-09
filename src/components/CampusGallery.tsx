@@ -26,11 +26,7 @@ const CampusGallery = () => {
             <ScrollReveal key={img.alt} delay={i * 0.1} className={img.span}>
               <div className="overflow-hidden rounded-xl group relative cursor-pointer">
                 <img src={img.src} alt={img.alt} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/50 transition-all duration-300 flex items-end">
-                  <p className="text-white font-semibold text-sm p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    {img.alt}
-                  </p>
-                </div>
+                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/50 transition-all duration-300" />
               </div>
             </ScrollReveal>
           ))}
