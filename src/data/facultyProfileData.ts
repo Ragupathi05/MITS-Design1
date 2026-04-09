@@ -64,6 +64,467 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
           ]
         }
       ]
+    },
+    "Dr. M. Rajeswari": {
+      name: "Dr. M. Rajeswari",
+      designation: "Assoc. Professor",
+      email: "rajeshwarim@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/rajeswari.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "ICE", Branch: "CSE", "College Name/University": "Anna University", "Year of Passing": "2016" },
+            { "S.No": "2", Course: "M.E.", Specialization: "ME", Branch: "CSE", "College Name/University": "Nandha Engineering College, Anna University", "Year of Passing": "2008" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "IT", Branch: "IT", "College Name/University": "Maharaja Engineering College, Anna University", "Year of Passing": "2005" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Networking, MANET, VANET, Artificial Intelligence, Machine Learning, Deep Learning"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57218711503" },
+            { Identifier: "Vidwan", Link: "https://mits.irins.org/profile/356408" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=oxRIARoAAAAJ&hl=en" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "8" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "1", "Details of Research Publication": "Design and Validation of an Explainable Artificial Intelligence Based Decision Intelligence Model for Cyber Risk Aware Quality Systems and Ethical Human Resource Management", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "2", "Details of Research Publication": "Ontology-Enabled Digital Twin Design with AI-Based Data Management and Privacy-Preserving Mechanisms for Secure 6G Communication Systems", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "None" }
+          ]
+        },
+        {
+          title: "Patents",
+          content: [
+            { "S.No": "1", Affiliation: "Others", "Academic Year": "2019", "Application ID": "201941028900", "Title of the Patent": "A system and method of biometric identification based on distributed Internet-of-Things lock and unlocking thereof", Status: "Published" },
+            { "S.No": "2", Affiliation: "Others", "Academic Year": "2020", "Application ID": "202041029484 A", "Title of the Patent": "Portable low cost smart Spirometer using Embedded & IOT", Status: "Published" },
+            { "S.No": "3", Affiliation: "Others", "Academic Year": "2022", "Application ID": "2021103130", "Title of the Patent": "A system and method for person detection in aerial imagery using semantic segmentation", Status: "Granted" }
+          ]
+        },
+        {
+          title: "Awards/Achievements",
+          content: [
+            "Received Best faculty award for the academic year 2010–2011 in Angel College of Engineering and Technology, Tirupur",
+            "Received Gold Coin for producing 100% results in Nandha Engineering College, Erode"
+          ]
+        }
+      ]
+    },
+    "Dr. Sandhya. E": {
+      name: "Dr. Sandhya. E",
+      designation: "Asst. Professor",
+      email: "sandhyae@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/Sandhya.jpeg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "IoT Security", Branch: "CSE", "College Name/University": "SRM Institute of Science and Technology", "Year of Passing": "2023" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "SRM University", "Year of Passing": "2010" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "Information Technology", Branch: "Information Technology", "College Name/University": "JNTU, Hyderabad", "Year of Passing": "2008" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "IoT Security, Network Security, Machine Learning"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=58308190400" },
+            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/460126" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=OOjpzlYAAAAJ&hl=en" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "4" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Enhancing security and efficiency in Mobile Ad Hoc Networks using a hybrid deep learning model for flooding attack detection", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" }
+          ]
+        },
+        {
+          title: "Patents",
+          content: [
+            { "S.No": "1", Affiliation: "Others", "Academic Year": "2024-25", "Application ID": "202241029619", "Title of the Patent": "A Machine Learning-based Hybrid Intrusion Detection System for Detecting the Cyber-Physical Attacks", Status: "Granted" },
+            { "S.No": "2", Affiliation: "Others", "Academic Year": "2023-24", "Application ID": "202141007324", "Title of the Patent": "A Smart Wearable Travel Support System for Supervising Visually Impaired People", Status: "Granted" }
+          ]
+        },
+        {
+          title: "Awards/Achievements",
+          content: [
+            "Top Performing Mentor for Course on Introduction on Intellectual Property to Engineers and Technologists - Jan to Apr 2025 - NPTEL",
+            "Top Performing Mentor for Course on Cloud Computing and Distributed Systems - Jan to Mar 2024 - NPTEL"
+          ]
+        }
+      ]
+    },
+    "Mr. Sanath Hegde": {
+      name: "Mr. Sanath Hegde",
+      designation: "Professor of Practice",
+      email: "sanathh@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/sanath.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "M.B.A.", Specialization: "Quantitative Finanace", Branch: "M.B.A.", "College Name/University": "Indian Institute of Science, Bangalore", "Year of Passing": "2005" },
+            { "S.No": "2", Course: "B.E.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Malnad College of Engineering, Hassan", "Year of Passing": "2001" }
+          ]
+        },
+        {
+          title: "Skill Areas",
+          content: "Machine Learning, Natura Language Processing, Artificial Intelligence, Text Mining, Business Analytics & Strategy, CRM & Marketing Strategy, Customer Experience, Digital Analytics, Fraud Analytics, Python/SAS/SQL, Adobe Marketing Cloud"
+        }
+      ]
+    },
+    "Mr. P. Udayakumar": {
+      name: "Mr. P. Udayakumar",
+      designation: "Asst. Professor",
+      email: "udayakumarp@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/Udayakumar.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Artificial Intelligence", Branch: "CSE", "College Name/University": "Vellore Institute of Technology, Vellore", "Year of Passing": "Pursuing" },
+            { "S.No": "2", Course: "M.E.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Anna University", "Year of Passing": "2010" },
+            { "S.No": "3", Course: "B.E.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Anna University", "Year of Passing": "2006" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Machine and Deep Learning, Neuro Imaging Data analysis, GenAI, Connectome, Network Programming, Full Stack Development"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=58091327400" },
+            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/263889" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=cV5MPAQAAAAJ&hl=en" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "2" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Connectome graph attention network (CGAT): A multimodal approach for enhanced classification of Alzheimer's disease", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" }
+          ]
+        },
+        {
+          title: "Awards/Achievements",
+          content: [
+            "2024 - Raman Research Award, Vellore Institute of Technology, Vellore, India",
+            "2025 - Raman Research Award, Vellore Institute of Technology, Vellore, India"
+          ]
+        }
+      ]
+    },
+    "Mr. B. S. H. Shayeez Ahamed": {
+      name: "Mr. B. S. H. Shayeez Ahamed",
+      designation: "Asst. Professor",
+      email: "ahamedbsh@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/Ahamed.jpeg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Deep Learning", Branch: "CSE", "College Name/University": "Saveetha University, SIMATS", "Year of Passing": "Pursuing" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Artificial Intelligence", Branch: "CSE", "College Name/University": "JNTU Anantapur", "Year of Passing": "2013" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "CSIT", Branch: "CSIT", "College Name/University": "JNTUK-Vizianagaram", "Year of Passing": "2011" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Deep Learning, Machine Learning & AI"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=58038999500" },
+            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/273691" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=DYHMOyIAAAAJ&hl=en" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "2" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Integrating DCCS-Net for High-Fidelity Watermarking and Tampering Detection in Brain Scan Images", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        },
+        {
+          title: "Awards/Achievements",
+          content: [
+            "Best Paper Award for title Evaluation Ensembles of Machine Learning Models for the Prediction of Smart Phone Addiction",
+            "Best Paper Award for title Diabetes Prediction using Supervised and Unsupervised Learning"
+          ]
+        }
+      ]
+    },
+    "Mrs. R. Usha": {
+      name: "Mrs. R. Usha",
+      designation: "Asst. Professor",
+      email: "ushar@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/DSC_7925.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Saveetha University", "Year of Passing": "Pursuing" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Madanapalle Institute of Technology & Science, JNTUA Anathapur", "Year of Passing": "2013" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Madanapalle Institute of Technology & Science, JNTUA Ananthapur", "Year of Passing": "2009" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Image Processing and Machine Learning for Automated Plant Disease Detection in Precision Agriculture"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=58038839300" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "3" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Early Detection of Student Depression Using Deep Learning Algorithms", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        },
+        {
+          title: "Patents",
+          content: [
+            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2025-2026", "Application ID": "482761-001", "Title of the Patent": "IoT Based Robot for Library Management", Status: "Filed" },
+            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2025-2026", "Application ID": "473973-001", "Title of the Patent": "IoT -Enabled interactive Device for Emotion – Aware Personalized Learning Recommendations", Status: "Published" }
+          ]
+        },
+        {
+          title: "Awards/Achievements",
+          content: [
+            "Best Paper Award for title Deep Learning-Based Emotion Recognition System with Depression Detection Capability",
+            "Best Paper Award for title Evaluating Ensemble Machine Learning Approaches for Accurate Flight Pricing Predictions"
+          ]
+        }
+      ]
+    },
+    "Mrs. N. Geethanjali": {
+      name: "Mrs. N. Geethanjali",
+      designation: "Asst. Professor",
+      email: "geethanjalin@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/Geethanjali.jpeg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Mohan Babu University", "Year of Passing": "Pursuing" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Sri Venkateshwara University", "Year of Passing": "2021" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "CSC", Branch: "CSC", "College Name/University": "Sri Venkateshwara Engineering College for women", "Year of Passing": "2018" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Machine Learning"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=58798743500" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.co.uk/citations?hl=en&pli=1&user=Ao-lmqAAAAAJ" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "1" }
+          ]
+        },
+        {
+          title: "Awards/Achievements",
+          content: [
+            "Achieved Top performing Mentor in NPTEL for the Course Managing Intellectual Property in Universities (Jul-Dec 2024)",
+            "Achieved NPTEL Discipline Star Certificate in (Jan-Apr 2025)"
+          ]
+        }
+      ]
+    },
+    "Mr. V. Sivaraman": {
+      name: "Mr. V. Sivaraman",
+      designation: "Asst. Professor",
+      email: "sivaramanv@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/Sivaraman.jpeg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Deep Learning", Branch: "CSE", "College Name/University": "Visvesvaraya Technological University", "Year of Passing": "Pursuing" },
+            { "S.No": "2", Course: "M.E.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Jayaram College of Engg. and Technology, Anna University", "Year of Passing": "2009" },
+            { "S.No": "3", Course: "B.E.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Madha Engineering College, Madras University", "Year of Passing": "2004" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Deep Learning, GenAI"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=59312432500" },
+            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/587078" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=7hNiIUYAAAAJ&hl=en" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "2" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Locating Patient Health Data Theft Using Gradient Boosting with Hybrid Microwave Transmission-Based Wearable Device", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        },
+        {
+          title: "Awards/Achievements",
+          content: [
+            "Awarded for top performing mentor for NPTEL course Understanding Incubation and Entrepreneurship during Jan-Apr 2025"
+          ]
+        }
+      ]
+    },
+    "Mr. Tharakeswara Raju B": {
+      name: "Mr. Tharakeswara Raju B",
+      designation: "Asst. Professor",
+      email: "tharakeswararajub@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/tarak.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Wireless networks", Branch: "CSE", "College Name/University": "IIT, Tirupati", "Year of Passing": "Pursuing" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Sri Venkateswara University", "Year of Passing": "2017" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "CSC", Branch: "CSC", "College Name/University": "Madanapalle Institute of Technology & Science, JNTUA", "Year of Passing": "2011" }
+          ]
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/657369" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?user=BLr32e000QsC&hl=en&authuser=1" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "1" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "How Fresh is the Data? An Optimal Learning-Based End-to-End Pull-Based Forwarding Framework for NDNoTs", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        }
+      ]
+    },
+    "Mr. Subhas Das": {
+      name: "Mr. Subhas Das",
+      designation: "Asst. Professor",
+      email: "subhasd@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/DSC_3008.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "CSE", Branch: "CSE", "College Name/University": "IIIT, Nagpur", "Year of Passing": "Pursuing" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "MAKAUT", "Year of Passing": "2020" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "West Bengal University of Technology", "Year of Passing": "2009" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Missing Value Prediction using Machine Learning"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=59940833600" },
+            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/664282" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?hl=en&user=233OYz0AAAAJ" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2024-25", "Author Position": "1", "Details of Research Publication": "Neural Network-Based Prediction of Sensor Data for Enhanced Decision-Making in Smart Agriculture", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        }
+      ]
+    },
+    "Mr. G. Nithin": {
+      name: "Mr. G. Nithin",
+      designation: "Asst. Professor",
+      email: "nithing@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/nithin.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "MS (5 Year Integrated Degree)", Specialization: "Software Engineering", Branch: "Computing Science and Engineering", "College Name/University": "VIT University, Chennai", "Year of Passing": "2017" }
+          ]
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/657375" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?hl=en&user=AlwJ-dUAAAAJ" }
+          ]
+        }
+      ]
+    },
+    "Mrs. D. Bhargavajyothi": {
+      name: "Mrs. D. Bhargavajyothi",
+      designation: "Asst. Professor",
+      email: "bhargavajyothid@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/93a2746129b622603a30e4d045391b32.jpg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "M.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Madanapalle Institute of Technology & Science", "Year of Passing": "2018" },
+            { "S.No": "2", Course: "B.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "BIT Institute of Technology & Science, JNTUA", "Year of Passing": "2015" }
+          ]
+        }
+      ]
+    },
+    "Dr. R. Praveen Kumar": {
+      name: "Dr. R. Praveen Kumar",
+      designation: "Asst. Professor",
+      email: "praveenkumarr@mits.ac.in",
+      image: "https://mits.ac.in/public/uploads/faculty/Praveen Kumar.jpeg",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Computer Science and Engineering", Branch: "Computer Science and Engineering", "College Name/University": "National Institute of Technology, Durgapur, West Bengal", "Year of Passing": "2024" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Computer Networks and Information Security", Branch: "Computer Science and Engineering", "College Name/University": "Sree Vidyanikethan Engineering college, Tirupathi", "Year of Passing": "2013" },
+            { "S.No": "3", Course: "B.Tech.", Specialization: "Computer Science and Engineering", Branch: "Computer Science and Engineering", "College Name/University": "Priyadarshini College of Engineering, JNTU Ananthapur", "Year of Passing": "2011" }
+          ]
+        },
+        {
+          title: "Research Areas",
+          content: "Sensor Data Processing, Applications of Machine Learning, Information Security, Internet of Things"
+        },
+        {
+          title: "Research Identifiers",
+          content: [
+            { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=57213825906" },
+            { Identifier: "Vidwan", Link: "https://vidwan.inflibnet.ac.in/profile/587138" },
+            { Identifier: "Google scholar", Link: "https://scholar.google.com/citations?hl=en&user=bPBx07wAAAAJ&view_op=list_works" },
+            { Identifier: "h-Index (As per Scopus Data)", Link: "5" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Enhanced Unimodal Continuous Authentication Architecture on Smartphones for User Identification through Behavioral Biometrics", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        }
+      ]
     }
   },
   ce: {

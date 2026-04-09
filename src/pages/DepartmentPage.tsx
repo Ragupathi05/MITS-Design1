@@ -330,48 +330,53 @@ const DepartmentPage = () => {
                     <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>People / Faculty</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                       {dept.faculty.map((f, i) => {
+                        const handleCardClick = () => {
+                          if (f.profileUrl) {
+                            window.open(f.profileUrl, "_blank", "noopener,noreferrer");
+                            return;
+                          }
+                          let profile = getFacultyProfile(deptKey || "", f.name);
+                          if (!profile) {
+                            const sections = [];
+                            if (f.profile?.education) {
+                              sections.push({
+                                title: "Details of Educational Qualification",
+                                content: f.profile.education.map((e, i) => ({ "S.No": String(i+1), Course: e.degree, Specialization: e.specializatio, "College Name/University": e.university, "Year of Passing": e.year }))
+                              });
+                            }
+                            if (f.profile?.researchAreas) {
+                              sections.push({ title: "Research Areas", content: f.profile.researchAreas });
+                            }
+                            if (f.profile?.publications) {
+                              sections.push({
+                                title: "Publication Details",
+                                content: f.profile.publications.map((p, i) => ({ "S.No": String(i+1), "Publication Affiliation": "MITS", "Academic Year": p.year, "Author Position": "1", "Details of Research Publication": p.title, Indexing: p.index, Publication: "Article", "Journal Quartile": "None" }))
+                              });
+                            }
+                            if (f.profile?.patents) {
+                              sections.push({
+                                title: "Patents",
+                                content: f.profile.patents.map((p, i) => ({ "S.No": String(i+1), Affiliation: "MITS", "Academic Year": p.year, "Title of the Patent": p.title, Status: p.status }))
+                              });
+                            }
+                            if (f.profile?.awards) {
+                              sections.push({ title: "Awards/Achievements", content: f.profile.awards });
+                            }
+                            profile = {
+                              name: f.name,
+                              designation: f.designation,
+                              image: f.image,
+                              email: f.email,
+                              sections: sections.length > 0 ? sections : []
+                            };
+                          }
+                          setSelectedProfile(profile);
+                        };
                         return (
                           <div
                             key={i}
                             className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary/30 flex flex-col items-center text-center cursor-pointer"
-                            onClick={() => {
-                              let profile = getFacultyProfile(deptKey || "", f.name);
-                              if (!profile) {
-                                const sections = [];
-                                if (f.profile?.education) {
-                                  sections.push({
-                                    title: "Details of Educational Qualification",
-                                    content: f.profile.education.map((e, i) => ({ "S.No": String(i+1), Course: e.degree, Specialization: e.specializatio, "College Name/University": e.university, "Year of Passing": e.year }))
-                                  });
-                                }
-                                if (f.profile?.researchAreas) {
-                                  sections.push({ title: "Research Areas", content: f.profile.researchAreas });
-                                }
-                                if (f.profile?.publications) {
-                                  sections.push({
-                                    title: "Publication Details",
-                                    content: f.profile.publications.map((p, i) => ({ "S.No": String(i+1), "Publication Affiliation": "MITS", "Academic Year": p.year, "Author Position": "1", "Details of Research Publication": p.title, Indexing: p.index, Publication: "Article", "Journal Quartile": "None" }))
-                                  });
-                                }
-                                if (f.profile?.patents) {
-                                  sections.push({
-                                    title: "Patents",
-                                    content: f.profile.patents.map((p, i) => ({ "S.No": String(i+1), Affiliation: "MITS", "Academic Year": p.year, "Title of the Patent": p.title, Status: p.status }))
-                                  });
-                                }
-                                if (f.profile?.awards) {
-                                  sections.push({ title: "Awards/Achievements", content: f.profile.awards });
-                                }
-                                profile = {
-                                  name: f.name,
-                                  designation: f.designation,
-                                  image: f.image,
-                                  email: f.email,
-                                  sections: sections.length > 0 ? sections : []
-                                };
-                              }
-                              setSelectedProfile(profile);
-                            }}
+                            onClick={handleCardClick}
                           >
                             <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
                               {f.image ? (
@@ -385,9 +390,14 @@ const DepartmentPage = () => {
                             <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{f.qualification}</p>
 
                             <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">
-                              <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest">
+                              <a 
+                                href={f.profileUrl || `https://mits.ac.in/facultyprofile/${encodeURIComponent(f.name)}`}
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest no-underline"
+                              >
                                 View Profile <ChevronRight className="w-3 h-3" />
-                              </span>
+                              </a>
                             </div>
                           </div>
                         );
