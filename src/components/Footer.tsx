@@ -28,7 +28,7 @@ const Footer = () => {
                 </li>
                 <li className="flex gap-3 text-white/80 font-body">
                   <Phone className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  +91 8571 280255
+                  +91- 7330803555 / 7330852555
                 </li>
                 <li className="flex gap-3 text-white/80 font-body">
                   <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
@@ -52,7 +52,7 @@ const Footer = () => {
                 { label: "Prospectus", href: "/admissions" },
                 { label: "Important Dates", href: "/admissions" },
                 { label: "Scholarships", href: "/admissions" },
-                { label: "Mandatory Disclosure", href: "/about" },
+                { label: "Mandatory Disclosure", href: "https://mits.ac.in/mandatory-disclosures" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link to={link.href} className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</Link>
@@ -70,8 +70,12 @@ const Footer = () => {
                 { label: "Examinations", href: "/examinations" },
                 { label: "Research", href: "/research" },
                 { label: "Campus Life", href: "/campus-life" },
-                { label: "NAAC", href: "/about" },
-                { label: "NIRF", href: "/about" },
+                { label: "NIRF", href: "https://mits.ac.in/nirf" },
+                { label: "NAAC", href: "https://mits.ac.in/naac" },
+                { label: "Public Self Disclosures", href: "https://mits.ac.in/affiliations-accreditations" },
+                { label: "Circulars", href: "https://mits.ac.in/circulars" },
+                { label: "Accreditations & Rankings", href: "/about" },
+                { label: "Cells", href: "https://mits.ac.in/cells" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link to={link.href} className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</Link>

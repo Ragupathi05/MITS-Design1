@@ -215,7 +215,7 @@ const Contact = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/20">
               {[
-                { value: "100+", label: "Acre Campus" },
+                { value: "26.17+", label: "Acre Campus" },
                 { value: "40+", label: "Buses" },
                 { value: "3000+", label: "Computers" },
                 { value: "1 Gbps", label: "Internet Speed" },

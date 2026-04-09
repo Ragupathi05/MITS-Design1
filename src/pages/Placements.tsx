@@ -906,7 +906,7 @@ const Placements = () => {
                             <Phone className="w-6 h-6 flex-shrink-0 text-amber-200" />
                             <div>
                               <p className="font-bold">Phone</p>
-                              <p className="text-white/90">+91-8571-280255<br />+91-8571-280706</p>
+                              <p className="text-white/90">+91- 7330803555<br />+91- 7330852555</p>
                             </div>
                           </div>
                           <div className="flex items-start gap-3">

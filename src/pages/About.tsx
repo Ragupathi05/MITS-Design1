@@ -24,16 +24,16 @@ const leadership = [
 ];
 
 const infrastructure = [
-  { icon: Building2, title: "100+ Acre Campus", desc: "Sprawling green campus with modern academic blocks and amenities." },
-  { icon: BookOpen, title: "Central Library", desc: "50,000+ volumes, e-journals, digital resources, and reading halls." },
+  { icon: Building2, title: "26.17+ Acre Campus", desc: "Sprawling green campus with modern academic blocks and amenities." },
+  { icon: BookOpen, title: "Central Library", desc: "5000+ volumes, e-journals, digital resources, and reading halls." },
   { icon: Users, title: "Smart Classrooms", desc: "ICT-enabled classrooms with projectors and interactive learning tools." },
   { icon: GraduationCap, title: "Research Labs", desc: "Advanced laboratories for engineering, sciences, and computing disciplines." },
 ];
 
 const contactInfo = [
-  { icon: MapPin, title: "Address", lines: ["Post Box No. 4, Angallu", "Madanapalle – 517325", "Annamayya District, Andhra Pradesh"] },
-  { icon: Phone, title: "Phone", lines: ["+91 8571 280255", "+91 8571 280256"] },
-  { icon: Mail, title: "Email", lines: ["info@mits.ac.in", "admissions@mits.ac.in"] },
+  { icon: MapPin, title: "Address", lines: [ "Madanapalle-Kadiri Road", "Kurabalakota Mandal, Madanapalle-517325", "Andhra Pradesh, India"] },
+  { icon: Phone, title: "Phone", lines: ["+91- 7330803555 / 7330852555"] },
+  { icon: Mail, title: "Email", lines: ["admissions@mits.ac.in"] },
   { icon: Clock, title: "Office Hours", lines: ["Mon – Fri: 9:00 AM – 5:00 PM", "Sat: 9:00 AM – 1:00 PM"] },
 ];
 
