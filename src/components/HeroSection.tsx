@@ -97,7 +97,7 @@ const credentials = [
   { label: "4,401+ Scholarships", gold: false },
   { label: "9,599+ Internships", gold: true  },
   { label: "600+ International",  gold: false },
-  { label: "144+ MoUs",          gold: true  },
+  { label: "46,923 Online Certifications", gold: true  },
 ];
 
 const textVariants = {
