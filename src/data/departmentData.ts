@@ -135,7 +135,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       points: ["Project-based learning with industry problems", "NPTEL, Coursera & edX integrated MOOCs", "Hackathons and coding competitions", "Industry mentorship programs", "IBM, Microsoft, Accenture certification tracks"]
     },
     courses: ["B.Tech in Computer Science and Engineering", "M.Tech in Computer Science and Engineering", "Ph.D. in Computer Science and Engineering"],
-    contactInfo: { email: "hod_cse@mits.ac.in", phone: "+91-8571-280255" },
+    contactInfo: { email: "csehod@mits.ac.in", phone: "+91-9160020784; 8571-280255; 280706" },
     faculty: [
       { name: "Dr. M. Sreedevi", designation: "Professor & Head", qualification: "Ph.D. (S V University)", image: "https://mits.ac.in/public/uploads/faculty/sri.jpg", profileUrl: "https://mits.ac.in/facultyprofile/140" },
       { name: "Dr. R. Nidhya", designation: "Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_7256.JPG", profileUrl: "https://mits.ac.in/facultyprofile/83" },
@@ -296,7 +296,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       points: ["Site visits and field surveys", "BIM-integrated design projects", "Industry guest lectures", "Sustainability-focused curriculum", "Geotechnical field testing"]
     },
     courses: ["B.Tech in Civil Engineering"],
-    contactInfo: { email: "hod_ce@mits.ac.in", phone: "+91-8571-280255" },
+    contactInfo: { email: "civilhod@mits.ac.in", phone: "+91-9100973371; 8571-280255; 280706" },
     faculty: [
       { name: "Dr. Dipankar Roy", designation: "Professor & Dean - School of Engineering", qualification: "Ph.D. (University of Pisa, Italy)", image: "https://mits.ac.in/public/uploads/faculty/drdipankarroy(1).jpg", profileUrl: "https://mits.ac.in/facultyprofile/1" },
       { name: "Dr. Sudheer Kumar Yantrapalli", designation: "Assoc. Professor", qualification: "Ph.D. (NIT, Warangal)", image: "https://mits.ac.in/public/uploads/faculty/e8ce6974dbf830579b5ea7d0adcb2d70.jpg", profileUrl: "https://mits.ac.in/facultyprofile/5" },
@@ -491,7 +491,7 @@ faculty: [
     achievements: { consultancyAmount: "â‚¹12+ Lakhs", researchProjects: "10+", patents: "4+", publications: "120+" },
     teachingApproach: { description: "Emphasis on hands-on training through workshops, CAD/CAM labs, and industry-oriented projects.", points: ["Advanced CAD/CAM training", "Manufacturing workshop practice", "Industry visits", "Design competitions", "ANSYS simulation projects"] },
     courses: ["B.Tech in Mechanical Engineering"],
-    contactInfo: { email: "hod_me@mits.ac.in", phone: "+91-8571-280255" },
+    contactInfo: { email: "mehod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. C. Yuvaraj", designation: "Professor & Vice Chancellor (I/c)", qualification: "Ph.D. (Bangalore University)", image: "https://mits.ac.in/public/uploads/faculty/principal.JPG", profileUrl: "https://mits.ac.in/facultyprofile/245" },
       { name: "Dr. I. Arun", designation: "Professor", qualification: "Ph.D. (NIT, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Arun.JPG", profileUrl: "https://mits.ac.in/facultyprofile/303" },
@@ -714,7 +714,7 @@ faculty: [
     achievements: { consultancyAmount: "INR 5+ Lakhs", researchProjects: "6+", patents: "4+", publications: "60+" },
     teachingApproach: { description: "Data-centric approach with Kaggle competitions, industry datasets, and hands-on ML projects.", points: ["Kaggle competition participation", "Industry dataset projects", "Python & R programming labs", "Tableau & Power BI training", "AWS/GCP cloud analytics"] },
     courses: ["B.Tech in CSE - Data Science"],
-    contactInfo: { email: "hod_cseds@mits.ac.in", phone: "+91-8571-280255" },
+    contactInfo: { email: "dshod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. K. Nirmala Devi", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/nirmaladevi.png", profileUrl: "https://mits.ac.in/facultyprofile/729" },
       { name: "Dr. S. Kusuma", designation: "Asst. Professor & Head", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Kusuma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/98" },
@@ -800,11 +800,11 @@ faculty: [
     vision: "To produce cybersecurity professionals capable of protecting digital infrastructure and ensuring information security.",
     mission: ["To provide comprehensive education in cybersecurity.", "To promote hands-on training in ethical hacking and penetration testing.", "To develop security professionals with industry certifications."],
     nbaAccredited: false,
-    hod: { name: "Dr. S. V. S. Ganga Devi", designation: "Professor & Head", qualification: "Ph.D." },
+    hod: { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/persis.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
     achievements: { consultancyAmount: "INR 3+ Lakhs", researchProjects: "4+", patents: "2+", publications: "40+" },
     teachingApproach: { description: "Practice-oriented curriculum with CTF competitions, ethical hacking labs, and security audits.", points: ["Capture The Flag competitions", "Ethical hacking practical labs", "Network penetration testing", "Security certifications (CEH, CompTIA)", "Cyber forensics workshops"] },
     courses: ["B.Tech in CSE - Cyber Security"],
-    contactInfo: { email: "gangadevsvs@mits.ac.in", phone: "+91-9100973396; 8571-280255; 280706" },
+    contactInfo: { email: "cshod@mits.ac.in", phone: "+91-9100973396; 8571-280255; 280706" },
     faculty: [
       { name: "Dr. Chandra Prakash Gupta", designation: "Professor & Dean-School of Computing", qualification: "Ph.D. (University of Kota)", image: "https://mits.ac.in/public/uploads/faculty/gupta.png", profileUrl: "https://mits.ac.in/facultyprofile/730" },
       { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/persis.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
@@ -884,7 +884,7 @@ faculty: [
     achievements: { consultancyAmount: "â‚¹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
     courses: ["B.Tech in Artificial Intelligence"],
-    contactInfo: { email: "drkalpanar@mits.ac.in", phone: "+91-8571-280255" },
+    contactInfo: { email: "aihod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. R. Kalpana", designation: "Professor & Head", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_9033.JPG", profileUrl: "https://mits.ac.in/facultyprofile/80" },
       { name: "Dr. Ben Sujin", designation: "Professor", qualification: "Ph.D. (Karunya University)", image: "https://mits.ac.in/public/uploads/faculty/bensu.png", profileUrl: "https://mits.ac.in/facultyprofile/564" },
@@ -1066,7 +1066,7 @@ faculty: [
     achievements: { consultancyAmount: "â‚¹6+ Lakhs", researchProjects: "6+", patents: "4+", publications: "90+" },
     teachingApproach: { description: "Outcome-based teaching with industry projects, case studies, and research-oriented labs.", points: ["Industry-oriented mini and major projects", "Hands-on training in full-stack and enterprise development", "Research paper and patent mentoring", "Guest lectures from IT professionals", "Internship-integrated learning"] },
     courses: ["Bachelor of Computer Applications", "Master of Computer Applications"],
-    contactInfo: { email: "drnaveenkumarn@mits.ac.in", phone: "+91-8571-280255" },
+    contactInfo: { email: "mcahod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. S. V. S. Ganga Devi", designation: "Professor", qualification: "Ph.D. (SPMVV, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Ganga Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/253" },
       { name: "Dr. N. Naveen Kumar", designation: "Professor & Head", qualification: "Ph.D. (S V University, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Naveen Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/254" },
@@ -1152,7 +1152,7 @@ faculty: [
     achievements: { consultancyAmount: "â‚¹5+ Lakhs", researchProjects: "4+", patents: "0", publications: "50+" },
     teachingApproach: { description: "Case-study based pedagogy with industry mentorship and live consulting projects.", points: ["Harvard case study methodology", "Industry mentorship programs", "Business simulation exercises", "National case competitions", "Live consulting projects"] },
     courses: ["Bachelor of Business Administration", "Master of Business Administration"],
-    contactInfo: { email: "hod_mba@mits.ac.in", phone: "+91-8571-280255" },
+    contactInfo: { email: "mbahod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. Sremmant Basu", designation: "Professor & Dean-Administration, IR & UGC Affairs", qualification: "Ph.D. (IIT, Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/basu(1).jpg", profileUrl: "https://mits.ac.in/facultyprofile/269" },
       { name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University)", image: "https://mits.ac.in/public/uploads/faculty/bhanu.png", profileUrl: "https://mits.ac.in/facultyprofile/701" },
@@ -1256,7 +1256,7 @@ faculty: [
       "Chemistry",
       "Humanities"
     ],
-    contactInfo: { email: "englishhod@mits.ac.in", phone: "+91-8571-280255" },
+    contactInfo: { email: "humhod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. Prageetha G Raju", designation: "Professor & Head", qualification: "Ph.D. (Osmania University)", image: "https://mits.ac.in/public/uploads/faculty/pragathi.png", profileUrl: "https://mits.ac.in/facultyprofile/704.html" },
       { name: "Dr. Sudhakar Beedam", designation: "Assoc. Professor", qualification: "Ph.D. (EFLU)", image: "https://mits.ac.in/public/uploads/faculty/sudhakar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/691.html" },
