@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Badge } from "@/components/ui/badge";
@@ -37,7 +37,7 @@ const eligibility = [
   },
 ];
 
-/* ── shared table classes ── */
+/* â”€â”€ shared table classes â”€â”€ */
 const TH = "py-3 px-4 text-center font-bold text-sm border border-gray-300 bg-[#d8ec7a] text-[#222]";
 const TD = "py-2.5 px-4 text-center text-sm border border-gray-300 align-middle";
 const SCHOOL_TD = "py-2.5 px-4 text-left text-sm font-bold border border-gray-300 align-middle bg-[#dfead1]";
@@ -50,7 +50,7 @@ const EligibilityAndFees = () => (
     <Header />
     <main>
 
-      {/* ── HERO ── */}
+      {/* â”€â”€ HERO â”€â”€ */}
       <section className="relative pt-32 md:pt-40 pb-20 bg-gradient-to-br from-secondary via-secondary/95 to-primary/20 overflow-hidden">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <ScrollReveal>
@@ -65,7 +65,7 @@ const EligibilityAndFees = () => (
         </div>
       </section>
 
-      {/* ── ELIGIBILITY ── */}
+      {/* â”€â”€ ELIGIBILITY â”€â”€ */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
@@ -89,12 +89,12 @@ const EligibilityAndFees = () => (
         </div>
       </section>
 
-      {/* ── FEE STRUCTURE ── */}
+      {/* â”€â”€ FEE STRUCTURE â”€â”€ */}
       <section className="py-16 bg-[#f5f5f5]">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <p className="text-[#b30000] font-semibold tracking-widest uppercase text-sm mb-2">2026–27</p>
+              <p className="text-[#b30000] font-semibold tracking-widest uppercase text-sm mb-2">2026â€“27</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0f2a44] mb-3">Fee Structure</h2>
               <p className="text-gray-500 max-w-2xl mx-auto">Transparent and merit-based fee structure for all programs</p>
             </div>
@@ -102,7 +102,7 @@ const EligibilityAndFees = () => (
 
           <div className="max-w-6xl mx-auto space-y-10">
 
-            {/* ── TABLE 1: School of Engineering ── */}
+            {/* â”€â”€ TABLE 1: School of Engineering â”€â”€ */}
             <ScrollReveal>
               <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
                 <table className="w-full border-collapse text-sm">
@@ -123,75 +123,75 @@ const EligibilityAndFees = () => (
                     <tr>
                       <td className={SCHOOL_TD} rowSpan={9}>School of<br />Engineering</td>
                       <td className={PROG_TD}>B.Tech. Electronics &amp; Communication Engineering</td>
-                      <td className={BASE_TD} rowSpan={5}>₹99,000</td>
-                      <td className={TD}>90–100</td>
+                      <td className={BASE_TD} rowSpan={5}>â‚¹99,000</td>
+                      <td className={TD}>90â€“100</td>
                       <td className={TD}>9 and above</td>
-                      <td className={TD}>≤10000</td>
-                      <td className={TD}>≤30000</td>
-                      <td className={FINAL_TD}>₹80,000</td>
+                      <td className={TD}>â‰¤10000</td>
+                      <td className={TD}>â‰¤30000</td>
+                      <td className={FINAL_TD}>â‚¹80,000</td>
                     </tr>
                     <tr>
                       <td className={PROG_TD} rowSpan={4}>B.Tech. Bioinformatics</td>
-                      <td className={TD}>85–89.99</td>
+                      <td className={TD}>85â€“89.99</td>
                       <td className={TD}>8 and above</td>
-                      <td className={TD}>10001–15000</td>
-                      <td className={TD}>30001–50000</td>
-                      <td className={FINAL_TD}>₹85,000</td>
+                      <td className={TD}>10001â€“15000</td>
+                      <td className={TD}>30001â€“50000</td>
+                      <td className={FINAL_TD}>â‚¹85,000</td>
                     </tr>
                     <tr>
-                      <td className={TD}>80–84.99</td>
+                      <td className={TD}>80â€“84.99</td>
                       <td className={TD}>7 and above</td>
-                      <td className={TD}>15001–25000</td>
-                      <td className={TD}>50001–70000</td>
-                      <td className={FINAL_TD}>₹90,000</td>
+                      <td className={TD}>15001â€“25000</td>
+                      <td className={TD}>50001â€“70000</td>
+                      <td className={FINAL_TD}>â‚¹90,000</td>
                     </tr>
                     <tr>
-                      <td className={TD}>70–79.99</td>
+                      <td className={TD}>70â€“79.99</td>
                       <td className={TD}>6 and above</td>
-                      <td className={TD}>25001–40000</td>
-                      <td className={TD}>70001–90000</td>
-                      <td className={FINAL_TD}>₹95,000</td>
+                      <td className={TD}>25001â€“40000</td>
+                      <td className={TD}>70001â€“90000</td>
+                      <td className={FINAL_TD}>â‚¹95,000</td>
                     </tr>
                     <tr>
                       <td className={TD} colSpan={4}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹99,000</td>
+                      <td className={FINAL_TD}>â‚¹99,000</td>
                     </tr>
                     {/* Civil / Mech / EEE */}
                     <tr>
                       <td className={PROG_TD}>B.Tech. Civil Engineering</td>
-                      <td className={BASE_TD} rowSpan={3}>₹65,000</td>
-                      <td className={TD}>85–100</td>
+                      <td className={BASE_TD} rowSpan={3}>â‚¹65,000</td>
+                      <td className={TD}>85â€“100</td>
                       <td className={TD}>8 and above</td>
-                      <td className={TD}>≤10000</td>
-                      <td className={TD}>≤50000</td>
-                      <td className={FINAL_TD}>₹50,000</td>
+                      <td className={TD}>â‰¤10000</td>
+                      <td className={TD}>â‰¤50000</td>
+                      <td className={FINAL_TD}>â‚¹50,000</td>
                     </tr>
                     <tr>
                       <td className={PROG_TD}>B.Tech. Mechanical Engineering</td>
-                      <td className={TD}>75–84.99</td>
+                      <td className={TD}>75â€“84.99</td>
                       <td className={TD}>7 and above</td>
-                      <td className={TD}>≤30000</td>
-                      <td className={TD}>50001–80000</td>
-                      <td className={FINAL_TD}>₹55,000</td>
+                      <td className={TD}>â‰¤30000</td>
+                      <td className={TD}>50001â€“80000</td>
+                      <td className={FINAL_TD}>â‚¹55,000</td>
                     </tr>
                     <tr>
                       <td className={PROG_TD}>B.Tech. Electrical &amp; Electronics Engineering</td>
-                      <td className={TD}>65–74.99</td>
+                      <td className={TD}>65â€“74.99</td>
                       <td className={TD}>6 and above</td>
-                      <td className={TD}>≤50000</td>
-                      <td className={TD}>80001–120000</td>
-                      <td className={FINAL_TD}>₹60,000</td>
+                      <td className={TD}>â‰¤50000</td>
+                      <td className={TD}>80001â€“120000</td>
+                      <td className={FINAL_TD}>â‚¹60,000</td>
                     </tr>
                     <tr>
                       <td className={TD} colSpan={6}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹65,000</td>
+                      <td className={FINAL_TD}>â‚¹65,000</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </ScrollReveal>
 
-            {/* ── TABLE 2: School of Computing ── */}
+            {/* â”€â”€ TABLE 2: School of Computing â”€â”€ */}
             <ScrollReveal delay={0.1}>
               <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
                 <table className="w-full border-collapse text-sm">
@@ -211,47 +211,47 @@ const EligibilityAndFees = () => (
                     <tr>
                       <td className={SCHOOL_TD} rowSpan={5}>School of<br />Computing</td>
                       <td className={PROG_TD}>B.Tech. Computer Science &amp; Engineering</td>
-                      <td className={BASE_TD} rowSpan={4}>₹1,25,000</td>
-                      <td className={TD}>95–100</td>
+                      <td className={BASE_TD} rowSpan={4}>â‚¹1,25,000</td>
+                      <td className={TD}>95â€“100</td>
                       <td className={TD}>9 and above</td>
-                      <td className={TD}>≤10000</td>
-                      <td className={TD}>≤30000</td>
-                      <td className={FINAL_TD}>₹99,000</td>
+                      <td className={TD}>â‰¤10000</td>
+                      <td className={TD}>â‰¤30000</td>
+                      <td className={FINAL_TD}>â‚¹99,000</td>
                     </tr>
                     <tr>
                       <td className={PROG_TD}>B.Tech. CSE (AI &amp; Data Science)</td>
-                      <td className={TD}>90–94.99</td>
+                      <td className={TD}>90â€“94.99</td>
                       <td className={TD}>8 and above</td>
-                      <td className={TD}>10001–15000</td>
-                      <td className={TD}>30001–50000</td>
-                      <td className={FINAL_TD}>₹1,07,500</td>
+                      <td className={TD}>10001â€“15000</td>
+                      <td className={TD}>30001â€“50000</td>
+                      <td className={FINAL_TD}>â‚¹1,07,500</td>
                     </tr>
                     <tr>
                       <td className={PROG_TD}>B.Tech. CSE (AI &amp; ML)</td>
-                      <td className={TD}>85–89.99</td>
+                      <td className={TD}>85â€“89.99</td>
                       <td className={TD}>7 and above</td>
-                      <td className={TD}>15001–25000</td>
-                      <td className={TD}>50001–70000</td>
-                      <td className={FINAL_TD}>₹1,12,500</td>
+                      <td className={TD}>15001â€“25000</td>
+                      <td className={TD}>50001â€“70000</td>
+                      <td className={FINAL_TD}>â‚¹1,12,500</td>
                     </tr>
                     <tr>
                       <td className={PROG_TD}>B.Tech. CSE (Cyber Security)</td>
-                      <td className={TD}>75–84.99</td>
+                      <td className={TD}>75â€“84.99</td>
                       <td className={TD}>6 and above</td>
-                      <td className={TD}>25001–40000</td>
-                      <td className={TD}>70001–90000</td>
-                      <td className={FINAL_TD}>₹1,17,500</td>
+                      <td className={TD}>25001â€“40000</td>
+                      <td className={TD}>70001â€“90000</td>
+                      <td className={FINAL_TD}>â‚¹1,17,500</td>
                     </tr>
                     <tr>
                       <td className={TD} colSpan={6}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹1,25,000</td>
+                      <td className={FINAL_TD}>â‚¹1,25,000</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </ScrollReveal>
 
-            {/* ── TABLE 3: School of Business / Sciences – UG ── */}
+            {/* â”€â”€ TABLE 3: School of Business / Sciences â€“ UG â”€â”€ */}
             <ScrollReveal delay={0.1}>
               <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
                 <table className="w-full border-collapse text-sm">
@@ -267,27 +267,27 @@ const EligibilityAndFees = () => (
                   <tbody>
                     <tr>
                       <td className={SCHOOL_TD} rowSpan={3}>School of Business<br />School of Sciences</td>
-                      <td className={PROG_TD}>BBA – Bachelor of Business Administration</td>
-                      <td className={BASE_TD}>₹45,000</td>
-                      <td className={TD}>75–100</td>
-                      <td className={FINAL_TD}>₹37,500</td>
+                      <td className={PROG_TD}>BBA â€“ Bachelor of Business Administration</td>
+                      <td className={BASE_TD}>â‚¹45,000</td>
+                      <td className={TD}>75â€“100</td>
+                      <td className={FINAL_TD}>â‚¹37,500</td>
                     </tr>
                     <tr>
-                      <td className={PROG_TD}>BCA – Bachelor of Computer Applications</td>
-                      <td className={BASE_TD}>₹45,000</td>
-                      <td className={TD}>75–100</td>
-                      <td className={FINAL_TD}>₹37,500</td>
+                      <td className={PROG_TD}>BCA â€“ Bachelor of Computer Applications</td>
+                      <td className={BASE_TD}>â‚¹45,000</td>
+                      <td className={TD}>75â€“100</td>
+                      <td className={FINAL_TD}>â‚¹37,500</td>
                     </tr>
                     <tr>
                       <td className={TD} colSpan={3}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹45,000</td>
+                      <td className={FINAL_TD}>â‚¹45,000</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </ScrollReveal>
 
-            {/* ── TABLE 4: M.Tech ── */}
+            {/* â”€â”€ TABLE 4: M.Tech â”€â”€ */}
             <ScrollReveal delay={0.1}>
               <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
                 <table className="w-full border-collapse text-sm">
@@ -304,17 +304,17 @@ const EligibilityAndFees = () => (
                   </thead>
                   <tbody>
                     {[
-                      { prog: "M.Tech. VLSI Design & Embedded Systems",                              cgpa: "9 and above", cet: "<100",  gate: "Qualified with any rank", fee: "₹0" },
-                      { prog: "M.Tech. Civil Engg. (Construction Engg. & Management)",               cgpa: "8 and above", cet: "<300",  gate: "—",                      fee: "₹10,000" },
-                      { prog: "M.Tech. Automation and Robotics",                                     cgpa: "7 and above", cet: "<500",  gate: "—",                      fee: "₹20,000" },
-                      { prog: "M.Tech. Electric Vehicle Technology",                                 cgpa: "Other eligible candidates", cet: "", gate: "",              fee: "₹35,000" },
-                      { prog: "M.Tech. Computer Science & Engineering",                              cgpa: "As per eligibility",        cet: "", gate: "",              fee: "₹35,000" },
-                      { prog: "M.Tech. Computer Science & Engineering (AI & ML)",                    cgpa: "As per eligibility",        cet: "", gate: "",              fee: "₹35,000" },
+                      { prog: "M.Tech. VLSI Design & Embedded Systems",                              cgpa: "9 and above", cet: "<100",  gate: "Qualified with any rank", fee: "â‚¹0" },
+                      { prog: "M.Tech. Civil Engg. (Construction Engg. & Management)",               cgpa: "8 and above", cet: "<300",  gate: "â€”",                      fee: "â‚¹10,000" },
+                      { prog: "M.Tech. Automation and Robotics",                                     cgpa: "7 and above", cet: "<500",  gate: "â€”",                      fee: "â‚¹20,000" },
+                      { prog: "M.Tech. Electric Vehicle Technology",                                 cgpa: "Other eligible candidates", cet: "", gate: "",              fee: "â‚¹35,000" },
+                      { prog: "M.Tech. Computer Science and Engineering",                              cgpa: "As per eligibility",        cet: "", gate: "",              fee: "â‚¹35,000" },
+                      { prog: "M.Tech. Computer Science and Engineering (AI and ML)",                    cgpa: "As per eligibility",        cet: "", gate: "",              fee: "â‚¹35,000" },
                     ].map((r, i) => (
                       <tr key={i}>
                         {i === 0 && <td className={SCHOOL_TD} rowSpan={6}>School of Engineering /<br />School of Computing</td>}
                         <td className={PROG_TD}>{r.prog}</td>
-                        <td className={BASE_TD}>₹35,000</td>
+                        <td className={BASE_TD}>â‚¹35,000</td>
                         {r.cet !== "" ? (
                           <>
                             <td className={TD}>{r.cgpa}</td>
@@ -332,7 +332,7 @@ const EligibilityAndFees = () => (
               </div>
             </ScrollReveal>
 
-            {/* ── TABLE 5: MBA / MCA ── */}
+            {/* â”€â”€ TABLE 5: MBA / MCA â”€â”€ */}
             <ScrollReveal delay={0.1}>
               <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
                 <table className="w-full border-collapse text-sm">
@@ -350,31 +350,31 @@ const EligibilityAndFees = () => (
                   <tbody>
                     <tr>
                       <td className={SCHOOL_TD} rowSpan={3}>School of Business<br />School of Sciences</td>
-                      <td className={PROG_TD}>MBA – Master of Business Administration</td>
-                      <td className={BASE_TD}>₹60,000</td>
-                      <td className={TD}>75–100</td>
+                      <td className={PROG_TD}>MBA â€“ Master of Business Administration</td>
+                      <td className={BASE_TD}>â‚¹60,000</td>
+                      <td className={TD}>75â€“100</td>
                       <td className={TD}>&lt;500</td>
                       <td className={TD}>75 and above</td>
-                      <td className={FINAL_TD}>₹50,000</td>
+                      <td className={FINAL_TD}>â‚¹50,000</td>
                     </tr>
                     <tr>
-                      <td className={PROG_TD}>MCA – Master of Computer Applications</td>
-                      <td className={BASE_TD}>₹60,000</td>
-                      <td className={TD}>75–100</td>
+                      <td className={PROG_TD}>MCA â€“ Master of Computer Applications</td>
+                      <td className={BASE_TD}>â‚¹60,000</td>
+                      <td className={TD}>75â€“100</td>
                       <td className={TD}>&lt;500</td>
-                      <td className={TD}>—</td>
-                      <td className={FINAL_TD}>₹50,000</td>
+                      <td className={TD}>â€”</td>
+                      <td className={FINAL_TD}>â‚¹50,000</td>
                     </tr>
                     <tr>
                       <td className={TD} colSpan={5}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹60,000</td>
+                      <td className={FINAL_TD}>â‚¹60,000</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </ScrollReveal>
 
-            {/* ── MITSUCET Fee Waiver ── */}
+            {/* â”€â”€ MITSUCET Fee Waiver â”€â”€ */}
             <ScrollReveal delay={0.1}>
               <div className="max-w-sm overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
                 <table className="w-full border-collapse text-sm">
@@ -394,9 +394,9 @@ const EligibilityAndFees = () => (
                   <tbody>
                     {[
                       { rank: "Rank 1",     waiver: "100%" },
-                      { rank: "Rank 2–5",   waiver: "75%" },
-                      { rank: "Rank 6–10",  waiver: "50%" },
-                      { rank: "Rank 10–20", waiver: "25%" },
+                      { rank: "Rank 2â€“5",   waiver: "75%" },
+                      { rank: "Rank 6â€“10",  waiver: "50%" },
+                      { rank: "Rank 10â€“20", waiver: "25%" },
                     ].map((fw, i) => (
                       <tr key={i} className={`border-b border-gray-100 ${i % 2 === 0 ? "bg-white" : "bg-[#fff8f8]"} hover:bg-[#fff0f0] transition-colors`}>
                         <td className="py-3 px-6 font-semibold text-[#0f2a44] border border-gray-200">{fw.rank}</td>
@@ -414,7 +414,7 @@ const EligibilityAndFees = () => (
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* â”€â”€ CTA â”€â”€ */}
       <section className="py-16 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
@@ -445,3 +445,5 @@ const EligibilityAndFees = () => (
 );
 
 export default EligibilityAndFees;
+
+

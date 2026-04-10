@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 
 export interface CMSEvent {
   id: string;
@@ -40,32 +40,32 @@ export interface CMSContent {
 const FALLBACK_DATA: Record<string, CMSContent> = {
   cse: {
     events: [
-      { id: "e1", department: "cse", title: "International Conference on AI & Data Science (ICADS 2024)", date: "March 15–16, 2024", description: "Two-day international conference bringing together researchers in Artificial Intelligence, Machine Learning, and Data Science.", venue: "MITS, Madanapalle", type: "Conference" },
-      { id: "e2", department: "cse", title: "FDP on Deep Learning with TensorFlow 2.0", date: "December 18–22, 2023", description: "Five-day Faculty Development Programme funded by AICTE covering advanced deep learning frameworks.", venue: "MITS, Madanapalle", type: "FDP" },
-      { id: "e3", department: "cse", title: "Smart India Hackathon – Internal Round", date: "September 10, 2023", description: "Internal selection round for Smart India Hackathon with 40+ student teams participating.", venue: "MITS Campus", type: "Hackathon" },
-      { id: "e4", department: "cse", title: "Workshop on Cloud Computing & DevOps", date: "February 5–6, 2024", description: "Hands-on workshop covering AWS, Azure, Docker, and Kubernetes for students and faculty.", venue: "MITS, Madanapalle", type: "Workshop" },
+      { id: "e1", department: "cse", title: "International Conference on AI and Data Science (ICADS 2024)", date: "March 15â€“16, 2024", description: "Two-day international conference bringing together researchers in Artificial Intelligence, Machine Learning, and Data Science.", venue: "MITS, Madanapalle", type: "Conference" },
+      { id: "e2", department: "cse", title: "FDP on Deep Learning with TensorFlow 2.0", date: "December 18â€“22, 2023", description: "Five-day Faculty Development Programme funded by AICTE covering advanced deep learning frameworks.", venue: "MITS, Madanapalle", type: "FDP" },
+      { id: "e3", department: "cse", title: "Smart India Hackathon â€“ Internal Round", date: "September 10, 2023", description: "Internal selection round for Smart India Hackathon with 40+ student teams participating.", venue: "MITS Campus", type: "Hackathon" },
+      { id: "e4", department: "cse", title: "Workshop on Cloud Computing & DevOps", date: "February 5â€“6, 2024", description: "Hands-on workshop covering AWS, Azure, Docker, and Kubernetes for students and faculty.", venue: "MITS, Madanapalle", type: "Workshop" },
     ],
     news: [
-      { id: "n1", department: "cse", title: "CSE Department Receives NBA Accreditation for 2024–2027", date: "January 2024", content: "The Department of Computer Science & Engineering has received NBA accreditation for the next three years, recognizing its commitment to quality education.", category: "Accreditation" },
+      { id: "n1", department: "cse", title: "CSE Department Receives NBA Accreditation for 2024â€“2027", date: "January 2024", content: "The Department of Computer Science and Engineering has received NBA accreditation for the next three years, recognizing its commitment to quality education.", category: "Accreditation" },
       { id: "n2", department: "cse", title: "IBM Center of Excellence Inaugurated at MITS", date: "October 2023", content: "MITS inaugurated an IBM Center of Excellence in collaboration with IBM India, offering students access to IBM tools and certifications.", category: "Industry" },
       { id: "n3", department: "cse", title: "Students Win First Prize at National Coding Championship", date: "December 2023", content: "Team CodeForce from CSE bagged first place at the National Coding Championship held at IIT Bombay.", category: "Achievement" },
-      { id: "n4", department: "cse", title: "New DST-SERB Funded Project Worth ₹25 Lakhs Approved", date: "August 2023", content: "Dr. K. Subramanyam's research project on AI for Medical Imaging received ₹25 lakh funding from DST-SERB.", category: "Research" },
+      { id: "n4", department: "cse", title: "New DST-SERB Funded Project Worth â‚¹25 Lakhs Approved", date: "August 2023", content: "Dr. K. Subramanyam's research project on AI for Medical Imaging received â‚¹25 lakh funding from DST-SERB.", category: "Research" },
     ],
     mous: [
       { id: "m1", department: "cse", organization: "IBM India Pvt. Ltd.", purpose: "Center of Excellence in Artificial Intelligence and Cloud Computing", year: "2021", country: "India" },
-      { id: "m2", department: "cse", organization: "Infosys BPO Ltd.", purpose: "Campus Connect Program – Training and Placement", year: "2020", country: "India" },
+      { id: "m2", department: "cse", organization: "Infosys BPO Ltd.", purpose: "Campus Connect Program â€“ Training and Placement", year: "2020", country: "India" },
       { id: "m3", department: "cse", organization: "Microsoft Corporation (MSFT)", purpose: "Microsoft Azure Cloud Lab & Student Certification Program", year: "2022", country: "USA" },
       { id: "m4", department: "cse", organization: "TCS iON", purpose: "Skill Development & Online Assessment Platform", year: "2019", country: "India" },
     ],
   },
   eee: {
     events: [
-      { id: "e1", department: "eee", title: "National Conference on Smart Grid & Renewable Energy", date: "February 10–11, 2024", description: "Conference on Smart Grid technologies and renewable energy integration.", venue: "MITS, Madanapalle", type: "Conference" },
+      { id: "e1", department: "eee", title: "National Conference on Smart Grid & Renewable Energy", date: "February 10â€“11, 2024", description: "Conference on Smart Grid technologies and renewable energy integration.", venue: "MITS, Madanapalle", type: "Conference" },
       { id: "e2", department: "eee", title: "Workshop on Electric Vehicle Technology", date: "November 2023", description: "Interactive workshop on EV design, battery management systems, and charging infrastructure.", venue: "EEE Lab, MITS", type: "Workshop" },
     ],
     news: [
       { id: "n1", department: "eee", title: "EEE Department Signs MoU with APEPDCL", date: "March 2024", content: "The EEE Department has signed an MoU with AP Eastern Power Distribution Company for student internships and collaborative research.", category: "Industry" },
-      { id: "n2", department: "eee", title: "Smart Grid Project Completed Successfully", date: "December 2023", content: "DST-SERB funded Smart Grid Integration project worth ₹18 lakhs completed with significant research publications.", category: "Research" },
+      { id: "n2", department: "eee", title: "Smart Grid Project Completed Successfully", date: "December 2023", content: "DST-SERB funded Smart Grid Integration project worth â‚¹18 lakhs completed with significant research publications.", category: "Research" },
     ],
     mous: [
       { id: "m1", department: "eee", organization: "APEPDCL", purpose: "Student Internships & Industry Training in Power Systems", year: "2024", country: "India" },
@@ -130,7 +130,7 @@ export function useDeptCMSContent(deptKey: string) {
           // try next endpoint
         }
       }
-      // All failed — use static fallback
+      // All failed â€” use static fallback
       if (!cancelled) {
         setData(getGenericFallback(deptKey));
         setSource("static");
@@ -144,3 +144,5 @@ export function useDeptCMSContent(deptKey: string) {
 
   return { data, loading, source };
 }
+
+

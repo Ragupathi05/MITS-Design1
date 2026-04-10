@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 
 // All icons are detailed SVG illustrations in the MITS red style
 const svgBase: React.SVGAttributes<SVGSVGElement> = {
@@ -7,7 +7,7 @@ const svgBase: React.SVGAttributes<SVGSVGElement> = {
   xmlns: "http://www.w3.org/2000/svg",
 };
 
-// CSE — Monitor with code brackets and circuit nodes
+// CSE â€” Monitor with code brackets and circuit nodes
 export const IconCSE = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="12" y="10" width="40" height="30" rx="3" stroke="currentColor" strokeWidth="2" />
@@ -22,7 +22,7 @@ export const IconCSE = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// AI & DS — Brain with data nodes/connections
+// AI & DS â€” Brain with data nodes/connections
 export const IconAIDS = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <path d="M32 12C24 12 18 18 18 25C18 30 21 34 25 36L25 42H39L39 36C43 34 46 30 46 25C46 18 40 12 32 12Z" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -42,7 +42,7 @@ export const IconAIDS = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// AI & ML — Head profile with neural network/gear
+// AI and ML â€” Head profile with neural network/gear
 export const IconAIML = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <path d="M22 48V44C16 42 12 36 12 28C12 18 20 10 30 10C40 10 48 18 48 28C48 32 46 36 44 38" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -58,7 +58,7 @@ export const IconAIML = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// AI & Robotics — Robot head with antenna
+// AI and Robotics â€” Robot head with antenna
 export const IconRobotics = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="18" y="20" width="28" height="24" rx="4" stroke="currentColor" strokeWidth="2" />
@@ -77,7 +77,7 @@ export const IconRobotics = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Bioinformatics — DNA helix with gear
+// Bioinformatics â€” DNA helix with gear
 export const IconBioinfo = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <path d="M20 10C20 10 26 18 26 24C26 30 20 38 20 38" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -95,7 +95,7 @@ export const IconBioinfo = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// ECE — Circuit board with chip
+// ECE â€” Circuit board with chip
 export const IconECE = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="18" y="18" width="28" height="28" rx="2" stroke="currentColor" strokeWidth="2" />
@@ -117,7 +117,7 @@ export const IconECE = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// EEE — Lightning bolt with circular circuit
+// EEE â€” Lightning bolt with circular circuit
 export const IconEEE = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <circle cx="32" cy="32" r="20" stroke="currentColor" strokeWidth="1.5" fill="none" />
@@ -132,7 +132,7 @@ export const IconEEE = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// CIVIL — Building with crane
+// CIVIL â€” Building with crane
 export const IconCivil = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="14" y="24" width="22" height="28" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -151,7 +151,7 @@ export const IconCivil = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// MECH — Gear with wrench
+// MECH â€” Gear with wrench
 export const IconMech = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <circle cx="28" cy="28" r="12" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -171,7 +171,7 @@ export const IconMech = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// BBA — Briefcase with chart
+// BBA â€” Briefcase with chart
 export const IconBBA = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="10" y="20" width="44" height="30" rx="3" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -185,7 +185,7 @@ export const IconBBA = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// BCA — Desktop with code
+// BCA â€” Desktop with code
 export const IconBCA = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="10" y="10" width="44" height="32" rx="3" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -201,7 +201,7 @@ export const IconBCA = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// VLSI — Microchip detailed
+// VLSI â€” Microchip detailed
 export const IconVLSI = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="16" y="16" width="32" height="32" rx="2" stroke="currentColor" strokeWidth="2" />
@@ -223,7 +223,7 @@ export const IconVLSI = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// EV Tech — Car with plug
+// EV Tech â€” Car with plug
 export const IconEVTech = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <path d="M14 36L18 24H46L50 36" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -239,7 +239,7 @@ export const IconEVTech = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// MBA — Graduation cap with star
+// MBA â€” Graduation cap with star
 export const IconMBA = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <polygon points="32,12 8,26 32,40 56,26" stroke="currentColor" strokeWidth="2" fill="currentColor" opacity="0.1" />
@@ -250,7 +250,7 @@ export const IconMBA = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// MCA — Laptop with app grid
+// MCA â€” Laptop with app grid
 export const IconMCA = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <path d="M14 40L10 46H54L50 40" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -266,7 +266,7 @@ export const IconMCA = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Automation & Robotics — Robotic arm
+// Automation & Robotics â€” Robotic arm
 export const IconAutoRobot = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="12" y="48" width="20" height="6" rx="1" stroke="currentColor" strokeWidth="2" />
@@ -279,7 +279,7 @@ export const IconAutoRobot = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// CEM (Construction Engineering Management) — Hard hat with blueprint
+// CEM (Construction Engineering Management) â€” Hard hat with blueprint
 export const IconCEM = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <path d="M16 32C16 22 22 14 32 14C42 14 48 22 48 32" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -292,7 +292,7 @@ export const IconCEM = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// CSE PG — Server with network
+// CSE PG â€” Server with network
 export const IconCSEPG = ({ className }: { className?: string }) => (
   <svg {...svgBase} className={className}>
     <rect x="14" y="10" width="36" height="14" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -307,3 +307,4 @@ export const IconCSEPG = ({ className }: { className?: string }) => (
     <line x1="42" y1="48" x2="32" y2="52" stroke="currentColor" strokeWidth="1" opacity="0.4" />
   </svg>
 );
+

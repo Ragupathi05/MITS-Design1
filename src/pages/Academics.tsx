@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { BookOpen, Building2, FlaskConical, GraduationCap, Microscope, Users, Calendar, Monitor } from "lucide-react";
@@ -15,7 +15,7 @@ const schools = [
   },
   {
     name: "School of Computing",
-    depts: ["Computer Science & Engineering", "CSE (AI & Data Science)", "CSE (AI & ML)", "CSE (AI & Robotics)", "CSE (Cyber Security)"],
+    depts: ["Computer Science and Engineering", "CSE (AI and Data Science)", "CSE (AI and ML)", "CSE (AI and Robotics)", "CSE (Cyber Security)"],
     icon: Monitor,
   },
   {
@@ -69,7 +69,7 @@ const Academics = () => {
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li><Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
-                <li className="text-white/50">›</li>
+                <li className="text-white/50">â€º</li>
                 <li className="text-white font-semibold">Academics</li>
               </ol>
             </nav>
@@ -169,3 +169,4 @@ const Academics = () => {
 };
 
 export default Academics;
+

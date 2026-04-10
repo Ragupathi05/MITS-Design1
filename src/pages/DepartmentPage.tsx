@@ -77,6 +77,16 @@ const DepartmentPage = () => {
     return null;
   }
 
+  const splitTitle = (name: string) => {
+    const match = name.match(/^(.*?)(\s*\(.*\))$/);
+    if (!match) {
+      return { main: name, sub: "" };
+    }
+    return { main: match[1].trim(), sub: match[2].trim() };
+  };
+
+  const title = splitTitle(dept.name);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -92,7 +102,8 @@ const DepartmentPage = () => {
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-5xl font-bold text-white drop-shadow-2xl" style={{ fontFamily: "var(--font-display)" }}
             >
-              {dept.name}
+              <span className="block">{title.main}</span>
+              {title.sub && <span className="block">{title.sub}</span>}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 10 }}

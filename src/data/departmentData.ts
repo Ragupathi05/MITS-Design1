@@ -1,4 +1,4 @@
-// Comprehensive department data extracted from official MITS website (mits.ac.in)
+﻿// Comprehensive department data extracted from official MITS website (mits.ac.in)
 const BASE = import.meta.env.BASE_URL;
 
 export interface FacultyMember {
@@ -116,12 +116,12 @@ const deptImg = (key: string) => `${BASE}departments/${key}.jpg`;
 export const departmentsData: Record<string, DepartmentData> = {
   cse: {
     key: "cse",
-    name: "Computer Science & Engineering",
+    name: "Computer Science and Engineering",
     shortName: "CSE",
     established: "1998",
     bannerImage: deptImg("cse"),
-    about: "The Department of Computer Science & Engineering was established in 1998 and has been playing a vital role in producing value-based professionals. The department offers 4-year undergraduate program and 2-year postgraduate program to cater the ever-challenging needs of technical excellence in the emerging areas of Computer Science & Engineering. The course is designed in a flexible and structured way to meet the evolving needs of the IT industry. The CSE department has eminent faculty with rich academic and industry exposure who have pursued Masters/Ph.D. Degree from prestigious institutions like NITs, IITs, and Central Universities within India and abroad. Many research activities in the domain of Artificial Intelligence (AI) and Machine Learning (ML) are under progress. The department has good interactions and MoUs with leading Industries for technology domain Training & Development. The Department is accredited by NBA (National Board of Accreditation) of All India Council for Technical Education (AICTE), New Delhi.",
-    vision: "To excel in technical education and research in area of Computer Science & Engineering and to provide expert, proficient and Knowledgeable individuals with high enthusiasm to meet the Societal challenges.",
+    about: "The Department of Computer Science and Engineering was established in 1998 and has been playing a vital role in producing value-based professionals. The department offers 4-year undergraduate program and 2-year postgraduate program to cater the ever-challenging needs of technical excellence in the emerging areas of Computer Science and Engineering. The course is designed in a flexible and structured way to meet the evolving needs of the IT industry. The CSE department has eminent faculty with rich academic and industry exposure who have pursued Masters/Ph.D. Degree from prestigious institutions like NITs, IITs, and Central Universities within India and abroad. Many research activities in the domain of Artificial Intelligence (AI) and Machine Learning (ML) are under progress. The department has good interactions and MoUs with leading Industries for technology domain Training & Development. The Department is accredited by NBA (National Board of Accreditation) of All India Council for Technical Education (AICTE), New Delhi.",
+    vision: "To excel in technical education and research in area of Computer Science and Engineering and to provide expert, proficient and Knowledgeable individuals with high enthusiasm to meet the Societal challenges.",
     mission: [
       "To provide an open environment to the students and faculty that promotes professional and personal growth.",
       "To impart strong theoretical and practical background across the computer science discipline with an emphasis on software development and research.",
@@ -129,12 +129,12 @@ export const departmentsData: Record<string, DepartmentData> = {
     ],
     nbaAccredited: true,
     hod: { name: "Dr. M. Sreedevi", designation: "Professor & Head", qualification: "Ph.D. (S V University)", image: "https://mits.ac.in/public/uploads/faculty/sri.jpg", profileUrl: "https://mits.ac.in/facultyprofile/140" },
-    achievements: { consultancyAmount: "₹25+ Lakhs", researchProjects: "15+", patents: "12+", publications: "200+" },
+    achievements: { consultancyAmount: "â‚¹25+ Lakhs", researchProjects: "15+", patents: "12+", publications: "200+" },
     teachingApproach: {
       description: "The department follows an outcome-based education (OBE) framework integrated with experiential learning methodologies.",
       points: ["Project-based learning with industry problems", "NPTEL, Coursera & edX integrated MOOCs", "Hackathons and coding competitions", "Industry mentorship programs", "IBM, Microsoft, Accenture certification tracks"]
     },
-    courses: ["B.Tech in Computer Science & Engineering", "M.Tech in Computer Science & Engineering", "Ph.D. in Computer Science & Engineering"],
+    courses: ["B.Tech in Computer Science and Engineering", "M.Tech in Computer Science and Engineering", "Ph.D. in Computer Science and Engineering"],
     contactInfo: { email: "hod_cse@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. M. Sreedevi", designation: "Professor & Head", qualification: "Ph.D. (S V University)", image: "https://mits.ac.in/public/uploads/faculty/sri.jpg", profileUrl: "https://mits.ac.in/facultyprofile/140" },
@@ -211,13 +211,13 @@ export const departmentsData: Record<string, DepartmentData> = {
       { title: "Edge Computing in Healthcare Applications", type: "journal", year: "2023", authors: "Dr. P. Rajesh et al." },
     ],
     consultancy: [
-      { title: "Web Application Development", agency: "Local Industries", amount: "₹3 Lakhs" },
-      { title: "Data Analytics Training Program", agency: "AP State Government", amount: "₹5 Lakhs" },
-      { title: "Network Infrastructure Setup", agency: "Regional Businesses", amount: "₹2 Lakhs" },
+      { title: "Web Application Development", agency: "Local Industries", amount: "â‚¹3 Lakhs" },
+      { title: "Data Analytics Training Program", agency: "AP State Government", amount: "â‚¹5 Lakhs" },
+      { title: "Network Infrastructure Setup", agency: "Regional Businesses", amount: "â‚¹2 Lakhs" },
     ],
     events: [
-      { title: "International FDP on Emerging Trends in Computer Science", date: "31st October to 5th November 2022", description: "Organized by Department of Computer Science & Engineering." },
-      { title: "International Webinar on Cyber Security Applications using Python", date: "26th October 2022", description: "Organized by Department of Computer Science & Engineering in association with ISTE Student Chapter MITS." },
+      { title: "International FDP on Emerging Trends in Computer Science", date: "31st October to 5th November 2022", description: "Organized by Department of Computer Science and Engineering." },
+      { title: "International Webinar on Cyber Security Applications using Python", date: "26th October 2022", description: "Organized by Department of Computer Science and Engineering in association with ISTE Student Chapter MITS." },
       { title: "Awareness and Professional Development Programme on Cyber Security", date: "20th October 2022", description: "Organized by Department of Computer Science and Technology & Department of CSE (Cyber Security)." },
     ],
     mous: [
@@ -230,8 +230,8 @@ export const departmentsData: Record<string, DepartmentData> = {
     ],
     placement: {
       percentage: "98%",
-      avgPackage: "₹6.5 LPA",
-      highestPackage: "₹24 LPA",
+      avgPackage: "â‚¹6.5 LPA",
+      highestPackage: "â‚¹24 LPA",
       recruiters: ["TCS", "Infosys", "IBM", "Tech Mahindra", "Accenture", "Mindtree", "Wipro", "Cognizant", "HCL", "Capgemini"]
     },
     studentProjects: [
@@ -290,7 +290,7 @@ export const departmentsData: Record<string, DepartmentData> = {
     ],
     nbaAccredited: true,
     hod: { name: "Dr. Vijayakumar Natesan", designation: "Asst. Professor & Head", qualification: "Ph.D. (IIT, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/fc9b84db32042ded85ace96100f6848f.JPG", profileUrl: "https://mits.ac.in/facultyprofile/7" },
-    achievements: { consultancyAmount: "₹10+ Lakhs", researchProjects: "8+", patents: "5+", publications: "100+" },
+    achievements: { consultancyAmount: "â‚¹10+ Lakhs", researchProjects: "8+", patents: "5+", publications: "100+" },
     teachingApproach: {
       description: "The department emphasizes practical learning with site visits, surveying camps, and hands-on laboratory sessions.",
       points: ["Site visits and field surveys", "BIM-integrated design projects", "Industry guest lectures", "Sustainability-focused curriculum", "Geotechnical field testing"]
@@ -332,8 +332,8 @@ export const departmentsData: Record<string, DepartmentData> = {
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
     ],
     consultancy: [
-      { title: "Soil Testing for Construction Projects", agency: "Local Builders", amount: "₹3 Lakhs" },
-      { title: "Structural Design Review", agency: "AP Government", amount: "₹5 Lakhs" },
+      { title: "Soil Testing for Construction Projects", agency: "Local Builders", amount: "â‚¹3 Lakhs" },
+      { title: "Structural Design Review", agency: "AP Government", amount: "â‚¹5 Lakhs" },
     ],
     events: [
       { title: "Engineers' Day Celebration", date: "15th September 2022", description: "Organized by Department of Civil Engineering commemorating Sir M. Visvesvaraya." },
@@ -344,7 +344,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       { name: "L&T Construction", purpose: "Industrial Training", year: "2021" },
       { name: "NHAI", purpose: "Highway Design Projects", year: "2022" },
     ],
-    placement: { percentage: "80%", avgPackage: "₹4.5 LPA", highestPackage: "₹9 LPA", recruiters: ["L&T", "Shapoorji Pallonji", "NCC", "Ramky Group", "Megha Engineering"] },
+    placement: { percentage: "80%", avgPackage: "â‚¹4.5 LPA", highestPackage: "â‚¹9 LPA", recruiters: ["L&T", "Shapoorji Pallonji", "NCC", "Ramky Group", "Megha Engineering"] },
     studentProjects: [
       { title: "Green Concrete using Fly Ash", students: "Team of 4", description: "Sustainable concrete mix design using industrial waste" },
       { title: "Rainwater Harvesting System Design", students: "Team of 3", description: "Comprehensive design for campus rainwater collection" },
@@ -377,18 +377,18 @@ export const departmentsData: Record<string, DepartmentData> = {
     key: "eee",
     name: "Electrical & Electronics Engineering",
     shortName: "EEE",
-    established: "2007",
+    established: "1998",
     bannerImage: deptImg("eee"),
-    about: "The Department of Electrical & Electronics Engineering was established in the year 2007. The department provides comprehensive education in power systems, renewable energy, power electronics, and smart grid technologies. The department is well-equipped with modern laboratories and experienced faculty members dedicated to excellence in teaching and research.",
-    vision: "To emerge as a center of excellence in Electrical & Electronics Engineering education and research contributing to technological and societal development.",
+    about: "The Department of Electrical & Electronics Engineering was established in 1998 and offers an undergraduate programme in EEE with strong foundations in power systems, control systems, power electronics, digital signal processing, robotics and emerging electrical domains such as renewable power generation, smart grids, and electric/hybrid vehicles. The programme has been continuously accredited and re-accredited by NBA, including Tier-I accreditation cycles. The department regularly conducts seminars, workshops, guest lectures, and technical symposiums, and sustains active research, consultancy, publications, and patents to support industry and societal needs.",
+    vision: "To become a department recognized for quality education in Electrical & Electronics Engineering, with research proficiency and ethics, to meet the challenges of society.",
     mission: [
-      "To impart quality education with emphasis on practical skills and innovative thinking.",
-      "To promote research in power systems, renewable energy, and emerging technologies.",
-      "To develop industry-ready graduates with strong ethical values."
+      "To impart quality education and advancements in programme studies to produce engineers with scientific temperament and moral values in EEE.",
+      "To create and develop a research culture with deep commitment so industries can adopt research outcomes.",
+      "To enhance technical dexterity so graduates can find domain-appropriate solutions for societal welfare."
     ],
-    nbaAccredited: false,
+    nbaAccredited: true,
     hod: { name: "Dr. Manavaalan Gunasekaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (IIT, Kanpur)", image: "https://mits.ac.in/public/uploads/faculty/manavaalan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/931" },
-    achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "6+", patents: "3+", publications: "80+" },
+    achievements: { consultancyAmount: "â‚¹8+ Lakhs", researchProjects: "6+", patents: "3+", publications: "80+" },
     teachingApproach: { description: "Hands-on approach with emphasis on renewable energy projects and smart grid technologies.", points: ["Power systems simulation labs", "Renewable energy installations", "Industry visits to power plants", "Smart grid research projects", "NPTEL certification courses"] },
     courses: ["B.Tech in Electrical & Electronics Engineering"],
     contactInfo: { email: "hod_eee@mits.ac.in", phone: "+91-8571-280255" },
@@ -440,18 +440,18 @@ faculty: [
       { title: "Solar Inverter Efficiency Enhancement", type: "conference", year: "2023" },
     ],
     consultancy: [
-      { title: "Power Audit for Local Industries", agency: "APSPDCL", amount: "₹4 Lakhs" },
+      { title: "Power Audit for Local Industries", agency: "APSPDCL", amount: "â‚¹4 Lakhs" },
     ],
     events: [
       { title: "EEE Alumni Meet-2026", date: "4th April 2026", description: "Organized by Department of Electrical & Electronics Engineering." },
       { title: "Skill Development Program on AI in Electronics", date: "9th to 13th March 2026", description: "Five-day offline training organized by APSSDC and Department of EEE." },
-      { title: "Hands-on Workshop on Real World Applications of IoT", date: "19th to 21st February 2026", description: "Three-day workshop organized by Department of EEE in association with MITS IE(I) Students’ Chapter." },
+      { title: "Hands-on Workshop on Real World Applications of IoT", date: "19th to 21st February 2026", description: "Three-day workshop organized by Department of EEE in association with MITS IE(I) Studentsâ€™ Chapter." },
     ],
     mous: [
       { name: "APSPDCL", purpose: "Industrial Training & Internships", year: "2021" },
       { name: "Schneider Electric", purpose: "Automation Training", year: "2022" },
     ],
-    placement: { percentage: "85%", avgPackage: "₹4.5 LPA", highestPackage: "₹10 LPA", recruiters: ["Schneider Electric", "Siemens", "ABB", "L&T", "BHEL"] },
+    placement: { percentage: "85%", avgPackage: "â‚¹4.5 LPA", highestPackage: "â‚¹10 LPA", recruiters: ["Schneider Electric", "Siemens", "ABB", "L&T", "BHEL"] },
     studentProjects: [
       { title: "Solar Powered EV Charging Station", students: "Team of 4", description: "Renewable energy based charging infrastructure" },
     ],
@@ -477,18 +477,18 @@ faculty: [
     key: "me",
     name: "Mechanical Engineering",
     shortName: "ME",
-    established: "2006",
+    established: "1998",
     bannerImage: deptImg("mech"),
-    about: "The Department of Mechanical Engineering was established in 2006 and offers comprehensive programs in mechanical design, manufacturing, and thermal engineering. The department is equipped with state-of-the-art CAD/CAM facilities and manufacturing workshops.",
-    vision: "To be a premier department in Mechanical Engineering education and research, producing engineers who contribute to technological advancement.",
+    about: "The Department of Mechanical Engineering was started in 1998 and currently offers a B.Tech programme in Mechanical Engineering. The programme has received continuous NBA accreditation cycles including Tier-I accreditation. The department has strong academic governance through AC and BoS, a thriving R&D ecosystem with funded projects and consultancy, and modern industry-linked laboratories established with core companies such as Siemens and Dassault Systems. The department focuses on employability, innovation, and research-driven learning aligned with present industrial demands.",
+    vision: "To be a centre of excellence in Mechanical Engineering that develops quality human resources contributing to technological and socio-economic development.",
     mission: [
-      "To provide quality education with emphasis on design, manufacturing, and thermal systems.",
-      "To promote research and innovation in emerging mechanical engineering areas.",
-      "To develop industry-ready professionals with strong problem-solving capabilities."
+      "To provide globally competent mechanical engineers through experienced and committed faculty.",
+      "To nurture graduates with scientific temperament, rational thinking, and humanistic approach for career excellence.",
+      "To promote excellence in teaching and research through collaborative activities."
     ],
-    nbaAccredited: false,
+    nbaAccredited: true,
     hod: { name: "Dr. S. Baskaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (NIT, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Baskaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/306" },
-    achievements: { consultancyAmount: "₹12+ Lakhs", researchProjects: "10+", patents: "4+", publications: "120+" },
+    achievements: { consultancyAmount: "â‚¹12+ Lakhs", researchProjects: "10+", patents: "4+", publications: "120+" },
     teachingApproach: { description: "Emphasis on hands-on training through workshops, CAD/CAM labs, and industry-oriented projects.", points: ["Advanced CAD/CAM training", "Manufacturing workshop practice", "Industry visits", "Design competitions", "ANSYS simulation projects"] },
     courses: ["B.Tech in Mechanical Engineering"],
     contactInfo: { email: "hod_me@mits.ac.in", phone: "+91-8571-280255" },
@@ -538,8 +538,8 @@ faculty: [
       { title: "Thermal Analysis of IC Engines", type: "conference", year: "2023" },
     ],
     consultancy: [
-      { title: "Material Testing Services", agency: "Local Industries", amount: "₹4 Lakhs" },
-      { title: "CAD Design for SMEs", agency: "Small Enterprises", amount: "₹3 Lakhs" },
+      { title: "Material Testing Services", agency: "Local Industries", amount: "â‚¹4 Lakhs" },
+      { title: "CAD Design for SMEs", agency: "Small Enterprises", amount: "â‚¹3 Lakhs" },
     ],
     events: [
       { title: "Workshop on 3D Printing & Additive Manufacturing", date: "February 2024" },
@@ -549,7 +549,7 @@ faculty: [
       { name: "Ashok Leyland", purpose: "Automotive Training", year: "2021" },
       { name: "TVS Motors", purpose: "Industrial Internships", year: "2022" },
     ],
-    placement: { percentage: "88%", avgPackage: "₹5 LPA", highestPackage: "₹11 LPA", recruiters: ["Ashok Leyland", "TVS", "Mahindra", "Tata Motors", "L&T"] },
+    placement: { percentage: "88%", avgPackage: "â‚¹5 LPA", highestPackage: "â‚¹11 LPA", recruiters: ["Ashok Leyland", "TVS", "Mahindra", "Tata Motors", "L&T"] },
     studentProjects: [
       { title: "Design of Hybrid Vehicle Chassis", students: "Team of 4", description: "Lightweight chassis design for electric-hybrid vehicle" },
       { title: "Solar Water Heater Optimization", students: "Team of 3", description: "Efficiency improvement using reflector design" },
@@ -583,24 +583,24 @@ faculty: [
     shortName: "ECE",
     established: "2005",
     bannerImage: deptImg("ece"),
-    about: "The Department of Electronics & Communication Engineering was established in 2005, specializing in telecommunications, embedded systems, VLSI design, and IoT. The department has a strong research focus and industry collaborations.",
-    vision: "To be a distinguished department producing competent electronics and communication engineers contributing to national development.",
+    about: "The Department of Electronics & Communication Engineering was established in 1998 for B.Tech and currently offers undergraduate and postgraduate programmes. The department emphasizes all-round development of students, faculty, and staff through a strong academic environment, qualified faculty, and research infrastructure. Since autonomous status, the department has continuously evolved curriculum through AC and BoS to make students industry-ready. The programme is NBA accredited under AICTE.",
+    vision: "To excel in technical education and research in Electronics and Communication Engineering and produce skilled, trained, and competent individuals to meet present-day societal challenges.",
     mission: [
-      "To provide quality education in electronics and communication engineering.",
-      "To promote research in VLSI, IoT, and communication technologies.",
-      "To produce industry-ready engineers with innovative capabilities."
+      "To impart high quality education to enable students to face challenges in ECE.",
+      "To provide infrastructure and environment for innovation, creativity, and research among students and faculty.",
+      "To inculcate ethical and lifelong learning values to address societal needs."
     ],
     nbaAccredited: true,
     hod: { name: "Dr. S. Rajasekaran", designation: "Professor & Head", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg" },
-    achievements: { consultancyAmount: "₹15+ Lakhs", researchProjects: "12+", patents: "8+", publications: "150+" },
+    achievements: { consultancyAmount: "â‚¹15+ Lakhs", researchProjects: "12+", patents: "8+", publications: "150+" },
     teachingApproach: { description: "The department integrates simulation-based learning with hands-on hardware projects.", points: ["VLSI design with Cadence tools", "IoT prototyping with Arduino/Raspberry Pi", "PCB design and fabrication", "Communication system simulation", "MATLAB & Simulink projects"] },
     courses: ["B.Tech in Electronics & Communication Engineering"],
     contactInfo: { email: "hod_ece@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. Rama S Komaragiri", designation: "Professor & Dean-Academics", qualification: "Ph.D. (Technical University of Darmstadt, Germany)", image: "https://mits.ac.in/public/uploads/faculty/rama.jpg", profileUrl: "https://mits.ac.in/facultyprofile/735" },
       { name: "Dr. P. Ramanathan", designation: "Professor & Principal", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Dr. P. Ramanathan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/172" },
-      { name: "Dr. Sanjay Kumar C. Gowre", designation: "Professor & Head", qualification: "Ph.D. (IIT, Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/sanjay.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1018" },
-      { name: "Dr. S. Rajasekaran", designation: "Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/173" },
+      { name: "Dr. Sanjay Kumar C. Gowre", designation: "Professor", qualification: "Ph.D. (IIT, Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/sanjay.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1018" },
+      { name: "Dr. S. Rajasekaran", designation: "Professor & Head", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/173" },
       { name: "Dr. Nehru Kandasamy", designation: "Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Nehru.JPG", profileUrl: "https://mits.ac.in/facultyprofile/174" },
       { name: "Dr. Murli Manohar", designation: "Assoc. Professor", qualification: "Ph.D. (IIT, Guwahati)", image: "https://mits.ac.in/public/uploads/faculty/DSC_1790.JPG", profileUrl: "https://mits.ac.in/facultyprofile/734" },
       { name: "Dr. V. Jayaprakasan", designation: "Assoc. Professor & Associate Dean", qualification: "Ph.D. (JNTUA, Ananthapuramu)", image: "https://mits.ac.in/public/uploads/faculty/jaya.jpg", profileUrl: "https://mits.ac.in/facultyprofile/751" },
@@ -662,8 +662,8 @@ faculty: [
       { title: "FPGA Implementation of Image Processing Algorithms", type: "journal", year: "2023" },
     ],
     consultancy: [
-      { title: "PCB Design Services", agency: "Electronics Firms", amount: "₹5 Lakhs" },
-      { title: "IoT Sensor Network Design", agency: "Agriculture Dept", amount: "₹6 Lakhs" },
+      { title: "PCB Design Services", agency: "Electronics Firms", amount: "â‚¹5 Lakhs" },
+      { title: "IoT Sensor Network Design", agency: "Agriculture Dept", amount: "â‚¹6 Lakhs" },
     ],
     events: [
       { title: "National Level Technical Symposium ECLECTICA 2K26", date: "1st April 2026", description: "Organized by Department of Electronics and Communication Engineering." },
@@ -675,7 +675,7 @@ faculty: [
       { name: "Qualcomm", purpose: "5G Research Collaboration", year: "2022" },
       { name: "BSNL", purpose: "Telecom Training", year: "2020" },
     ],
-    placement: { percentage: "90%", avgPackage: "₹5 LPA", highestPackage: "₹12 LPA", recruiters: ["Qualcomm", "Samsung", "Intel", "TCS", "Infosys", "Wipro"] },
+    placement: { percentage: "90%", avgPackage: "â‚¹5 LPA", highestPackage: "â‚¹12 LPA", recruiters: ["Qualcomm", "Samsung", "Intel", "TCS", "Infosys", "Wipro"] },
     studentProjects: [
       { title: "IoT-based Smart Agriculture System", students: "Team of 4", description: "Sensor-based soil moisture and weather monitoring" },
       { title: "Gesture Controlled Robot", students: "Team of 3", description: "Accelerometer-based robot control system" },
@@ -702,35 +702,44 @@ faculty: [
 
   cseds: {
     key: "cseds",
-    name: "CSE – Data Science",
+    name: "CSE - Data Science",
     shortName: "CSE-DS",
-    established: "2019",
+    established: "2020",
     bannerImage: deptImg("csd"),
-    about: "The Department of CSE – Data Science was established in 2019, offering specialized curriculum in data analytics, machine learning, and big data technologies. The program prepares students for the modern data-driven economy.",
+    about: "The Department of CSE - Data Science was established in 2019, offering specialized curriculum in data analytics, machine learning, and big data technologies. The program prepares students for the modern data-driven economy.",
     vision: "To be a center of excellence in data science education producing data-driven problem solvers.",
     mission: ["To provide comprehensive education in data science and analytics.", "To promote research in machine learning and big data.", "To develop skilled professionals for the data economy."],
     nbaAccredited: false,
-    hod: { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/persis.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
-    achievements: { consultancyAmount: "₹5+ Lakhs", researchProjects: "6+", patents: "4+", publications: "60+" },
+    hod: { name: "Dr. S. Kusuma", designation: "Asst. Professor & Head", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Kusuma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/98" },
+    achievements: { consultancyAmount: "INR 5+ Lakhs", researchProjects: "6+", patents: "4+", publications: "60+" },
     teachingApproach: { description: "Data-centric approach with Kaggle competitions, industry datasets, and hands-on ML projects.", points: ["Kaggle competition participation", "Industry dataset projects", "Python & R programming labs", "Tableau & Power BI training", "AWS/GCP cloud analytics"] },
-    courses: ["B.Tech in CSE – Data Science"],
+    courses: ["B.Tech in CSE - Data Science"],
     contactInfo: { email: "hod_cseds@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. Chandra Prakash Gupta", designation: "Professor & Dean-School of Computing", qualification: "Ph.D. (University of Kota)", image: "https://mits.ac.in/public/uploads/faculty/gupta.png", profileUrl: "https://mits.ac.in/facultyprofile/730" },
-      { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/persis.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
-      { name: "Dr. Sachikanta Dash", designation: "Assoc. Professor", qualification: "Ph.D. (Berhampur University)", image: "https://mits.ac.in/public/uploads/faculty/dash.JPG", profileUrl: "https://mits.ac.in/facultyprofile/745" },
-      { name: "Dr. Brahm Prakash", designation: "Assoc. Professor", qualification: "Ph.D. (IKG Punjab Technical University)", image: "https://mits.ac.in/public/uploads/faculty/bhram.png", profileUrl: "https://mits.ac.in/facultyprofile/1085" },
-      { name: "Dr. K. P. Manikandan", designation: "Asst. Professor", qualification: "Ph.D. (JNTU, Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Manikandan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/91" },
-      { name: "Mr. Nagarajan. B", designation: "Asst. Professor", qualification: "M.E., (Ph.D.) (VIT, Vellore)", image: "https://mits.ac.in/public/uploads/faculty/nagara-Artguru.png", profileUrl: "https://mits.ac.in/facultyprofile/706" },
-      { name: "Mrs. A. Komala", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (UoH, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/Komala.JPG", profileUrl: "https://mits.ac.in/facultyprofile/95" },
-      { name: "Mrs. M. Sri Lakshmi Preethi", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D) (Presidency University)", image: "https://mits.ac.in/public/uploads/faculty/Sri Lakshmi Preethi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/562" },
-      { name: "Mr. T. Niranjan Babu", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (VELTECH University)", image: "https://mits.ac.in/public/uploads/faculty/Niranjan Babu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/614" },
-      { name: "Mrs. M. Fathima Begum", designation: "Asst. Professor", qualification: "M.E., (Ph.D) (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Fathima Begum.JPG", profileUrl: "https://mits.ac.in/facultyprofile/566" },
-      { name: "Mr. Goli Nageswararao", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (IIT, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/goli.JPG", profileUrl: "https://mits.ac.in/facultyprofile/719" },
-      { name: "Mr. M. Mutharasu", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_2084.JPG", profileUrl: "https://mits.ac.in/facultyprofile/489" },
-      { name: "Mr. T. N. Siva Kumar", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Puducherry Technological University)", image: "https://mits.ac.in/public/uploads/faculty/f43f6669d7fab5aea3a814db847d9a46.JPG", profileUrl: "https://mits.ac.in/facultyprofile/665" },
-      { name: "Mr. Roni Das", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Vikrant University)", image: "https://mits.ac.in/public/uploads/faculty/roni.JPG", profileUrl: "https://mits.ac.in/facultyprofile/741" },
-      { name: "Mr. Gowtham A", designation: "Asst. Professor", qualification: "M.E.", image: "https://mits.ac.in/public/uploads/faculty/Gowtham.JPG", profileUrl: "https://mits.ac.in/facultyprofile/113" },
+      { name: "Dr. K. Nirmala Devi", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/nirmaladevi.png", profileUrl: "https://mits.ac.in/facultyprofile/729" },
+      { name: "Dr. S. Kusuma", designation: "Asst. Professor & Head", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Kusuma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/98" },
+      { name: "Dr. S. Gopalakrishnan", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Gopalakrishnan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/509" },
+      { name: "Dr. M. Kiran Kumar", designation: "Asst. Professor", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/kiran.jfif", profileUrl: "https://mits.ac.in/facultyprofile/408" },
+      { name: "Dr. K. Pugazharasi", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Pugazharasi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/548" },
+      { name: "Mr. T. Balaji", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Balaji.JPG", profileUrl: "https://mits.ac.in/facultyprofile/603" },
+      { name: "Mrs. R. Roopa", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Sri Venkateswara University)", image: "https://mits.ac.in/public/uploads/faculty/Roopa.JPG", profileUrl: "https://mits.ac.in/facultyprofile/508" },
+      { name: "Mrs. Vidhyashree B", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D) (Visvesvaraya Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Vidhyashree.JPG", profileUrl: "https://mits.ac.in/facultyprofile/428" },
+      { name: "Mrs. F. Twinkle Graf", designation: "Asst. Professor", qualification: "M.E., (Ph.D.) (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Twinkle.JPG", profileUrl: "https://mits.ac.in/facultyprofile/588" },
+      { name: "Mr. Sheik Jamil Ahmed", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Presidency University)", image: "https://mits.ac.in/public/uploads/faculty/Shaik Jamil Ahmed.JPG", profileUrl: "https://mits.ac.in/facultyprofile/662" },
+      { name: "Mr. A. Kalyan Kumar", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D) (Acharya Nagarjuna University)", image: "https://mits.ac.in/public/uploads/faculty/Kalyan Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/432" },
+      { name: "Mrs. S. Manjula", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D) (Annamalai University)", image: "https://mits.ac.in/public/uploads/faculty/Manjula Prabakaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/123" },
+      { name: "Mr. K. Durga Charan", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D) (JNTU, Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Durga Charan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/133" },
+      { name: "Mrs. T. Swetha", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D) (Amrita Vishwa Vidyapeetham)", image: "https://mits.ac.in/public/uploads/faculty/Swetha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/431" },
+      { name: "Mr. Vishnukumar Ravula", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_2849.JPG", profileUrl: "https://mits.ac.in/facultyprofile/661" },
+      { name: "Mr. Rajkumar. G", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D) (St. Peter's Institute Of Higher Education and Research)", image: "https://mits.ac.in/public/uploads/faculty/Rajkumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/470" },
+      { name: "Mr. G. Kiran Kumar", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Puducherry Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Kiran Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/511" },
+      { name: "Mrs. Anuradha Prudhivi", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Dayananda Sagar University)", image: "https://mits.ac.in/public/uploads/faculty/Anuradha Prudhivi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/134" },
+      { name: "Mr. Arockia Raj Abraham", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Saveetha University)", image: "https://mits.ac.in/public/uploads/faculty/Arockia Raj Abraham.JPG", profileUrl: "https://mits.ac.in/facultyprofile/426" },
+      { name: "Mrs. M. Nandhini", designation: "Asst. Professor", qualification: "M.E., (Ph.D.) (Puducherry Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Nandhini.JPG", profileUrl: "https://mits.ac.in/facultyprofile/453" },
+      { name: "Mr. Rantu Das", designation: "Asst. Professor", qualification: "M.Tech.", image: "https://mits.ac.in/public/uploads/faculty/Rantu Das.JPG", profileUrl: "https://mits.ac.in/facultyprofile/553" },
+      { name: "Mr. B. Bhaskar", designation: "Asst. Professor", qualification: "M.Tech.", image: "https://mits.ac.in/public/uploads/faculty/Bhaskar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/116" },
+      { name: "Mr. Nukala Bhargav Krishna", designation: "Asst. Professor", qualification: "M.Tech.", image: "https://mits.ac.in/public/uploads/faculty/krishna.jpg", profileUrl: "https://mits.ac.in/facultyprofile/750" },
+      { name: "Mr. Yawar Ayub Matta", designation: "Asst. Professor", qualification: "M.Tech.", image: "https://mits.ac.in/public/uploads/faculty/Yawar Ayub Matta.JPG", profileUrl: "https://mits.ac.in/facultyprofile/664" },
     ],
     detailedAchievements: [
       { title: "Faculty Achievements 2023-24", description: "Department maintains year-wise faculty achievement records on official page.", type: "faculty" },
@@ -751,7 +760,7 @@ faculty: [
       { title: "Faculty Publications 2023-24", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-23", type: "journal", year: "2022-23" },
     ],
-    consultancy: [{ title: "Data Analytics for SMEs", agency: "Local Businesses", amount: "₹2 Lakhs" }],
+    consultancy: [{ title: "Data Analytics for SMEs", agency: "Local Businesses", amount: "INR 2 Lakhs" }],
     events: [
       { title: "National Level Technical Symposium DFesta-2026", date: "8th April 2026", description: "Organized by Department of CSE - Data Science." },
       { title: "Technical Talk on Fostering Innovation and Entrepreneurship in Engineering Education", date: "16th March 2026", description: "Organized by Departments of CSE-(AI) and CSE-(DS) under AICTE Sponsored DPS Scheme." },
@@ -783,30 +792,35 @@ faculty: [
 
   csecs: {
     key: "csecs",
-    name: "CSE – Cyber Security",
+    name: "CSE - Cyber Security",
     shortName: "CSE-CS",
     established: "2020",
     bannerImage: deptImg("csc"),
-    about: "The Department of CSE – Cyber Security was established in 2020 with a focus on ethical hacking, network security, digital forensics, and cloud security. The program integrates industry certifications for comprehensive cybersecurity education.",
+    about: "The Department of CSE - Cyber Security was established in 2020 with a focus on ethical hacking, network security, digital forensics, and cloud security. The program integrates industry certifications for comprehensive cybersecurity education.",
     vision: "To produce cybersecurity professionals capable of protecting digital infrastructure and ensuring information security.",
     mission: ["To provide comprehensive education in cybersecurity.", "To promote hands-on training in ethical hacking and penetration testing.", "To develop security professionals with industry certifications."],
     nbaAccredited: false,
-    hod: { name: "Dr. S. Ravi Kumar", designation: "Professor & Head", qualification: "Ph.D. (CSE)" },
-    achievements: { consultancyAmount: "₹3+ Lakhs", researchProjects: "4+", patents: "2+", publications: "40+" },
+    hod: { name: "Dr. S. V. S. Ganga Devi", designation: "Professor & Head", qualification: "Ph.D." },
+    achievements: { consultancyAmount: "INR 3+ Lakhs", researchProjects: "4+", patents: "2+", publications: "40+" },
     teachingApproach: { description: "Practice-oriented curriculum with CTF competitions, ethical hacking labs, and security audits.", points: ["Capture The Flag competitions", "Ethical hacking practical labs", "Network penetration testing", "Security certifications (CEH, CompTIA)", "Cyber forensics workshops"] },
-    courses: ["B.Tech in CSE – Cyber Security"],
-    contactInfo: { email: "hod_csecs@mits.ac.in", phone: "+91-8571-280255" },
+    courses: ["B.Tech in CSE - Cyber Security"],
+    contactInfo: { email: "gangadevsvs@mits.ac.in", phone: "+91-9100973396; 8571-280255; 280706" },
     faculty: [
-      { name: "Dr. S. Ravi Kumar", designation: "Professor & Head", qualification: "Ph.D." },
-      { name: "Mr. K. Suresh", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mrs. P. Anusha", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mr. V. Sai Ram", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mrs. R. Deepa", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mr. N. Krishna", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mrs. B. Mounika", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mr. G. Praveen", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mrs. S. Kavitha", designation: "Assistant Professor", qualification: "M.Tech" },
-      { name: "Mr. M. Raju", designation: "Assistant Professor", qualification: "M.Tech" },
+      { name: "Dr. Chandra Prakash Gupta", designation: "Professor & Dean-School of Computing", qualification: "Ph.D. (University of Kota)", image: "https://mits.ac.in/public/uploads/faculty/gupta.png", profileUrl: "https://mits.ac.in/facultyprofile/730" },
+      { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/persis.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
+      { name: "Dr. Sachikanta Dash", designation: "Assoc. Professor", qualification: "Ph.D. (Berhampur University)", image: "https://mits.ac.in/public/uploads/faculty/dash.JPG", profileUrl: "https://mits.ac.in/facultyprofile/745" },
+      { name: "Dr. Brahm Prakash", designation: "Assoc. Professor", qualification: "Ph.D. (IKG Punjab Technical University)", image: "https://mits.ac.in/public/uploads/faculty/bhram.png", profileUrl: "https://mits.ac.in/facultyprofile/1085" },
+      { name: "Dr. K. P. Manikandan", designation: "Asst. Professor", qualification: "Ph.D. (JNTU, Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Manikandan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/91" },
+      { name: "Mr. Nagarajan. B", designation: "Asst. Professor", qualification: "M.E., (Ph.D.) (VIT, Vellore)", image: "https://mits.ac.in/public/uploads/faculty/nagara-Artguru.png", profileUrl: "https://mits.ac.in/facultyprofile/706" },
+      { name: "Mrs. A. Komala", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (UoH, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/Komala.JPG", profileUrl: "https://mits.ac.in/facultyprofile/95" },
+      { name: "Mrs. M. Sri Lakshmi Preethi", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D) (Presidency University)", image: "https://mits.ac.in/public/uploads/faculty/Sri Lakshmi Preethi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/562" },
+      { name: "Mr. T. Niranjan Babu", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (VELTECH University)", image: "https://mits.ac.in/public/uploads/faculty/Niranjan Babu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/614" },
+      { name: "Mrs. M. Fathima Begum", designation: "Asst. Professor", qualification: "M.E., (Ph.D) (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Fathima Begum.JPG", profileUrl: "https://mits.ac.in/facultyprofile/566" },
+      { name: "Mr. Goli Nageswararao", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (IIT, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/goli.JPG", profileUrl: "https://mits.ac.in/facultyprofile/719" },
+      { name: "Mr. M. Mutharasu", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_2084.JPG", profileUrl: "https://mits.ac.in/facultyprofile/489" },
+      { name: "Mr. T. N. Siva Kumar", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Puducherry Technological University)", image: "https://mits.ac.in/public/uploads/faculty/f43f6669d7fab5aea3a814db847d9a46.JPG", profileUrl: "https://mits.ac.in/facultyprofile/665" },
+      { name: "Mr. Roni Das", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Vikrant University)", image: "https://mits.ac.in/public/uploads/faculty/roni.JPG", profileUrl: "https://mits.ac.in/facultyprofile/741" },
+      { name: "Mr. Gowtham A", designation: "Asst. Professor", qualification: "M.E.", image: "https://mits.ac.in/public/uploads/faculty/Gowtham.JPG", profileUrl: "https://mits.ac.in/facultyprofile/113" },
     ],
     detailedAchievements: [
       { title: "Faculty Achievements 2023-24", description: "Department publishes annual faculty achievements in the official achievements tab.", type: "faculty" },
@@ -825,14 +839,14 @@ faculty: [
       { title: "ML-based Malware Detection Framework", type: "journal", year: "2024" },
       { title: "Phishing URL Detection using Deep Learning", type: "conference", year: "2023" },
     ],
-    consultancy: [{ title: "Security Audit Services", agency: "Local IT Companies", amount: "₹2 Lakhs" }],
+    consultancy: [{ title: "Security Audit Services", agency: "Local IT Companies", amount: "INR 2 Lakhs" }],
     events: [
       { title: "Workshop cum Hackathon on Ethical Hacking and Cyber Security", date: "2nd to 21st March 2026", description: "Organized by CSE - Cyber Security with IIIC and ISTE Student Chapter." },
       { title: "International Conference on Cyber and AI Security", date: "9th to 10th March 2026", description: "Organized by Department of CSE - Cyber Security." },
       { title: "National Level Technical Symposium EPICS 2K26", date: "26th February 2026", description: "Organized by Department of CSE - Cyber Security." },
     ],
     mous: [{ name: "EC-Council", purpose: "CEH Certification Training", year: "2022" }],
-    placement: { percentage: "92%", avgPackage: "₹5.5 LPA", highestPackage: "₹15 LPA", recruiters: ["Deloitte", "KPMG", "TCS", "Infosys", "Wipro"] },
+    placement: { percentage: "92%", avgPackage: "INR 5.5 LPA", highestPackage: "INR 15 LPA", recruiters: ["Deloitte", "KPMG", "TCS", "Infosys", "Wipro"] },
     studentProjects: [
       { title: "Network Vulnerability Scanner", students: "Team of 3", description: "Automated vulnerability scanning tool" },
     ],
@@ -854,7 +868,7 @@ faculty: [
 
   ai: {
     key: "ai",
-    name: "Computer Science & Engineering - Artificial Intelligence",
+    name: "Computer Science and Engineering - Artificial Intelligence",
     shortName: "CSE-AI",
     established: "2020",
     bannerImage: deptImg("ai"),
@@ -867,7 +881,7 @@ faculty: [
     ],
     nbaAccredited: false,
     hod: { name: "Dr. R. Kalpana", designation: "Professor & Head", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_9033.JPG", profileUrl: "https://mits.ac.in/facultyprofile/80" },
-    achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
+    achievements: { consultancyAmount: "â‚¹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
     courses: ["B.Tech in Artificial Intelligence"],
     contactInfo: { email: "drkalpanar@mits.ac.in", phone: "+91-8571-280255" },
@@ -916,7 +930,7 @@ faculty: [
     publications: [
       { title: "Publication Records", type: "journal", year: "Will be updated soon" },
     ],
-    consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "₹5 Lakhs" }],
+    consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "â‚¹5 Lakhs" }],
     events: [
       { title: "AI Powered Solution Expo", date: "7th April 2026", description: "Innovation driven exhibition Demo Day for AI / Industry 4.0 prototypes organized by Department of CSE - Artificial Intelligence." },
       { title: "AI Innovation Workshop using LangChain and MCP", date: "17th March 2026", description: "Organized by Department of CSE - Artificial Intelligence." },
@@ -926,7 +940,7 @@ faculty: [
       { name: "NVIDIA", purpose: "GPU Computing Partnership", year: "2022" },
       { name: "Google DeepMind", purpose: "Research Collaboration", year: "2023" },
     ],
-    placement: { percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
+    placement: { percentage: "96%", avgPackage: "â‚¹8 LPA", highestPackage: "â‚¹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
     studentProjects: [
       { title: "AI-Powered Medical Diagnosis Assistant", students: "Team of 4", description: "Deep learning model for X-ray analysis" },
       { title: "Chatbot using Large Language Models", students: "Team of 3", description: "Custom LLM-based conversational AI" },
@@ -951,11 +965,11 @@ faculty: [
 
   aiml: {
     key: "aiml",
-    name: "Computer Science & Engineering (Artificial Intelligence and Machine Learning)",
-    shortName: "AI & ML",
+    name: "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+    shortName: "AI and ML",
     established: "2023",
     bannerImage: deptImg("ai&ml"),
-    about: "The Department of Computer Science & Engineering (Artificial Intelligence & Machine Learning) and Computer Science & Engineering (Networks) was established in 2023. The department offers four-year undergraduate degree program designed to be flexible and aligned with the evolving demands of the information technology industry. The College Academic Council and the department's Board of Studies are committed to deliver a high-quality education with an advanced curriculum, ensuring that students are industry-ready and prepared to excel in the modern business environment.",
+    about: "The Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning) and Computer Science and Engineering (Networks) was established in 2023. The department offers four-year undergraduate degree program designed to be flexible and aligned with the evolving demands of the information technology industry. The College Academic Council and the department's Board of Studies are committed to deliver a high-quality education with an advanced curriculum, ensuring that students are industry-ready and prepared to excel in the modern business environment.",
     vision: "To be a centre of excellence in Artificial Intelligence and Machine Learning, driving cutting-edge research, innovation, and academic excellence to contribute to technological advancements and societal progress.",
     mission: [
       "M1: To foster analytical thinking, problem-solving, and interdisciplinary knowledge for future Artificial Intelligence Professionals through innovative curriculum and Collaborative initiatives that contribute to scientific and technological progress.",
@@ -963,7 +977,7 @@ faculty: [
     ],
     nbaAccredited: false,
     hod: { name: "Dr. S. Padma", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/144" },
-    achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
+    achievements: { consultancyAmount: "â‚¹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
     courses: ["B.Tech in Artificial Intelligence and Machine Learning"],
     contactInfo: { email: "aimlhod@mits.ac.in", phone: "+91-9154291788; 8571-280255; 280706" },
@@ -1001,7 +1015,7 @@ faculty: [
       { title: "Journals", type: "journal", year: "To be updated shortly" },
       { title: "Conferences", type: "conference", year: "To be updated shortly" },
     ],
-    consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "₹5 Lakhs" }],
+    consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "â‚¹5 Lakhs" }],
     events: [
       { title: "Skill Development Programme for AIML Engineers", date: "6th April 2026", description: "Organized by Department of CSE - Artificial Intelligence and Machine Learning." },
       { title: "Online FDP on Next Generation Cyber Defense with Deep Learning", date: "16th to 21st March 2026", description: "Six-day online FDP organized by Department of CSE - Artificial Intelligence and Machine Learning." },
@@ -1011,7 +1025,7 @@ faculty: [
       { name: "NVIDIA", purpose: "GPU Computing Partnership", year: "2022" },
       { name: "Google DeepMind", purpose: "Research Collaboration", year: "2023" },
     ],
-    placement: { percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
+    placement: { percentage: "96%", avgPackage: "â‚¹8 LPA", highestPackage: "â‚¹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
     studentProjects: [
       { title: "AI-Powered Medical Diagnosis Assistant", students: "Team of 4", description: "Deep learning model for X-ray analysis" },
       { title: "Chatbot using Large Language Models", students: "Team of 3", description: "Custom LLM-based conversational AI" },
@@ -1036,22 +1050,22 @@ faculty: [
 
   mca: {
     key: "mca",
-    name: "Master of Computer Applications",
+    name: "Computer Applications",
     shortName: "MCA",
-    established: "2006",
+    established: "2004",
     bannerImage: deptImg("mca"),
-    about: "The Master of Computer Applications program offers advanced postgraduate curriculum in computing with a strong focus on software engineering, emerging technologies, and industry-ready application development.",
-    vision: "To produce highly skilled computing professionals with advanced knowledge in software engineering and emerging technologies.",
+    about: "The Department of Computer Applications has grown steadily since 2004 and currently offers a three-year MCA and a two-year MCA (Direct Second Year) programme. The programmes are AICTE governed and aligned to industry needs through contemporary curriculum updates. The department emphasizes value-based education, strong academic outcomes, modern labs, structured academic processes, mentoring, and regular FDPs/workshops. The MCA programme is NBA accredited under AICTE and has consistently strong placement outcomes.",
+    vision: "To be the source of producing competent computer application professionals in academic and research activities to serve industry and society.",
     mission: [
-      "To provide advanced technical knowledge in computer applications through quality teaching and practical training.",
-      "To promote research and innovation in software engineering, AI, cloud, and enterprise application development.",
-      "To build industry-ready professionals with strong problem-solving, communication, and teamwork skills."
+      "To empower students with computer application knowledge through state-of-the-art infrastructure and curriculum.",
+      "To groom students into competent professionals in emerging technologies through industry-specific programmes.",
+      "To inculcate ethical values, leadership, and managerial skills in students."
     ],
-    nbaAccredited: false,
+    nbaAccredited: true,
     hod: { name: "Dr. N. Naveen Kumar", designation: "Professor & Head", qualification: "Ph.D. (S V University, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Naveen Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/254" },
-    achievements: { consultancyAmount: "₹6+ Lakhs", researchProjects: "6+", patents: "4+", publications: "90+" },
+    achievements: { consultancyAmount: "â‚¹6+ Lakhs", researchProjects: "6+", patents: "4+", publications: "90+" },
     teachingApproach: { description: "Outcome-based teaching with industry projects, case studies, and research-oriented labs.", points: ["Industry-oriented mini and major projects", "Hands-on training in full-stack and enterprise development", "Research paper and patent mentoring", "Guest lectures from IT professionals", "Internship-integrated learning"] },
-    courses: ["Master of Computer Applications (MCA)"],
+    courses: ["Bachelor of Computer Applications", "Master of Computer Applications"],
     contactInfo: { email: "drnaveenkumarn@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. S. V. S. Ganga Devi", designation: "Professor", qualification: "Ph.D. (SPMVV, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Ganga Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/253" },
@@ -1094,14 +1108,14 @@ faculty: [
       { title: "Faculty Publications 2023-2024", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
     ],
-    consultancy: [{ title: "Web Application Development Support", agency: "Local Organizations", amount: "₹2 Lakhs" }],
+    consultancy: [{ title: "Web Application Development Support", agency: "Local Organizations", amount: "â‚¹2 Lakhs" }],
     events: [
       { title: "Workshop on Machine Learning: From Fundamentals to Future Frontiers", date: "22nd December 2025", description: "Organized by Department of Computer Applications in association with ISTE, MITS." },
       { title: "Workshop on Generative AI Using Microservices Architecture", date: "13th June 2025", description: "One-day workshop organized by Department of Computer Applications in association with ISTE and IIC." },
       { title: "Workshop on NS3 for Cybersecurity through Cloud-based Innovations", date: "29th to 30th January 2025", description: "Two-day workshop organized by Department of Computer Applications in association with ISTE." },
     ],
     mous: [{ name: "Industry Partners (IT)", purpose: "Internships and project collaborations", year: "2024" }],
-    placement: { percentage: "95%", avgPackage: "₹8 LPA", highestPackage: "₹14 LPA", recruiters: ["TCS", "Infosys", "Wipro", "Accenture", "Cognizant"] },
+    placement: { percentage: "95%", avgPackage: "â‚¹8 LPA", highestPackage: "â‚¹14 LPA", recruiters: ["TCS", "Infosys", "Wipro", "Accenture", "Cognizant"] },
     studentProjects: [
       { title: "Enterprise Task Automation Platform", students: "Team of 4", description: "Workflow automation system for institutional operations" },
       { title: "AI-enabled Resume Screening Tool", students: "Team of 3", description: "ML-based profile matching for recruitment use-cases" },
@@ -1126,18 +1140,18 @@ faculty: [
 
   mba: {
     key: "mba",
-    name: "Master of Business Administration",
+    name: "Management Studies",
     shortName: "MBA",
-    established: "2008",
+    established: "2004",
     bannerImage: deptImg("mba"),
-    about: "The MBA program at MITS is AICTE approved and offers industry mentorship, live consulting projects, and a strong corporate recruitment network. The department focuses on developing strategic thinkers and ethical business leaders.",
-    vision: "To cultivate strategic thinkers and ethical business leaders for global environments.",
-    mission: ["To provide quality management education with industry exposure.", "To develop leadership and entrepreneurial skills.", "To promote research in business management."],
-    nbaAccredited: false,
+    about: "The Department of Management Studies offers a full-time MBA programme started in 2004, governed by AICTE, with specializations in HR, Marketing, Systems, and Finance. The department operates with strong infrastructure and continuously collaborates with industry and academic institutions. Academic Council and BoS drive curriculum quality to make students industry-ready. The MBA programme under the department is NBA accredited under AICTE.",
+    vision: "To become a globally recognized centre of excellence in management by building managerial competencies and preparing visionary global business leaders.",
+    mission: ["To empower students to face real-time business situations and foster entrepreneurship.", "To facilitate industry-driven learning among students and faculty.", "To provide a platform for knowledge creation and dissemination through relevant infrastructure.", "To contribute to socio-economic development through excellence in teaching and research."],
+    nbaAccredited: true,
     hod: { name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University)", image: "https://mits.ac.in/public/uploads/faculty/bhanu.png", profileUrl: "https://mits.ac.in/facultyprofile/701" },
-    achievements: { consultancyAmount: "₹5+ Lakhs", researchProjects: "4+", patents: "0", publications: "50+" },
+    achievements: { consultancyAmount: "â‚¹5+ Lakhs", researchProjects: "4+", patents: "0", publications: "50+" },
     teachingApproach: { description: "Case-study based pedagogy with industry mentorship and live consulting projects.", points: ["Harvard case study methodology", "Industry mentorship programs", "Business simulation exercises", "National case competitions", "Live consulting projects"] },
-    courses: ["MBA (Finance, Marketing, HR, Operations)"],
+    courses: ["Bachelor of Business Administration", "Master of Business Administration"],
     contactInfo: { email: "hod_mba@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. Sremmant Basu", designation: "Professor & Dean-Administration, IR & UGC Affairs", qualification: "Ph.D. (IIT, Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/basu(1).jpg", profileUrl: "https://mits.ac.in/facultyprofile/269" },
@@ -1176,7 +1190,7 @@ faculty: [
       { title: "Faculty Publications 2023-2024", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
     ],
-    consultancy: [{ title: "Business Strategy Consulting", agency: "SMEs", amount: "₹2 Lakhs" }],
+    consultancy: [{ title: "Business Strategy Consulting", agency: "SMEs", amount: "â‚¹2 Lakhs" }],
     events: [
       { title: "Alumni Guest Lecture on Health Insurance Career Opportunities", date: "19th October 2024", description: "Organized by Department of Management Studies." },
       { title: "Alumni Guest Lecture on Surviving in the Corporate World", date: "27th June 2024", description: "Organized by Department of Management Studies." },
@@ -1186,7 +1200,7 @@ faculty: [
       { name: "ICFAI Business School", purpose: "Academic Exchange", year: "2021" },
       { name: "CII", purpose: "Industry Interaction", year: "2022" },
     ],
-    placement: { percentage: "90%", avgPackage: "₹5 LPA", highestPackage: "₹12 LPA", recruiters: ["Deloitte", "KPMG", "HDFC", "ICICI", "Amazon", "Flipkart"] },
+    placement: { percentage: "90%", avgPackage: "â‚¹5 LPA", highestPackage: "â‚¹12 LPA", recruiters: ["Deloitte", "KPMG", "HDFC", "ICICI", "Amazon", "Flipkart"] },
     studentProjects: [
       { title: "Market Research for FMCG Product Launch", students: "Team of 5", description: "Primary and secondary research for new product positioning" },
     ],
@@ -1207,6 +1221,96 @@ faculty: [
       { title: "DAB 2024-25", url: "https://mits.ac.in/public/uploads/departments/c488b4a26a4da652bf7ccc3906c2637c.pdf" },
     ],
   },
+
+  bsh: {
+    key: "bsh",
+    name: "Basic Sciences & Humanities",
+    shortName: "BSH",
+    established: "2004",
+    bannerImage: deptImg("cse"),
+    about: "The Department of Basic Sciences & Humanities offers foundational subjects including English and Foreign Languages, Mathematics, Physics, Chemistry, and Humanities. The department supports first-year engineering education through a structured and time-tested curriculum, communication and personality development, and preparation support for competitive exams. It operates under autonomous curriculum governance with continuous updates through academic bodies.",
+    vision: "To become a centre of excellence in language and foundational competencies by empowering global communication and multidisciplinary academic readiness.",
+    mission: [
+      "To provide students with comprehensive education in language, sciences, and humanities with strong conceptual foundations.",
+      "To nurture multilingual, culturally sensitive, and globally competent learners.",
+      "To empower students to engage thoughtfully in diverse local and global social contexts."
+    ],
+    nbaAccredited: false,
+    hod: { name: "Dr. Prageetha G Raju", designation: "Professor & Head - Humanities", qualification: "Ph.D." },
+    achievements: { consultancyAmount: "-", researchProjects: "-", patents: "-", publications: "Year-wise records" },
+    teachingApproach: {
+      description: "Interdisciplinary foundational training with communication labs, core sciences, mathematics, and humanities modules integrated for first-year engineering outcomes.",
+      points: [
+        "Foundation courses for all engineering streams",
+        "Language and communication skill development",
+        "Analytical and mathematical reasoning training",
+        "Laboratory-oriented physics and chemistry learning",
+        "Bridge and induction academic support"
+      ]
+    },
+    courses: [
+      "Common Core Courses for B.Tech First Year",
+      "English & Foreign Languages",
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Humanities"
+    ],
+    contactInfo: { email: "englishhod@mits.ac.in", phone: "+91-8571-280255" },
+    faculty: [
+      { name: "Dr. Prageetha G Raju", designation: "Professor & Head", qualification: "Ph.D. (Osmania University)", image: "https://mits.ac.in/public/uploads/faculty/pragathi.png", profileUrl: "https://mits.ac.in/facultyprofile/704.html" },
+      { name: "Dr. Sudhakar Beedam", designation: "Assoc. Professor", qualification: "Ph.D. (EFLU)", image: "https://mits.ac.in/public/uploads/faculty/sudhakar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/691.html" },
+      { name: "Dr. S. Shanmuga Priya", designation: "Assoc. Professor", qualification: "Ph.D. (SPMVV, Women's University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_7358.JPG", profileUrl: "https://mits.ac.in/facultyprofile/281.html" },
+      { name: "Dr. R. Saravana", designation: "Assoc. Professor", qualification: "Ph.D. (S V University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Dr.%20R.%20Saravana.jpg", profileUrl: "https://mits.ac.in/facultyprofile/351.html" },
+      { name: "Dr. K. V. Narasimha Murthy", designation: "Assoc. Professor", qualification: "Ph.D. (S K University, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/Dr.%20K.V%20N.%20Murthy.jpg", profileUrl: "https://mits.ac.in/facultyprofile/352.html" },
+      { name: "Dr. M. Chandra Sekhar", designation: "Assoc. Professor & Head", qualification: "Ph.D. (S V University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Chandra%20Sekhar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/372.html" },
+      { name: "Dr. Renjith Bhaskaran", designation: "Asst. Professor & Head", qualification: "Ph.D. (IIT, Guwahati)", image: "https://mits.ac.in/public/uploads/faculty/Renjith%20Bhaskaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/377.html" }
+    ],
+    detailedAchievements: [
+      { title: "English & Foreign Languages Events", description: "International conferences, language-day programs, and communication-focused FDPs are organized regularly.", type: "faculty" },
+      { title: "Mathematics Day and FDP Series", description: "Department conducts Mathematics Day events and specialized FDPs in computational intelligence and applied mathematics.", type: "faculty" },
+      { title: "Physics and Chemistry Conferences", description: "Departments organize science-day celebrations, international symposia, and domain seminars for student engagement.", type: "student" }
+    ],
+    facilities: [
+      { name: "English & Foreign Languages", description: "Language and communication training facilities supporting professional communication and global competence." },
+      { name: "Mathematics", description: "Mathematics support and foundational analytical learning modules for all engineering branches." },
+      { name: "Physics", description: "Physics laboratory-based instruction for first-year engineering streams." },
+      { name: "Chemistry", description: "Chemistry laboratory and foundational science practical facilities for first-year curriculum." },
+      { name: "Humanities", description: "Humanities courses supporting ethics, society, and behavioural competency development." }
+    ],
+    patents: [],
+    publications: [
+      { title: "Department of English & Foreign Languages - Year-wise publications", type: "journal", year: "Published on official records" },
+      { title: "Department of Mathematics - Year-wise publications", type: "journal", year: "Published on official records" },
+      { title: "Department of Physics/Chemistry - Year-wise publications", type: "journal", year: "Published on official records" }
+    ],
+    consultancy: [],
+    events: [
+      { title: "Cultural Studies and AI-Enabled ELT", date: "11-12 Mar 2026", description: "Organized by Department of English & Foreign Languages." },
+      { title: "National Science Day Celebrations", date: "28 Feb 2026", description: "Organized by Department of Physics with NSS." },
+      { title: "Mathematics Day Celebrations", date: "22 Dec 2025", description: "Organized by Department of Mathematics." },
+      { title: "World Ozone Day", date: "16 Sep 2025", description: "Organized by Department of Chemistry." }
+    ],
+    mous: [],
+    placement: { percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [] },
+    studentProjects: [],
+    subjects: [
+      { name: "Communicative English", semester: 1, type: "core" },
+      { name: "English for Professional Purposes", semester: 2, type: "core" },
+      { name: "Engineering Mathematics", semester: 1, type: "core" },
+      { name: "Engineering Physics", semester: 1, type: "core" },
+      { name: "Engineering Chemistry", semester: 1, type: "core" },
+      { name: "Physics Laboratory", semester: 1, type: "core" },
+      { name: "Chemistry Laboratory", semester: 1, type: "core" },
+      { name: "Communicative English Laboratory", semester: 1, type: "core" }
+    ],
+    documents: [
+      { title: "Department of English and Foreign Languages - BOS 2023-24", url: "https://mits.ac.in/public/uploads/departments/ca7f5260ce3ca09f652eb43f45f03f4f.pdf" },
+      { title: "Department of Mathematics - BOS 2023-24", url: "https://mits.ac.in/public/uploads/departments/6e35d2d56bc6caf2ec6ec7f8ae0f471c.pdf" },
+      { title: "Department of Physics - BOS 2023-24", url: "https://mits.ac.in/public/uploads/departments/Physics%20BoS%202023-2024.pdf" },
+      { title: "Department of Chemistry - BOS 2024-25", url: "https://mits.ac.in/public/uploads/departments/R23_Chemistry_AY-2024-25.pdf" }
+    ],
+  },
 };
 
 // Helper to get all department keys
@@ -1214,3 +1318,4 @@ export const getAllDepartmentKeys = () => Object.keys(departmentsData);
 
 // Helper to find department by key
 export const getDepartmentByKey = (key: string): DepartmentData | undefined => departmentsData[key];
+

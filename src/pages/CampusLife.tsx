@@ -153,7 +153,7 @@ const facilities = [
     id: 1,
     title: "Central Library",
     description: "A treasure trove of knowledge with over 50,000 books, digital resources, and quiet study spaces.",
-    image: `${BASE}src/assets/campus-library.png`,
+    image: `${BASE}librery/library.webp`,
     icon: BookOpen,
   },
   {

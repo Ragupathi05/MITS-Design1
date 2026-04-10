@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -49,40 +49,40 @@ const ugCalendars = [
     pdfUrl: "https://mits.ac.in/public/uploads/ugc/B.Tech%20Bioinformatics%20Academic%20Calendar%202025-26.pdf"
   },
   {
-    title: "B.Tech Computer Science & Engineering",
-    description: "Computer Science & Engineering academic calendar",
+    title: "B.Tech Computer Science and Engineering",
+    description: "Computer Science and Engineering academic calendar",
     year: "2025-26",
     program: "B.Tech CSE",
     highlights: ["Sem I & II", "Internal Exams", "External Exams", "Holidays"],
     pdfUrl: "https://mits.ac.in/public/uploads/ugc/B.Tech%20CSE%20Academic%20Calendar%202025-26.pdf"
   },
   {
-    title: "B.Tech CSE (AI & Data Science)",
-    description: "Computer Science & Engineering AI & Data Science academic calendar",
+    title: "B.Tech CSE (AI and Data Science)",
+    description: "Computer Science and Engineering AI and Data Science academic calendar",
     year: "2025-26",
     program: "B.Tech AI & DS",
     highlights: ["Sem I & II", "Internal Exams", "External Exams", "Holidays"],
     pdfUrl: "https://mits.ac.in/public/uploads/ugc/B.Tech%20AI%20DS%20Academic%20Calendar%202025-26.pdf"
   },
   {
-    title: "B.Tech CSE (AI & ML)",
-    description: "Computer Science & Engineering AI & ML academic calendar",
+    title: "B.Tech CSE (AI and ML)",
+    description: "Computer Science and Engineering AI and ML academic calendar",
     year: "2025-26",
-    program: "B.Tech AI & ML",
+    program: "B.Tech AI and ML",
     highlights: ["Sem I & II", "Internal Exams", "External Exams", "Holidays"],
     pdfUrl: "https://mits.ac.in/public/uploads/ugc/B.Tech%20AI%20ML%20Academic%20Calendar%202025-26.pdf"
   },
   {
-    title: "B.Tech CSE (AI & Robotics)",
-    description: "Computer Science & Engineering AI & Robotics academic calendar",
+    title: "B.Tech CSE (AI and Robotics)",
+    description: "Computer Science and Engineering AI and Robotics academic calendar",
     year: "2025-26",
-    program: "B.Tech AI & Robotics",
+    program: "B.Tech AI and Robotics",
     highlights: ["Sem I & II", "Internal Exams", "External Exams", "Holidays"],
     pdfUrl: "https://mits.ac.in/public/uploads/ugc/B.Tech%20AI%20Robotics%20Academic%20Calendar%202025-26.pdf"
   },
   {
     title: "B.Tech CSE (Cyber Security)",
-    description: "Computer Science & Engineering Cyber Security academic calendar",
+    description: "Computer Science and Engineering Cyber Security academic calendar",
     year: "2025-26",
     program: "B.Tech Cyber Security",
     highlights: ["Sem I & II", "Internal Exams", "External Exams", "Holidays"],
@@ -141,18 +141,18 @@ const pgCalendars = [
     pdfUrl: "https://mits.ac.in/public/uploads/ugc/MTech%20VLSI%20Academic%20Calendar%202025-26.pdf"
   },
   {
-    title: "M.Tech Computer Science & Engineering",
-    description: "M.Tech Computer Science & Engineering academic calendar",
+    title: "M.Tech Computer Science and Engineering",
+    description: "M.Tech Computer Science and Engineering academic calendar",
     year: "2025-26",
     program: "M.Tech CSE",
     highlights: ["Sem I & II", "Internal Exams", "External Exams", "Holidays"],
     pdfUrl: "https://mits.ac.in/public/uploads/ugc/MTech%20CSE%20Academic%20Calendar%202025-26.pdf"
   },
   {
-    title: "M.Tech CSE (AI & ML)",
-    description: "M.Tech Computer Science & Engineering AI & ML academic calendar",
+    title: "M.Tech CSE (AI and ML)",
+    description: "M.Tech Computer Science and Engineering AI and ML academic calendar",
     year: "2025-26",
-    program: "M.Tech AI & ML",
+    program: "M.Tech AI and ML",
     highlights: ["Sem I & II", "Internal Exams", "External Exams", "Holidays"],
     pdfUrl: "https://mits.ac.in/public/uploads/ugc/MTech%20AI%20ML%20Academic%20Calendar%202025-26.pdf"
   },
@@ -194,7 +194,7 @@ const CalendarCard = ({ calendar, index }: { calendar: typeof ugCalendars[0]; in
       "B.Tech EEE": "from-amber-600 to-amber-800",
       "B.Tech Mech": "from-red-600 to-red-800",
       "B.Tech Civil": "from-orange-600 to-orange-800",
-      "AI & ML": "from-violet-600 to-purple-800",
+      "AI and ML": "from-violet-600 to-purple-800",
       "CSD": "from-teal-600 to-teal-800",
       "BBA": "from-rose-600 to-pink-800",
       "BCA": "from-emerald-600 to-green-800",
@@ -392,13 +392,13 @@ const AcademicCalendar = () => {
             </div>
           </div>
 
-          {/* Breadcrumb — absolute positioned bottom-left */}
+          {/* Breadcrumb â€” absolute positioned bottom-left */}
           <div className="absolute bottom-6 left-6 z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-300">
               <a href="/" className="hover:text-white transition-colors">Home</a>
-              <span className="text-white/50">›</span>
+              <span className="text-white/50">â€º</span>
               <a href="/academics" className="hover:text-white transition-colors">Academics</a>
-              <span className="text-white/50">›</span>
+              <span className="text-white/50">â€º</span>
               <span className="text-white font-medium">Academic Calendar</span>
             </nav>
           </div>
@@ -473,7 +473,7 @@ const AcademicCalendar = () => {
             <ScrollReveal>
               <div className="text-center mb-10">
                 <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-bold rounded-full mb-3 border border-primary/20">
-                  📚 Academic Information
+                  ðŸ“š Academic Information
                 </span>
                 <h2 className="font-bold text-2xl md:text-3xl text-slate-800 mb-2">Plan Your Academic Year</h2>
                 <p className="text-slate-500">Key information about MITS academic programs</p>
@@ -522,3 +522,5 @@ const AcademicCalendar = () => {
 };
 
 export default AcademicCalendar;
+
+

@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -71,10 +71,10 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
     {
       school: "School of Computing",
       courses: [
-        { name: "B.Tech Computer Science & Engineering", icon: Cpu, link: "/department/cse" },
-        { name: "B.Tech CSE (AI & Data Science)", icon: ChartNoAxesCombined, link: "/department/cseds" },
-        { name: "B.Tech CSE (AI & ML)", icon: BrainCircuit, link: "/department/aiml" },
-        { name: "B.Tech CSE (AI & Robotics)", icon: Bot, link: "/department/ai" },
+        { name: "B.Tech Computer Science and Engineering", icon: Cpu, link: "/department/cse" },
+        { name: "B.Tech CSE (AI and Data Science)", icon: ChartNoAxesCombined, link: "/department/cseds" },
+        { name: "B.Tech CSE (AI and ML)", icon: BrainCircuit, link: "/department/aiml" },
+        { name: "B.Tech CSE (AI and Robotics)", icon: Bot, link: "/department/ai" },
         { name: "B.Tech CSE (Cyber Security)", icon: ShieldCheck, link: "/department/csecs" },
       ],
     },
@@ -100,8 +100,8 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
     {
       school: "School of Computing",
       courses: [
-        { name: "M.Tech Computer Science & Engineering", icon: Network },
-        { name: "M.Tech CSE (AI & ML)", icon: Sparkles },
+        { name: "M.Tech Computer Science and Engineering", icon: Network },
+        { name: "M.Tech CSE (AI and ML)", icon: Sparkles },
       ],
     },
     {
@@ -127,7 +127,7 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
       school: "School of Computing",
       courses: [
         { name: "Ph.D Computer Science", icon: Orbit },
-        { name: "Ph.D Computer Science & Engineering", icon: Library },
+        { name: "Ph.D Computer Science and Engineering", icon: Library },
       ],
     },
     {
@@ -324,3 +324,4 @@ const AcademicsSection = () => {
 };
 
 export default AcademicsSection;
+

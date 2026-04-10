@@ -1,5 +1,7 @@
 import ScrollReveal from "@/components/ScrollReveal";
 
+const BASE = import.meta.env.BASE_URL;
+
 const trustCards = [
   {
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none" opacity="0.25"/></svg>`,
@@ -55,7 +57,7 @@ const RankingsSection = () => {
       aria-labelledby="trust-heading"
       className="relative py-12 overflow-hidden bg-cover bg-center bg-fixed md:bg-fixed bg-no-repeat"
       style={{
-        backgroundImage: `url(/Hero-Section/image%204.JPG)`,
+        backgroundImage: `url(${BASE}Hero-Section/image%204.JPG)`,
       }}
     >
       {/* Dark blue gradient overlay */}

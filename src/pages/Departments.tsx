@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 const BASE = import.meta.env.BASE_URL;
@@ -15,10 +15,7 @@ const THEME = {
   accent: "#caa74d",     // Gold
   lightGray: "#f8f9fa"
 };
-
-// Department background images — local files from /public/departments/
 const deptImages: Record<string, string> = {
-  ce:       `${BASE}departments/civil.jpg`,
   eee:      `${BASE}departments/eee.jpg`,
   me:       `${BASE}departments/mech.jpg`,
   ece:      `${BASE}departments/ece.jpg`,
@@ -32,6 +29,7 @@ const deptImages: Record<string, string> = {
   mba:      `${BASE}departments/mba.jpg`,
   aiml:     `${BASE}departments/ai&ml.jpg`,
   ai:       `${BASE}departments/ai.jpg`,
+  bsh:      `${BASE}Hero-Section/image%206.jpg`,
 };
 
 // Schools data structure - Corrected as per MITS college
@@ -48,7 +46,7 @@ const schools = [
         shortName: "CE",
         established: "2008",
         description: "Specialization in structural design and construction management",
-        highlights: ["Advanced BIM labs", "Infrastructure and highway projects", "Sustainability focus", "80% placement rate with ₹9 LPA avg"],
+        highlights: ["Advanced BIM labs", "Infrastructure and highway projects", "Sustainability focus", "80% placement rate with â‚¹9 LPA avg"],
         facilities: ["Structural testing laboratory", "Materials testing center", "BIM and CAD laboratory", "Geotechnical engineering lab"],
         courses: ["Structural Analysis & Design", "Soil Mechanics", "Construction Management", "Transportation Engineering"],
         faculty: 9,
@@ -56,7 +54,7 @@ const schools = [
         specialization: ["Structural Engineering", "Geotechnical", "Water Resources", "Sustainability"],
         areas: ["Structural Design", "BIM", "Infrastructure"],
         labHighlights: ["Structural Lab", "BIM Center", "Geotech Lab"],
-        placementStrength: "80% | ₹9 LPA Avg",
+        placementStrength: "80% | â‚¹9 LPA Avg",
         mission: "To prepare civil engineers for designing and constructing sustainable infrastructure.",
         externalLink: "http://www.mits.ac.in/department/6",
       },
@@ -66,7 +64,7 @@ const schools = [
         shortName: "EEE",
         established: "2007",
         description: "Focus on power systems, renewable energy, and power electronics",
-        highlights: ["Advanced power system analysis labs", "Research in smart grids and renewable energy", "Industry partnerships", "85% placement rate with ₹10 LPA avg"],
+        highlights: ["Advanced power system analysis labs", "Research in smart grids and renewable energy", "Industry partnerships", "85% placement rate with â‚¹10 LPA avg"],
         facilities: ["High voltage laboratory", "Power electronics and drives lab", "Electrical machines laboratory", "Renewable energy research lab"],
         courses: ["Circuit Theory & Analysis", "Electrical Machines", "Power Systems", "Renewable Energy Sources"],
         faculty: 10,
@@ -74,7 +72,7 @@ const schools = [
         specialization: ["Power Systems", "Renewable Energy", "Smart Grids", "Power Electronics"],
         areas: ["Power Systems", "Renewable Energy", "Smart Grids"],
         labHighlights: ["Power Systems Lab", "Renewable Energy Lab", "HV Lab"],
-        placementStrength: "85% | ₹10 LPA Avg",
+        placementStrength: "85% | â‚¹10 LPA Avg",
         mission: "To produce electrical engineers capable of designing and implementing electrical systems for sustainable energy.",
         externalLink: "http://www.mits.ac.in/department/11",
       },
@@ -84,7 +82,7 @@ const schools = [
         shortName: "ME",
         established: "2006",
         description: "Comprehensive programs in mechanical design and manufacturing",
-        highlights: ["Advanced CAD/CAM and simulation facilities", "Automotive and aerospace partnerships", "Research in thermal engineering", "88% placement rate with ₹11 LPA avg"],
+        highlights: ["Advanced CAD/CAM and simulation facilities", "Automotive and aerospace partnerships", "Research in thermal engineering", "88% placement rate with â‚¹11 LPA avg"],
         facilities: ["CAD/CAM laboratory", "Manufacturing and workshop", "Thermal & fluid mechanics lab", "Dynamics and vibration lab"],
         courses: ["Engineering Mechanics", "Thermodynamics", "Machine Design", "Manufacturing Technology"],
         faculty: 11,
@@ -92,7 +90,7 @@ const schools = [
         specialization: ["Automotive Engineering", "Manufacturing", "Thermal Systems", "Aerospace"],
         areas: ["CAD/CAM", "Automotive", "Thermal Engineering"],
         labHighlights: ["CAD/CAM Lab", "Manufacturing Workshop", "Thermal Lab"],
-        placementStrength: "88% | ₹11 LPA Avg",
+        placementStrength: "88% | â‚¹11 LPA Avg",
         mission: "To develop mechanical engineers with strong fundamentals and expertise in design, manufacturing, and thermal systems.",
         externalLink: "http://www.mits.ac.in/department/8",
       },
@@ -102,7 +100,7 @@ const schools = [
         shortName: "ECE",
         established: "2005",
         description: "Specialization in 5G networks, IoT, and embedded systems",
-        highlights: ["Advanced telecommunications labs", "Industry collaborations with telecom companies", "Research in RF and microwave engineering", "90% placement rate with ₹12 LPA avg"],
+        highlights: ["Advanced telecommunications labs", "Industry collaborations with telecom companies", "Research in RF and microwave engineering", "90% placement rate with â‚¹12 LPA avg"],
         facilities: ["RF & Microwave laboratory", "Digital signal processing lab", "Embedded systems development center", "Telecommunications equipment lab"],
         courses: ["Analog & Digital Electronics", "Communication Systems", "RF & Microwave Engineering", "VLSI Design"],
         faculty: 12,
@@ -110,7 +108,7 @@ const schools = [
         specialization: ["5G Networks", "IoT", "Embedded Systems", "RF Engineering"],
         areas: ["5G & IoT", "Embedded Systems", "VLSI Design"],
         labHighlights: ["RF Lab", "IoT Center", "VLSI Design Lab"],
-        placementStrength: "90% | ₹12 LPA Avg",
+        placementStrength: "90% | â‚¹12 LPA Avg",
         mission: "To nurture skilled engineers in electronics and communication with expertise in modern communication systems.",
         externalLink: "https://mits.ac.in/electronics-communication-engineering",
       },
@@ -128,7 +126,7 @@ const schools = [
         specialization: ["Genomics", "Computational Drug Discovery", "Proteomics", "Systems Biology"],
         areas: ["Genomics", "Drug Discovery", "Computational Biology"],
         labHighlights: ["Genomics Lab", "Drug Discovery Center", "Proteomics Lab"],
-        placementStrength: "85% | ₹10 LPA Avg",
+        placementStrength: "85% | â‚¹10 LPA Avg",
         mission: "To train students at the intersection of biology and computing for breakthroughs in genomics and drug discovery."
       }
     ]
@@ -141,29 +139,29 @@ const schools = [
     departments: [
       {
         key: "cse",
-        name: "Computer Science & Engineering",
+        name: "Computer Science and Engineering",
         shortName: "CSE",
         established: "2005",
         description: "Focus on AI, Machine Learning, Cloud Computing, and Cybersecurity",
-        highlights: ["Advanced curriculum covering AI, ML, Cloud Computing", "Industry partnerships with tech giants", "State-of-the-art computing labs", "98% placement rate with ₹18 LPA avg"],
+        highlights: ["Advanced curriculum covering AI, ML, Cloud Computing", "Industry partnerships with tech giants", "State-of-the-art computing labs", "98% placement rate with â‚¹18 LPA avg"],
         facilities: ["High-performance computing labs", "AI/ML innovation hub", "Cybersecurity research center", "Cloud computing infrastructure"],
-        courses: ["Data Structures & Algorithms", "Artificial Intelligence & Machine Learning", "Cloud Computing & DevOps", "Cybersecurity"],
+        courses: ["Data Structures & Algorithms", "Artificial Intelligence and Machine Learning", "Cloud Computing & DevOps", "Cybersecurity"],
         faculty: 22,
         students: 540,
-        specialization: ["AI & ML", "Cloud Computing", "Cybersecurity", "Big Data Analytics"],
-        areas: ["AI & ML", "Cloud Computing", "Cyber Security"],
+        specialization: ["AI and ML", "Cloud Computing", "Cybersecurity", "Big Data Analytics"],
+        areas: ["AI and ML", "Cloud Computing", "Cyber Security"],
         labHighlights: ["AI Research Lab", "Cloud Center", "Cyber Security Ops"],
-        placementStrength: "98% | ₹18 LPA Avg",
+        placementStrength: "98% | â‚¹18 LPA Avg",
         mission: "To prepare students as world-class computer science professionals with expertise in emerging technologies.",
         externalLink: "https://www.mits.ac.in/department/9",
       },
       {
         key: "cseds",
-        name: "CSE – Data Science",
+        name: "CSE - Data Science",
         shortName: "CSE-DS",
         established: "2019",
         description: "Specialized curriculum in data analytics and machine learning",
-        highlights: ["Industry projects with data-driven companies", "Advanced data visualization labs", "Research in predictive analytics", "95% placement rate with ₹16 LPA avg"],
+        highlights: ["Industry projects with data-driven companies", "Advanced data visualization labs", "Research in predictive analytics", "95% placement rate with â‚¹16 LPA avg"],
         facilities: ["Big data analytics laboratory", "Data visualization center", "Machine learning research lab", "Statistical computing facility"],
         courses: ["Statistics for Data Science", "Machine Learning", "Big Data Technologies", "Data Visualization"],
         faculty: 14,
@@ -171,13 +169,13 @@ const schools = [
         specialization: ["Data Analytics", "Machine Learning", "Big Data", "Business Intelligence"],
         areas: ["Data Analytics", "Big Data", "ML"],
         labHighlights: ["Big Data Lab", "Data Viz Center", "ML Research Lab"],
-        placementStrength: "95% | ₹16 LPA Avg",
+        placementStrength: "95% | â‚¹16 LPA Avg",
         mission: "To develop data-driven problem solvers equipped with analytical skills for the modern data economy.",
         externalLink: "http://www.mits.ac.in/department/26",
       },
       {
         key: "csecs",
-        name: "CSE – Cyber Security",
+        name: "CSE - Cyber Security",
         shortName: "CSE-CS",
         established: "2020",
         description: "Hands-on training in ethical hacking and penetration testing",
@@ -189,42 +187,25 @@ const schools = [
         specialization: ["Ethical Hacking", "Network Security", "Digital Forensics", "Cloud Security"],
         areas: ["Ethical Hacking", "Network Security", "Forensics"],
         labHighlights: ["SOC Center", "Ethical Hacking Lab", "Forensics Lab"],
-        placementStrength: "92% | ₹15 LPA Avg",
+        placementStrength: "92% | â‚¹15 LPA Avg",
         mission: "To produce cybersecurity professionals capable of protecting digital infrastructure.",
         externalLink: "http://www.mits.ac.in/department/27",
       },
       {
-        key: "bca",
-        name: "Bachelor of Computer Applications",
-        shortName: "BCA",
-        established: "2008",
-        description: "Comprehensive programming and application development curriculum",
-        highlights: ["Industry-aligned projects and internships", "Strong placement support for IT roles", "Focus on web and mobile applications", "90% placement rate in IT companies"],
-        facilities: ["Programming and development labs", "Web and mobile application studio", "Database management center", "Project development lab"],
-        courses: ["Programming in C & Java", "Web Technologies", "Database Management", "Mobile Application Development"],
-        faculty: 8,
-        students: 180,
-        specialization: ["Web Development", "Mobile Apps", "Database", "Software Testing"],
-        areas: ["Web Development", "Mobile Apps", "Database"],
-        labHighlights: ["Programming Labs", "Web Studio", "Mobile Lab"],
-        placementStrength: "90% | ₹8 LPA Avg",
-        mission: "To provide a strong foundation in computer applications and software development."
-      },
-      {
         key: "mca",
-        name: "Master of Computer Applications",
+        name: "Computer Applications",
         shortName: "MCA",
         established: "2006",
         description: "Advanced postgraduate curriculum in computing",
-        highlights: ["Research and industry project opportunities", "Strong alumni network in top IT companies", "Specializations in AI, cloud", "95% placement rate with ₹14 LPA avg"],
+        highlights: ["Research and industry project opportunities", "Strong alumni network in top IT companies", "Specializations in AI, cloud", "95% placement rate with â‚¹14 LPA avg"],
         facilities: ["Advanced computing research lab", "Enterprise software development center", "AI and cloud computing lab", "Industry collaboration center"],
-        courses: ["Advanced Algorithms", "Software Architecture", "Cloud Computing", "Artificial Intelligence"],
+        courses: ["Bachelor of Computer Applications", "Master of Computer Applications"],
         faculty: 10,
         students: 120,
         specialization: ["Enterprise Software", "AI & Cloud", "Data Science", "Software Architecture"],
         areas: ["Enterprise Software", "Cloud Computing", "AI"],
         labHighlights: ["Research Lab", "Dev Center", "AI Cloud Lab"],
-        placementStrength: "95% | ₹14 LPA Avg",
+        placementStrength: "95% | â‚¹14 LPA Avg",
         mission: "To produce highly skilled computing professionals with advanced knowledge in software engineering.",
         externalLink: "http://www.mits.ac.in/department/18",
       }
@@ -237,37 +218,20 @@ const schools = [
     borderColor: "border-l-amber-500",
     departments: [
       {
-        key: "bba",
-        name: "Bachelor of Business Administration",
-        shortName: "BBA",
-        established: "2010",
-        description: "Industry-integrated curriculum with live projects",
-        highlights: ["Entrepreneurship development cell", "Guest lectures from industry leaders", "Strong placement in corporate sectors", "85% placement rate with ₹8 LPA avg"],
-        facilities: ["Business simulation lab", "Entrepreneurship development center", "Finance and trading lab", "Digital marketing studio"],
-        courses: ["Principles of Management", "Financial Accounting", "Marketing Management", "Human Resource Management"],
-        faculty: 8,
-        students: 180,
-        specialization: ["Marketing", "Finance", "HR Management", "Entrepreneurship"],
-        areas: ["Marketing", "Finance", "HR"],
-        labHighlights: ["Simulation Lab", "E-Cell", "Marketing Studio"],
-        placementStrength: "85% | ₹8 LPA Avg",
-        mission: "To develop business-ready graduates with strong managerial and leadership capabilities."
-      },
-      {
         key: "mba",
-        name: "Master of Business Administration",
+        name: "Management Studies",
         shortName: "MBA",
         established: "2008",
         description: "AICTE approved MBA program with industry mentorship",
-        highlights: ["Industry mentorship and live consulting projects", "National case competitions", "Strong corporate recruitment network", "90% placement rate with ₹12 LPA avg"],
+        highlights: ["Industry mentorship and live consulting projects", "National case competitions", "Strong corporate recruitment network", "90% placement rate with â‚¹12 LPA avg"],
         facilities: ["Advanced business analytics lab", "Bloomberg terminal and finance center", "Leadership development center", "Digital business innovation lab"],
-        courses: ["Strategic Management", "Financial Management", "Marketing Strategy", "Business Analytics"],
+        courses: ["Bachelor of Business Administration", "Master of Business Administration"],
         faculty: 12,
         students: 120,
         specialization: ["Finance", "Marketing", "Operations", "Business Analytics"],
         areas: ["Finance", "Marketing", "Operations"],
         labHighlights: ["Bloomberg Lab", "Analytics Center", "Leadership Lab"],
-        placementStrength: "90% | ₹12 LPA Avg",
+        placementStrength: "90% | â‚¹12 LPA Avg",
         mission: "To cultivate strategic thinkers and ethical business leaders for global environments.",
  
        externalLink: "http://www.mits.ac.in/department/5",
@@ -275,18 +239,18 @@ const schools = [
     ]
   },
   {
-    name: "School of AI & ML",
+    name: "School of AI and ML",
     description: "Leading the future of artificial intelligence and machine learning.",
     accentColor: "from-purple-600 to-purple-800",
     borderColor: "border-l-purple-500",
     departments: [
       {
         key: "aiml",
-        name: "Artificial Intelligence\n& Machine Learning",
-        shortName: "AI & ML",
+        name: "Artificial Intelligence\nand Machine Learning",
+        shortName: "AI and ML",
         established: "2020",
         description: "Cutting-edge curriculum in deep learning, NLP, and computer vision",
-        highlights: ["GPU-powered AI research infrastructure", "Collaborations with AI-focused companies", "Hands-on projects in generative AI", "96% placement rate with ₹20 LPA avg"],
+        highlights: ["GPU-powered AI research infrastructure", "Collaborations with AI-focused companies", "Hands-on projects in generative AI", "96% placement rate with â‚¹20 LPA avg"],
         facilities: ["GPU cluster and AI computing lab", "Computer vision and robotics lab", "NLP and speech processing center", "Generative AI research studio"],
         courses: ["Machine Learning Fundamentals", "Deep Learning", "Natural Language Processing", "Computer Vision"],
         faculty: 12,
@@ -294,7 +258,7 @@ const schools = [
         specialization: ["Deep Learning", "NLP", "Computer Vision", "Generative AI"],
         areas: ["Deep Learning", "NLP", "Computer Vision"],
         labHighlights: ["GPU Cluster", "Computer Vision Lab", "NLP Center"],
-        placementStrength: "96% | ₹20 LPA Avg",
+        placementStrength: "96% | â‚¹20 LPA Avg",
         mission: "To produce AI engineers and researchers capable of building intelligent systems.",
         externalLink: "https://mits.ac.in/cse-ai-ml",
       },
@@ -304,7 +268,7 @@ const schools = [
         shortName: "AI",
         established: "2021",
         description: "Strong theoretical foundation in AI algorithms and logic",
-        highlights: ["Research-oriented curriculum", "Industry tie-ups with AI product companies", "Focus on explainable AI", "94% placement rate with ₹18 LPA avg"],
+        highlights: ["Research-oriented curriculum", "Industry tie-ups with AI product companies", "Focus on explainable AI", "94% placement rate with â‚¹18 LPA avg"],
         facilities: ["AI algorithms research lab", "Knowledge representation center", "Explainable AI research facility", "Multi-agent systems lab"],
         courses: ["Foundations of AI", "Knowledge Representation", "Search & Optimization", "Probabilistic Reasoning"],
         faculty: 10,
@@ -312,20 +276,61 @@ const schools = [
         specialization: ["Explainable AI", "Knowledge Systems", "AI Research", "Responsible AI"],
         areas: ["AI Research", "Knowledge Systems", "Explainable AI"],
         labHighlights: ["Research Lab", "XAI Center", "Agent Systems Lab"],
-        placementStrength: "94% | ₹18 LPA Avg",
+        placementStrength: "94% | â‚¹18 LPA Avg",
         mission: "To train students in the theoretical and applied foundations of artificial intelligence.",
         externalLink: "https://www.mits.ac.in/department/28",
+      }
+    ]
+  },
+  {
+    name: "School of Basic Sciences & Humanities",
+    description: "Foundational education in languages, mathematics, sciences, and humanities for engineering learners.",
+    accentColor: "from-emerald-600 to-teal-700",
+    borderColor: "border-l-emerald-500",
+    departments: [
+      {
+        key: "bsh",
+        name: "Basic Sciences & Humanities",
+        shortName: "BSH",
+        established: "2004",
+        description: "Integrated foundation in English, Mathematics, Physics, Chemistry, and Humanities",
+        highlights: ["Core foundation for all B.Tech programs", "Language and communication skill development", "Strong science and math fundamentals", "Interdisciplinary academic support"],
+        facilities: ["Language and communication support", "Physics and chemistry laboratory support", "Mathematics foundational training", "Humanities and professional readiness modules"],
+        courses: ["Communicative English", "Engineering Mathematics", "Engineering Physics", "Engineering Chemistry"],
+        faculty: 0,
+        students: 0,
+        specialization: ["English & Foreign Languages", "Mathematics", "Physics", "Chemistry", "Humanities"],
+        areas: ["Foundational Sciences", "Language Skills", "Humanities"],
+        labHighlights: ["Physics Lab", "Chemistry Lab", "Language Support"],
+        placementStrength: "Foundation Department",
+        mission: "To build strong foundational competencies that support all engineering and professional learning pathways.",
+        externalLink: "https://mits.ac.in/basic-sciences-humanities",
       }
     ]
   }
 ];
 
 const Departments = () => {
-  const [selectedDept, setSelectedDept] = useState(schools[0].departments[0]);
+  const schoolOrder = [
+    "School of AI and ML",
+    "School of Computing",
+    "School of Engineering",
+    "School of Management Studies",
+  ];
+
+  const orderedSchools = [...schools].sort((a, b) => {
+    const aIdx = schoolOrder.indexOf(a.name);
+    const bIdx = schoolOrder.indexOf(b.name);
+    const safeA = aIdx === -1 ? Number.MAX_SAFE_INTEGER : aIdx;
+    const safeB = bIdx === -1 ? Number.MAX_SAFE_INTEGER : bIdx;
+    return safeA - safeB;
+  });
+
+  const [selectedDept, setSelectedDept] = useState(orderedSchools[0].departments[0]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterSchool, setFilterSchool] = useState("all");
 
-  const filteredSchools = schools
+  const filteredSchools = orderedSchools
     .filter(school => filterSchool === "all" || school.name === filterSchool)
     .map(school => ({
       ...school,
@@ -416,18 +421,18 @@ const Departments = () => {
             </div>
           </div>
 
-          {/* Breadcrumb — bottom-left */}
+          {/* Breadcrumb â€” bottom-left */}
           <div className="absolute bottom-4 left-6">
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li>
                   <Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
                 </li>
-                <li className="text-white/50">›</li>
+                <li className="text-white/50">â€º</li>
                 <li>
                   <Link to="/academics" className="text-white/70 hover:text-white transition-colors">Academics</Link>
                 </li>
-                <li className="text-white/50">›</li>
+                <li className="text-white/50">â€º</li>
                 <li className="text-white font-semibold">Departments</li>
               </ol>
             </nav>
@@ -458,7 +463,7 @@ const Departments = () => {
                   className="h-8 px-2 rounded border-0 bg-white/10 text-white cursor-pointer text-sm"
                 >
                   <option value="all" className="text-gray-900">All Schools</option>
-                  {schools.map(s => (
+                  {orderedSchools.map(s => (
                     <option key={s.name} value={s.name} className="text-gray-900">{s.name}</option>
                   ))}
                 </select>
@@ -479,6 +484,7 @@ const Departments = () => {
                       {si === 1 && <Database className="w-6 h-6 text-white" />}
                       {si === 2 && <Briefcase className="w-6 h-6 text-white" />}
                       {si === 3 && <Brain className="w-6 h-6 text-white" />}
+                      {si === 4 && <BookOpen className="w-6 h-6 text-white" />}
                     </div>
                     <h2 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44]">{school.name}</h2>
                   </div>
@@ -510,3 +516,4 @@ const Departments = () => {
 };
 
 export default Departments;
+
