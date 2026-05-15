@@ -46,7 +46,7 @@ const schools = [
         shortName: "CE",
         established: "2008",
         description: "Specialization in structural design and construction management",
-        highlights: ["Advanced BIM labs", "Infrastructure and highway projects", "Sustainability focus", "80% placement rate with â‚¹9 LPA avg"],
+        highlights: ["Advanced BIM labs", "Infrastructure and highway projects", "Sustainability focus", "80% placement rate with ₹9 LPA avg"],
         facilities: ["Structural testing laboratory", "Materials testing center", "BIM and CAD laboratory", "Geotechnical engineering lab"],
         courses: ["Structural Analysis & Design", "Soil Mechanics", "Construction Management", "Transportation Engineering"],
         faculty: 9,
@@ -54,7 +54,7 @@ const schools = [
         specialization: ["Structural Engineering", "Geotechnical", "Water Resources", "Sustainability"],
         areas: ["Structural Design", "BIM", "Infrastructure"],
         labHighlights: ["Structural Lab", "BIM Center", "Geotech Lab"],
-        placementStrength: "80% | â‚¹9 LPA Avg",
+        placementStrength: "80% | ₹9 LPA Avg",
         mission: "To prepare civil engineers for designing and constructing sustainable infrastructure.",
         externalLink: "http://www.mits.ac.in/department/6",
       },
@@ -64,7 +64,7 @@ const schools = [
         shortName: "EEE",
         established: "2007",
         description: "Focus on power systems, renewable energy, and power electronics",
-        highlights: ["Advanced power system analysis labs", "Research in smart grids and renewable energy", "Industry partnerships", "85% placement rate with â‚¹10 LPA avg"],
+        highlights: ["Advanced power system analysis labs", "Research in smart grids and renewable energy", "Industry partnerships", "85% placement rate with ₹10 LPA avg"],
         facilities: ["High voltage laboratory", "Power electronics and drives lab", "Electrical machines laboratory", "Renewable energy research lab"],
         courses: ["Circuit Theory & Analysis", "Electrical Machines", "Power Systems", "Renewable Energy Sources"],
         faculty: 10,
@@ -72,7 +72,7 @@ const schools = [
         specialization: ["Power Systems", "Renewable Energy", "Smart Grids", "Power Electronics"],
         areas: ["Power Systems", "Renewable Energy", "Smart Grids"],
         labHighlights: ["Power Systems Lab", "Renewable Energy Lab", "HV Lab"],
-        placementStrength: "85% | â‚¹10 LPA Avg",
+        placementStrength: "85% | ₹10 LPA Avg",
         mission: "To produce electrical engineers capable of designing and implementing electrical systems for sustainable energy.",
         externalLink: "http://www.mits.ac.in/department/11",
       },
@@ -82,7 +82,7 @@ const schools = [
         shortName: "ME",
         established: "2006",
         description: "Comprehensive programs in mechanical design and manufacturing",
-        highlights: ["Advanced CAD/CAM and simulation facilities", "Automotive and aerospace partnerships", "Research in thermal engineering", "88% placement rate with â‚¹11 LPA avg"],
+        highlights: ["Advanced CAD/CAM and simulation facilities", "Automotive and aerospace partnerships", "Research in thermal engineering", "88% placement rate with ₹11 LPA avg"],
         facilities: ["CAD/CAM laboratory", "Manufacturing and workshop", "Thermal & fluid mechanics lab", "Dynamics and vibration lab"],
         courses: ["Engineering Mechanics", "Thermodynamics", "Machine Design", "Manufacturing Technology"],
         faculty: 11,
@@ -90,7 +90,7 @@ const schools = [
         specialization: ["Automotive Engineering", "Manufacturing", "Thermal Systems", "Aerospace"],
         areas: ["CAD/CAM", "Automotive", "Thermal Engineering"],
         labHighlights: ["CAD/CAM Lab", "Manufacturing Workshop", "Thermal Lab"],
-        placementStrength: "88% | â‚¹11 LPA Avg",
+        placementStrength: "88% | ₹11 LPA Avg",
         mission: "To develop mechanical engineers with strong fundamentals and expertise in design, manufacturing, and thermal systems.",
         externalLink: "http://www.mits.ac.in/department/8",
       },
@@ -100,7 +100,7 @@ const schools = [
         shortName: "ECE",
         established: "2005",
         description: "Specialization in 5G networks, IoT, and embedded systems",
-        highlights: ["Advanced telecommunications labs", "Industry collaborations with telecom companies", "Research in RF and microwave engineering", "90% placement rate with â‚¹12 LPA avg"],
+        highlights: ["Advanced telecommunications labs", "Industry collaborations with telecom companies", "Research in RF and microwave engineering", "90% placement rate with ₹12 LPA avg"],
         facilities: ["RF & Microwave laboratory", "Digital signal processing lab", "Embedded systems development center", "Telecommunications equipment lab"],
         courses: ["Analog & Digital Electronics", "Communication Systems", "RF & Microwave Engineering", "VLSI Design"],
         faculty: 12,
@@ -108,7 +108,7 @@ const schools = [
         specialization: ["5G Networks", "IoT", "Embedded Systems", "RF Engineering"],
         areas: ["5G & IoT", "Embedded Systems", "VLSI Design"],
         labHighlights: ["RF Lab", "IoT Center", "VLSI Design Lab"],
-        placementStrength: "90% | â‚¹12 LPA Avg",
+        placementStrength: "90% | ₹12 LPA Avg",
         mission: "To nurture skilled engineers in electronics and communication with expertise in modern communication systems.",
         externalLink: "https://mits.ac.in/electronics-communication-engineering",
       },
@@ -126,7 +126,7 @@ const schools = [
         specialization: ["Genomics", "Computational Drug Discovery", "Proteomics", "Systems Biology"],
         areas: ["Genomics", "Drug Discovery", "Computational Biology"],
         labHighlights: ["Genomics Lab", "Drug Discovery Center", "Proteomics Lab"],
-        placementStrength: "85% | â‚¹10 LPA Avg",
+        placementStrength: "85% | ₹10 LPA Avg",
         mission: "To train students at the intersection of biology and computing for breakthroughs in genomics and drug discovery."
       }
     ]
@@ -143,7 +143,7 @@ const schools = [
         shortName: "CSE",
         established: "2005",
         description: "Focus on AI, Machine Learning, Cloud Computing, and Cybersecurity",
-        highlights: ["Advanced curriculum covering AI, ML, Cloud Computing", "Industry partnerships with tech giants", "State-of-the-art computing labs", "98% placement rate with â‚¹18 LPA avg"],
+        highlights: ["Advanced curriculum covering AI, ML, Cloud Computing", "Industry partnerships with tech giants", "State-of-the-art computing labs", "98% placement rate with ₹18 LPA avg"],
         facilities: ["High-performance computing labs", "AI/ML innovation hub", "Cybersecurity research center", "Cloud computing infrastructure"],
         courses: ["Data Structures & Algorithms", "Artificial Intelligence and Machine Learning", "Cloud Computing & DevOps", "Cybersecurity"],
         faculty: 22,
@@ -151,7 +151,7 @@ const schools = [
         specialization: ["AI and ML", "Cloud Computing", "Cybersecurity", "Big Data Analytics"],
         areas: ["AI and ML", "Cloud Computing", "Cyber Security"],
         labHighlights: ["AI Research Lab", "Cloud Center", "Cyber Security Ops"],
-        placementStrength: "98% | â‚¹18 LPA Avg",
+        placementStrength: "98% | ₹18 LPA Avg",
         mission: "To prepare students as world-class computer science professionals with expertise in emerging technologies.",
         externalLink: "https://www.mits.ac.in/department/9",
       },
@@ -161,7 +161,7 @@ const schools = [
         shortName: "CSE-DS",
         established: "2019",
         description: "Specialized curriculum in data analytics and machine learning",
-        highlights: ["Industry projects with data-driven companies", "Advanced data visualization labs", "Research in predictive analytics", "95% placement rate with â‚¹16 LPA avg"],
+        highlights: ["Industry projects with data-driven companies", "Advanced data visualization labs", "Research in predictive analytics", "95% placement rate with ₹16 LPA avg"],
         facilities: ["Big data analytics laboratory", "Data visualization center", "Machine learning research lab", "Statistical computing facility"],
         courses: ["Statistics for Data Science", "Machine Learning", "Big Data Technologies", "Data Visualization"],
         faculty: 14,
@@ -169,7 +169,7 @@ const schools = [
         specialization: ["Data Analytics", "Machine Learning", "Big Data", "Business Intelligence"],
         areas: ["Data Analytics", "Big Data", "ML"],
         labHighlights: ["Big Data Lab", "Data Viz Center", "ML Research Lab"],
-        placementStrength: "95% | â‚¹16 LPA Avg",
+        placementStrength: "95% | ₹16 LPA Avg",
         mission: "To develop data-driven problem solvers equipped with analytical skills for the modern data economy.",
         externalLink: "http://www.mits.ac.in/department/26",
       },
@@ -187,7 +187,7 @@ const schools = [
         specialization: ["Ethical Hacking", "Network Security", "Digital Forensics", "Cloud Security"],
         areas: ["Ethical Hacking", "Network Security", "Forensics"],
         labHighlights: ["SOC Center", "Ethical Hacking Lab", "Forensics Lab"],
-        placementStrength: "92% | â‚¹15 LPA Avg",
+        placementStrength: "92% | ₹15 LPA Avg",
         mission: "To produce cybersecurity professionals capable of protecting digital infrastructure.",
         externalLink: "http://www.mits.ac.in/department/27",
       },
@@ -197,7 +197,7 @@ const schools = [
         shortName: "MCA",
         established: "2006",
         description: "Advanced postgraduate curriculum in computing",
-        highlights: ["Research and industry project opportunities", "Strong alumni network in top IT companies", "Specializations in AI, cloud", "95% placement rate with â‚¹14 LPA avg"],
+        highlights: ["Research and industry project opportunities", "Strong alumni network in top IT companies", "Specializations in AI, cloud", "95% placement rate with ₹14 LPA avg"],
         facilities: ["Advanced computing research lab", "Enterprise software development center", "AI and cloud computing lab", "Industry collaboration center"],
         courses: ["Bachelor of Computer Applications", "Master of Computer Applications"],
         faculty: 10,
@@ -205,7 +205,7 @@ const schools = [
         specialization: ["Enterprise Software", "AI & Cloud", "Data Science", "Software Architecture"],
         areas: ["Enterprise Software", "Cloud Computing", "AI"],
         labHighlights: ["Research Lab", "Dev Center", "AI Cloud Lab"],
-        placementStrength: "95% | â‚¹14 LPA Avg",
+        placementStrength: "95% | ₹14 LPA Avg",
         mission: "To produce highly skilled computing professionals with advanced knowledge in software engineering.",
         externalLink: "http://www.mits.ac.in/department/18",
       }
@@ -223,7 +223,7 @@ const schools = [
         shortName: "MBA",
         established: "2008",
         description: "AICTE approved MBA program with industry mentorship",
-        highlights: ["Industry mentorship and live consulting projects", "National case competitions", "Strong corporate recruitment network", "90% placement rate with â‚¹12 LPA avg"],
+        highlights: ["Industry mentorship and live consulting projects", "National case competitions", "Strong corporate recruitment network", "90% placement rate with ₹12 LPA avg"],
         facilities: ["Advanced business analytics lab", "Bloomberg terminal and finance center", "Leadership development center", "Digital business innovation lab"],
         courses: ["Bachelor of Business Administration", "Master of Business Administration"],
         faculty: 12,
@@ -231,7 +231,7 @@ const schools = [
         specialization: ["Finance", "Marketing", "Operations", "Business Analytics"],
         areas: ["Finance", "Marketing", "Operations"],
         labHighlights: ["Bloomberg Lab", "Analytics Center", "Leadership Lab"],
-        placementStrength: "90% | â‚¹12 LPA Avg",
+        placementStrength: "90% | ₹12 LPA Avg",
         mission: "To cultivate strategic thinkers and ethical business leaders for global environments.",
  
        externalLink: "http://www.mits.ac.in/department/5",
@@ -250,7 +250,7 @@ const schools = [
         shortName: "AI and ML",
         established: "2020",
         description: "Cutting-edge curriculum in deep learning, NLP, and computer vision",
-        highlights: ["GPU-powered AI research infrastructure", "Collaborations with AI-focused companies", "Hands-on projects in generative AI", "96% placement rate with â‚¹20 LPA avg"],
+        highlights: ["GPU-powered AI research infrastructure", "Collaborations with AI-focused companies", "Hands-on projects in generative AI", "96% placement rate with ₹20 LPA avg"],
         facilities: ["GPU cluster and AI computing lab", "Computer vision and robotics lab", "NLP and speech processing center", "Generative AI research studio"],
         courses: ["Machine Learning Fundamentals", "Deep Learning", "Natural Language Processing", "Computer Vision"],
         faculty: 12,
@@ -258,7 +258,7 @@ const schools = [
         specialization: ["Deep Learning", "NLP", "Computer Vision", "Generative AI"],
         areas: ["Deep Learning", "NLP", "Computer Vision"],
         labHighlights: ["GPU Cluster", "Computer Vision Lab", "NLP Center"],
-        placementStrength: "96% | â‚¹20 LPA Avg",
+        placementStrength: "96% | ₹20 LPA Avg",
         mission: "To produce AI engineers and researchers capable of building intelligent systems.",
         externalLink: "https://mits.ac.in/cse-ai-ml",
       },
@@ -268,7 +268,7 @@ const schools = [
         shortName: "AI",
         established: "2021",
         description: "Strong theoretical foundation in AI algorithms and logic",
-        highlights: ["Research-oriented curriculum", "Industry tie-ups with AI product companies", "Focus on explainable AI", "94% placement rate with â‚¹18 LPA avg"],
+        highlights: ["Research-oriented curriculum", "Industry tie-ups with AI product companies", "Focus on explainable AI", "94% placement rate with ₹18 LPA avg"],
         facilities: ["AI algorithms research lab", "Knowledge representation center", "Explainable AI research facility", "Multi-agent systems lab"],
         courses: ["Foundations of AI", "Knowledge Representation", "Search & Optimization", "Probabilistic Reasoning"],
         faculty: 10,
@@ -276,7 +276,7 @@ const schools = [
         specialization: ["Explainable AI", "Knowledge Systems", "AI Research", "Responsible AI"],
         areas: ["AI Research", "Knowledge Systems", "Explainable AI"],
         labHighlights: ["Research Lab", "XAI Center", "Agent Systems Lab"],
-        placementStrength: "94% | â‚¹18 LPA Avg",
+        placementStrength: "94% | ₹18 LPA Avg",
         mission: "To train students in the theoretical and applied foundations of artificial intelligence.",
         externalLink: "https://www.mits.ac.in/department/28",
       }
@@ -421,18 +421,18 @@ const Departments = () => {
             </div>
           </div>
 
-          {/* Breadcrumb â€” bottom-left */}
+          {/* Breadcrumb — bottom-left */}
           <div className="absolute bottom-4 left-6">
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li>
                   <Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
                 </li>
-                <li className="text-white/50">â€º</li>
+                <li className="text-white/50">›</li>
                 <li>
                   <Link to="/academics" className="text-white/70 hover:text-white transition-colors">Academics</Link>
                 </li>
-                <li className="text-white/50">â€º</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">Departments</li>
               </ol>
             </nav>
@@ -516,4 +516,6 @@ const Departments = () => {
 };
 
 export default Departments;
+
+
 

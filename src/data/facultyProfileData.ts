@@ -1,4 +1,4 @@
-// Faculty profile data - stored as flexible content sections
+﻿// Faculty profile data - stored as flexible content sections
 
 export interface FacultySection {
   title: string;
@@ -1110,3 +1110,4 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
 export function getFacultyProfile(deptKey: string, facultyName: string): FacultyProfile | undefined {
   return facultyProfiles[deptKey]?.[facultyName];
 }
+

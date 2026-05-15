@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { Calendar, Newspaper, Handshake, ExternalLink, Globe, MapPin, Tag, Loader2 } from "lucide-react";
 import type { CMSEvent, CMSNews, CMSMoU } from "@/hooks/useDeptCMSContent";
 import { useDeptCMSContent } from "@/hooks/useDeptCMSContent";
@@ -190,3 +190,4 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
 };
 
 export default DeptCMSStrip;
+

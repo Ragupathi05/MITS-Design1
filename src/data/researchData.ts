@@ -1,4 +1,4 @@
-// All data extracted from https://mits.ac.in/research and its linked subpages
+﻿// All data extracted from https://mits.ac.in/research and its linked subpages
 
 export const researchOverview = {
   title: "Research & Development",
@@ -121,7 +121,7 @@ export const publicationsData = {
         { name: "Manikandan Rajagopal et al.", dept: "CST", details: "An Integration of Digital Twin and 6G Edge Computing Approach to Secure Cyber Physical Systems. Wireless Personal Communications, pp.1-17.", ifPublisher: "1.9 (Springer)" },
         { name: "K. V. Narasimha Murthy et al.", dept: "MATHS", details: "Characterization and prediction of southwest monsoon rainfall patterns in Central India as a linear state space modeling. Natural Hazards, 120(3), pp.2553-2569.", ifPublisher: "3.3 (Springer)" },
         { name: "Chandrasekar Perumalveeramalaiet al.", dept: "PHYSICS", details: "Monolithically grown CSPbBr3 by chemical vapor deposition for Self-Powered photodetector. Chemical Engineering Journal, 492, p.152213.", ifPublisher: "13.3 (Elsevier)" },
-        { name: "Chikkili Venkateswara Raju et al.", dept: "CHEMISTRY", details: "Simultaneous electrochemical detection of dopamine and uric acid based on tri-composite of poly-pyrrole and α-Fe2O3 embedded MoS2 sheets modified electrode. Microchemical Journal, 198, p.110189.", ifPublisher: "4.9 (Elsevier)" },
+        { name: "Chikkili Venkateswara Raju et al.", dept: "CHEMISTRY", details: "Simultaneous electrochemical detection of dopamine and uric acid based on tri-composite of poly-pyrrole and Î±-Fe2O3 embedded MoS2 sheets modified electrode. Microchemical Journal, 198, p.110189.", ifPublisher: "4.9 (Elsevier)" },
       ],
     },
     {
@@ -255,3 +255,4 @@ export const mdrfData = {
     "To secure external research funding through multidisciplinary project proposals to national/international funding agencies (DST, ANRF, MSME, AICTE, Industry etc.).",
   ],
 };
+

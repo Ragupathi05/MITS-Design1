@@ -69,7 +69,7 @@ const Academics = () => {
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li><Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
-                <li className="text-white/50">â€º</li>
+                <li className="text-white/50">›</li>
                 <li className="text-white font-semibold">Academics</li>
               </ol>
             </nav>
@@ -169,4 +169,5 @@ const Academics = () => {
 };
 
 export default Academics;
+
 

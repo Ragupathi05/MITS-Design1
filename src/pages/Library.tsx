@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { BookOpen, Clock, Globe, Monitor, Search, Users, Wifi, Star } from "lucide-react";
@@ -160,3 +160,5 @@ const Library = () => {
 };
 
 export default Library;
+
+

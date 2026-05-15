@@ -1,4 +1,4 @@
-import { Target, Eye, Award, ChevronLeft, ChevronRight } from "lucide-react";
+﻿import { Target, Eye, Award, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useCallback, useRef } from "react";
@@ -214,3 +214,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { ArrowRight, CalendarDays, ClipboardCheck, ShieldCheck, UserRoundPlus } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -84,3 +84,4 @@ const AdmissionHighlight = () => (
 );
 
 export default AdmissionHighlight;
+

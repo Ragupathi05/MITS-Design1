@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { BookOpen, Calendar, ClipboardCheck, Download, FileText, GraduationCap, Shield, Award, Users, TrendingUp, CheckCircle2, AlertCircle, Clock, BarChart3 } from "lucide-react";
@@ -177,3 +177,5 @@ const Examinations = () => {
 };
 
 export default Examinations;
+
+

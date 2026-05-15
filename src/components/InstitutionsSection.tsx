@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -226,3 +226,4 @@ const InstitutionsSection = () => {
 };
 
 export default InstitutionsSection;
+

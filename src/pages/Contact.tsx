@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Trophy, Bus, Heart, UtensilsCrossed, Library, Radio, Lightbulb, Monitor, MessageSquare, Wifi } from "lucide-react";
@@ -350,3 +350,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

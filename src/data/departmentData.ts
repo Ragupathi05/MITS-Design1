@@ -130,7 +130,7 @@ export const departmentsData: Record<string, DepartmentData> = {
     ],
     nbaAccredited: true,
     hod: { name: "Dr. M. Sreedevi", designation: "Professor & Head", qualification: "Ph.D. (S V University)", image: "https://mits.ac.in/public/uploads/faculty/sri.jpg", profileUrl: "https://mits.ac.in/facultyprofile/140" },
-    achievements: { consultancyAmount: "â‚¹25+ Lakhs", researchProjects: "15+", patents: "12+", publications: "200+" },
+    achievements: { consultancyAmount: "₹25+ Lakhs", researchProjects: "15+", patents: "12+", publications: "200+" },
     teachingApproach: {
       description: "The department follows an outcome-based education (OBE) framework integrated with experiential learning methodologies.",
       points: ["Project-based learning with industry problems", "NPTEL, Coursera & edX integrated MOOCs", "Hackathons and coding competitions", "Industry mentorship programs", "IBM, Microsoft, Accenture certification tracks"]
@@ -212,9 +212,9 @@ export const departmentsData: Record<string, DepartmentData> = {
       { title: "Edge Computing in Healthcare Applications", type: "journal", year: "2023", authors: "Dr. P. Rajesh et al." },
     ],
     consultancy: [
-      { title: "Web Application Development", agency: "Local Industries", amount: "â‚¹3 Lakhs" },
-      { title: "Data Analytics Training Program", agency: "AP State Government", amount: "â‚¹5 Lakhs" },
-      { title: "Network Infrastructure Setup", agency: "Regional Businesses", amount: "â‚¹2 Lakhs" },
+      { title: "Web Application Development", agency: "Local Industries", amount: "₹3 Lakhs" },
+      { title: "Data Analytics Training Program", agency: "AP State Government", amount: "₹5 Lakhs" },
+      { title: "Network Infrastructure Setup", agency: "Regional Businesses", amount: "₹2 Lakhs" },
     ],
     events: [
       { title: "International FDP on Emerging Trends in Computer Science", date: "31st October to 5th November 2022", description: "Organized by Department of Computer Science and Engineering." },
@@ -231,8 +231,8 @@ export const departmentsData: Record<string, DepartmentData> = {
     ],
     placement: {
       percentage: "98%",
-      avgPackage: "â‚¹6.5 LPA",
-      highestPackage: "â‚¹24 LPA",
+      avgPackage: "₹6.5 LPA",
+      highestPackage: "₹24 LPA",
       recruiters: ["TCS", "Infosys", "IBM", "Tech Mahindra", "Accenture", "Mindtree", "Wipro", "Cognizant", "HCL", "Capgemini"]
     },
     studentProjects: [
@@ -291,7 +291,7 @@ export const departmentsData: Record<string, DepartmentData> = {
     ],
     nbaAccredited: true,
     hod: { name: "Dr. Vijayakumar Natesan", designation: "Asst. Professor & Head", qualification: "Ph.D. (IIT, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/fc9b84db32042ded85ace96100f6848f.JPG", profileUrl: "https://mits.ac.in/facultyprofile/7" },
-    achievements: { consultancyAmount: "â‚¹10+ Lakhs", researchProjects: "8+", patents: "5+", publications: "100+" },
+    achievements: { consultancyAmount: "₹10+ Lakhs", researchProjects: "8+", patents: "5+", publications: "100+" },
     teachingApproach: {
       description: "The department emphasizes practical learning with site visits, surveying camps, and hands-on laboratory sessions.",
       points: ["Site visits and field surveys", "BIM-integrated design projects", "Industry guest lectures", "Sustainability-focused curriculum", "Geotechnical field testing"]
@@ -333,8 +333,8 @@ export const departmentsData: Record<string, DepartmentData> = {
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
     ],
     consultancy: [
-      { title: "Soil Testing for Construction Projects", agency: "Local Builders", amount: "â‚¹3 Lakhs" },
-      { title: "Structural Design Review", agency: "AP Government", amount: "â‚¹5 Lakhs" },
+      { title: "Soil Testing for Construction Projects", agency: "Local Builders", amount: "₹3 Lakhs" },
+      { title: "Structural Design Review", agency: "AP Government", amount: "₹5 Lakhs" },
     ],
     events: [
       { title: "Engineers' Day Celebration", date: "15th September 2022", description: "Organized by Department of Civil Engineering commemorating Sir M. Visvesvaraya." },
@@ -345,7 +345,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       { name: "L&T Construction", purpose: "Industrial Training", year: "2021" },
       { name: "NHAI", purpose: "Highway Design Projects", year: "2022" },
     ],
-    placement: { percentage: "80%", avgPackage: "â‚¹4.5 LPA", highestPackage: "â‚¹9 LPA", recruiters: ["L&T", "Shapoorji Pallonji", "NCC", "Ramky Group", "Megha Engineering"] },
+    placement: { percentage: "80%", avgPackage: "₹4.5 LPA", highestPackage: "₹9 LPA", recruiters: ["L&T", "Shapoorji Pallonji", "NCC", "Ramky Group", "Megha Engineering"] },
     studentProjects: [
       { title: "Green Concrete using Fly Ash", students: "Team of 4", description: "Sustainable concrete mix design using industrial waste" },
       { title: "Rainwater Harvesting System Design", students: "Team of 3", description: "Comprehensive design for campus rainwater collection" },
@@ -389,7 +389,7 @@ export const departmentsData: Record<string, DepartmentData> = {
     ],
     nbaAccredited: true,
     hod: { name: "Dr. Manavaalan Gunasekaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (IIT, Kanpur)", image: "https://mits.ac.in/public/uploads/faculty/manavaalan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/931" },
-    achievements: { consultancyAmount: "â‚¹8+ Lakhs", researchProjects: "6+", patents: "3+", publications: "80+" },
+    achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "6+", patents: "3+", publications: "80+" },
     teachingApproach: { description: "Hands-on approach with emphasis on renewable energy projects and smart grid technologies.", points: ["Power systems simulation labs", "Renewable energy installations", "Industry visits to power plants", "Smart grid research projects", "NPTEL certification courses"] },
     courses: ["B.Tech in Electrical & Electronics Engineering"],
     contactInfo: { email: "hod_eee@mits.ac.in", phone: "+91-8571-280255" },
@@ -441,18 +441,18 @@ faculty: [
       { title: "Solar Inverter Efficiency Enhancement", type: "conference", year: "2023" },
     ],
     consultancy: [
-      { title: "Power Audit for Local Industries", agency: "APSPDCL", amount: "â‚¹4 Lakhs" },
+      { title: "Power Audit for Local Industries", agency: "APSPDCL", amount: "₹4 Lakhs" },
     ],
     events: [
       { title: "EEE Alumni Meet-2026", date: "4th April 2026", description: "Organized by Department of Electrical & Electronics Engineering." },
       { title: "Skill Development Program on AI in Electronics", date: "9th to 13th March 2026", description: "Five-day offline training organized by APSSDC and Department of EEE." },
-      { title: "Hands-on Workshop on Real World Applications of IoT", date: "19th to 21st February 2026", description: "Three-day workshop organized by Department of EEE in association with MITS IE(I) Studentsâ€™ Chapter." },
+      { title: "Hands-on Workshop on Real World Applications of IoT", date: "19th to 21st February 2026", description: "Three-day workshop organized by Department of EEE in association with MITS IE(I) Students’ Chapter." },
     ],
     mous: [
       { name: "APSPDCL", purpose: "Industrial Training & Internships", year: "2021" },
       { name: "Schneider Electric", purpose: "Automation Training", year: "2022" },
     ],
-    placement: { percentage: "85%", avgPackage: "â‚¹4.5 LPA", highestPackage: "â‚¹10 LPA", recruiters: ["Schneider Electric", "Siemens", "ABB", "L&T", "BHEL"] },
+    placement: { percentage: "85%", avgPackage: "₹4.5 LPA", highestPackage: "₹10 LPA", recruiters: ["Schneider Electric", "Siemens", "ABB", "L&T", "BHEL"] },
     studentProjects: [
       { title: "Solar Powered EV Charging Station", students: "Team of 4", description: "Renewable energy based charging infrastructure" },
     ],
@@ -489,7 +489,7 @@ faculty: [
     ],
     nbaAccredited: true,
     hod: { name: "Dr. S. Baskaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (NIT, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Baskaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/306" },
-    achievements: { consultancyAmount: "â‚¹12+ Lakhs", researchProjects: "10+", patents: "4+", publications: "120+" },
+    achievements: { consultancyAmount: "₹12+ Lakhs", researchProjects: "10+", patents: "4+", publications: "120+" },
     teachingApproach: { description: "Emphasis on hands-on training through workshops, CAD/CAM labs, and industry-oriented projects.", points: ["Advanced CAD/CAM training", "Manufacturing workshop practice", "Industry visits", "Design competitions", "ANSYS simulation projects"] },
     courses: ["B.Tech in Mechanical Engineering"],
     contactInfo: { email: "mehod@mits.ac.in", phone: "+91-8571-280255" },
@@ -539,8 +539,8 @@ faculty: [
       { title: "Thermal Analysis of IC Engines", type: "conference", year: "2023" },
     ],
     consultancy: [
-      { title: "Material Testing Services", agency: "Local Industries", amount: "â‚¹4 Lakhs" },
-      { title: "CAD Design for SMEs", agency: "Small Enterprises", amount: "â‚¹3 Lakhs" },
+      { title: "Material Testing Services", agency: "Local Industries", amount: "₹4 Lakhs" },
+      { title: "CAD Design for SMEs", agency: "Small Enterprises", amount: "₹3 Lakhs" },
     ],
     events: [
       { title: "Workshop on 3D Printing & Additive Manufacturing", date: "February 2024" },
@@ -550,7 +550,7 @@ faculty: [
       { name: "Ashok Leyland", purpose: "Automotive Training", year: "2021" },
       { name: "TVS Motors", purpose: "Industrial Internships", year: "2022" },
     ],
-    placement: { percentage: "88%", avgPackage: "â‚¹5 LPA", highestPackage: "â‚¹11 LPA", recruiters: ["Ashok Leyland", "TVS", "Mahindra", "Tata Motors", "L&T"] },
+    placement: { percentage: "88%", avgPackage: "₹5 LPA", highestPackage: "₹11 LPA", recruiters: ["Ashok Leyland", "TVS", "Mahindra", "Tata Motors", "L&T"] },
     studentProjects: [
       { title: "Design of Hybrid Vehicle Chassis", students: "Team of 4", description: "Lightweight chassis design for electric-hybrid vehicle" },
       { title: "Solar Water Heater Optimization", students: "Team of 3", description: "Efficiency improvement using reflector design" },
@@ -593,7 +593,7 @@ faculty: [
     ],
     nbaAccredited: true,
     hod: { name: "Dr. S. Rajasekaran", designation: "Professor & Head", qualification: "Ph.D.", image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg" },
-    achievements: { consultancyAmount: "â‚¹15+ Lakhs", researchProjects: "12+", patents: "8+", publications: "150+" },
+    achievements: { consultancyAmount: "₹15+ Lakhs", researchProjects: "12+", patents: "8+", publications: "150+" },
     teachingApproach: { description: "The department integrates simulation-based learning with hands-on hardware projects.", points: ["VLSI design with Cadence tools", "IoT prototyping with Arduino/Raspberry Pi", "PCB design and fabrication", "Communication system simulation", "MATLAB & Simulink projects"] },
     courses: ["B.Tech in Electronics & Communication Engineering"],
     contactInfo: { email: "hod_ece@mits.ac.in", phone: "+91-8571-280255" },
@@ -663,8 +663,8 @@ faculty: [
       { title: "FPGA Implementation of Image Processing Algorithms", type: "journal", year: "2023" },
     ],
     consultancy: [
-      { title: "PCB Design Services", agency: "Electronics Firms", amount: "â‚¹5 Lakhs" },
-      { title: "IoT Sensor Network Design", agency: "Agriculture Dept", amount: "â‚¹6 Lakhs" },
+      { title: "PCB Design Services", agency: "Electronics Firms", amount: "₹5 Lakhs" },
+      { title: "IoT Sensor Network Design", agency: "Agriculture Dept", amount: "₹6 Lakhs" },
     ],
     events: [
       { title: "National Level Technical Symposium ECLECTICA 2K26", date: "1st April 2026", description: "Organized by Department of Electronics and Communication Engineering." },
@@ -676,7 +676,7 @@ faculty: [
       { name: "Qualcomm", purpose: "5G Research Collaboration", year: "2022" },
       { name: "BSNL", purpose: "Telecom Training", year: "2020" },
     ],
-    placement: { percentage: "90%", avgPackage: "â‚¹5 LPA", highestPackage: "â‚¹12 LPA", recruiters: ["Qualcomm", "Samsung", "Intel", "TCS", "Infosys", "Wipro"] },
+    placement: { percentage: "90%", avgPackage: "₹5 LPA", highestPackage: "₹12 LPA", recruiters: ["Qualcomm", "Samsung", "Intel", "TCS", "Infosys", "Wipro"] },
     studentProjects: [
       { title: "IoT-based Smart Agriculture System", students: "Team of 4", description: "Sensor-based soil moisture and weather monitoring" },
       { title: "Gesture Controlled Robot", students: "Team of 3", description: "Accelerometer-based robot control system" },
@@ -882,7 +882,7 @@ faculty: [
     ],
     nbaAccredited: false,
     hod: { name: "Dr. R. Kalpana", designation: "Professor & Head", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_9033.JPG", profileUrl: "https://mits.ac.in/facultyprofile/80" },
-    achievements: { consultancyAmount: "â‚¹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
+    achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
     courses: ["B.Tech in Artificial Intelligence"],
     contactInfo: { email: "aihod@mits.ac.in", phone: "+91-8571-280255" },
@@ -931,7 +931,7 @@ faculty: [
     publications: [
       { title: "Publication Records", type: "journal", year: "Will be updated soon" },
     ],
-    consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "â‚¹5 Lakhs" }],
+    consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "₹5 Lakhs" }],
     events: [
       { title: "AI Powered Solution Expo", date: "7th April 2026", description: "Innovation driven exhibition Demo Day for AI / Industry 4.0 prototypes organized by Department of CSE - Artificial Intelligence." },
       { title: "AI Innovation Workshop using LangChain and MCP", date: "17th March 2026", description: "Organized by Department of CSE - Artificial Intelligence." },
@@ -941,7 +941,7 @@ faculty: [
       { name: "NVIDIA", purpose: "GPU Computing Partnership", year: "2022" },
       { name: "Google DeepMind", purpose: "Research Collaboration", year: "2023" },
     ],
-    placement: { percentage: "96%", avgPackage: "â‚¹8 LPA", highestPackage: "â‚¹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
+    placement: { percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
     studentProjects: [
       { title: "AI-Powered Medical Diagnosis Assistant", students: "Team of 4", description: "Deep learning model for X-ray analysis" },
       { title: "Chatbot using Large Language Models", students: "Team of 3", description: "Custom LLM-based conversational AI" },
@@ -978,7 +978,7 @@ faculty: [
     ],
     nbaAccredited: false,
     hod: { name: "Dr. S. Padma", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/144" },
-    achievements: { consultancyAmount: "â‚¹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
+    achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
     courses: ["B.Tech in Artificial Intelligence and Machine Learning"],
     contactInfo: { email: "aimlhod@mits.ac.in", phone: "+91-9154291788; 8571-280255; 280706" },
@@ -1016,7 +1016,7 @@ faculty: [
       { title: "Journals", type: "journal", year: "To be updated shortly" },
       { title: "Conferences", type: "conference", year: "To be updated shortly" },
     ],
-    consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "â‚¹5 Lakhs" }],
+    consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "₹5 Lakhs" }],
     events: [
       { title: "Skill Development Programme for AIML Engineers", date: "6th April 2026", description: "Organized by Department of CSE - Artificial Intelligence and Machine Learning." },
       { title: "Online FDP on Next Generation Cyber Defense with Deep Learning", date: "16th to 21st March 2026", description: "Six-day online FDP organized by Department of CSE - Artificial Intelligence and Machine Learning." },
@@ -1026,7 +1026,7 @@ faculty: [
       { name: "NVIDIA", purpose: "GPU Computing Partnership", year: "2022" },
       { name: "Google DeepMind", purpose: "Research Collaboration", year: "2023" },
     ],
-    placement: { percentage: "96%", avgPackage: "â‚¹8 LPA", highestPackage: "â‚¹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
+    placement: { percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
     studentProjects: [
       { title: "AI-Powered Medical Diagnosis Assistant", students: "Team of 4", description: "Deep learning model for X-ray analysis" },
       { title: "Chatbot using Large Language Models", students: "Team of 3", description: "Custom LLM-based conversational AI" },
@@ -1064,7 +1064,7 @@ faculty: [
     ],
     nbaAccredited: true,
     hod: { name: "Dr. N. Naveen Kumar", designation: "Professor & Head", qualification: "Ph.D. (S V University, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Naveen Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/254" },
-    achievements: { consultancyAmount: "â‚¹6+ Lakhs", researchProjects: "6+", patents: "4+", publications: "90+" },
+    achievements: { consultancyAmount: "₹6+ Lakhs", researchProjects: "6+", patents: "4+", publications: "90+" },
     teachingApproach: { description: "Outcome-based teaching with industry projects, case studies, and research-oriented labs.", points: ["Industry-oriented mini and major projects", "Hands-on training in full-stack and enterprise development", "Research paper and patent mentoring", "Guest lectures from IT professionals", "Internship-integrated learning"] },
     courses: ["Bachelor of Computer Applications", "Master of Computer Applications"],
     contactInfo: { email: "mcahod@mits.ac.in", phone: "+91-8571-280255" },
@@ -1109,14 +1109,14 @@ faculty: [
       { title: "Faculty Publications 2023-2024", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
     ],
-    consultancy: [{ title: "Web Application Development Support", agency: "Local Organizations", amount: "â‚¹2 Lakhs" }],
+    consultancy: [{ title: "Web Application Development Support", agency: "Local Organizations", amount: "₹2 Lakhs" }],
     events: [
       { title: "Workshop on Machine Learning: From Fundamentals to Future Frontiers", date: "22nd December 2025", description: "Organized by Department of Computer Applications in association with ISTE, MITS." },
       { title: "Workshop on Generative AI Using Microservices Architecture", date: "13th June 2025", description: "One-day workshop organized by Department of Computer Applications in association with ISTE and IIC." },
       { title: "Workshop on NS3 for Cybersecurity through Cloud-based Innovations", date: "29th to 30th January 2025", description: "Two-day workshop organized by Department of Computer Applications in association with ISTE." },
     ],
     mous: [{ name: "Industry Partners (IT)", purpose: "Internships and project collaborations", year: "2024" }],
-    placement: { percentage: "95%", avgPackage: "â‚¹8 LPA", highestPackage: "â‚¹14 LPA", recruiters: ["TCS", "Infosys", "Wipro", "Accenture", "Cognizant"] },
+    placement: { percentage: "95%", avgPackage: "₹8 LPA", highestPackage: "₹14 LPA", recruiters: ["TCS", "Infosys", "Wipro", "Accenture", "Cognizant"] },
     studentProjects: [
       { title: "Enterprise Task Automation Platform", students: "Team of 4", description: "Workflow automation system for institutional operations" },
       { title: "AI-enabled Resume Screening Tool", students: "Team of 3", description: "ML-based profile matching for recruitment use-cases" },
@@ -1150,7 +1150,7 @@ faculty: [
     mission: ["To empower students to face real-time business situations and foster entrepreneurship.", "To facilitate industry-driven learning among students and faculty.", "To provide a platform for knowledge creation and dissemination through relevant infrastructure.", "To contribute to socio-economic development through excellence in teaching and research."],
     nbaAccredited: true,
     hod: { name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University)", image: "https://mits.ac.in/public/uploads/faculty/bhanu.png", profileUrl: "https://mits.ac.in/facultyprofile/701" },
-    achievements: { consultancyAmount: "â‚¹5+ Lakhs", researchProjects: "4+", patents: "0", publications: "50+" },
+    achievements: { consultancyAmount: "₹5+ Lakhs", researchProjects: "4+", patents: "0", publications: "50+" },
     teachingApproach: { description: "Case-study based pedagogy with industry mentorship and live consulting projects.", points: ["Harvard case study methodology", "Industry mentorship programs", "Business simulation exercises", "National case competitions", "Live consulting projects"] },
     courses: ["Bachelor of Business Administration", "Master of Business Administration"],
     contactInfo: { email: "mbahod@mits.ac.in", phone: "+91-8571-280255" },
@@ -1191,7 +1191,7 @@ faculty: [
       { title: "Faculty Publications 2023-2024", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
     ],
-    consultancy: [{ title: "Business Strategy Consulting", agency: "SMEs", amount: "â‚¹2 Lakhs" }],
+    consultancy: [{ title: "Business Strategy Consulting", agency: "SMEs", amount: "₹2 Lakhs" }],
     events: [
       { title: "Alumni Guest Lecture on Health Insurance Career Opportunities", date: "19th October 2024", description: "Organized by Department of Management Studies." },
       { title: "Alumni Guest Lecture on Surviving in the Corporate World", date: "27th June 2024", description: "Organized by Department of Management Studies." },
@@ -1201,7 +1201,7 @@ faculty: [
       { name: "ICFAI Business School", purpose: "Academic Exchange", year: "2021" },
       { name: "CII", purpose: "Industry Interaction", year: "2022" },
     ],
-    placement: { percentage: "90%", avgPackage: "â‚¹5 LPA", highestPackage: "â‚¹12 LPA", recruiters: ["Deloitte", "KPMG", "HDFC", "ICICI", "Amazon", "Flipkart"] },
+    placement: { percentage: "90%", avgPackage: "₹5 LPA", highestPackage: "₹12 LPA", recruiters: ["Deloitte", "KPMG", "HDFC", "ICICI", "Amazon", "Flipkart"] },
     studentProjects: [
       { title: "Market Research for FMCG Product Launch", students: "Team of 5", description: "Primary and secondary research for new product positioning" },
     ],
@@ -1374,4 +1374,5 @@ export const getAllDepartmentKeys = () => Object.keys(departmentsData);
 
 // Helper to find department by key
 export const getDepartmentByKey = (key: string): DepartmentData | undefined => departmentsData[key];
+
 

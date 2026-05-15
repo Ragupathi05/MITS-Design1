@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import Header from "@/components/Header";
@@ -403,3 +403,4 @@ const Admissions = () => {
 };
 
 export default Admissions;
+

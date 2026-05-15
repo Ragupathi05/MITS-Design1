@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+﻿import { Quote } from "lucide-react";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -83,3 +83,4 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+

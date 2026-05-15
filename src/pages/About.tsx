@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Award, BookOpen, Building2, GraduationCap, History, Landmark, Shield, Star, Target, Eye, Users, MapPin, Phone, Mail, Clock, Send } from "lucide-react";
@@ -324,3 +324,5 @@ const About = () => {
 };
 
 export default About;
+
+

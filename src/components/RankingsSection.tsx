@@ -1,4 +1,4 @@
-import ScrollReveal from "@/components/ScrollReveal";
+﻿import ScrollReveal from "@/components/ScrollReveal";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -173,3 +173,4 @@ const RankingsSection = () => {
 };
 
 export default RankingsSection;
+

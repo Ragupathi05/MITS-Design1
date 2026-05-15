@@ -392,13 +392,13 @@ const AcademicCalendar = () => {
             </div>
           </div>
 
-          {/* Breadcrumb â€” absolute positioned bottom-left */}
+          {/* Breadcrumb — absolute positioned bottom-left */}
           <div className="absolute bottom-6 left-6 z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-300">
               <a href="/" className="hover:text-white transition-colors">Home</a>
-              <span className="text-white/50">â€º</span>
+              <span className="text-white/50">›</span>
               <a href="/academics" className="hover:text-white transition-colors">Academics</a>
-              <span className="text-white/50">â€º</span>
+              <span className="text-white/50">›</span>
               <span className="text-white font-medium">Academic Calendar</span>
             </nav>
           </div>
@@ -473,7 +473,7 @@ const AcademicCalendar = () => {
             <ScrollReveal>
               <div className="text-center mb-10">
                 <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-bold rounded-full mb-3 border border-primary/20">
-                  ðŸ“š Academic Information
+                  📚 Academic Information
                 </span>
                 <h2 className="font-bold text-2xl md:text-3xl text-slate-800 mb-2">Plan Your Academic Year</h2>
                 <p className="text-slate-500">Key information about MITS academic programs</p>
@@ -522,5 +522,7 @@ const AcademicCalendar = () => {
 };
 
 export default AcademicCalendar;
+
+
 
 
