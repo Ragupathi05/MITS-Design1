@@ -771,7 +771,6 @@ faculty: [
     ],
     facilities: [
       { name: "Digital Classrooms", description: "State-of-the-art digital classrooms for interactive learning.", equipment: ["Digital boards", "Projectors", "Audio systems"] },
-      { name: "Air-Conditioned Seminar Hall", description: "Department seminar hall used for technical talks and events.", equipment: ["Presentation systems", "Seating and PA setup"] },
       { name: "IT-Enabled Computing Labs", description: "Department infrastructure includes IT-enabled labs for practical sessions.", equipment: ["High-performance workstations", "Programming toolchains"] },
     ],
     patents: [
@@ -853,7 +852,6 @@ faculty: [
     facilities: [
       { name: "Digital Classrooms", description: "IT-enabled classrooms support cybersecurity-focused teaching and demonstrations.", equipment: ["Digital boards", "Projectors", "Networked systems"] },
       { name: "Department Labs", description: "Lab facilities support practical sessions in security, systems, and computing.", equipment: ["Configured lab workstations", "Security software stack"] },
-      { name: "Air-Conditioned Seminar Hall", description: "Used for workshops, hackathons, and technical seminars.", equipment: ["Presentation systems", "Audio setup"] },
     ],
     patents: [
       { title: "AI-based Intrusion Detection System", status: "Filed", year: "2023" },
@@ -943,7 +941,6 @@ faculty: [
     facilities: [
       { name: "Digital Classrooms", description: "State-of-the-art digital classrooms support AI-enabled teaching workflows.", equipment: ["Digital boards", "Projectors", "Network-enabled systems"] },
       { name: "Department Labs", description: "Lab facilities are listed in department infrastructure for practical AI sessions.", equipment: ["Computing workstations", "Programming environments"] },
-      { name: "Air-Conditioned Seminar Hall", description: "Seminar hall supports talks, workshops, and research interactions.", equipment: ["Presentation systems", "Audio-visual setup"] },
     ],
     patents: [
       { title: "AI-based Medical Diagnosis System", status: "Published", year: "2023" },
@@ -1027,7 +1024,6 @@ faculty: [
     facilities: [
       { name: "Class Rooms", description: "Department class room infrastructure is maintained for regular academic delivery.", equipment: ["Smart boards", "Projection systems"] },
       { name: "Labs", description: "Department labs are listed in infrastructure and are progressively expanded.", equipment: ["Computing systems", "Programming toolchains"] },
-      { name: "Seminar Hall", description: "Air-conditioned seminar hall is available for technical and co-curricular activities.", equipment: ["Audio-visual systems", "Presentation setup"] },
     ],
     patents: [
       { title: "AI-based Medical Diagnosis System", status: "Published", year: "2023" },
@@ -1185,7 +1181,6 @@ faculty: [
     facilities: [
       { name: "Class Rooms", description: "Department has sufficient class rooms supporting regular academic activities.", equipment: ["Digital teaching aids", "Projection systems"] },
       { name: "Department Labs", description: "Labs are available beyond curriculum requirements and used through weekly schedules.", equipment: ["Programming workstations", "Practical lab infrastructure"] },
-      { name: "Department Library and Seminar Hall", description: "Dedicated library and seminar hall support learning, project work, and technical events.", equipment: ["Reference resources", "Audio-visual seminar setup"] },
     ],
     patents: [
       { title: "Smart Workflow Automation for Campus Services", status: "Filed", year: "2024" },
