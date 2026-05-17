@@ -2,13 +2,20 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AboutMegaMenu from "@/components/AboutMegaMenu";
+import { aboutSections } from "@/data/aboutData";
 
 type NavChild = { label: string; href: string };
-type NavItem = { label: string; href: string; children?: NavChild[] };
+type NavItem = { label: string; href: string; children?: NavChild[]; mega?: "about" };
 
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  {
+    label: "About",
+    href: "/about",
+    mega: "about",
+    children: aboutSections.map((s) => ({ label: s.label, href: s.href })),
+  },
   {
     label: "Academics",
     href: "/academics",
