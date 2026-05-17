@@ -23,6 +23,16 @@ const EligibilityAndFees = lazy(() => import("./pages/EligibilityAndFees"));
 const AcademicCalendar = lazy(() => import("./pages/AcademicCalendar"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const DepartmentPage = lazy(() => import("./pages/DepartmentPage"));
+const Leadership = lazy(() => import("./pages/about/Leadership"));
+const LeadershipProfile = lazy(() => import("./pages/about/LeadershipProfile"));
+const AcademicLeadership = lazy(() => import("./pages/about/AcademicLeadership"));
+const AboutDeans = lazy(() => import("./pages/about/Deans"));
+const AboutDepartmentHeads = lazy(() => import("./pages/about/DepartmentHeads"));
+const ExecutiveCouncil = lazy(() => import("./pages/about/ExecutiveCouncil"));
+const AcademicCouncil = lazy(() => import("./pages/about/AcademicCouncil"));
+const BoardOfStudies = lazy(() => import("./pages/about/BoardOfStudies"));
+const Organogram = lazy(() => import("./pages/about/Organogram"));
+const MandatoryDisclosures = lazy(() => import("./pages/about/MandatoryDisclosures"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -57,6 +67,16 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/about/leadership" element={<Leadership />} />
+            <Route path="/about/leadership/:slug" element={<LeadershipProfile />} />
+            <Route path="/about/academic-leadership" element={<AcademicLeadership />} />
+            <Route path="/about/deans" element={<AboutDeans />} />
+            <Route path="/about/department-heads" element={<AboutDepartmentHeads />} />
+            <Route path="/about/executive-council" element={<ExecutiveCouncil />} />
+            <Route path="/about/academic-council" element={<AcademicCouncil />} />
+            <Route path="/about/bos" element={<BoardOfStudies />} />
+            <Route path="/about/organogram" element={<Organogram />} />
+            <Route path="/about/mandatory-disclosures" element={<MandatoryDisclosures />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/research" element={<Research />} />
