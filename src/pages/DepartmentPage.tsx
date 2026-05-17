@@ -54,7 +54,17 @@ const DepartmentPage = () => {
         setActiveSection(hash);
       }
     }
-  }, [location.pathname, location.hash]);
+    // Deep-link: ?faculty=Name auto-opens that faculty's profile
+    const params = new URLSearchParams(location.search);
+    const facultyName = params.get('faculty');
+    if (facultyName && deptKey) {
+      const profile = getFacultyProfile(deptKey, facultyName);
+      if (profile) {
+        setActiveSection('faculty');
+        setSelectedProfile(profile);
+      }
+    }
+  }, [location.pathname, location.hash, location.search, deptKey, dept, navigate]);
 
   const handleSectionChange = (sectionId: string) => {
     setActiveSection(sectionId);
