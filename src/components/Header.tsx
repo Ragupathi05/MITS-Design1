@@ -1,14 +1,21 @@
-﻿import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AboutMegaMenu from "@/components/AboutMegaMenu";
+import { aboutSections } from "@/data/aboutData";
 
 type NavChild = { label: string; href: string };
-type NavItem = { label: string; href: string; children?: NavChild[] };
+type NavItem = { label: string; href: string; children?: NavChild[]; mega?: "about" };
 
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  {
+    label: "About",
+    href: "/about",
+    mega: "about",
+    children: aboutSections.map((s) => ({ label: s.label, href: s.href })),
+  },
   {
     label: "Academics",
     href: "/academics",
@@ -135,7 +142,7 @@ const Header = () => {
               item.children ? (
                 <div
                   key={item.label}
-                  className="relative"
+                  className={item.mega ? "" : "relative"}
                   onMouseEnter={() => handleMouseEnter(item.label)}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -149,25 +156,28 @@ const Header = () => {
                     {item.label}
                     <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
                   </Link>
-                  {/* Dropdown */}
-                  <div
-                    className={`absolute top-full left-0 mt-0 pt-1 min-w-[220px] z-50 transition-all duration-200 ${
-                      openDropdown === item.label ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
-                    }`}
-                  >
-                    <div className="bg-white rounded-lg border border-border shadow-xl py-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
-                          style={{ fontFamily: "var(--font-body)" }}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                  {item.mega === "about" ? (
+                    <AboutMegaMenu open={openDropdown === item.label} onClose={() => setOpenDropdown(null)} />
+                  ) : (
+                    <div
+                      className={`absolute top-full left-0 mt-0 pt-1 min-w-[220px] z-50 transition-all duration-200 ${
+                        openDropdown === item.label ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
+                      }`}
+                    >
+                      <div className="bg-white rounded-lg border border-border shadow-xl py-2">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.label}
+                            to={child.href}
+                            className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                            style={{ fontFamily: "var(--font-body)" }}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               ) : (
                 <Link
