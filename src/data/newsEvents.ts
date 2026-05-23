@@ -9,17 +9,6 @@ export type NewsEventItem = {
   details: string;
 };
 
-export type TrendingItem = {
-  id: string;
-  source: string;
-  handle: string;
-  timeAgo: string;
-  image: string;
-  text: string;
-  ctaLabel: string;
-  ctaUrl: string;
-};
-
 export type LatestNewsItem = {
   id: string;
   slug: string;
@@ -100,89 +89,6 @@ export const newsEvents: NewsEventItem[] = [
     excerpt: "MCA alumni conducted an interactive session on modern software careers and interview readiness.",
     details:
       "The alumni interaction focused on full-stack development, cloud engineering, and data-driven careers. Students received practical guidance on resume building, coding interviews, and real-world project portfolios. The department announced periodic alumni-led mentoring circles for final-year students.",
-  },
-];
-
-export const trendingOn: TrendingItem[] = [
-  {
-    id: "mitsucet-2026-registrations",
-    source: "MITS Instagram",
-    handle: "@mits_mpl",
-    timeAgo: "2 days ago",
-    image: "news-events/mm.webp",
-    text: "MITSUCET 2026 registrations are open with scholarship opportunities and merit-based admissions.",
-    ctaLabel: "Apply Now",
-    ctaUrl: "https://admission.mits.ac.in",
-  },
-  {
-    id: "future-ready-campaign",
-    source: "MITS Instagram",
-    handle: "@mits_mpl",
-    timeAgo: "4 days ago",
-    image: "news-events/ista-image.png",
-    text: "Admissions campaign highlights campus-to-career readiness, industry exposure, and internship-driven learning.",
-    ctaLabel: "Explore Admissions",
-    ctaUrl: "https://admission.mits.ac.in",
-  },
-  {
-    id: "student-success-post",
-    source: "MITS Instagram",
-    handle: "@mits_mpl",
-    timeAgo: "1 week ago",
-    image: "news-events/gy.jpg",
-    text: "Student success stories emphasize practical learning, placements, and international opportunities at MITS.",
-    ctaLabel: "View Highlights",
-    ctaUrl: "/news-events",
-  },
-  {
-    id: "fdp-cyber-defense",
-    source: "MITS Instagram",
-    handle: "@mits_mpl",
-    timeAgo: "1 week ago",
-    image: "news-events/digital-era.jpg",
-    text: "Faculty development activity on next-generation cyber defense and AI-based security practices was highlighted.",
-    ctaLabel: "See Post",
-    ctaUrl: "/news-events",
-  },
-  {
-    id: "international-conference",
-    source: "MITS Instagram",
-    handle: "@mits_mpl",
-    timeAgo: "2 weeks ago",
-    image: "news-events/icotl-2026.jpg",
-    text: "International conference participation showcased interdisciplinary research culture and publication outcomes.",
-    ctaLabel: "Know More",
-    ctaUrl: "/news-events",
-  },
-  {
-    id: "industry-visit-update",
-    source: "MITS Instagram",
-    handle: "@mits_mpl",
-    timeAgo: "2 weeks ago",
-    image: "news-events/microsoft-visit.jpg",
-    text: "Students joined a major industry visit to strengthen practical exposure in software and product ecosystems.",
-    ctaLabel: "View Story",
-    ctaUrl: "/news-events",
-  },
-  {
-    id: "alumni-network-update",
-    source: "MITS Instagram",
-    handle: "@mits_mpl",
-    timeAgo: "3 weeks ago",
-    image: "news-events/mca-alumni.jpg",
-    text: "Alumni mentoring circles and career sessions continue to support final-year students with placement readiness.",
-    ctaLabel: "Explore",
-    ctaUrl: "/news-events",
-  },
-  {
-    id: "campus-fitness-drive",
-    source: "MITS Instagram",
-    handle: "@mits_mpl",
-    timeAgo: "3 weeks ago",
-    image: "news-events/3k-run.jpg",
-    text: "Campus fitness and wellbeing campaign encouraged students to participate in structured health initiatives.",
-    ctaLabel: "Highlights",
-    ctaUrl: "/news-events",
   },
 ];
 

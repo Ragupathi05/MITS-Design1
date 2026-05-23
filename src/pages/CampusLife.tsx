@@ -58,7 +58,7 @@ const experienceCards = [
     description: "World-class laboratories, libraries, auditoriums, and green spaces designed for holistic development.",
     image: `${BASE}Hero-Section/image%201.JPG`,
     icon: Building2,
-    stats: "100+ Acres Campus",
+    stats: "26.17-acre campus",
   },
 ];
 
@@ -125,7 +125,7 @@ const lifeStories = [
     title: "Campus Environment",
     description: "Nestled in the scenic hills of Madanapalle, our campus offers a perfect blend of natural beauty and modern infrastructure. The lush green surroundings create an ideal atmosphere for learning and personal growth.",
     image: `${BASE}Hero-Section/image%201.JPG`,
-    stats: "100 Acres of Green Space",
+    stats: "26.17-acre campus",
     reverse: true,
   },
 ];

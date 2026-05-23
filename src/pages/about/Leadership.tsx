@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
-import { leadershipProfiles, leadershipOrder } from "@/data/aboutData";
+import { leadershipProfiles } from "@/data/aboutData";
 
 const Leadership = () => {
-  const profiles = leadershipOrder.map((s) => leadershipProfiles[s]);
+  const institutionalKeys = ["chancellor", "pro-chancellor"];
+  const profiles = institutionalKeys.map((k) => leadershipProfiles[k]).filter(Boolean as any);
   return (
     <PageShell
       eyebrow="About"
@@ -23,7 +24,7 @@ const Leadership = () => {
           >
             <Link
               to={`/about/leadership/${p.slug}`}
-              className="group block bg-white border border-border rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-primary/30 transition-all duration-300"
+              className="group block bg-card border border-border rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="aspect-[4/5] bg-secondary/5 overflow-hidden relative">
                 <img
@@ -35,26 +36,24 @@ const Leadership = () => {
                       "https://mits.ac.in/images/inner-banner.jpg";
                   }}
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-3 left-4 right-4 text-white">
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-accent font-bold">
-                    {p.designation}
-                  </p>
-                </div>
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
-              <div className="p-5">
+              <div className="p-6">
                 <h3
-                  className="text-lg font-bold text-secondary group-hover:text-primary transition-colors"
+                  className="text-lg font-bold text-primary group-hover:text-amber-600 transition-colors"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {p.name}
                 </h3>
                 {p.qualification && (
-                  <p className="text-xs text-secondary/60 mt-1">{p.qualification}</p>
+                  <p className="text-sm text-secondary/70 mt-1">{p.qualification}</p>
                 )}
-                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-primary">
-                  View profile <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                </span>
+                <p className="mt-3 text-xs uppercase tracking-wide text-muted-foreground">{p.designation}</p>
+                <div className="mt-4">
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    View profile <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
               </div>
             </Link>
           </motion.div>

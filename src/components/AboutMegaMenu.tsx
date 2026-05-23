@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import { aboutSections, leadershipProfiles, leadershipOrder } from "@/data/aboutData";
+import { aboutSections, leadershipProfiles } from "@/data/aboutData";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -14,12 +14,12 @@ interface Props {
 const previewMap: Record<string, { title: string; body: string; image: string }> = {
   leadership: {
     title: "Institutional Leadership",
-    body: "Chancellor, Pro-Chancellor, Vice-Chancellor, Registrar, Controller of Examinations and Ombudsperson guiding MITS Deemed to be University.",
-    image: leadershipProfiles.chancellor.image,
+    body: "Founder & Chancellor and Pro-Chancellor guiding the institution at the highest level.",
+    image: `${BASE}Hero-Section/image%201.JPG`,
   },
   "academic-leadership": {
     title: "Academic Leadership",
-    body: "Deans of Academics, Engineering, Computing and Management driving curricular excellence.",
+    body: "Vice-Chancellor, Registrar, Controller of Examinations and Ombudsperson supporting academic governance.",
     image: `${BASE}Hero-Section/image%202.JPG`,
   },
   deans: {
@@ -62,7 +62,40 @@ const previewMap: Record<string, { title: string; body: string; image: string }>
 const AboutMegaMenu = ({ open, onClose }: Props) => {
   const [hovered, setHovered] = useState<string>("leadership");
   const preview = previewMap[hovered] ?? previewMap.leadership;
-  const leaders = leadershipOrder.slice(0, 6).map((s) => leadershipProfiles[s]);
+  const institutionalLeaders = ["chancellor", "pro-chancellor"].map((s) => leadershipProfiles[s]);
+  const academicLeaders = [
+    "vice-chancellor",
+    "registrar",
+    "controller-of-examinations",
+    "ombudsperson",
+  ].map((s) => leadershipProfiles[s]);
+
+  const renderLeaderGrid = (leaders: typeof institutionalLeaders) => (
+    <div className="grid grid-cols-2 gap-2">
+      {leaders.map((l) => (
+        <Link
+          key={l.slug}
+          to={`/about/leadership/${l.slug}`}
+          onClick={onClose}
+          className="flex items-center gap-2 p-2 rounded-md hover:bg-primary/5 transition-colors group"
+        >
+          <img
+            src={l.image}
+            alt={l.name}
+            className="w-9 h-9 rounded-full object-cover border border-border"
+          />
+          <div className="min-w-0">
+            <p className="text-[11px] font-semibold text-secondary leading-tight truncate group-hover:text-primary">
+              {l.name.replace(/^Dr\. |Sri\. |Prof\. /, "")}
+            </p>
+            <p className="text-[9px] text-secondary/60 uppercase tracking-wider truncate">
+              {l.designation}
+            </p>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
 
   return (
     <AnimatePresence>
@@ -140,32 +173,8 @@ const AboutMegaMenu = ({ open, onClose }: Props) => {
                         <p className="text-sm text-secondary/70 leading-relaxed mb-4">
                           {preview.body}
                         </p>
-                        {hovered === "leadership" && (
-                          <div className="grid grid-cols-3 gap-2">
-                            {leaders.map((l) => (
-                              <Link
-                                key={l.slug}
-                                to={`/about/leadership/${l.slug}`}
-                                onClick={onClose}
-                                className="flex items-center gap-2 p-2 rounded-md hover:bg-primary/5 transition-colors group"
-                              >
-                                <img
-                                  src={l.image}
-                                  alt={l.name}
-                                  className="w-9 h-9 rounded-full object-cover border border-border"
-                                />
-                                <div className="min-w-0">
-                                  <p className="text-[11px] font-semibold text-secondary leading-tight truncate group-hover:text-primary">
-                                    {l.name.replace(/^Dr\. |Sri\. |Prof\. /, "")}
-                                  </p>
-                                  <p className="text-[9px] text-secondary/60 uppercase tracking-wider truncate">
-                                    {l.designation}
-                                  </p>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        )}
+                        {hovered === "leadership" && renderLeaderGrid(institutionalLeaders)}
+                        {hovered === "academic-leadership" && renderLeaderGrid(academicLeaders)}
                       </div>
                     </motion.div>
                   </AnimatePresence>

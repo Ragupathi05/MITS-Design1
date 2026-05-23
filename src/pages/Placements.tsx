@@ -23,8 +23,8 @@ const stats = [
   { icon: TrendingUp, value: 6.8, suffix: " LPA", label: "Average Package", color: "from-emerald-500 to-teal-500" },
   { icon: Users, value: 94, suffix: "%", label: "Placement Rate", color: "from-blue-500 to-cyan-500" },
   { icon: Building, value: 200, suffix: "+", label: "Total Recruiters", color: "from-violet-500 to-purple-500" },
-  { icon: Briefcase, value: 850, suffix: "+", label: "Total Offers", color: "from-rose-500 to-pink-500" },
-  { icon: GraduationCap, value: 320, suffix: "+", label: "Internship Offers", color: "from-indigo-500 to-blue-500" },
+  { icon: Briefcase, value: 5676, suffix: "+", label: "Total Offers", color: "from-rose-500 to-pink-500" },
+  { icon: GraduationCap, value: 3700, suffix: "", label: "Students Placed", color: "from-indigo-500 to-blue-500" },
 ];
 
 const recruiters = [

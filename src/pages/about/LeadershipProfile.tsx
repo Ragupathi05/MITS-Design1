@@ -34,7 +34,7 @@ const LeadershipProfilePage = () => {
           transition={{ duration: 0.5 }}
           className="lg:col-span-4"
         >
-          <div className="sticky top-32 bg-white border border-border rounded-2xl overflow-hidden shadow-lg">
+          <div className="sticky top-28 bg-card border border-border rounded-2xl overflow-hidden shadow-2xl">
             <div className="aspect-[3/4] bg-secondary/5 relative">
               <img
                 src={profile.image}
@@ -45,20 +45,20 @@ const LeadershipProfilePage = () => {
                     "https://mits.ac.in/images/inner-banner.jpg";
                 }}
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent text-primary-foreground p-5">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent text-white p-5">
                 {profile.tagline && (
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-bold mb-1">
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">
                     {profile.tagline}
                   </p>
                 )}
                 <p className="font-display text-lg font-bold" style={{ fontFamily: "var(--font-display)" }}>
                   {profile.name}
                 </p>
-                <p className="text-xs text-primary-foreground/85 mt-0.5">{profile.designation}</p>
+                <p className="text-sm text-white/90 mt-0.5">{profile.designation}</p>
               </div>
             </div>
             {profile.qualification && (
-              <div className="px-5 py-3 border-t border-border text-xs text-secondary/70">
+              <div className="px-5 py-3 border-t border-border text-sm text-secondary/80">
                 {profile.qualification}
               </div>
             )}
@@ -67,9 +67,9 @@ const LeadershipProfilePage = () => {
                 href={profile.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
               >
-                Official MITS profile <ExternalLink className="w-3 h-3" />
+                Official MITS profile <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
