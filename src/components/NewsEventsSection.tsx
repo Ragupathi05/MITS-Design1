@@ -22,43 +22,7 @@ const NewsEventsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 mb-12">
           <ScrollReveal className="lg:col-span-7">
             <div className="bg-white border border-border rounded-2xl p-5 shadow-sm lg:h-[600px] flex flex-col">
-              <h3 className="font-display text-3xl md:text-4xl font-bold text-[#0f172a] mb-5">
-                What's Trending <span className="text-[#b30000]">On</span>
-              </h3>
-              <div className="overflow-x-auto pb-3 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-muted/60 [&::-webkit-scrollbar-thumb]:bg-primary/45 [&::-webkit-scrollbar-thumb]:rounded-full">
-                <div className="flex gap-3 min-w-max pr-2">
-                  {trendingOn.map((item) => (
-                    <a
-                      key={item.id}
-                      href={item.ctaUrl}
-                      target={item.ctaUrl.startsWith("http") ? "_blank" : undefined}
-                      rel={item.ctaUrl.startsWith("http") ? "noreferrer" : undefined}
-                      className="group snap-start w-[220px] sm:w-[240px] rounded-xl border border-border bg-muted/25 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                    >
-                      <div className="px-3 py-2 border-b border-border/70 bg-white flex items-center gap-2">
-                        <Instagram className="w-4 h-4 text-secondary" />
-                        <div>
-                          <p className="text-[12px] leading-none font-semibold text-secondary">{item.source}</p>
-                          <p className="text-[11px] text-muted-foreground">{item.handle}</p>
-                        </div>
-                      </div>
-                      <img
-                        src={getNewsEventImageSrc(item.image)}
-                        alt={item.text}
-                        loading="lazy"
-                        className="w-full h-64 object-cover object-center"
-                      />
-                      <div className="px-3 py-2.5 bg-white">
-                        <p className="text-xs text-muted-foreground mb-1">{item.timeAgo}</p>
-                        <p className="text-xs leading-relaxed text-foreground/85 line-clamp-2">{item.text}</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <p className="mt-4 text-primary text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
-                Follow @MITS to see what is happening around campus
-              </p>
+              <InstagramFeed />
             </div>
           </ScrollReveal>
 
