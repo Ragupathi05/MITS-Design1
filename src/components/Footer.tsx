@@ -52,6 +52,7 @@ const Footer = () => {
                 { label: "Prospectus", href: "/admissions" },
                 { label: "Important Dates", href: "/admissions" },
                 { label: "Scholarships", href: "/admissions" },
+                { label: "Resources", href: "/content" },
                 { label: "Mandatory Disclosure", href: "https://mits.ac.in/mandatory-disclosures" },
               ].map((link) => (
                 <li key={link.label}>
