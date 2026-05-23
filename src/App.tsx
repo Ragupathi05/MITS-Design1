@@ -14,6 +14,8 @@ const Research = lazy(() => import("./pages/Research"));
 const Placements = lazy(() => import("./pages/Placements"));
 const CampusLife = lazy(() => import("./pages/CampusLife"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Infrastructure = lazy(() => import("./pages/Infrastructure"));
+const Content = lazy(() => import("./pages/Content"));
 const Departments = lazy(() => import("./pages/Departments"));
 const Library = lazy(() => import("./pages/Library"));
 const Examinations = lazy(() => import("./pages/Examinations"));
@@ -83,6 +85,8 @@ const App = () => (
             <Route path="/placements" element={<Placements />} />
             <Route path="/campus-life" element={<CampusLife />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/infrastructure" element={<Infrastructure />} />
+            <Route path="/content" element={<Content />} />
             <Route path="/departments" element={<Departments />} />
             <Route path="/library" element={<Library />} />
             <Route path="/examinations" element={<Examinations />} />
