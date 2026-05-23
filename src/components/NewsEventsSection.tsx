@@ -1,8 +1,9 @@
-import { Calendar, ChevronRight, Instagram, PartyPopper } from "lucide-react";
+import { Calendar, ChevronRight, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
-import { getNewsEventImageSrc, latestNews, newsEvents, trendingOn } from "@/data/newsEvents";
+import { getNewsEventImageSrc, latestNews, newsEvents } from "@/data/newsEvents";
+import InstagramFeed from "@/components/InstagramFeed";
 
 const NewsEventsSection = () => {
   return (
