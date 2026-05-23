@@ -39,7 +39,7 @@ const navItems: NavItem[] = [
   { label: "Research", href: "/research" },
   { label: "Placements", href: "/placements" },
   { label: "Campus Life", href: "/campus-life" },
-  { label: "Infrastructure", href: "/contact" },
+  { label: "Infrastructure", href: "/infrastructure" },
 ];
 
 const Header = () => {
