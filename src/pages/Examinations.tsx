@@ -2,42 +2,49 @@ import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FileText, Download, Calendar, ClipboardList, BookOpen, FolderDown,
-  Megaphone, GraduationCap, IdCard, Phone, Mail, MapPin, Search,
+  Megaphone, GraduationCap, IdCard, Phone, Mail, MapPin,
   ChevronRight, Building2, ShieldCheck, ExternalLink, FileSpreadsheet,
   FileArchive, Sparkles, Clock,
+  type LucideIcon,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 import {
   ugNotifications, ugMidTermTimetables, ugEndSemTimetables,
-  ugFacultyFormats, ugStudentFormats, ugDownloads,
-  pgNotifications, ugResults, pgResults, apaarAbc, autonomousArchive,
+  ugFacultyFormats, ugStudentFormats, ugDownloads, ugCirculars,
+  pgNotifications, pgCirculars, pgMidTermTimetables, pgEndSemTimetables,
+  pgFacultyFormats, pgStudentFormats, pgDownloads,
+  ugResults, pgResults, apaarAbc,
   coeOffice, coeResponsibilities, type ExamLink,
 } from "@/data/examData";
 
 type SectionKey =
   | "overview" | "ug-notif" | "ug-circulars" | "ug-mid" | "ug-end"
   | "ug-fac" | "ug-stu" | "ug-down"
-  | "pg-notif" | "pg-down"
-  | "results" | "apaar" | "archive" | "contact";
+  | "pg-notif" | "pg-circulars" | "pg-mid" | "pg-end" | "pg-fac" | "pg-stu" | "pg-down"
+  | "results" | "apaar" | "contact";
 
-const NAV: { id: SectionKey; label: string; icon: any; group: string }[] = [
-  { id: "overview",     label: "Overview",                 icon: Building2,     group: "Office of CoE" },
-  { id: "ug-notif",     label: "Notifications",            icon: Megaphone,     group: "UG Programmes" },
-  { id: "ug-circulars", label: "Circulars",                icon: FileText,      group: "UG Programmes" },
-  { id: "ug-mid",       label: "Mid Term Tests",           icon: Calendar,      group: "UG Programmes" },
-  { id: "ug-end",       label: "End Semester Exams",       icon: ClipboardList, group: "UG Programmes" },
-  { id: "ug-fac",       label: "Formats — Faculty",        icon: FileSpreadsheet, group: "UG Programmes" },
-  { id: "ug-stu",       label: "Formats — Students",       icon: FileSpreadsheet, group: "UG Programmes" },
-  { id: "ug-down",      label: "Downloads",                icon: FolderDown,    group: "UG Programmes" },
-  { id: "pg-notif",     label: "Notifications",            icon: Megaphone,     group: "PG Programmes" },
-  { id: "pg-down",      label: "Question Papers",          icon: BookOpen,      group: "PG Programmes" },
+const NAV: { id: SectionKey; label: string; icon: LucideIcon; group: string }[] = [
+  { id: "overview",     label: "Home",                     icon: Building2,     group: "Office of CoE" },
+  { id: "ug-notif",     label: "Notifications",            icon: Megaphone,     group: "Office of CoE" },
+  { id: "ug-circulars", label: "Circulars",                icon: FileText,      group: "Office of CoE" },
+  { id: "ug-mid",       label: "Mid Term Tests",           icon: Calendar,      group: "Office of CoE" },
+  { id: "ug-end",       label: "End Semester Exams",       icon: ClipboardList, group: "Office of CoE" },
+  { id: "ug-fac",       label: "Formats — Faculty",        icon: FileSpreadsheet, group: "Office of CoE" },
+  { id: "ug-stu",       label: "Formats — Students",       icon: FileSpreadsheet, group: "Office of CoE" },
+  { id: "ug-down",      label: "Downloads",                icon: FolderDown,    group: "Office of CoE" },
+  { id: "pg-notif",     label: "Notifications",            icon: Megaphone,     group: "Office of CoE" },
+  { id: "pg-circulars",  label: "Circulars",                icon: FileText,      group: "Office of CoE" },
+  { id: "pg-mid",       label: "Mid Term Tests",           icon: Calendar,      group: "Office of CoE" },
+  { id: "pg-end",       label: "End Semester Exams",       icon: ClipboardList, group: "Office of CoE" },
+  { id: "pg-fac",       label: "Formats — Faculty",        icon: FileSpreadsheet, group: "Office of CoE" },
+  { id: "pg-stu",       label: "Formats — Students",       icon: FileSpreadsheet, group: "Office of CoE" },
+  { id: "pg-down",      label: "Downloads",                icon: FolderDown,    group: "Office of CoE" },
   { id: "results",      label: "Results",                  icon: GraduationCap, group: "Results & Records" },
   { id: "apaar",        label: "APAAR / ABC",              icon: IdCard,        group: "Results & Records" },
-  { id: "archive",      label: "Autonomous Archive",       icon: FileArchive,   group: "Results & Records" },
   { id: "contact",      label: "Contact Us",               icon: Phone,         group: "Office of CoE" },
 ];
 
@@ -52,11 +59,15 @@ const kindIcon = (k?: ExamLink["kind"]) => {
 };
 
 /* ---------------- Notification list card ---------------- */
-const NotificationList = ({ items, query }: { items: ExamLink[]; query: string }) => {
+const NotificationList = ({ items, query, emptyMessage = "No items are available right now." }: { items: ExamLink[]; query: string; emptyMessage?: string }) => {
   const filtered = useMemo(
     () => items.filter((i) => i.title.toLowerCase().includes(query.toLowerCase())),
     [items, query],
   );
+
+  if (!items.length) {
+    return <EmptyState message={emptyMessage} />;
+  }
   if (!filtered.length) {
     return (
       <div className="text-center py-12 text-muted-foreground bg-muted/30 rounded-xl border border-dashed">
@@ -106,7 +117,7 @@ const NotificationList = ({ items, query }: { items: ExamLink[]; query: string }
   );
 };
 
-const SectionHead = ({ icon: Icon, title, subtitle }: { icon: any; title: string; subtitle?: string }) => (
+const SectionHead = ({ icon: Icon, title, subtitle }: { icon: LucideIcon; title: string; subtitle?: string }) => (
   <div className="mb-6 md:mb-8">
     <div className="flex items-center gap-3 mb-2">
       <span className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-gradient-to-br from-primary to-primary/70 text-primary-foreground flex items-center justify-center shadow-md">
@@ -121,8 +132,11 @@ const SectionHead = ({ icon: Icon, title, subtitle }: { icon: any; title: string
 /* ---------------- Page ---------------- */
 const Examinations = () => {
   const [active, setActive] = useState<SectionKey>("overview");
-  const [query, setQuery] = useState("");
+  const query = "";
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [ugOpen, setUgOpen] = useState(false);
+  const [pgOpen, setPgOpen] = useState(false);
+  const [pgDownloadsOpen, setPgDownloadsOpen] = useState({ mba: false, mca: false, mtech: false });
 
   useEffect(() => {
     if (location.hash) {
@@ -135,6 +149,25 @@ const Examinations = () => {
     const map: Record<string, typeof NAV> = {};
     NAV.forEach((n) => { (map[n.group] ||= []).push(n); });
     return map;
+  }, []);
+
+  const officeItems = grouped["Office of CoE"] ?? [];
+  const resultsItems = grouped["Results & Records"] ?? [];
+  const homeItem = officeItems.find((item) => item.id === "overview");
+  const contactItem = officeItems.find((item) => item.id === "contact");
+  const ugItems = officeItems.filter((item) => item.id.startsWith("ug-"));
+  const pgItems = officeItems.filter((item) => item.id.startsWith("pg-"));
+
+  const pgDownloadsGroups = useMemo(() => {
+    const mba = pgDownloads.filter((item) => item.title.toLowerCase().includes("mba question papers"));
+    const mca = pgDownloads.filter((item) => item.title.toLowerCase().includes("mca question papers"));
+    const mtech = pgDownloads.filter((item) => item.title.toLowerCase().includes("m.tech question papers"));
+
+    return {
+      mba,
+      mca,
+      mtech,
+    };
   }, []);
 
   return (
@@ -159,18 +192,14 @@ const Examinations = () => {
             >
               Office of <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-100">Controller of Examinations</span>
             </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
-              className="text-white/75 text-base md:text-lg max-w-3xl mx-auto"
-            >
-              Notifications, time tables, circulars, results, downloads and APAAR/ABC information for all UG and PG programmes.
-            </motion.p>
-            <nav aria-label="Breadcrumb" className="mt-6">
-              <ol className="flex items-center justify-center gap-1.5 text-sm">
-                <li><a href="/" className="text-white/60 hover:text-white">Home</a></li>
-                <li className="text-white/40">/</li>
-                <li><a href="/academics" className="text-white/60 hover:text-white">Academics</a></li>
-                <li className="text-white/40">/</li>
+          </div>
+          <div className="absolute bottom-4 left-6 z-10">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-1.5 text-sm">
+                <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li className="text-white/50">&gt;</li>
+                <li><a href="/academics" className="text-white/70 hover:text-white transition-colors">Academics</a></li>
+                <li className="text-white/50">&gt;</li>
                 <li className="text-white font-semibold">Examinations</li>
               </ol>
             </nav>
@@ -179,22 +208,13 @@ const Examinations = () => {
 
         {/* SEARCH + MOBILE NAV TRIGGER */}
         <div className="sticky top-16 z-30 bg-background/90 backdrop-blur-md border-b border-border">
-          <div className="container mx-auto px-4 py-3 flex gap-2 items-center">
+          <div className="container mx-auto px-4 py-3 flex items-center">
             <button
               onClick={() => setMobileNavOpen((o) => !o)}
               className="lg:hidden shrink-0 inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-border bg-card text-sm font-medium"
             >
               <ClipboardList className="w-4 h-4" /> Sections
             </button>
-            <div className="relative flex-1 max-w-xl">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-              <Input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search notifications, time tables, downloads…"
-                className="pl-9 h-10"
-              />
-            </div>
           </div>
         </div>
 
@@ -203,30 +223,120 @@ const Examinations = () => {
             {/* SIDEBAR */}
             <aside className={cn("lg:block", mobileNavOpen ? "block" : "hidden")}>
               <div className="lg:sticky lg:top-32 space-y-6">
-                {Object.entries(grouped).map(([group, items]) => (
-                  <div key={group}>
-                    <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground px-3 mb-2">{group}</p>
-                    <ul className="space-y-1">
-                      {items.map((n) => (
-                        <li key={n.id}>
-                          <button
-                            onClick={() => { setActive(n.id); setMobileNavOpen(false); window.scrollTo({ top: 200, behavior: "smooth" }); }}
-                            className={cn(
-                              "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all group",
-                              active === n.id
-                                ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md"
-                                : "text-foreground hover:bg-muted",
-                            )}
-                          >
-                            <n.icon className={cn("w-4 h-4 shrink-0", active === n.id ? "" : "text-muted-foreground group-hover:text-primary")} />
-                            <span className="flex-1 text-left truncate">{n.label}</span>
-                            {active === n.id && <ChevronRight className="w-4 h-4" />}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
+                <div className="rounded-2xl border border-border bg-card shadow-sm overflow-hidden">
+                  <ul className="space-y-1 p-2">
+                    {homeItem && (
+                      <li key={homeItem.id}>
+                        <button
+                          onClick={() => { setActive(homeItem.id); setMobileNavOpen(false); window.scrollTo({ top: 200, behavior: "smooth" }); }}
+                          className={cn(
+                            "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all group",
+                            active === homeItem.id
+                              ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md"
+                              : "text-foreground hover:bg-muted",
+                          )}
+                        >
+                          <homeItem.icon className={cn("w-4 h-4 shrink-0", active === homeItem.id ? "" : "text-muted-foreground group-hover:text-primary")} />
+                          <span className="flex-1 text-left truncate">{homeItem.label}</span>
+                          {active === homeItem.id && <ChevronRight className="w-4 h-4" />}
+                        </button>
+                      </li>
+                    )}
+                    <li>
+                      <Collapsible open={ugOpen} onOpenChange={setUgOpen}>
+                        <CollapsibleTrigger className="w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg text-sm transition-all text-foreground hover:bg-muted">
+                          <span className="font-medium text-left">UG Programmes</span>
+                          <ChevronRight className={cn("w-4 h-4 transition-transform text-muted-foreground", ugOpen && "rotate-90")} />
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="pt-1">
+                          <ul className="space-y-1 pl-2">
+                            {ugItems.filter((item) => item.id !== "overview" && item.id !== "contact").map((n) => (
+                              <li key={n.id}>
+                                <button
+                                  onClick={() => { setActive(n.id); setMobileNavOpen(false); window.scrollTo({ top: 200, behavior: "smooth" }); }}
+                                  className={cn(
+                                    "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all group",
+                                    active === n.id
+                                      ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md"
+                                      : "text-foreground hover:bg-muted",
+                                  )}
+                                >
+                                  <n.icon className={cn("w-4 h-4 shrink-0", active === n.id ? "" : "text-muted-foreground group-hover:text-primary")} />
+                                  <span className="flex-1 text-left truncate">{n.label}</span>
+                                  {active === n.id && <ChevronRight className="w-4 h-4" />}
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        </CollapsibleContent>
+                      </Collapsible>
+                    </li>
+                    <li>
+                      <Collapsible open={pgOpen} onOpenChange={setPgOpen}>
+                        <CollapsibleTrigger className="w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg text-sm transition-all text-foreground hover:bg-muted">
+                          <span className="font-medium text-left">PG Programmes</span>
+                          <ChevronRight className={cn("w-4 h-4 transition-transform text-muted-foreground", pgOpen && "rotate-90")} />
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="pt-1">
+                          <ul className="space-y-1 pl-2">
+                            {pgItems.map((n) => (
+                              <li key={n.id}>
+                                <button
+                                  onClick={() => { setActive(n.id); setMobileNavOpen(false); window.scrollTo({ top: 200, behavior: "smooth" }); }}
+                                  className={cn(
+                                    "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all group",
+                                    active === n.id
+                                      ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md"
+                                      : "text-foreground hover:bg-muted",
+                                  )}
+                                >
+                                  <n.icon className={cn("w-4 h-4 shrink-0", active === n.id ? "" : "text-muted-foreground group-hover:text-primary")} />
+                                  <span className="flex-1 text-left truncate">{n.label}</span>
+                                  {active === n.id && <ChevronRight className="w-4 h-4" />}
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        </CollapsibleContent>
+                      </Collapsible>
+                    </li>
+                    {resultsItems.map((n) => (
+                      <li key={n.id}>
+                        <button
+                          onClick={() => { setActive(n.id); setMobileNavOpen(false); window.scrollTo({ top: 200, behavior: "smooth" }); }}
+                          className={cn(
+                            "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all group",
+                            active === n.id
+                              ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md"
+                              : "text-foreground hover:bg-muted",
+                          )}
+                        >
+                          <n.icon className={cn("w-4 h-4 shrink-0", active === n.id ? "" : "text-muted-foreground group-hover:text-primary")} />
+                          <span className="flex-1 text-left truncate">{n.label}</span>
+                          {active === n.id && <ChevronRight className="w-4 h-4" />}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {contactItem && (
+                  <div className="rounded-2xl border border-border bg-card shadow-sm overflow-hidden">
+                    <button
+                      onClick={() => { setActive(contactItem.id); setMobileNavOpen(false); window.scrollTo({ top: 200, behavior: "smooth" }); }}
+                      className={cn(
+                        "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all group",
+                        active === contactItem.id
+                          ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md"
+                          : "text-foreground hover:bg-muted",
+                      )}
+                    >
+                      <contactItem.icon className={cn("w-4 h-4 shrink-0", active === contactItem.id ? "" : "text-muted-foreground group-hover:text-primary")} />
+                      <span className="flex-1 text-left truncate">{contactItem.label}</span>
+                      {active === contactItem.id && <ChevronRight className="w-4 h-4" />}
+                    </button>
                   </div>
-                ))}
+                )}
               </div>
             </aside>
 
@@ -242,51 +352,90 @@ const Examinations = () => {
                 >
                   {active === "overview" && <Overview />}
                   {active === "ug-notif" && (<>
-                    <SectionHead icon={Megaphone} title="UG Programmes — Notifications" subtitle="Official end-semester, regular, supplementary, re-evaluation and recounting notifications." />
+                    <SectionHead icon={Megaphone} title="Notifications" subtitle="Official end-semester, regular, supplementary, re-evaluation and recounting notifications." />
                     <NotificationList items={ugNotifications} query={query} />
                   </>)}
                   {active === "ug-circulars" && (<>
-                    <SectionHead icon={FileText} title="UG Programmes — Circulars" subtitle="Latest circulars from the Controller of Examinations." />
-                    <EmptyState message="No active circulars at this time. Please check back later or refer to the latest notifications." />
+                    <SectionHead icon={FileText} title="Circulars" subtitle="Latest circulars from the Controller of Examinations." />
+                    <NotificationList items={ugCirculars} query={query} emptyMessage="No active circulars at this time. Please check back later or refer to the latest notifications." />
                   </>)}
                   {active === "ug-mid" && (<>
-                    <SectionHead icon={Calendar} title="UG Programmes — Mid Term Time Tables" subtitle="Time tables for I & II Mid term examinations including Engineering Graphics." />
+                    <SectionHead icon={Calendar} title="Mid Term Tests" subtitle="Time tables for I & II Mid term examinations including Engineering Graphics." />
                     <NotificationList items={ugMidTermTimetables} query={query} />
                   </>)}
                   {active === "ug-end" && (<>
-                    <SectionHead icon={ClipboardList} title="UG Programmes — End Semester Exams" subtitle="Theory, practical and model lab time tables." />
+                    <SectionHead icon={ClipboardList} title="End Semester Exams" subtitle="Theory, practical and model lab time tables." />
                     <NotificationList items={ugEndSemTimetables} query={query} />
                   </>)}
                   {active === "ug-fac" && (<>
-                    <SectionHead icon={FileSpreadsheet} title="UG Programmes — Faculty Formats" subtitle="Forms and templates for invigilation, evaluation and lab awards." />
+                    <SectionHead icon={FileSpreadsheet} title="Formats — Faculty" subtitle="Forms and templates for invigilation, evaluation and lab awards." />
                     <NotificationList items={ugFacultyFormats} query={query} />
                   </>)}
                   {active === "ug-stu" && (<>
-                    <SectionHead icon={FileSpreadsheet} title="UG Programmes — Student Formats" subtitle="Application forms for re-evaluation and recounting of answer scripts." />
+                    <SectionHead icon={FileSpreadsheet} title="Formats — Students" subtitle="Application forms for re-evaluation and recounting of answer scripts." />
                     <NotificationList items={ugStudentFormats} query={query} />
                   </>)}
                   {active === "ug-down" && (<>
-                    <SectionHead icon={FolderDown} title="UG Programmes — Downloads" subtitle="Question papers, regulations, syllabi and academic calendars." />
+                    <SectionHead icon={FolderDown} title="Downloads" subtitle="Question papers, regulations, syllabi and academic calendars." />
                     <NotificationList items={ugDownloads} query={query} />
                   </>)}
                   {active === "pg-notif" && (<>
-                    <SectionHead icon={Megaphone} title="PG Programmes — Notifications" subtitle="End-semester examination notifications for MBA, MCA and M.Tech." />
+                    <SectionHead icon={Megaphone} title="Notifications" subtitle="End-semester examination notifications for MBA, MCA and M.Tech." />
                     <NotificationList items={pgNotifications} query={query} />
                   </>)}
+                  {active === "pg-circulars" && (<>
+                    <SectionHead icon={FileText} title="Circulars" subtitle="Latest circulars and official examination updates." />
+                    <NotificationList items={pgCirculars} query={query} emptyMessage="No active PG circulars are available right now." />
+                  </>)}
+                  {active === "pg-mid" && (<>
+                    <SectionHead icon={Calendar} title="Mid Term Tests" subtitle="Mid term examination notices and time table updates." />
+                    <NotificationList items={pgMidTermTimetables} query={query} emptyMessage="No active PG mid term test notices are available right now." />
+                  </>)}
+                  {active === "pg-end" && (<>
+                    <SectionHead icon={ClipboardList} title="End Semester Exams" subtitle="Current end-semester examination notices." />
+                    <NotificationList items={pgEndSemTimetables} query={query} emptyMessage="No active PG end semester exam items are available right now." />
+                  </>)}
+                  {active === "pg-fac" && (<>
+                    <SectionHead icon={FileSpreadsheet} title="Formats — Faculty" subtitle="Official formats used by faculty for PG examinations." />
+                    <NotificationList items={pgFacultyFormats} query={query} emptyMessage="No PG faculty formats are available right now." />
+                  </>)}
+                  {active === "pg-stu" && (<>
+                    <SectionHead icon={FileSpreadsheet} title="Formats — Students" subtitle="Official forms and student request formats for PG examinations." />
+                    <NotificationList items={pgStudentFormats} query={query} emptyMessage="No PG student formats are available right now." />
+                  </>)}
                   {active === "pg-down" && (<>
-                    <SectionHead icon={BookOpen} title="PG Programmes — Question Papers" subtitle="MBA, MCA, Direct 2nd Year MCA and M.Tech archives." />
-                    <ul className="grid sm:grid-cols-2 gap-4">
-                      {["MBA Question Papers","MCA Question Papers","Direct 2nd Year MCA Question Papers","M.Tech Question Papers"].map((t) => (
-                        <li key={t} className="rounded-xl border border-border bg-card p-5 hover:shadow-lg transition-shadow">
-                          <BookOpen className="w-6 h-6 text-primary mb-3" />
-                          <p className="font-display font-semibold text-foreground mb-1">{t}</p>
-                          <p className="text-xs text-muted-foreground mb-3">Access archived question papers via the official autonomous exam portal.</p>
-                          <a href="https://mits.ac.in/ugc-autonomous-exam-portal" target="_blank" rel="noopener noreferrer">
-                            <Button variant="outline" size="sm" className="w-full">Open archive <ExternalLink className="w-3.5 h-3.5 ml-1" /></Button>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+                    <SectionHead icon={FolderDown} title="Downloads" subtitle="Question papers, archives and other downloadable resources for PG programmes." />
+                    <div className="space-y-3">
+                      <Collapsible open={pgDownloadsOpen.mba} onOpenChange={(open) => setPgDownloadsOpen((prev) => ({ ...prev, mba: open }))}>
+                        <CollapsibleTrigger className="w-full flex items-center justify-between gap-3 px-4 py-3 rounded-lg border border-border bg-card text-sm md:text-base font-medium text-left hover:bg-muted transition-colors">
+                          <span>MBA Question Papers</span>
+                          <ChevronRight className={cn("w-4 h-4 transition-transform text-muted-foreground", pgDownloadsOpen.mba && "rotate-90")} />
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="pt-2">
+                          <NotificationList items={pgDownloadsGroups.mba} query={query} emptyMessage="No MBA question papers are available right now." />
+                        </CollapsibleContent>
+                      </Collapsible>
+
+                      <Collapsible open={pgDownloadsOpen.mca} onOpenChange={(open) => setPgDownloadsOpen((prev) => ({ ...prev, mca: open }))}>
+                        <CollapsibleTrigger className="w-full flex items-center justify-between gap-3 px-4 py-3 rounded-lg border border-border bg-card text-sm md:text-base font-medium text-left hover:bg-muted transition-colors">
+                          <span>MCA Question Papers</span>
+                          <ChevronRight className={cn("w-4 h-4 transition-transform text-muted-foreground", pgDownloadsOpen.mca && "rotate-90")} />
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="pt-2">
+                          <NotificationList items={pgDownloadsGroups.mca} query={query} emptyMessage="No MCA question papers are available right now." />
+                        </CollapsibleContent>
+                      </Collapsible>
+
+                      <Collapsible open={pgDownloadsOpen.mtech} onOpenChange={(open) => setPgDownloadsOpen((prev) => ({ ...prev, mtech: open }))}>
+                        <CollapsibleTrigger className="w-full flex items-center justify-between gap-3 px-4 py-3 rounded-lg border border-border bg-card text-sm md:text-base font-medium text-left hover:bg-muted transition-colors">
+                          <span>M.Tech Question Papers</span>
+                          <ChevronRight className={cn("w-4 h-4 transition-transform text-muted-foreground", pgDownloadsOpen.mtech && "rotate-90")} />
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="pt-2">
+                          <NotificationList items={pgDownloadsGroups.mtech} query={query} emptyMessage="No M.Tech question papers are available right now." />
+                        </CollapsibleContent>
+                      </Collapsible>
+                    </div>
                   </>)}
                   {active === "results" && (<>
                     <SectionHead icon={GraduationCap} title="Results" subtitle="UG and PG results portal — including recounting and re-evaluation outcomes." />
@@ -310,15 +459,6 @@ const Examinations = () => {
                       </p>
                     </div>
                     <NotificationList items={apaarAbc} query={query} />
-                  </>)}
-                  {active === "archive" && (<>
-                    <SectionHead icon={FileArchive} title="UGC-Autonomous Archive" subtitle="Historical notifications from the autonomous era. Visit the full archive for the complete 430+ document history." />
-                    <NotificationList items={autonomousArchive} query={query} />
-                    <div className="mt-6">
-                      <a href="https://mits.ac.in/ugc-autonomous-exam-portal" target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full sm:w-auto">Open Full Autonomous Archive <ExternalLink className="w-4 h-4 ml-2" /></Button>
-                      </a>
-                    </div>
                   </>)}
                   {active === "contact" && <Contact />}
                 </motion.div>
@@ -347,6 +487,12 @@ const Overview = () => (
       title="Office of the Controller of Examinations"
       subtitle="Central authority for conduction, evaluation and certification of all university examinations."
     />
+    <div className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm mb-10">
+      <h3 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-4">About</h3>
+      <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-4xl">
+        The office of the Controller of Examinations is vital to the University. The O/o CoE is responsible for the entire examination system, including preparation, scheduling, and the conduct of Continuous Internal Assessments and End Semester Examinations. Key functions include ensuring the integrity and fairness of the evaluation process, processing and publishing results, managing examination records, handling student grievances, and ensuring compliance with academic regulations. The O/o CoE works closely with various academic departments to ensure the smooth functioning of the overall examination process.
+      </p>
+    </div>
     <div className="grid md:grid-cols-3 gap-4 mb-10">
       {[
         { v: "5,000+", l: "Students Examined / Year", i: GraduationCap },
