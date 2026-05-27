@@ -4,17 +4,20 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Award, BookOpen, Building, IndianRupee, TrendingUp, Users, Target, Briefcase, GraduationCap, Star, ChevronRight, ArrowRight, CheckCircle2, Zap, Trophy, Globe, Clock, Heart, Mail, Phone, MapPin, ExternalLink, ChevronDown, Calendar, Video, FileText, Link2, Users2, Building2, Sparkles, TrendingDown, BarChart3, PieChart, Activity } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 
 const BASE = import.meta.env.BASE_URL;
 
 const sidebarTabs = [
   { id: "training-placement-cell", label: "Training & Placement Cell", icon: Users2 },
+  { id: "news-events", label: "News & Events", icon: Star },
   { id: "procedure", label: "Procedure", icon: FileText },
   { id: "training-calendar", label: "Training Calendar", icon: Calendar },
   { id: "interview-preparation", label: "Interview Preparation", icon: Video },
   { id: "placement-statistics", label: "Placement Statistics", icon: TrendingUp },
   { id: "online-practice", label: "Online Practice Links", icon: Link2 },
   { id: "recruiters", label: "Our Recruiters", icon: Building2 },
+  { id: "placement-training-team", label: "Placement & Training Team", icon: Award },
   { id: "contact", label: "Contact", icon: Mail },
 ];
 
@@ -71,29 +74,146 @@ const newsEvents = [
   "08 students were selected for Bandhan Bank, On Campus Drive held on 09th Jan, 2026.",
 ];
 
-const placementTeam = [
-  { name: "Mr. D. Venugopal Chowdary", role: "Head – Training & Placements", email: "placements@mits.ac.in" },
-  { name: "Dr. S. V. S. Ganga Devi", role: "Associate Director (I/c) – Placements", email: "" },
-  { name: "Dr. S. Rajasekaran", role: "Associate Director (I/c) – Placements", email: "" },
-  { name: "Mrs. Mythili N", role: "Sr. Placement Officer", email: "spo@mits.ac.in" },
-  { name: "Mr. J. T. Drupad Varma", role: "Placement Officer", email: "drupadjt@mits.ac.in" },
-  { name: "Mr. Geedi Mahendra Jaya Chandra", role: "Placement Officer", email: "jayachandram@mits.ac.in" },
-  { name: "Mr. D. V. Sameer Kumar", role: "Placement Officer", email: "sameerkumardv@mits.ac.in" },
-  { name: "Mr. G. Naresh", role: "Administrative Assistant", email: "" },
+type TeamMember = {
+  name: string;
+  qualification: string;
+  designation: string;
+  department: string;
+  profileUrl: string;
+  image?: string;
+};
+
+const placementTeam: TeamMember[] = [
+  // Removed unverified entry (no matching profile on official pages)
+  {
+    name: "Dr. S. V. S. Ganga Devi",
+    qualification: "Ph.D. (SPMVV, Tirupathi)",
+    designation: "Associate Director (I/c) – Placements",
+    department: "Placements",
+    profileUrl: "https://mits.ac.in/facultyprofile/253",
+    image: "https://mits.ac.in/public/uploads/faculty/Ganga%20Devi.JPG",
+  },
+  {
+    name: "Dr. S. Rajasekaran",
+    qualification: "Ph.D. (Anna University, Chennai)",
+    designation: "Associate Director (I/c) – Placements",
+    department: "Placements",
+    profileUrl: "https://mits.ac.in/facultyprofile/173",
+    image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg",
+  },
+  {
+    name: "Mrs. Mythili N",
+    qualification: "M.B.A. (Bangalore University)",
+    designation: "Sr. Placement Officer",
+    department: "Placements",
+    profileUrl: "https://mits.ac.in/facultyprofile/1079",
+    image: "https://mits.ac.in/public/uploads/faculty/myth.JPG",
+  },
+  {
+    name: "Mr. J. T. Drupad",
+    qualification: "M.B.A. (Madurai Kamaraj University)",
+    designation: "Placement Officer",
+    department: "Placements",
+    profileUrl: "#",
+    image: "https://ui-avatars.com/api/?name=J+T+Drupad&background=F3F4F6&color=111827&rounded=true&size=256",
+  },
+  {
+    name: "Mr. S. Naveen Kumar",
+    qualification: "M.B.A. (Vel.S.R.S.College)",
+    designation: "Placement Officer",
+    department: "Placements",
+    profileUrl: "https://mits.ac.in/facultyprofile/1090",
+  },
+  {
+    name: "Mr. D. V. Sameer Kumar",
+    qualification: "M.B.A. (Sikkim Manipal University)",
+    designation: "Placement Officer",
+    department: "MBA",
+    profileUrl: "https://mits.ac.in/facultyprofile/642",
+  },
+  {
+    name: "Mr. G. Naresh",
+    qualification: "M.B.A. (JNTU Anantapur)",
+    designation: "AAO",
+    department: "Placements",
+    profileUrl: "#",
+    image: "https://ui-avatars.com/api/?name=G+Naresh&background=F3F4F6&color=111827&rounded=true&size=256",
+  },
 ];
 
-const trainingTeam = [
-  { name: "Dr. K. Dasthagiri Basha", role: "Quantitative / Reasoning Aptitude Trainer" },
-  { name: "Mr. Darshan. B.V", role: "Quantitative / Reasoning Aptitude Trainer" },
-  { name: "Mr. A. Naveen Chandra", role: "Aptitude Trainer" },
-  { name: "Mr. Chollangi Venkata Ramu", role: "Aptitude Trainer" },
-  { name: "Mr. Shaik Tipu Rahaman", role: "Aptitude Trainer" },
-  { name: "Mr. Rama Mohan T", role: "Verbal Trainer" },
-  { name: "Mr. Rajesh Thulasidas", role: "Verbal Trainer" },
-  { name: "Mr. Anandakumar. V", role: "Verbal & Soft Skills Trainer" },
-  { name: "Dr. S. V. Rasajna", role: "Soft Skills Trainer" },
-  { name: "Dr. Anusha Bharath", role: "Soft Skills Trainer" },
-  { name: "Mrs. Sireesha. P", role: "Soft Skills Trainer" },
+const trainingTeam: TeamMember[] = [
+  {
+    name: "Dr. K. Dasthagiri Basha",
+    qualification: "Ph.D. (Sri Venkateswara University)",
+    designation: "Quatitative / Reasoning Aptitude Trainer",
+    department: "MBA",
+    profileUrl: "https://mits.ac.in/facultyprofile/284",
+  },
+  {
+    name: "Dr. S. V. Rasajna",
+    qualification: "Ph.D. (Andhra University)",
+    designation: "Soft Skills Trainer",
+    department: "E & FL",
+    profileUrl: "https://mits.ac.in/facultyprofile/598",
+  },
+  {
+    name: "Dr. Rajesh Thulasidass",
+    qualification: "Ph.D. (Annamalai University)",
+    designation: "Verbal Trainer",
+    department: "E & FL",
+    profileUrl: "https://mits.ac.in/facultyprofile/699",
+  },
+  {
+    name: "Mr. Anandakumar. V",
+    qualification: "M.A., M.Phil. (Bharathidasan University)",
+    designation: "Verbal & Soft Skills Trainer",
+    department: "E & FL",
+    profileUrl: "https://mits.ac.in/facultyprofile/348",
+  },
+  {
+    name: "Mr. T. Rama Mohan",
+    qualification: "M.A., M.Phil. (Madurai Kamaraj University)",
+    designation: "Verbal & Soft Skills Trainer",
+    department: "E & FL",
+    profileUrl: "https://mits.ac.in/facultyprofile/423",
+  },
+  {
+    name: "Mr. Darshan. B. V",
+    qualification: "M.Tech. (University BDT College of Engineering)",
+    designation: "Quatitative / Reasoning Aptitude Trainer",
+    department: "ME",
+    profileUrl: "https://mits.ac.in/facultyprofile/492",
+  },
+  {
+    name: "Mr. A. Naveen Chandra",
+    qualification: "M.Sc., M.Tech. (Nagarjuna University)",
+    designation: "Aptitude & Reasoning Trainer",
+    department: "MCA",
+    profileUrl: "https://mits.ac.in/facultyprofile/487",
+  },
+  {
+    name: "Mr. Chollangi Venkata Ramu",
+    qualification: "M.Tech. (JNTU Kakinada)",
+    designation: "Aptitude Trainer",
+    department: "EEE",
+    profileUrl: "https://mits.ac.in/facultyprofile/641",
+  },
+  {
+    name: "Mr. Shaik Tipu Rahaman",
+    qualification: "M.Tech., M.Sc. (SVIST Kadapa)",
+    designation: "Aptitude Trainer",
+    department: "ECE",
+    profileUrl: "https://mits.ac.in/facultyprofile/797",
+    image: "https://mits.ac.in/public/uploads/faculty/tipu.JPG",
+  },
+  {
+    name: "Mrs. V. Srilatha",
+    qualification: "M.B.A. (JNTU Anantapur)",
+    designation: "AAO",
+    department: "Training",
+    profileUrl: "#",
+    image: "https://ui-avatars.com/api/?name=V+Srilatha&background=F3F4F6&color=111827&rounded=true&size=256",
+  },
 ];
 
 const trainingSkills = [
@@ -345,10 +465,86 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
   return <span ref={ref}>{Number.isInteger(target) ? Math.round(count) : count.toFixed(1)}{suffix}</span>;
 };
 
+const getInitials = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+
+const TeamFacultyCard = ({
+  member,
+  accent,
+}: {
+  member: TeamMember;
+  accent: string;
+}) => {
+  const profileUrl = member.profileUrl && member.profileUrl !== "#" ? member.profileUrl : null;
+
+  return (
+    <div className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 flex flex-col items-center text-center">
+      <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
+        {member.image ? (
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).src = "https://mits.ac.in/images/inner-banner.jpg";
+            }}
+          />
+        ) : (
+          <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${accent} text-white font-bold text-3xl`}>
+            {getInitials(member.name)}
+          </div>
+        )}
+      </div>
+
+      <p className="text-[11px] uppercase tracking-[0.14em] text-primary font-semibold mb-1 truncate max-w-full">
+        {member.department}
+      </p>
+      <h4 className="font-extrabold text-secondary mb-1 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+        {member.name}
+      </h4>
+      <p className="text-[13px] text-primary font-semibold mb-0.5">{member.designation}</p>
+      <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{member.qualification}</p>
+
+      <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">
+        {profileUrl ? (
+          <a
+            href={profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest no-underline"
+          >
+            View Profile <ChevronRight className="w-3 h-3" />
+          </a>
+        ) : (
+          <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-400 bg-slate-100 px-4 py-1.5 rounded-full uppercase tracking-widest cursor-not-allowed">
+            No Profile
+          </span>
+        )}
+      </div>
+    </div>
+  );
+};
+
 const Placements = () => {
   const [activeTab, setActiveTab] = useState("training-placement-cell");
   const [selectedYear, setSelectedYear] = useState("2024-25");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const navigate = useNavigate();
+  const params = useParams();
+  const location = useLocation();
+  const sectionParam = params.section;
+
+  const shouldShowSection = (id: string) => {
+    if (sectionParam) return sectionParam === id;
+    // default: show only training-placement-cell when no param
+    return id === 'training-placement-cell';
+  };
 
   // Scroll detection for active section
   useEffect(() => {
@@ -375,8 +571,33 @@ const Placements = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    // update URL to show subsection
+    try {
+      navigate(`/placements/${id}`, { replace: false });
+    }
+    catch (e) {
+      // ignore navigation errors
+    }
     setSidebarOpen(false);
   };
+
+  // If route has a section param, scroll to it on mount / when it changes
+  useEffect(() => {
+    const section = params.section;
+    if (section) {
+      const el = document.getElementById(section);
+      if (el) {
+        // small timeout to ensure DOM is ready
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+        setActiveTab(section);
+      }
+    } else {
+      // if no param, update URL to base placements without changing scroll
+      if (location.pathname !== '/placements') {
+        // nothing
+      }
+    }
+  }, [params.section]);
 
   const getYearData = (year: string) => {
     return placementStatsData[year] || null;
@@ -402,7 +623,7 @@ const Placements = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Header />
-      <main>
+      <main className="pt-24 md:pt-28 lg:pt-28">
         {/* Hero Section - Enhanced */}
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
           <div 
@@ -443,30 +664,25 @@ const Placements = () => {
             
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="#recruiters" 
+                <button
+                  onClick={() => scrollToSection('recruiters')}
                   className="group inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:scale-105"
                 >
                   View Recruiters
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a 
-                  href="#placement-statistics" 
+                </button>
+                <button
+                  onClick={() => scrollToSection('placement-statistics')}
                   className="group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
                 >
                   Placement Report
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </button>
               </div>
             </ScrollReveal>
           </div>
           
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center pt-2">
-              <div className="w-1.5 h-3 bg-white/60 rounded-full animate-pulse" />
-            </div>
-          </div>
+          {/* Scroll Indicator removed per design request */}
         </section>
 
         {/* Placement Highlights - Enhanced */}
@@ -547,7 +763,9 @@ const Placements = () => {
 
               {/* Main Content */}
               <div className="flex-1 min-w-0">
+                {/* Removed 'View all sections' button - page shows only training section by default */}
                 {/* Training & Placement Cell */}
+                {shouldShowSection('training-placement-cell') && (
                 <section id="training-placement-cell" className="mb-12 scroll-mt-24">
                   <ScrollReveal>
                     <div className="bg-gradient-to-br from-blue-50 via-white to-violet-50 border border-blue-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -569,9 +787,11 @@ const Placements = () => {
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
 
                 {/* News & Events - Enhanced */}
-                <section className="mb-12">
+                {shouldShowSection('news-events') && (
+                <section id="news-events" className="mb-12">
                   <ScrollReveal>
                     <div className="bg-gradient-to-br from-amber-50 via-white to-orange-50 border border-amber-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <h3 className="font-display text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
@@ -591,8 +811,10 @@ const Placements = () => {
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
 
                 {/* Procedure - Enhanced */}
+                {shouldShowSection('procedure') && (
                 <section id="procedure" className="mb-12 scroll-mt-24">
                   <ScrollReveal>
                     <div className="bg-gradient-to-br from-emerald-50 via-white to-teal-50 border border-emerald-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -621,8 +843,10 @@ const Placements = () => {
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
 
                 {/* Training Calendar - Enhanced */}
+                {shouldShowSection('training-calendar') && (
                 <section id="training-calendar" className="mb-12 scroll-mt-24">
                   <ScrollReveal>
                     <div className="bg-gradient-to-br from-purple-50 via-white to-pink-50 border border-purple-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -647,8 +871,10 @@ const Placements = () => {
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
 
                 {/* Interview Preparation - Enhanced */}
+                {shouldShowSection('interview-preparation') && (
                 <section id="interview-preparation" className="mb-12 scroll-mt-24">
                   <ScrollReveal>
                     <div className="bg-gradient-to-br from-cyan-50 via-white to-blue-50 border border-cyan-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -691,8 +917,10 @@ const Placements = () => {
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
 
                 {/* Placement Statistics - Enhanced with all years */}
+                {shouldShowSection('placement-statistics') && (
                 <section id="placement-statistics" className="mb-12 scroll-mt-24">
                   <ScrollReveal>
                     <div className="bg-gradient-to-br from-rose-50 via-white to-pink-50 border border-rose-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -703,22 +931,7 @@ const Placements = () => {
                         Placement Statistics
                       </h2>
                       
-                      {/* Year Dropdown */}
-                      <div className="mb-8">
-                        <label className="block text-slate-700 font-semibold mb-3 text-lg">Select Year:</label>
-                        <div className="relative w-full md:w-64">
-                          <select
-                            value={selectedYear}
-                            onChange={(e) => setSelectedYear(e.target.value)}
-                            className="w-full px-5 py-4 bg-white border-2 border-slate-300 rounded-xl appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent text-lg font-medium"
-                          >
-                            {Object.keys(placementStatsData).map((year) => (
-                              <option key={year} value={year}>{year}</option>
-                            ))}
-                          </select>
-                          <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
-                        </div>
-                      </div>
+                      {/* Year Dropdown removed — quick year tiles provide selection */}
 
                       {/* Stats Table */}
                       {getYearData(selectedYear) && (
@@ -770,7 +983,6 @@ const Placements = () => {
                                 }`}
                               >
                                 <p className={`font-bold text-sm ${selectedYear === year ? 'text-white' : 'text-slate-800'}`}>{year}</p>
-                                <p className={`text-xs font-semibold ${selectedYear === year ? 'text-rose-100' : 'text-slate-500'}`}>{totals.percentage}%</p>
                               </div>
                             );
                           })}
@@ -779,8 +991,10 @@ const Placements = () => {
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
 
                 {/* Online Practice Links - Enhanced */}
+                {shouldShowSection('online-practice') && (
                 <section id="online-practice" className="mb-12 scroll-mt-24">
                   <ScrollReveal>
                     <div className="bg-gradient-to-br from-indigo-50 via-white to-violet-50 border border-indigo-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -813,8 +1027,10 @@ const Placements = () => {
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
 
                 {/* Our Recruiters - Enhanced */}
+                {shouldShowSection('recruiters') && (
                 <section id="recruiters" className="mb-12 scroll-mt-24">
                   <ScrollReveal>
                     <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 border border-slate-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -839,88 +1055,129 @@ const Placements = () => {
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
 
-                {/* Contact - Enhanced */}
-                <section id="contact" className="mb-12 scroll-mt-24">
+                {/* Placement & Training Team - Enhanced */}
+                {shouldShowSection('placement-training-team') && (
+                <section id="placement-training-team" className="mb-12 scroll-mt-24">
                   <ScrollReveal>
-                    <div className="bg-gradient-to-br from-amber-50 via-white to-orange-50 border border-amber-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                      <h2 className="font-display text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg">
-                          <Mail className="w-6 h-6 text-white" />
+                    <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-amber-50 via-white to-blue-50 p-8 shadow-2xl">
+                      <div className="absolute inset-0 opacity-60">
+                        <div className="absolute -top-20 left-10 h-48 w-48 rounded-full bg-amber-200 blur-3xl" />
+                        <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-200 blur-3xl" />
+                      </div>
+
+                      <div className="relative z-10 mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                        <div>
+                          <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white/85 px-4 py-2 text-amber-700 shadow-sm backdrop-blur-sm">
+                            <Sparkles className="h-4 w-4" />
+                            <span className="text-xs font-semibold uppercase tracking-[0.22em]">People behind placements</span>
+                          </div>
+                          <h2 className="mt-4 font-display text-3xl font-bold text-slate-800 md:text-4xl">Placement &amp; Training Team</h2>
+                          <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600 md:text-base">
+                            The teams below coordinate company outreach, student preparation, and training support to make the placement process smooth and effective.
+                          </p>
                         </div>
-                        Contact Placement Cell
-                      </h2>
-                      
-                      {/* Placement Team */}
-                      <div className="mb-8">
-                        <h3 className="font-display text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                          <Users className="w-5 h-5 text-amber-600" />
-                          Placement Team
-                        </h3>
-                        <div className="grid md:grid-cols-2 gap-4">
-                          {placementTeam.map((member, i) => (
-                            <div key={i} className="bg-white p-5 rounded-xl border border-slate-200 hover:border-amber-300 hover:shadow-md transition-all duration-300">
-                              <h4 className="font-bold text-slate-800 text-lg">{member.name}</h4>
-                              <p className="text-slate-600">{member.role}</p>
-                              {member.email && (
-                                <a href={`mailto:${member.email}`} className="text-blue-600 hover:underline flex items-center gap-1 mt-2">
-                                  <Mail className="w-4 h-4" /> {member.email}
-                                </a>
-                              )}
-                            </div>
-                          ))}
+                        <div className="rounded-2xl border border-amber-200 bg-white px-5 py-4 text-sm text-slate-700 shadow-lg">
+                          <p className="font-semibold text-slate-900">Placement support</p>
+                          <p className="mt-1 text-slate-600">Student guidance, recruiter coordination, and skill development</p>
                         </div>
                       </div>
 
-                      {/* Training Team */}
-                      <div className="mb-8">
-                        <h3 className="font-display text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                          <Award className="w-5 h-5 text-amber-600" />
-                          Training Team
-                        </h3>
-                        <div className="grid md:grid-cols-2 gap-4">
-                          {trainingTeam.map((member, i) => (
-                            <div key={i} className="bg-white p-4 rounded-xl border border-slate-200 hover:border-amber-300 transition-colors">
-                              <h4 className="font-bold text-slate-800">{member.name}</h4>
-                              <p className="text-slate-600 text-sm">{member.role}</p>
+                      <div className="relative z-10 space-y-8">
+                        <div className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm">
+                          <div className="mb-6 flex items-center gap-3">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg shadow-amber-500/20">
+                              <Users className="h-6 w-6 text-white" />
                             </div>
-                          ))}
+                            <div>
+                              <h3 className="font-display text-2xl font-bold text-slate-800">Placement Team</h3>
+                              <p className="text-sm text-slate-500">Industry relations and placement coordination</p>
+                            </div>
+                          </div>
+                          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                            {placementTeam.map((member) => (
+                              <TeamFacultyCard key={member.name} member={member} accent="from-amber-400 to-orange-500" />
+                            ))}
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Contact Info */}
-                      <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 rounded-2xl p-8 text-white shadow-xl">
-                        <h3 className="font-display text-2xl font-bold mb-6 flex items-center gap-2">
-                          <MapPin className="w-6 h-6" />
-                          Reach Us
-                        </h3>
-                        <div className="grid md:grid-cols-3 gap-6">
-                          <div className="flex items-start gap-3">
-                            <MapPin className="w-6 h-6 flex-shrink-0 text-amber-200" />
+                        <div className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm">
+                          <div className="mb-6 flex items-center gap-3">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg shadow-blue-500/20">
+                              <Award className="h-6 w-6 text-white" />
+                            </div>
                             <div>
-                              <p className="font-bold">Address</p>
-                              <p className="text-white/90">Madanapalle Institute of Technology & Science<br />Deemed to be University<br />Madanapalle-Kadiri Road<br />Kurabalakota Mandal, Madanapalle-517325<br />Andhra Pradesh, India</p>
+                              <h3 className="font-display text-2xl font-bold text-slate-800">Training Team</h3>
+                              <p className="text-sm text-slate-500">Aptitude, verbal, and soft-skills preparation</p>
                             </div>
                           </div>
-                          <div className="flex items-start gap-3">
-                            <Phone className="w-6 h-6 flex-shrink-0 text-amber-200" />
-                            <div>
-                              <p className="font-bold">Phone</p>
-                              <p className="text-white/90">+91- 7330803555<br />+91- 7330852555</p>
-                            </div>
-                          </div>
-                          <div className="flex items-start gap-3">
-                            <Mail className="w-6 h-6 flex-shrink-0 text-amber-200" />
-                            <div>
-                              <p className="font-bold">Email</p>
-                              <p className="text-white/90">placements@mits.ac.in<br />admissions@mits.ac.in</p>
-                            </div>
+                          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                            {trainingTeam.map((member) => (
+                              <TeamFacultyCard key={member.name} member={member} accent="from-blue-400 to-cyan-500" />
+                            ))}
                           </div>
                         </div>
                       </div>
                     </div>
                   </ScrollReveal>
                 </section>
+                )}
+
+                {/* Contact - Enhanced */}
+                {shouldShowSection('contact') && (
+                <section id="contact" className="mb-12 scroll-mt-24">
+                  <ScrollReveal>
+                    <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-amber-50 via-white to-orange-50 p-8 shadow-xl transition-shadow duration-300 hover:shadow-2xl">
+                      <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-amber-200/40 blur-3xl" />
+                      <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-orange-200/40 blur-3xl" />
+
+                      <div className="relative z-10 mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                        <div>
+                          <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-amber-700 shadow-sm ring-1 ring-amber-200 backdrop-blur">
+                            <Mail className="h-4 w-4" />
+                            <span className="text-xs font-semibold uppercase tracking-[0.22em]">Contact</span>
+                          </div>
+                          <h2 className="mt-4 font-display text-3xl font-bold text-slate-800 md:text-4xl">Contact Placement Cell</h2>
+                          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600 md:text-base">
+                            Reach the placement office for admissions, recruitment support, and general coordination.
+                          </p>
+                        </div>
+                        <div className="rounded-2xl bg-slate-900 px-5 py-4 text-white shadow-lg">
+                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">Quick connect</p>
+                          <p className="mt-1 text-sm text-slate-300">placements@mits.ac.in</p>
+                        </div>
+                      </div>
+
+                      <div className="relative z-10 grid gap-5 md:grid-cols-3">
+                        <div className="group rounded-2xl border border-white/70 bg-white/90 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 shadow-lg shadow-amber-500/20">
+                            <MapPin className="h-6 w-6 text-white" />
+                          </div>
+                          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-600">Address</p>
+                          <p className="mt-3 text-sm leading-6 text-slate-600">Madanapalle Institute of Technology & Science<br />Deemed to be University<br />Madanapalle-Kadiri Road<br />Kurabalakota Mandal, Madanapalle-517325<br />Andhra Pradesh, India</p>
+                        </div>
+
+                        <div className="group rounded-2xl border border-white/70 bg-white/90 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 shadow-lg shadow-blue-500/20">
+                            <Phone className="h-6 w-6 text-white" />
+                          </div>
+                          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Phone</p>
+                          <p className="mt-3 text-sm leading-6 text-slate-600">+91-7330803555<br />+91-7330852555</p>
+                        </div>
+
+                        <div className="group rounded-2xl border border-white/70 bg-white/90 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 shadow-lg shadow-emerald-500/20">
+                            <Mail className="h-6 w-6 text-white" />
+                          </div>
+                          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Email</p>
+                          <p className="mt-3 text-sm leading-6 text-slate-600">placements@mits.ac.in<br />admissions@mits.ac.in</p>
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                </section>
+                )}
               </div>
             </div>
           </div>

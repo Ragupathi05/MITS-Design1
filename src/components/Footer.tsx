@@ -50,10 +50,9 @@ const Footer = () => {
                 { label: "Contact", href: "/contact" },
                 { label: "Apply Now", href: "/admissions" },
                 { label: "Prospectus", href: "/admissions" },
-                { label: "Important Dates", href: "/admissions" },
                 { label: "Scholarships", href: "/admissions" },
                 { label: "Resources", href: "/content" },
-                { label: "Mandatory Disclosure", href: "https://mits.ac.in/mandatory-disclosures" },
+                { label: "Mandatory Disclosure", href: "/about/mandatory-disclosures" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link to={link.href} className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</Link>
@@ -101,7 +100,7 @@ const Footer = () => {
             </div>
             <div className="mt-6 text-sm space-y-2">
               <a href="#" className="block font-body text-white/80 hover:text-[#caa74d] transition-colors">Privacy Policy</a>
-              <a href="#" className="block font-body text-white/80 hover:text-[#caa74d] transition-colors">Mandatory Disclosure</a>
+              <Link to="/about/mandatory-disclosures" className="block font-body text-white/80 hover:text-[#caa74d] transition-colors">Mandatory Disclosure</Link>
               <a href="#" className="block font-body text-white/80 hover:text-[#caa74d] transition-colors">Sitemap</a>
             </div>
           </div>
