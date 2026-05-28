@@ -36,6 +36,7 @@ const BoardOfStudies = lazy(() => import("./pages/about/BoardOfStudies"));
 const Organogram = lazy(() => import("./pages/about/Organogram"));
 const MandatoryDisclosures = lazy(() => import("./pages/about/MandatoryDisclosures"));
 const NIRF = lazy(() => import("./pages/NIRF"));
+const NAAC = lazy(() => import("./pages/NAAC"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
