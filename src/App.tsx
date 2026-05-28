@@ -94,6 +94,7 @@ const App = () => (
             <Route path="/library" element={<Library />} />
             <Route path="/examinations" element={<Examinations />} />
             <Route path="/nirf" element={<NIRF />} />
+            <Route path="/naac" element={<NAAC />} />
             <Route path="/academic-calendar" element={<AcademicCalendar />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/news-events" element={<NewsEvents />} />
