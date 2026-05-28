@@ -25,27 +25,27 @@ const PageShell = ({ eyebrow = "About", title, intro, children, bannerImage }: P
           className="relative bg-gradient-to-br from-primary via-primary to-[#7a0a0d] text-primary-foreground"
         >
           {bannerImage && (
-            <div className="absolute inset-0 opacity-15">
+            <div className="absolute inset-0 opacity-15 pointer-events-none">
               <img
                 src={bannerImage}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover pointer-events-none"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).style.display = "none";
                 }}
               />
             </div>
           )}
+          <nav className="absolute left-4 bottom-4 md:left-8 md:bottom-6 z-20 flex items-center gap-1.5 text-xs md:text-sm text-primary-foreground/80">
+            <Link to="/" className="hover:text-accent">Home</Link>
+            <ChevronRight className="w-3 h-3" />
+            <Link to="/about" className="hover:text-accent">About</Link>
+            <ChevronRight className="w-3 h-3" />
+            <span className="text-accent">{title}</span>
+          </nav>
           <div className="relative container mx-auto px-4 py-14 md:py-20">
-            <nav className="flex items-center gap-1.5 text-xs md:text-sm text-primary-foreground/80 mb-4">
-              <Link to="/" className="hover:text-accent">Home</Link>
-              <ChevronRight className="w-3 h-3" />
-              <Link to="/about" className="hover:text-accent">{eyebrow}</Link>
-              <ChevronRight className="w-3 h-3" />
-              <span className="text-accent">{title}</span>
-            </nav>
             <h1
-              className="font-display text-3xl md:text-5xl font-bold leading-tight"
+              className="font-display text-3xl md:text-5xl font-bold leading-tight text-accent"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {title}

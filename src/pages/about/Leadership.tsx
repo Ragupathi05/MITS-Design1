@@ -11,7 +11,6 @@ const Leadership = () => {
     <PageShell
       eyebrow="About"
       title="Institutional Leadership"
-      intro="The leaders who steer MITS Deemed to be University — combining decades of academic, administrative and public-service experience."
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {profiles.map((p, i) => (

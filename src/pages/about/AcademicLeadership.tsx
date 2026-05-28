@@ -17,7 +17,6 @@ const AcademicLeadership = () => {
     <PageShell
       eyebrow="About"
       title="Academic Leadership"
-      intro="Vice-Chancellor, Registrar, Controller of Examinations and Ombudsperson supporting academic governance of MITS."
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {profiles.map((p, i) => (

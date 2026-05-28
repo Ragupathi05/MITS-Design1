@@ -168,8 +168,8 @@ const NIRF = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl"
-              style={{ fontFamily: "var(--font-display)" }}
+              className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl bg-gradient-to-r from-[#e8c96a] via-[#f7df8a] to-white bg-clip-text text-transparent"
+              style={{ fontFamily: "var(--font-display)", textShadow: "0 6px 30px rgba(0,0,0,0.45)" }}
             >
               National Institutional Ranking Framework
             </motion.h1>
@@ -203,15 +203,17 @@ const NIRF = () => {
         </section>
 
         {/* HIGHLIGHTS */}
-        <section className="relative -mt-10 md:-mt-12 z-10 container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
+        <section className="relative -mt-16 md:-mt-20 z-10 container mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 items-stretch" style={{ gridAutoRows: '1fr' }}>
             {nirfHighlights.map((h, i) => (
               <ScrollReveal key={h.label} delay={i * 0.08}>
-                <div className="relative rounded-2xl bg-white border border-[#0f2a44]/10 p-5 md:p-6 shadow-[0_12px_36px_rgba(15,42,68,0.12)] hover:-translate-y-1 transition-transform">
-                  <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#caa74d] via-[#e8c96a] to-[#caa74d]" />
-                  <p className="font-display text-3xl md:text-4xl font-extrabold text-[#0f2a44] leading-none">{h.value}</p>
-                  <p className="font-body text-sm font-semibold text-[#b31317] mt-2">{h.label}</p>
-                  <p className="font-body text-xs text-[#0f2a44]/60 mt-1">{h.note}</p>
+                <div className="relative rounded-2xl bg-white border border-[#0f2a44]/10 p-5 md:p-6 shadow-[0_12px_36px_rgba(15,42,68,0.12)] hover:-translate-y-1 transition-transform h-full flex flex-col overflow-hidden">
+                  <div className="absolute top-0 left-5 right-5 md:left-6 md:right-6 h-1 z-10 rounded-full bg-gradient-to-r from-[#ffd775] via-[#f7df8a] to-[#ffd775]" />
+                  <div className="mt-3 md:mt-4 flex-1">
+                    <p className="font-display text-3xl md:text-4xl font-extrabold text-[#0f2a44] leading-none">{h.value}</p>
+                    <p className="font-body text-sm font-semibold text-[#b31317] mt-2">{h.label}</p>
+                    <p className="font-body text-xs text-[#0f2a44]/60 mt-1">{h.note}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
@@ -279,10 +281,6 @@ const NIRF = () => {
                 NIRF Rankings &amp; Data Archive
               </h2>
               <div className="w-20 h-1 bg-[#caa74d] mx-auto mt-4 rounded-full" />
-              <p className="font-body text-[#0f2a44]/65 mt-4 max-w-2xl mx-auto">
-                Browse every official submission MITS has filed with NIRF since 2017. All documents link to the original
-                PDFs on mits.ac.in.
-              </p>
             </div>
 
             {/* Tabs */}
@@ -384,43 +382,38 @@ const NIRF = () => {
             </ScrollReveal>
 
             <ScrollReveal className="lg:col-span-5" direction="right" delay={0.1}>
-              <div id="contact" className="sticky top-24 rounded-2xl overflow-hidden bg-gradient-to-br from-[#0f2a44] to-[#143557] text-white shadow-[0_20px_50px_rgba(15,42,68,0.25)]">
-                <div className="h-1 bg-gradient-to-r from-[#caa74d] via-[#e8c96a] to-[#caa74d]" />
-                <div className="p-7 md:p-8">
-                  <p className="text-[#caa74d] font-body font-semibold tracking-[0.22em] uppercase text-xs mb-3">Contact</p>
-                  <h3 className="font-display text-2xl font-bold">NIRF Coordinator</h3>
-                  <div className="w-12 h-0.5 bg-[#caa74d] mt-3 mb-6" />
+              <div id="contact" className="sticky top-24 rounded-2xl overflow-hidden bg-gradient-to-br from-[#0f2a44]/95 via-[#12334a]/92 to-[#163f57]/95 text-white shadow-[0_20px_50px_rgba(15,42,68,0.25)]">
+                  <div className="h-1 bg-gradient-to-r from-[#ffd775] via-[#f7df8a] to-[#ffd775]" />
+                  <div className="p-7 md:p-8">
+                    <p className="text-[#f7df8a] font-body font-semibold tracking-[0.22em] uppercase text-xs mb-3">Contact</p>
+                    <h3 className="font-display text-2xl font-bold text-white">NIRF Coordinator</h3>
+                    <div className="w-12 h-0.5 bg-[#f7df8a] mt-3 mb-6" />
 
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#caa74d] to-[#a8862e] flex items-center justify-center mb-5">
-                    <Users className="w-10 h-10 text-[#0f2a44]" />
-                  </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ffd775] to-[#d0a942] flex items-center justify-center flex-shrink-0">
+                        <Users className="w-10 h-10 text-[#0f2a44]" />
+                      </div>
+                      <div>
+                        <p className="font-display text-xl font-bold text-white leading-tight">{nirfCoordinator.name}</p>
+                      </div>
+                    </div>
 
-                  <p className="font-display text-xl font-bold">{nirfCoordinator.name}</p>
-                  <p className="font-body text-[#caa74d] text-sm font-semibold mt-1">{nirfCoordinator.role}</p>
-
-                  <div className="mt-6 space-y-3 text-sm">
-                    <a href={`mailto:${nirfCoordinator.email}`} className="flex items-center gap-3 text-white/85 hover:text-[#caa74d] transition-colors group">
-                      <span className="w-9 h-9 rounded-lg bg-white/10 group-hover:bg-[#caa74d]/20 flex items-center justify-center transition-colors">
+                  <div className="mt-6 space-y-3 text-base">
+                    <a href={`mailto:${nirfCoordinator.email}`} className="flex items-center gap-3 text-white/90 hover:text-[#f7df8a] transition-colors group">
+                      <span className="w-9 h-9 rounded-lg bg-white/8 group-hover:bg-[#f7df8a]/20 flex items-center justify-center transition-colors">
                         <Mail className="w-4 h-4" />
                       </span>
-                      <span className="font-body break-all">{nirfCoordinator.email}</span>
+                      <span className="font-body break-all text-white">{nirfCoordinator.email}</span>
                     </a>
-                    <div className="flex items-center gap-3 text-white/85">
-                      <span className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center">
+                    <div className="flex items-center gap-3 text-white/90">
+                      <span className="w-9 h-9 rounded-lg bg-white/8 flex items-center justify-center">
                         <Building2 className="w-4 h-4" />
                       </span>
-                      <span className="font-body">{nirfCoordinator.institute}</span>
+                      <span className="font-body text-white">{nirfCoordinator.institute}</span>
                     </div>
                   </div>
 
-                  <a
-                    href="https://mits.ac.in/nirf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-7 inline-flex w-full justify-center items-center gap-2 px-4 py-3 rounded-lg bg-[#caa74d] text-[#0f2a44] font-body font-bold text-sm hover:bg-[#e8c96a] transition-colors"
-                  >
-                    Visit Official NIRF Portal <ExternalLink className="w-4 h-4" />
-                  </a>
+                  {/* Removed external 'Visit Official NIRF Portal' button as requested */}
                 </div>
               </div>
             </ScrollReveal>
@@ -432,12 +425,15 @@ const NIRF = () => {
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#caa74d]/20 rounded-full blur-3xl" />
           <div className="container mx-auto px-4 py-14 md:py-16 relative">
             <div className="grid md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-2">
+                <div className="md:col-span-2">
                 <p className="text-[#e8c96a] font-body font-semibold tracking-[0.22em] uppercase text-xs mb-3">Explore More</p>
-                <h3 className="font-display text-2xl md:text-3xl font-bold">
-                  Accreditations, rankings &amp; statutory disclosures
-                </h3>
-                <p className="mt-3 text-white/80 font-body max-w-2xl">
+                <div className="inline-block bg-white/6 backdrop-blur-sm rounded-lg px-5 py-3">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-white">
+                    Accreditations, rankings &amp; statutory disclosures
+                  </h3>
+                  <div className="w-16 h-1 bg-gradient-to-r from-[#ffd775] to-[#f7df8a] mt-3 rounded-full" />
+                </div>
+                <p className="mt-4 text-white/90 font-body max-w-2xl">
                   Beyond NIRF, MITS publishes complete information under NAAC, UGC, AICTE and statutory mandates.
                 </p>
               </div>

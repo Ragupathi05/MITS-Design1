@@ -9,7 +9,6 @@ const DepartmentHeads = () => {
     <PageShell
       eyebrow="About"
       title="Department Heads"
-      intro="Heads of academic departments across Engineering, Computing, Sciences, Humanities and Management at MITS Deemed to be University."
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {departmentHeads.map((h, i) => (

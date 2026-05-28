@@ -9,7 +9,6 @@ const Deans = () => {
     <PageShell
       eyebrow="About"
       title="Deans of MITS"
-      intro="Deans of Academics, Engineering, Computing and Management who lead each school of the University."
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {deansList.map((d, i) => (
