@@ -36,6 +36,7 @@ const BoardOfStudies = lazy(() => import("./pages/about/BoardOfStudies"));
 const Organogram = lazy(() => import("./pages/about/Organogram"));
 const MandatoryDisclosures = lazy(() => import("./pages/about/MandatoryDisclosures"));
 const NIRF = lazy(() => import("./pages/NIRF"));
+const NAAC = lazy(() => import("./pages/NAAC"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -93,6 +94,7 @@ const App = () => (
             <Route path="/library" element={<Library />} />
             <Route path="/examinations" element={<Examinations />} />
             <Route path="/nirf" element={<NIRF />} />
+            <Route path="/naac" element={<NAAC />} />
             <Route path="/academic-calendar" element={<AcademicCalendar />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/news-events" element={<NewsEvents />} />

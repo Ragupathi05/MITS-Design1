@@ -71,7 +71,7 @@ const Footer = () => {
                 { label: "Research", href: "/research" },
                 { label: "Campus Life", href: "/campus-life" },
                 { label: "NIRF", href: "/nirf" },
-                { label: "NAAC", href: "https://mits.ac.in/naac" },
+                { label: "NAAC", href: "/naac" },
                 { label: "Public Self Disclosures", href: "https://mits.ac.in/affiliations-accreditations" },
                 { label: "Circulars", href: "https://mits.ac.in/circulars" },
                 { label: "Accreditations & Rankings", href: "/about" },
