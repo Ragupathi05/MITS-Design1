@@ -7,6 +7,7 @@ import { getDepartmentByKey } from "@/data/departmentData";
 import { Card, CardContent } from "@/components/ui/card";
 import InlineFacultyProfile from "@/components/InlineFacultyProfile";
 import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfileData";
+import { slugifyFaculty } from "@/lib/facultySlug";
 import {
   Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone
 } from "lucide-react";
@@ -392,79 +393,29 @@ const DepartmentPage = () => {
                                 {groupTitle}
                               </h3>
                               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                                {members.map((f, i) => {
-                                  const handleCardClick = () => {
-                                    if (f.profileUrl) {
-                                      window.open(f.profileUrl, "_blank", "noopener,noreferrer");
-                                      return;
-                                    }
-                                    let profile = getFacultyProfile(deptKey || "", f.name);
-                                    if (!profile) {
-                                      const sections = [];
-                                      if (f.profile?.education) {
-                                        sections.push({
-                                          title: "Details of Educational Qualification",
-                                          content: f.profile.education.map((e, i) => ({ "S.No": String(i+1), Course: e.degree, Specialization: e.specializatio, "College Name/University": e.university, "Year of Passing": e.year }))
-                                        });
-                                      }
-                                      if (f.profile?.researchAreas) {
-                                        sections.push({ title: "Research Areas", content: f.profile.researchAreas });
-                                      }
-                                      if (f.profile?.publications) {
-                                        sections.push({
-                                          title: "Publication Details",
-                                          content: f.profile.publications.map((p, i) => ({ "S.No": String(i+1), "Publication Affiliation": "MITS", "Academic Year": p.year, "Author Position": "1", "Details of Research Publication": p.title, Indexing: p.index, Publication: "Article", "Journal Quartile": "None" }))
-                                        });
-                                      }
-                                      if (f.profile?.patents) {
-                                        sections.push({
-                                          title: "Patents",
-                                          content: f.profile.patents.map((p, i) => ({ "S.No": String(i+1), Affiliation: "MITS", "Academic Year": p.year, "Title of the Patent": p.title, Status: p.status }))
-                                        });
-                                      }
-                                      if (f.profile?.awards) {
-                                        sections.push({ title: "Awards/Achievements", content: f.profile.awards });
-                                      }
-                                      profile = {
-                                        name: f.name,
-                                        designation: f.designation,
-                                        image: f.image,
-                                        email: f.email,
-                                        sections: sections.length > 0 ? sections : []
-                                      };
-                                    }
-                                    setSelectedProfile(profile);
-                                  };
-                                  return (
-                                    <div
-                                      key={`${groupTitle}-${i}`}
-                                      className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 flex flex-col items-center text-center cursor-pointer"
-                                      onClick={handleCardClick}
-                                    >
-                                      <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
-                                        {f.image ? (
-                                          <img src={f.image} alt={f.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                        ) : (
-                                          <Users className="w-8 h-8 text-slate-300" />
-                                        )}
-                                      </div>
-                                      <h4 className="font-extrabold text-secondary mb-1" style={{ fontFamily: "var(--font-display)" }}>{f.name}</h4>
-                                      <p className="text-[13px] text-primary font-semibold mb-0.5">{f.designation}</p>
-                                      <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{f.qualification}</p>
-
-                                      <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">
-                                        <a 
-                                          href={f.profileUrl || `https://mits.ac.in/facultyprofile/${encodeURIComponent(f.name)}`}
-                                          target="_blank" 
-                                          rel="noopener noreferrer"
-                                          className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest no-underline"
-                                        >
-                                          View Profile <ChevronRight className="w-3 h-3" />
-                                        </a>
-                                      </div>
+                                {members.map((f, i) => (
+                                  <Link
+                                    key={`${groupTitle}-${i}`}
+                                    to={`/department/${deptKey}/faculty/${slugifyFaculty(f.name)}`}
+                                    className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 flex flex-col items-center text-center cursor-pointer no-underline"
+                                  >
+                                    <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
+                                      {f.image ? (
+                                        <img src={f.image} alt={f.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                      ) : (
+                                        <Users className="w-8 h-8 text-slate-300" />
+                                      )}
                                     </div>
-                                  );
-                                })}
+                                    <h4 className="font-extrabold text-secondary mb-1" style={{ fontFamily: "var(--font-display)" }}>{f.name}</h4>
+                                    <p className="text-[13px] text-primary font-semibold mb-0.5">{f.designation}</p>
+                                    <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{f.qualification}</p>
+                                    <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">
+                                      <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest">
+                                        View Profile <ChevronRight className="w-3 h-3" />
+                                      </span>
+                                    </div>
+                                  </Link>
+                                ))}
                               </div>
                             </section>
                           );
@@ -472,54 +423,11 @@ const DepartmentPage = () => {
                       </div>
                     ) : (
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {dept.faculty.map((f, i) => {
-                        const handleCardClick = () => {
-                          if (f.profileUrl) {
-                            window.open(f.profileUrl, "_blank", "noopener,noreferrer");
-                            return;
-                          }
-                          let profile = getFacultyProfile(deptKey || "", f.name);
-                          if (!profile) {
-                            const sections = [];
-                            if (f.profile?.education) {
-                              sections.push({
-                                title: "Details of Educational Qualification",
-                                content: f.profile.education.map((e, i) => ({ "S.No": String(i+1), Course: e.degree, Specialization: e.specializatio, "College Name/University": e.university, "Year of Passing": e.year }))
-                              });
-                            }
-                            if (f.profile?.researchAreas) {
-                              sections.push({ title: "Research Areas", content: f.profile.researchAreas });
-                            }
-                            if (f.profile?.publications) {
-                              sections.push({
-                                title: "Publication Details",
-                                content: f.profile.publications.map((p, i) => ({ "S.No": String(i+1), "Publication Affiliation": "MITS", "Academic Year": p.year, "Author Position": "1", "Details of Research Publication": p.title, Indexing: p.index, Publication: "Article", "Journal Quartile": "None" }))
-                              });
-                            }
-                            if (f.profile?.patents) {
-                              sections.push({
-                                title: "Patents",
-                                content: f.profile.patents.map((p, i) => ({ "S.No": String(i+1), Affiliation: "MITS", "Academic Year": p.year, "Title of the Patent": p.title, Status: p.status }))
-                              });
-                            }
-                            if (f.profile?.awards) {
-                              sections.push({ title: "Awards/Achievements", content: f.profile.awards });
-                            }
-                            profile = {
-                              name: f.name,
-                              designation: f.designation,
-                              image: f.image,
-                              email: f.email,
-                              sections: sections.length > 0 ? sections : []
-                            };
-                          }
-                          setSelectedProfile(profile);
-                        };
-                        return (
-                          <div
+                        {dept.faculty.map((f, i) => (
+                          <Link
                             key={i}
-                            className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 flex flex-col items-center text-center cursor-pointer"
-                            onClick={handleCardClick}
+                            to={`/department/${deptKey}/faculty/${slugifyFaculty(f.name)}`}
+                            className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 flex flex-col items-center text-center cursor-pointer no-underline"
                           >
                             <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
                               {f.image ? (
@@ -531,20 +439,13 @@ const DepartmentPage = () => {
                             <h4 className="font-extrabold text-secondary mb-1" style={{ fontFamily: "var(--font-display)" }}>{f.name}</h4>
                             <p className="text-[13px] text-primary font-semibold mb-0.5">{f.designation}</p>
                             <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{f.qualification}</p>
-
                             <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">
-                              <a 
-                                href={f.profileUrl || `https://mits.ac.in/facultyprofile/${encodeURIComponent(f.name)}`}
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest no-underline"
-                              >
+                              <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest">
                                 View Profile <ChevronRight className="w-3 h-3" />
-                              </a>
+                              </span>
                             </div>
-                          </div>
-                        );
-                        })}
+                          </Link>
+                        ))}
                       </div>
                     )}
                   </>
