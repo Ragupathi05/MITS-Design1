@@ -7,7 +7,7 @@ import { getDepartmentByKey, type FacultyMember } from "@/data/departmentData";
 import { getFacultyProfile, type FacultyProfile, type FacultySection } from "@/data/facultyProfileData";
 import { slugifyFaculty } from "@/lib/facultySlug";
 import {
-  ArrowLeft, ArrowRight, Mail, Phone, Building2, GraduationCap, BookOpen,
+  ArrowLeft, ArrowRight, Mail, GraduationCap, BookOpen,
   Award, FileText, Users, ExternalLink, ChevronRight, Sparkles, Briefcase
 } from "lucide-react";
 
@@ -210,6 +210,7 @@ const FacultyProfilePage = () => {
     return (
       <div className="min-h-screen">
         <Header />
+        <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
         <div className="container mx-auto px-4 py-24 text-center">Loading…</div>
         <Footer />
       </div>
@@ -253,6 +254,7 @@ const FacultyProfilePage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
       <Header />
+      <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-secondary to-[#0a1f33] text-white">
@@ -297,22 +299,12 @@ const FacultyProfilePage = () => {
               <p className="inline-block text-[11px] tracking-[0.3em] uppercase font-semibold text-accent mb-3 px-3 py-1 rounded-full bg-white/10 border border-white/15">
                 {dept.name}
               </p>
-              <h1 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+              <h1 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
                 {profile.name}
               </h1>
               <p className="text-lg md:text-xl text-accent font-medium mb-3">{profile.designation}</p>
               {faculty.qualification && (
                 <p className="text-sm text-white/70 mb-4">{faculty.qualification}</p>
-              )}
-
-              {researchTags.length > 0 && (
-                <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-5">
-                  {researchTags.slice(0, 6).map((t, i) => (
-                    <span key={i} className="text-[11px] md:text-xs px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
-                      {t}
-                    </span>
-                  ))}
-                </div>
               )}
 
               <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm">
@@ -322,6 +314,9 @@ const FacultyProfilePage = () => {
                   </a>
                 )}
               </div>
+              <p className="mt-3 text-sm text-white/75">
+                Office Address : NPN204
+              </p>
             </div>
           </motion.div>
 
@@ -359,32 +354,6 @@ const FacultyProfilePage = () => {
         <div className="grid lg:grid-cols-[320px,1fr] gap-8">
           {/* SIDEBAR */}
           <aside className="space-y-6 lg:sticky lg:top-24 self-start">
-            {/* Contact card */}
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-              <div className="h-1.5 bg-gradient-to-r from-primary via-accent to-secondary" />
-              <div className="p-5">
-                <h3 className="text-sm uppercase tracking-wider text-slate-500 font-semibold mb-4">Contact</h3>
-                <div className="space-y-3 text-sm">
-                  {profile.email && (
-                    <a href={`mailto:${profile.email}`} className="flex items-start gap-3 text-slate-700 hover:text-primary">
-                      <Mail className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                      <span className="break-all">{profile.email}</span>
-                    </a>
-                  )}
-                  {dept.contactInfo.phone && (
-                    <div className="flex items-start gap-3 text-slate-700">
-                      <Phone className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                      <span>{dept.contactInfo.phone}</span>
-                    </div>
-                  )}
-                  <div className="flex items-start gap-3 text-slate-700">
-                    <Building2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{dept.name}, MITS, Madanapalle</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Research links */}
             {researchLinks.length > 0 && (
               <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">

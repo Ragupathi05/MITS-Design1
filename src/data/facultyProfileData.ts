@@ -10,6 +10,7 @@ export interface FacultyProfile {
   designation: string;
   image?: string;
   email?: string;
+  officeAddress?: string;
   sections: FacultySection[];
 }
 
@@ -17,8 +18,9 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
   aiml: {
     "Dr. S. Padma": {
       name: "Dr. S. Padma",
-      designation: "Assoc. Professor & HOD",
+      designation: "Assoc. Professor",
       email: "drpadmas@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg",
       sections: [
         {
@@ -47,7 +49,49 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "5", "Details of Research Publication": "A Synergistic Machine Learning – Metaheuristic Approach for Smart Grid Load Dispatch at ICSCSS 2025", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "5", "Details of Research Publication": "A Synergistic Machine Learning – Metaheuristic Approach for Smart Grid Load Dispatch at ICSCSS 2025", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Feature extraction and feature selection in medical images, Editor(s): Bikesh Kumar Singh, G.R. Sinha, Intelligent Computing Techniques in Biomedical Imaging, Academic Press, 2025, Pages 83-97, ISBN 9780443159992, https://doi.org/10.1016/B978-0-443-15999-2.00008-6.", Indexing: "Scopus", Publication: "Book chapter", "Journal Quartile": "None" },
+            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Leveraging EfficientNetB3 in a Deep Learning Framework for High-Accuracy MRI Tumor Classification", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "5", "Details of Research Publication": "Brain Tumour Detection and Multi‐Classification Using Advanced Deep Learning Techniques, Vol 20 No 3 (2024), pp 2077-2088", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Classification of Mental Health and Emotion of Human from Text using Machine Learning Approaches", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Predictive Modeling of Academic Success using Extreme Learning Machine, ICCICCT 2024", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "A Review on Smart Agriculture System, ICCICCT 2024", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Network Intrusion Detection using Gradient Boosting Algorithm", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Effective Water Quality Prediction using Random Forest Algorithm", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "10", "Publication Affiliation": "MITS", "Academic Year": "2022", "Author Position": "2", "Details of Research Publication": "Regression based Machine Learning Model to Predict IPL Score after PowerPlay", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "11", "Publication Affiliation": "MITS", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Analyzing How E-Learning and Virtual Reality could be Integrated to Enhance Studies, ECS Transactions, 107 (1) 13163-13173 (2022)", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "12", "Publication Affiliation": "MITS", "Academic Year": "2021", "Author Position": "1", "Details of Research Publication": "Eye Disease Detection from Retinal Fundus Image Using CNN In Bajaj, V., Sinha, G.R., & Chakraborty, C. (eds) Biomedical Signal Processing for Healthcare Applications (1st ed.). CRC Press. https://doi.org/10.1201/9781003147817", Indexing: "Scopus", Publication: "Book chapter", "Journal Quartile": "None" },
+            { "S.No": "13", "Publication Affiliation": "MITS", "Academic Year": "2021", "Author Position": "1", "Details of Research Publication": "Imparting OBE to the Younger Generation. Assessment Tools for Mapping Learning Outcomes With Learning Objectives, edited by G. R. Sinha, IGI Global, 2021, pp. 27-41. https://doi.org/10.4018/978-1-7998-4784-7.ch003", Indexing: "Scopus", Publication: "Book chapter", "Journal Quartile": "None" },
+            { "S.No": "14", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Combined Fuzzy and Projection based Learning in META-Cognitive Neural Network for MAMMOGRAM classification, Journal of Computing and Intelligent Systems , Vol. 4, Issue 1, 93 – 98", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "15", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Breast Cancer Detection and Classification using Fuzzy and Projection Based Learning in Meta-cognitive Extreme Learning Machine, Compliance Engineering Journal, Vol. 11, Issue 1, 2020, 265 – 279", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "16", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "2", "Details of Research Publication": "Current Status of Research on Myanmar Currency Recognition at the First International Conference on Computational Science and Intelligence, 2020", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "17", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Improved Classification Performance in Imbalanced Dataset Using Projection Based Learning Algorithm with Radial Basis Function at 107th Indian Science Congress, 2020", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "18", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Design of Classifiers. In: Sinha, G. (eds) Advances in Biometrics. Springer, Cham. https://doi.org/10.1007/978-3-030-30436-2_6", Indexing: "Scopus", Publication: "Book chapter", "Journal Quartile": "None" },
+            { "S.No": "19", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "1", "Details of Research Publication": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network, International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11, 2018", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "20", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "1", "Details of Research Publication": "Projection Based Learning with Radial Basis Function Neural Network for Improved Classification Performance, Shanlax International Journal of Arts, Science and Humanities, Special Issue 2, Oct 2017, Vol. 5, pp. 407–413", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "21", "Publication Affiliation": "Others", "Academic Year": "2017", "Author Position": "1", "Details of Research Publication": "Improved Radial Basis Functions using Projection Based Learning Algorithm for Classification Problems, Journal of Computing and Intelligent Systems, Volume 01, Issue 01, May-2017", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "22", "Publication Affiliation": "Others", "Academic Year": "2015", "Author Position": "1", "Details of Research Publication": "A Survey on study of various machine learning methods for classification, International Journal of Database Theory and Application Vol 8. No 5 (2015)", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "23", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "1", "Details of Research Publication": "A Comparative Study on Different Meta-Cognitive Learning for Classification Problems, Journal of NanoScience and NanoTechnology - Spring Edition Vol 2, No 1 (2014)", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "None" },
+            { "S.No": "24", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "1", "Details of Research Publication": "Classification of Escherichia Coli Bacteria using Meta-Cognitive Neural Network, International Journal of Computer Science & Engineering Technology (IJCSET) Vol. 5 No. 02 Feb 2014", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "25", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "1", "Details of Research Publication": "Classification of Real Value and Complex Value Data using Machine Learning Concepts, International Journal of Computer Science and Information Technologies, Vol. 5 (2), 2014", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "26", "Publication Affiliation": "Others", "Academic Year": "2013", "Author Position": "1", "Details of Research Publication": "Novel Methods for Classification using Machine Learning Concepts held at NCR Region, Delhi, on Dec 13th and 14th 2013", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "27", "Publication Affiliation": "Others", "Academic Year": "2010", "Author Position": "1", "Details of Research Publication": "Patterns of security for voice over IP networks in the International Conference on Computing, Communication and Technology", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "28", "Publication Affiliation": "Others", "Academic Year": "2010", "Author Position": "1", "Details of Research Publication": "Parallel Intrusion detection system with multiclassifier mechanism in the International conference on System On Chip", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "29", "Publication Affiliation": "Others", "Academic Year": "2010", "Author Position": "3", "Details of Research Publication": "A Framework for Adaptive Intelligent Character Recognition Algorithm using Neural Networks in the International conference on Recent Advancement in Electrical Science", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        },
+        {
+          title: "Research Projects & Events",
+          content: [
+            { "S.No": "1", Affiliation: "MITS", "Academic Year": "2024-25", Type: "Funded Event", Role: "Coordinator", Title: "WIE Funding – Tech Queens", Amount: "17,000", Agency: "IEEE - WIE" },
+            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2023-24", Type: "Funded Event", Role: "Coordinator", Title: "Number Analytics and Data Science", Amount: "2,29,500", Agency: "Indian Academy of Sciences, Bengaluru" },
+            { "S.No": "3", Affiliation: "MITS", "Academic Year": "2021-22", Type: "Funded Event", Role: "Coordinator", Title: "Modern Computational Techniques", Amount: "22,500", Agency: "Indian Academy of Sciences, Bengaluru" },
+            { "S.No": "4", Affiliation: "MITS", "Academic Year": "2020-21", Type: "Funded Event", Role: "Coordinator", Title: "Scientific Computations", Amount: "22,500", Agency: "Indian Academy of Sciences, Bengaluru" },
+            { "S.No": "5", Affiliation: "Others", "Academic Year": "2017-18", Type: "Funded Event", Role: "Coordinator", Title: "Numerical methods and Scientific Computing", Amount: "1,28,262", Agency: "Indian Academy of Sciences, Bengaluru" },
+            { "S.No": "6", Affiliation: "Others", "Academic Year": "2016-17", Type: "Funded Event", Role: "Coordinator", Title: "Entering Life Science Research Arena through Bigdata", Amount: "50,000", Agency: "DBT" },
+            { "S.No": "7", Affiliation: "Others", "Academic Year": "2016-17", Type: "Funded Project", Role: "Coordinator", Title: "Artificial Intelligence and Computational Biology", Amount: "1,85,200", Agency: "Indian Academy of Sciences, Bengaluru" },
+            { "S.No": "8", Affiliation: "Others", "Academic Year": "2015-17", Type: "Funded Project", Role: "Coordinator", Title: "Computer Training for Rural School Students", Amount: "4,50,000", Agency: "KSR Educational and Charitable Trust" },
+            { "S.No": "9", Affiliation: "Others", "Academic Year": "2019-20", Type: "Funded Project", Role: "Coordinator", Title: "Unnat Bharat Abhiyan", Amount: "50,000", Agency: "UBA, MHRD" }
           ]
         },
         {
@@ -60,7 +104,13 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
           title: "Awards/Achievements",
           content: [
             "Received the Best Administrator Award (2017) from Dr. Kalam Educational Trust, Chennai.",
-            "Elected as CSTA India Chapter Leader (Curriculum and Professional Development) in 2024."
+            "Elected as CSTA India Chapter Leader (Curriculum and Professional Development) in 2024.",
+            "Recognized with ICT Academy Awards (2018): Best Practices Award for Engaging Students towards Social Responsibility; Best Academic Partner Excellence Award for Skill Development Initiatives.",
+            "Acted as Session Chair and Reviewer for several international conferences including ASCIS 2024, ISCAIE 2021, and ISIEA 2021.",
+            "Reviewer and Editorial Board Member for reputed international journals such as Inderscience’s Journal of Business Intelligence and Data Mining and American Journal of Data Mining and Knowledge Discovery.",
+            "Invited Teacher at the Indian Academy of Sciences Annual and Mid-Year Meetings (BHU, Varanasi 2018, IISc Bangalore 2019; SRM University AP 2022).",
+            "Serving as Mentor for the Women in Machine Learning (WiML) Mentorship Program; Senior Member IEEE – Membership No: 98329128; IEEE WIE Student Advisor – MITS Student Branch.",
+            "Life Member ISTE – Membership No : LM140721"
           ]
         }
       ]
@@ -68,7 +118,8 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
     "Dr. M. Rajeswari": {
       name: "Dr. M. Rajeswari",
       designation: "Assoc. Professor",
-      email: "rajeshwarim@mits.ac.in",
+      email: "drrajeswarim@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/rajeswari.jpg",
       sections: [
         {
@@ -95,8 +146,47 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "1", "Details of Research Publication": "Design and Validation of an Explainable Artificial Intelligence Based Decision Intelligence Model for Cyber Risk Aware Quality Systems and Ethical Human Resource Management", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
-            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "2", "Details of Research Publication": "Ontology-Enabled Digital Twin Design with AI-Based Data Management and Privacy-Preserving Mechanisms for Secure 6G Communication Systems", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "None" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "1", "Details of Research Publication": "Design and Validation of an Explainable Artificial Intelligence Based Decision Intelligence Model for Cyber Risk Aware Quality Systems and Ethical Human Resource Management: Investigating the Moderating Influence of Corporate Social Responsibility in Digitally Transformed Organizations, Quality - Access to Success, Vol.27, No.210, 2026", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2026", "Author Position": "2", "Details of Research Publication": "Ontology-Enabled Digital Twin Design with AI-Based Data Management and Privacy-Preserving Mechanisms for Secure 6G Communication Systems", Indexing: "ESCI", Publication: "Article", "Journal Quartile": "" },
+            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "AI-Enabled Neural Computing and Genetic Algorithm Optimization for Resource-Efficient Smart Environments in IoT Applications, Natural and Engineering Sciences, 10 (3), Dec 2025", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "4", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Assessing the Performance of WBAN using Reliability Analysis: UGFT-A Universal Generating Function Technique, Journal of Sensor Science and Technology", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "5", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "4", "Details of Research Publication": "Mental Health Treatment Prediction Using Machine Learning, Biomedical and Pharmacology Journal, 2025", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "6", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "Early-Stage Detection of Colorectal Cancer Using Image Classification, 4th International Conference on Sentiment Analysis and Deep Learning Icsadl 2025 Proceedingspp. 1613-1618", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "7", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Performance Analysis of AlN/GaN HEMTs on β-Ga2O3 Through Exploration of Varied Back Barriers: An Investigative Study for Advanced RF Power Applications, Journal of Electronic Materials53(7), pp. 3887-3900", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "8", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Innovative Financial Fraud Detection: Combining GCRNN and DiffPool with N-Way K-Shot Classification Techniques, 3rd International Conference on Automation Computing and Renewable Systems Icacrs 2024 Proceedingspp. 636-643", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "9", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Fetal Health Status Classification Using Machine Learning Algorithms-A Comparative Analysis, 2024 International Conference on Smart Electronics and Communication Systems Isense 2024", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "10", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "A Comprehensive Review of Recent Artificial Intelligence Techniques and IOT Applications in Dairy Farms, 10th International Conference on Advanced Computing and Communication Systems Icaccs 2024 pp. 242-247", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "11", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "AI-Based Desktop VIZ: A Voice-Activated Personal Assistant-Futuristic and Sustainable Technology, Proceedings of the 2024 10th International Conference on Communication and Signal Processing Iccsp 2024 pp. 1095-1100", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "12", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Prior Alzehmiers detection using Deep Learning, Proceedings of the 2024 10th International Conference on Communication and Signal Processing Iccsp 2024 pp. 1095-1100", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "13", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Study on a solar water heater performance under the influence of nanofluid, Energy Environment Efficiency Resources Globalization 10(2), pp. 7-18", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "14", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "6", "Details of Research Publication": "NLP-ML Hybrid: Identifying Signs of Suicidal Thoughts in Social Media Content, 2nd International Conference on Self Sustainable Artificial Intelligence Systems Icssas 2024 Proceedingspp. 1373-1379", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "15", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Comparable Works in Blockchain Technology, Blockchain Intelligent Systems Protocols Application and Approaches for Future Generation Computingpp. 34-50", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "" },
+            { "S.No": "16", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Voice-based Virtual Assistant with Security, Proceedings of the 2023 2nd International Conference on Electronics and Renewable Systems Icears 2023 pp. 822-827", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "17", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Song Recommendation based on Voice Tone Analysis, Proceedings of the 2023 2nd International Conference on Electronics and Renewable Systems Icears 2023 pp. 708-712", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "18", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Empowering Tourists with Context-Aware Recommendations using GAN, Proceedings of the 2023 2nd International Conference on Electronics and Renewable Systems Icears 2023 pp. 1444-1449", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "19", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Neural Network-based Prognostic Model for Cerebrovascular Accident using CT Scans, 2nd International Conference on Sustainable Computing and Data Communication Systems Icscds 2023 Proceedings pp. 497-502", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "20", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "2", "Details of Research Publication": "Analysis of DC and RF performance of Al0.31Ga0.69N/Al0.1Ga0.9N/ β-Ga2O3 double quantum well HEMT on silicon carbide substrate, International Journal of RF and Microwave Computer Aided Engineering 32(6)", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "21", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Utilization of deep learning technology in recognizing bird species, Aip Conference Proceedings 2463", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "22", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "1", "Details of Research Publication": "Detection of tyre defects using weighted quality-based convolutional neural network, Soft Computing 26(9), pp. 4261-4273", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "23", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Exploration of sentiment analysis and legitimate artistry for opinion mining, Multimedia Tools and Applications, 81(9), pp. 11989-12004", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "24", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Prevention of School Shooting using Neural Networks and Computer Vision, Proceedings of the 2022 3rd International Conference on Intelligent Computing Instrumentation and Control Technologies Computational Intelligence for Smart Systems Icicict 2022 pp. 1703-1709", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "25", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "2", "Details of Research Publication": "Visual Saliency Prediction Using Deep Learning, 2021 7th International Conference on Advanced Computing and Communication Systems", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "26", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "5", "Details of Research Publication": "Recent Survey on Emotion Recognition Using Physiological Signals, 2021 7th International Conference on Advanced Computing and Communication Systems Icaccs 2021 pp. 1858-1863", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "27", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "2", "Details of Research Publication": "Adaptive beam formation and channel allocation using substance near multicast protocol and CS-iEHO, Soft Computing 25(6), pp. 4663-4676", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "28", "Publication Affiliation": "Others", "Academic Year": "2021", "Author Position": "2", "Details of Research Publication": "Tyre inspection through multi-state convolutional neural networks, Intelligent Automation and Soft Computing 27(1), pp. 1-13", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "29", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Person identification with aerial imagery using SegNet based semantic segmentation, Earth Science Informatics 13(4), pp. 1293-1304", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "30", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "4", "Details of Research Publication": "Cascading Model in Underwater Wireless Sensors using Routing Policy for State Transitions, Microprocessors and Microsystems 79", Indexing: "SCIE", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "31", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Usage of energy efficient sensor nodes on wearable device for fall and child abduction detection, International Journal of Engineering and Advanced Technology 9(1), pp. 6482-6485", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "32", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "3", "Details of Research Publication": "A secure model for hiding multimedia files within two cover images, International Journal of Recent Technology and Engineering 7(5), pp. 406-409", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "33", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Dispersal of traffic alert messages without missing the reliability for environmental protection, Ekoloji 28(107), pp. 571-581", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "34", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Performability of VBRCP in VANET using UGFT, International Journal of Innovative Technology and Exploring Engineering 8(3), pp. 42-46", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "35", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "3", "Details of Research Publication": "Game theoretical approach with Audit based Misbehavior Detection system, Proceedings of the International Conference on Inventive Communication and Computational Technologies Icicct 2018 pp. 1932-1935", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "36", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "2", "Details of Research Publication": "Emerging trends in computing: Reliability design for a VANET with WUGFT subject to time and cost constraints, International Journal of Engineering and Advanced Technology 8(2), pp. 195-200", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "37", "Publication Affiliation": "Others", "Academic Year": "2016", "Author Position": "2", "Details of Research Publication": "Reliability analysis of MANET with RCFP: Reliable cluster forming protocol, International Journal of Applied Engineering Research 11(1), pp. 440-447", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "38", "Publication Affiliation": "Others", "Academic Year": "2016", "Author Position": "1", "Details of Research Publication": "Assessing the reliability of adhoc network using UGF: Probabilistic approach, Asian Journal of Information Technology 15(3), pp. 563-566", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "39", "Publication Affiliation": "Others", "Academic Year": "2014", "Author Position": "2", "Details of Research Publication": "Reliable fuzzy reputation system to enhance the performance of disseminating the information in VANET, International Journal of Engineering and Technology 6(4), pp. 1856-1866", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "40", "Publication Affiliation": "Others", "Academic Year": "2012", "Author Position": "1", "Details of Research Publication": "Performance analysis of AODV, DSR, TORA and OLSR to achieve group communication in MANET, 4th International Conference on Advanced Computing Icoac 2012", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "41", "Publication Affiliation": "Others", "Academic Year": "2010", "Author Position": "1", "Details of Research Publication": "Maximizing resource sharing by minimizing response time in ad-hoc network, Proceedings of 2010 International Conference on Communication and Computational Intelligence Incocci 2010pp. 63-67", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" }
           ]
         },
         {
@@ -108,10 +198,17 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
           ]
         },
         {
+          title: "Consultancy",
+          content: [
+            { "S.No": "1", Affiliation: "Others", "Academic Year": "2020", "Client/Organization": "Sahrdaya College of Engineering and Technology", Project: "QuerySoft: A Personalized Query Software", Amount: "70,000" }
+          ]
+        },
+        {
           title: "Awards/Achievements",
           content: [
-            "Received Best faculty award for the academic year 2010–2011 in Angel College of Engineering and Technology, Tirupur",
-            "Received Gold Coin for producing 100% results in Nandha Engineering College, Erode"
+            "Received Best faculty award for the academic year 2010 – 2011 in Angel College of Engineering and Technology, Tirupur",
+            "Received Gold Coin for producing 100% results in Nandha Engineering College, Erode",
+            "Received certificate of appreciation for producing 100% results in various subjects in Angel College of Engineering and Technology, Tirupur"
           ]
         }
       ]
@@ -119,7 +216,8 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
     "Dr. Sandhya. E": {
       name: "Dr. Sandhya. E",
       designation: "Asst. Professor",
-      email: "sandhyae@mits.ac.in",
+      email: "drsandhyae@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/Sandhya.jpeg",
       sections: [
         {
@@ -168,7 +266,8 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
     "Mr. Sanath Hegde": {
       name: "Mr. Sanath Hegde",
       designation: "Professor of Practice",
-      email: "sanathh@mits.ac.in",
+      email: "cto@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/sanath.jpg",
       sections: [
         {
@@ -188,6 +287,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
       name: "Mr. P. Udayakumar",
       designation: "Asst. Professor",
       email: "udayakumarp@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/Udayakumar.JPG",
       sections: [
         {
@@ -229,7 +329,8 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
     "Mr. B. S. H. Shayeez Ahamed": {
       name: "Mr. B. S. H. Shayeez Ahamed",
       designation: "Asst. Professor",
-      email: "ahamedbsh@mits.ac.in",
+      email: "shayeezahamedbsh@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/Ahamed.jpeg",
       sections: [
         {
@@ -272,6 +373,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
       name: "Mrs. R. Usha",
       designation: "Asst. Professor",
       email: "ushar@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/DSC_7925.JPG",
       sections: [
         {
@@ -319,6 +421,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
       name: "Mrs. N. Geethanjali",
       designation: "Asst. Professor",
       email: "geethanjalin@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/Geethanjali.jpeg",
       sections: [
         {
@@ -354,6 +457,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
       name: "Mr. V. Sivaraman",
       designation: "Asst. Professor",
       email: "sivaramanv@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/Sivaraman.jpeg",
       sections: [
         {
@@ -395,6 +499,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
       name: "Mr. Tharakeswara Raju B",
       designation: "Asst. Professor",
       email: "tharakeswararajub@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/tarak.JPG",
       sections: [
         {
@@ -424,7 +529,8 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
     "Mr. Subhas Das": {
       name: "Mr. Subhas Das",
       designation: "Asst. Professor",
-      email: "subhasd@mits.ac.in",
+      email: "Subhasdas@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/DSC_3008.JPG",
       sections: [
         {
@@ -459,6 +565,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
       name: "Mr. G. Nithin",
       designation: "Asst. Professor",
       email: "nithing@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/nithin.JPG",
       sections: [
         {
@@ -494,7 +601,8 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
     "Dr. R. Praveen Kumar": {
       name: "Dr. R. Praveen Kumar",
       designation: "Asst. Professor",
-      email: "praveenkumarr@mits.ac.in",
+      email: "drpraveenkumarr@mits.ac.in",
+      officeAddress: "NPN204",
       image: "https://mits.ac.in/public/uploads/faculty/Praveen Kumar.jpeg",
       sections: [
         {

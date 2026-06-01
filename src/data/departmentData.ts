@@ -996,15 +996,15 @@ faculty: [
       "M2: To strengthen industry partnerships and entrepreneurial ventures to develop ethical AI solutions for socio-economic and technological development."
     ],
     nbaAccredited: false,
-    hod: { name: "Dr. S. Padma", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/144" },
+    hod: { name: "Dr. S. Padma", designation: "Assoc. Professor", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/144" },
     achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
     courses: ["B.Tech in Artificial Intelligence and Machine Learning"],
     contactInfo: { email: "aimlhod@mits.ac.in", phone: "+91-9154291788; 8571-280255; 280706" },
     faculty: [
-      { name: "Mr. Sanath Hegde", designation: "Professor of Practice", qualification: "M.B.A. (IISC, Bangalore)", image: "https://www.mits.ac.in//public/uploads/faculty/sanath.jpg", profileUrl: "https://mits.ac.in/facultyprofile/884" },
+      { name: "Mr. Sanath Hegde", designation: "Professor of Practice", qualification: "M.B.A. (Indian Institute of Science, Bangalore)", image: "https://www.mits.ac.in//public/uploads/faculty/sanath.jpg", profileUrl: "https://mits.ac.in/facultyprofile/884" },
       { name: "Dr. M. Rajeswari", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University )", image: "https://mits.ac.in/public/uploads/faculty/rajeswari.jpg", profileUrl: "https://mits.ac.in/facultyprofile/744" },
-      { name: "Dr. S. Padma", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/144" },
+      { name: "Dr. S. Padma", designation: "Assoc. Professor", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/144" },
       { name: "Dr. Sandhya. E", designation: "Asst. Professor", qualification: "Ph.D. (SRMIST, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Sandhya.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/501" },
       { name: "Dr. R. Praveen Kumar", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Durgapur)", image: "https://mits.ac.in/public/uploads/faculty/Praveen Kumar.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/628" },
       { name: "Mr. P. Udayakumar", designation: "Asst. Professor", qualification: "M.E., (Ph.D.) (VIT, Vellore)", image: "https://mits.ac.in/public/uploads/faculty/Udayakumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/660" },

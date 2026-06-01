@@ -93,14 +93,14 @@ const DocCard = ({ doc, highlight }: { doc: DocLink; highlight?: boolean }) => {
         <Icon className="w-6 h-6" />
       </div>
       <div className="flex-1 min-w-0">
-        <p className="font-body font-semibold text-[#0f2a44] text-sm md:text-base leading-snug">
+        <p className="font-body font-semibold text-primary text-sm md:text-base leading-snug">
           {doc.title}
         </p>
-        <p className="font-body text-xs text-[#0f2a44]/60 mt-1 uppercase tracking-wider">
+        <p className="font-body text-xs text-primary/60 mt-1 uppercase tracking-wider">
           {isVideo ? "Video" : isLink ? "External Link" : "PDF Document"}
         </p>
       </div>
-      <Download className="w-5 h-5 text-[#0f2a44]/40 group-hover:text-[#caa74d] transition-colors shrink-0" />
+      <Download className="w-5 h-5 text-primary/40 group-hover:text-[#caa74d] transition-colors shrink-0" />
     </motion.a>
   );
 };
@@ -108,9 +108,9 @@ const DocCard = ({ doc, highlight }: { doc: DocLink; highlight?: boolean }) => {
 const SectionHeader = ({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) => (
   <div className="mb-8">
     <p className="font-body text-xs uppercase tracking-[0.2em] text-[#caa74d] font-semibold mb-2">{eyebrow}</p>
-    <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0f2a44]">{title}</h2>
+    <h2 className="font-display text-3xl md:text-4xl font-bold text-primary">{title}</h2>
     {description && (
-      <p className="font-body text-[#0f2a44]/70 mt-3 max-w-3xl leading-relaxed">{description}</p>
+      <p className="font-body text-primary/70 mt-3 max-w-3xl leading-relaxed">{description}</p>
     )}
   </div>
 );
@@ -162,7 +162,7 @@ const NAAC = () => {
             <p className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#caa74d] text-xs font-semibold uppercase tracking-[0.2em] mb-5">
               <Award className="w-3.5 h-3.5" /> NAAC Accredited · Grade {NAAC_GRADE}
             </p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight text-white">
               National Assessment and<br />
               <span className="text-[#caa74d]">Accreditation Council</span>
             </h1>
@@ -199,7 +199,7 @@ const NAAC = () => {
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-6">
               <div className="bg-white rounded-xl border border-[#0f2a44]/10 p-5 shadow-sm">
-                <p className="font-display font-bold text-[#0f2a44] text-sm uppercase tracking-wider mb-3">
+                <p className="font-display font-bold text-primary text-sm uppercase tracking-wider mb-3">
                   NAAC Portal
                 </p>
                 <nav className="space-y-1">
@@ -213,7 +213,7 @@ const NAAC = () => {
                         className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-body font-medium text-left transition-all ${
                           isActive
                             ? "bg-gradient-to-r from-[#b31317] to-[#7a0a0d] text-white shadow-md"
-                            : "text-[#0f2a44]/75 hover:bg-[#0f2a44]/5 hover:text-[#0f2a44]"
+                            : "text-primary/75 hover:bg-[#0f2a44]/5 hover:text-primary"
                         }`}
                       >
                         <Icon className="w-4 h-4 shrink-0" />
@@ -238,7 +238,7 @@ const NAAC = () => {
               onClick={() => setMobileNavOpen((v) => !v)}
               className="w-full flex items-center justify-between px-4 py-3 bg-white border border-[#0f2a44]/10 rounded-xl shadow-sm"
             >
-              <span className="flex items-center gap-2 font-body font-semibold text-[#0f2a44]">
+              <span className="flex items-center gap-2 font-body font-semibold text-primary">
                 <Menu className="w-4 h-4" />
                 {sections.find((s) => s.key === active)?.label}
               </span>
@@ -265,7 +265,7 @@ const NAAC = () => {
                           className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-xs font-body font-medium text-left ${
                             active === s.key
                               ? "bg-[#b31317] text-white"
-                              : "text-[#0f2a44]/75 hover:bg-[#0f2a44]/5"
+                              : "text-primary/75 hover:bg-[#0f2a44]/5"
                           }`}
                         >
                           <Icon className="w-3.5 h-3.5 shrink-0" />
@@ -297,7 +297,7 @@ const NAAC = () => {
                       description="Madanapalle Institute of Technology & Science (MITS), established in 1998, has been conferred the status of a Deemed to be University by the Government of India under Section 3 of the UGC Act, 1956 (Notification dated 15th July 2025)."
                     />
                     <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-6 md:p-10 shadow-sm">
-                      <div className="prose max-w-none font-body text-[#0f2a44]/85 leading-relaxed space-y-4">
+                      <div className="prose max-w-none font-body text-primary/85 leading-relaxed space-y-4">
                         <p>
                           MITS is accredited by the <strong>National Assessment and Accreditation Council (NAAC)</strong>,
                           a hallmark of quality across teaching-learning, research, infrastructure, governance and student
@@ -325,14 +325,14 @@ const NAAC = () => {
                             className="flex items-start gap-2 p-3 rounded-lg bg-[#faf7f2] border border-[#caa74d]/20"
                           >
                             <Sparkles className="w-4 h-4 text-[#caa74d] mt-0.5 shrink-0" />
-                            <span className="font-body text-sm text-[#0f2a44]/85">{t}</span>
+                            <span className="font-body text-sm text-primary/85">{t}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
                     <div className="mt-8">
-                      <h3 className="font-display text-xl font-bold text-[#0f2a44] mb-4">Quick Access</h3>
+                      <h3 className="font-display text-xl font-bold text-primary mb-4">Quick Access</h3>
                       <DocGrid docs={accreditationCore} />
                     </div>
                   </section>
@@ -355,11 +355,11 @@ const NAAC = () => {
                           className="relative overflow-hidden rounded-2xl bg-white border border-[#0f2a44]/10 p-6 shadow-sm"
                         >
                           <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-[#caa74d]/30 to-transparent" />
-                          <p className="font-body text-xs uppercase tracking-[0.18em] text-[#0f2a44]/60">
+                          <p className="font-body text-xs uppercase tracking-[0.18em] text-primary/60">
                             {h.label}
                           </p>
                           <p className="font-display text-4xl font-bold text-[#b31317] mt-2">{h.value}</p>
-                          <p className="font-body text-sm text-[#0f2a44]/70 mt-2">{h.note}</p>
+                          <p className="font-body text-sm text-primary/70 mt-2">{h.note}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -440,10 +440,10 @@ const NAAC = () => {
                               <p className="font-body text-xs uppercase tracking-wider text-[#caa74d] font-semibold mb-1">
                                 Criterion {c.number}
                               </p>
-                              <h3 className="font-display text-lg font-bold text-[#0f2a44] leading-snug">
+                              <h3 className="font-display text-lg font-bold text-primary leading-snug">
                                 {c.title}
                               </h3>
-                              <p className="font-body text-sm text-[#0f2a44]/70 mt-2 leading-relaxed">
+                              <p className="font-body text-sm text-primary/70 mt-2 leading-relaxed">
                                 {c.description}
                               </p>
                               <span className="inline-flex items-center gap-1.5 text-[#b31317] font-body text-sm font-semibold mt-3 group-hover:gap-2.5 transition-all">
@@ -515,26 +515,26 @@ const NAAC = () => {
                   <section>
                     <SectionHeader eyebrow="Contact" title="IQAC Coordinator" />
                     <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-6 md:p-8 shadow-sm">
-                      <p className="font-display text-xl font-bold text-[#0f2a44]">{coordinator.office}</p>
-                      <p className="font-body text-[#0f2a44]/70 mt-1">{coordinator.institute}</p>
+                      <p className="font-display text-xl font-bold text-primary">{coordinator.office}</p>
+                      <p className="font-body text-primary/70 mt-1">{coordinator.institute}</p>
                       <div className="grid md:grid-cols-3 gap-4 mt-6">
                         <div className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2]">
                           <MapPin className="w-5 h-5 text-[#b31317] shrink-0 mt-0.5" />
-                          <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.address}</p>
+                          <p className="font-body text-sm text-primary/85">{coordinator.address}</p>
                         </div>
                         <a
                           href={`mailto:${coordinator.email}`}
                           className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2] hover:bg-[#caa74d]/10 transition-colors"
                         >
                           <Mail className="w-5 h-5 text-[#b31317] shrink-0 mt-0.5" />
-                          <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.email}</p>
+                          <p className="font-body text-sm text-primary/85">{coordinator.email}</p>
                         </a>
                         <a
                           href={`tel:${coordinator.phone}`}
                           className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2] hover:bg-[#caa74d]/10 transition-colors"
                         >
                           <Phone className="w-5 h-5 text-[#b31317] shrink-0 mt-0.5" />
-                          <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.phone}</p>
+                          <p className="font-body text-sm text-primary/85">{coordinator.phone}</p>
                         </a>
                       </div>
                     </div>
