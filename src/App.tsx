@@ -38,6 +38,8 @@ const Organogram = lazy(() => import("./pages/about/Organogram"));
 const MandatoryDisclosures = lazy(() => import("./pages/about/MandatoryDisclosures"));
 const NIRF = lazy(() => import("./pages/NIRF"));
 const NAAC = lazy(() => import("./pages/NAAC"));
+const AffiliationsAccreditations = lazy(() => import("./pages/AffiliationsAccreditations"));
+const PublicSelfDisclosures = lazy(() => import("./pages/PublicSelfDisclosures"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -96,6 +98,9 @@ const App = () => (
             <Route path="/examinations" element={<Examinations />} />
             <Route path="/nirf" element={<NIRF />} />
             <Route path="/naac" element={<NAAC />} />
+            <Route path="/affiliations-accreditations" element={<AffiliationsAccreditations />} />
+            <Route path="/psd" element={<PublicSelfDisclosures />} />
+            <Route path="/public-self-disclosures" element={<PublicSelfDisclosures />} />
             <Route path="/academic-calendar" element={<AcademicCalendar />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/news-events" element={<NewsEvents />} />
