@@ -316,7 +316,4 @@ const PublicSelfDisclosures = () => {
   );
 };
 
-// BadgeCheck import shim (avoid extra lucide import line above)
-import { BadgeCheck as BadgeCheckIcon } from "lucide-react";
-
 export default PublicSelfDisclosures;
