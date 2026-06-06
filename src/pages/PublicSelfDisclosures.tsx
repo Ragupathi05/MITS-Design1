@@ -15,9 +15,9 @@ import {
   Microscope,
   Users,
   BookOpen,
-  Building2,
   Image as ImageIcon,
   Phone,
+  BadgeCheck as BadgeCheckIcon,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
