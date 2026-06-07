@@ -1015,7 +1015,7 @@ faculty: [
       { name: "Mr. Tharakeswara Raju B", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (IIT, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/tarak.JPG", profileUrl: "https://mits.ac.in/facultyprofile/684" },
       { name: "Mr. Subhas Das", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (IIIT, Nagpur)", image: "https://mits.ac.in/public/uploads/faculty/DSC_3008.JPG", profileUrl: "https://mits.ac.in/facultyprofile/737" },
       { name: "Mr. G. Nithin", designation: "Asst. Professor", qualification: "MS", image: "https://mits.ac.in/public/uploads/faculty/nithin.JPG", profileUrl: "https://mits.ac.in/facultyprofile/685" },
-      { name: "Mrs. D. Bhargavajyothi", designation: "Asst. Professor", qualification: "M.Tech", image: "https://mits.ac.in/public/uploads/faculty/93a2746129b622603a30e4d045391b32.jpg", profileUrl: "https://mits.ac.in/facultyprofile/686" },
+      
     ],
     detailedAchievements: [
       { title: "Achievements Tab Status", description: "Official AIML achievements section currently marked to be updated shortly.", type: "faculty" },

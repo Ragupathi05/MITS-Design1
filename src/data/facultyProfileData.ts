@@ -244,7 +244,20 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Enhancing security and efficiency in Mobile Ad Hoc Networks using a hybrid deep learning model for flooding attack detection", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Enhancing security and efficiency in Mobile Ad Hoc Networks using a hybrid deep learning model for flooding attack detection, Scientific Reports, Volume 15, Issue 1, 2025", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "AI-Driven Threat Detection in Cloud Environments, Convergence of Cyber security and Cloud Computing, Pages 261-284, Publisher IGI Global Scientific Publishing, 2025", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Cutting-Edge approaches to data protection and encryption in cloud computing security, Convergence of Cybersecurity and Cloud Computing, Pages 261-284, IGI Global Scientific Publishing", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "A comprehensive review of computerized respiratory sound analysis and deep learning techniques for acoustic signal-based disease classification, AIP Conference Proceedings, Volume 3237, Issue 1, 2025, Publisher AIP Publishing LLC", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Visual data analysis and inference through dimensionality reduction techniques, Interactive and Dynamic Dashboard Pages 21-68, 2024, Publisher CRC Press", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "4", "Details of Research Publication": "Performance Analysis of ML and DL Models: Impact of Linear and Non-Linear Optimizers on Model Efficiency, Advances in Nonlinear Variational Inequalities, Volume 28, Issue 1s, 2024", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q4" },
+            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "2", "Details of Research Publication": "Deep learning model for intrusion detection in SDN networks, 1st International Conference on Optimization Techniques for Learning (ICOTL), Pages 1-6, Publisher IEEE, 2023", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "4", "Details of Research Publication": "Intrusion Detection using HRO with Ensemble Learning Models and Comparison, 1st International Conference on Optimization Techniques for Learning (ICOTL), Pages 1-6, Publisher IEEE, 2023", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "2", "Details of Research Publication": "Intrusion Detection System for IoT Networks, 1st International Conference on Optimization Techniques for Learning (ICOTL), Pages 1-6, Publisher IEEE, 2023", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "10", "Publication Affiliation": "Others", "Academic Year": "2022-23", "Author Position": "3", "Details of Research Publication": "Energy Management and Network Traffic Avoidance Using GAODM and E-AODV Protocols in Mobile Ad-Hoc Network, International Journal of Computer Network and Information Security, Volume 3, 78-89, 2023", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "11", "Publication Affiliation": "Others", "Academic Year": "2022-23", "Author Position": "6", "Details of Research Publication": "Selection of Features Using Adaptive Tunicate Swarm Algorithm with Optimized Deep Learning Model for Thyroid Disease Classification, Ingenierie des Systemes d'Information, Volume 28, Issue 2, Pages 299-308, 2023", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "12", "Publication Affiliation": "Others", "Academic Year": "2022-23", "Author Position": "1", "Details of Research Publication": "A Hybrid Spider Monkey and Hierarchical Particle Swarm Optimization Approach for Intrusion Detection on Internet of Things, Sensors, MDPI, 2022", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
+            { "S.No": "13", "Publication Affiliation": "Others", "Academic Year": "2021-22", "Author Position": "1", "Details of Research Publication": "Enhancing the Performance of an Intrusion Detection System Using Spider Monkey Optimization in IoT, International Journal of Intelligent Engineering and Systems, Volume 14, Issue 6, 2021", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q3" },
+            { "S.No": "14", "Publication Affiliation": "Others", "Academic Year": "2017-18", "Author Position": "3", "Details of Research Publication": "Health Monitoring System using Integration of Cloud and Data Mining Techniques, Helix International Journal (Thomson Reuters), Vol. 7(5), pg. no 2047-2052, 2017", Indexing: "WoS", Publication: "Article", "Journal Quartile": "None" }
           ]
         },
         {
@@ -314,14 +327,11 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Connectome graph attention network (CGAT): A multimodal approach for enhanced classification of Alzheimer's disease", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" }
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "2024 - Raman Research Award, Vellore Institute of Technology, Vellore, India",
-            "2025 - Raman Research Award, Vellore Institute of Technology, Vellore, India"
+            { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Connectome graph attention network (CGAT): A multimodal approach for enhanced classification of Alzheimer's disease", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q1" },
+            { "S.No": "2", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Connectome-based schizophrenia prediction using structural connectivity - Deep Graph Neural Network (sc-DGNN)", Indexing: "SCI", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Integrating Deep Learning in Brain Connectome Mapping: Insights from a Systematic Review", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "" },
+            { "S.No": "4", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "fMRI Data to Connectivity Matrices: Building Functional Connectomes for Deep Learning Models", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "5", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Diffusion MRI preprocessing for Deep Learning Analysis of Brain Structural Connectivity", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" }
           ]
         }
       ]
@@ -357,14 +367,37 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Integrating DCCS-Net for High-Fidelity Watermarking and Tampering Detection in Brain Scan Images", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Integrating DCCS-Net for High-Fidelity Watermarking and Tampering Detection in Brain Scan Images", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Enhanced Brain Tumor MRI Scan Reconstruction via the EI-Fusion-Net Model", Indexing: "Scopus", Publication: "Article", "Journal Quartile": "Q2" },
+            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2023", "Author Position": "3", "Details of Research Publication": "Multi Objective Evaluator Model Development for Analyze the Customer Behavior", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2022", "Author Position": "1", "Details of Research Publication": "A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
           ]
         },
         {
           title: "Awards/Achievements",
           content: [
-            "Best Paper Award for title Evaluation Ensembles of Machine Learning Models for the Prediction of Smart Phone Addiction",
-            "Best Paper Award for title Diabetes Prediction using Supervised and Unsupervised Learning"
+            "Acted as Reviewer for Two Day National Conference on Recent Advancements in Computing, Communication & Societal Applications (NASA’ 23).",
+            "Acted as Reviewer for Two Day IEEE International Conference on Optimization Techniques for Learning (ICOTL’ 23).",
+            "Best Paper Award for the title Evaluation Ensembles of Machine Learning Models for the Prediction of Smart Phone Addiction.",
+            "Best Paper Award for the title Diabetes Prediction using Supervised and Unsupervised Learning.",
+            "Recognized as NPTEL Discipline Star.",
+            "Recognized as NPTEL Motivated Learner.",
+            "Received Feedback Appreciation for the Academic Year 2023-24.",
+            "Received Feedback Appreciation for the Academic Year 2024-25.",
+            "Received Appreciation as mentor for the NPTEL Online Certification Course Privacy and Security in online social media.",
+            "Received Appreciation as mentor for the NPTEL Online Certification Course Understanding Incubation and Entrepreneurship.",
+            "Received Appreciation for acting as Co-Convener for ASHV – 2K25.",
+            "Organized a MoU Exchange between Dept. of CSE – AI & ML and Xenovex Technologies on 8th November 2024.",
+            "Organized a MoU Exchange between Dept. of CSE – AI & ML and Techno hub Software Solutions on 21st November 2024.",
+            "Organized an Expert Talk on Software Life Cycle on 21st November 2024.",
+            "Organized a 5 Days Skill Development Program on Python Programming from 25th November to 29th November 2024.",
+            "Organized a MoU Exchange between Dept. of CSE – AI & ML and Menmozhi Technologies on 2nd December 2024.",
+            "Organized a Hands-on session on GenAI Tools and App Development on 2nd December 2024.",
+            "Organized a 3 Day Hands-on Workshop on Web and Mobile App Development: From Basics to Deployment from 27th January to 29th January 2025.",
+            "Organized a Workshop on AI & ML Product Development Bootcamp: From Idea to Deployment.",
+            "Organized a Faculty Development Program on Microsoft Azure AI Engineer Associate from 07th to 11th April 2025.",
+            "Organized a National Level Technical Symposium AIMEX 2k25 on 23rd April 2025.",
+            "Organized a Two-Day Career Guidance Programme Engineering Elevates and Enlightens on 9th and 10th September 2025."
           ]
         }
       ]
@@ -398,21 +431,41 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Early Detection of Student Depression Using Deep Learning Algorithms", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Deep Learning-Based Hybrid Segmentation and Decision-Support Model for Tomato Leaf Disease Classification and Treatment Guidance, 2026 IEEE International Conference on Emerging Computing and Intelligent Technologies (ICoECIT)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "4", "Details of Research Publication": "Enhanced Rainfall Prediction Using Conv1D and Temporal Fusion Transformers for Precision Forecasting, 2026 IEEE International Conference on Emerging Computing and Intelligent Technologies (ICoECIT)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "3", "Details of Research Publication": "Balancing Pesticides Production and Environmental Agricultural Farming, 2025 9th International Conference on Electronics, Communication and Aerospace Technology (ICECA)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Deep Learning-Based Depression Detection: Insights from Twitter data through Hashtag Text Analysis, 2026 IEEE International Conference on Emerging Computing and Intelligent Technologies (ICoECIT)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Early Detection of Student Depression Using Deep Learning Algorithms, 2025 Second International Conference on Networks and Soft Computing (ICNSoC)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "2", "Details of Research Publication": "A Machine-Learning (ML)-Based Conventional Charge Management System Guiding Electric Cars (EVs) To Charging Stations, 22nd International Conference on New Frontiers in Communication, Automation, Management and Security (ICCAMS)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Automated Detection of Tomato Leaf Diseases: A Comprehensive Review and Framework Development Using Machine Learning Techniques", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "FungiDetect-Ensemble: A Novel Model for the Comprehensive Detection of Diseases in Tomato Leaves", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "2", "Details of Research Publication": "Hybrid AI Framework for Detecting Deep-Fake Tweets on social media", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "10", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "2", "Details of Research Publication": "Integrating Data into Machine Learning Models for Better Bankruptcy Prediction", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "11", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "1", "Details of Research Publication": "Automated Early Detection of Oral Cancer using CNN based Multimodal Analysis", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "12", "Publication Affiliation": "MITS", "Academic Year": "2025-26", "Author Position": "4", "Details of Research Publication": "A Hybrid Transfer Learning Model for Predicting Chronic Kidney Disease Using DenseNet121 and InceptionV3", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "13", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Deep Learning Driven - Pest Classification and Sustainable Agriculture, 2025 International Conference on Electronics and Renewable Systems (ICEARS)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "14", "Publication Affiliation": "MITS", "Academic Year": "2024-25", "Author Position": "2", "Details of Research Publication": "Factors Influencing Customers' Inclination to buy Green Products: An Indian Perspective", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "" },
+            { "S.No": "15", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "1", "Details of Research Publication": "Integrating the Bigdata and Deep Learning Analysis Human Movement to Improve the Sports, 2023 International Conference on New Frontiers in Communication, Automation Management and Security (ICCAMS)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "16", "Publication Affiliation": "MITS", "Academic Year": "2023-24", "Author Position": "1", "Details of Research Publication": "Development of CNN Model to Avoid the Food Spoiling Level in 2023 3rd International Conference on Advancement in Electronics & Communication Engineering (AECE)", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" },
+            { "S.No": "17", "Publication Affiliation": "MITS", "Academic Year": "2022-23", "Author Position": "2", "Details of Research Publication": "A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores, IEEE MysuruCon 2022", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "" }
           ]
         },
         {
           title: "Patents",
           content: [
             { "S.No": "1", Affiliation: "MITS", "Academic Year": "2025-2026", "Application ID": "482761-001", "Title of the Patent": "IoT Based Robot for Library Management", Status: "Filed" },
-            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2025-2026", "Application ID": "473973-001", "Title of the Patent": "IoT -Enabled interactive Device for Emotion – Aware Personalized Learning Recommendations", Status: "Published" }
+            { "S.No": "2", Affiliation: "MITS", "Academic Year": "2025-2026", "Application ID": "473973-001", "Title of the Patent": "IoT -Enabled interactive Device for Emotion – Aware Personalized Learning Recommendations", Status: "Published" },
+            { "S.No": "3", Affiliation: "MITS", "Academic Year": "2025-2026", "Application ID": "202541092300", "Title of the Patent": "DEEP LEARNING-DRIVEN DIAGNOSTIC TOOL FOR AUTOMATED DETECTION OF PULMONARY DISEASES FROM X-RAYS", Status: "Published" },
+            { "S.No": "4", Affiliation: "MITS", "Academic Year": "2024-2025", "Application ID": "20254100293", "Title of the Patent": "Detection and Classification of Skin Cancer using Back Propagated Artificial Neural Networks", Status: "Published" }
           ]
         },
         {
           title: "Awards/Achievements",
           content: [
-            "Best Paper Award for title Deep Learning-Based Emotion Recognition System with Depression Detection Capability",
-            "Best Paper Award for title Evaluating Ensemble Machine Learning Approaches for Accurate Flight Pricing Predictions"
+            "Best Paper Award for the title Deep Learning-Based Emotion Recognition System with Depression Detection Capability.",
+            "Best Paper Award for the title Evaluating Ensemble Machine Learning Approaches for Accurate Flight Pricing Predictions.",
+            "Recognized as NPTEL Discipline Star July - Dec 2025.",
+            "Recognized as NPTEL Discipline Star July - Dec 2023."
           ]
         }
       ]
@@ -442,6 +495,12 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
             { Identifier: "Scopus", Link: "https://www.scopus.com/authid/detail.uri?authorId=58798743500" },
             { Identifier: "Google scholar", Link: "https://scholar.google.co.uk/citations?hl=en&pli=1&user=Ao-lmqAAAAAJ" },
             { Identifier: "h-Index (As per Scopus Data)", Link: "1" }
+          ]
+        },
+        {
+          title: "Publication Details",
+          content: [
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Metaheuristics and Hybrid Evolutionary Methods for Feature Selection, International Conference on Innovations in Bio-Inspired Computing and Applications, Conference paper First Online: 04 June 2025, pp 432–442", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
           ]
         },
         {
@@ -484,13 +543,16 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         {
           title: "Publication Details",
           content: [
-            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Locating Patient Health Data Theft Using Gradient Boosting with Hybrid Microwave Transmission-Based Wearable Device", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+            { "S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Locating Patient Health Data Theft Using Gradient Boosting with Hybrid Microwave Transmission-Based Wearable Device, International Conference on Signal Processing, Computation, Electronics, Power and Telecommunication (IConSCEPT), IEEE, DOI: 10.1109/IConSCEPT61884.2024.10627827", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" },
+            { "S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "4", "Details of Research Publication": "Emerging Trends in Edge AI for Industry 4.0 and 5.0: Technologies, Applications, and Challenges, Advances in Hospitality, Tourism, and the Services Industry, IGI Global, Pages 211-228", Indexing: "Scopus", Publication: "Book Chapter", "Journal Quartile": "None" },
+            { "S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "4", "Details of Research Publication": "Accelerating Alzheimer's Research with Machine Learning Models for Improved Detection, 7th International Conference on Electronics, Communication and Aerospace Technology (ICECA), IEEE, DOI: 10.1109/ICECA58529.2023.10395855", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
           ]
         },
         {
           title: "Awards/Achievements",
           content: [
-            "Awarded for top performing mentor for NPTEL course Understanding Incubation and Entrepreneurship during Jan-Apr 2025"
+            "Awarded for top performing mentor for NPTEL course Understanding Incubation and Entrepreneurship during Jan-Apr 2025.",
+            "Certificate of appreciation in recognition role as mentor for NPTEL course German-1 during Jul-Dec 2024."
           ]
         }
       ]
@@ -583,21 +645,7 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
         }
       ]
     },
-    "Mrs. D. Bhargavajyothi": {
-      name: "Mrs. D. Bhargavajyothi",
-      designation: "Asst. Professor",
-      email: "bhargavajyothid@mits.ac.in",
-      image: "https://mits.ac.in/public/uploads/faculty/93a2746129b622603a30e4d045391b32.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            { "S.No": "1", Course: "M.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "Madanapalle Institute of Technology & Science", "Year of Passing": "2018" },
-            { "S.No": "2", Course: "B.Tech.", Specialization: "CSE", Branch: "CSE", "College Name/University": "BIT Institute of Technology & Science, JNTUA", "Year of Passing": "2015" }
-          ]
-        }
-      ]
-    },
+   
     "Dr. R. Praveen Kumar": {
       name: "Dr. R. Praveen Kumar",
       designation: "Asst. Professor",
@@ -630,6 +678,24 @@ export const facultyProfiles: Record<string, Record<string, FacultyProfile>> = {
           title: "Publication Details",
           content: [
             { "S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Enhanced Unimodal Continuous Authentication Architecture on Smartphones for User Identification through Behavioral Biometrics", Indexing: "Scopus", Publication: "Conference Proceedings", "Journal Quartile": "None" }
+          ]
+        }
+      ]
+    },
+    "Dr. Ramakanta Mohanty":{
+      name: "Dr. Ramakanta Mohanty",
+      designation: "Professor",
+      email: "drramakantham@mits.ac.in",
+      officeAddress: "NPN204",
+      image: "https://mits.ac.in/public/uploads/faculty/Mohanty.JPG",
+      sections: [
+        {
+          title: "Details of Educational Qualification",
+          content: [
+            { "S.No": "1", Course: "Ph.D.", Specialization: "Computer Science and Engineering", Branch: "Computer Science and Engineering", "College Name/University": "Berhampur University", "Year of Passing": "2011" },
+            { "S.No": "2", Course: "M.Tech.", Specialization: "Software Engineering", Branch: "Software Engineering", "College Name/University": "NIT Allahabad", "Year of Passing": "2002" },
+            { "S.No": "3", Course: "M.Tech.", Specialization: "Computer Science and Engineering", Branch: "Computer Science and Engineering", "College Name/University": "JNTUH, Hyderabad", "Year of Passing": "2013" },
+            { "S.No": "4", Course: "AMIE", Specialization: "Electronics & Communication Engineering", Branch: "Electronics & Communication Engineering", "College Name/University": "Institution of Engineers (IEI) ", "Year of Passing": "1999" }
           ]
         }
       ]

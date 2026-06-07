@@ -51,7 +51,7 @@ const LeadershipProfilePage = () => {
                     {profile.tagline}
                   </p>
                 )}
-                <p className="font-display text-lg font-bold" style={{ fontFamily: "var(--font-display)" }}>
+                <p className="font-display text-lg font-bold text-white" style={{ fontFamily: "var(--font-display)" }}>
                   {profile.name}
                 </p>
                 <p className="text-sm text-white/90 mt-0.5">{profile.designation}</p>
@@ -62,16 +62,6 @@ const LeadershipProfilePage = () => {
                 {profile.qualification}
               </div>
             )}
-            <div className="p-5 border-t border-border">
-              <a
-                href={profile.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-              >
-                Official MITS profile <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
           </div>
         </motion.aside>
 

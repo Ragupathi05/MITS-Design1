@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -14,8 +14,9 @@ import {
   Landmark,
   ScrollText,
   Building2,
-  Search,
 } from "lucide-react";
+const BASE = import.meta.env.BASE_URL;
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -27,15 +28,6 @@ import {
   isoCertUrl,
   ugc2f12bUrl,
 } from "@/data/affiliationsData";
-
-const highlights = [
-  { icon: Landmark, label: "UGC Recognition", note: "Deemed to be University" },
-  { icon: ScrollText, label: "AICTE Approved", note: "Since 1998" },
-  { icon: Award, label: "NAAC Accredited", note: "Grade A+" },
-  { icon: BadgeCheck, label: "NBA Accredited", note: "UG & PG Programmes" },
-  { icon: Microscope, label: "Research Centre", note: "Recognised by DSIR" },
-  { icon: Shield, label: "ISO 21001:2018", note: "Quality Management" },
-];
 
 type SectionKey =
   | "ugc"
@@ -83,9 +75,9 @@ const PdfLink = ({ title, url, highlight = false }: { title: string; url: string
 
 const AffiliationsAccreditations = () => {
   const [open, setOpen] = useState<Record<SectionKey, boolean>>({
-    ugc: true,
+    ugc: false,
     aiu: false,
-    aicte: true,
+    aicte: false,
     naac: false,
     nba: false,
     research: false,
@@ -93,21 +85,9 @@ const AffiliationsAccreditations = () => {
     dsir: false,
     iso: false,
   });
-  const [q, setQ] = useState("");
 
-  const filteredAicte = useMemo(
-    () => aicteApprovals.filter((a) => a.year.toLowerCase().includes(q.toLowerCase())),
-    [q]
-  );
-  const filteredNba = useMemo(
-    () =>
-      nbaAccreditations.filter(
-        (n) =>
-          n.programme.toLowerCase().includes(q.toLowerCase()) ||
-          n.period.toLowerCase().includes(q.toLowerCase())
-      ),
-    [q]
-  );
+  const filteredAicte = aicteApprovals;
+  const filteredNba = nbaAccreditations;
 
   const toggle = (k: SectionKey) => setOpen((o) => ({ ...o, [k]: !o[k] }));
 
@@ -116,72 +96,36 @@ const AffiliationsAccreditations = () => {
       <Header />
 
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-[#0f2a44] via-[#11355a] to-[#0f2a44] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, #caa74d 0, transparent 40%), radial-gradient(circle at 80% 80%, #b31317 0, transparent 45%)" }} />
-        <div className="container mx-auto px-4 py-20 md:py-28 relative">
-          <nav className="flex items-center gap-2 text-xs md:text-sm text-white/70 mb-6">
-            <Link to="/" className="hover:text-[#caa74d]">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span>Academic & Compliance</span>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#caa74d]">Affiliations & Accreditations</span>
-          </nav>
-          <p className="text-[#caa74d] uppercase tracking-[0.3em] text-xs font-semibold mb-4">Institutional Recognition</p>
-          <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
-            Affiliations & Accreditations
+      <section
+        className="relative pt-32 md:pt-40 pb-20 overflow-hidden"
+        style={{
+          backgroundImage: `url(${BASE}Hero-Section/image%205.JPG)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <p className="text-gradient-gold font-semibold tracking-widest uppercase text-sm mb-3">Institutional Recognition</p>
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-gradient-gold mb-4">
+            Affiliations &amp; Accreditations
           </h1>
-          <p className="font-body text-white/80 text-base md:text-lg mt-5 max-w-3xl leading-relaxed">
-            Institutional Recognition, Academic Quality Assurance, National & International Accreditations of
-            Madanapalle Institute of Technology & Science.
+          <p className="text-white/80 text-lg max-w-3xl mx-auto">
+            Institutional Recognition, Academic Quality Assurance, National &amp; International
+            Accreditations of Madanapalle Institute of Technology &amp; Science.
           </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mt-10">
-            {highlights.map((h) => (
-              <motion.div
-                key={h.label}
-                whileHover={{ y: -3 }}
-                className="rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 p-4 md:p-5"
-              >
-                <h.icon className="w-6 h-6 text-[#caa74d] mb-2" />
-                <p className="font-display font-bold text-white text-sm md:text-base leading-tight">{h.label}</p>
-                <p className="font-body text-white/60 text-[11px] md:text-xs mt-1">{h.note}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
-      </section>
 
-      {/* QUICK NAV */}
-      <section className="sticky top-[64px] z-30 bg-white border-b border-[#0f2a44]/10 shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex gap-2 overflow-x-auto py-3 no-scrollbar">
-            {sections.map((s) => (
-              <button
-                key={s.key}
-                onClick={() => {
-                  setOpen((o) => ({ ...o, [s.key]: true }));
-                  document.getElementById(`sec-${s.key}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-                className="shrink-0 inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-[#0f2a44]/10 bg-white hover:border-[#caa74d] hover:bg-[#fff8e6] text-xs md:text-sm font-body text-[#0f2a44] transition-colors"
-              >
-                <s.icon className="w-3.5 h-3.5 text-[#b31317]" />
-                {s.title.replace(/Accredited by |Approved by |Recognised |Recognized /g, "")}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SEARCH */}
-      <section className="container mx-auto px-4 pt-8">
-        <div className="relative max-w-xl">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#0f2a44]/50" />
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="Search AICTE years or NBA programmes…"
-            className="w-full pl-9 pr-4 py-3 rounded-xl border border-[#0f2a44]/15 bg-white text-sm focus:outline-none focus:border-[#caa74d] focus:ring-2 focus:ring-[#caa74d]/20"
-          />
+        <div className="absolute bottom-4 left-6 z-10">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex items-center gap-1.5 text-sm text-white/80">
+              <li><Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
+              <li className="text-white/50">›</li>
+              <li className="text-white font-semibold">Academic &amp; Compliance</li>
+              <li className="text-white/50">›</li>
+              <li className="text-gradient-gold font-semibold">Affiliations &amp; Accreditations</li>
+            </ol>
+          </nav>
         </div>
       </section>
 
@@ -192,9 +136,9 @@ const AffiliationsAccreditations = () => {
           return (
             <ScrollReveal key={s.key}>
               <section
-                id={`sec-${s.key}`}
-                className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm overflow-hidden scroll-mt-32"
-              >
+                  id={`sec-${s.key}`}
+                  className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm overflow-hidden scroll-mt-44"
+                >
                 <button
                   onClick={() => toggle(s.key)}
                   className="w-full flex items-center justify-between gap-4 px-5 md:px-7 py-5 text-left hover:bg-[#fff8e6]/40 transition-colors"

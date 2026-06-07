@@ -104,6 +104,31 @@ export const leadershipProfiles: Record<string, LeadershipProfile> = {
     ],
     sourceUrl: "https://mits.ac.in/controller-of-examinations",
   },
+  principal: {
+    slug: "principal",
+    name: "Dr. P. Ramanathan",
+    designation: "Principal",
+    qualification: "B.E., M.E., Ph.D.",
+    image: "https://mits.ac.in/images/ramanathan.jpg",
+    bio: [
+      "Dr. P. Ramanathan is an eminent academician known for his distinguished record of academic leadership and scholarly excellence. He completed his Ph.D. in Information and Communication Engineering from Anna University in 2010. He completed his M.E. in VLSI Design from PSG College of Technology in 2006 and B.E. in Electronics and Instrumentation Engineering in 1997.",
+      "He has distinguished teaching experience of over 25 years with expertise in VLSI Design and Embedded Systems. His profound commitment to excellence in teaching and research is reflected in 27 research articles published in reputed National / International Journals and research papers presented in various National and International Conferences. He has acted as Joint Supervisor for research scholars.",
+      "He has completed nearly 20 Swayam NPTEL Courses and has secured NPTEL Domain Scholar Certification in Computer Science and Engineering (Data Science) and Computer Science and Engineering (Systems).",
+      "He has worked as Assistant Professor at PSG College of Technology for a period of ten years and later at Manipal University, Dubai Campus. He has been working in Madanapalle Institute of Technology & Science since November 2017. He has served as Vice Principal (Academics) and IQAC Coordinator at MITS Madanapalle. He is currently the Principal of Madanapalle Institute of Technology & Science, Madanapalle, Andhra Pradesh.",
+    ],
+    highlights: [
+      "Excellence in Leadership Award — Inspire Softech Solutions, Chennai (2024)",
+      "27 research articles in reputed National / International Journals",
+      "NPTEL Domain Scholar — CSE (Data Science) & CSE (Systems)",
+      "Nearly 20 Swayam NPTEL Courses completed",
+      "Life Member of ISTE and IEI; Fellow of IETE",
+      "Over 25 years of teaching experience in VLSI Design & Embedded Systems",
+    ],
+    documents: [
+      { label: "Email: principal@mits.ac.in", url: "mailto:principal@mits.ac.in" },
+    ],
+    sourceUrl: "https://mits.ac.in/principal",
+  },
   ombudsperson: {
     slug: "ombudsperson",
     name: "Prof. Konanki Dasaratha Ramaiah",

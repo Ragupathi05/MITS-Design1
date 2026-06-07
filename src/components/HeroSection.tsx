@@ -49,7 +49,7 @@ const slides: Slide[] = [
     tagline: "",
     buttons: [
       { label: "Apply Now", href: "https://admission.mits.ac.in/", style: "primary", external: true },
-      { label: "Prospectus", href: "#admissions", style: "outline" },
+      { label: "Brochure", href: "https://mits.ac.in/public/uploads/static-pdf/College%20Brochure-2026.pdf", style: "outline", external: true },
     ],
     align: "right",
   },

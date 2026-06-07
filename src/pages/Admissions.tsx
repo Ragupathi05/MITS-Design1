@@ -153,11 +153,12 @@ const Admissions = () => {
                   Apply Now <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
-              <a href="https://mits.ac.in/" target="_blank" rel="noreferrer">
+              <a href="https://mits.ac.in/public/uploads/static-pdf/College%20Brochure-2026.pdf" target="_blank" rel="noreferrer">
                 <Button variant="outline" className="border-2 border-white text-white bg-white/15 hover:bg-white hover:text-[#0f2a44] font-bold px-8 py-3 text-base rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
-                  <Download className="mr-2 w-5 h-5" /> Download Prospectus
+                  <Download className="mr-2 w-5 h-5" /> Download Brochure
                 </Button>
               </a>
+              
             </motion.div>
 
 

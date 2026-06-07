@@ -8,6 +8,7 @@ const AcademicLeadership = () => {
   const academicKeys = [
     "vice-chancellor",
     "registrar",
+    "principal",
     "controller-of-examinations",
     "ombudsperson",
   ];
@@ -50,7 +51,7 @@ const AcademicLeadership = () => {
               </div>
               <div className="p-5">
                 <h3
-                  className="text-lg font-bold text-secondary group-hover:text-primary transition-colors"
+                  className="text-lg font-bold text-[#0f2a44] group-hover:text-[#caa74d] transition-colors"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {p.name}

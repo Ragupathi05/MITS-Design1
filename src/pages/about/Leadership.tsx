@@ -39,7 +39,7 @@ const Leadership = () => {
               </div>
               <div className="p-6">
                 <h3
-                  className="text-lg font-bold text-primary group-hover:text-amber-600 transition-colors"
+                  className="text-lg font-bold text-[#0f2a44] group-hover:text-[#caa74d] transition-colors"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {p.name}

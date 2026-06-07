@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -6,7 +6,6 @@ import {
   ChevronDown,
   FileText,
   ExternalLink,
-  Search,
   Download,
   Shield,
   Landmark,
@@ -22,7 +21,9 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import { psdSections, psdCategories, psdOverviewPdf, type PsdRow } from "@/data/psdData";
+import { psdSections, psdOverviewPdf, type PsdRow } from "@/data/psdData";
+
+const BASE = import.meta.env.BASE_URL;
 
 const sectionIcon: Record<string, any> = {
   "about-hei": Landmark,
@@ -82,29 +83,11 @@ const RowItem = ({ row }: { row: PsdRow }) => (
 );
 
 const PublicSelfDisclosures = () => {
-  const [q, setQ] = useState("");
-  const [cat, setCat] = useState("All");
   const [open, setOpen] = useState<Record<string, boolean>>(() =>
-    Object.fromEntries(psdSections.map((s, i) => [s.id, i < 2]))
+    Object.fromEntries(psdSections.map((s) => [s.id, false]))
   );
 
-  const filteredSections = useMemo(() => {
-    const qq = q.trim().toLowerCase();
-    return psdSections
-      .map((sec) => ({
-        ...sec,
-        rows: sec.rows.filter((r) => {
-          const matchCat = cat === "All" || r.category === cat;
-          const matchQ =
-            !qq ||
-            r.subject.toLowerCase().includes(qq) ||
-            (r.details ?? "").toLowerCase().includes(qq) ||
-            r.category.toLowerCase().includes(qq);
-          return matchCat && matchQ;
-        }),
-      }))
-      .filter((s) => s.rows.length > 0);
-  }, [q, cat]);
+  const filteredSections = psdSections;
 
   const totalDocs = psdSections.reduce(
     (n, s) => n + s.rows.reduce((m, r) => m + r.actions.length, 0),
@@ -125,117 +108,66 @@ const PublicSelfDisclosures = () => {
       <Header />
 
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-[#0f2a44] via-[#11355a] to-[#0f2a44] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, #caa74d 0, transparent 40%), radial-gradient(circle at 80% 80%, #b31317 0, transparent 45%)" }} />
-        <div className="container mx-auto px-4 py-20 md:py-28 relative">
-          <nav className="flex items-center gap-2 text-xs md:text-sm text-white/70 mb-6">
-            <Link to="/" className="hover:text-[#caa74d]">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span>Compliance</span>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#caa74d]">Public Self Disclosures</span>
-          </nav>
-          <p className="text-[#caa74d] uppercase tracking-[0.3em] text-xs font-semibold mb-4">Transparency & Governance</p>
-          <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
+      <section
+        className="relative pt-32 md:pt-40 pb-20 overflow-hidden"
+        style={{
+          backgroundImage: `url(${BASE}Hero-Section/image%205.JPG)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <p className="text-gradient-gold font-semibold tracking-widest uppercase text-sm mb-3">Transparency &amp; Governance</p>
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-gradient-gold mb-4">
             Public Self Disclosures
           </h1>
-          <p className="font-body text-white/80 text-base md:text-lg mt-5 max-w-3xl leading-relaxed">
-            Institutional Transparency, Governance, Compliance and Public Information Repository
-            of MITS Deemed to be University.
+          <p className="text-white/80 text-lg max-w-3xl mx-auto">
+            Institutional Transparency, Governance, Compliance and Public Information Repository of MITS Deemed to be University.
           </p>
 
-          <div className="flex flex-wrap gap-3 mt-8">
+          <div className="flex justify-center gap-3 mt-8">
             <a
               href={psdOverviewPdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#caa74d] text-[#0f2a44] text-sm font-semibold hover:bg-white transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold-gradient text-white text-sm font-semibold shadow-md hover:opacity-95 transition-all"
             >
-              <Download className="w-4 h-4" /> Download PSD Booklet
+              <Download className="w-4 h-4" />
+              <span>Download PSD Booklet</span>
             </a>
             <Link
               to="/about/mandatory-disclosures"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white/15 transition-colors"
             >
-              Mandatory Disclosures <ChevronRight className="w-4 h-4" />
+              Mandatory Disclosures
+              <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-12">
-            {[
-              { label: "Disclosure Sections", value: String(psdSections.length) },
-              { label: "Documents & Links", value: String(totalDocs) },
-              { label: "Categories", value: String(psdCategories.length - 1) },
-              { label: "Compliance", value: "100%" },
-            ].map((s) => (
-              <div key={s.label} className="rounded-xl bg-white/5 border border-white/10 p-4 md:p-5">
-                <p className="font-display text-2xl md:text-3xl font-bold text-[#caa74d]">{s.value}</p>
-                <p className="font-body text-white/65 text-xs md:text-sm mt-1">{s.label}</p>
-              </div>
-            ))}
-          </div>
+        <div className="absolute bottom-4 left-6 z-10">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex items-center gap-1.5 text-sm text-white/80">
+              <li><Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
+              <li className="text-white/50">›</li>
+              <li className="text-white font-semibold">Compliance</li>
+              <li className="text-white/50">›</li>
+              <li className="text-gradient-gold font-semibold">Public Self Disclosures</li>
+            </ol>
+          </nav>
         </div>
       </section>
 
-      {/* QUICK NAV CATEGORIES */}
-      <section className="sticky top-[64px] z-30 bg-white border-b border-[#0f2a44]/10 shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex gap-2 overflow-x-auto py-3 no-scrollbar">
-            {psdSections.map((s) => {
-              const Icon = sectionIcon[s.id] ?? FileText;
-              return (
-                <button
-                  key={s.id}
-                  onClick={() => {
-                    setOpen((o) => ({ ...o, [s.id]: true }));
-                    document.getElementById(`psd-${s.id}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }}
-                  className="shrink-0 inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-[#0f2a44]/10 bg-white hover:border-[#caa74d] hover:bg-[#fff8e6] text-xs md:text-sm font-body text-[#0f2a44] transition-colors"
-                >
-                  <Icon className="w-3.5 h-3.5 text-[#b31317]" />
-                  {s.number}. {s.title}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* QUICK NAV CATEGORIES removed per request */}
 
-      {/* SEARCH + FILTERS */}
-      <section className="container mx-auto px-4 pt-8">
-        <div className="flex flex-col lg:flex-row gap-4">
-          <div className="relative flex-1">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#0f2a44]/50" />
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Search disclosures, documents, reports…"
-              className="w-full pl-9 pr-4 py-3 rounded-xl border border-[#0f2a44]/15 bg-white text-sm focus:outline-none focus:border-[#caa74d] focus:ring-2 focus:ring-[#caa74d]/20"
-            />
-          </div>
-          <div className="flex gap-2 overflow-x-auto no-scrollbar">
-            {psdCategories.map((c) => (
-              <button
-                key={c}
-                onClick={() => setCat(c)}
-                className={`shrink-0 px-3.5 py-2 rounded-full text-xs font-semibold transition-colors ${
-                  cat === c
-                    ? "bg-[#b31317] text-white"
-                    : "bg-white border border-[#0f2a44]/10 text-[#0f2a44] hover:border-[#caa74d]"
-                }`}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* SEARCH + FILTERS removed */}
 
       {/* MAIN CONTENT */}
       <main className="container mx-auto px-4 py-10 md:py-14 space-y-5">
         {filteredSections.map((sec) => {
           const Icon = sectionIcon[sec.id] ?? FileText;
-          const isOpen = q || cat !== "All" ? true : !!open[sec.id];
+          const isOpen = !!open[sec.id];
           return (
             <ScrollReveal key={sec.id}>
               <section

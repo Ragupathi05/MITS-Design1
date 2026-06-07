@@ -49,13 +49,16 @@ const Footer = () => {
                 { label: "Placements", href: "/placements" },
                 { label: "Contact", href: "/contact" },
                 { label: "Apply Now", href: "/admissions" },
-                { label: "Prospectus", href: "/admissions" },
+                { label: "Brochure", href: "https://mits.ac.in/public/uploads/static-pdf/College%20Brochure-2026.pdf" },
                 { label: "Scholarships", href: "/admissions" },
-                { label: "Resources", href: "/content" },
                 { label: "Mandatory Disclosure", href: "/about/mandatory-disclosures" },
               ].map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</Link>
+                  {link.href && /^https?:\/\//.test(link.href) ? (
+                    <a href={link.href} target="_blank" rel="noreferrer" className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</a>
+                  ) : (
+                    <Link to={link.href} className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -79,7 +82,11 @@ const Footer = () => {
                 { label: "Cells", href: "https://mits.ac.in/cells" },
               ].map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</Link>
+                  {link.href && /^https?:\/\//.test(link.href) ? (
+                    <a href={link.href} target="_blank" rel="noreferrer" className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</a>
+                  ) : (
+                    <Link to={link.href} className="font-body text-white/80 hover:text-[#caa74d] transition-colors">{link.label}</Link>
+                  )}
                 </li>
               ))}
             </ul>
