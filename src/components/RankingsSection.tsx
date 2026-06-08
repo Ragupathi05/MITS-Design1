@@ -44,7 +44,7 @@ const successCards = [
   },
   {
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 7h10v6H7z"/><circle cx="10" cy="10" r="1"/><circle cx="14" cy="10" r="1"/></svg>`,
-    value: "46923",
+    value: "46923+",
     label: "Online Certifications",
     sub: "MITS Students have completed various MOOCs courses through global providers.",
   },
