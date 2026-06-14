@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
 import { departmentHeads } from "@/data/aboutData";
+import { slugifyFaculty } from "@/lib/facultySlug";
 
 const DepartmentHeads = () => {
   return (
@@ -20,7 +21,7 @@ const DepartmentHeads = () => {
             transition={{ duration: 0.4, delay: i * 0.04 }}
           >
             <Link
-              to={`/department/${h.deptKey}/faculty?faculty=${encodeURIComponent(h.name)}`}
+              to={`/department/${h.deptKey}/faculty/${slugifyFaculty(h.name)}`}
               className="group flex gap-4 bg-card border border-border rounded-2xl p-5 hover:-translate-y-1 hover:shadow-2xl transition-all"
             >
               <div className="w-24 h-28 shrink-0 rounded-lg overflow-hidden bg-secondary/5">
@@ -35,11 +36,11 @@ const DepartmentHeads = () => {
                 />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[11px] uppercase tracking-[0.14em] text-primary font-semibold mb-1 truncate">
+                <p className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-semibold mb-1 truncate">
                   Head — {h.department}
                 </p>
                 <h3
-                  className="text-base font-bold text-primary leading-tight group-hover:text-amber-600 transition-colors"
+                  className="text-base font-bold text-[#0f2a44] leading-tight group-hover:text-primary transition-colors"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {h.name}

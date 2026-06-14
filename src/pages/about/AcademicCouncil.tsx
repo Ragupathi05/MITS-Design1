@@ -32,19 +32,47 @@ const AcademicCouncil = () => {
           </div>
 
           <div className="bg-white border border-border rounded-2xl p-6">
-            <h3 className="text-lg font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>
+            <h3 className="text-lg font-bold text-secondary mb-5" style={{ fontFamily: "var(--font-display)" }}>
               Minutes of Academic Council Meetings
             </h3>
-            <div className="rounded-lg border border-dashed border-border p-6 text-center text-sm text-secondary/70 bg-secondary/5">
-              <Calendar className="w-6 h-6 mx-auto text-primary/60 mb-2" />
-              Approved minutes of Academic Council meetings are published on the official MITS portal.
-              <div className="mt-4">
-                <Button asChild variant="outline" className="border-primary text-primary">
-                  <a href={academicCouncil.sourceUrl} target="_blank" rel="noopener noreferrer">
-                    Open on MITS portal <ExternalLink className="w-3 h-3 ml-2" />
-                  </a>
-                </Button>
-              </div>
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Minutes of 2nd Academic Council Meeting",
+                  date: "August 25, 2025",
+                  url: "https://mits.ac.in/public/uploads/mandatory/Minutes-2nd AC meeting.pdf",
+                },
+                {
+                  title: "Minutes of 1st Academic Council Meeting",
+                  date: "August 5, 2025",
+                  url: "https://mits.ac.in/public/uploads/mandatory/Minutes-1st_AC COUNCIL-Meeting.pdf",
+                },
+              ].map((meeting, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl border border-border hover:border-primary/30 hover:shadow-md transition-all bg-card/30"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/5 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                      <FileText className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-secondary text-sm sm:text-base">
+                        {meeting.title}
+                      </h4>
+                      <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+                        <Calendar className="w-3.5 h-3.5" />
+                        Meeting Date: {meeting.date}
+                      </p>
+                    </div>
+                  </div>
+                  <Button asChild variant="outline" size="sm" className="shrink-0 border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+                    <a href={meeting.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5">
+                      View Minutes <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </Button>
+                </div>
+              ))}
             </div>
           </div>
         </div>

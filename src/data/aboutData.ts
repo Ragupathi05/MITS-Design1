@@ -185,6 +185,8 @@ export const deansList: DeanEntry[] = [
     school: "Academics",
     qualification: "Ph.D. (Technical University of Darmstadt, Germany)",
     image: "https://mits.ac.in/public/uploads/faculty/rama.jpg",
+    deptKey: "ece",
+    facultyName: "Dr. Rama S Komaragiri",
     externalProfile: "https://mits.ac.in/facultyprofile/735",
   },
   {
@@ -193,6 +195,8 @@ export const deansList: DeanEntry[] = [
     school: "School of Engineering",
     qualification: "Ph.D. (University of Pisa, Italy)",
     image: "https://mits.ac.in/public/uploads/faculty/drdipankarroy(1).jpg",
+    deptKey: "ce",
+    facultyName: "Dr. Dipankar Roy",
     externalProfile: "https://mits.ac.in/facultyprofile/1",
   },
   {
@@ -201,6 +205,8 @@ export const deansList: DeanEntry[] = [
     school: "School of Computing",
     qualification: "Ph.D. (University of Kota)",
     image: "https://mits.ac.in/public/uploads/faculty/gupta.png",
+    deptKey: "csecs",
+    facultyName: "Dr. Chandra Prakash Gupta",
     externalProfile: "https://mits.ac.in/facultyprofile/730",
   },
   {
@@ -227,7 +233,7 @@ export interface HODEntry {
 export const departmentHeads: HODEntry[] = [
   { name: "Dr. Vijayakumar Natesan", department: "Civil Engineering", image: "https://mits.ac.in/public/uploads/faculty/fc9b84db32042ded85ace96100f6848f.JPG", deptKey: "ce", externalProfile: "https://mits.ac.in/facultyprofile/7" },
   { name: "Dr. Manavaalan Gunasekaran", department: "Electrical & Electronics Engineering", image: "https://mits.ac.in/public/uploads/faculty/manavaalan.JPG", deptKey: "eee", externalProfile: "https://mits.ac.in/facultyprofile/931" },
-  { name: "Dr. S. Bhaskaran", department: "Mechanical Engineering", image: "https://mits.ac.in/public/uploads/faculty/Baskaran.JPG", deptKey: "me", externalProfile: "https://mits.ac.in/facultyprofile/306" },
+  { name: "Dr. S. Baskaran", department: "Mechanical Engineering", image: "https://mits.ac.in/public/uploads/faculty/Baskaran.JPG", deptKey: "me", externalProfile: "https://mits.ac.in/facultyprofile/306" },
   { name: "Dr. Sanjay Kumar C. Gowre", department: "Electronics & Communication Engineering", image: "https://mits.ac.in/public/uploads/faculty/sanjay.JPG", deptKey: "ece", externalProfile: "https://mits.ac.in/facultyprofile/1018" },
   { name: "Dr. M. Sreedevi", department: "Computer Science & Engineering", image: "https://mits.ac.in/public/uploads/faculty/sri.jpg", deptKey: "cse", externalProfile: "https://mits.ac.in/facultyprofile/140" },
   { name: "Dr. R. Kalpana", department: "CSE (Artificial Intelligence)", image: "https://mits.ac.in/public/uploads/faculty/DSC_9033.JPG", deptKey: "ai", externalProfile: "https://mits.ac.in/facultyprofile/80" },

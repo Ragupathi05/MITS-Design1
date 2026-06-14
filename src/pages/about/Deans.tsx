@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
 import { deansList } from "@/data/aboutData";
+import { slugifyFaculty } from "@/lib/facultySlug";
 
 const Deans = () => {
   return (
@@ -32,11 +33,11 @@ const Deans = () => {
               />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-primary font-semibold mb-1">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold mb-1">
                 {d.school}
               </p>
               <h3
-                className="text-xl font-bold text-primary leading-tight"
+                className="text-xl font-bold text-[#0f2a44] leading-tight group-hover:text-primary transition-colors"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {d.name}
@@ -47,7 +48,7 @@ const Deans = () => {
               <div className="mt-4 flex flex-wrap gap-3 items-center">
                 {d.deptKey && d.facultyName ? (
                   <Link
-                    to={`/department/${d.deptKey}/faculty?faculty=${encodeURIComponent(d.facultyName)}`}
+                    to={`/department/${d.deptKey}/faculty/${slugifyFaculty(d.facultyName)}`}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
                   >
                     View profile <ArrowRight className="w-4 h-4" />

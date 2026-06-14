@@ -86,6 +86,22 @@ const AffiliationsAccreditations = () => {
     iso: false,
   });
 
+  const splitTitle = (text: string) => {
+    const words = text.trim().split(/\s+/);
+    if (words.length <= 1) {
+      return <span className="text-white">{text}</span>;
+    }
+    const splitIndex = Math.ceil(words.length / 2);
+    const firstHalf = words.slice(0, splitIndex).join(" ");
+    const secondHalf = words.slice(splitIndex).join(" ");
+    return (
+      <>
+        <span className="text-white">{firstHalf}</span>{" "}
+        <span className="text-[#ffd15c]">{secondHalf}</span>
+      </>
+    );
+  };
+
   const filteredAicte = aicteApprovals;
   const filteredNba = nbaAccreditations;
 
@@ -97,20 +113,25 @@ const AffiliationsAccreditations = () => {
 
       {/* HERO */}
       <section
-        className="relative pt-32 md:pt-40 pb-20 overflow-hidden"
+        className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
         style={{
           backgroundImage: `url(${BASE}Hero-Section/image%205.JPG)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/80" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-gradient-gold font-semibold tracking-widest uppercase text-sm mb-3">Institutional Recognition</p>
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-gradient-gold mb-4">
-            Affiliations &amp; Accreditations
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+            Institutional Recognition
+          </p>
+          <h1
+            className="font-display text-4xl md:text-6xl font-bold mb-5"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            {splitTitle("Affiliations & Accreditations")}
           </h1>
-          <p className="text-white/80 text-lg max-w-3xl mx-auto">
+          <p className="text-white/80 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mt-4">
             Institutional Recognition, Academic Quality Assurance, National &amp; International
             Accreditations of Madanapalle Institute of Technology &amp; Science.
           </p>
@@ -121,9 +142,9 @@ const AffiliationsAccreditations = () => {
             <ol className="flex items-center gap-1.5 text-sm text-white/80">
               <li><Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
               <li className="text-white/50">›</li>
-              <li className="text-white font-semibold">Academic &amp; Compliance</li>
+              <li className="text-white/70">Academic &amp; Compliance</li>
               <li className="text-white/50">›</li>
-              <li className="text-gradient-gold font-semibold">Affiliations &amp; Accreditations</li>
+              <li className="text-[#ffd15c] font-semibold">Affiliations &amp; Accreditations</li>
             </ol>
           </nav>
         </div>

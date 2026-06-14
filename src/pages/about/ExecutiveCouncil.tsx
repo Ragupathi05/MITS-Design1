@@ -31,19 +31,52 @@ const ExecutiveCouncil = () => {
           </div>
 
           <div className="bg-white border border-border rounded-2xl p-6">
-            <h3 className="text-lg font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>
+            <h3 className="text-lg font-bold text-secondary mb-5" style={{ fontFamily: "var(--font-display)" }}>
               Minutes of Executive Council Meetings
             </h3>
-            <div className="rounded-lg border border-dashed border-border p-6 text-center text-sm text-secondary/70 bg-secondary/5">
-              <Calendar className="w-6 h-6 mx-auto text-primary/60 mb-2" />
-              Minutes of recent EC meetings are maintained on the official MITS portal.
-              <div className="mt-4">
-                <Button asChild variant="outline" className="border-primary text-primary">
-                  <a href={executiveCouncil.sourceUrl} target="_blank" rel="noopener noreferrer">
-                    Open on MITS portal <ExternalLink className="w-3 h-3 ml-2" />
-                  </a>
-                </Button>
-              </div>
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Minutes of 3rd Executive Council Meeting",
+                  date: "March 11, 2026",
+                  url: "https://mits.ac.in/assets/pdf/admin/MoM -Scan-3rd EC- 11.03.2026-MITS DTBU.pdf",
+                },
+                {
+                  title: "Minutes of 2nd Executive Council Meeting",
+                  date: "August 25, 2025",
+                  url: "https://mits.ac.in/assets/pdf/admin/EC-Minutes-2nd-Meeting-25.8.2025.pdf",
+                },
+                {
+                  title: "Minutes of 1st Executive Council Meeting",
+                  date: "August 5, 2025",
+                  url: "https://mits.ac.in/assets/pdf/admin/EC-Minutes-1st Meeting-5.08.2025.pdf",
+                },
+              ].map((meeting, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl border border-border hover:border-primary/30 hover:shadow-md transition-all bg-card/30"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/5 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                      <FileText className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-secondary text-sm sm:text-base">
+                        {meeting.title}
+                      </h4>
+                      <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+                        <Calendar className="w-3.5 h-3.5" />
+                        Meeting Date: {meeting.date}
+                      </p>
+                    </div>
+                  </div>
+                  <Button asChild variant="outline" size="sm" className="shrink-0 border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+                    <a href={meeting.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5">
+                      View Minutes <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </Button>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -56,17 +89,6 @@ const ExecutiveCouncil = () => {
               The Executive Council exercises supervisory powers over the University and ensures
               compliance with the UGC Regulations for Deemed to be Universities.
             </p>
-          </div>
-          <div className="bg-white border border-border rounded-2xl p-5 text-sm text-secondary/70">
-            <p className="font-semibold text-secondary mb-1">Source</p>
-            <a
-              href={executiveCouncil.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline inline-flex items-center gap-1 text-xs"
-            >
-              mits.ac.in/mits-minutes-ec <ExternalLink className="w-3 h-3" />
-            </a>
           </div>
         </aside>
       </div>
