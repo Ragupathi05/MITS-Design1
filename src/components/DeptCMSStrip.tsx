@@ -1,11 +1,8 @@
-﻿import { motion } from "framer-motion";
-import { Calendar, Newspaper, Handshake, ExternalLink, Globe, MapPin, Tag, Loader2 } from "lucide-react";
-import type { CMSEvent, CMSNews, CMSMoU } from "@/hooks/useDeptCMSContent";
-import { useDeptCMSContent } from "@/hooks/useDeptCMSContent";
+import { motion } from "framer-motion";
+import { Calendar, Handshake, ExternalLink, Globe, MapPin, Tag, Loader2, Award, BookOpen, FileText, FolderOpen, Trophy } from "lucide-react";
+import { useDeptCMSData } from "@/hooks/useDeptCMSData";
 
-interface Props {
-  deptKey: string;
-}
+interface Props { deptKey: string; }
 
 const typeColors: Record<string, string> = {
   Conference: "bg-blue-100 text-blue-700",
@@ -14,90 +11,6 @@ const typeColors: Record<string, string> = {
   FDP:        "bg-orange-100 text-orange-700",
   Hackathon:  "bg-pink-100 text-pink-700",
 };
-
-const categoryColors: Record<string, string> = {
-  Research:      "bg-purple-100 text-purple-700",
-  Achievement:   "bg-amber-100 text-amber-700",
-  Industry:      "bg-teal-100 text-teal-700",
-  Accreditation: "bg-blue-100 text-blue-700",
-};
-
-const EventCard = ({ event }: { event: CMSEvent }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 12 }}
-    animate={{ opacity: 1, y: 0 }}
-    className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-2"
-  >
-    <div className="flex items-start justify-between gap-2">
-      <h4 className="font-semibold text-sm text-slate-800 leading-snug flex-1">{event.title}</h4>
-      {event.type && (
-        <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${typeColors[event.type] ?? "bg-slate-100 text-slate-600"}`}>
-          {event.type}
-        </span>
-      )}
-    </div>
-    {event.description && <p className="text-xs text-slate-500 leading-relaxed">{event.description}</p>}
-    <div className="flex flex-wrap items-center gap-3 mt-auto pt-1">
-      <span className="flex items-center gap-1 text-xs text-primary font-medium">
-        <Calendar className="w-3 h-3" />{event.date}
-      </span>
-      {event.venue && (
-        <span className="flex items-center gap-1 text-xs text-slate-400">
-          <MapPin className="w-3 h-3" />{event.venue}
-        </span>
-      )}
-    </div>
-  </motion.div>
-);
-
-const NewsCard = ({ item }: { item: CMSNews }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 12 }}
-    animate={{ opacity: 1, y: 0 }}
-    className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-2"
-  >
-    <div className="flex items-start justify-between gap-2">
-      <h4 className="font-semibold text-sm text-slate-800 leading-snug flex-1">{item.title}</h4>
-      {item.category && (
-        <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${categoryColors[item.category] ?? "bg-slate-100 text-slate-600"}`}>
-          {item.category}
-        </span>
-      )}
-    </div>
-    {item.content && <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">{item.content}</p>}
-    <div className="flex items-center gap-1 text-xs text-muted-foreground mt-auto pt-1">
-      <Newspaper className="w-3 h-3" />{item.date}
-    </div>
-  </motion.div>
-);
-
-const MoUCard = ({ mou }: { mou: CMSMoU }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 12 }}
-    animate={{ opacity: 1, y: 0 }}
-    className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
-  >
-    <div className="flex items-start gap-3">
-      <div className="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center shrink-0">
-        <Handshake className="w-5 h-5 text-primary" />
-      </div>
-      <div className="flex-1 min-w-0">
-        <h4 className="font-bold text-sm text-slate-800 group-hover:text-primary transition-colors">{mou.organization}</h4>
-        <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{mou.purpose}</p>
-        <div className="flex flex-wrap items-center gap-3 mt-2">
-          <span className="flex items-center gap-1 text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">
-            <Tag className="w-3 h-3" />{mou.year}
-          </span>
-          {mou.country && (
-            <span className="flex items-center gap-1 text-xs text-slate-400">
-              <Globe className="w-3 h-3" />{mou.country}
-            </span>
-          )}
-        </div>
-      </div>
-    </div>
-  </motion.div>
-);
 
 const SectionTitle = ({ icon: Icon, title, count, color }: { icon: React.ElementType; title: string; count: number; color: string }) => (
   <div className="flex items-center justify-between mb-4">
@@ -112,15 +25,16 @@ const SectionTitle = ({ icon: Icon, title, count, color }: { icon: React.Element
 );
 
 const DeptCMSStrip = ({ deptKey }: Props) => {
-  const { data, loading, source } = useDeptCMSContent(deptKey);
+  const { data, loading } = useDeptCMSData(deptKey);
 
-  const hasContent = data.events.length > 0 || data.news.length > 0 || data.mous.length > 0;
+  const hasContent = data.events.length > 0 || data.mous.length > 0 ||
+    data.achievements.length > 0 || data.patents.length > 0 ||
+    data.publications.length > 0 || data.placements.length > 0 || data.projects.length > 0;
 
   if (loading) {
     return (
       <div className="mt-10 pt-8 border-t border-slate-200 flex items-center justify-center gap-2 text-sm text-muted-foreground py-8">
-        <Loader2 className="w-4 h-4 animate-spin" />
-        Loading department updates…
+        <Loader2 className="w-4 h-4 animate-spin" />Loading department updates…
       </div>
     );
   }
@@ -134,53 +48,208 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
       transition={{ duration: 0.4 }}
       className="mt-10 pt-8 border-t border-slate-200"
     >
-      {/* Strip Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
             Department Updates
           </h2>
-          <p className="text-xs text-muted-foreground mt-0.5">
-            Live content from the MITS CMS Portal
-            {source === "static" && " · Static preview"}
-          </p>
+          <p className="text-xs text-muted-foreground mt-0.5">Live content from MITS CMS</p>
         </div>
-        <a
-          href="https://ragupathi05.github.io/MITS-CMS-Portal/"
-          target="_blank" rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-xs text-primary font-medium hover:underline"
-        >
-          <ExternalLink className="w-3.5 h-3.5" />Visit CMS Portal
+        <a href="https://mits-cms.freedev.app/backend" target="_blank" rel="noopener noreferrer"
+          className="flex items-center gap-1.5 text-xs text-primary font-medium hover:underline">
+          <ExternalLink className="w-3.5 h-3.5" />CMS Portal
         </a>
       </div>
 
       <div className="space-y-8">
-        {/* EVENTS */}
         {data.events.length > 0 && (
           <div>
             <SectionTitle icon={Calendar} title="Events & Programmes" count={data.events.length} color="#b30000" />
             <div className="grid sm:grid-cols-2 gap-3">
-              {data.events.map(ev => <EventCard key={ev.id} event={ev} />)}
+              {data.events.map(ev => (
+                <motion.div key={ev.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-2">
+                  <div className="flex items-start justify-between gap-2">
+                    <h4 className="font-semibold text-sm text-slate-800 leading-snug flex-1">{ev.title}</h4>
+                    {ev.type && (
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${typeColors[ev.type] ?? "bg-slate-100 text-slate-600"}`}>
+                        {ev.type}
+                      </span>
+                    )}
+                  </div>
+                  {ev.description && <p className="text-xs text-slate-500 leading-relaxed">{ev.description}</p>}
+                  <div className="flex flex-wrap items-center gap-3 mt-auto pt-1">
+                    <span className="flex items-center gap-1 text-xs text-primary font-medium">
+                      <Calendar className="w-3 h-3" />{ev.from_date || ev.date}
+                    </span>
+                    {ev.venue && <span className="flex items-center gap-1 text-xs text-slate-400"><MapPin className="w-3 h-3" />{ev.venue}</span>}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         )}
 
-        {/* NEWS */}
-        {data.news.length > 0 && (
+        {data.achievements.length > 0 && (
           <div>
-            <SectionTitle icon={Newspaper} title="News & Highlights" count={data.news.length} color="#0f2a44" />
+            <SectionTitle icon={Award} title="Achievements" count={data.achievements.length} color="#0ea5e9" />
             <div className="grid sm:grid-cols-2 gap-3">
-              {data.news.map(n => <NewsCard key={n.id} item={n} />)}
+              {data.achievements.map(a => (
+                <motion.div key={a.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  <div className="flex items-start justify-between gap-2">
+                    <h4 className="font-semibold text-sm text-slate-800 flex-1">{a.title}</h4>
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${a.type === "faculty" ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}>
+                      {a.type}
+                    </span>
+                  </div>
+                  {a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
+                  {a.description && <p className="text-xs text-slate-500 mt-1">{a.description}</p>}
+                  {a.external_link && (
+                    <a href={a.external_link} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                      <ExternalLink className="w-3 h-3" />View
+                    </a>
+                  )}
+                </motion.div>
+              ))}
             </div>
           </div>
         )}
 
-        {/* MoUs */}
         {data.mous.length > 0 && (
           <div>
             <SectionTitle icon={Handshake} title="MoUs & Collaborations" count={data.mous.length} color="#0ea5e9" />
             <div className="grid sm:grid-cols-2 gap-3">
-              {data.mous.map(m => <MoUCard key={m.id} mou={m} />)}
+              {data.mous.map(m => (
+                <motion.div key={m.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center shrink-0">
+                      <Handshake className="w-5 h-5 text-primary" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-bold text-sm text-slate-800 group-hover:text-primary transition-colors">{m.organization}</h4>
+                      {m.title && <p className="text-xs text-primary font-medium mt-0.5">{m.title}</p>}
+                      {m.purpose && <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{m.purpose}</p>}
+                      <div className="flex flex-wrap items-center gap-3 mt-2">
+                        {m.year && <span className="flex items-center gap-1 text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full"><Tag className="w-3 h-3" />{m.year}</span>}
+                        {m.country && <span className="flex items-center gap-1 text-xs text-slate-400"><Globe className="w-3 h-3" />{m.country}</span>}
+                        {m.status && <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${m.status === "Active" ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-600"}`}>{m.status}</span>}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {data.patents.length > 0 && (
+          <div>
+            <SectionTitle icon={FileText} title="Patents" count={data.patents.length} color="#7c3aed" />
+            <div className="grid sm:grid-cols-2 gap-3">
+              {data.patents.map(p => (
+                <motion.div key={p.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  <div className="flex items-start justify-between gap-2">
+                    <h4 className="font-semibold text-sm text-slate-800 flex-1">{p.title}</h4>
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${p.status === "Granted" ? "bg-green-100 text-green-700" : p.status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>
+                      {p.status}
+                    </span>
+                  </div>
+                  {p.inventors && <p className="text-xs text-slate-500 mt-1">Inventors: {p.inventors}</p>}
+                  {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
+                  {p.external_link && (
+                    <a href={p.external_link} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                      <ExternalLink className="w-3 h-3" />View
+                    </a>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {data.publications.length > 0 && (
+          <div>
+            <SectionTitle icon={BookOpen} title="Publications" count={data.publications.length} color="#0f2a44" />
+            <div className="space-y-2">
+              {data.publications.map(p => (
+                <motion.div key={p.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="text-sm font-medium text-slate-800 flex-1">{p.title}</p>
+                    <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-slate-100 text-slate-600 whitespace-nowrap">{p.type}</span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-3 mt-1">
+                    {p.authors && <span className="text-xs text-slate-500">{p.authors}</span>}
+                    <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>
+                    {p.venue && <span className="text-xs text-slate-400 italic">{p.venue}</span>}
+                    {p.doi && <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {data.placements.length > 0 && (
+          <div>
+            <SectionTitle icon={Trophy} title="Placements & Internships" count={data.placements.length} color="#16a34a" />
+            <div className="grid sm:grid-cols-2 gap-3">
+              {data.placements.map(p => (
+                <motion.div key={p.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex-1 min-w-0">
+                      {p.subtype === "Training" ? (
+                        <>
+                          <p className="font-semibold text-sm text-slate-800">{p.programTitle}</p>
+                          <p className="text-xs text-slate-500 mt-0.5">By: {p.conductedBy}</p>
+                          {p.numberOfStudents ? <p className="text-xs text-slate-500">{p.numberOfStudents} students</p> : null}
+                        </>
+                      ) : (
+                        <>
+                          <p className="font-semibold text-sm text-slate-800">{p.studentName}</p>
+                          <p className="text-xs text-primary font-medium">{p.companyName}</p>
+                          {p.role && <p className="text-xs text-slate-500">{p.role}</p>}
+                          {p.package && <p className="text-xs font-semibold text-green-700">{p.package}</p>}
+                        </>
+                      )}
+                    </div>
+                    <div className="text-right shrink-0">
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${p.subtype === "Placement" ? "bg-green-100 text-green-700" : p.subtype === "Internship" ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"}`}>
+                        {p.subtype}
+                      </span>
+                      {p.year && <p className="text-xs text-slate-400 mt-1">{p.year}</p>}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {data.projects.length > 0 && (
+          <div>
+            <SectionTitle icon={FolderOpen} title="Student Projects" count={data.projects.length} color="#ea580c" />
+            <div className="grid sm:grid-cols-2 gap-3">
+              {data.projects.map(p => (
+                <motion.div key={p.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  <h4 className="font-semibold text-sm text-slate-800">{p.title}</h4>
+                  {p.students && <p className="text-xs text-slate-500 mt-0.5">{p.students}</p>}
+                  {p.guide && <p className="text-xs text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
+                  {p.stack && <p className="text-xs text-slate-400 mt-0.5">Stack: {p.stack}</p>}
+                  {p.description && <p className="text-xs text-slate-500 mt-1">{p.description}</p>}
+                  <div className="flex gap-2 mt-2">
+                    {p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">GitHub</a>}
+                    {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">Demo</a>}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         )}
@@ -190,4 +259,3 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
 };
 
 export default DeptCMSStrip;
-

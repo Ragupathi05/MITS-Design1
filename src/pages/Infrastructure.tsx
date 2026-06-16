@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import {
   Trophy, Bus, Heart, UtensilsCrossed, Library, Radio,
   Lightbulb, Monitor, MessageSquare, Wifi, ChevronLeft, ChevronRight,
+  ZoomIn, X,
 } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -15,7 +16,7 @@ const GOLD        = "#caa74d";
 const SLATE       = "#475569";
 const BORDER      = "#e2e8f0";
 
-// ─── Campus Detail Images ───────────────────────────────────────────────────
+// ─── Campus Detail Images (hero per section) ────────────────────────────────
 const campusImages: Record<string, string> = {
   sports:         `${BASE}Campus Gallery/DSC_7376.JPG`,
   transport:      `${BASE}Campus Gallery/DSC_1888.JPG`,
@@ -29,6 +30,86 @@ const campusImages: Record<string, string> = {
   computer:       `${BASE}Campus Gallery/DSC00892.jpg`,
   "comm-lab":     `${BASE}Campus Gallery/DSC00890.jpg`,
   hero:           `${BASE}Campus Gallery/DSC00955.jpg`,
+};
+
+// ─── Gallery Images per Section ─────────────────────────────────────────────
+const galleryImages: Record<string, { src: string; alt: string }[]> = {
+  sports: [
+    { src: `${BASE}infrastructure/sports/ground-1.JPG`, alt: "Sports Ground - View 1" },
+    { src: `${BASE}infrastructure/sports/ground-2.JPG`, alt: "Sports Ground - View 2" },
+    { src: `${BASE}infrastructure/sports/sports-1.jpg`, alt: "Sports Activities" },
+    { src: `${BASE}infrastructure/sports/sports-2.JPG`, alt: "Sports Facilities" },
+    { src: `${BASE}infrastructure/sports/sports-3.JPG`, alt: "Athletic Track" },
+    { src: `${BASE}infrastructure/sports/sports-4.JPG`, alt: "Outdoor Sports" },
+    { src: `${BASE}infrastructure/gym/gym-1.JPG`, alt: "Gymnasium - View 1" },
+    { src: `${BASE}infrastructure/gym/gym-2.JPG`, alt: "Gymnasium Equipment" },
+    { src: `${BASE}infrastructure/gym/gym-3.JPG`, alt: "Indoor Gym" },
+    { src: `${BASE}infrastructure/gym/gym-4.JPG`, alt: "Fitness Center" },
+    { src: `${BASE}infrastructure/gym/gym-5.JPG`, alt: "Gym Training Area" },
+  ],
+  transport: [
+    { src: `${BASE}infrastructure/transport/transport-1.JPG`, alt: "Transport Fleet - View 1" },
+    { src: `${BASE}infrastructure/transport/transport-2.JPG`, alt: "Transport Fleet - View 2" },
+    { src: `${BASE}infrastructure/transport/transport-3.JPG`, alt: "College Buses" },
+    { src: `${BASE}infrastructure/transport/transport-4.JPG`, alt: "Bus Parking Area" },
+    { src: `${BASE}infrastructure/transport/transport-5.JPG`, alt: "Transport Facilities" },
+  ],
+  dispensary: [
+    { src: `${BASE}infrastructure/dispensary/dispensary-1.JPG`, alt: "Dispensary - Main Entrance" },
+    { src: `${BASE}infrastructure/dispensary/dispensary-2.JPG`, alt: "Medical Facility" },
+    { src: `${BASE}infrastructure/dispensary/dispensary-3.JPG`, alt: "Consultation Room" },
+    { src: `${BASE}infrastructure/dispensary/dispensary-4.JPG`, alt: "Health Center" },
+    { src: `${BASE}infrastructure/dispensary/dispensary-5.JPG`, alt: "Medical Equipment" },
+  ],
+  canteen: [
+    { src: `${BASE}infrastructure/canteen/canteen-1.JPG`, alt: "Canteen - Main Hall" },
+    { src: `${BASE}infrastructure/canteen/canteen-2.JPG`, alt: "Dining Area" },
+    { src: `${BASE}infrastructure/canteen/canteen-3.JPG`, alt: "Food Court" },
+    { src: `${BASE}infrastructure/canteen/canteen-4.JPG`, alt: "Kitchen Facilities" },
+    { src: `${BASE}infrastructure/canteen/canteen-5.JPG`, alt: "Seating Area" },
+  ],
+  wifi: [],
+  library: [
+    { src: `${BASE}infrastructure/library/library-1.webp`, alt: "Central Library - Main Hall" },
+    { src: `${BASE}infrastructure/library/library-2.webp`, alt: "Reading Section" },
+    { src: `${BASE}infrastructure/library/library-3.webp`, alt: "Book Collection" },
+    { src: `${BASE}infrastructure/library/library-4.webp`, alt: "Library Interior" },
+    { src: `${BASE}infrastructure/labs-library/library-photo.JPG`, alt: "Library Overview" },
+  ],
+  "digital-library": [
+    { src: `${BASE}infrastructure/labs-library/lab-9.JPG`, alt: "Digital Library - Terminals" },
+    { src: `${BASE}infrastructure/labs-library/lab-10.JPG`, alt: "Digital Resource Center" },
+    { src: `${BASE}infrastructure/labs-library/lab-11.JPG`, alt: "E-Library Section" },
+    { src: `${BASE}infrastructure/labs-library/lab-12.JPG`, alt: "Digital Access Area" },
+  ],
+  radio: [
+    { src: `${BASE}infrastructure/radio-station/radio-1.JPG`, alt: "Radio Station - Studio" },
+    { src: `${BASE}infrastructure/radio-station/radio-2.JPG`, alt: "Broadcasting Setup" },
+    { src: `${BASE}infrastructure/radio-station/radio-3.JPG`, alt: "Recording Equipment" },
+    { src: `${BASE}infrastructure/radio-station/radio-4.JPG`, alt: "Radio Control Room" },
+    { src: `${BASE}infrastructure/radio-station/radio-5.JPG`, alt: "On-Air Studio" },
+  ],
+  "aicte-idea": [
+    { src: `${BASE}infrastructure/aicte-lab/aicte-1.JPG`, alt: "AICTE Idea Lab - Overview" },
+    { src: `${BASE}infrastructure/aicte-lab/aicte-2.JPG`, alt: "Innovation Hub" },
+    { src: `${BASE}infrastructure/aicte-lab/aicte-3.JPG`, alt: "Prototyping Area" },
+    { src: `${BASE}infrastructure/aicte-lab/aicte-4.JPG`, alt: "3D Printing Station" },
+    { src: `${BASE}infrastructure/aicte-lab/aicte-5.JPG`, alt: "Workshop Space" },
+  ],
+  computer: [
+    { src: `${BASE}infrastructure/labs-library/lab-1.JPG`, alt: "Computer Lab - View 1" },
+    { src: `${BASE}infrastructure/labs-library/lab-2.JPG`, alt: "Computer Lab - View 2" },
+    { src: `${BASE}infrastructure/labs-library/lab-3.JPG`, alt: "High-Performance Computing" },
+    { src: `${BASE}infrastructure/labs-library/lab-4.JPG`, alt: "Server Room" },
+    { src: `${BASE}infrastructure/labs-library/lab-5.JPG`, alt: "Computing Infrastructure" },
+    { src: `${BASE}infrastructure/labs-library/lab-6.JPG`, alt: "Lab Equipment" },
+  ],
+  "comm-lab": [
+    { src: `${BASE}infrastructure/labs-library/lab-7.JPG`, alt: "Communication Lab - View 1" },
+    { src: `${BASE}infrastructure/labs-library/lab-8.JPG`, alt: "Language Lab Terminals" },
+    { src: `${BASE}infrastructure/labs-library/lab-13.JPG`, alt: "Communication Skills Lab" },
+    { src: `${BASE}infrastructure/labs-library/lab-14.JPG`, alt: "Practice Room" },
+  ],
 };
 
 // ─── Facilities Data ─────────────────────────────────────────────────────────
@@ -167,10 +248,355 @@ const infrastructureItems = [
   },
 ];
 
-// ─── Normalise class list (single truthy source, no `classnames` / `clsx` needed) ──
+// ─── Normalise class list ───────────────────────────────────────────────────
 const cx = (...classes: (string | false | null | undefined)[]): string =>
   classes.filter(Boolean).join(" ");
 
+// ─── Image Gallery Carousel Component ───────────────────────────────────────
+const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: string }[]; sectionTitle: string }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIdx, setLightboxIdx] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  // Reset slide when images change
+  useEffect(() => {
+    setCurrentSlide(0);
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0;
+    }
+  }, [images]);
+
+  const scrollToSlide = useCallback((idx: number) => {
+    if (!scrollRef.current) return;
+    const container = scrollRef.current;
+    const slideWidth = container.offsetWidth * 0.72; // matches the slide width
+    const gap = 12;
+    container.scrollTo({
+      left: idx * (slideWidth + gap),
+      behavior: "smooth",
+    });
+    setCurrentSlide(idx);
+  }, []);
+
+  const handleScroll = useCallback(() => {
+    if (!scrollRef.current || isDragging) return;
+    const container = scrollRef.current;
+    const slideWidth = container.offsetWidth * 0.72;
+    const gap = 12;
+    const idx = Math.round(container.scrollLeft / (slideWidth + gap));
+    setCurrentSlide(Math.min(idx, images.length - 1));
+  }, [images.length, isDragging]);
+
+  // Mouse drag for desktop
+  const onMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const onMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const openLightbox = (idx: number) => {
+    setLightboxIdx(idx);
+    setLightboxOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = "";
+  };
+
+  // Keyboard navigation for lightbox
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") setLightboxIdx((p) => Math.max(0, p - 1));
+      if (e.key === "ArrowRight") setLightboxIdx((p) => Math.min(images.length - 1, p + 1));
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightboxOpen, images.length]);
+
+  if (!images || images.length === 0) return null;
+
+  return (
+    <>
+      <div
+        className="rounded-xl overflow-hidden mb-5 shadow-sm"
+        style={{ background: "#fff", border: `1px solid ${BORDER}` }}
+      >
+        {/* Header */}
+        <div
+          className="px-6 py-3.5 flex items-center gap-2.5"
+          style={{
+            borderBottom: `1px solid ${BORDER}`,
+            background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)`,
+          }}
+        >
+          <ZoomIn className="w-4 h-4" style={{ color: GOLD }} />
+          <span
+            className="font-bold text-[15px]"
+            style={{ color: DARK_NAVY, fontFamily: "var(--font-display)" }}
+          >
+            Photo Gallery
+          </span>
+          <span
+            className="ml-auto text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded-full"
+            style={{
+              background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})`,
+            }}
+          >
+            {images.length} Photos
+          </span>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative px-4 py-5">
+          {/* Left arrow */}
+          {currentSlide > 0 && (
+            <button
+              onClick={() => scrollToSlide(currentSlide - 1)}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
+              style={{
+                background: "rgba(15,42,68,0.85)",
+                backdropFilter: "blur(8px)",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.25)",
+              }}
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-5 h-5 text-white" />
+            </button>
+          )}
+
+          {/* Right arrow */}
+          {currentSlide < images.length - 1 && (
+            <button
+              onClick={() => scrollToSlide(currentSlide + 1)}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
+              style={{
+                background: "rgba(15,42,68,0.85)",
+                backdropFilter: "blur(8px)",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.25)",
+              }}
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-5 h-5 text-white" />
+            </button>
+          )}
+
+          {/* Scrollable image strip */}
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            onMouseDown={onMouseDown}
+            onMouseMove={onMouseMove}
+            onMouseUp={onMouseUp}
+            onMouseLeave={onMouseUp}
+            className="flex gap-3 overflow-x-auto scroll-smooth"
+            style={{
+              scrollbarWidth: "none",
+              WebkitOverflowScrolling: "touch",
+              cursor: isDragging ? "grabbing" : "grab",
+              userSelect: "none",
+            }}
+          >
+            {images.map((img, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 relative group rounded-lg overflow-hidden"
+                style={{
+                  width: "72%",
+                  minWidth: "260px",
+                  maxWidth: "560px",
+                  aspectRatio: "16/10",
+                }}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  draggable={false}
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+                {/* Hover overlay */}
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end cursor-pointer"
+                  onClick={() => openLightbox(i)}
+                >
+                  <div className="p-4 flex items-center justify-between w-full">
+                    <p className="text-white text-[13px] font-medium">{img.alt}</p>
+                    <div
+                      className="w-8 h-8 rounded-full flex items-center justify-center"
+                      style={{ background: `${GOLD}cc` }}
+                    >
+                      <ZoomIn className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+                </div>
+                {/* Active slide indicator */}
+                {i === currentSlide && (
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-[3px]"
+                    style={{
+                      background: `linear-gradient(90deg, ${MITS_RED}, ${GOLD})`,
+                    }}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Dot indicators */}
+          <div className="flex justify-center gap-1.5 mt-4">
+            {images.map((_, i) => {
+              const on = i === currentSlide;
+              return (
+                <button
+                  key={i}
+                  onClick={() => scrollToSlide(i)}
+                  className="rounded-full transition-all duration-200 cursor-pointer"
+                  aria-label={`Go to image ${i + 1}`}
+                  style={{
+                    width: on ? 20 : 6,
+                    height: 6,
+                    borderRadius: 99,
+                    background: on
+                      ? `linear-gradient(90deg, ${DARK_NAVY} 0%, ${MITS_RED} 60%, ${GOLD} 100%)`
+                      : "#d1d5db",
+                    boxShadow: on ? `0 2px 6px ${MITS_RED}30` : "none",
+                  }}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* ── LIGHTBOX ── */}
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center"
+          style={{ background: "rgba(0,0,0,0.92)", backdropFilter: "blur(12px)" }}
+          onClick={closeLightbox}
+        >
+          {/* Close button */}
+          <button
+            onClick={closeLightbox}
+            className="absolute top-5 right-5 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 z-10"
+            style={{ background: "rgba(255,255,255,0.15)" }}
+            aria-label="Close lightbox"
+          >
+            <X className="w-5 h-5 text-white" />
+          </button>
+
+          {/* Counter */}
+          <div className="absolute top-6 left-6 text-white/70 text-[13px] font-medium z-10">
+            {lightboxIdx + 1} / {images.length} — {sectionTitle}
+          </div>
+
+          {/* Prev */}
+          {lightboxIdx > 0 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightboxIdx((p) => p - 1);
+              }}
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 z-10"
+              style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(4px)" }}
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-6 h-6 text-white" />
+            </button>
+          )}
+
+          {/* Next */}
+          {lightboxIdx < images.length - 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightboxIdx((p) => p + 1);
+              }}
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 z-10"
+              style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(4px)" }}
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-6 h-6 text-white" />
+            </button>
+          )}
+
+          {/* Image */}
+          <div
+            className="max-w-[90vw] max-h-[85vh] flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={images[lightboxIdx].src}
+              alt={images[lightboxIdx].alt}
+              className="max-w-full max-h-[80vh] object-contain rounded-lg"
+              style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.5)" }}
+            />
+          </div>
+
+          {/* Caption */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-sm font-medium z-10 text-center px-4">
+            {images[lightboxIdx].alt}
+          </div>
+
+          {/* Thumbnail strip */}
+          <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-2 z-10 max-w-[90vw] overflow-x-auto py-2 px-3"
+            style={{ scrollbarWidth: "none" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {images.map((img, i) => (
+              <button
+                key={i}
+                onClick={() => setLightboxIdx(i)}
+                className="flex-shrink-0 rounded-md overflow-hidden transition-all duration-200 cursor-pointer"
+                style={{
+                  width: 48,
+                  height: 36,
+                  border: i === lightboxIdx ? `2px solid ${GOLD}` : "2px solid transparent",
+                  opacity: i === lightboxIdx ? 1 : 0.5,
+                }}
+              >
+                <img
+                  src={img.src}
+                  alt=""
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  draggable={false}
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+// ─── Main Component ─────────────────────────────────────────────────────────
 const Infrastructure = () => {
   const [activeInfra, setActiveInfra] = useState(infrastructureItems[0].key);
   const current = infrastructureItems.find((i) => i.key === activeInfra)!;
@@ -190,6 +616,8 @@ const Infrastructure = () => {
       setActiveInfra(infrastructureItems[next].key);
     }
   };
+
+  const currentGallery = galleryImages[current.key] || [];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fdfbf7] via-white to-white">
@@ -361,53 +789,32 @@ const Infrastructure = () => {
                ══════════════════════════════════════════════════════ */}
               <div className="flex-1 min-w-0">
 
-                {/* ── FACILITY HERO IMAGE ── */}
-                <div className="relative rounded-xl overflow-hidden mb-6 shadow-md"
-                  style={{ aspectRatio: "16/6" }}>
-                  <img
-                    src={campusImages[current.key] || campusImages.hero}
-                    alt={current.title}
-                    className="w-full h-full object-cover transition-all duration-700"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = campusImages.hero;
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f2a44]/90 via-[#0f2a44]/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 h-[3px]"
-                    style={{
-                      background: `linear-gradient(90deg, ${MITS_RED} 0%, ${GOLD} 50%, ${MITS_RED} 100%)`,
-                    }}
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    <div className="flex items-center gap-3 mb-2">
-                      {(() => {
-                        const IconComp = current.icon as React.ElementType;
-                        return (
-                          <IconComp className="w-6 h-6 md:w-7 md:h-7 flex-shrink-0"
-                            style={{ color: GOLD }} />
-                        );
-                      })()}
-                      <h2 className="font-display text-xl md:text-[1.75rem] font-bold text-white tracking-tight leading-none"
-                        style={{ fontFamily: "var(--font-display)" }}>
-                        {current.title}
-                      </h2>
-                      <span className="hidden md:inline-block ml-auto text-[10px] font-bold uppercase tracking-widest text-white/60">
-                        {String(currentIdx + 1).padStart(2, "0")} /{" "}
-                        {String(infrastructureItems.length).padStart(2, "0")}
-                      </span>
-                    </div>
-                    <p className="text-white/75 text-[13px] md:text-sm leading-relaxed max-w-2xl hidden sm:block">
-                      {current.desc}
-                    </p>
+                {/* ── FACILITY HEADER ── */}
+                <div className="mb-6 p-6 rounded-xl border shadow-sm transition-all duration-300" style={{ borderColor: BORDER, background: "#fff" }}>
+                  <div className="flex items-center gap-3 mb-3">
+                    {(() => {
+                      const IconComp = current.icon as React.ElementType;
+                      return (
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: `${GOLD}15` }}>
+                          <IconComp className="w-5.5 h-5.5 flex-shrink-0" style={{ color: MITS_RED }} />
+                        </div>
+                      );
+                    })()}
+                    <h2 className="font-display text-xl md:text-2xl font-bold" style={{ color: DARK_NAVY, fontFamily: "var(--font-display)" }}>
+                      {current.title}
+                    </h2>
+                    <span className="ml-auto text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-50 border border-slate-100" style={{ color: SLATE }}>
+                      {String(currentIdx + 1).padStart(2, "0")} / {String(infrastructureItems.length).padStart(2, "0")}
+                    </span>
                   </div>
-                </div>
-
-                {/* ── MOBILE DESCRIPTION ── */}
-                <div className="sm:hidden mb-6 px-1">
-                  <p className="text-[14px] leading-relaxed" style={{ color: SLATE }}>
+                  <div className="h-[2px] w-12 mb-4 rounded-full" style={{ background: `linear-gradient(90deg, ${MITS_RED}, ${GOLD})` }} />
+                  <p className="text-[14px] md:text-[15px] leading-relaxed" style={{ color: SLATE }}>
                     {current.desc}
                   </p>
                 </div>
+
+                {/* ── PHOTO GALLERY CAROUSEL ── */}
+                <ImageGallery images={currentGallery} sectionTitle={current.title} />
 
                 {/* ── KEY HIGHLIGHTS ── */}
                 <div

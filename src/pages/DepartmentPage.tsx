@@ -8,8 +8,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import InlineFacultyProfile from "@/components/InlineFacultyProfile";
 import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfileData";
 import { slugifyFaculty } from "@/lib/facultySlug";
+import { useDeptCMSData } from "@/hooks/useDeptCMSData";
 import {
-  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone
+  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, Loader2, ExternalLink
 } from "lucide-react";
 
 const sidebarItems = [
@@ -35,6 +36,7 @@ const DepartmentPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProfile, setSelectedProfile] = useState<FacultyProfile | null>(null);
   const dept = getDepartmentByKey(deptKey || "");
+  const { data: cms, loading: cmsLoading } = useDeptCMSData(deptKey || "");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -454,36 +456,51 @@ const DepartmentPage = () => {
             )}
 
             {activeSection === "achievements" && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Achievements</h2>
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-primary">Faculty Achievements</h3>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {dept.detailedAchievements.filter(a => a.type === "faculty").map((a, i) => (
-                      <Card key={i} className="border-l-4 border-l-primary hover:shadow-md transition-shadow">
-                        <CardContent className="p-4">
-                          <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
-                          <p className="text-xs text-muted-foreground mt-1">{a.description}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                  <h3 className="font-semibold text-accent-foreground mt-6">Student Achievements</h3>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {dept.detailedAchievements.filter(a => a.type === "student").map((a, i) => (
-                      <Card key={i} className="border-l-4 border-l-accent hover:shadow-md transition-shadow">
-                        <CardContent className="p-4">
-                          <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
-                          <p className="text-xs text-muted-foreground mt-1">{a.description}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
+                {cmsLoading ? (
+                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
+                ) : (() => {
+                  const facultyAch = cms.achievements.length > 0
+                    ? cms.achievements.filter(a => a.type === "faculty")
+                    : dept.detailedAchievements.filter(a => a.type === "faculty");
+                  const studentAch = cms.achievements.length > 0
+                    ? cms.achievements.filter(a => a.type === "student")
+                    : dept.detailedAchievements.filter(a => a.type === "student");
+                  return (
+                    <div className="space-y-4">
+                      <h3 className="font-semibold text-primary">Faculty Achievements</h3>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {facultyAch.map((a, i) => (
+                          <Card key={i} className="border-l-4 border-l-primary hover:shadow-md transition-shadow">
+                            <CardContent className="p-4">
+                              <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
+                              {a.description && <p className="text-xs text-muted-foreground mt-1">{a.description}</p>}
+                              {'name' in a && a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
+                              {'external_link' in a && a.external_link && (
+                                <a href={a.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                  <ExternalLink className="w-3 h-3" />View
+                                </a>
+                              )}
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
+                      <h3 className="font-semibold text-accent-foreground mt-6">Student Achievements</h3>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {studentAch.map((a, i) => (
+                          <Card key={i} className="border-l-4 border-l-accent hover:shadow-md transition-shadow">
+                            <CardContent className="p-4">
+                              <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
+                              {a.description && <p className="text-xs text-muted-foreground mt-1">{a.description}</p>}
+                              {'name' in a && a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()}
               </motion.div>
             )}
 
@@ -521,74 +538,81 @@ const DepartmentPage = () => {
             )}
 
             {activeSection === "patents" && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Patents</h2>
-                {dept.patents.length > 0 ? (
-                  <div className="space-y-3">
-                    {["Granted", "Published", "Filed"].map(status => {
-                      const filtered = dept.patents.filter(p => p.status === status);
-                      if (filtered.length === 0) return null;
-                      return (
-                        <div key={status}>
-                          <h3 className="font-semibold text-sm text-primary mb-2">{status} ({filtered.length})</h3>
-                          <div className="space-y-2">
-                            {filtered.map((p, i) => (
-                              <Card key={i} className="hover:shadow-md transition-shadow">
-                                <CardContent className="p-3 flex items-center justify-between">
-                                  <div>
-                                    <p className="text-sm font-medium text-secondary">{p.title}</p>
-                                    {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
-                                  </div>
-                                  <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                                    status === "Granted" ? "bg-green-100 text-green-700" : status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"
-                                  }`}>{status}</span>
-                                </CardContent>
-                              </Card>
-                            ))}
+                {cmsLoading ? (
+                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
+                ) : (() => {
+                  const patents = cms.patents.length > 0 ? cms.patents : dept.patents;
+                  if (patents.length === 0) return <p className="text-muted-foreground text-sm">No patent records available.</p>;
+                  return (
+                    <div className="space-y-3">
+                      {(["Granted", "Published", "Filed"] as const).map(status => {
+                        const filtered = patents.filter(p => p.status === status);
+                        if (filtered.length === 0) return null;
+                        return (
+                          <div key={status}>
+                            <h3 className="font-semibold text-sm text-primary mb-2">{status} ({filtered.length})</h3>
+                            <div className="space-y-2">
+                              {filtered.map((p, i) => (
+                                <Card key={i} className="hover:shadow-md transition-shadow">
+                                  <CardContent className="p-3 flex items-center justify-between">
+                                    <div className="flex-1 min-w-0 pr-3">
+                                      <p className="text-sm font-medium text-secondary">{p.title}</p>
+                                      {'inventors' in p && p.inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {p.inventors}</p>}
+                                      {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
+                                      {'external_link' in p && p.external_link && (
+                                        <a href={p.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                          <ExternalLink className="w-3 h-3" />View
+                                        </a>
+                                      )}
+                                    </div>
+                                    <span className={`shrink-0 text-xs px-2 py-1 rounded-full font-medium ${status === "Granted" ? "bg-green-100 text-green-700" : status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>{status}</span>
+                                  </CardContent>
+                                </Card>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <p className="text-muted-foreground text-sm">No patent records available.</p>
-                )}
+                        );
+                      })}
+                    </div>
+                  );
+                })()}
               </motion.div>
             )}
 
             {activeSection === "publications" && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Publications</h2>
-                {["journal", "conference"].map(type => {
-                  const filtered = dept.publications.filter(p => p.type === type);
-                  if (filtered.length === 0) return null;
-                  return (
-                    <div key={type} className="mb-6">
-                      <h3 className="font-semibold text-primary mb-3 capitalize">{type === "journal" ? "Journal Publications" : "Conference Publications"}</h3>
-                      <div className="space-y-2">
-                        {filtered.map((p, i) => (
-                          <Card key={i} className="hover:shadow-md transition-shadow">
-                            <CardContent className="p-3">
-                              <p className="text-sm font-medium text-secondary">{p.title}</p>
-                              <div className="flex items-center gap-3 mt-1">
-                                {p.authors && <span className="text-xs text-muted-foreground">{p.authors}</span>}
-                                <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        ))}
+                {cmsLoading ? (
+                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
+                ) : (() => {
+                  const pubs = cms.publications.length > 0 ? cms.publications : dept.publications;
+                  return (["journal", "conference"] as const).map(type => {
+                    const filtered = pubs.filter(p => p.type === type);
+                    if (filtered.length === 0) return null;
+                    return (
+                      <div key={type} className="mb-6">
+                        <h3 className="font-semibold text-primary mb-3">{type === "journal" ? "Journal Publications" : "Conference Publications"}</h3>
+                        <div className="space-y-2">
+                          {filtered.map((p, i) => (
+                            <Card key={i} className="hover:shadow-md transition-shadow">
+                              <CardContent className="p-3">
+                                <p className="text-sm font-medium text-secondary">{p.title}</p>
+                                <div className="flex flex-wrap items-center gap-3 mt-1">
+                                  {p.authors && <span className="text-xs text-muted-foreground">{p.authors}</span>}
+                                  <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>
+                                  {'venue' in p && p.venue && <span className="text-xs text-muted-foreground italic">{p.venue}</span>}
+                                  {'doi' in p && p.doi && <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                                </div>
+                              </CardContent>
+                            </Card>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  });
+                })()}
               </motion.div>
             )}
 
@@ -616,57 +640,75 @@ const DepartmentPage = () => {
             )}
 
             {activeSection === "events" && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Events</h2>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {dept.events.map((e, i) => (
-                    <Card key={i} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Calendar className="w-4 h-4 text-primary" />
-                          <span className="text-xs text-muted-foreground">{e.date}</span>
-                        </div>
-                        <h4 className="font-semibold text-sm text-secondary">{e.title}</h4>
-                        {e.description && <p className="text-xs text-muted-foreground mt-1">{e.description}</p>}
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                {cmsLoading ? (
+                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
+                ) : (
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {(cms.events.length > 0 ? cms.events : dept.events).map((e, i) => (
+                      <Card key={i} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                        {'poster' in e && e.poster && (
+                          <img src={e.poster} alt={e.title} className="w-full h-32 object-cover" />
+                        )}
+                        <CardContent className="p-4">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                              <Calendar className="w-3.5 h-3.5 text-primary" />
+                              {('date' in e ? e.date : '') || ('from_date' in e ? e.from_date : '')}
+                            </span>
+                            {e.type && <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{e.type}</span>}
+                          </div>
+                          <h4 className="font-semibold text-sm text-secondary">{e.title}</h4>
+                          {e.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{e.description}</p>}
+                          {'venue' in e && e.venue && <p className="text-xs text-muted-foreground mt-1">📍 {e.venue}</p>}
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             )}
 
             {activeSection === "mou" && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Memoranda of Understanding (MoU)</h2>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {dept.mous.map((m, i) => (
-                    <Card key={i} className="hover:shadow-md transition-shadow border-l-4 border-l-primary/30">
-                      <CardContent className="p-4">
-                        <h4 className="font-bold text-sm text-secondary">{m.name}</h4>
-                        <p className="text-xs text-muted-foreground mt-1">{m.purpose}</p>
-                        {m.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full mt-2 inline-block">{m.year}</span>}
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                {cmsLoading ? (
+                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
+                ) : (
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {(cms.mous.length > 0 ? cms.mous : dept.mous).map((m, i) => (
+                      <Card key={i} className="hover:shadow-md transition-shadow border-l-4 border-l-primary/30">
+                        <CardContent className="p-4">
+                          <div className="flex items-start justify-between gap-2">
+                            <h4 className="font-bold text-sm text-secondary flex-1">
+                              {'organization' in m ? m.organization : ('name' in m ? m.name : '')}
+                            </h4>
+                            {'status' in m && m.status && (
+                              <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full font-medium ${ m.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'}`}>{m.status}</span>
+                            )}
+                          </div>
+                          {'title' in m && m.title && <p className="text-xs font-medium text-primary mt-1">{m.title}</p>}
+                          <p className="text-xs text-muted-foreground mt-1">{m.purpose}</p>
+                          {'country' in m && m.country && <p className="text-xs text-muted-foreground mt-0.5">🌍 {m.country}</p>}
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {m.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{m.year}</span>}
+                            {'collabAreas' in m && (m.collabAreas ?? []).slice(0, 3).map((area: string, j: number) => (
+                              <span key={j} className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{area}</span>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             )}
 
             {activeSection === "placement" && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Placement / Internship</h2>
+                {/* Static summary stats always shown from departmentData */}
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <Card className="text-center bg-gradient-to-br from-primary/5 to-primary/10">
                     <CardContent className="p-4">
@@ -688,32 +730,80 @@ const DepartmentPage = () => {
                   </Card>
                 </div>
                 <h3 className="font-semibold text-secondary mb-3">Top Recruiters</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {dept.placement.recruiters.map((r, i) => (
                     <span key={i} className="bg-muted text-muted-foreground text-sm px-3 py-1.5 rounded-full font-medium">{r}</span>
                   ))}
                 </div>
+                {/* Live placement records from CMS */}
+                {cmsLoading ? (
+                  <div className="flex items-center gap-2 text-muted-foreground"><Loader2 className="w-4 h-4 animate-spin" />Loading records…</div>
+                ) : cms.placements.length > 0 && (
+                  <>
+                    <h3 className="font-semibold text-secondary mb-3">Placement Records</h3>
+                    <div className="grid md:grid-cols-2 gap-3">
+                      {cms.placements.map((p, i) => (
+                        <Card key={i} className="hover:shadow-md transition-shadow">
+                          <CardContent className="p-4">
+                            <div className="flex items-start justify-between gap-2">
+                              <div className="flex-1 min-w-0">
+                                {p.subtype === 'Training' ? (
+                                  <>
+                                    <p className="font-semibold text-sm text-secondary">{p.programTitle}</p>
+                                    <p className="text-xs text-muted-foreground mt-0.5">By: {p.conductedBy}</p>
+                                    {p.numberOfStudents ? <p className="text-xs text-muted-foreground">{p.numberOfStudents} students</p> : null}
+                                  </>
+                                ) : (
+                                  <>
+                                    <p className="font-semibold text-sm text-secondary">{p.studentName}</p>
+                                    <p className="text-xs text-primary font-medium">{p.companyName}</p>
+                                    {p.role && <p className="text-xs text-muted-foreground">{p.role}</p>}
+                                    {p.package && <p className="text-xs font-semibold text-green-700">{p.package}</p>}
+                                  </>
+                                )}
+                              </div>
+                              <div className="text-right shrink-0">
+                                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                                  p.subtype === 'Placement' ? 'bg-green-100 text-green-700' :
+                                  p.subtype === 'Internship' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'
+                                }`}>{p.subtype}</span>
+                                {p.year && <p className="text-xs text-muted-foreground mt-1">{p.year}</p>}
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </>
+                )}
               </motion.div>
             )}
 
             {activeSection === "projects" && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Student Projects</h2>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {dept.studentProjects.map((p, i) => (
-                    <Card key={i} className="hover:shadow-lg transition-all duration-300">
-                      <CardContent className="p-4">
-                        <h4 className="font-semibold text-sm text-secondary">{p.title}</h4>
-                        <p className="text-xs text-muted-foreground mt-1">{p.students}</p>
-                        {p.description && <p className="text-xs text-muted-foreground mt-2">{p.description}</p>}
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                {cmsLoading ? (
+                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
+                ) : (
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {(cms.projects.length > 0 ? cms.projects : dept.studentProjects).map((p, i) => (
+                      <Card key={i} className="hover:shadow-lg transition-all duration-300">
+                        <CardContent className="p-4">
+                          <h4 className="font-semibold text-sm text-secondary">{p.title}</h4>
+                          <p className="text-xs text-muted-foreground mt-1">{p.students}</p>
+                          {'guide' in p && p.guide && <p className="text-xs text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
+                          {'stack' in p && p.stack && <p className="text-xs text-muted-foreground mt-0.5">Stack: {p.stack}</p>}
+                          {p.description && <p className="text-xs text-muted-foreground mt-2">{p.description}</p>}
+                          {'academicYear' in p && p.academicYear && <span className="text-xs bg-muted px-2 py-0.5 rounded-full mt-2 inline-block">{p.academicYear}</span>}
+                          <div className="flex gap-2 mt-2">
+                            {'github' in p && p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">GitHub</a>}
+                            {'demo' in p && p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">Demo</a>}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             )}
 
