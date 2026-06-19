@@ -293,7 +293,44 @@ const PublicationsSection = () => {
   const [openYear, setOpenYear] = useState<string>(publicationsData.topRated[0].year);
   return (
     <div className="space-y-6">
+      {/* Stat strip */}
       <ScrollReveal>
+        <div className="grid sm:grid-cols-3 gap-4">
+          <div className="bg-card border border-border rounded-2xl p-5">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Scopus Documents</p>
+            <p className="font-display text-3xl font-bold text-primary mt-1">3,085</p>
+            <p className="text-xs text-muted-foreground mt-1">1,545 unique authors • Scopus ID 60107346</p>
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-5">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">SCI / Scopus Articles</p>
+            <p className="font-display text-3xl font-bold text-foreground mt-1">3,000+</p>
+            <p className="text-xs text-muted-foreground mt-1">Published in reputed indexed journals</p>
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-5">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">H-Index (2025)</p>
+            <p className="font-display text-3xl font-bold text-accent mt-1">70</p>
+            <p className="text-xs text-muted-foreground mt-1">Up from 21 in 2019 — sustained growth</p>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      {/* Scopus + WoS charts */}
+      <ScrollReveal delay={0.05}>
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <h3 className="font-display text-lg font-bold text-foreground mb-1">Publications in Scopus</h3>
+            <p className="text-xs text-muted-foreground mb-4">Year-wise Scopus indexed publications (2007 – 2026*).</p>
+            <BarChart data={scopusPublications} height={280} />
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <h3 className="font-display text-lg font-bold text-foreground mb-1">WoS Indexed Publications</h3>
+            <p className="text-xs text-muted-foreground mb-4">Year-wise Web of Science indexed publications (2008 – 2026*).</p>
+            <BarChart data={wosPublications} height={280} accent="hsl(var(--accent))" />
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <ScrollReveal delay={0.08}>
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
           <SectionHeading title={publicationsData.title} subtitle={publicationsData.subtitle} />
           <div className="space-y-4">
