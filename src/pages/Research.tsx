@@ -927,6 +927,8 @@ const Research = () => {
               <TabsContent value="documents"><DocumentsSection /></TabsContent>
               <TabsContent value="ipr"><IPRSection /></TabsContent>
               <TabsContent value="mdrf"><MDRFSection /></TabsContent>
+              <TabsContent value="foundation"><FoundationSection /></TabsContent>
+              <TabsContent value="wwrc"><WWRCSection /></TabsContent>
             </Tabs>
           </div>
         </section>
