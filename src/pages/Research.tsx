@@ -7,7 +7,8 @@ import {
   BookOpen, FlaskConical, Lightbulb, Microscope, FileText, Award,
   Building2, GraduationCap, Globe, Download, ExternalLink, Calendar,
   Users, ChevronDown, ChevronRight, Mail, Phone, Shield, Briefcase,
-  Target, Eye, ArrowRight, Layers, Scale,
+  Target, Eye, ArrowRight, Layers, Scale, TrendingUp, Rocket, Droplets,
+  Sparkles, Trophy,
 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
@@ -16,7 +17,11 @@ import {
 import {
   researchOverview, projectsData, publicationsData, patentsData,
   policiesData, eventsData, documentsData, iprCellData, mdrfData,
+  researchVisionMission, keyAchievements, scopusPublications, wosPublications,
+  hIndexTrend, projectFunding, patentsAYWise, patentTotals,
+  mitsFoundationData, wwrcData, collaborationData,
 } from "@/data/researchData";
+import BarChart from "@/components/research/BarChart";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -28,8 +33,10 @@ const sectionTabs = [
   { id: "policies", label: "Policies", icon: Shield },
   { id: "events", label: "Events", icon: Calendar },
   { id: "documents", label: "Documents", icon: Layers },
-  { id: "ipr", label: "IPR Cell", icon: Scale },
+  { id: "ipr", label: "IPR / IPFC", icon: Scale },
   { id: "mdrf", label: "MDRF", icon: Globe },
+  { id: "foundation", label: "MITS Foundation", icon: Rocket },
+  { id: "wwrc", label: "WWRC", icon: Droplets },
 ];
 
 /* ─── Reusable Card ─── */
