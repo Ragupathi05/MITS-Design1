@@ -241,7 +241,7 @@ const AffiliationsAccreditations = () => {
                               ))}
                               {filteredAicte.length === 0 && (
                                 <p className="col-span-full text-sm text-[#0f2a44]/60 py-8 text-center">
-                                  No AICTE approvals match "{q}".
+                                  No AICTE approvals available.
                                 </p>
                               )}
                             </div>
@@ -301,7 +301,7 @@ const AffiliationsAccreditations = () => {
                               ))}
                               {filteredNba.length === 0 && (
                                 <p className="col-span-full text-sm text-[#0f2a44]/60 py-8 text-center">
-                                  No NBA accreditations match "{q}".
+                                  No NBA accreditations available.
                                 </p>
                               )}
                             </div>

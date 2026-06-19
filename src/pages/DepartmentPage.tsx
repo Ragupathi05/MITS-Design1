@@ -559,13 +559,13 @@ const DepartmentPage = () => {
                                   <CardContent className="p-3 flex items-center justify-between">
                                     <div className="flex-1 min-w-0 pr-3">
                                       <p className="text-sm font-medium text-secondary">{p.title}</p>
-                                      {'inventors' in p && p.inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {p.inventors}</p>}
-                                      {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
-                                      {'external_link' in p && p.external_link && (
-                                        <a href={p.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                      {'inventors' in p && p.inventors ? <p className="text-xs text-muted-foreground mt-0.5">Inventors: {String(p.inventors)}</p> : null}
+                                      {p.year ? <p className="text-xs text-muted-foreground">Year: {p.year}</p> : null}
+                                      {'external_link' in p && p.external_link ? (
+                                        <a href={String(p.external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
                                           <ExternalLink className="w-3 h-3" />View
                                         </a>
-                                      )}
+                                      ) : null}
                                     </div>
                                     <span className={`shrink-0 text-xs px-2 py-1 rounded-full font-medium ${status === "Granted" ? "bg-green-100 text-green-700" : status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>{status}</span>
                                   </CardContent>
@@ -602,8 +602,8 @@ const DepartmentPage = () => {
                                 <div className="flex flex-wrap items-center gap-3 mt-1">
                                   {p.authors && <span className="text-xs text-muted-foreground">{p.authors}</span>}
                                   <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>
-                                  {'venue' in p && p.venue && <span className="text-xs text-muted-foreground italic">{p.venue}</span>}
-                                  {'doi' in p && p.doi && <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                                  {'venue' in p && p.venue ? <span className="text-xs text-muted-foreground italic">{String(p.venue)}</span> : null}
+                                  {'doi' in p && p.doi ? <a href={`https://doi.org/${String(p.doi)}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a> : null}
                                 </div>
                               </CardContent>
                             </Card>
