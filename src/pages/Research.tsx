@@ -200,9 +200,34 @@ const OverviewSection = () => (
 /* ─── PROJECTS TAB ─── */
 const ProjectsSection = () => (
   <div className="space-y-8">
+    {/* Funding analytics */}
     <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Sanctioned Research Projects" subtitle="Year-wise research project details submitted to funding agencies." />
+        <SectionHeading title="Project Funding Analytics" subtitle="Year-wise sanctioned project funding (Amount in ₹ Lakhs)." />
+        <div className="grid sm:grid-cols-3 gap-4 mb-6">
+          <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Total Sanctioned</p>
+            <p className="font-display text-3xl font-bold text-primary mt-1">₹18.44 Cr</p>
+            <p className="text-xs text-muted-foreground mt-1">Cumulative R&amp;D / seminar grants till date</p>
+          </div>
+          <div className="bg-accent/10 border border-accent/20 rounded-xl p-5">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Peak Year</p>
+            <p className="font-display text-3xl font-bold text-foreground mt-1">₹738.54 L</p>
+            <p className="text-xs text-muted-foreground mt-1">F.Y. 2016-17 — Largest single-year inflow</p>
+          </div>
+          <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-5">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Active Window</p>
+            <p className="font-display text-3xl font-bold text-foreground mt-1">2013 – 2026</p>
+            <p className="text-xs text-muted-foreground mt-1">13 years of continuous sponsored research</p>
+          </div>
+        </div>
+        <BarChart data={projectFunding} unit="Amount in ₹ Lakhs" height={300} />
+      </div>
+    </ScrollReveal>
+
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Sanctioned Research Projects" subtitle="Download year-wise funded project reports." />
         <a
           href={projectsData.sanctionedProjects.allProjectsLink}
           target="_blank"
