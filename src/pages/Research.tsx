@@ -779,7 +779,91 @@ const MDRFSection = () => (
   </div>
 );
 
-/* ─── MAIN PAGE ─── */
+/* ─── MITS FOUNDATION TAB ─── */
+const FoundationSection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-gradient-to-br from-primary/10 via-background to-accent/5 border border-border rounded-2xl p-6 md:p-8">
+        <div className="flex items-start gap-4 mb-4">
+          <div className="w-14 h-14 rounded-2xl bg-primary/15 flex items-center justify-center shrink-0">
+            <Rocket className="w-7 h-7 text-primary" />
+          </div>
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">{mitsFoundationData.title}</h2>
+            <p className="text-xs text-primary font-semibold mt-1 uppercase tracking-wider">Section 8 Company • Incubation & Innovation</p>
+          </div>
+        </div>
+        <p className="text-muted-foreground leading-relaxed">{mitsFoundationData.description}</p>
+        <a href={mitsFoundationData.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+          <ExternalLink className="w-4 h-4" /> Visit mitsfoundation.org
+        </a>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Key Highlights" />
+        <ul className="grid sm:grid-cols-2 gap-3">
+          {mitsFoundationData.highlights.map((h, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <Sparkles className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+              <span>{h}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.1}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Research Collaborations" subtitle={collaborationData.description} />
+        <ul className="grid sm:grid-cols-2 gap-3">
+          {collaborationData.partners.map((p, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <Building2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span>{p}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
+/* ─── WWRC TAB ─── */
+const WWRCSection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-gradient-to-br from-secondary/10 via-background to-primary/5 border border-border rounded-2xl p-6 md:p-8">
+        <div className="flex items-start gap-4 mb-4">
+          <div className="w-14 h-14 rounded-2xl bg-secondary/15 flex items-center justify-center shrink-0">
+            <Droplets className="w-7 h-7 text-secondary" />
+          </div>
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">{wwrcData.title}</h2>
+            <p className="text-xs text-secondary font-semibold mt-1 uppercase tracking-wider">Sustainable Water & Environmental Research</p>
+          </div>
+        </div>
+        <p className="text-muted-foreground leading-relaxed">{wwrcData.description}</p>
+        <a href={wwrcData.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 bg-secondary text-secondary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+          <ExternalLink className="w-4 h-4" /> Visit WWRC Portal
+        </a>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Focus Areas" />
+        <ul className="grid sm:grid-cols-2 gap-3">
+          {wwrcData.focusAreas.map((f, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <Droplets className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
 const Research = () => {
   const [activeTab, setActiveTab] = useState("overview");
 
