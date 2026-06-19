@@ -67,34 +67,119 @@ const OverviewSection = () => (
   <div className="space-y-8">
     <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Research & Development Cell" />
-        <p className="text-muted-foreground leading-relaxed mb-4">{researchOverview.description}</p>
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 mb-4">
-          <h3 className="font-semibold text-foreground flex items-center gap-2 mb-2">
-            <GraduationCap className="w-5 h-5 text-primary" /> Recognised Research Centre
-          </h3>
-          <p className="text-muted-foreground text-sm">{researchOverview.recognisedCenter}</p>
-        </div>
-        <div className="bg-accent/10 border border-accent/20 rounded-xl p-5 mb-4">
-          <h3 className="font-semibold text-foreground flex items-center gap-2 mb-2">
-            <Award className="w-5 h-5 text-accent" /> Ph.D. Stipend
-          </h3>
-          <p className="text-muted-foreground text-sm">{researchOverview.scholarStipend}</p>
+        <SectionHeading title="About Research & Development Cell" />
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          In alignment with the vision of the University to promote academic excellence, innovation
+          and impactful research, the Research &amp; Development (R&amp;D) Cell at MITS, Deemed to
+          be University, strengthens and supports the university's research ecosystem. The Cell
+          facilitates and monitors research publications, sponsored projects, patents, technology
+          transfer and consultancy activities, and plays a vital role in fostering interdisciplinary
+          research, innovation, and academic & technological growth of the Institution.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
+            <h3 className="font-semibold text-foreground flex items-center gap-2 mb-2">
+              <GraduationCap className="w-5 h-5 text-primary" /> Recognised Research Centre
+            </h3>
+            <p className="text-muted-foreground text-sm">{researchOverview.recognisedCenter}</p>
+          </div>
+          <div className="bg-accent/10 border border-accent/20 rounded-xl p-5">
+            <h3 className="font-semibold text-foreground flex items-center gap-2 mb-2">
+              <Award className="w-5 h-5 text-accent" /> Ph.D. Stipend
+            </h3>
+            <p className="text-muted-foreground text-sm">{researchOverview.scholarStipend}</p>
+          </div>
         </div>
         <a
           href={researchOverview.enrolledScholarsLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
+          className="mt-4 inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
         >
           <Download className="w-4 h-4" /> List of Enrolled Research Scholars
         </a>
       </div>
     </ScrollReveal>
 
-    <ScrollReveal delay={0.1}>
+    {/* Vision / Mission */}
+    <ScrollReveal delay={0.05}>
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="bg-card border border-border rounded-2xl p-6">
+          <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2 mb-3">
+            <Eye className="w-5 h-5 text-primary" /> Vision
+          </h3>
+          <p className="text-muted-foreground text-sm leading-relaxed">{researchVisionMission.vision}</p>
+        </div>
+        <div className="bg-card border border-border rounded-2xl p-6">
+          <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2 mb-3">
+            <Target className="w-5 h-5 text-primary" /> Mission
+          </h3>
+          <p className="text-muted-foreground text-sm leading-relaxed">{researchVisionMission.mission}</p>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    {/* Objectives */}
+    <ScrollReveal delay={0.08}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Contact Us" />
+        <SectionHeading title="Objectives of R&D Cell" />
+        <ul className="grid sm:grid-cols-2 gap-3">
+          {researchVisionMission.objectives.map((o, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span>{o}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ScrollReveal>
+
+    {/* Key Achievements stat grid */}
+    <ScrollReveal delay={0.1}>
+      <div className="bg-gradient-to-br from-primary/5 via-background to-accent/5 border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Key Research Achievements" subtitle="A consolidated snapshot of MITS research performance and recognitions." />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {keyAchievements.map((k, i) => (
+            <motion.div
+              key={k.label}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.04 }}
+              className="relative bg-card border border-border rounded-xl p-5 hover:border-primary/40 hover:shadow-md transition-all"
+            >
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <Trophy className="w-5 h-5 text-primary" />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-display text-2xl font-bold text-foreground leading-tight">{k.value}</p>
+                  <p className="text-sm font-semibold text-card-foreground mt-1">{k.label}</p>
+                  {k.sub && <p className="text-xs text-muted-foreground mt-1">{k.sub}</p>}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+
+    {/* H-Index chart */}
+    <ScrollReveal delay={0.12}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="H-Index Growth" subtitle="MITS institutional H-Index trend (Scopus, 2019 – 2025)." />
+        <div className="flex items-center gap-3 mb-4 text-xs">
+          <TrendingUp className="w-4 h-4 text-primary" />
+          <span className="text-muted-foreground">H-Index has grown from <b className="text-foreground">21</b> in 2019 to <b className="text-foreground">70</b> in 2025.</span>
+        </div>
+        <BarChart data={hIndexTrend} rotateLabels={false} height={280} />
+      </div>
+    </ScrollReveal>
+
+    {/* Contacts */}
+    <ScrollReveal delay={0.15}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="R&D Cell Leadership" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {researchOverview.contacts.map((c) => (
             <div key={c.email} className="border border-border rounded-xl p-4 hover:shadow-md transition-shadow">
