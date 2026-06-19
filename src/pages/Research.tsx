@@ -405,12 +405,12 @@ const PatentsSection = () => {
       <ScrollReveal>
         <div className="grid sm:grid-cols-3 gap-4">
           {[
-            { l: "Total Patents", v: patentTotals.total, accent: "primary" },
-            { l: "Published", v: patentTotals.published, accent: "accent" },
-            { l: "Granted", v: patentTotals.granted, accent: "secondary" },
+            { l: "Total Patents", v: patentTotals.total, cls: "text-primary" },
+            { l: "Published", v: patentTotals.published, cls: "text-accent" },
+            { l: "Granted", v: patentTotals.granted, cls: "text-secondary" },
           ].map((s) => (
             <div key={s.l} className="bg-card border border-border rounded-2xl p-6 text-center">
-              <p className={`font-display text-5xl font-bold text-${s.accent}`}>{s.v}</p>
+              <p className={`font-display text-5xl font-bold ${s.cls}`}>{s.v}</p>
               <p className="text-sm font-semibold text-card-foreground mt-2 uppercase tracking-wider">{s.l}</p>
             </div>
           ))}
