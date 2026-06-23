@@ -362,26 +362,9 @@ className="w-full h-full object-cover"
             </AnimatePresence>
           )}
 
-          {/* Logos for identity slide - hidden */}
-          {false && slide.id === "identity" && (
-            <div className="absolute inset-0 flex items-center justify-between px-3 sm:px-8 md:px-16 pointer-events-none">
-              <div className="pointer-events-auto ml-1 sm:ml-4 md:ml-12 lg:ml-20">
-                {"leftLogo" in slide && slide.leftLogo && (
-                  <motion.img src={slide.leftLogo} alt="MITS Logo"
-                    className="h-14 sm:h-24 md:h-32 lg:h-44 w-auto object-contain"
-                    initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} />
-                )}
-              </div>
-              <div className="pointer-events-auto mr-1 sm:mr-4 md:mr-8 lg:mr-12">
-                {"rightLogo" in slide && slide.rightLogo && (
-                  <motion.img src={slide.rightLogo} alt="ESTD Logo"
-                    className="h-14 sm:h-24 md:h-32 lg:h-44 w-auto object-contain"
-                    initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} />
-                )}
-              </div>
-            </div>
-          )}
-        </div>
+{/* Logos for identity slide - hidden */}
+           {/* {false && slide.id === "identity" && (...) */}
+           </div>
 
         {/* Credential bar */}
         <AnimatePresence>

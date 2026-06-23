@@ -6,7 +6,7 @@ import { Award, BookOpen, Building2, GraduationCap, History, Landmark, Shield, S
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { leadershipProfiles } from "@/data/aboutData";
+import { leadershipProfiles, type LeadershipProfile } from "@/data/aboutData";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -27,8 +27,8 @@ const academicKeys = [
   "ombudsperson",
 ];
 
-const institutional = institutionalKeys.map((k) => leadershipProfiles[k]).filter(Boolean as any);
-const academic = academicKeys.map((k) => leadershipProfiles[k]).filter(Boolean as any);
+const institutional = institutionalKeys.map((k) => leadershipProfiles[k]).filter((p): p is LeadershipProfile => Boolean(p));
+const academic = academicKeys.map((k) => leadershipProfiles[k]).filter((p): p is LeadershipProfile => Boolean(p));
 
 const infrastructure = [
   { icon: Building2, title: "26.17-acre Campus", desc: "26.17-acre campus with modern academic blocks and amenities." },

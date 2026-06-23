@@ -14,6 +14,7 @@ import {
   Landmark,
   ScrollText,
   Building2,
+  LucideIcon,
 } from "lucide-react";
 const BASE = import.meta.env.BASE_URL;
 
@@ -40,7 +41,7 @@ type SectionKey =
   | "dsir"
   | "iso";
 
-const sections: { key: SectionKey; title: string; icon: any }[] = [
+const sections: { key: SectionKey; title: string; icon: LucideIcon }[] = [
   { key: "ugc", title: "UGC – Deemed to be University Approval", icon: Landmark },
   { key: "aiu", title: "Affiliation to Association of Indian Universities (AIU)", icon: GraduationCap },
   { key: "aicte", title: "Approved by AICTE, New Delhi", icon: ScrollText },

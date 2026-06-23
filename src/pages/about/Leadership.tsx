@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
-import { leadershipProfiles } from "@/data/aboutData";
+import { leadershipProfiles, LeadershipProfile } from "@/data/aboutData";
 
 const Leadership = () => {
   const institutionalKeys = ["chancellor", "pro-chancellor"];
-  const profiles = institutionalKeys.map((k) => leadershipProfiles[k]).filter(Boolean as any);
+  const profiles = institutionalKeys.map((k) => leadershipProfiles[k]).filter((p): p is LeadershipProfile => Boolean(p));
   return (
     <PageShell
       eyebrow="About"

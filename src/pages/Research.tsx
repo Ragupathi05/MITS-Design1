@@ -2,13 +2,13 @@
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BookOpen, FlaskConical, Lightbulb, Microscope, FileText, Award,
   Building2, GraduationCap, Globe, Download, ExternalLink, Calendar,
   Users, ChevronDown, ChevronRight, Mail, Phone, Shield, Briefcase,
   Target, Eye, ArrowRight, Layers, Scale, TrendingUp, Rocket, Droplets,
-  Sparkles, Trophy,
+  Sparkles, Trophy, Handshake, Library, Wrench,
 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
@@ -20,6 +20,8 @@ import {
   researchVisionMission, keyAchievements, scopusPublications, wosPublications,
   hIndexTrend, projectFunding, patentsAYWise, patentTotals,
   mitsFoundationData, wwrcData, collaborationData,
+  ipfcData, consultancyData, innovationData, researchCentresData,
+  advisoryCommitteeData, academicResearchData,
 } from "@/data/researchData";
 import BarChart from "@/components/research/BarChart";
 
@@ -33,7 +35,13 @@ const sectionTabs = [
   { id: "policies", label: "Policies", icon: Shield },
   { id: "events", label: "Events", icon: Calendar },
   { id: "documents", label: "Documents", icon: Layers },
-  { id: "ipr", label: "IPR / IPFC", icon: Scale },
+  { id: "advisory", label: "Advisory", icon: Users },
+  { id: "academic", label: "Academic", icon: GraduationCap },
+  { id: "ipr", label: "IPR Cell", icon: Scale },
+  { id: "collaborations", label: "Collaborations", icon: Handshake },
+  { id: "consultancy", label: "Consultancy", icon: Wrench },
+  { id: "innovation", label: "Innovation", icon: Sparkles },
+  { id: "research-centres", label: "Research Centres", icon: Library },
   { id: "mdrf", label: "MDRF", icon: Globe },
   { id: "foundation", label: "MITS Foundation", icon: Rocket },
   { id: "wwrc", label: "WWRC", icon: Droplets },
@@ -730,6 +738,302 @@ const IPRSection = () => (
   </div>
 );
 
+/* ─── ADVISORY COMMITTEE TAB ─── */
+const AdvisorySection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title={advisoryCommitteeData.title} subtitle={advisoryCommitteeData.description} />
+        <div className="grid sm:grid-cols-2 gap-4">
+          {advisoryCommitteeData.members.map((m, i) => (
+            <div key={i} className="border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+              <h4 className="font-bold text-card-foreground text-sm">{m.name}</h4>
+              <p className="text-primary text-xs font-medium mt-1">{m.designation}</p>
+              <p className="text-muted-foreground text-xs mt-1">{m.affiliation}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Responsibilities" />
+        <ul className="grid sm:grid-cols-2 gap-3">
+          {advisoryCommitteeData.responsibilities.map((r, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span>{r}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
+/* ─── ACADEMIC RESEARCH TAB ─── */
+const AcademicResearchSection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title={academicResearchData.title} subtitle={academicResearchData.description} />
+        <div className="space-y-4">
+          {academicResearchData.programmes.map((p, i) => (
+            <div key={i} className="bg-muted/40 border border-border rounded-xl p-5">
+              <h3 className="font-semibold text-foreground mb-2">{p.name}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{p.details}</p>
+            </div>
+          ))}
+        </div>
+        <div className="grid sm:grid-cols-2 gap-3 mt-4">
+          {academicResearchData.links.map((l) => (
+            <LinkCard key={l.title} title={l.title} link={l.link} icon={ExternalLink} />
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
+/* ─── COLLABORATIONS TAB ─── */
+const CollaborationsSection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Research Collaborations" subtitle={collaborationData.description} />
+        <div className="grid sm:grid-cols-2 gap-4">
+          {collaborationData.partners.map((p, i) => (
+            <div key={i} className="bg-muted/40 border border-border rounded-xl p-5">
+              <div className="flex items-start gap-3">
+                <Handshake className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <span className="text-sm text-muted-foreground">{p}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
+/* ─── IPFC TAB ─── */
+const IPFCSection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title={ipfcData.title} subtitle={ipfcData.description} />
+        <a href={ipfcData.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+          <ExternalLink className="w-4 h-4" /> Visit IPFC Portal
+        </a>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.05}>
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="bg-card border border-border rounded-2xl p-6">
+          <SectionHeading title="Objectives" />
+          <ul className="space-y-2">
+            {ipfcData.objectives.map((o, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span>{o}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="bg-card border border-border rounded-2xl p-6">
+          <SectionHeading title="Services" />
+          <ul className="space-y-2">
+            {ipfcData.services.map((s, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <span>{s}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.1}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Contact" />
+        <div className="grid sm:grid-cols-2 gap-4">
+          {ipfcData.contacts.map((c, i) => (
+            <div key={i} className="border border-border rounded-xl p-4">
+              <h4 className="font-bold text-card-foreground text-sm">{c.name}</h4>
+              <p className="text-primary text-xs font-medium mt-1">{c.role}</p>
+              <div className="space-y-1 text-xs text-muted-foreground mt-2">
+                <p className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5" /> {c.email}</p>
+                <p className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> {c.phone}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
+/* ─── CONSULTANCY TAB ─── */
+const ConsultancySection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title={consultancyData.title} subtitle={consultancyData.description} />
+        <div className="grid sm:grid-cols-2 gap-4 mb-6">
+          <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Consultancy Revenue</p>
+            <p className="font-display text-4xl font-bold text-primary mt-2">{consultancyData.revenue}</p>
+            <p className="text-xs text-muted-foreground mt-1">{consultancyData.revenueNote}</p>
+          </div>
+          <div className="bg-accent/10 border border-accent/20 rounded-xl p-5">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold mb-2">Core Activities</p>
+            <ul className="space-y-1">
+              {consultancyData.activities.slice(0, 3).map((a, i) => (
+                <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" />
+                  <span>{a}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <a href={consultancyData.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+          <ExternalLink className="w-4 h-4" /> Explore Consultancy
+        </a>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Consultancy Services" />
+        <ul className="grid sm:grid-cols-2 gap-3">
+          {consultancyData.activities.map((a, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span>{a}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.1}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Resources" />
+        <div className="grid sm:grid-cols-2 gap-3">
+          {consultancyData.links.map((l) => (
+            <LinkCard key={l.title} title={l.title} link={l.link} icon={ExternalLink} />
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
+/* ─── INNOVATION TAB ─── */
+const InnovationSection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title={innovationData.title} subtitle={innovationData.description} />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {innovationData.highlights.map((h, i) => (
+            <div key={i} className="bg-muted/40 border border-border rounded-xl p-5">
+              <div className="flex items-start gap-3">
+                <Sparkles className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                <span className="text-sm text-muted-foreground">{h}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Innovation Ecosystem" />
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="border border-border rounded-xl p-5">
+            <h3 className="font-semibold text-foreground mb-2">Startup Support</h3>
+            <p className="text-muted-foreground text-sm">20+ startups incubated with MSME support, mentoring and seed funding.</p>
+          </div>
+          <div className="border border-border rounded-xl p-5">
+            <h3 className="font-semibold text-foreground mb-2">Entrepreneurship</h3>
+            <p className="text-muted-foreground text-sm">Regular hackathons, idea pitches and innovation challenges for students and faculty.</p>
+          </div>
+          <div className="border border-border rounded-xl p-5">
+            <h3 className="font-semibold text-foreground mb-2">Idea Lab</h3>
+            <p className="text-muted-foreground text-sm">AICTE IDEA Lab provides prototype development, 3D printing and hands-on innovation support.</p>
+          </div>
+          <div className="border border-border rounded-xl p-5">
+            <h3 className="font-semibold text-foreground mb-2">Incubation Activities</h3>
+            <p className="text-muted-foreground text-sm">MITS Foundation incubation centre offers co-working space, IPR support and investor connect.</p>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.1}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Resources" />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {innovationData.links.map((l) => (
+            <LinkCard key={l.title} title={l.title} link={l.link} icon={ExternalLink} />
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
+/* ─── RESEARCH CENTRES TAB ─── */
+const ResearchCentresSection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title={researchCentresData.title} subtitle={researchCentresData.description} />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {researchCentresData.centres.map((c, i) => (
+            <div key={i} className="bg-muted/40 border border-border rounded-xl p-5">
+              <h3 className="font-semibold text-foreground mb-2">{c.name}</h3>
+              <p className="text-muted-foreground text-sm">{c.focus}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Centre Objectives" />
+        <ul className="grid sm:grid-cols-2 gap-3">
+          <li className="flex items-start gap-2 text-sm text-muted-foreground">
+            <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+            <span>Foster interdisciplinary research aligned with national priorities</span>
+          </li>
+          <li className="flex items-start gap-2 text-sm text-muted-foreground">
+            <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+            <span>Provide specialised infrastructure and lab facilities</span>
+          </li>
+          <li className="flex items-start gap-2 text-sm text-muted-foreground">
+            <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+            <span>Support doctoral and post-doctoral research programmes</span>
+          </li>
+          <li className="flex items-start gap-2 text-sm text-muted-foreground">
+            <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+            <span>Facilitate industry-sponsored projects and consultancy</span>
+          </li>
+        </ul>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.1}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Resources" />
+        <div className="grid sm:grid-cols-2 gap-3">
+          {researchCentresData.links.map((l) => (
+            <LinkCard key={l.title} title={l.title} link={l.link} icon={ExternalLink} />
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
 /* ─── MDRF TAB ─── */
 const MDRFSection = () => (
   <div className="space-y-8">
@@ -738,6 +1042,9 @@ const MDRFSection = () => (
         <SectionHeading title={mdrfData.title} />
         <p className="text-muted-foreground leading-relaxed mb-4">{mdrfData.about}</p>
         <p className="text-muted-foreground leading-relaxed mb-4">{mdrfData.platform}</p>
+        <a href="https://mits.ac.in/mdrf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+          <ExternalLink className="w-4 h-4" /> Visit MDRF Portal
+        </a>
       </div>
     </ScrollReveal>
 
@@ -812,19 +1119,6 @@ const FoundationSection = () => (
         </ul>
       </div>
     </ScrollReveal>
-    <ScrollReveal delay={0.1}>
-      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Research Collaborations" subtitle={collaborationData.description} />
-        <ul className="grid sm:grid-cols-2 gap-3">
-          {collaborationData.partners.map((p, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-              <Building2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              <span>{p}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </ScrollReveal>
   </div>
 );
 
@@ -867,6 +1161,32 @@ const WWRCSection = () => (
 const Research = () => {
   const [activeTab, setActiveTab] = useState("overview");
 
+  useEffect(() => {
+    const el = document.getElementById("tab-scroll");
+    const leftFade = document.getElementById("tab-fade-left");
+    const rightFade = document.getElementById("tab-fade-right");
+    if (!el || !leftFade || !rightFade) return;
+
+    const update = () => {
+      const canScroll = el.scrollWidth > el.clientWidth;
+      if (!canScroll) {
+        leftFade.classList.add("hidden");
+        rightFade.classList.add("hidden");
+        return;
+      }
+      leftFade.classList.toggle("hidden", el.scrollLeft <= 2);
+      rightFade.classList.toggle("hidden", el.scrollLeft + el.clientWidth >= el.scrollWidth - 2);
+    };
+
+    el.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+    return () => {
+      el.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -898,24 +1218,28 @@ const Research = () => {
         </section>
 
         {/* Tabs Navigation + Content */}
-        <section className="py-12 md:py-16 bg-background -mt-1">
+        <section className="py-6 md:py-12 bg-background -mt-1">
           <div className="container mx-auto px-4">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
               {/* Scrollable Tab List */}
-              <div className="mb-8 -mx-4 px-4 overflow-x-auto scrollbar-hide">
-                <TabsList className="inline-flex h-auto p-1 bg-muted rounded-xl gap-1 w-max">
-                  {sectionTabs.map((tab) => (
-                    <TabsTrigger
-                      key={tab.id}
-                      value={tab.id}
-                      className="flex items-center gap-1.5 px-3 py-2 text-xs md:text-sm font-medium rounded-lg whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all"
-                    >
-                      <tab.icon className="w-4 h-4" />
-                      <span className="hidden sm:inline">{tab.label}</span>
-                      <span className="sm:hidden">{tab.label.length > 8 ? tab.label.slice(0, 6) + "…" : tab.label}</span>
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
+              <div className="relative mb-8 -mx-4 px-4">
+                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none hidden" id="tab-fade-left" />
+                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" id="tab-fade-right" />
+                <div className="overflow-x-auto pb-2" id="tab-scroll" style={{ scrollbarWidth: "thin", scrollbarColor: "hsl(var(--primary)) transparent" }}>
+                  <TabsList className="inline-flex h-auto p-1 bg-muted rounded-xl gap-1 w-max">
+                    {sectionTabs.map((tab) => (
+                      <TabsTrigger
+                        key={tab.id}
+                        value={tab.id}
+                        className="flex items-center gap-1.5 px-3 py-2 text-xs md:text-sm font-medium rounded-lg whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all"
+                      >
+                        <tab.icon className="w-4 h-4" />
+                        <span className="hidden sm:inline">{tab.label}</span>
+                        <span className="sm:hidden">{tab.label.length > 8 ? tab.label.slice(0, 6) + "…" : tab.label}</span>
+                      </TabsTrigger>
+                    ))}
+                  </TabsList>
+                </div>
               </div>
 
               <TabsContent value="overview"><OverviewSection /></TabsContent>
@@ -925,7 +1249,14 @@ const Research = () => {
               <TabsContent value="policies"><PoliciesSection /></TabsContent>
               <TabsContent value="events"><EventsSection /></TabsContent>
               <TabsContent value="documents"><DocumentsSection /></TabsContent>
+              <TabsContent value="advisory"><AdvisorySection /></TabsContent>
+              <TabsContent value="academic"><AcademicResearchSection /></TabsContent>
               <TabsContent value="ipr"><IPRSection /></TabsContent>
+              <TabsContent value="collaborations"><CollaborationsSection /></TabsContent>
+              <TabsContent value="ipfc"><IPFCSection /></TabsContent>
+              <TabsContent value="consultancy"><ConsultancySection /></TabsContent>
+              <TabsContent value="innovation"><InnovationSection /></TabsContent>
+              <TabsContent value="research-centres"><ResearchCentresSection /></TabsContent>
               <TabsContent value="mdrf"><MDRFSection /></TabsContent>
               <TabsContent value="foundation"><FoundationSection /></TabsContent>
               <TabsContent value="wwrc"><WWRCSection /></TabsContent>

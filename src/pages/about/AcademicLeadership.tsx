@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
-import { leadershipProfiles } from "@/data/aboutData";
+import { leadershipProfiles, LeadershipProfile } from "@/data/aboutData";
 
 const AcademicLeadership = () => {
   const academicKeys = [
@@ -12,7 +12,7 @@ const AcademicLeadership = () => {
     "controller-of-examinations",
     "ombudsperson",
   ];
-  const profiles = academicKeys.map((k) => leadershipProfiles[k]).filter(Boolean as any);
+  const profiles = academicKeys.map((k) => leadershipProfiles[k]).filter((p): p is LeadershipProfile => Boolean(p));
 
   return (
     <PageShell

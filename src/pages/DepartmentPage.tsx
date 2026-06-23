@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { getDepartmentByKey } from "@/data/departmentData";
 import { Card, CardContent } from "@/components/ui/card";
 import InlineFacultyProfile from "@/components/InlineFacultyProfile";
-import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfileData";
+import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfiles";
 import { slugifyFaculty } from "@/lib/facultySlug";
 import { useDeptCMSData } from "@/hooks/useDeptCMSData";
 import {
@@ -43,6 +43,8 @@ const DepartmentPage = () => {
   }, []);
 
   useEffect(() => {
+    setSelectedProfile(null);
+
     if (!dept && deptKey) {
       navigate('/departments', { replace: true });
       return;
