@@ -8,9 +8,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import InlineFacultyProfile from "@/components/InlineFacultyProfile";
 import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfileData";
 import { slugifyFaculty } from "@/lib/facultySlug";
-import { useDeptCMSData } from "@/hooks/useDeptCMSData";
+import { useDeptCMSData, type CMSMoU, type CMSAchievement, type CMSPatent, type CMSPublication, type CMSPlacement, type CMSProject } from "@/hooks/useDeptCMSData";
+import EventDetailModal from "@/components/EventDetailModal";
+import MouDetailModal from "@/components/MouDetailModal";
+import AchievementDetailModal from "@/components/AchievementDetailModal";
+import PatentDetailModal from "@/components/PatentDetailModal";
+import PublicationDetailModal from "@/components/PublicationDetailModal";
+import PlacementDetailModal from "@/components/PlacementDetailModal";
+import ProjectDetailModal from "@/components/ProjectDetailModal";
 import {
-  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, Loader2, ExternalLink
+  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, ExternalLink
 } from "lucide-react";
 
 const sidebarItems = [
@@ -35,6 +42,13 @@ const DepartmentPage = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProfile, setSelectedProfile] = useState<FacultyProfile | null>(null);
+  const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
+  const [selectedMou, setSelectedMou] = useState<CMSMoU | null>(null);
+  const [selectedAchievement, setSelectedAchievement] = useState<CMSAchievement | null>(null);
+  const [selectedPatent, setSelectedPatent] = useState<CMSPatent | null>(null);
+  const [selectedPublication, setSelectedPublication] = useState<CMSPublication | null>(null);
+  const [selectedPlacement, setSelectedPlacement] = useState<CMSPlacement | null>(null);
+  const [selectedProject, setSelectedProject] = useState<CMSProject | null>(null);
   const dept = getDepartmentByKey(deptKey || "");
   const { data: cms, loading: cmsLoading } = useDeptCMSData(deptKey || "");
 
@@ -458,45 +472,57 @@ const DepartmentPage = () => {
             {activeSection === "achievements" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Achievements</h2>
-                {cmsLoading ? (
-                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
-                ) : (() => {
-                  const facultyAch = cms.achievements.length > 0
+                {(() => {
+                  const facultyAch = (!cmsLoading && cms.achievements.length > 0)
                     ? cms.achievements.filter(a => a.type === "faculty")
                     : dept.detailedAchievements.filter(a => a.type === "faculty");
-                  const studentAch = cms.achievements.length > 0
+                  const studentAch = (!cmsLoading && cms.achievements.length > 0)
                     ? cms.achievements.filter(a => a.type === "student")
                     : dept.detailedAchievements.filter(a => a.type === "student");
                   return (
                     <div className="space-y-4">
                       <h3 className="font-semibold text-primary">Faculty Achievements</h3>
                       <div className="grid md:grid-cols-2 gap-4">
-                        {facultyAch.map((a, i) => (
-                          <Card key={i} className="border-l-4 border-l-primary hover:shadow-md transition-shadow">
-                            <CardContent className="p-4">
-                              <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
-                              {a.description && <p className="text-xs text-muted-foreground mt-1">{a.description}</p>}
-                              {'name' in a && a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
-                              {'external_link' in a && a.external_link && (
-                                <a href={a.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
-                                  <ExternalLink className="w-3 h-3" />View
-                                </a>
-                              )}
-                            </CardContent>
-                          </Card>
-                        ))}
+                        {facultyAch.map((a, i) => {
+                          const isCMS = 'id' in a && typeof a.id === 'number';
+                          return (
+                            <Card key={i} onClick={() => isCMS && setSelectedAchievement(a as CMSAchievement)}
+                              className={`border-l-4 border-l-primary transition-all ${
+                                isCMS ? "hover:shadow-lg hover:-translate-y-1 cursor-pointer" : "hover:shadow-md"
+                              }`}>
+                              <CardContent className="p-4">
+                                <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
+                                {a.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{a.description}</p>}
+                                {'name' in a && a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
+                                {isCMS && <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                                {'external_link' in a && a.external_link && !isCMS && (
+                                  <a href={a.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                    <ExternalLink className="w-3 h-3" />View
+                                  </a>
+                                )}
+                              </CardContent>
+                            </Card>
+                          );
+                        })}
                       </div>
                       <h3 className="font-semibold text-accent-foreground mt-6">Student Achievements</h3>
                       <div className="grid md:grid-cols-2 gap-4">
-                        {studentAch.map((a, i) => (
-                          <Card key={i} className="border-l-4 border-l-accent hover:shadow-md transition-shadow">
-                            <CardContent className="p-4">
-                              <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
-                              {a.description && <p className="text-xs text-muted-foreground mt-1">{a.description}</p>}
-                              {'name' in a && a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
-                            </CardContent>
-                          </Card>
-                        ))}
+                        {studentAch.map((a, i) => {
+                          const isCMS = 'id' in a && typeof a.id === 'number';
+                          return (
+                            <Card key={i} onClick={() => isCMS && setSelectedAchievement(a as CMSAchievement)}
+                              className={`border-l-4 border-l-accent transition-all ${
+                                isCMS ? "hover:shadow-lg hover:-translate-y-1 cursor-pointer" : "hover:shadow-md"
+                              }`}>
+                              <CardContent className="p-4">
+                                <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
+                                {a.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{a.description}</p>}
+                                {'name' in a && a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
+                                {isCMS && <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                              </CardContent>
+                            </Card>
+                          );
+                        })}
                       </div>
                     </div>
                   );
@@ -540,10 +566,8 @@ const DepartmentPage = () => {
             {activeSection === "patents" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Patents</h2>
-                {cmsLoading ? (
-                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
-                ) : (() => {
-                  const patents = cms.patents.length > 0 ? cms.patents : dept.patents;
+                {(() => {
+                  const patents = (!cmsLoading && cms.patents.length > 0) ? cms.patents : dept.patents;
                   if (patents.length === 0) return <p className="text-muted-foreground text-sm">No patent records available.</p>;
                   return (
                     <div className="space-y-3">
@@ -554,23 +578,30 @@ const DepartmentPage = () => {
                           <div key={status}>
                             <h3 className="font-semibold text-sm text-primary mb-2">{status} ({filtered.length})</h3>
                             <div className="space-y-2">
-                              {filtered.map((p, i) => (
-                                <Card key={i} className="hover:shadow-md transition-shadow">
-                                  <CardContent className="p-3 flex items-center justify-between">
-                                    <div className="flex-1 min-w-0 pr-3">
-                                      <p className="text-sm font-medium text-secondary">{p.title}</p>
-                                      {'inventors' in p && p.inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {p.inventors}</p>}
-                                      {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
-                                      {'external_link' in p && p.external_link && (
-                                        <a href={p.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
-                                          <ExternalLink className="w-3 h-3" />View
-                                        </a>
-                                      )}
-                                    </div>
-                                    <span className={`shrink-0 text-xs px-2 py-1 rounded-full font-medium ${status === "Granted" ? "bg-green-100 text-green-700" : status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>{status}</span>
-                                  </CardContent>
-                                </Card>
-                              ))}
+                              {filtered.map((p, i) => {
+                                const isCMS = 'id' in p && typeof p.id === 'number';
+                                return (
+                                  <Card key={i} onClick={() => isCMS && setSelectedPatent(p as CMSPatent)}
+                                    className={`transition-all ${
+                                      isCMS ? "hover:shadow-lg hover:-translate-y-1 cursor-pointer" : "hover:shadow-md"
+                                    }`}>
+                                    <CardContent className="p-3 flex items-center justify-between">
+                                      <div className="flex-1 min-w-0 pr-3">
+                                        <p className="text-sm font-medium text-secondary">{p.title}</p>
+                                        {'inventors' in p && p.inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {p.inventors}</p>}
+                                        {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
+                                        {isCMS && <p className="text-xs text-primary font-medium mt-1 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                                        {'external_link' in p && p.external_link && !isCMS && (
+                                          <a href={p.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                            <ExternalLink className="w-3 h-3" />View
+                                          </a>
+                                        )}
+                                      </div>
+                                      <span className={`shrink-0 text-xs px-2 py-1 rounded-full font-medium ${status === "Granted" ? "bg-green-100 text-green-700" : status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>{status}</span>
+                                    </CardContent>
+                                  </Card>
+                                );
+                              })}
                             </div>
                           </div>
                         );
@@ -581,37 +612,53 @@ const DepartmentPage = () => {
               </motion.div>
             )}
 
-            {activeSection === "publications" && (
+                        {activeSection === "publications" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Publications</h2>
-                {cmsLoading ? (
-                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
-                ) : (() => {
+                {(() => {
+                  if (cmsLoading) {
+                    return <p className="text-muted-foreground text-sm py-8">Loading publications…</p>;
+                  }
                   const pubs = cms.publications.length > 0 ? cms.publications : dept.publications;
-                  return (["journal", "conference"] as const).map(type => {
-                    const filtered = pubs.filter(p => p.type === type);
-                    if (filtered.length === 0) return null;
-                    return (
-                      <div key={type} className="mb-6">
-                        <h3 className="font-semibold text-primary mb-3">{type === "journal" ? "Journal Publications" : "Conference Publications"}</h3>
-                        <div className="space-y-2">
-                          {filtered.map((p, i) => (
-                            <Card key={i} className="hover:shadow-md transition-shadow">
+                  if (pubs.length === 0) {
+                    return <p className="text-muted-foreground text-sm py-8">No publication records available.</p>;
+                  }
+                  const norm = (t) => (t ?? "").toLowerCase().trim();
+                  const journals    = pubs.filter(p => norm(p.type) === "journal");
+                  const conferences = pubs.filter(p => norm(p.type) === "conference");
+                  const others      = pubs.filter(p => norm(p.type) !== "journal" && norm(p.type) !== "conference");
+                  const groups = [
+                    ...(journals.length    ? [{ label: `Journal Publications (${journals.length})`,       items: journals }]    : []),
+                    ...(conferences.length ? [{ label: `Conference Publications (${conferences.length})`, items: conferences }] : []),
+                    ...(others.length      ? [{ label: `Other Publications (${others.length})`,           items: others }]      : []),
+                  ];
+                  return groups.map(({ label, items }) => (
+                    <div key={label} className="mb-6">
+                      <h3 className="font-semibold text-primary mb-3">{label}</h3>
+                      <div className="space-y-2">
+                        {items.map((p, i) => {
+                          const isCMS = ('id' in p) && typeof p.id === 'number';
+                          return (
+                            <Card key={i} onClick={() => isCMS && setSelectedPublication(p as CMSPublication)}
+                              className={`transition-all ${isCMS ? "hover:shadow-lg hover:-translate-y-1 cursor-pointer" : "hover:shadow-md"}`}>
                               <CardContent className="p-3">
                                 <p className="text-sm font-medium text-secondary">{p.title}</p>
                                 <div className="flex flex-wrap items-center gap-3 mt-1">
                                   {p.authors && <span className="text-xs text-muted-foreground">{p.authors}</span>}
-                                  <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>
-                                  {'venue' in p && p.venue && <span className="text-xs text-muted-foreground italic">{p.venue}</span>}
-                                  {'doi' in p && p.doi && <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                                  {p.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>}
+                                  {('venue' in p) && p.venue && <span className="text-xs text-muted-foreground italic">{p.venue}</span>}
+                                  {('indexing' in p) && p.indexing && <span className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{p.indexing}</span>}
+                                  {isCMS && <span className="text-xs text-primary font-medium flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</span>}
+                                  {!isCMS && ('doi' in p) && p.doi && <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                                  {!isCMS && ('external_link' in p) && p.external_link && <a href={p.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />Link</a>}
                                 </div>
                               </CardContent>
                             </Card>
-                          ))}
-                        </div>
+                          );
+                        })}
                       </div>
-                    );
-                  });
+                    </div>
+                  ));
                 })()}
               </motion.div>
             )}
@@ -642,29 +689,49 @@ const DepartmentPage = () => {
             {activeSection === "events" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Events</h2>
-                {cmsLoading ? (
-                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
-                ) : (
+                {(
                   <div className="grid md:grid-cols-2 gap-4">
-                    {(cms.events.length > 0 ? cms.events : dept.events).map((e, i) => (
-                      <Card key={i} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                        {'poster' in e && e.poster && (
-                          <img src={e.poster} alt={e.title} className="w-full h-32 object-cover" />
-                        )}
-                        <CardContent className="p-4">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                              <Calendar className="w-3.5 h-3.5 text-primary" />
-                              {('date' in e ? e.date : '') || ('from_date' in e ? e.from_date : '')}
-                            </span>
-                            {e.type && <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{e.type}</span>}
-                          </div>
-                          <h4 className="font-semibold text-sm text-secondary">{e.title}</h4>
-                          {e.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{e.description}</p>}
-                          {'venue' in e && e.venue && <p className="text-xs text-muted-foreground mt-1">📍 {e.venue}</p>}
-                        </CardContent>
-                      </Card>
-                    ))}
+                    {((!cmsLoading && cms.events.length > 0) ? cms.events : dept.events).map((e, i) => {
+                      const isCMS = 'id' in e && typeof e.id === 'number';
+                      return (
+                        <Card
+                          key={i}
+                          onClick={() => isCMS && setSelectedEventId((e as { id: number }).id)}
+                          className={`transition-all duration-300 overflow-hidden ${
+                            isCMS ? "hover:shadow-lg hover:-translate-y-1 cursor-pointer" : ""
+                          }`}
+                        >
+                          {'poster' in e && e.poster && (
+                            <div className="relative w-full h-36 bg-slate-100 overflow-hidden">
+                              <img
+                                src={e.poster}
+                                alt={e.title}
+                                loading="lazy"
+                                className="w-full h-full object-cover"
+                                onError={ev => { (ev.target as HTMLImageElement).style.display = 'none'; }}
+                              />
+                            </div>
+                          )}
+                          <CardContent className="p-4">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                                <Calendar className="w-3.5 h-3.5 text-primary" />
+                                {('date' in e ? e.date : '') || ('from_date' in e ? e.from_date : '')}
+                              </span>
+                              {e.type && <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{e.type}</span>}
+                            </div>
+                            <h4 className="font-semibold text-sm text-secondary">{e.title}</h4>
+                            {e.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{e.description}</p>}
+                            {'venue' in e && e.venue && <p className="text-xs text-muted-foreground mt-1">📍 {e.venue}</p>}
+                            {isCMS && (
+                              <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1">
+                                <ChevronRight className="w-3 h-3" /> View Details
+                              </p>
+                            )}
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
                   </div>
                 )}
               </motion.div>
@@ -673,33 +740,38 @@ const DepartmentPage = () => {
             {activeSection === "mou" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Memoranda of Understanding (MoU)</h2>
-                {cmsLoading ? (
-                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
-                ) : (
+                {(
                   <div className="grid md:grid-cols-2 gap-4">
-                    {(cms.mous.length > 0 ? cms.mous : dept.mous).map((m, i) => (
-                      <Card key={i} className="hover:shadow-md transition-shadow border-l-4 border-l-primary/30">
-                        <CardContent className="p-4">
-                          <div className="flex items-start justify-between gap-2">
-                            <h4 className="font-bold text-sm text-secondary flex-1">
-                              {'organization' in m ? m.organization : ('name' in m ? m.name : '')}
-                            </h4>
-                            {'status' in m && m.status && (
-                              <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full font-medium ${ m.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'}`}>{m.status}</span>
-                            )}
-                          </div>
-                          {'title' in m && m.title && <p className="text-xs font-medium text-primary mt-1">{m.title}</p>}
-                          <p className="text-xs text-muted-foreground mt-1">{m.purpose}</p>
-                          {'country' in m && m.country && <p className="text-xs text-muted-foreground mt-0.5">🌍 {m.country}</p>}
-                          <div className="flex flex-wrap gap-2 mt-2">
-                            {m.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{m.year}</span>}
-                            {'collabAreas' in m && (m.collabAreas ?? []).slice(0, 3).map((area: string, j: number) => (
-                              <span key={j} className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{area}</span>
-                            ))}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
+                    {((!cmsLoading && cms.mous.length > 0) ? cms.mous : dept.mous).map((m, i) => {
+                      const isCMS = 'id' in m && typeof m.id === 'number';
+                      return (
+                        <Card key={i} onClick={() => isCMS && setSelectedMou(m as CMSMoU)}
+                          className={`border-l-4 border-l-primary/30 transition-all ${
+                            isCMS ? "hover:shadow-lg hover:-translate-y-1 cursor-pointer" : "hover:shadow-md"
+                          }`}>
+                          <CardContent className="p-4">
+                            <div className="flex items-start justify-between gap-2">
+                              <h4 className="font-bold text-sm text-secondary flex-1">
+                                {'organization' in m ? m.organization : ('name' in m ? m.name : '')}
+                              </h4>
+                              {'status' in m && m.status && (
+                                <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full font-medium ${ m.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'}`}>{m.status}</span>
+                              )}
+                            </div>
+                            {'title' in m && m.title && <p className="text-xs font-medium text-primary mt-1">{m.title}</p>}
+                            <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{m.purpose}</p>
+                            {'country' in m && m.country && <p className="text-xs text-muted-foreground mt-0.5">🌍 {m.country}</p>}
+                            <div className="flex flex-wrap gap-2 mt-2">
+                              {m.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{m.year}</span>}
+                              {'collabAreas' in m && (m.collabAreas ?? []).slice(0, 3).map((area: string, j: number) => (
+                                <span key={j} className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{area}</span>
+                              ))}
+                            </div>
+                            {isCMS && <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
                   </div>
                 )}
               </motion.div>
@@ -736,14 +808,13 @@ const DepartmentPage = () => {
                   ))}
                 </div>
                 {/* Live placement records from CMS */}
-                {cmsLoading ? (
-                  <div className="flex items-center gap-2 text-muted-foreground"><Loader2 className="w-4 h-4 animate-spin" />Loading records…</div>
-                ) : cms.placements.length > 0 && (
+                {!cmsLoading && cms.placements.length > 0 && (
                   <>
                     <h3 className="font-semibold text-secondary mb-3">Placement Records</h3>
                     <div className="grid md:grid-cols-2 gap-3">
                       {cms.placements.map((p, i) => (
-                        <Card key={i} className="hover:shadow-md transition-shadow">
+                        <Card key={i} onClick={() => setSelectedPlacement(p)}
+                          className="hover:shadow-lg hover:-translate-y-1 cursor-pointer transition-all">
                           <CardContent className="p-4">
                             <div className="flex items-start justify-between gap-2">
                               <div className="flex-1 min-w-0">
@@ -770,6 +841,7 @@ const DepartmentPage = () => {
                                 {p.year && <p className="text-xs text-muted-foreground mt-1">{p.year}</p>}
                               </div>
                             </div>
+                            <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>
                           </CardContent>
                         </Card>
                       ))}
@@ -782,26 +854,33 @@ const DepartmentPage = () => {
             {activeSection === "projects" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Student Projects</h2>
-                {cmsLoading ? (
-                  <div className="flex items-center gap-2 text-muted-foreground py-8"><Loader2 className="w-4 h-4 animate-spin" />Loading…</div>
-                ) : (
+                {(
                   <div className="grid md:grid-cols-2 gap-4">
-                    {(cms.projects.length > 0 ? cms.projects : dept.studentProjects).map((p, i) => (
-                      <Card key={i} className="hover:shadow-lg transition-all duration-300">
-                        <CardContent className="p-4">
-                          <h4 className="font-semibold text-sm text-secondary">{p.title}</h4>
-                          <p className="text-xs text-muted-foreground mt-1">{p.students}</p>
-                          {'guide' in p && p.guide && <p className="text-xs text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
-                          {'stack' in p && p.stack && <p className="text-xs text-muted-foreground mt-0.5">Stack: {p.stack}</p>}
-                          {p.description && <p className="text-xs text-muted-foreground mt-2">{p.description}</p>}
-                          {'academicYear' in p && p.academicYear && <span className="text-xs bg-muted px-2 py-0.5 rounded-full mt-2 inline-block">{p.academicYear}</span>}
-                          <div className="flex gap-2 mt-2">
-                            {'github' in p && p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">GitHub</a>}
-                            {'demo' in p && p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">Demo</a>}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
+                    {((!cmsLoading && cms.projects.length > 0) ? cms.projects : dept.studentProjects).map((p, i) => {
+                      const isCMS = 'id' in p && typeof p.id === 'number';
+                      return (
+                        <Card key={i} onClick={() => isCMS && setSelectedProject(p as CMSProject)}
+                          className={`transition-all ${
+                            isCMS ? "hover:shadow-lg hover:-translate-y-1 cursor-pointer" : "hover:shadow-lg"
+                          }`}>
+                          <CardContent className="p-4">
+                            <h4 className="font-semibold text-sm text-secondary">{p.title}</h4>
+                            <p className="text-xs text-muted-foreground mt-1">{p.students}</p>
+                            {'guide' in p && p.guide && <p className="text-xs text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
+                            {'stack' in p && p.stack && <p className="text-xs text-muted-foreground mt-0.5">Stack: {p.stack}</p>}
+                            {p.description && <p className="text-xs text-muted-foreground mt-2 line-clamp-2">{p.description}</p>}
+                            {'academicYear' in p && p.academicYear && <span className="text-xs bg-muted px-2 py-0.5 rounded-full mt-2 inline-block">{p.academicYear}</span>}
+                            {isCMS && <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                            {!isCMS && (
+                              <div className="flex gap-2 mt-2">
+                                {'github' in p && p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">GitHub</a>}
+                                {'demo' in p && p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">Demo</a>}
+                              </div>
+                            )}
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
                   </div>
                 )}
               </motion.div>
@@ -818,14 +897,22 @@ const DepartmentPage = () => {
                   const filtered = dept.subjects.filter(s => s.type === type);
                   if (filtered.length === 0) return null;
                   const label = type === "core" ? "Core Subjects" : type === "elective" ? "Elective Subjects" : type === "professional-skill" ? "Professional Skills" : "Optional Training (Industry)";
+                  const color = type === "core" ? "primary" : type === "elective" ? "accent-foreground" : type === "professional-skill" ? "violet-600" : "emerald-600";
                   return (
                     <div key={type} className="mb-6">
                       <h3 className="font-semibold text-primary mb-3">{label}</h3>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
                         {filtered.map((s, i) => (
-                          <span key={i} className="bg-card border border-border text-secondary text-sm px-3 py-1.5 rounded-lg">
-                            {s.name} <span className="text-xs text-muted-foreground ml-1">(Sem {s.semester})</span>
-                          </span>
+                          <Card key={i} className="hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+                            <CardContent className="p-4">
+                              <div className="flex items-start justify-between gap-2 mb-2">
+                                <h4 className="font-semibold text-sm text-secondary flex-1">{s.name}</h4>
+                                <span className="shrink-0 text-xs font-bold text-muted-foreground bg-muted px-2 py-0.5 rounded-full">Sem {s.semester}</span>
+                              </div>
+                              {s.code && <p className="text-xs text-muted-foreground">Code: {s.code}</p>}
+                              {s.credits && <p className="text-xs text-primary font-medium">Credits: {s.credits}</p>}
+                            </CardContent>
+                          </Card>
                         ))}
                       </div>
                     </div>
@@ -836,6 +923,55 @@ const DepartmentPage = () => {
           </main>
         </div>
       </div>
+
+      {selectedEventId !== null && (
+        <EventDetailModal
+          eventId={selectedEventId}
+          onClose={() => setSelectedEventId(null)}
+        />
+      )}
+
+      {selectedMou && (
+        <MouDetailModal
+          mou={selectedMou}
+          onClose={() => setSelectedMou(null)}
+        />
+      )}
+
+      {selectedAchievement && (
+        <AchievementDetailModal
+          achievement={selectedAchievement}
+          onClose={() => setSelectedAchievement(null)}
+        />
+      )}
+
+      {selectedPatent && (
+        <PatentDetailModal
+          patent={selectedPatent}
+          onClose={() => setSelectedPatent(null)}
+        />
+      )}
+
+      {selectedPublication && (
+        <PublicationDetailModal
+          publication={selectedPublication}
+          onClose={() => setSelectedPublication(null)}
+        />
+      )}
+
+      {selectedPlacement && (
+        <PlacementDetailModal
+          placement={selectedPlacement}
+          onClose={() => setSelectedPlacement(null)}
+        />
+      )}
+
+      {selectedProject && (
+        <ProjectDetailModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
 
       <Footer />
     </div>

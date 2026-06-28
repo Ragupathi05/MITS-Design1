@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 import { Calendar, Handshake, ExternalLink, Globe, MapPin, Tag, Loader2, Award, BookOpen, FileText, FolderOpen, Trophy } from "lucide-react";
 import { useDeptCMSData } from "@/hooks/useDeptCMSData";
+import { useState } from "react";
+import EventDetailModal from "@/components/EventDetailModal";
+import MouDetailModal from "@/components/MouDetailModal";
+import AchievementDetailModal from "@/components/AchievementDetailModal";
+import PatentDetailModal from "@/components/PatentDetailModal";
+import PublicationDetailModal from "@/components/PublicationDetailModal";
+import PlacementDetailModal from "@/components/PlacementDetailModal";
+import ProjectDetailModal from "@/components/ProjectDetailModal";
+import type { CMSMoU, CMSAchievement, CMSPatent, CMSPublication, CMSPlacement, CMSProject } from "@/hooks/useDeptCMSData";
 
 interface Props { deptKey: string; }
 
@@ -26,6 +35,13 @@ const SectionTitle = ({ icon: Icon, title, count, color }: { icon: React.Element
 
 const DeptCMSStrip = ({ deptKey }: Props) => {
   const { data, loading } = useDeptCMSData(deptKey);
+  const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
+  const [selectedMou, setSelectedMou] = useState<CMSMoU | null>(null);
+  const [selectedAchievement, setSelectedAchievement] = useState<CMSAchievement | null>(null);
+  const [selectedPatent, setSelectedPatent] = useState<CMSPatent | null>(null);
+  const [selectedPublication, setSelectedPublication] = useState<CMSPublication | null>(null);
+  const [selectedPlacement, setSelectedPlacement] = useState<CMSPlacement | null>(null);
+  const [selectedProject, setSelectedProject] = useState<CMSProject | null>(null);
 
   const hasContent = data.events.length > 0 || data.mous.length > 0 ||
     data.achievements.length > 0 || data.patents.length > 0 ||
@@ -42,6 +58,7 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
   if (!hasContent) return null;
 
   return (
+    <>
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
@@ -68,7 +85,8 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
             <div className="grid sm:grid-cols-2 gap-3">
               {data.events.map(ev => (
                 <motion.div key={ev.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-2">
+                  onClick={() => setSelectedEventId(ev.id)}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col gap-2 cursor-pointer">
                   <div className="flex items-start justify-between gap-2">
                     <h4 className="font-semibold text-sm text-slate-800 leading-snug flex-1">{ev.title}</h4>
                     {ev.type && (
@@ -96,7 +114,8 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
             <div className="grid sm:grid-cols-2 gap-3">
               {data.achievements.map(a => (
                 <motion.div key={a.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  onClick={() => setSelectedAchievement(a)}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <div className="flex items-start justify-between gap-2">
                     <h4 className="font-semibold text-sm text-slate-800 flex-1">{a.title}</h4>
                     <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${a.type === "faculty" ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}>
@@ -123,7 +142,8 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
             <div className="grid sm:grid-cols-2 gap-3">
               {data.mous.map(m => (
                 <motion.div key={m.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200 group">
+                  onClick={() => setSelectedMou(m)}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 group cursor-pointer">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center shrink-0">
                       <Handshake className="w-5 h-5 text-primary" />
@@ -151,7 +171,8 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
             <div className="grid sm:grid-cols-2 gap-3">
               {data.patents.map(p => (
                 <motion.div key={p.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  onClick={() => setSelectedPatent(p)}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <div className="flex items-start justify-between gap-2">
                     <h4 className="font-semibold text-sm text-slate-800 flex-1">{p.title}</h4>
                     <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${p.status === "Granted" ? "bg-green-100 text-green-700" : p.status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>
@@ -178,7 +199,8 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
             <div className="space-y-2">
               {data.publications.map(p => (
                 <motion.div key={p.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  onClick={() => setSelectedPublication(p)}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <div className="flex items-start justify-between gap-2">
                     <p className="text-sm font-medium text-slate-800 flex-1">{p.title}</p>
                     <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-slate-100 text-slate-600 whitespace-nowrap">{p.type}</span>
@@ -201,7 +223,8 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
             <div className="grid sm:grid-cols-2 gap-3">
               {data.placements.map(p => (
                 <motion.div key={p.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  onClick={() => setSelectedPlacement(p)}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex-1 min-w-0">
                       {p.subtype === "Training" ? (
@@ -238,7 +261,8 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
             <div className="grid sm:grid-cols-2 gap-3">
               {data.projects.map(p => (
                 <motion.div key={p.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-md transition-all duration-200">
+                  onClick={() => setSelectedProject(p)}
+                  className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <h4 className="font-semibold text-sm text-slate-800">{p.title}</h4>
                   {p.students && <p className="text-xs text-slate-500 mt-0.5">{p.students}</p>}
                   {p.guide && <p className="text-xs text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
@@ -255,6 +279,29 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
         )}
       </div>
     </motion.div>
+
+    {selectedEventId !== null && (
+      <EventDetailModal eventId={selectedEventId} onClose={() => setSelectedEventId(null)} />
+    )}
+    {selectedMou && (
+      <MouDetailModal mou={selectedMou} onClose={() => setSelectedMou(null)} />
+    )}
+    {selectedAchievement && (
+      <AchievementDetailModal achievement={selectedAchievement} onClose={() => setSelectedAchievement(null)} />
+    )}
+    {selectedPatent && (
+      <PatentDetailModal patent={selectedPatent} onClose={() => setSelectedPatent(null)} />
+    )}
+    {selectedPublication && (
+      <PublicationDetailModal publication={selectedPublication} onClose={() => setSelectedPublication(null)} />
+    )}
+    {selectedPlacement && (
+      <PlacementDetailModal placement={selectedPlacement} onClose={() => setSelectedPlacement(null)} />
+    )}
+    {selectedProject && (
+      <ProjectDetailModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+    )}
+    </>
   );
 };
 
