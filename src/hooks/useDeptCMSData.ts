@@ -2,6 +2,20 @@ import { useState, useEffect } from "react";
 
 const IS_LOCAL = typeof window !== "undefined" && window.location.hostname === "localhost";
 const CMS_DIRECT = "https://mits-cms.freedev.app/backend/public_api";
+// In production (GitHub Pages) we read pre-fetched static JSON baked at build time.
+// This avoids all CORS issues. The files live at /MITS-Design1/cms-data/<deptKey>/<endpoint>.json
+const STATIC_BASE = "/MITS-Design1/cms-data";
+
+async function staticFetch<T>(deptKey: string, endpoint: string, key: string): Promise<T[]> {
+  try {
+    const res = await fetch(`${STATIC_BASE}/${deptKey}/${endpoint}.json`, { signal: AbortSignal.timeout(10000) });
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.success ? ((json[key] as T[]) ?? []) : [];
+  } catch {
+    return [];
+  }
+}
 
 const CMS_CODE: Record<string, string> = {
   cse:   "CSE",
@@ -217,6 +231,21 @@ function normalizeMoUs(items: CMSMoU[]): CMSMoU[] {
 }
 
 export async function fetchEventDetail(id: number): Promise<CMSEvent | null> {
+  if (!IS_LOCAL) {
+    // Production: try to find the event in the pre-fetched static JSON files
+    // by scanning all dept event files
+    for (const deptKey of Object.keys(CMS_CODE)) {
+      try {
+        const res = await fetch(`${STATIC_BASE}/${deptKey}/events.json`, { signal: AbortSignal.timeout(5000) });
+        if (!res.ok) continue;
+        const json = await res.json();
+        const events: CMSEvent[] = json.events ?? [];
+        const found = events.find(e => e.id === id);
+        if (found) return found;
+      } catch { continue; }
+    }
+    return null;
+  }
   const base = IS_LOCAL ? "/cms-api" : CMS_DIRECT;
   const url = `${base}/event_detail.php?id=${id}`;
   try {
@@ -265,30 +294,60 @@ export function useDeptCMSData(deptKey: string) {
     setLoading(true);
 
     const d = encodeURIComponent(cmsCode);
-    Promise.all([
-      safeFetch<CMSEvent>       ("events.php?dept=" + d,       "events"),
-      safeFetch<CMSMoU>         ("mous.php?dept=" + d,         "mous"),
-      safeFetch<CMSAchievement> ("achievements.php?dept=" + d, "achievements"),
-      safeFetch<CMSPatent>      ("patents.php?dept=" + d,      "patents"),
-      safeFetch<CMSPublication> ("publications.php?dept=" + d, "publications"),
-      safeFetch<CMSPlacement>   ("placements.php?dept=" + d,   "placements"),
-      safeFetch<CMSProject>     ("projects.php?dept=" + d,     "projects"),
-    ]).then(([events, mous, achievements, patents, publications, placements, projects]) => {
-      if (!cancelled) {
-        setData({
-          events: normalizeEvents(events),
-          mous: normalizeMoUs(mous),
-          achievements,
-          patents,
-          publications,
-          placements,
-          projects,
-        });
-        setLoading(false);
-      }
-    }).catch(() => {
-      if (!cancelled) setLoading(false);
-    });
+
+    if (IS_LOCAL) {
+      // Dev: fetch live from CMS via Vite proxy
+      Promise.all([
+        safeFetch<CMSEvent>       ("events.php?dept=" + d,       "events"),
+        safeFetch<CMSMoU>         ("mous.php?dept=" + d,         "mous"),
+        safeFetch<CMSAchievement> ("achievements.php?dept=" + d, "achievements"),
+        safeFetch<CMSPatent>      ("patents.php?dept=" + d,      "patents"),
+        safeFetch<CMSPublication> ("publications.php?dept=" + d, "publications"),
+        safeFetch<CMSPlacement>   ("placements.php?dept=" + d,   "placements"),
+        safeFetch<CMSProject>     ("projects.php?dept=" + d,     "projects"),
+      ]).then(([events, mous, achievements, patents, publications, placements, projects]) => {
+        if (!cancelled) {
+          setData({
+            events: normalizeEvents(events),
+            mous: normalizeMoUs(mous),
+            achievements,
+            patents,
+            publications,
+            placements,
+            projects,
+          });
+          setLoading(false);
+        }
+      }).catch(() => {
+        if (!cancelled) setLoading(false);
+      });
+    } else {
+      // Production: read pre-built static JSON files (no CORS)
+      Promise.all([
+        staticFetch<CMSEvent>       (deptKey, "events",       "events"),
+        staticFetch<CMSMoU>         (deptKey, "mous",         "mous"),
+        staticFetch<CMSAchievement> (deptKey, "achievements", "achievements"),
+        staticFetch<CMSPatent>      (deptKey, "patents",      "patents"),
+        staticFetch<CMSPublication> (deptKey, "publications", "publications"),
+        staticFetch<CMSPlacement>   (deptKey, "placements",   "placements"),
+        staticFetch<CMSProject>     (deptKey, "projects",     "projects"),
+      ]).then(([events, mous, achievements, patents, publications, placements, projects]) => {
+        if (!cancelled) {
+          setData({
+            events: normalizeEvents(events),
+            mous: normalizeMoUs(mous),
+            achievements,
+            patents,
+            publications,
+            placements,
+            projects,
+          });
+          setLoading(false);
+        }
+      }).catch(() => {
+        if (!cancelled) setLoading(false);
+      });
+    }
 
     return () => { cancelled = true; };
   }, [deptKey]);

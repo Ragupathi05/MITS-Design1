@@ -31,6 +31,9 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Pre-fetch CMS data
+        run: node fetch-cms-data.mjs
+
       - name: Build
         run: npm run build
 
