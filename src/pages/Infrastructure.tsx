@@ -332,8 +332,7 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lightboxOpen, images.length]);
+}, [lightboxOpen, images.length]);
 
   if (!images || images.length === 0) return null;
 

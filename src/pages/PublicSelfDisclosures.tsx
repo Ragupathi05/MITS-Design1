@@ -17,6 +17,7 @@ import {
   Image as ImageIcon,
   Phone,
   BadgeCheck as BadgeCheckIcon,
+  LucideIcon,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -25,7 +26,7 @@ import { psdSections, psdOverviewPdf, type PsdRow } from "@/data/psdData";
 
 const BASE = import.meta.env.BASE_URL;
 
-const sectionIcon: Record<string, any> = {
+const sectionIcon: Record<string, LucideIcon> = {
   "about-hei": Landmark,
   administration: Users,
   academics: GraduationCap,

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Users } from "lucide-react";
-import type { FacultyProfile, FacultySection } from "@/data/facultyProfileData";
+import type { FacultyProfile, FacultySection } from "@/data/facultyProfiles";
 
 interface InlineFacultyProfileProps {
   profile: FacultyProfile;

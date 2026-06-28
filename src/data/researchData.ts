@@ -256,3 +256,254 @@ export const mdrfData = {
   ],
 };
 
+
+/* ─── Extended data per uploaded Website Information document ─── */
+
+export const researchVisionMission = {
+  vision:
+    "To promote academic excellence, innovation, and impactful research that contributes to the academic, technological, and societal growth of the nation.",
+  mission:
+    "The R&D Cell at MITS, Deemed to be University facilitates and monitors research publications, research projects, patents, technology transfer and consultancy activities to encourage interdisciplinary research, foster innovation, and strengthen the university's research ecosystem.",
+  objectives: [
+    "Strengthen the institutional research ecosystem and culture across all departments.",
+    "Promote interdisciplinary research and collaboration with industry and global academia.",
+    "Facilitate sponsored research projects from national and international funding agencies.",
+    "Encourage faculty and students to publish in SCI/Scopus indexed journals.",
+    "Promote patent filing, copyrights, trademarks, GI and knowledge commercialization.",
+    "Support startups and innovation through MITS Foundation and incubation centres.",
+    "Mentor early-career faculty and Ph.D. scholars through structured research programs.",
+  ],
+};
+
+export const keyAchievements: { label: string; value: string; sub?: string }[] = [
+  { label: "Top 2% Scientists (Stanford)", value: "Listed", sub: "Most Influential Scientists worldwide" },
+  { label: "R&D / Seminar Grants", value: "₹18.44 Cr", sub: "Sanctioned by funding agencies till date" },
+  { label: "Consultancy Revenue", value: "₹1.77 Cr", sub: "Generated till F.Y. 2025-26" },
+  { label: "SCI / Scopus Publications", value: "3,000+", sub: "Articles in reputed journals" },
+  { label: "Total Patents", value: "315", sub: "120 Granted • 176 Published • 13 under exam • 6 filed" },
+  { label: "Copyrights / Trademarks / GI", value: "06 / 03 / 23", sub: "Intellectual property portfolio" },
+  { label: "Faculty & Student Incentives", value: "₹121.16 L", sub: "For publications, projects & consultancy" },
+  { label: "MSME Incubation Centre", value: "Established", sub: "Supported by MSME, Govt. of India" },
+  { label: "Startup Companies", value: "20+", sub: "Established in MITS Incubation Centre" },
+  { label: "NABL Accredited Labs", value: "Yes", sub: "Testing & Calibration Laboratories" },
+  { label: "MITS-IPFC", value: "Sanctioned", sub: "Intellectual Property Facilitation Centre by MSME" },
+  { label: "AICTE IDEA LAB", value: "Sanctioned", sub: "Approved by AICTE" },
+];
+
+/* Bar chart datasets (from uploaded graphs) */
+
+export const scopusPublications = [
+  { label: "2026*", value: 222 }, { label: "2025", value: 707 }, { label: "2024", value: 523 },
+  { label: "2023", value: 334 }, { label: "2022", value: 238 }, { label: "2021", value: 187 },
+  { label: "2020", value: 208 }, { label: "2019", value: 221 }, { label: "2018", value: 161 },
+  { label: "2017", value: 103 }, { label: "2016", value: 74 }, { label: "2015", value: 33 },
+  { label: "2014", value: 21 }, { label: "2013", value: 12 }, { label: "2012", value: 11 },
+  { label: "2011", value: 14 }, { label: "2010", value: 6 }, { label: "2009", value: 4 },
+  { label: "2008", value: 4 }, { label: "2007", value: 1 },
+];
+
+export const wosPublications = [
+  { label: "2026*", value: 136 }, { label: "2025", value: 226 }, { label: "2024", value: 127 },
+  { label: "2023", value: 110 }, { label: "2022", value: 114 }, { label: "2021", value: 118 },
+  { label: "2020", value: 140 }, { label: "2019", value: 128 }, { label: "2018", value: 52 },
+  { label: "2017", value: 28 }, { label: "2016", value: 24 }, { label: "2015", value: 7 },
+  { label: "2014", value: 8 }, { label: "2013", value: 6 }, { label: "2012", value: 2 },
+  { label: "2011", value: 7 }, { label: "2010", value: 1 }, { label: "2009", value: 3 },
+  { label: "2008", value: 3 },
+];
+
+export const hIndexTrend = [
+  { label: "2019", value: 21 }, { label: "2020", value: 31 }, { label: "2021", value: 36 },
+  { label: "2022", value: 45 }, { label: "2023", value: 55 }, { label: "2024", value: 64 },
+  { label: "2025", value: 70 },
+];
+
+export const projectFunding = [
+  { label: "2025-26", value: 16.65 }, { label: "2024-25", value: 111.10 },
+  { label: "2023-24", value: 210.30 }, { label: "2022-23", value: 30.01 },
+  { label: "2021-22", value: 3.67 }, { label: "2020-21", value: 24.90 },
+  { label: "2019-20", value: 147.90 }, { label: "2018-19", value: 215.00 },
+  { label: "2017-18", value: 103.08 }, { label: "2016-17", value: 738.54 },
+  { label: "2015-16", value: 149.01 }, { label: "2014-15", value: 61.87 },
+  { label: "2013-14", value: 32.40 },
+];
+
+export const patentsAYWise = [
+  { year: "2025-26*", filed: 3,  published: 35, underExam: 0, granted: 20, total: 58 },
+  { year: "2024-25",  filed: 0,  published: 39, underExam: 9, granted: 47,  total: 95 },
+  { year: "2023-24",  filed: 0,  published: 46, underExam: 1, granted: 37, total: 84 },
+  { year: "2022-23",  filed: 2,  published: 23, underExam: 1, granted: 6, total: 32 },
+  { year: "2021-22",  filed: 1,  published: 14,  underExam: 0, granted: 4,  total: 19 },
+  { year: "2020-21",  filed: 0,  published: 10, underExam: 1, granted: 4,  total: 15 },
+  { year: "2019-20",  filed: 0,  published: 6,  underExam: 1,  granted: 2,  total: 9  },
+  { year: "2018-19",  filed: 0,  published: 1,  underExam: 0,  granted: 0,  total: 1  },
+  { year: "2017-18",  filed: 0,  published: 2,  underExam: 0,  granted: 0,  total: 2  },
+];
+
+export const patentTotals = { total: 315, filed: 6, published: 176, underExamination: 13, granted: 120 };
+
+export const mitsFoundationData = {
+  title: "MITS Foundation",
+  url: "https://mitsfoundation.org/",
+  description:
+    "A Section 8 Company established under MITS to provide incubation, mentoring and ecosystem support to startups led by faculty, students and external innovators. The Foundation drives translational research, technology commercialization and entrepreneurial outcomes from the campus.",
+  highlights: [
+    "Section 8 not-for-profit company registered for incubation & innovation.",
+    "20+ startups incubated within the MITS Incubation Centre.",
+    "MSME-supported Incubation Centre, Government of India.",
+    "Funding linkages with MSME, AICTE, DST and angel investor networks.",
+    "Industry mentoring, IPR support, prototype labs and seed funding facilitation.",
+  ],
+};
+
+export const wwrcData = {
+  title: "Water & Wastewater Research Centre (WWRC)",
+  url: "https://mits.ac.in/wwrc",
+  description:
+    "The Water and Wastewater Research Centre at MITS focuses on sustainable water management, advanced wastewater treatment, water quality monitoring and rural drinking water solutions, contributing to UN SDG 6 (Clean Water & Sanitation).",
+  focusAreas: [
+    "Advanced wastewater treatment and resource recovery",
+    "Membrane technologies and desalination",
+    "Drinking water quality monitoring & IoT-based water systems",
+    "Industrial effluent treatment and zero liquid discharge",
+    "Sustainability assessment of urban & rural water bodies",
+  ],
+};
+
+export const collaborationData = {
+  description:
+    "MITS has active research and academic collaborations with national laboratories, premier institutions and industries across India and overseas. These collaborations support joint research projects, faculty/student exchange, internships, consultancy and translational research.",
+  partners: [
+    "DST, SERB, ANRF, ISRO, MSME, ICSSR, UGC, AICTE",
+    "Premier IITs, NITs and Central Universities (India)",
+    "International universities for joint Ph.D. / sandwich programs",
+    "Industry consortia for consultancy, sponsored R&D and technology transfer",
+    "Startup ecosystems, incubators and angel investor networks",
+  ],
+};
+
+export const ipfcData = {
+  title: "Intellectual Property Facilitation Centre (IPFC)",
+  url: "https://mits.ac.in/ipfc",
+  description:
+    "MITS IPFC is recognised by MSME, Government of India, to support innovators, startups and MSMEs in intellectual property creation, protection and commercialisation. The centre provides end-to-end patent support, trademark facilitation and technology transfer services.",
+  objectives: [
+    "Create IP awareness among students, faculty, startups and MSMEs",
+    "Provide patent search, drafting and filing support",
+    "Facilitate technology transfer and IP commercialisation",
+    "Support MSMEs and startups in IP portfolio building",
+  ],
+  services: [
+    "Patent Prior Art Search and Drafting Support",
+    "Trademark and GI Facilitation",
+    "IPR Awareness Workshops and Training",
+    "Startup Mentoring on IP Strategy",
+    "Technology Transfer and Licensing Support",
+  ],
+  contacts: [
+    { name: "Dr. P. Sivaiah", role: "Coordinator", email: "dean_research@mits.ac.in", phone: "+91-8571-280255" },
+    { name: "Dr. K. Arul Kumar", role: "Co-Coordinator", email: "arulkumark@mits.ac.in", phone: "+91-8571-280255" },
+  ],
+};
+
+export const consultancyData = {
+  title: "Consultancy",
+  url: "https://mits.ac.in/consultancy",
+  description:
+    "MITS faculty extend their expertise to industry and government organisations through consultancy assignments, sponsored testing, expert advice and joint problem solving. Consultancy activities bridge the gap between academic research and industrial application.",
+  revenue: "₹1.77 Cr",
+  revenueNote: "Consultancy revenue generated till F.Y. 2025-26",
+  activities: [
+    "Material testing and characterisation",
+    "Design and analysis consultancy",
+    "Software and IT consulting",
+    "Environmental and civil engineering audits",
+    "Electrical system design and audits",
+  ],
+  links: [
+    { title: "Consultancy Overview", link: "https://mits.ac.in/consultancy" },
+    { title: "Consultancy Policy", link: "https://mits.ac.in/assets/pdf/research/Consultancy-Policy.pdf" },
+  ],
+};
+
+export const innovationData = {
+  title: "Innovation & Entrepreneurship",
+  url: "https://mits.ac.in/innovation",
+  description:
+    "MITS fosters a culture of innovation and entrepreneurship through incubation, ideation labs, startup mentoring and industry-academia connect. The ecosystem nurtures student and faculty startups from idea to market.",
+  highlights: [
+    "20+ startups incubated at MITS Incubation Centre",
+    "AICTE IDEA Lab sanctioned for student innovation",
+    "MSME-supported incubation and seed funding",
+    "Regular hackathons, idea pitches and innovation challenges",
+    "Industry mentoring, IPR support and prototype labs",
+  ],
+  links: [
+    { title: "Innovation Portal", link: "https://mits.ac.in/innovation" },
+    { title: "MITS Foundation (Incubation)", link: "https://mitsfoundation.org/" },
+    { title: "Startup Policy", link: "https://mits.ac.in/assets/pdf/research/MITS-Startup-Policy.pdf" },
+  ],
+};
+
+export const researchCentresData = {
+  title: "Research Centres",
+  url: "https://mits.ac.in/research-centres",
+  description:
+    "MITS hosts recognised research centres across disciplines providing infrastructure, funding support and mentorship for doctoral and post-doctoral research. Each centre focuses on emerging areas aligned with national and global priorities.",
+  centres: [
+    { name: "Water & Wastewater Research Centre (WWRC)", focus: "Sustainable water management and treatment" },
+    { name: "Advanced Manufacturing & Materials", focus: "Smart manufacturing and composite materials" },
+    { name: "Intelligent Systems & IoT", focus: "AI, ML and cyber-physical systems" },
+    { name: "Renewable Energy & Environment", focus: "Clean energy and environmental sustainability" },
+    { name: "Structural & Earthquake Engineering", focus: "Seismic safety and resilient infrastructure" },
+  ],
+  links: [
+    { title: "Research Centres Portal", link: "https://mits.ac.in/research-centres" },
+    { title: "Research Facilities", link: "https://mits.ac.in/assets/pdf/research/Research%20Facilities.pdf" },
+  ],
+};
+
+export const advisoryCommitteeData = {
+  title: "Research Advisory Committee",
+  description:
+    "The Research Advisory Committee guides the R&D Cell in policy, priority setting and quality assurance. The committee comprises eminent academicians, industry experts and senior administrators.",
+  members: [
+    { name: "Dr. R. Thulasiram Naidu", designation: "Advisor - R&D & Consultancy", affiliation: "MITS" },
+    { name: "Dr. P. Sivaiah", designation: "Associate Dean - R&D", affiliation: "MITS" },
+    { name: "External Expert", designation: "Industry Expert", affiliation: "To be nominated" },
+    { name: "External Expert", designation: "Academician", affiliation: "To be nominated" },
+  ],
+  responsibilities: [
+    "Advise on research priorities and strategic directions",
+    "Review progress of research programmes and projects",
+    "Recommend policy improvements for R&D ecosystem",
+    "Facilitate industry-academia linkages",
+  ],
+};
+
+export const academicResearchData = {
+  title: "Academic Research Programmes",
+  description:
+    "MITS offers structured Ph.D. programmes across engineering, science and management disciplines. The research programmes are designed to nurture independent researchers capable of contributing to knowledge and innovation.",
+  programmes: [
+    {
+      name: "Ph.D. Programmes",
+      details:
+        "Doctoral programmes are offered in CSE, ECE, EEE, ME, CE, Chemistry, Physics, Mathematics, English and Management. Admissions are notified through MITS website and university portal.",
+    },
+    {
+      name: "Research Centres",
+      details:
+        "MITS is recognised as a research centre by JNTUA for Doctoral programme admissions. The centre provides access to specialised labs, digital libraries and funding support.",
+    },
+    {
+      name: "Centre of Excellence",
+      details:
+        "Industry-supported centres of excellence enable collaborative research, skill development and technology demonstration in emerging areas.",
+    },
+  ],
+  links: [
+    { title: "Research Scholars List", link: "https://mits.ac.in/assets/pdf/research/Enrolled%20Research%20Scholars-List.pdf" },
+    { title: "Research Centres", link: "https://mits.ac.in/research-centres" },
+  ],
+};

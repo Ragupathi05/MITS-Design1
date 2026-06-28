@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDepartmentByKey, type FacultyMember } from "@/data/departmentData";
-import { getFacultyProfile, type FacultyProfile, type FacultySection } from "@/data/facultyProfileData";
+import { getFacultyProfile, type FacultyProfile, type FacultySection } from "@/data/facultyProfiles";
 import { slugifyFaculty } from "@/lib/facultySlug";
 import {
   ArrowLeft, ArrowRight, Mail, GraduationCap, BookOpen,

@@ -14,6 +14,7 @@ import {
   Landmark,
   ScrollText,
   Building2,
+  LucideIcon,
 } from "lucide-react";
 const BASE = import.meta.env.BASE_URL;
 
@@ -40,7 +41,7 @@ type SectionKey =
   | "dsir"
   | "iso";
 
-const sections: { key: SectionKey; title: string; icon: any }[] = [
+const sections: { key: SectionKey; title: string; icon: LucideIcon }[] = [
   { key: "ugc", title: "UGC – Deemed to be University Approval", icon: Landmark },
   { key: "aiu", title: "Affiliation to Association of Indian Universities (AIU)", icon: GraduationCap },
   { key: "aicte", title: "Approved by AICTE, New Delhi", icon: ScrollText },
@@ -241,7 +242,7 @@ const AffiliationsAccreditations = () => {
                               ))}
                               {filteredAicte.length === 0 && (
                                 <p className="col-span-full text-sm text-[#0f2a44]/60 py-8 text-center">
-                                  No AICTE approvals match "{q}".
+                                  No AICTE approvals available.
                                 </p>
                               )}
                             </div>
@@ -301,7 +302,7 @@ const AffiliationsAccreditations = () => {
                               ))}
                               {filteredNba.length === 0 && (
                                 <p className="col-span-full text-sm text-[#0f2a44]/60 py-8 text-center">
-                                  No NBA accreditations match "{q}".
+                                  No NBA accreditations available.
                                 </p>
                               )}
                             </div>
