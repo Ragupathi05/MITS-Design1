@@ -232,16 +232,13 @@ function normalizeMoUs(items: CMSMoU[]): CMSMoU[] {
 
 export async function fetchEventDetail(id: number): Promise<CMSEvent | null> {
   if (!IS_LOCAL) {
-    // Production: try to find the event in the pre-fetched static JSON files
-    // by scanning all dept event files
+    // Production: read from pre-fetched static event detail file
     for (const deptKey of Object.keys(CMS_CODE)) {
       try {
-        const res = await fetch(`${STATIC_BASE}/${deptKey}/events.json`, { signal: AbortSignal.timeout(5000) });
+        const res = await fetch(`${STATIC_BASE}/${deptKey}/event_${id}.json`, { signal: AbortSignal.timeout(5000) });
         if (!res.ok) continue;
         const json = await res.json();
-        const events: CMSEvent[] = json.events ?? [];
-        const found = events.find(e => e.id === id);
-        if (found) return found;
+        if (json.success && json.event) return json.event as CMSEvent;
       } catch { continue; }
     }
     return null;
