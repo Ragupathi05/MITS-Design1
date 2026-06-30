@@ -1,0 +1,25 @@
+// Re-generated gallery list matching disk files
+export const gallery4Images: string[] = [
+  "/gallery/board_discussion_room.jpg",
+  "/gallery/classroom_audience.jpg",
+  "/gallery/classroom_students.jpg",
+  "/gallery/conference_hall_meeting.jpg",
+  "/gallery/conference_panel_discussion.jpg",
+  "/gallery/discussion_roundtable.jpg",
+  "/gallery/international_conference_stage.jpg",
+  "/gallery/lecture_hall_students.jpg",
+  "/gallery/seminar.jpg",
+  "/gallery/seminar1.jpg",
+  "/gallery/seminar2.jpg",
+  "/gallery/seminar3.jpg",
+  "/gallery/seminar4.jpg",
+  "/gallery/seminar5.JPG",
+  "/gallery/seminar6.JPG",
+  "/gallery/seminar7.JPG",
+  "/gallery/seminar8.JPG",
+  "/gallery/seminar9.JPG",
+  "/gallery/seminar_hall_audience.jpg",
+  "/gallery/seminar_hall_audience_2.jpeg",
+  "/gallery/seminar_hall_presentation.jpg",
+  "/gallery/student_audience_seminar.jpg"
+];

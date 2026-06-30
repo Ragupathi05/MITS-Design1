@@ -4,11 +4,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 const BASE = import.meta.env.BASE_URL;
 
 const images = [
-  { src: `${BASE}Campus Gallery/DJI_20250312173138_0088_D.JPG`, alt: "MITS Campus Aerial View", span: "md:col-span-2" },
-  { src: `${BASE}Campus Gallery/DSC_1805.JPG`, alt: "MITS Main Building", span: "" },
-  { src: `${BASE}Campus Gallery/DSC_1825.JPG`, alt: "Students in Campus", span: "" },
-  { src: `${BASE}Campus Gallery/DSC_1862.JPG`, alt: "MITS Library", span: "" },
-  { src: `${BASE}Campus Gallery/DSC_6397.JPG`, alt: "Campus Event", span: "md:col-span-2" },
+  { src: `${BASE}gallery/mits-about-menu.jpg`, alt: "MITS Campus Aerial View", span: "md:col-span-2" },
+  { src: `${BASE}gallery/circular block.JPG`, alt: "MITS Main Building", span: "" },
+  { src: `${BASE}gallery/camp1.JPG`, alt: "Students in Campus", span: "" },
+  { src: `${BASE}gallery/lib1.jpg`, alt: "MITS Library", span: "" },
+  { src: `${BASE}gallery/seminar_hall_audience.jpg`, alt: "Campus Event", span: "md:col-span-2" },
 ];
 
 const CampusGallery = () => {

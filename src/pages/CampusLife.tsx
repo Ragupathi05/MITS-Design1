@@ -11,184 +11,194 @@ const BASE = import.meta.env.BASE_URL;
 // ============================================
 // EXPERIENCE CARDS DATA
 // ============================================
+import { campusLifeData } from "@/data/galleryData/campusLife";
+
+// Speed up image loading helper
+const getLocalUrl = (url: string) => {
+  if (!url) return "";
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    const filename = encodeURIComponent(url.substring(url.lastIndexOf("/") + 1));
+    return `${import.meta.env.BASE_URL}gallery/${filename}`;
+  }
+  if (url.startsWith("/gallery/")) {
+    return `${import.meta.env.BASE_URL}${url.substring(1)}`;
+  }
+  if (url.startsWith("gallery/")) {
+    return `${import.meta.env.BASE_URL}${url}`;
+  }
+  return url;
+};
+
+// ============================================
+// EXPERIENCE CARDS DATA (Generated from official MITS data)
+// ============================================
 const experienceCards = [
   {
     id: "cultural",
-    title: "Cultural Life (ASHV)",
-    description: "Immerse yourself in vibrant traditions, festivals, and artistic expressions that celebrate diversity and creativity.",
-    image: `${BASE}news-events/smruthi-sangamam.jpg`,
+    title: campusLifeData.cultural.title,
+    description: campusLifeData.cultural.description,
+    image: getLocalUrl(campusLifeData.cultural.images[0]),
     icon: Sparkles,
-    stats: "50+ Events Annually",
-  },
-  {
-    id: "technical",
-    title: "Technical Activities",
-    description: "Cutting-edge hackathons, robotics competitions, innovation challenges, and tech symposiums that shape future leaders.",
-    image: `${BASE}news-events/aimex-2026.jpg`,
-    icon: FlaskConical,
-    stats: "20+ Technical Clubs",
+    stats: campusLifeData.cultural.stats,
+    href: "/campus-life/cultural-life",
   },
   {
     id: "clubs",
-    title: "Student Clubs",
-    description: "From music to entrepreneurship, find your passion and connect with like-minded peers in our thriving club ecosystem.",
-    image: `${BASE}Hero-Section/image%202.JPG`,
+    title: campusLifeData.clubs.title,
+    description: campusLifeData.clubs.description,
+    image: getLocalUrl(campusLifeData.clubs.images[0]),
     icon: Users,
-    stats: "15+ Active Clubs",
+    stats: campusLifeData.clubs.stats,
+    href: "/campus-life/student-clubs",
   },
   {
     id: "sports",
-    title: "Sports & Fitness",
-    description: "State-of-the-art sports complex with indoor arenas, outdoor fields, and professional training facilities.",
-    image: `${BASE}news-events/3k-run.jpg`,
+    title: campusLifeData.sports.title,
+    description: campusLifeData.sports.description,
+    image: getLocalUrl(campusLifeData.sports.images[0]),
     icon: Dumbbell,
-    stats: "Olympic Standard Facilities",
+    stats: campusLifeData.sports.stats,
+    href: "/sports",
   },
   {
     id: "hostel",
-    title: "Hostel Life",
-    description: "Modern residential facilities with round-the-clock security, WiFi connectivity, and a thriving community atmosphere.",
-    image: `${BASE}Hero-Section/image%205.JPG`,
+    title: campusLifeData.hostel.title,
+    description: campusLifeData.hostel.description,
+    image: getLocalUrl(campusLifeData.hostel.images[0]),
     icon: Home,
-    stats: "5000+ Students Hosted",
+    stats: campusLifeData.hostel.stats,
+    href: "/hostels",
   },
   {
     id: "infrastructure",
-    title: "Campus Infrastructure",
-    description: "World-class laboratories, libraries, auditoriums, and green spaces designed for holistic development.",
-    image: `${BASE}Hero-Section/image%201.JPG`,
+    title: campusLifeData.infrastructure.title,
+    description: campusLifeData.infrastructure.description,
+    image: getLocalUrl(campusLifeData.infrastructure.images[0]),
     icon: Building2,
-    stats: "26.17-acre campus",
+    stats: campusLifeData.infrastructure.stats,
+    href: "/infrastructure",
   },
 ];
 
 // ============================================
-// ASHV FESTIVAL GALLERY
+// ASHV FESTIVAL GALLERY (Generated from official MITS data)
 // ============================================
 const ashvGallery = [
   {
     id: 1,
-    title: "ASHV Cultural Night",
-    description: "The grand finale of our annual cultural festival",
-    image: `${BASE}news-events/smruthi-sangamam.jpg`,
+    title: "ASHV Cultural Celebrations",
+    description: "Vibrant stages showcasing music, dance and cultural talents",
+    image: getLocalUrl(campusLifeData.cultural.images[0]) || `${BASE}news-events/smruthi-sangamam.jpg`,
   },
   {
     id: 2,
-    title: "Dance & Music Performances",
-    description: "Students showcase their talents on a grand stage",
-    image: `${BASE}Hero-Section/image%202.JPG`,
+    title: "Stage Performances",
+    description: "Students perform in front of cheering campus audiences",
+    image: getLocalUrl("/gallery/ashv(2k25)19.jpg"),
   },
   {
     id: 3,
-    title: "Student Fest Celebrations",
-    description: "Days of excitement, competition, and camaraderie",
-    image: `${BASE}Hero-Section/image%203.JPG`,
+    title: "Cultural Activities",
+    description: "Annual day fests and student group choreography fests",
+    image: getLocalUrl("/gallery/ashv(2k25)30.jpg"),
   },
   {
     id: 4,
-    title: "Technical Symposiums",
-    description: "Innovation meets competition at AIMEX",
-    image: `${BASE}news-events/aimex-2026.jpg`,
+    title: "Traditional Dance & Celebrations",
+    description: "Dazzling dance showcases during annual college fests",
+    image: getLocalUrl("/gallery/ashv(2k25)15.jpg"),
   },
 ];
 
 // ============================================
-// STUDENT LIFE STORIES
+// STUDENT LIFE STORIES (Generated from official MITS data)
 // ============================================
 const lifeStories = [
   {
     id: 1,
-    title: "Innovation Labs",
-    description: "Our state-of-the-art innovation labs provide students with hands-on experience in cutting-edge technologies. From AI and ML to IoT and robotics, students work on real-world projects that transform ideas into impactful solutions.",
-    image: `${BASE}news-events/aimex-2026.jpg`,
-    stats: "50+ Research Projects",
+    title: "Vibrant Cultural Diversity",
+    description: campusLifeData.cultural.description,
+    image: getLocalUrl(campusLifeData.cultural.images[4]) || `${BASE}Hero-Section/image%204.JPG`,
+    stats: campusLifeData.cultural.stats,
     reverse: false,
   },
   {
     id: 2,
-    title: "Cultural Diversity",
-    description: "MITS celebrates the rich tapestry of Indian culture with students from over 25 states. Our campus is a melting pot of traditions, languages, and perspectives, fostering global understanding and unity.",
-    image: `${BASE}Hero-Section/image%204.JPG`,
-    stats: "25+ States Represented",
+    title: "Student Collaboration & Clubs",
+    description: campusLifeData.clubs.description,
+    image: getLocalUrl(campusLifeData.clubs.images[1]) || `${BASE}Hero-Section/image%202.JPG`,
+    stats: campusLifeData.clubs.stats,
     reverse: true,
   },
   {
     id: 3,
-    title: "Student Collaboration",
-    description: "Teamwork is at the heart of the MITS experience. Students collaborate across disciplines, participate in group projects, and build lifelong friendships that extend far beyond the classroom.",
-    image: `${BASE}Hero-Section/image%202.JPG`,
-    stats: "100+ Team Projects",
+    title: "Green Campus Environment",
+    description: campusLifeData.infrastructure.description,
+    image: getLocalUrl(campusLifeData.infrastructure.images[1]) || `${BASE}Hero-Section/image%201.JPG`,
+    stats: campusLifeData.infrastructure.stats,
     reverse: false,
   },
-  {
-    id: 4,
-    title: "Campus Environment",
-    description: "Nestled in the scenic hills of Madanapalle, our campus offers a perfect blend of natural beauty and modern infrastructure. The lush green surroundings create an ideal atmosphere for learning and personal growth.",
-    image: `${BASE}Hero-Section/image%201.JPG`,
-    stats: "26.17-acre campus",
-    reverse: true,
-  },
 ];
 
 // ============================================
-// CAMPUS GALLERY
+// CAMPUS GALLERY (Generated from official MITS data)
 // ============================================
 const campusGallery = [
-  { id: 1, image: `${BASE}Hero-Section/image%201.JPG`, title: "Main Building" },
-  { id: 2, image: `${BASE}Hero-Section/image%202.JPG`, title: "Student Activities" },
-  { id: 3, image: `${BASE}Hero-Section/image%203.JPG`, title: "Campus View" },
-  { id: 4, image: `${BASE}Hero-Section/image%204.JPG`, title: "Academic Block" },
-  { id: 5, image: `${BASE}Hero-Section/image%205.JPG`, title: "Hostel Complex" },
-  { id: 6, image: `${BASE}Hero-Section/image%206.jpg`, title: "Sports Ground" },
-  { id: 7, image: `${BASE}news-events/smruthi-sangamam.jpg`, title: "Cultural Events" },
-  { id: 8, image: `${BASE}news-events/aimex-2026.jpg`, title: "Technical Events" },
-  { id: 9, image: `${BASE}news-events/3k-run.jpg`, title: "Sports Events" },
+  { id: 1, image: getLocalUrl(campusLifeData.infrastructure.images[0]), title: "Main Campus Entrance" },
+  { id: 2, image: getLocalUrl(campusLifeData.clubs.images[2]), title: "Student Club Activities" },
+  { id: 3, image: getLocalUrl(campusLifeData.infrastructure.images[2]), title: "Industrial Block" },
+  { id: 4, image: getLocalUrl(campusLifeData.infrastructure.images[1]), title: "Circular Academic Block" },
+  { id: 5, image: getLocalUrl(campusLifeData.hostel.images[1]), title: "Hostel Complex Area" },
+  { id: 6, image: getLocalUrl(campusLifeData.sports.images[0]), title: "Official Sports Ground" },
+  { id: 7, image: getLocalUrl(campusLifeData.cultural.images[5]), title: "Cultural Festival Stages" },
+  { id: 8, image: getLocalUrl(campusLifeData.infrastructure.images[5]), title: "Innovation Cell & Laboratories" },
+  { id: 9, image: getLocalUrl(campusLifeData.sports.images[1]), title: "Sports Complex Area" },
 ];
 
 // ============================================
-// FACILITIES
+// FACILITIES (Generated from official MITS data)
 // ============================================
 const facilities = [
   {
     id: 1,
     title: "Central Library",
-    description: "A treasure trove of knowledge with over 50,000 books, digital resources, and quiet study spaces.",
-    image: `${BASE}librery/library.webp`,
+    description: "A treasure trove of knowledge with physical books, digital library resources, and study zones.",
+    image: getLocalUrl(campusLifeData.infrastructure.images[6]),
     icon: BookOpen,
   },
   {
     id: 2,
     title: "Research Laboratories",
-    description: "State-of-the-art labs for every department, equipped with industry-standard equipment.",
-    image: `${BASE}news-events/aimex-2026.jpg`,
+    description: "State-of-the-art computer labs, department research zones, and experimental tools.",
+    image: getLocalUrl(campusLifeData.infrastructure.images[5]),
     icon: FlaskConical,
   },
   {
     id: 3,
     title: "Sports Complex",
-    description: "Indoor and outdoor facilities for cricket, basketball, volleyball, and athletics.",
-    image: `${BASE}news-events/3k-run.jpg`,
+    description: "Well-maintained athletic tracks, cricket net practices, basketball and volleyball court facilities.",
+    image: getLocalUrl(campusLifeData.sports.images[2]),
     icon: Dumbbell,
   },
   {
     id: 4,
-    title: "Auditorium",
-    description: "A 2000-seat air-conditioned auditorium for conferences, seminars, and cultural programs.",
-    image: `${BASE}Hero-Section/image%202.JPG`,
+    title: "Auditoriums",
+    description: "Spacious air-conditioned auditoriums hosting national-level workshops, conferences and fests.",
+    image: getLocalUrl(campusLifeData.infrastructure.images[7]),
     icon: Mic2,
   },
   {
     id: 5,
     title: "Hostels",
-    description: "Separate comfortable hostels for boys and girls with modern amenities and 24/7 security.",
-    image: `${BASE}Hero-Section/image%205.JPG`,
+    description: "Secure boys and girls residential blocks offering community living with modern amenities.",
+    image: getLocalUrl(campusLifeData.hostel.images[2]),
     icon: Home,
   },
   {
     id: 6,
     title: "Computer Center",
-    description: "High-speed computing facilities with the latest software and 24/7 internet access.",
-    image: `${BASE}Hero-Section/image%203.JPG`,
+    description: "High-performance computing terminals with high-speed internet bandwidth and software licenses.",
+    image: getLocalUrl(campusLifeData.infrastructure.images[9]),
     icon: Laptop,
   },
 ];
@@ -208,20 +218,17 @@ const CinematicHero = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
+    <section className="relative h-[60vh] min-h-[480px] w-full overflow-hidden">
+      {/* Background Image */}
+      <img
         className="absolute inset-0 w-full h-full object-cover"
-        src={`${BASE}Hero-Section/college%20video.mp4`}
+        src={getLocalUrl("/gallery/main entrance.JPG")}
+        alt="MITS Main Entrance"
       />
 
-      {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/40" />
+      {/* Lightened Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20" />
 
       {/* Animated Particles/Shimmer Effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -251,9 +258,9 @@ const CinematicHero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight"
         >
-          Where Learning Meets{" "}
+          Vibrant{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-accent">
-            Experience
+            Campus Life
           </span>
         </motion.h1>
 
@@ -263,7 +270,7 @@ const CinematicHero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-white/80 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-10 font-light"
         >
-          Culture, Innovation, and Endless Possibilities Await
+          A community of learning, culture, and endless opportunities.
         </motion.p>
 
         <motion.div
@@ -287,24 +294,6 @@ const CinematicHero = () => {
           >
             Explore Campus
           </button>
-        </motion.div>
-      </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="flex flex-col items-center gap-2 cursor-pointer"
-          onClick={scrollToContent}
-        >
-          <span className="text-white/60 text-xs uppercase tracking-widest">Scroll</span>
-          <ChevronDown className="w-6 h-6 text-white/60" />
         </motion.div>
       </motion.div>
     </section>
@@ -342,67 +331,70 @@ const ExperienceCard = ({ card, index }: { card: typeof experienceCards[0]; inde
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="relative h-[400px] md:h-[450px] w-full"
     >
-      <div
-        ref={cardRef}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        className="relative w-full h-full overflow-hidden rounded-2xl cursor-pointer group"
-        style={{
-          transformStyle: "preserve-3d",
-          transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) ${isHovered ? 'scale(1.02)' : 'scale(1)'}`,
-          transition: 'transform 0.3s ease-out',
-        }}
-      >
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src={card.image}
-            alt={card.title}
-            className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? 'scale-110' : 'scale-100'}`}
-          />
-        </div>
+      <Link to={card.href} className="block w-full h-full">
+        <div
+          ref={cardRef}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className="relative w-full h-full overflow-hidden rounded-2xl cursor-pointer group"
+          style={{
+            transformStyle: "preserve-3d",
+            transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) ${isHovered ? 'scale(1.02)' : 'scale(1)'}`,
+            transition: 'transform 0.3s ease-out',
+          }}
+        >
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img
+              src={card.image}
+              alt={card.title}
+              className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? 'scale-110' : 'scale-100'}`}
+              onContextMenu={(e) => e.preventDefault()}
+            />
+          </div>
 
-        {/* Gradient Overlay */}
-        <div className={`absolute inset-0 transition-all duration-500 ${isHovered ? 'bg-gradient-to-t from-black/90 via-black/50 to-transparent' : 'bg-gradient-to-t from-black/70 via-black/30 to-transparent'}`} />
+          {/* Gradient Overlay */}
+          <div className={`absolute inset-0 transition-all duration-500 ${isHovered ? 'bg-gradient-to-t from-black/90 via-black/50 to-transparent' : 'bg-gradient-to-t from-black/70 via-black/30 to-transparent'}`} />
 
-        {/* Glassmorphism Overlay */}
-        <div className={`absolute inset-0 transition-opacity duration-500 ${isHovered ? 'bg-white/5 backdrop-blur-sm' : ''}`} />
+          {/* Glassmorphism Overlay */}
+          <div className={`absolute inset-0 transition-opacity duration-500 ${isHovered ? 'bg-white/5 backdrop-blur-sm' : ''}`} />
 
-        {/* Content */}
-        <div className={`absolute bottom-0 left-0 right-0 p-6 md:p-8 transition-all duration-500 ${isHovered ? 'translate-y-0' : 'translate-y-20'}`}>
-          {/* Icon */}
-          <div className={`flex items-center gap-3 mb-3 transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-80'}`}>
-            <div className="w-12 h-12 rounded-xl bg-accent/20 backdrop-blur-md flex items-center justify-center">
-              <card.icon className="w-6 h-6 text-accent" />
+          {/* Content */}
+          <div className={`absolute bottom-0 left-0 right-0 p-6 md:p-8 transition-all duration-500 ${isHovered ? 'translate-y-0' : 'translate-y-20'}`}>
+            {/* Icon */}
+            <div className={`flex items-center gap-3 mb-3 transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-80'}`}>
+              <div className="w-12 h-12 rounded-xl bg-accent/20 backdrop-blur-md flex items-center justify-center">
+                <card.icon className="w-6 h-6 text-accent" />
+              </div>
+              <span className="text-accent font-semibold text-sm tracking-wider uppercase">
+                {card.stats}
+              </span>
             </div>
-            <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-              {card.stats}
-            </span>
+
+            {/* Title */}
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">
+              {card.title}
+            </h3>
+
+            {/* Description */}
+            <p className={`text-white/70 text-sm md:text-base leading-relaxed transition-all duration-500 ${isHovered ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+              {card.description}
+            </p>
+
+            {/* Explore More Link */}
+            <div className={`mt-4 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <span className="inline-flex items-center gap-2 text-accent font-semibold group-hover:gap-3 transition-all">
+                Explore More
+                <ArrowRight className="w-4 h-4" />
+              </span>
+            </div>
           </div>
 
-          {/* Title */}
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">
-            {card.title}
-          </h3>
-
-          {/* Description */}
-          <p className={`text-white/70 text-sm md:text-base leading-relaxed transition-all duration-500 ${isHovered ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0 overflow-hidden'}`}>
-            {card.description}
-          </p>
-
-          {/* Explore More Link */}
-          <div className={`mt-4 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <span className="inline-flex items-center gap-2 text-accent font-semibold group-hover:gap-3 transition-all">
-              Explore More
-              <ArrowRight className="w-4 h-4" />
-            </span>
-          </div>
+          {/* Corner Accent */}
+          <div className={`absolute top-4 right-4 w-16 h-16 border-2 border-accent/30 rounded-full transition-all duration-500 ${isHovered ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`} />
         </div>
-
-        {/* Corner Accent */}
-        <div className={`absolute top-4 right-4 w-16 h-16 border-2 border-accent/30 rounded-full transition-all duration-500 ${isHovered ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`} />
-      </div>
+      </Link>
     </motion.div>
   );
 };
@@ -513,9 +505,9 @@ const ASHVShowcase = () => {
         {/* Festival Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {[
-            { icon: Calendar, label: "Duration", value: "3 Days" },
-            { icon: Users, label: "Participants", value: "5000+" },
-            { icon: Award, label: "Events", value: "100+" },
+            { icon: Calendar, label: "Duration", value: "2 Days" },
+            { icon: Users, label: "Participants", value: "10000+" },
+            { icon: Award, label: "Events", value: "50+" },
           ].map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors">
@@ -631,30 +623,37 @@ const CampusGallery = () => {
           </div>
         </ScrollReveal>
 
-        {/* Masonry Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {/* Uniform Grid of Equal Heights */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {campusGallery.map((item, index) => (
             <ScrollReveal key={item.id} delay={index * 0.05}>
               <motion.div
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.03 }}
                 onClick={() => openLightbox(index)}
-                className={`relative overflow-hidden rounded-xl cursor-pointer group ${
-                  index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
-                }`}
+                className="relative overflow-hidden rounded-xl cursor-pointer group h-64 shadow-md bg-slate-100"
               >
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/45 transition-colors duration-300 flex items-center justify-center">
+                  <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg">
                     {item.title}
                   </span>
                 </div>
               </motion.div>
             </ScrollReveal>
           ))}
+        </div>
+
+        {/* View Full Gallery Link Button */}
+        <div className="flex justify-center mt-12">
+          <Link to="/gallery">
+            <button className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all duration-300 hover:shadow-xl hover:scale-105">
+              View Full Campus Gallery →
+            </button>
+          </Link>
         </div>
 
         {/* Lightbox */}

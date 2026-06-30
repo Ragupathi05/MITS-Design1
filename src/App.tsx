@@ -23,6 +23,7 @@ const NewsEventDetail = lazy(() => import("./pages/NewsEventDetail"));
 const EligibilityAndFees = lazy(() => import("./pages/EligibilityAndFees"));
 const AcademicCalendar = lazy(() => import("./pages/AcademicCalendar"));
 const Gallery = lazy(() => import("./pages/Gallery"));
+const CampusLifeDetail = lazy(() => import("./pages/CampusLifeDetail"));
 const DepartmentPage = lazy(() => import("./pages/DepartmentPage"));
 const FacultyProfilePage = lazy(() => import("./pages/FacultyProfilePage"));
 const Leadership = lazy(() => import("./pages/about/Leadership"));
@@ -89,6 +90,10 @@ const App = () => (
             <Route path="/placements" element={<Placements />} />
             <Route path="/placements/:section" element={<Placements />} />
             <Route path="/campus-life" element={<CampusLife />} />
+            <Route path="/campus-life/student-clubs" element={<CampusLifeDetail categoryKey="clubs" />} />
+            <Route path="/campus-life/cultural-life" element={<CampusLifeDetail categoryKey="cultural" />} />
+            <Route path="/sports" element={<CampusLifeDetail categoryKey="sports" />} />
+            <Route path="/hostels" element={<CampusLifeDetail categoryKey="hostel" />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/infrastructure" element={<Infrastructure />} />
             <Route path="/departments" element={<Departments />} />

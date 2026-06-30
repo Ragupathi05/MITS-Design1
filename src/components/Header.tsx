@@ -32,14 +32,24 @@ const navItems: NavItem[] = [
     href: "/admissions",
     children: [
       { label: "Admission Process", href: "/admissions" },
-      { label: "Apply Online", href: "/admissions" },
+      { label: "Apply Online", href: "https://admission.mits.ac.in/" },
       { label: "Eligibility & Fees", href: "/eligibility-and-fees" },
     ],
   },
   { label: "Research", href: "/research" },
   { label: "Placements", href: "/placements" },
   { label: "Campus Life", href: "/campus-life" },
-  { label: "Infrastructure", href: "/infrastructure" },
+  {
+    label: "More",
+    href: "/infrastructure",
+    children: [
+      { label: "Infrastructure", href: "/infrastructure" },
+      { label: "NIRF", href: "/nirf" },
+      { label: "NAAC", href: "/naac" },
+      { label: "Mandatory Disclosures", href: "/about/mandatory-disclosures" },
+      { label: "Contact Us", href: "/contact" },
+    ],
+  },
 ];
 
 const Header = () => {
@@ -165,16 +175,30 @@ const Header = () => {
                       }`}
                     >
                       <div className="bg-white rounded-lg border border-border shadow-xl py-2">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            to={child.href}
-                            className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
-                            style={{ fontFamily: "var(--font-body)" }}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                        {item.children.map((child) => {
+                          const isExternal = child.href.startsWith("http");
+                          return isExternal ? (
+                            <a
+                              key={child.label}
+                              href={child.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                              style={{ fontFamily: "var(--font-body)" }}
+                            >
+                              {child.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.label}
+                              to={child.href}
+                              className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                              style={{ fontFamily: "var(--font-body)" }}
+                            >
+                              {child.label}
+                            </Link>
+                          );
+                        })}
                       </div>
                     </div>
                   )}
@@ -238,16 +262,30 @@ const Header = () => {
                 </div>
                 {item.children && mobileExpanded === item.label && (
                   <div className="pl-4 pb-2 space-y-1">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        to={child.href}
-                        className="block text-sm text-muted-foreground hover:text-primary py-1.5 transition-colors"
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                    {item.children.map((child) => {
+                      const isExternal = child.href.startsWith("http");
+                      return isExternal ? (
+                        <a
+                          key={child.label}
+                          href={child.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-sm text-muted-foreground hover:text-primary py-1.5 transition-colors"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {child.label}
+                        </a>
+                      ) : (
+                        <Link
+                          key={child.label}
+                          to={child.href}
+                          className="block text-sm text-muted-foreground hover:text-primary py-1.5 transition-colors"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {child.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>

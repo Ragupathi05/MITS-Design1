@@ -18,18 +18,18 @@ const BORDER      = "#e2e8f0";
 
 // ─── Campus Detail Images (hero per section) ────────────────────────────────
 const campusImages: Record<string, string> = {
-  sports:         `${BASE}Campus Gallery/DSC_7376.JPG`,
-  transport:      `${BASE}Campus Gallery/DSC_1888.JPG`,
-  dispensary:     `${BASE}Hero-Section/image%204.JPG`,
-  canteen:        `${BASE}Hero-Section/image%203.JPG`,
-  wifi:           `${BASE}Campus Gallery/DSC00642.jpg`,
-  library:        `${BASE}Campus Gallery/DSC_1862.JPG`,
-  "digital-library": `${BASE}Campus Gallery/DSC00846.jpg`,
-  radio:          `${BASE}Campus Gallery/DSC00674.jpg`,
-  "aicte-idea":   `${BASE}Campus Gallery/DSC00807.jpg`,
-  computer:       `${BASE}Campus Gallery/DSC00892.jpg`,
-  "comm-lab":     `${BASE}Campus Gallery/DSC00890.jpg`,
-  hero:           `${BASE}Campus Gallery/DSC00955.jpg`,
+  sports:         `${BASE}infrastructure/sports/ground-1.JPG`,
+  transport:      `${BASE}infrastructure/transport/transport-1.JPG`,
+  dispensary:     `${BASE}infrastructure/dispensary/dispensary-1.JPG`,
+  canteen:        `${BASE}infrastructure/canteen/canteen-1.JPG`,
+  wifi:           `${BASE}gallery/wifi1.jpg`,
+  library:        `${BASE}infrastructure/library/library-1.webp`,
+  "digital-library": `${BASE}infrastructure/labs-library/lab-9.JPG`,
+  radio:          `${BASE}infrastructure/radio-station/radio-1.JPG`,
+  "aicte-idea":   `${BASE}infrastructure/aicte-lab/aicte-1.JPG`,
+  computer:       `${BASE}infrastructure/labs-library/lab-1.JPG`,
+  "comm-lab":     `${BASE}infrastructure/labs-library/lab-7.JPG`,
+  hero:           `${BASE}gallery/main entrance.JPG`,
 };
 
 // ─── Gallery Images per Section ─────────────────────────────────────────────
@@ -68,7 +68,14 @@ const galleryImages: Record<string, { src: string; alt: string }[]> = {
     { src: `${BASE}infrastructure/canteen/canteen-4.JPG`, alt: "Kitchen Facilities" },
     { src: `${BASE}infrastructure/canteen/canteen-5.JPG`, alt: "Seating Area" },
   ],
-  wifi: [],
+  wifi: [
+    { src: `${BASE}gallery/wifi1.jpg`, alt: "Wi-Fi Router Setup" },
+    { src: `${BASE}gallery/wifi2.jpg`, alt: "Network Server Rack" },
+    { src: `${BASE}gallery/wifi3.jpg`, alt: "Server Room Panel" },
+    { src: `${BASE}gallery/biometric authentication.jpg`, alt: "Biometric Authentication" },
+    { src: `${BASE}gallery/camera.jpg`, alt: "CCTV Security camera" },
+    { src: `${BASE}gallery/camera2.jpg`, alt: "CCTV Security System" },
+  ],
   library: [
     { src: `${BASE}infrastructure/library/library-1.webp`, alt: "Central Library - Main Hall" },
     { src: `${BASE}infrastructure/library/library-2.webp`, alt: "Reading Section" },

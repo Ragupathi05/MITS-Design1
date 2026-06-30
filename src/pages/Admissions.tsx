@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import Header from "@/components/Header";
@@ -28,20 +28,20 @@ const steps = [
 ];
 
 const galleryItems = [
-  { img: `${BASE}news-events/smruthi-sangamam.jpg`, caption: "ASHV Cultural Festival" },
-  { img: `${BASE}news-events/3k-run.jpg`,            caption: "Campus Sports & Fitness" },
-  { img: `${BASE}news-events/ieee-guest-lecture.jpg`,caption: "IEEE Guest Lectures" },
-  { img: `${BASE}news-events/microsoft-visit.jpg`,   caption: "Industry Visits" },
-  { img: `${BASE}news-events/mca-alumni.jpg`,        caption: "Alumni Connect" },
-  { img: `${BASE}news-events/digital-era.jpg`,       caption: "Digital Era Seminars" },
-  { img: `${BASE}news-events/gy.jpg`,                caption: "Student Gatherings" },
-  { img: `${BASE}news-events/mm.webp`,               caption: "Campus Celebrations" },
+  { img: `${BASE}gallery/ashv(2k26).jpg`, caption: "ASHV Cultural Festival" },
+  { img: `${BASE}gallery/Ground-1.JPG`,            caption: "Campus Sports & Fitness" },
+  { img: `${BASE}gallery/seminar_hall_audience.jpg`,caption: "IEEE Guest Lectures" },
+  { img: `${BASE}gallery/camp1.JPG`,   caption: "Industry Visits" },
+  { img: `${BASE}gallery/alumni.jpg`,        caption: "Alumni Connect" },
+  { img: `${BASE}gallery/computer_Lab1.jpg`,       caption: "Digital Era Seminars" },
+  { img: `${BASE}gallery/camp5.JPG`,                caption: "Student Gatherings" },
+  { img: `${BASE}gallery/ashv(2k25)15.jpg`,               caption: "Campus Celebrations" },
 ];
 
 const stories = [
-  { img: `${BASE}Hero-Section/image 2.JPG`,             dir: "left",  title: "Hands-On Learning",    body: "Our advanced laboratories give students real-world exposure from day one. Every program is designed to bridge theory with practice through industry-aligned projects and research." },
-  { img: `${BASE}news-events/smruthi-sangamam.jpg`,     dir: "right", title: "Vibrant Campus Life",  body: "From ASHV cultural festivals to sports meets and student clubs, life at MITS is rich with experiences that shape well-rounded professionals." },
-  { img: `${BASE}Hero-Section/image 4.JPG`,             dir: "left",  title: "Inspiring Environment",body: "Spread across a lush green campus, MITS provides a peaceful and inspiring academic environment that fosters creativity, collaboration and growth." },
+  { img: `${BASE}gallery/advanced manufacring lab.jpg`,             dir: "left",  title: "Hands-On Learning",    body: "Our advanced laboratories give students real-world exposure from day one. Every program is designed to bridge theory with practice through industry-aligned projects and research." },
+  { img: `${BASE}gallery/ashv(2k25)30.jpg`,     dir: "right", title: "Vibrant Campus Life",  body: "From ASHV cultural festivals to sports meets and student clubs, life at MITS is rich with experiences that shape well-rounded professionals." },
+  { img: `${BASE}gallery/Circular Block.JPG`,             dir: "left",  title: "Inspiring Environment",body: "Spread across a lush green campus, MITS provides a peaceful and inspiring academic environment that fosters creativity, collaboration and growth." },
 ];
 
 const placementStats = [

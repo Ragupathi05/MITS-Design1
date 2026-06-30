@@ -1,11 +1,25 @@
-﻿import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { BookOpen, Clock, Globe, Monitor, Search, Users, Wifi, Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-const campusLibrary = "/Campus Gallery/DSC_1862.JPG";
+const BASE = import.meta.env.BASE_URL;
+
+const getLocalUrl = (url: string) => {
+  if (!url) return "";
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    return url;
+  }
+  if (url.startsWith("/gallery/")) {
+    return `${BASE}${url.substring(1)}`;
+  }
+  if (url.startsWith("gallery/")) {
+    return `${BASE}${url}`;
+  }
+  return url;
+};
 
 const resources = [
   { icon: BookOpen, title: "50,000+ Volumes", desc: "Extensive collection of textbooks, reference books, and periodicals across all disciplines." },
@@ -17,14 +31,15 @@ const resources = [
 ];
 
 const galleryImages = [
-  campusLibrary,
-  "https://images.pexels.com/photos/2128249/pexels-photo-2128249.jpeg",
-  "https://images.pexels.com/photos/3646172/pexels-photo-3646172.jpeg",
-  "https://images.pexels.com/photos/1907784/pexels-photo-1907784.jpeg",
-  "https://images.pexels.com/photos/12064/pexels-photo-12064.jpeg",
-  "https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg",
-  "https://images.pexels.com/photos/3747505/pexels-photo-3747505.jpeg",
-];
+  "/gallery/lib1.jpg",
+  "/gallery/lib2.jpg",
+  "/gallery/lib3.jpg",
+  "/gallery/lib4.jpg",
+  "/gallery/lib5.jpg",
+  "/gallery/lib6.jpg",
+  "/gallery/lib7.jpg",
+  "/gallery/lib9.jpg",
+].map(url => getLocalUrl(url));
 
 const stats = [
   { value: "50,000+", label: "Books & Volumes", icon: BookOpen },
