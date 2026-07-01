@@ -49,7 +49,7 @@ const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
   
   useEffect(() => {
-    if (!hash) {
+    if (!hash && !/^\/placements\//.test(pathname)) {
       window.scrollTo(0, 0);
     }
   }, [pathname]);

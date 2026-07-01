@@ -18,6 +18,7 @@ const sidebarTabs = [
   { id: "online-practice", label: "Online Practice Links", icon: Link2 },
   { id: "recruiters", label: "Our Recruiters", icon: Building2 },
   { id: "placement-training-team", label: "Placement & Training Team", icon: Award },
+  { id: "placement-gallery", label: "Placement Gallery", icon: Building2 },
   { id: "contact", label: "Contact", icon: Mail },
 ];
 
@@ -537,65 +538,22 @@ const Placements = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
   const params = useParams();
-  const location = useLocation();
   const sectionParam = params.section;
 
-  const shouldShowSection = (id: string) => {
-    if (sectionParam) return sectionParam === id;
-    // default: show only training-placement-cell when no param
-    return id === 'training-placement-cell';
-  };
-
-  // Scroll detection for active section
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = sidebarTabs.map(tab => document.getElementById(tab.id));
-      const scrollPosition = window.scrollY + 200;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveTab(sidebarTabs[i].id);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const shouldShowSection = (id: string) => activeTab === id;
 
   const scrollToSection = (id: string) => {
     setActiveTab(id);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    // update URL to show subsection
     try {
-      navigate(`/placements/${id}`, { replace: false });
-    }
-    catch (e) {
-      // ignore navigation errors
-    }
+      navigate(`/placements/${id}`, { replace: true });
+    } catch (e) {}
     setSidebarOpen(false);
   };
 
-  // If route has a section param, scroll to it on mount / when it changes
+  // Set active tab from URL param on mount
   useEffect(() => {
-    const section = params.section;
-    if (section) {
-      const el = document.getElementById(section);
-      if (el) {
-        // small timeout to ensure DOM is ready
-        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-        setActiveTab(section);
-      }
-    } else {
-      // if no param, update URL to base placements without changing scroll
-      if (location.pathname !== '/placements') {
-        // nothing
-      }
+    if (params.section && sidebarTabs.some(t => t.id === params.section)) {
+      setActiveTab(params.section);
     }
   }, [params.section]);
 
@@ -626,15 +584,21 @@ const Placements = () => {
       <main className="pt-24 md:pt-28 lg:pt-28">
         {/* Hero Section - Enhanced */}
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-          <div 
-            className="absolute inset-0 animate-zoom-slow"
-            style={{
-              backgroundImage: `url(${BASE}Hero-Section/placements.png)`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-primary/40" />
+          {/* Background: 3 placement images blurred collage */}
+          <div className="absolute inset-0 grid grid-cols-3 h-full">
+            <div className="overflow-hidden">
+              <img src={`${BASE}placement-pictures/image 1.jpg`} alt="" className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="overflow-hidden">
+              <img src={`${BASE}placement-pictures/image 2.jpg`} alt="" className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="overflow-hidden">
+              <img src={`${BASE}placement-pictures/image 3.jpeg`} alt="" className="w-full h-full object-cover object-top" />
+            </div>
+          </div>
+          {/* Blur + dark blend */}
+          <div className="absolute inset-0 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-primary/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           
           {/* Animated Decorative Elements */}
@@ -1124,6 +1088,40 @@ const Placements = () => {
                 </section>
                 )}
 
+
+                {/* Placement Gallery */}
+                {shouldShowSection('placement-gallery') && (
+                <section id="placement-gallery" className="mb-12 scroll-mt-24">
+                  <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 border border-slate-200 rounded-2xl p-8 shadow-xl">
+                    <h2 className="font-display text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg">
+                        <Building2 className="w-6 h-6 text-white" />
+                      </div>
+                      Placement Gallery
+                    </h2>
+                    <div className="columns-2 sm:columns-3 md:columns-4 gap-3 space-y-3">
+                      {[
+                        "DSC_1089.JPG","DSC_1450.JPG","DSC_7604 copy.jpg","DSC_7607 copy.jpg",
+                        "DSC_7611 copy.jpg","Group Photo Placement - 3.JPG","image 1.jpg","image 2.jpg",
+                        "image 3.jpeg","IMG-20171112-WA0003_Original.jpg","IMG-20191030-WA0022_Original.jpg",
+                        "IMG_20181130_190831981_Original.jpg","Mindtree-2022.jpg",
+                        "WhatsApp Image 2026-06-19 at 12.13.28.jpeg"
+                      ].map((img, i) => (
+                        <div key={i} className="break-inside-avoid overflow-hidden rounded-xl border border-slate-200 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 mb-3">
+                          <img
+                            src={`${BASE}placement-pictures/${img}`}
+                            alt={`Placement ${i + 1}`}
+                            loading="lazy"
+                            className="w-full object-cover"
+                            onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+                )}
+
                 {/* Contact - Enhanced */}
                 {shouldShowSection('contact') && (
                 <section id="contact" className="mb-12 scroll-mt-24">
@@ -1185,7 +1183,6 @@ const Placements = () => {
       </main>
       <Footer />
       
-      {/* Custom Animations */}
       <style>{`
         @keyframes zoom-slow {
           0% { transform: scale(1); }
@@ -1200,4 +1197,3 @@ const Placements = () => {
 };
 
 export default Placements;
-

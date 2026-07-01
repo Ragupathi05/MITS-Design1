@@ -80,6 +80,42 @@ function cmsProxyPlugin() {
       server.middlewares.use((req, res, next) => {
         if (!req.url?.startsWith("/cms-api")) return next();
         const urlPath = "/backend/public_api" + req.url.slice("/cms-api".length);
+        const isImage = req.url.includes("get_content_image.php");
+        if (isImage) {
+          // Serve image as binary, not JSON
+          const imgReq = () => new Promise<Buffer>((resolve, reject) => {
+            const headers: Record<string, string> = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+              "Accept": "image/*,*/*",
+            };
+            if (cachedCookie) headers["Cookie"] = "__test=" + cachedCookie;
+            const r = https.request(
+              { hostname: "mits-cms.freedev.app", path: "/backend" + req.url!.slice("/cms-api".length), method: "GET", headers, rejectUnauthorized: false },
+              (resp) => {
+                const chunks: Buffer[] = [];
+                resp.on("data", (c) => chunks.push(c));
+                resp.on("end", () => {
+                  const buf = Buffer.concat(chunks);
+                  const ct = resp.headers["content-type"] ?? "";
+                  if (ct.startsWith("image/")) resolve(buf);
+                  else reject(new Error("Not an image: " + ct));
+                });
+              }
+            );
+            r.on("error", reject);
+            r.end();
+          });
+          imgReq()
+            .then((buf) => {
+              res.setHeader("Content-Type", "image/jpeg");
+              res.setHeader("Cache-Control", "public, max-age=86400");
+              res.setHeader("Access-Control-Allow-Origin", "*");
+              res.statusCode = 200;
+              res.end(buf);
+            })
+            .catch(() => { res.statusCode = 404; res.end(); });
+          return;
+        }
         cmsRequest(urlPath)
           .then((body) => {
             res.setHeader("Content-Type", "application/json; charset=utf-8");
