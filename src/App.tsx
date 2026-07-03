@@ -40,6 +40,8 @@ const NIRF = lazy(() => import("./pages/NIRF"));
 const NAAC = lazy(() => import("./pages/NAAC"));
 const AffiliationsAccreditations = lazy(() => import("./pages/AffiliationsAccreditations"));
 const PublicSelfDisclosures = lazy(() => import("./pages/PublicSelfDisclosures"));
+const InternationalRelations = lazy(() => import("./pages/InternationalRelations"));
+const StanfordInitiative = lazy(() => import("./pages/StanfordInitiative"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -104,6 +106,8 @@ const App = () => (
             <Route path="/affiliations-accreditations" element={<AffiliationsAccreditations />} />
             <Route path="/psd" element={<PublicSelfDisclosures />} />
             <Route path="/public-self-disclosures" element={<PublicSelfDisclosures />} />
+            <Route path="/international-relations" element={<InternationalRelations />} />
+            <Route path="/international-relations/stanford-initiative" element={<StanfordInitiative />} />
             <Route path="/academic-calendar" element={<AcademicCalendar />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/news-events" element={<NewsEvents />} />

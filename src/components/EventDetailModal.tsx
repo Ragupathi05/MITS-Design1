@@ -157,15 +157,15 @@ function ModalContent({
   const typeColor = typeColors[typeKey] ?? "bg-slate-100 text-slate-600";
 
   const dateRange = (() => {
-    const from = fmt(event?.fromDate ?? event?.from_date);
-    const to = fmt(event?.toDate ?? event?.to_date);
+    const from = fmt((event as any)?.fromDate ?? event?.from_date);
+    const to = fmt((event as any)?.toDate ?? event?.to_date);
     if (!from) return null;
     return to && to !== from ? `${from} – ${to}` : from;
   })();
 
   const timeRange = (() => {
-    const from = fmtTime(event?.fromTime);
-    const to = fmtTime(event?.toTime);
+    const from = fmtTime((event as any)?.fromTime ?? (event as any)?.from_time);
+    const to = fmtTime((event as any)?.toTime ?? (event as any)?.to_time);
     if (!from) return null;
     return to ? `${from} – ${to}` : from;
   })();

@@ -98,8 +98,8 @@ function ModalContent({ mou, onClose }: Props) {
           )}
 
           {/* Department */}
-          {mou.department && (
-            <InfoRow icon={Building2} label="Department" value={String(mou.department)} />
+          {(mou as any).department && (
+            <InfoRow icon={Building2} label="Department" value={String((mou as any).department)} />
           )}
         </div>
       </motion.div>
