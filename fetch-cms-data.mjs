@@ -17,14 +17,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const DEPT_CODES = {
   cse:   "CSE",
-  ce:    "CIVIL",
+  ce:    "CE",
   eee:   "EEE",
   me:    "MECH",
   ece:   "ECE",
   ai:    "AI",
   aiml:  "AIML",
   cseds: "CSEDS",
-  csecs: "CSECS",
+  csecs: "CS",
 };
 
 const ENDPOINTS = ["events", "mous", "achievements", "patents", "publications", "placements", "projects"];
