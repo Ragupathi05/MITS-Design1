@@ -25,3 +25,8 @@ dist-ssr
 
 # Large source video files
 college main video.mp4
+
+# Local test and temp files
+test-*.cjs
+tmp/
+dist.zip
