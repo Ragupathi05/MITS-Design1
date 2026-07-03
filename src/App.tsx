@@ -106,6 +106,8 @@ const App = () => (
             <Route path="/affiliations-accreditations" element={<AffiliationsAccreditations />} />
             <Route path="/psd" element={<PublicSelfDisclosures />} />
             <Route path="/public-self-disclosures" element={<PublicSelfDisclosures />} />
+            <Route path="/international-relations" element={<InternationalRelations />} />
+            <Route path="/international-relations/stanford-initiative" element={<StanfordInitiative />} />
             <Route path="/academic-calendar" element={<AcademicCalendar />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/news-events" element={<NewsEvents />} />
