@@ -583,19 +583,11 @@ const InternationalRelations = () => {
   const [active, setActive] = useState<Section>(
     validIds.includes(initial) ? initial : "about"
   );
-  const [heroIndex, setHeroIndex] = useState(0);
 
   useEffect(() => {
     const hash = location.hash.replace("#", "") as Section;
     if (hash && validIds.includes(hash)) setActive(hash);
   }, [location.hash]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setHeroIndex((prev) => (prev + 1) % heroBanners.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
 
   const handleNav = (id: Section) => {
     setActive(id);
@@ -608,33 +600,44 @@ const InternationalRelations = () => {
       <Header />
 
       {/* Hero */}
-      <section className="relative pt-20 lg:pt-28">
-        <div className="relative h-[52vh] md:h-[60vh] overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={heroIndex}
-              src={heroBanners[heroIndex]}
-              alt="International Relations"
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.8 }}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </AnimatePresence>
-          <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/80 to-primary/60" />
-          <div className="relative z-10 h-full max-w-7xl mx-auto px-4 md:px-6 flex flex-col justify-end pb-10 text-white">
-            <div className="flex items-center gap-2 text-xs md:text-sm text-white/80 mb-3">
-              <Link to="/" className="hover:text-accent inline-flex items-center gap-1"><Home className="w-3 h-3" />Home</Link>
-              <ChevronRight className="w-3 h-3" />
-              <span className="text-accent">International Relations</span>
-            </div>
-            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#143557] to-[#0a1f33] text-white py-16 md:py-24">
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 20%, #caa74d 0%, transparent 40%), radial-gradient(circle at 80% 80%, #b31317 0%, transparent 50%)",
+          }}
+        />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22><path d=%22M0 0h60v60H0z%22 fill=%22none%22/><path d=%22M30 0v60M0 30h60%22 stroke=%22%23ffffff%22 stroke-opacity=%220.04%22/></svg>')]" />
+        
+        <div className="container relative mx-auto px-4 md:px-6">
+          <nav className="flex items-center gap-2 text-sm text-white/70 mb-6 font-body">
+            <Link to="/" className="hover:text-[#caa74d] transition-colors inline-flex items-center gap-1">
+              <Home className="w-3 h-3" />Home
+            </Link>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-[#caa74d]">International Relations</span>
+          </nav>
+          
+          <div className="max-w-4xl">
+            <p className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#caa74d] text-xs font-semibold uppercase tracking-[0.2em] mb-5">
+              <Globe className="w-3.5 h-3.5" /> Global Engagement
+            </p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-display text-4xl md:text-6xl font-bold leading-tight text-white"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
               International Relations
             </motion.h1>
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}
-              className="mt-3 max-w-3xl text-white/90 text-base md:text-lg">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="font-body text-lg md:text-xl text-white/80 mt-6 max-w-2xl leading-relaxed"
+            >
               Connecting MITS to global universities through academic partnerships, student mobility,
               collaborative research and international learning opportunities.
             </motion.p>

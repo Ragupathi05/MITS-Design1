@@ -1365,9 +1365,11 @@ export const globalGallery: string[] = [
 
 export const eventGallery: string[] = [
   "https://mits.ac.in/public/uploads/internationalrelation/bowling.JPG",
-  "https://mits.ac.in/public/uploads/internationalrelation/us-mou.JPG",
+  "https://mits.ac.in/public/uploads/internationalrelation/Overseas%20Education.JPG",
   "https://mits.ac.in/public/uploads/internationalrelation/Rivier%20University%201.jpg",
   "https://mits.ac.in/public/uploads/internationalrelation/Rivier%20University%202.JPG",
+  "https://mits.ac.in/public/uploads/internationalrelation/ram.JPG",
+  "https://mits.ac.in/public/uploads/internationalrelation/us-mou.JPG",
 ];
 
 export const workshopGallery: string[] = [
