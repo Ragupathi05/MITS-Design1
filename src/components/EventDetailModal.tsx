@@ -314,9 +314,10 @@ function ModalContent({
                     <BookOpen className="w-4 h-4 text-primary" />
                     About this Event
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
-                    {event.description}
-                  </p>
+                  <div
+                    className="text-sm text-muted-foreground leading-relaxed prose prose-sm max-w-none"
+                    dangerouslySetInnerHTML={{ __html: event.description }}
+                  />
                 </div>
               ) : null}
 

@@ -723,7 +723,7 @@ const DepartmentPage = () => {
                               {e.type && <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{e.type}</span>}
                             </div>
                             <h4 className="font-semibold text-sm text-secondary">{e.title}</h4>
-                            {e.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{e.description}</p>}
+                            {e.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2" dangerouslySetInnerHTML={{ __html: e.description }} />}
                             {'venue' in e && e.venue && <p className="text-xs text-muted-foreground mt-1">📍 {e.venue}</p>}
                             {isCMS && (
                               <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1">
