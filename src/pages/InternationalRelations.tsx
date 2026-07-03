@@ -15,6 +15,8 @@ import {
   aboutIR, aboutGallery, contactCard, partners, partnerImages,
   internships, internshipArchives, fellowships, globalPrograms,
   events, workshops, heroBanner, heroStats,
+  internshipGallery, fellowshipGallery, globalGallery, eventGallery,
+  workshopGallery, stanfordGallery,
 } from "@/data/internationalRelations";
 
 type Section =
@@ -54,6 +56,100 @@ const SectionTitle = ({ title, subtitle }: { title: string; subtitle?: string })
     <div className="h-1 w-16 bg-primary rounded-full mt-4" />
   </div>
 );
+
+const ImageCarousel = ({ images }: { images: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [lightbox, setLightbox] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  if (!images || images.length === 0) return null;
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  return (
+    <>
+      <div className="relative w-full h-[260px] sm:h-[350px] md:h-[480px] overflow-hidden rounded-2xl border border-border bg-muted shadow-md group mb-8">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentIndex}
+            src={images[currentIndex]}
+            alt="International Relations"
+            initial={{ opacity: 0, scale: 1.03 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.97 }}
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 w-full h-full object-cover cursor-zoom-in"
+            onClick={() => setLightbox(images[currentIndex])}
+            onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
+          />
+        </AnimatePresence>
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+
+        {/* Navigation Arrows */}
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={handlePrev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-secondary shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-secondary shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </>
+        )}
+
+        {/* Indicator Dots */}
+        {images.length > 1 && (
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 bg-black/25 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  idx === currentIndex ? "bg-white w-5" : "bg-white/50 w-1.5"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setLightbox(null)}
+          >
+            <img src={lightbox} className="max-h-[90vh] max-w-[95vw] object-contain rounded-lg shadow-2xl" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
 
 const GalleryGrid = ({ images }: { images: string[] }) => {
   const [lightbox, setLightbox] = useState<string | null>(null);
@@ -97,6 +193,7 @@ const GalleryGrid = ({ images }: { images: string[] }) => {
 const AboutSection = () => (
   <div className="space-y-10">
     <SectionTitle title="About International Relations" subtitle="MITS – Deemed to be University's global engagement, partnerships and academic mobility." />
+    <ImageCarousel images={aboutGallery} />
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4 text-[15px] leading-relaxed text-secondary/90">
         {aboutIR.intro.map((p, i) => <p key={i}>{p}</p>)}
@@ -140,11 +237,6 @@ const AboutSection = () => (
       <div className="flex items-center gap-2 text-accent font-bold mb-3"><Users className="w-4 h-4" />International Relations Office</div>
       <p className="text-sm md:text-base leading-relaxed text-white/90">{aboutIR.office}</p>
     </div>
-
-    <div>
-      <h3 className="text-xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>Gallery</h3>
-      <GalleryGrid images={aboutGallery} />
-    </div>
   </div>
 );
 
@@ -157,8 +249,9 @@ const MoUSection = () => {
   return (
     <div className="space-y-10">
       <SectionTitle title="Memoranda of Understanding" subtitle="MITS – Deemed to be University has active MoUs with the following institutions across the world." />
+      <ImageCarousel images={partnerImages} />
       {Object.entries(grouped).map(([region, list]) => (
-        <div key={region}>
+        <div key={region} className="mb-8 last:mb-0">
           <div className="flex items-center gap-3 mb-4">
             <span className={cn("px-3 py-1 rounded-full text-xs font-bold", regionColors[region])}>
               {region === "US" ? "US Universities" : region === "Europe" ? "European Universities" : `${region} Partners`}
@@ -181,10 +274,6 @@ const MoUSection = () => {
           </div>
         </div>
       ))}
-      <div>
-        <h3 className="text-xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>Partnership Highlights</h3>
-        <GalleryGrid images={partnerImages} />
-      </div>
     </div>
   );
 };
@@ -192,6 +281,7 @@ const MoUSection = () => {
 const InternshipsSection = () => (
   <div className="space-y-10">
     <SectionTitle title="Internships & Exchange Programs" subtitle="Research internships, student exchange and academic mobility across MITS' global network." />
+    <ImageCarousel images={internshipGallery} />
     <div className="grid gap-6">
       {internships.map((p) => (
         <div key={p.title} className="rounded-2xl border border-border bg-white overflow-hidden">
@@ -258,6 +348,7 @@ const InternshipsSection = () => (
 const FellowshipsSection = () => (
   <div className="space-y-8">
     <SectionTitle title="Fellowships & Scholarships" subtitle="Prestigious global programmes MITS students are encouraged to compete for." />
+    <ImageCarousel images={fellowshipGallery} />
     <div className="grid md:grid-cols-2 gap-5">
       {fellowships.map((f) => (
         <div key={f.title} className="rounded-2xl border border-border bg-white p-6 hover:shadow-lg transition-all">
@@ -288,6 +379,7 @@ const FellowshipsSection = () => (
 const GlobalSection = () => (
   <div className="space-y-8">
     <SectionTitle title="Global Immersion, Summer & Winter Programs" subtitle="Short-term intensive academic and cultural immersion experiences with partner universities." />
+    <ImageCarousel images={globalGallery} />
     <div className="grid md:grid-cols-2 gap-5">
       {globalPrograms.map((g) => (
         <div key={g.title} className="rounded-2xl border border-border bg-gradient-to-br from-white to-primary/5 p-6 hover:shadow-lg hover:-translate-y-1 transition-all">
@@ -309,6 +401,7 @@ const GlobalSection = () => (
 const EventsSection = () => (
   <div className="space-y-8">
     <SectionTitle title="International Events & Delegations" subtitle="Visits, MoU signings, awareness programmes and international interactions organised by the IRO." />
+    <ImageCarousel images={eventGallery} />
     <div className="relative border-l-2 border-primary/30 ml-4 space-y-8 pl-8">
       {events.map((e, i) => (
         <motion.div key={i}
@@ -343,6 +436,7 @@ const EventsSection = () => (
 const WorkshopsSection = () => (
   <div className="space-y-8">
     <SectionTitle title="Workshops" subtitle="Skill-building sessions and awareness workshops facilitated by the IRO." />
+    <ImageCarousel images={workshopGallery} />
     <div className="grid md:grid-cols-2 gap-5">
       {workshops.map((w, i) => (
         <div key={i} className="rounded-2xl border border-border bg-white p-6 hover:shadow-lg transition-all">
@@ -366,6 +460,7 @@ const WorkshopsSection = () => (
 const StanfordTeaser = () => (
   <div className="space-y-6">
     <SectionTitle title="Stanford d.school Initiative" subtitle="MITS – University Innovation Fellows (UIF) programme, in association with Stanford University's Hasso Plattner Institute of Design." />
+    <ImageCarousel images={stanfordGallery} />
     <div className="rounded-2xl overflow-hidden border border-border bg-gradient-to-br from-secondary via-secondary to-primary text-white p-8 md:p-12">
       <div className="flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-widest mb-4">
         <Star className="w-4 h-4" />Global Student Leadership

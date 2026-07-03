@@ -614,6 +614,47 @@ export const stanfordGallery: string[] = [
   "https://mits.ac.in/public/uploads/internationalrelation/b888ddfef19bf417b1c31eba407d986a.jpeg",
 ];
 
+export const internshipGallery: string[] = [
+  "https://mits.ac.in/public/uploads/internationalrelation/sakura4.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/sakura3.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/sakura2.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/sakura1.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/internships2024.png",
+  "https://mits.ac.in/public/uploads/internationalrelation/1-min.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/IMG-20210106-WA0008.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/IMG-20210106-WA0007.jpg",
+];
+
+export const fellowshipGallery: string[] = [
+  "https://mits.ac.in/public/uploads/internationalrelation/IMG-20241214-WA0035.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/cor1.png",
+  "https://mits.ac.in/public/uploads/internationalrelation/UIF_2022.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/UIF_2021.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/uif6.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/uif7.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/uif8.jpeg",
+];
+
+export const globalGallery: string[] = [
+  "https://mits.ac.in/public/uploads/internationalrelation/taiwanasiauniversity-min.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/taiwanasiauniversity-min (1).jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/asia.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/providence.jpg",
+];
+
+export const eventGallery: string[] = [
+  "https://mits.ac.in/public/uploads/internationalrelation/bowling.JPG",
+  "https://mits.ac.in/public/uploads/internationalrelation/us-mou.JPG",
+  "https://mits.ac.in/public/uploads/internationalrelation/Rivier%20University%201.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/Rivier%20University%202.JPG",
+];
+
+export const workshopGallery: string[] = [
+  "https://mits.ac.in/public/uploads/internationalrelation/iraw_1.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/iraw_2.jpeg",
+  "https://mits.ac.in/public/uploads/internationalrelation/iraw_3.jpeg",
+];
+
 /* ---------- HERO / STATS ---------- */
 
 export const heroBanner =
