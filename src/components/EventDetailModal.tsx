@@ -164,8 +164,8 @@ function ModalContent({
   })();
 
   const timeRange = (() => {
-    const from = fmtTime(event?.fromTime);
-    const to = fmtTime(event?.toTime);
+    const from = fmtTime((event as any)?.fromTime ?? (event as any)?.from_time);
+    const to = fmtTime((event as any)?.toTime ?? (event as any)?.to_time);
     if (!from) return null;
     return to ? `${from} – ${to}` : from;
   })();
