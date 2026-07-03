@@ -47,6 +47,7 @@ const navItems: NavItem[] = [
       { label: "NIRF", href: "/nirf" },
       { label: "NAAC", href: "/naac" },
       { label: "Mandatory Disclosures", href: "/about/mandatory-disclosures" },
+      { label: "International Relations", href: "/international-relations" },
       { label: "Contact Us", href: "/contact" },
     ],
   },
