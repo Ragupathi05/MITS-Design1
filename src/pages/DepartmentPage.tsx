@@ -911,8 +911,8 @@ const DepartmentPage = () => {
                                 <h4 className="font-semibold text-sm text-secondary flex-1">{s.name}</h4>
                                 <span className="shrink-0 text-xs font-bold text-muted-foreground bg-muted px-2 py-0.5 rounded-full">Sem {s.semester}</span>
                               </div>
-                              {s.code && <p className="text-xs text-muted-foreground">Code: {s.code}</p>}
-                              {s.credits && <p className="text-xs text-primary font-medium">Credits: {s.credits}</p>}
+                              {(s as any).code && <p className="text-xs text-muted-foreground">Code: {String((s as any).code)}</p>}
+                              {(s as any).credits && <p className="text-xs text-primary font-medium">Credits: {String((s as any).credits)}</p>}
                             </CardContent>
                           </Card>
                         ))}
