@@ -40,6 +40,8 @@ const NIRF = lazy(() => import("./pages/NIRF"));
 const NAAC = lazy(() => import("./pages/NAAC"));
 const AffiliationsAccreditations = lazy(() => import("./pages/AffiliationsAccreditations"));
 const PublicSelfDisclosures = lazy(() => import("./pages/PublicSelfDisclosures"));
+const InternationalRelations = lazy(() => import("./pages/InternationalRelations"));
+const StanfordInitiative = lazy(() => import("./pages/StanfordInitiative"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
