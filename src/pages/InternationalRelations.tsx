@@ -16,7 +16,7 @@ import {
   internships, internshipArchives, fellowships, globalPrograms,
   events, workshops, heroBanner, heroStats,
   internshipGallery, fellowshipGallery, globalGallery, eventGallery,
-  workshopGallery, stanfordGallery,
+  workshopGallery, stanfordGallery, heroBanners,
 } from "@/data/internationalRelations";
 
 type Section =
@@ -434,22 +434,61 @@ const EventsSection = () => (
 );
 
 const WorkshopsSection = () => (
-  <div className="space-y-8">
+  <div className="space-y-10">
     <SectionTitle title="Workshops" subtitle="Skill-building sessions and awareness workshops facilitated by the IRO." />
     <ImageCarousel images={workshopGallery} />
-    <div className="grid md:grid-cols-2 gap-5">
+    <div className="space-y-8">
       {workshops.map((w, i) => (
-        <div key={i} className="rounded-2xl border border-border bg-white p-6 hover:shadow-lg transition-all">
-          <div className="flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wide mb-2">
-            <BookOpen className="w-4 h-4" />{w.date}
+        <div key={i} className="rounded-2xl border border-border bg-white p-6 md:p-8 hover:shadow-xl transition-all">
+          <div className="flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider mb-3">
+            <Calendar className="w-4 h-4" />{w.date}
           </div>
-          <h3 className="font-bold text-secondary text-lg mb-2" style={{ fontFamily: "var(--font-display)" }}>{w.title}</h3>
-          <p className="text-sm text-secondary/80 leading-relaxed">{w.description}</p>
+          <h3 className="font-bold text-secondary text-xl md:text-2xl mb-4" style={{ fontFamily: "var(--font-display)" }}>
+            {w.title}
+          </h3>
+          <p className="text-sm md:text-base text-secondary/80 leading-relaxed mb-6">
+            {w.description}
+          </p>
+
+          {w.scientists && w.scientists.length > 0 && (
+            <div className="mb-6">
+              <h4 className="font-bold text-secondary text-sm uppercase tracking-wider mb-3 flex items-center gap-2 text-primary">
+                <Users className="w-4 h-4 text-primary" /> Distinguished Scientists &amp; Resource Persons
+              </h4>
+              <ul className="grid sm:grid-cols-2 gap-2 text-sm text-secondary/80">
+                {w.scientists.map((s, idx) => (
+                  <li key={idx} className="flex gap-2 items-start bg-muted/50 p-2.5 rounded-lg border border-border/50">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {w.objectives && w.objectives.length > 0 && (
+            <div className="mb-6">
+              <h4 className="font-bold text-secondary text-sm uppercase tracking-wider mb-3 flex items-center gap-2 text-secondary/90">
+                <Sparkles className="w-4 h-4 text-secondary/80" /> Objectives of the Workshop
+              </h4>
+              <ul className="space-y-2 text-sm text-secondary/80">
+                {w.objectives.map((obj, idx) => (
+                  <li key={idx} className="flex gap-2 items-start">
+                    <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span>{obj}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {w.reportUrl && (
-            <a href={w.reportUrl} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-primary hover:underline">
-              <FileText className="w-4 h-4" />Workshop Report
-            </a>
+            <div className="pt-4 border-t border-border/60">
+              <a href={w.reportUrl} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-bold text-sm text-primary hover:text-primary/80 transition-colors">
+                <FileText className="w-4 h-4" /> Download Official Workshop Report (PDF)
+              </a>
+            </div>
           )}
         </div>
       ))}
@@ -491,11 +530,19 @@ const InternationalRelations = () => {
   const [active, setActive] = useState<Section>(
     validIds.includes(initial) ? initial : "about"
   );
+  const [heroIndex, setHeroIndex] = useState(0);
 
   useEffect(() => {
     const hash = location.hash.replace("#", "") as Section;
     if (hash && validIds.includes(hash)) setActive(hash);
   }, [location.hash]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % heroBanners.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleNav = (id: Section) => {
     setActive(id);
@@ -510,8 +557,19 @@ const InternationalRelations = () => {
       {/* Hero */}
       <section className="relative pt-20 lg:pt-28">
         <div className="relative h-[52vh] md:h-[60vh] overflow-hidden">
-          <img src={heroBanner} alt="International Relations" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/85 to-primary/70" />
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={heroIndex}
+              src={heroBanners[heroIndex]}
+              alt="International Relations"
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.8 }}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/80 to-primary/60" />
           <div className="relative z-10 h-full max-w-7xl mx-auto px-4 md:px-6 flex flex-col justify-end pb-10 text-white">
             <div className="flex items-center gap-2 text-xs md:text-sm text-white/80 mb-3">
               <Link to="/" className="hover:text-accent inline-flex items-center gap-1"><Home className="w-3 h-3" />Home</Link>

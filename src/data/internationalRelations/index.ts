@@ -38,6 +38,8 @@ export type IREvent = {
   description: string;
   reportUrl?: string;
   image?: string;
+  scientists?: string[];
+  objectives?: string[];
 };
 
 export type Fellow = {
@@ -424,33 +426,177 @@ export const events: IREvent[] = [
     reportUrl:
       "https://mits.ac.in/assets/pdf/event/Dr.%20Uday%20Kiran%20Rage%20Visit%20Research%20Internship%20Program%20for%202%20Japanese%20Students.pdf",
   },
+  {
+    title: "Academic Address & Guidance on Research Internships – University of Aizu",
+    date: "2 April 2024",
+    description: "Prof. Uday Kiran Rage visited MITS, discussed the University of Aizu MoU and addressed AI students on global research internships & MS opportunities in Japan.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Dr.%20Uday%20Kiran%20Rage%20Visit%20Research%20Internship%20Program%20for%202%20Japanese%20Students.pdf"
+  },
+  {
+    title: "Switzerland Academic Collaboration Discussion – HEIG-VD",
+    date: "27 October 2023",
+    description: "Prof. Cédric Bornand from HEIG-VD visited MITS to explore academic and research collaboration opportunities in Switzerland.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Visit%20of%20Cedric.pdf"
+  },
+  {
+    title: "Visit of Japanese Academic Delegation",
+    date: "31 July – 2 August 2023",
+    description: "Prof. Yukari Shirota (Gakushuin University), Prof. Tetsuji Kuboyama (Gakushuin University), and Prof. Takako Hashimoto (Chiba University of Commerce) visited MITS. Addressed students on IEEE ethics and shared job opportunities in Japan. Schools of Computing and Management initiated joint research in AI, ML and Data Science.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Visit%20of%20Japanese%20Delegation.pdf"
+  },
+  {
+    title: "Visit of Asia University Delegation (5 Deans)",
+    date: "7 July 2023",
+    description: "Deans from International College, Medical & Health Sciences, Information & Electrical Engineering, Management, and Industry-Academia Collaboration visited MITS to renew MoUs and sign new MoAs, creating direct pathways for research, internships and MS degrees in Taiwan.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Visit%20of%205%20Deans.pdf"
+  },
+  {
+    title: "Microelectronics Collaboration Program – Brno University of Technology, Czech Republic",
+    date: "20 – 23 February 2023",
+    description: "Prof. Jiri Haze and Dr. Pavel Steffan visited MITS to draft the outline of the 1+3 Semesters MS Program in Microelectronics and interacted with ECE & EEE students to discuss trending technologies in semiconductors.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Visit%20of%20Czech%20Republic%20Deans.pdf"
+  },
+  {
+    title: "University of Aizu Partnership Discussion",
+    date: "30 December 2022",
+    description: "Prof. Uday Kiran Rage from University of Aizu visited the IRO regarding draft MoUs and future collaborative space research activities."
+  },
+  {
+    title: "Academic Collaboration & Guest Lecture – Macquarie University, Australia",
+    date: "29 December 2022",
+    description: "Prof. Subhas Mukhopadhyay visited MITS to discuss joint research. He delivered a guest lecture for Mechanical & Computer Science students on higher education and research opportunities in Australia."
+  },
+  {
+    title: "Higher Education Opportunities in Europe – Czech Technical University",
+    date: "7 September 2022",
+    description: "A virtual guest session by Dr. Vladimir Kulish, Visiting Professor at Czech Technical University, outlining academic and research opportunities in Europe for ECE & EEE students."
+  },
+  {
+    title: "MITS Delegation Visit – Brno University of Technology, Czech Republic",
+    date: "7 – 11 June 2022",
+    description: "Dr. Sremmant Basu and Dr. Vladimir Kulish visited Brno University of Technology in Europe to discuss the implementation details of the 1+3 semesters MS program in Microelectronics."
+  },
+  {
+    title: "Global Careers in AI & Machine Learning – Citrix Systems, USA",
+    date: "20 June 2022",
+    description: "Mr. Phani Madhav Jathi, Senior Manager at Citrix Systems, addressed the School of Computing on emerging global career pathways in AI and Machine Learning."
+  },
+  {
+    title: "Transcendental Meditation & Research MoU – Maharishi Vedic University, Holland",
+    date: "18 October 2019",
+    description: "Prof. Brian and Prof. Ashley Deans visited MITS and signed an MoU to launch Transcendental Meditation sessions on campus and initiate joint research."
+  },
+  {
+    title: "Cognitive Neuroscience & Mind-Body Research – Maharishi Vedic University, Holland",
+    date: "4 September 2019",
+    description: "Prof. Brian Levine addressed MCA faculty and conducted a specialized session for newly admitted MBA & MCA students."
+  },
+  {
+    title: "International Collaboration Explorations – Czech Technical University",
+    date: "26 – 29 August 2019",
+    description: "Dr. Vladimir Kulish spent 3 days at MITS interacting with Deans and HoDs of Electrical & Mechanical Engineering to build pathways for international collaborations, internships and student exchanges."
+  },
+  {
+    title: "Higher Education in 1000+ Global Universities – Azent Overseas Education",
+    date: "28 August 2019",
+    description: "A seminar on global admissions, scholarships, and free IELTS preparation for study programs in the US, UK, Canada, Ireland, Germany, Australia, and New Zealand."
+  },
+  {
+    title: "Vidya Vahini Study Abroad Support – AP Govt Telugu Society (APNRT)",
+    date: "26 August 2019",
+    description: "Mr. Praveen from APNRT created awareness about AP government scholarships, financial support, and welfare schemes for pursuing higher education abroad."
+  },
+  {
+    title: "AI and Smart Cities Collaboration – Brunel University London & Bennett University",
+    date: "14 May 2019",
+    description: "Dr. George Ghinea (Brunel University) and Dr. Sridhar Swaminathan (Bennett University) met MITS AI researchers to discuss research partnerships in AI-driven smart infrastructure."
+  },
+  {
+    title: "Mandarin Language Centre & Academic Exchange – National Yunlin University, Taiwan",
+    date: "16 April 2019",
+    description: "President Prof. Dr. Neng-Shu Yang and team signed an MoU to establish a Mandarin language training center at MITS, and addressed students on MS and PhD opportunities."
+  },
+  {
+    title: "Job Opportunities & HR Requirements in Japan – Conomity Tokyo",
+    date: "6 March 2019",
+    description: "Mr. Kobayashi (CEO) and HR managers from Tokyo, Japan visited MITS to guide students on job requirements, language proficiency, and technical careers in Japan."
+  },
+  {
+    title: "Mandarin Language Training Agreement – Yuntech Taiwan",
+    date: "13 February 2019",
+    description: "Prof. Dr. Stanley Tseng and Ms. Carol Qiu visited MITS to sign the agreement establishing the Mandarin Language Centre on campus."
+  },
+  {
+    title: "Space Research & Astronomy Initiatives – Chungnam National University, South Korea",
+    date: "28 January 2019",
+    description: "Dr. S. Eswar, Senior Researcher, Chungnam National University visited MITS to discuss starting dedicated space research activities."
+  },
+  {
+    title: "Special Communication Research – Kookmin University, South Korea",
+    date: "17 – 20 December 2018",
+    description: "Prof. Soo Hyun Park and Prof. Soo Young Shin visited MITS as part of the MoU between SPRC Kookmin University and MITS to review joint communication engineering projects."
+  },
+  {
+    title: "Innovative Technologies Seminar – University of Heidelberg, Germany",
+    date: "13 December 2018",
+    description: "Dr. Sreeganesh Thottempudi visited MITS and delivered an expert talk on global innovative tech trends for MCA students."
+  },
+  {
+    title: "Japanese Language & Global Careers – Silverpeak Global",
+    date: "30 August 2018",
+    description: "Mr. Vinay N conducted a full-day seminar for all engineering branches on the Japanese Language Proficiency Test (JLPT) and tech job options in Japan."
+  },
+  {
+    title: "IUCEE-EPICS Societal Projects Workshop – Purdue University, USA",
+    date: "3 July 2018",
+    description: "Prof. William Oakes (Director, EPICS Purdue) conducted a workshop on engineering projects in community services, reviewing MITS student-led societal projects."
+  }
 ];
-
-/* ---------- WORKSHOPS ---------- */
 
 export const workshops: IREvent[] = [
   {
-    title: "Higher Education Opportunities – Europe, UK & Australia",
-    date: "16 September 2025",
-    description:
-      "Country-specific overview of academic programmes, scholarships and application procedures delivered by Global Degrees.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/An%20Awareness%20Program%20on%2016-09-2025.pdf",
+    title: "The First International Research Awareness Workshop (IRAW)",
+    date: "16 – 18 June 2022",
+    description: "The First International Research Awareness Workshop (IRAW) was held at MITS for 3 days to establish a pathway for new innovations and international research programmes. The workshop was inaugurated by Dr. C. Yuvaraj (Principal), Dr. Venkat Ratnam (NARL), and other academic council members, setting a milestone for global research collaborations at MITS.",
+    reportUrl: "https://mits.ac.in/assets/pdf/oir/Report-%20The%20First%20International%20Research%20Awareness%20Workshop.pdf",
+    scientists: [
+      "Dr. Venkat Ratnam (Guest of Honour) – Shanti Swarup Bhatnagar Awardee, Senior Scientist & Head, NARL, Tirupati",
+      "Prof. Priyadarshanam – Indian Institute of Space Science & Technology (IIST), Thiruvananthapuram, Kerala",
+      "Prof. Dr. Harsha Simha M. S – Dept. of Avionics, IIST Thiruvananthapuram",
+      "Dr. Eswar Sunkara – Senior Researcher, Pusan National University, South Korea",
+      "Dr. Raghavendra Ashrit – Scientist-F, National Centre for Medium Range Weather Forecasting (NCMRWF), Ministry of Earth Sciences (MoES)",
+      "Dr. Niranjan Kumar Kondapalli – Scientist-D, NCMRWF, Ministry of Earth Sciences (MoES)",
+      "Dr. Jothiram Vivekanandan – Senior Scientist, National Centre for Atmospheric Research (NCAR), Boulder, NASA Colorado, USA",
+      "Dr. Chalachew Kindie Mengist – Scientist, Adama Science and Technology University, Ethiopia"
+    ],
+    objectives: [
+      "Establishment of research centres at MITS",
+      "Giving a major impetus to international collaborations",
+      "Securing financial support from renowned global organizations",
+      "Arranging faculty and student visits to leading global labs",
+      "Involving both faculty and students directly in high-impact research activities."
+    ]
   },
   {
-    title: "Research Internship Workshop – University of Aizu",
-    date: "August 2024",
-    description:
-      "16-hour hands-on training in AI, ML, Data Mining, Data Structures & Pattern Mining by Prof. Uday Kiran Rage.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/Dr.%20Uday%20Kiran%20Rage%20Visit%20Research%20Internship%20Program%20for%202%20Japanese%20Students.pdf",
-  },
-  {
-    title: "Overseas Education Awareness – WhatNext Consultancy",
-    date: "10 March 2026",
-    description: "Interactive workshop guiding students on overseas education pathways.",
-    reportUrl: "https://mits.ac.in/assets/pdf/event/WhatNext%20Consultancy%20Team.pdf",
-  },
+    title: "International Workshop on Advances in Space & Radar Technologies",
+    date: "8 – 10 December 2022",
+    description: "An International 3-day workshop focusing on Advances in Space & Radar Technologies. Distinguished scientists from ISRO, NARL, and ATRAD Australia interacted with students and faculty, sharing valuable insights on space exploration, radar signal processing, and atmospheric research.",
+    reportUrl: "https://mits.ac.in/assets/pdf/oir/Report-%20The%20First%20International%20Research%20Awareness%20Workshop.pdf",
+    scientists: [
+      "Prof. G. Viswanath – Indian Space Research Organisation (ISRO)",
+      "Dr. V. Vara Prasad – Satish Dhawan Space Centre (SHAR), Sriharikota",
+      "Dr. M. Venkat Ratnam – National Atmospheric Research Laboratory (NARL)",
+      "Dr. Durga Rao – Head of Radar Group, NARL",
+      "Dr. P. V. Ramana – Radar Tracking Head, NARL",
+      "Dr. Chris Adami – Chief Engineer, ATRAD, Australia",
+      "Prof. Ion Reid – Director, ATRAD, Australia"
+    ],
+    objectives: [
+      "Create awareness about Radar and Space technologies and their real-world applications",
+      "Facilitate interactions between students and leading scientists from ISRO, NARL, and ATRAD Australia",
+      "Promote space research and radar technology training at MITS"
+    ]
+  }
 ];
 
 /* ---------- STANFORD INITIATIVE (UIF) ---------- */
@@ -655,7 +801,11 @@ export const workshopGallery: string[] = [
   "https://mits.ac.in/public/uploads/internationalrelation/iraw_3.jpeg",
 ];
 
-/* ---------- HERO / STATS ---------- */
+export const heroBanners: string[] = [
+  "https://mits.ac.in/public/uploads/internationalrelation/IMG-20210106-WA0006.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/IMG-20210106-WA0007.jpg",
+  "https://mits.ac.in/public/uploads/internationalrelation/finland.jpg",
+];
 
 export const heroBanner =
   "https://mits.ac.in/public/uploads/internationalrelation/IMG-20210106-WA0006.jpg";
