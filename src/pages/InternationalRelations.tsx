@@ -451,6 +451,36 @@ const GlobalSection = () => {
   );
 };
 
+const EventCard = ({ e }: { e: any }) => {
+  const [showFull, setShowFull] = useState(false);
+  const needsTruncation = e.description.length > 280;
+  const text = showFull ? e.description : (needsTruncation ? `${e.description.substring(0, 260)}...` : e.description);
+
+  return (
+    <div className="p-6">
+      <div className="text-xs font-bold text-primary uppercase tracking-wide mb-1.5">{e.date}</div>
+      <h3 className="font-bold text-secondary text-lg mb-2 leading-snug" style={{ fontFamily: "var(--font-display)" }}>{e.title}</h3>
+      <p className="text-sm text-secondary/80 leading-relaxed whitespace-pre-line">
+        {text}
+        {needsTruncation && (
+          <button
+            onClick={() => setShowFull(!showFull)}
+            className="text-primary font-semibold ml-2 hover:underline focus:outline-none inline-flex items-center gap-0.5 text-xs"
+          >
+            {showFull ? "Read Less" : "Read More"}
+          </button>
+        )}
+      </p>
+      {e.reportUrl && (
+        <a href={e.reportUrl} target="_blank" rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 mt-4 text-xs font-bold uppercase tracking-wider text-primary hover:text-primary/80 transition-colors bg-primary/5 hover:bg-primary/10 px-3 py-2 rounded-lg border border-primary/20">
+          <Download className="w-3.5 h-3.5" />Event Report (PDF)
+        </a>
+      )}
+    </div>
+  );
+};
+
 const EventsSection = () => (
   <div className="space-y-8">
     <SectionTitle title="International Events & Delegations" subtitle="Visits, MoU signings, awareness programmes and international interactions organised by the IRO." />
@@ -463,17 +493,7 @@ const EventsSection = () => (
           className="relative">
           <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-white shadow-md" />
           <div className="rounded-2xl border border-border bg-white overflow-hidden hover:shadow-lg transition-all">
-            <div className="p-5">
-              <div className="text-xs font-bold text-primary uppercase tracking-wide mb-1">{e.date}</div>
-              <h3 className="font-bold text-secondary text-lg mb-2" style={{ fontFamily: "var(--font-display)" }}>{e.title}</h3>
-              <p className="text-sm text-secondary/80 leading-relaxed">{e.description}</p>
-              {e.reportUrl && (
-                <a href={e.reportUrl} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-3 text-sm font-medium text-primary hover:underline">
-                  <Download className="w-4 h-4" />Event Report (PDF)
-                </a>
-              )}
-            </div>
+            <EventCard e={e} />
           </div>
         </motion.div>
       ))}
