@@ -648,11 +648,11 @@ const DepartmentPage = () => {
                                 <div className="flex flex-wrap items-center gap-3 mt-1">
                                   {p.authors && <span className="text-xs text-muted-foreground">{p.authors}</span>}
                                   {p.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>}
-                                  {('venue' in p) && p.venue && <span className="text-xs text-muted-foreground italic">{p.venue}</span>}
-                                  {('indexing' in p) && p.indexing && <span className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{p.indexing}</span>}
+                                  {('venue' in p) && (p as any).venue && <span className="text-xs text-muted-foreground italic">{String((p as any).venue)}</span>}
+                                  {('indexing' in p) && (p as any).indexing && <span className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{String((p as any).indexing)}</span>}
                                   {isCMS && <span className="text-xs text-primary font-medium flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</span>}
-                                  {!isCMS && ('doi' in p) && p.doi && <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
-                                  {!isCMS && ('external_link' in p) && p.external_link && <a href={p.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />Link</a>}
+                                  {!isCMS && ('doi' in p) && (p as any).doi && <a href={`https://doi.org/${(p as any).doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                                  {!isCMS && ('external_link' in p) && (p as any).external_link && <a href={String((p as any).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />Link</a>}
                                 </div>
                               </CardContent>
                             </Card>
