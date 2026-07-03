@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const IS_LOCAL = typeof window !== "undefined" && window.location.hostname === "localhost";
+const IS_LOCAL = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
 const CMS_DIRECT = "https://mits-cms.freedev.app/backend/public_api";
 // In production (GitHub Pages) we read pre-fetched static JSON baked at build time.
 // This avoids all CORS issues. The files live at /MITS-Design1/cms-data/<deptKey>/<endpoint>.json
@@ -19,14 +19,15 @@ async function staticFetch<T>(deptKey: string, endpoint: string, key: string): P
 
 const CMS_CODE: Record<string, string> = {
   cse:   "CSE",
-  ce:    "CIVIL",
+  ce:    "CE",
+  civil: "CE",
   eee:   "EEE",
   me:    "MECH",
   ece:   "ECE",
   ai:    "AI",
   aiml:  "AIML",
   cseds: "CSEDS",
-  csecs: "CSECS",
+  csecs: "CS",
 };
 
 export interface CMSEvent {
