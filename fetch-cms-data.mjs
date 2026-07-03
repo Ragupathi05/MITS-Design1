@@ -24,7 +24,9 @@ const DEPT_CODES = {
   ai:    "AI",
   aiml:  "AIML",
   cseds: "CSEDS",
-  csecs: "CS",
+  csecs: "CSECS",
+  mca:   "MCA",
+  mba:   "MBA",
 };
 
 const ENDPOINTS = ["events", "mous", "achievements", "patents", "publications", "placements", "projects"];

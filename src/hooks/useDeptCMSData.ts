@@ -27,7 +27,9 @@ const CMS_CODE: Record<string, string> = {
   ai:    "AI",
   aiml:  "AIML",
   cseds: "CSEDS",
-  csecs: "CS",
+  csecs: "CSECS",
+  mca:   "MCA",
+  mba:   "MBA",
 };
 
 export interface CMSEvent {
