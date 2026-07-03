@@ -590,11 +590,11 @@ const DepartmentPage = () => {
                                     <CardContent className="p-3 flex items-center justify-between">
                                       <div className="flex-1 min-w-0 pr-3">
                                         <p className="text-sm font-medium text-secondary">{p.title}</p>
-                                        {'inventors' in p && p.inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {p.inventors}</p>}
+                                        {'inventors' in p && (p as any).inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {String((p as any).inventors)}</p>}
                                         {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
                                         {isCMS && <p className="text-xs text-primary font-medium mt-1 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
-                                        {'external_link' in p && p.external_link && !isCMS && (
-                                          <a href={p.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                        {'external_link' in p && (p as any).external_link && !isCMS && (
+                                          <a href={String((p as any).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
                                             <ExternalLink className="w-3 h-3" />View
                                           </a>
                                         )}
