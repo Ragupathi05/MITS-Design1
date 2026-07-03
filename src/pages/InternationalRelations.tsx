@@ -376,27 +376,80 @@ const FellowshipsSection = () => (
   </div>
 );
 
-const GlobalSection = () => (
-  <div className="space-y-8">
-    <SectionTitle title="Global Immersion, Summer & Winter Programs" subtitle="Short-term intensive academic and cultural immersion experiences with partner universities." />
-    <ImageCarousel images={globalGallery} />
-    <div className="grid md:grid-cols-2 gap-5">
-      {globalPrograms.map((g) => (
-        <div key={g.title} className="rounded-2xl border border-border bg-gradient-to-br from-white to-primary/5 p-6 hover:shadow-lg hover:-translate-y-1 transition-all">
-          <div className="flex items-center gap-2 text-xs text-primary font-bold mb-2 uppercase tracking-wide">
-            <Sparkles className="w-4 h-4" />{g.country}
+const GlobalSection = () => {
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+
+  const toggleExpand = (title: string) => {
+    setExpanded((prev) => ({ ...prev, [title]: !prev[title] }));
+  };
+
+  return (
+    <div className="space-y-8">
+      <SectionTitle title="Global Immersion, Summer & Winter Programs" subtitle="Short-term intensive academic and cultural immersion experiences with partner universities." />
+      <ImageCarousel images={globalGallery} />
+      <div className="space-y-6">
+        {globalPrograms.map((g) => (
+          <div key={g.title} className="rounded-2xl border border-border bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
+            <div className="p-6 border-b border-border bg-gradient-to-r from-primary/5 to-transparent">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <div className="flex items-center gap-2 text-xs text-primary font-bold mb-1.5 uppercase tracking-wide">
+                    <Sparkles className="w-3.5 h-3.5" />{g.country}
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>{g.title}</h3>
+                  <div className="flex flex-wrap items-center gap-3 mt-2 text-xs text-muted-foreground">
+                    {g.partner && <span className="inline-flex items-center gap-1"><Building2 className="w-3 h-3" />{g.partner}</span>}
+                    {g.period && <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />{g.period}</span>}
+                  </div>
+                </div>
+                {g.participants && g.participants.length > 0 && (
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => toggleExpand(g.title)}
+                    className="gap-2"
+                  >
+                    <Users className="w-4 h-4" />
+                    {expanded[g.title] ? "Hide Participants" : `View Participants (${g.participants.length})`}
+                  </Button>
+                )}
+              </div>
+              {g.description && <p className="text-sm text-secondary/80 mt-3 leading-relaxed">{g.description}</p>}
+            </div>
+
+            {/* Collapsible Student Table */}
+            {g.participants && g.participants.length > 0 && expanded[g.title] && (
+              <div className="p-6 border-t border-border overflow-x-auto bg-muted/10">
+                <table className="w-full text-sm">
+                  <thead className="text-xs uppercase text-muted-foreground border-b border-border">
+                    <tr>
+                      <th className="text-left py-2 pr-4">#</th>
+                      <th className="text-left py-2 pr-4">Name</th>
+                      <th className="text-left py-2 pr-4">Department</th>
+                      <th className="text-left py-2 pr-4">Roll No</th>
+                      <th className="text-left py-2">Program Track</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {g.participants.map((s) => (
+                      <tr key={s.sno} className="border-b border-border last:border-0 hover:bg-muted/30 transition-colors">
+                        <td className="py-2.5 pr-4 text-muted-foreground">{s.sno}</td>
+                        <td className="py-2.5 pr-4 font-medium text-secondary">{s.name}</td>
+                        <td className="py-2.5 pr-4">{s.dept}</td>
+                        <td className="py-2.5 pr-4 text-muted-foreground">{s.roll}</td>
+                        <td className="py-2.5 text-secondary/70">{s.extra || "Global Immersion"}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
-          <h3 className="font-bold text-secondary text-lg mb-2" style={{ fontFamily: "var(--font-display)" }}>{g.title}</h3>
-          <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-3">
-            {g.partner && <span className="inline-flex items-center gap-1"><Building2 className="w-3 h-3" />{g.partner}</span>}
-            {g.period && <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />{g.period}</span>}
-          </div>
-          {g.description && <p className="text-sm text-secondary/80 leading-relaxed">{g.description}</p>}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const EventsSection = () => (
   <div className="space-y-8">
