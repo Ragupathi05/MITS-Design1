@@ -930,202 +930,183 @@ export const globalPrograms: ProgramCard[] = [
 export const events: IREvent[] = [
   {
     title: "Visit of Dr. Mallesham Dasari – Northeastern University, Boston",
-    date: "8 – 9 June 2026",
-    description:
-      "Director – Spatial Intelligence Research Group & Assistant Professor at Northeastern University, USA visited MITS for research collaboration discussions.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/Pdf-Report%20of%20Dr.%20Mallesham%20Dasari%20-Director-Spatial%20Intelligence%20Research%20Group.pdf",
+    date: "8 & 9 June 2026",
+    description: "Visit of Dr. Mallesham Dasari, Director-Spatial Intelligence Research Group & Assistant Professor, Northeastern University, Boston, USA on 8th & 9th June 2026. Click below to view the official report.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Pdf-Report%20of%20Dr.%20Mallesham%20Dasari%20-Director-Spatial%20Intelligence%20Research%20Group.pdf",
   },
   {
     title: "Awareness Program on Overseas Education – WhatNext Overseas Consultancy",
     date: "10 March 2026",
-    description: "Awareness session for students planning to pursue higher education abroad.",
+    description: "An Awareness Program on Overseas Education-WhatNext Overseas Consultancy held on 10th March 2026.",
     reportUrl: "https://mits.ac.in/assets/pdf/event/WhatNext%20Consultancy%20Team.pdf",
   },
   {
     title: "BGSU Senior Leadership Team Visit",
     date: "20 November 2025",
-    description:
-      "Dr. Rodney K. Rogers (President), Dr. Sandra Earle, Dr. Ravi Krovi, Dr. Ram Veerapaneni and Dr. Wael Mokhtar from Bowling Green State University, Ohio visited MITS to strengthen academic collaboration and sign an MoA/MoU.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/Report%20of%20BGSU%20Team%2020.11.2025-min.pdf",
-    image: "https://mits.ac.in/public/uploads/internationalrelation/bowling.JPG",
+    description: "Senior Leadership Team, from Bowling Green State University visited MITS Campus on 20th November 2025. The members of the respective team are:\n\n1. Dr. Rodney K. Rogers President Bowling Green State University- Ohio, USA\n2. Dr. Sandra Earle- University Advocate BGSU-Ohio, USA\n3. Dr. Ravi Krovi the Provost and Senior Vice President BGSU- Ohio, USA\n4. Dr. Ram Veerapaneni Vice Provost for Academic Affairs BGSU- Ohio, USA\n5. Dr. Wael Mokhtar, Dean College of Technology, Architecture and Applied Engineering BGSU-USA\n\nThe team visited MITS-Deemed to be University for strengthening the Academic collaborations, and to Sign in an MoA and MoU on 20th November 2025.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Report%20of%20BGSU%20Team%2020.11.2025-min.pdf",
   },
   {
-    title: "Academic Roundtable with Alabama Universities (ALIEEP)",
+    title: "Alabama International Education & Economic Partnership Roundtable Interaction",
     date: "22 September 2025",
-    description:
-      "Roundtable organised by One Window Overseas Education and Alabama International Education & Economic Partnership at ITC Kakatiya, Hyderabad to foster India–Alabama academic collaboration.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/Interactive%20Session%2022.09.2025.pdf",
+    description: "An exclusive academic roundtable interaction event was organized by One Window Overseas Education (One Window) and the Alabama International Education & Economic Partnership (ALIEEP) in Hotel ITC Kakatiya- Hyderabad-Telangana on 22nd September 2025.\n\nThe event aimed to foster collaboration between Indian academic institutions and universities in the state of Alabama, USA, and to explore opportunities for international education partnerships, student exchange programs, and research collaborations.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Interactive%20Session%2022.09.2025.pdf",
   },
   {
-    title: "Awareness Program – Higher Education Opportunities in Europe, UK & Australia",
+    title: "Awareness Program on Higher Education Opportunities in Europe, UK & Australia",
     date: "16 September 2025",
-    description:
-      "Mr. Seshu Babu, Head of Marketing & Operations, Global Degrees addressed final-year students on academic prospects, scholarships and application procedures.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/An%20Awareness%20Program%20on%2016-09-2025.pdf",
+    description: "MITS International Relations office organized an awareness program on “Higher Education Opportunities in Europe, UK & Australia” on 16th September 2025 in Seminar Hall-A at 2.00 to 4.00 PM.\n\nThe resource person Mr. Seshu Babu- Head of Marketing & Operations (Head of European Dept) Global Degrees, addressed the interested final year students of all branches. This program is aimed to enlighten students about the wide range of academic prospects, scholarships, and application procedures pertaining to the program and country specific.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/An%20Awareness%20Program%20on%2016-09-2025.pdf",
   },
   {
-    title: "Interactive Session with H. E. Mr. Chang Nyun Kim – Consul General of the Republic of Korea",
+    title: "Interactive Session featuring H.E. Mr. Chang Nyun Kim, Consul General of Republic of Korea",
     date: "10 September 2025",
-    description:
-      "ASSOCHAM-organised session at Hotel Novotel Vijayawada focusing on India–South Korea bilateral ties in trade, education, infrastructure and smart agriculture.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/Interactive%20Session%2010-09-2025.pdf",
+    description: "An Interactive Session was held on 10th September 2025, featuring His Excellency, Mr. Chang Nyun Kim, the Consul General of the Republic of Korea in Chennai organized by ASSOCHAM held in Hotel Novotel Vijayawada Varun, Andhra Pradesh. The session aimed to strengthen bilateral ties in the fields of trade and education between India and South Korea, focusing on sectors such as trade investment, infrastructure, education, food processing and smart agriculture.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Interactive%20Session%2010-09-2025.pdf",
   },
   {
-    title: "Visit of Ms. Barriga Dey – Rivier University, USA",
+    title: "Visit of Ms. Barriga Dey – Director of Strategic Global Engagement, Rivier University, USA",
     date: "20 February 2025",
-    description:
-      "Director of Strategic Global Engagement at Rivier University, New Hampshire visited MITS to initiate an educational collaboration and student exchange programme.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/Report%20on%20the%20visit%20of%20Ms.%20Barriga%20Dey-Rivier%20University.pdf",
-    image: "https://mits.ac.in/public/uploads/internationalrelation/Rivier%20University%201.jpg",
+    description: "On 20th February, 2025, Ms. Barriga Dey, Director of Strategic Global Engagement and her team from Rivier University - Nashua, New Hampshire, United States visited Madanapalle Institute of Technology & Science (MITS) with the purpose of initiating an educational collaboration with MITS. This visit marks a significant step in strengthening ties between the two institutions, with a special focus on student exchange programs and the signing of a Memorandum of Understanding (MoU) to solidify future academic cooperation.\n\nThe visit of this delegation has been initiated by Mr. Venu Choudary, Head-Training & Placements. Dr. C. Yuvaraj, Principal of MITS extended a warm welcome along with the international relations team including Dr. Sremmant Basu, Dean-Administration International Relations & UGC Affairs Mrs. U. Vijaya Lakshmi, Senior Manager-International Relations and Student Counsellor and all the HoDs of various departments.\n\nThe team interacted with the students, followed by discussions about potential collaborative opportunities in higher education, international research initiatives, and, notably, the student exchange program that will provide both Rivier University and MITS students with an opportunity to study abroad, immerse with diverse cultures, and to broaden their academic horizons.\n\nThe highlight of this visit was a presentation of Rivier University and interaction with the students. This would be a great opportunity for the faculty and students to interact with the visiting delegation that shared the first-hand information and about the insights on the importance of global immersion in the world of work.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Report%20of%20Rivier%20University.pdf",
   },
   {
-    title: "US Delegation Visit & MoU Signing – Bowling Green State University",
+    title: "2-Day US Delegation Visit & MoU Signing – Bowling Green State University, USA",
     date: "17 February 2025",
-    description:
-      "Dr. Ram Veerapaneni, Dr. Wael Mokhtar and Mr. Can (Jon) Erdogmus from BGSU-USA entered into academic partnership with MITS by signing an MoU covering degree pathways, joint research, exchange and curriculum framing.",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/Report%20on%20A%202%20Day%20visit%20of%20US%20Delegation.pdf",
-    image: "https://mits.ac.in/public/uploads/internationalrelation/us-mou.JPG",
+    description: "In the 2 days Visit, Dr. Ram Veerapaneni, Vice Provost for Academic Affairs, Dr. Warl Mokhtar, Dean College of Technology, Architecture and Applied Engineering and Mr. Can (Jon) Erdogmus, International Programs & Partnerships, International Student Recruiter/Advisor, Bowling Green State University, USA interacted with the administrators of Madanapalle Institute of Technology & Science, India and entered into academic partnership with MITS by signing in an MoU on 17th February 2025.\n\nThe MoU, which was officially signed on 17th of February 2025 by Madanapalle Institute of Technology & Science and Bowling Green State University- USA initiates the beginning of an exciting partnership aimed at fostering academic excellence, enhancing research efforts and providing unique global opportunities for students and faculty alike.\n\nThe agreement highlights several key areas of collaboration, including: Pathways for students to complete degree program, Joint Research Projects, Student and Faculty Exchange, Framing the Curriculum.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Report%20of%20BGSU%2017.02.2025.pdf",
   },
   {
-    title: "Visit & Training by Prof. Uday Kiran Rage – University of Aizu",
-    date: "August 2024",
-    description:
-      "Prof. Uday Kiran Rage delivered 16 hours of hands-on training in AI, Machine Learning, Data Mining and Pattern Mining for ~80 students and hosted two Japanese students at MITS for a two-week research internship (12 – 24 Aug 2024).",
-    reportUrl:
-      "https://mits.ac.in/assets/pdf/event/Dr.%20Uday%20Kiran%20Rage%20Visit%20Research%20Internship%20Program%20for%202%20Japanese%20Students.pdf",
+    title: "Visit and Research Training by Prof. Uday Kiran Rage & Japanese Students – University of Aizu",
+    date: "12 – 24 August 2024",
+    description: "Prof. Uday Kiran Rage, Associate Professor & Leader of Aizu Research Centre Cluster (B)- iTransporation, from the University of Aizu, - Japan has visited MITS, to strengthen the process of MoU requirements. In that process two Japanese students, Mr. Suzuki Shota pursuing Master's and Mr. Usami pursuing a Bachelor's program, have accompanied him to complete their Two-Week Research Internship Program. They stayed in MITS from 12-08-2024 to 24-08-2024.\n\nProf. Uday Kiran Rage, has given an intensive, hands-on training for 16 hours to the students of School of Computers in the fields such as Artificial Intelligence, Machine Learning, Data mining, Data Structures and pattern mining, covering the topics in various scenarios such as traffic congestion, weather, and sales data. Nearly 80 students have taken advantage of his lectures and are now focusing on research-based education.",
+    reportUrl: "https://mits.ac.in/assets/pdf/event/Report%20of%20University%20of%20Aizu.pdf",
   },
   {
-    title: "Academic Address & Guidance on Research Internships – University of Aizu",
+    title: "MoU Discussion & Research Internships Lecture by Prof. Uday Kiran Rage",
     date: "2 April 2024",
-    description: "Prof. Uday Kiran Rage visited MITS, discussed the University of Aizu MoU and addressed AI students on global research internships & MS opportunities in Japan.",
-    reportUrl: "https://mits.ac.in/assets/pdf/event/Dr.%20Uday%20Kiran%20Rage%20Visit%20Research%20Internship%20Program%20for%202%20Japanese%20Students.pdf"
+    description: "Prof. Uday Kiran Rage, Associate Professor – Fukushima- Japan has visited MITS on 2nd April 2024, discussed with the Administrators about the MoU with University of AIZU-Japan. He addressed the students of AI and highlighted the importance of research internship & MS program opportunities in University of AIZU-Japan.",
   },
   {
-    title: "Switzerland Academic Collaboration Discussion – HEIG-VD",
+    title: "Visit of Prof. Cédric Bornand – REDS Institute, HEIG-VD, Switzerland",
     date: "27 October 2023",
-    description: "Prof. Cédric Bornand from HEIG-VD visited MITS to explore academic and research collaboration opportunities in Switzerland.",
-    reportUrl: "https://mits.ac.in/assets/pdf/event/Visit%20of%20Cedric.pdf"
+    description: "Prof. Cédric Bornand working in the Reconfigurable & Embedded Digital Systems (REDS) Institute of the HEIG-VD, Switzerland visited MITS on 27th October 2023 and discussed with the administrators about the opportunities in Switzerland.",
   },
   {
-    title: "Visit of Japanese Academic Delegation",
-    date: "31 July – 2 August 2023",
-    description: "Prof. Yukari Shirota (Gakushuin University), Prof. Tetsuji Kuboyama (Gakushuin University), and Prof. Takako Hashimoto (Chiba University of Commerce) visited MITS. Addressed students on IEEE ethics and shared job opportunities in Japan. Schools of Computing and Management initiated joint research in AI, ML and Data Science.",
-    reportUrl: "https://mits.ac.in/assets/pdf/event/Visit%20of%20Japanese%20Delegation.pdf"
+    title: "Visit of Japanese Academic Delegation on Machine Learning & Smart Industry",
+    date: "31 July to 2nd August 2023",
+    description: "Japanese Delgation comprising of Prof. Yukari Shirota, Gakushuin University, and Prof. Tetsuji Kuboyama from Gakushuin University, and Prof. Takako Hashimoto from Chiba University of Commerce-Japan, visited Madanapalle Institute of Technology & Science campus on 31st July.\n\nAs part of this, an interaction session with students and faculty was organized on 1st of August, Prof. Takako Hashimoto enabled the students about IEEE ethics and their purpose. Prof. Tetsuji Kuboyama enabled the faculty and students about more opportunities in the fields of construction, machine parts and tool industry, electronics and information, ship building and ship machinery, etc. as more than 60 lakh job opportunities will be created in Japan by 2030.\n\nFurther, the School of Management and School of Computing will work on joint research in the fields of Artificial Intelligence, Machine learning, and Data Science. This is a good opportunity to encourage students and faculty in academic excellence and innovation.",
   },
   {
     title: "Visit of Asia University Delegation (5 Deans)",
     date: "7 July 2023",
-    description: "Deans from International College, Medical & Health Sciences, Information & Electrical Engineering, Management, and Industry-Academia Collaboration visited MITS to renew MoUs and sign new MoAs, creating direct pathways for research, internships and MS degrees in Taiwan.",
-    reportUrl: "https://mits.ac.in/assets/pdf/event/Visit%20of%205%20Deans.pdf"
+    description: "The delegation comprises: Dr. Yinghuei Chen- Dean of International College, Dr. Jiunn-Jong Wu Dean of College of Medical and Health Sciences, Dr. Ching-Hsien Hsu Dean of College of Information and Electrical Engineering, Dr. Chun-Wei Lin- Dean of College of Management, Dr. Charles C.N. Wang Dean of Industry Academia Collaboration.\n\n5 Deans from Asia University- Taiwan, which is one of the world’s top 900 universities, visited MITS on 7th July 2023. MITS entered into Memorandum of Understanding with Asia University-Taiwan in November 2017 for a period of 5 years and as a result many academic activities like internships, collaborative activities. The MoU was renewed. Further, a Memorandum of Agreement with the College of Information and Electrical Engineering and also with the College of Management of Asia University - Taiwan MITS signed an MoA for further academic collaboration. This visit is very significant as many of MITS students will get good opportunities to do research, internships and also MS programs in Asia University - Taiwan.",
   },
   {
-    title: "Microelectronics Collaboration Program – Brno University of Technology, Czech Republic",
+    title: "3-Day Visit of International Delegation from Brno University of Technology, Czech Republic",
     date: "20 – 23 February 2023",
-    description: "Prof. Jiri Haze and Dr. Pavel Steffan visited MITS to draft the outline of the 1+3 Semesters MS Program in Microelectronics and interacted with ECE & EEE students to discuss trending technologies in semiconductors.",
-    reportUrl: "https://mits.ac.in/assets/pdf/event/Visit%20of%20Czech%20Republic%20Deans.pdf"
+    description: "A Three Day Program of International Delegation from BRNO University of Technology – Czech Republic- Europe Prof. Jiri HAZE Head of Microelectronics Dept and Dr. Pavel STEFFAN Associate Professor and Secretary of the Dept of Microelectronics in BRNO University of Technology – Czech Republic- Europe visited MITS from 20-02-2023 to 23-02-2023.\n\nThe team entered into a detailed discussion on the outline of the MoU with MITS towards 1+3 Semesters MS Program in Microelectronics as a collaborative of MITS and BRNO University of Technology. The team also interacted with the students of ECE & EEE and inspired them about the trending technologies in the field of semiconductors. They also motivated the students to study MS in Microelectronics in BRNO University of Technology-Czech Republic Europe.",
   },
   {
-    title: "University of Aizu Partnership Discussion",
+    title: "Interaction on University of Aizu MoU by Prof. Uday Kiran Rage",
     date: "30 December 2022",
-    description: "Prof. Uday Kiran Rage from University of Aizu visited the IRO regarding draft MoUs and future collaborative space research activities."
+    description: "Prof. Uday Kiran Rage from AIZU University – Japan visited MITS on 30-12-2022. He interacted with International Relations Office and the administrators regarding the MoU and research activities with AIZU University in Japan. The draft MoU has been shared and it is under progress for finalization.",
   },
   {
-    title: "Academic Collaboration & Guest Lecture – Macquarie University, Australia",
+    title: "Guest Lecture on Australian Higher Education by Prof. Subhas Mukhopadhyay",
     date: "29 December 2022",
-    description: "Prof. Subhas Mukhopadhyay visited MITS to discuss joint research. He delivered a guest lecture for Mechanical & Computer Science students on higher education and research opportunities in Australia."
+    description: "Prof. Subhas Mukhopadhyay from Macquarie University Sydney- Australia visited MITS on 29-12-2022. He interacted with the HoDs, administrators and the faculty for collaborative & research activities with Macquarie University Sydney- Australia. Thereafter, a guest lecture was conducted in the Seminar Hall for the benefit of Mechanical & Computer Science students, highlighting the higher education opportunities in Australia.",
   },
   {
-    title: "Higher Education Opportunities in Europe – Czech Technical University",
+    title: "Virtual Session on Higher Education Opportunities in Europe by Dr. Vladimir Kulish",
     date: "7 September 2022",
-    description: "A virtual guest session by Dr. Vladimir Kulish, Visiting Professor at Czech Technical University, outlining academic and research opportunities in Europe for ECE & EEE students."
+    description: "A Virtual Session by Dr. Vladimir Kulish - Visiting Professor of Czech Technical University, Czech Republic- Europe: He highlighted about the “Higher Education Opportunities in Europe\" for the benefit of students of ECE & EEE. The event took place in MITS Auditorium on 07-09-2022.",
   },
   {
-    title: "MITS Delegation Visit – Brno University of Technology, Czech Republic",
+    title: "MITS Delegation Visit to Brno University of Technology, Czech Republic",
     date: "7 – 11 June 2022",
-    description: "Dr. Sremmant Basu and Dr. Vladimir Kulish visited Brno University of Technology in Europe to discuss the implementation details of the 1+3 semesters MS program in Microelectronics."
+    description: "Dr. Sremmant Basu visited BRNO University of Technology- Czech Republic from 07-06-2022 to 11-06-2022 along with Dr. Vladimir Kulish visiting professor MITS. The team met Prof. Jiri HAZE Head of the dept of Microelectronics and the other administrators and discussed way forward for 1+3 Semesters MS Program Model.",
   },
   {
-    title: "Global Careers in AI & Machine Learning – Citrix Systems, USA",
+    title: "Virtual Session on Avenues in Europe for Management Students by Dr. Vladimir Kulish",
+    date: "4 August 2020",
+    description: "A Virtual Session by Dr. Vladimir Kulish - Visiting Professor of Czech Technical University, Czech Republic- Europe. He enlightened the students of Management Studies Department on the topic,\" Opportunities in Europe.\" The event had happened in MITS Auditorium on 04-08-2020.",
+  },
+  {
+    title: "Global Career Talks in AI & Machine Learning by Mr. Phani Madhav Jathi",
     date: "20 June 2022",
-    description: "Mr. Phani Madhav Jathi, Senior Manager at Citrix Systems, addressed the School of Computing on emerging global career pathways in AI and Machine Learning."
+    description: "Mr. Phani Madhav Jathi, Senior manager, Citrix Systems from USA had addressed the students of School of Computing, on 20th June, 2022 on the topic in “Global Career opportunities in Artificial Intelligence & Machine learning. The career talk gave the students a lot of insights on 20-06-2022.",
   },
   {
-    title: "Transcendental Meditation & Research MoU – Maharishi Vedic University, Holland",
+    title: "MoU Signing & Transcendental Meditation Classes – Maharishi Vedic University, Holland",
     date: "18 October 2019",
-    description: "Prof. Brian and Prof. Ashley Deans visited MITS and signed an MoU to launch Transcendental Meditation sessions on campus and initiate joint research."
+    description: "Prof. Brian from Maharshi Vedic University Holland, Prof. Ashley Deans Executive Director of Maharishi School of the Age of Enlightenment and Mr. Thai and Mrs. Sucha from Thailand visited MITS on 18th October, 2019. Prof. Rambabu Kodali Director of MITS and Prof. Brian has signed in the MoU, between two institutions to initiate Transcendental Meditation Classes in MITS and to foster research collaborations.",
   },
   {
-    title: "Cognitive Neuroscience & Mind-Body Research – Maharishi Vedic University, Holland",
+    title: "Induction Session on Neuroscience by Prof. Brian Levine – Maharishi Vedic University",
     date: "4 September 2019",
-    description: "Prof. Brian Levine addressed MCA faculty and conducted a specialized session for newly admitted MBA & MCA students."
+    description: "Prof. Brian Levine Professor in Neuro Science ( Maharshi Vedic University – Holland) and Sri. Chandra Sekhar visited the campus on 4th September 2019, addressed the faculty of MCA Dept and also took a session in the Induction Program for the MBA & MCA new entrants.",
   },
   {
-    title: "International Collaboration Explorations – Czech Technical University",
+    title: "Global Connectivity and International Collaboration discussions by Dr. Vladimir Kulish",
     date: "26 – 29 August 2019",
-    description: "Dr. Vladimir Kulish spent 3 days at MITS interacting with Deans and HoDs of Electrical & Mechanical Engineering to build pathways for international collaborations, internships and student exchanges."
+    description: "Dr. Vladimir Kulish, (Professor & former Vice Chancellor of Avantika University) Czech Technological University, Prague visited MITS and was in the campus from 26th August to 29th August 2019 (3 days) to establish global connectivity. He interacted with Deans & HoDs of Electrical & Mechanical Engineering faculty to explore the avenues for international collaborations, internships & other Exchange Programs.",
   },
   {
-    title: "Higher Education in 1000+ Global Universities – Azent Overseas Education",
+    title: "Seminar on Higher Education Abroad by Azent Overseas Education Limited",
     date: "28 August 2019",
-    description: "A seminar on global admissions, scholarships, and free IELTS preparation for study programs in the US, UK, Canada, Ireland, Germany, Australia, and New Zealand."
+    description: "Mr. R. Premanand, Center Head, Mr. Pritam Save, Marketing Manager & Mr. Sailesh Davey Senior Marketing Manager from AZENT OVERSEAS EDUCATION LIMITED conducted a Seminar on 28th August 2019 in MITS Auditorium on, “ Higher Education opportunities in1000+ TOP Universities abroad USA • Canada • Uk Ireland • Australia New Zealand • Germany” and interacted with the students extending admission and free IELTS coaching.",
   },
   {
-    title: "Vidya Vahini Study Abroad Support – AP Govt Telugu Society (APNRT)",
+    title: "Vidya Vahini Study Abroad funding awareness by APNRT Society",
     date: "26 August 2019",
-    description: "Mr. Praveen from APNRT created awareness about AP government scholarships, financial support, and welfare schemes for pursuing higher education abroad."
+    description: "Mr. Praveen Career Counsellor from APNRT (AP Govt Non-Resident Telugu Society) visited MITS on 26th August 2019 to create awareness about the Govt Program & support to go abroad for higher studies. He interacted with the students and enabled the students about Vidya Vahini program and also the avenues for obtaining the funds for higher education abroad.",
   },
   {
-    title: "AI and Smart Cities Collaboration – Brunel University London & Bennett University",
+    title: "Importance of AI in Leading India by Brunel University (UK) & Bennett University",
     date: "14 May 2019",
-    description: "Dr. George Ghinea (Brunel University) and Dr. Sridhar Swaminathan (Bennett University) met MITS AI researchers to discuss research partnerships in AI-driven smart infrastructure."
+    description: "Dr. George Ghinea, Reader in Computer Science – Department of Computer Science at Brunel University & Dr. Sridhar Swaminathan, Assistant Professor at Bennett University, Greater Noida visited the campus on 14th May 2019. The team interacted with MITS - AI team and Heads of the departments to give an overview of the importance of Artificial Intelligence in Leading India & exploring research collaborations with Bennett University & Brunel University London, UK.",
   },
   {
-    title: "Mandarin Language Centre & Academic Exchange – National Yunlin University, Taiwan",
+    title: "MoU setting up Mandarin Language training center – YUNTECH, Taiwan",
     date: "16 April 2019",
-    description: "President Prof. Dr. Neng-Shu Yang and team signed an MoU to establish a Mandarin language training center at MITS, and addressed students on MS and PhD opportunities."
+    description: "Prof. Dr. Neng-Shu Yang President, Prof. Yu-Hsun Nien, Vice Dean of Office of International Affairs and Ms. Carol Qiu, Manager-International Relations of National Yunlin University of Science and Technology (YUNTECH) -Taiwan visited the campus on 16th April 2019. The President signed the MoU on setting up of Mandarin language training center & arranging a teacher to train the students. The President and the team addressed the faculty & students and created awareness about MS & Ph.D. programs in YUNTECH-Taiwan.",
   },
   {
-    title: "Job Opportunities & HR Requirements in Japan – Conomity Tokyo",
+    title: "Japanese Job Opportunities awareness by Conomity, Tokyo",
     date: "6 March 2019",
-    description: "Mr. Kobayashi (CEO) and HR managers from Tokyo, Japan visited MITS to guide students on job requirements, language proficiency, and technical careers in Japan."
+    description: "Mr. Kobayashz, CEO & owner of Conomity and Mr. Kentaro Kuroiwa, H R Manager from Tokyo –Japan, visited MITS on 6th March 2019 along with Dr. G.S. Saggu and Mr. Manish Gupta of Orion Productions & Consulting Pvt. Ltd, Japan and interacted with MITS students and created an awareness about the job opportunities in Japan.",
   },
   {
-    title: "Mandarin Language Training Agreement – Yuntech Taiwan",
+    title: "Agreement to establish Mandarin Language Centre – YUNTECH, Taiwan",
     date: "13 February 2019",
-    description: "Prof. Dr. Stanley Tseng and Ms. Carol Qiu visited MITS to sign the agreement establishing the Mandarin Language Centre on campus."
+    description: "National Yunlin University of Science & Technology- Taiwan Dean of International Relations & Professor in Mechanical Engineering Prof. Dr. Stanley Tseng and Ms. Carol Qiu- Manager -International Relations visited MITS on 13th February 2019 and signed an agreement to establish Mandarin Language Centre along with a trainer in MITS Campus.",
   },
   {
-    title: "Space Research & Astronomy Initiatives – Chungnam National University, South Korea",
+    title: "Space Science & Astronomy research proposal by Chungnam National University, South Korea",
     date: "28 January 2019",
-    description: "Dr. S. Eswar, Senior Researcher, Chungnam National University visited MITS to discuss starting dedicated space research activities."
+    description: "Dr. S. Eswar, Senior Researcher, Space Science Laboratory, Department of Astronomy and Space Science, Chungnam National University, visited MITS on 28th January 2019. There is a proposal for initiating future space research activities in MITS.",
   },
   {
-    title: "Special Communication Research – Kookmin University, South Korea",
+    title: "MoU & Special Communication Research collaboration – Kookmin University, South Korea",
     date: "17 – 20 December 2018",
-    description: "Prof. Soo Hyun Park and Prof. Soo Young Shin visited MITS as part of the MoU between SPRC Kookmin University and MITS to review joint communication engineering projects."
+    description: "Prof. Soo Hyun Park, President, Special Communication Research Center and Prof. Soo Young Shin, Vice-President, Special Communication Research Center from Kookmin University visited MITS as part of MoU between Special Communication Research Center (SPRC), Kookmin University, Seoul, South Korea, and were in the campus from 17th to 20th December 2018.",
   },
   {
-    title: "Innovative Technologies Seminar – University of Heidelberg, Germany",
+    title: "Innovative Technologies Seminar by Research Scientist of University of Heidelberg, Germany",
     date: "13 December 2018",
-    description: "Dr. Sreeganesh Thottempudi visited MITS and delivered an expert talk on global innovative tech trends for MCA students."
+    description: "Dr. Sreeganesh Thottempudi, a Research scientist from University Of Heidelberg, Germany visited the campus, on 13th December 2018 and addressed the faculty & Students of MCA on \"Innovative Ideas on new Technologies\" organized by Dept of Computer Applications.",
   },
   {
-    title: "Japanese Language & Global Careers – Silverpeak Global",
+    title: "Careers & Japanese Proficiency Awareness by Silverpeak Global Private Ltd",
     date: "30 August 2018",
-    description: "Mr. Vinay N conducted a full-day seminar for all engineering branches on the Japanese Language Proficiency Test (JLPT) and tech job options in Japan."
+    description: "Mr. Vinay N Director - INDIA SILVERPEAK GLOBAL PRIVATE LTD, Bangalore visited MITS on 30th of August 2018, to create awareness on “Opportunities in Japan & Japanese Language Proficiency” addressed students of all Engineering branches from 11.00 AM to 4.00 PM in Main Seminar Hall.",
   },
   {
-    title: "IUCEE-EPICS Societal Projects Workshop – Purdue University, USA",
+    title: "IUCEE-EPICS Societal Projects Workshop by Purdue University, USA",
     date: "3 July 2018",
-    description: "Prof. William Oakes (Director, EPICS Purdue) conducted a workshop on engineering projects in community services, reviewing MITS student-led societal projects."
-  }
+    description: "Prof. William Oakes Director EPICS Purdue University & Dr. Kantha Reddy, Director of IUCEE India Epics Team & Irlapati Nagababu APSSDC visited MITS on 3rd July 2018, to conduct IUCEE-EPICS workshop (Engineering Projects In Community Services) in Scale-Up Classroom. He visited the campus, addressed the Research &Develop Department, interacted with the faculty involved in the societal projects. Further, he also interacted with the students who are involved in research activities and enabled all about the significance of EPICS Projects.",
+  },
 ];
 
 export const workshops: IREvent[] = [

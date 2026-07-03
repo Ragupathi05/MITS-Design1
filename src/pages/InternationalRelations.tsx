@@ -463,11 +463,6 @@ const EventsSection = () => (
           className="relative">
           <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-white shadow-md" />
           <div className="rounded-2xl border border-border bg-white overflow-hidden hover:shadow-lg transition-all">
-            {e.image && (
-              <div className="aspect-[16/9] overflow-hidden bg-muted">
-                <img src={e.image} alt={e.title} loading="lazy" className="w-full h-full object-cover" onError={(ev) => ((ev.target as HTMLImageElement).style.display = "none")} />
-              </div>
-            )}
             <div className="p-5">
               <div className="text-xs font-bold text-primary uppercase tracking-wide mb-1">{e.date}</div>
               <h3 className="font-bold text-secondary text-lg mb-2" style={{ fontFamily: "var(--font-display)" }}>{e.title}</h3>
