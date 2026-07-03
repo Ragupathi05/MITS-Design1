@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Globe, Users, GraduationCap, Award, Plane, Sparkles, Calendar,
   BookOpen, FileText, Download, ExternalLink, MapPin, Phone, Mail,
-  Building2, ChevronRight, Home, ArrowRight, Landmark, Star,
+  Building2, ChevronLeft, ChevronRight, Home, ArrowRight, Landmark, Star,
   type LucideIcon,
 } from "lucide-react";
 import Header from "@/components/Header";
