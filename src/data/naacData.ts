@@ -77,7 +77,7 @@ export const extendedProfileDVV: DocLink[] = [
 ];
 
 export const iqacLinks: DocLink[] = [
-  { title: "IQAC Portal", url: "https://mits.ac.in/newiqac1", type: "link" },
+  { title: "Internal Quality Assurance Cell (IQAC) Portal", url: "#/iqac", type: "link" },
   { title: "IIQA Submission", url: BASE + "IIQA.pdf", type: "pdf" },
   { title: "NAAC Advisory Committee", url: BASE + "NAAC%20Revised%20Advisory%20Committee.pdf", type: "pdf" },
 ];
