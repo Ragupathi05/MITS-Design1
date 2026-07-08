@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight, Download, UserRoundPlus, FileText,
@@ -70,6 +71,53 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
 };
 
 /* ── Page ── */
+const admissionsFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the eligibility for B.Tech admission at MITS Madanapalle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Candidates must have passed 10+2 (or equivalent) with Physics, Chemistry and Mathematics, securing at least 45% aggregate marks. Admission is through AP EAMCET / JEE Main counselling or direct admission based on merit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does MITS accept AP EAMCET scores?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MITS Madanapalle accepts AP EAMCET scores for B.Tech admissions. Candidates who have appeared in AP EAMCET are eligible to apply through the APSCHE counselling process." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is MITS a deemed university or affiliated college?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MITS is a Deemed-to-be University recognised by UGC under Section 3 of the UGC Act, 1956. It is also NAAC A+ accredited and AICTE approved." }
+    },
+    {
+      "@type": "Question",
+      "name": "What programmes does MITS offer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MITS offers B.Tech (CSE, ECE, EEE, Mechanical, Civil, AI, AI&ML, CSE-Data Science, CSE-Cyber Security), M.Tech, MBA, MCA, and BCA/BBA programmes." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I apply for admission to MITS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Applications can be submitted online at admission.mits.ac.in. The process involves registering, filling the application form, uploading documents, and attending counselling for fee payment and confirmation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are scholarships available at MITS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MITS students are eligible for state government scholarships (AP Jagananna Vidya Deevena, Vasathi Deevena), central government scholarships, and merit-based fee concessions. Details are available on the admissions portal." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the placement record at MITS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MITS has a 94% placement rate with an average package of ₹6.8 LPA and a highest package of ₹21 LPA. Over 200 companies recruit from campus, including Google, Microsoft, Amazon, TCS, Infosys, and Wipro." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does MITS have hostel facilities?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MITS provides separate hostel facilities for male and female students on campus, with mess, Wi-Fi, and security arrangements." }
+    }
+  ]
+};
+
 const Admissions = () => {
   /* gallery auto-scroll */
   const VISIBLE = 3;
@@ -94,6 +142,12 @@ const Admissions = () => {
   return (
     <div className="min-h-screen bg-[#f5f5f5]">
       <Header />
+      <SEO
+        title="MITS Admissions 2026 – B.Tech, MBA & MCA | Madanapalle"
+        description="Apply for MITS Madanapalle admissions 2026. B.Tech via AP EAMCET, direct admission for MBA & MCA. NAAC A+ deemed university. 94% placement rate. Apply at admission.mits.ac.in."
+        canonical="/admissions"
+        jsonLd={admissionsFaqSchema}
+      />
       <main>
 
         {/* ── HERO ── */}
@@ -361,7 +415,38 @@ const Admissions = () => {
           </div>
         </section>
 
-        {/* ── FINAL CTA ── */}
+        {/* ── FAQ SECTION ── */}
+        <section className="py-24 bg-white" aria-labelledby="admissions-faq-heading">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <p className="text-[#b30000] font-semibold tracking-widest uppercase text-sm mb-2">Got Questions?</p>
+                <h2 id="admissions-faq-heading" className="font-display text-4xl font-bold text-[#0f2a44] mb-3">Admissions FAQ</h2>
+                <p className="text-gray-500">Answers to the questions students and parents ask most.</p>
+              </div>
+            </ScrollReveal>
+            <div className="space-y-4">
+              {admissionsFaqSchema.mainEntity.map((item, i) => (
+                <ScrollReveal key={i} delay={i * 0.05}>
+                  <details className="group border border-gray-200 rounded-xl bg-gray-50 open:bg-white open:shadow-md transition-all duration-300">
+                    <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#0f2a44] list-none">
+                      {item.name}
+                      <span className="ml-4 text-[#b30000] text-xl group-open:rotate-45 transition-transform duration-200">+</span>
+                    </summary>
+                    <p className="px-6 pb-5 text-gray-600 leading-relaxed">{item.acceptedAnswer.text}</p>
+                  </details>
+                </ScrollReveal>
+              ))}
+            </div>
+            <ScrollReveal delay={0.4}>
+              <p className="text-center text-gray-500 mt-8 text-sm">
+                More questions? <Link to="/contact" className="text-[#b30000] font-semibold hover:underline">Contact our admissions team</Link> or visit the <Link to="/eligibility-and-fees" className="text-[#b30000] font-semibold hover:underline">Eligibility &amp; Fees</Link> page.
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ── FINAL CTA ── */}}
         <section className="relative py-32 overflow-hidden">
           <img src={`${BASE}admissions/admission2.jpg`} alt="MITS Campus" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0f2a44]/95 via-[#0f2a44]/82 to-[#b30000]/72" />

@@ -1,6 +1,7 @@
 ﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { BookOpen, Building2, FlaskConical, GraduationCap, Microscope, Users, Calendar, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -41,6 +42,11 @@ const Academics = () => {
   return (
     <div className="min-h-screen">
       <Header />
+      <SEO
+        title="Academics at MITS Madanapalle – B.Tech, M.Tech, MBA, MCA"
+        description="Explore academic programmes at MITS Madanapalle – B.Tech, M.Tech, MBA, MCA across 4 schools. OBE curriculum, 600+ faculty, NBA-accredited departments, AICTE approved."
+        canonical="/academics"
+      />
       <main>
         <section
           className="relative pt-32 md:pt-40 pb-20 overflow-hidden"

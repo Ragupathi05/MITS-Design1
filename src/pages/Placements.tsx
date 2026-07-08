@@ -1,6 +1,7 @@
 ﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { Award, BookOpen, Building, IndianRupee, TrendingUp, Users, Target, Briefcase, GraduationCap, Star, ChevronRight, ArrowRight, CheckCircle2, Zap, Trophy, Globe, Clock, Heart, Mail, Phone, MapPin, ExternalLink, ChevronDown, Calendar, Video, FileText, Link2, Users2, Building2, Sparkles, TrendingDown, BarChart3, PieChart, Activity } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
@@ -581,6 +582,11 @@ const Placements = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Header />
+      <SEO
+        title="MITS Placements – 94% Rate, ₹21 LPA Highest | Madanapalle"
+        description="MITS Madanapalle placement record: 94% placement rate, ₹6.8 LPA average, ₹21 LPA highest package. 200+ recruiters including Google, TCS, Infosys, Wipro. 5,676+ total offers."
+        canonical="/placements"
+      />
       <main className="pt-24 md:pt-28 lg:pt-28">
         {/* Hero Section - Enhanced */}
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">

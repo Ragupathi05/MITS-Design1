@@ -3,6 +3,7 @@ import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { getDepartmentByKey } from "@/data/departmentData";
 import { Card, CardContent } from "@/components/ui/card";
 import InlineFacultyProfile from "@/components/InlineFacultyProfile";
@@ -149,6 +150,11 @@ const DepartmentPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO
+        title={`${dept.name} Department – MITS Madanapalle`}
+        description={`${dept.shortName} Department at MITS Madanapalle – ${dept.about.slice(0, 120).trim()}...`}
+        canonical={`/department/${deptKey}`}
+      />
 
       <div className="relative h-[240px] sm:h-[300px] md:h-[380px] overflow-hidden">
         <img src={dept.bannerImage} alt={dept.name} className="w-full h-full object-cover" />

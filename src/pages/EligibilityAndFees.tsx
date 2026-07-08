@@ -1,6 +1,7 @@
 ﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { UserCheck, Star, Phone, Globe } from "lucide-react";
@@ -48,6 +49,11 @@ const FINAL_TD = "py-2.5 px-4 text-center text-sm font-bold border border-gray-3
 const EligibilityAndFees = () => (
   <div className="min-h-screen bg-background">
     <Header />
+    <SEO
+      title="MITS Fee Structure & Eligibility 2026 – B.Tech, MBA, MCA"
+      description="MITS Madanapalle 2026-27 fee structure: B.Tech from ₹50,000/sem, MBA/MCA ₹60,000/sem. Merit-based fee waivers via JEE, AP EAMCET, MITSUCET. Check eligibility criteria for all programmes."
+      canonical="/eligibility-and-fees"
+    />
     <main>
 
       {/* ── HERO ── */}

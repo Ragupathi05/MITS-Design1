@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { Award, BookOpen, Building2, GraduationCap, History, Landmark, Shield, Star, Target, Eye, Users, MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -61,6 +62,11 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Header />
+      <SEO
+        title="About MITS Madanapalle – History, Vision & Leadership"
+        description="Learn about Madanapalle Institute of Technology & Science – established 1998, NAAC A+ deemed university in Andhra Pradesh. Vision, mission, leadership, and institutional achievements."
+        canonical="/about"
+      />
       <main>
         {/* Hero */}
         <section

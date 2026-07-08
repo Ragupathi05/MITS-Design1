@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Calendar, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getNewsEventImageSrc, newsEvents } from "@/data/newsEvents";
@@ -8,6 +9,11 @@ const NewsEvents = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO
+        title="MITS News & Events – Campus Updates, Seminars & Achievements"
+        description="Latest news and events from MITS Madanapalle – seminars, workshops, cultural festivals, placement drives, MoU signings, and institutional achievements."
+        canonical="/news-events"
+      />
       <main className="pt-24 pb-20">
         <section className="py-14 bg-muted/40">
           <div className="container mx-auto px-4">

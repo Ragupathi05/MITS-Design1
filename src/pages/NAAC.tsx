@@ -25,6 +25,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import {
   accreditationCore,
   cycle1Documents,
@@ -131,6 +132,11 @@ const NAAC = () => {
   return (
     <div className="min-h-screen bg-[#faf7f2]">
       <Header />
+      <SEO
+        title="MITS NAAC A+ Accreditation – Grade, SSR & IQAC Documents"
+        description="MITS Madanapalle holds NAAC A+ accreditation. Access the SSR, IQAC reports, criteria documents, DVV clarifications, AISHE data, and peer team reports for MITS deemed university."
+        canonical="/naac"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#152f4f] to-[#0a1d33] text-white">

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { MapPin, Phone, Mail, Clock, Globe, MessageSquare, Send } from "lucide-react";
 import { useState } from "react";
 
@@ -34,6 +35,11 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <Header />
+      <SEO
+        title="Contact MITS Madanapalle – Admissions, Placements & Enquiries"
+        description="Contact Madanapalle Institute of Technology & Science. Address: Angallu, Madanapalle – 517325, AP. Phone: +91 7330803555. Email: info@mits.ac.in. Admissions, placements & general enquiries."
+        canonical="/contact"
+      />
       <main>
         {/* Hero */}
         <div className="relative h-72 md:h-80 overflow-hidden">

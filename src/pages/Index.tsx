@@ -9,10 +9,42 @@ import RankingsSection from "@/components/RankingsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CampusLifeSection from "@/components/CampusLifeSection";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollegeOrUniversity",
+  "name": "Madanapalle Institute of Technology & Science",
+  "alternateName": "MITS Madanapalle",
+  "url": "https://mits.ac.in",
+  "logo": "https://ragupathi05.github.io/MITS-Design1/mits-logo.png",
+  "description": "NAAC A+ accredited, UGC-recognised Deemed University in Andhra Pradesh offering B.Tech, M.Tech, MBA and MCA programmes.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Post Box No. 4, Angallu, Madanapalle-Kadiri Road, Kurabalakota Mandal",
+    "addressLocality": "Madanapalle",
+    "addressRegion": "Andhra Pradesh",
+    "postalCode": "517325",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-7330803555",
+  "email": "info@mits.ac.in",
+  "sameAs": [
+    "https://mits.ac.in",
+    "https://www.facebook.com/MITSMadanapalle",
+    "https://www.linkedin.com/school/madanapalle-institute-of-technology-science"
+  ]
+};
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="MITS Madanapalle – NAAC A+ Deemed University, Andhra Pradesh"
+        description="Madanapalle Institute of Technology & Science – NAAC A+ accredited Deemed University in AP. B.Tech, M.Tech, MBA & MCA. 94% placement rate, 200+ recruiters."
+        canonical="/"
+        jsonLd={orgSchema}
+      />
       <Header />
       {/* Spacer: mobile = h-16 (64px nav only), md = h-16+h-9 (100px), lg = h-20+h-9 (116px) */}
       <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />

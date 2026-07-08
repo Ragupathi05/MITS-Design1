@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Calendar, ChevronLeft, MapPin } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
@@ -21,6 +22,27 @@ const NewsEventDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO
+        title={`${item.title} – MITS Madanapalle`}
+        description={item.excerpt}
+        canonical={`/news-events/${slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": item.title,
+          "description": item.excerpt,
+          "startDate": item.date,
+          "location": {
+            "@type": "Place",
+            "name": item.location,
+            "address": "Madanapalle Institute of Technology & Science, Madanapalle, Andhra Pradesh"
+          },
+          "organizer": {
+            "@type": "CollegeOrUniversity",
+            "name": "Madanapalle Institute of Technology & Science"
+          }
+        }}
+      />
       <main className="pt-24 pb-20">
         <section className="py-14">
           <div className="container mx-auto px-4 max-w-4xl">

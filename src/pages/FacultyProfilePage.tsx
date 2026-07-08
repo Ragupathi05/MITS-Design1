@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { getDepartmentByKey, type FacultyMember } from "@/data/departmentData";
 import { getFacultyProfile, type FacultyProfile, type FacultySection } from "@/data/facultyProfiles";
 import { slugifyFaculty } from "@/lib/facultySlug";
@@ -254,6 +255,23 @@ const FacultyProfilePage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
       <Header />
+      <SEO
+        title={`${faculty.name} – ${faculty.designation} | MITS Madanapalle`}
+        description={`${faculty.name}, ${faculty.designation} in the ${dept.shortName} Department at MITS Madanapalle. ${faculty.qualification}.`}
+        canonical={`/department/${deptKey}/faculty/${slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": faculty.name,
+          "jobTitle": faculty.designation,
+          "worksFor": {
+            "@type": "CollegeOrUniversity",
+            "name": "Madanapalle Institute of Technology & Science"
+          },
+          "url": faculty.profileUrl || `https://mits.ac.in`,
+          "image": faculty.image || ""
+        }}
+      />
       <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
 
       {/* HERO */}

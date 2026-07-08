@@ -1,6 +1,7 @@
 ﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import {
@@ -1190,6 +1191,11 @@ const Research = () => {
   return (
     <div className="min-h-screen">
       <Header />
+      <SEO
+        title="Research & Innovation at MITS Madanapalle – 3,085 Scopus Papers"
+        description="MITS research: 3,085 Scopus publications, H-Index 70, ₹18.44 Cr funded projects, 200+ patents. Explore R&D cell, IPR, consultancy, MDRF and innovation ecosystem."
+        canonical="/research"
+      />
       <main>
         {/* Hero */}
         <section className="relative pt-28 md:pt-36 pb-20 md:pb-28 overflow-hidden">

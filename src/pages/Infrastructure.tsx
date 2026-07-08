@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import {
   Trophy, Bus, Heart, UtensilsCrossed, Library, Radio,
   Lightbulb, Monitor, MessageSquare, Wifi, ChevronLeft, ChevronRight,
@@ -628,6 +629,16 @@ const Infrastructure = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fdfbf7] via-white to-white">
       <Header />
+      <SEO
+        title="MITS Campus Infrastructure – Labs, Library, Sports & Facilities"
+        description="Explore MITS Madanapalle infrastructure: 26.17-acre campus, 3,000+ computers, 1 Gbps Wi-Fi, central library with 50,000+ volumes, AICTE Idea Lab, sports grounds, and hostel facilities."
+        canonical="/infrastructure"
+      />
+      <SEO
+        title="MITS Campus Infrastructure – Labs, Library, Sports & Facilities"
+        description="Explore MITS Madanapalle infrastructure: 26.17-acre campus, 3,000+ computers, 1 Gbps Wi-Fi, central library with 50,000+ volumes, AICTE Idea Lab, sports grounds, and hostel facilities."
+        canonical="/infrastructure"
+      />
       <main>
 
         {/* ══════════════════════════════════════════════════════

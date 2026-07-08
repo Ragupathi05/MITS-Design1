@@ -21,6 +21,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import {
   nirfYears,
   nirfDataDocs,
@@ -122,6 +123,11 @@ const NIRF = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#f7f5f0]">
       <Header />
+      <SEO
+        title="MITS NIRF Ranking – 201–300 Band Engineering | Madanapalle"
+        description="MITS Madanapalle NIRF ranking: consistently placed in the 201–300 band in Engineering. Access year-wise NIRF submissions, ranking certificates, and committee documents."
+        canonical="/nirf"
+      />
       <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
 
       <main className="flex-1">

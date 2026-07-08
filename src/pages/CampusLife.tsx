@@ -5,6 +5,7 @@ import { ChevronDown, X, Play, Pause, ArrowRight, Calendar, MapPin, Users, Award
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 
 const BASE = import.meta.env.BASE_URL;
 

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { BookOpen, Clock, Globe, Monitor, Search, Users, Wifi, Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
@@ -52,6 +53,11 @@ const Library = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO
+        title="MITS Central Library – 50,000+ Volumes, Digital Resources"
+        description="MITS Madanapalle Central Library: 50,000+ books, 5,000+ e-journals, IEEE/Springer/Elsevier access, NPTEL, DELNET, 500-seat reading hall. Open 8 AM–10 PM weekdays."
+        canonical="/library"
+      />
       <main>
         {/* Hero Section */}
         <section className="relative pt-32 md:pt-40 pb-20 overflow-hidden">
