@@ -60,8 +60,7 @@ const RankingsSection = () => {
         backgroundImage: `url(${BASE}Hero-Section/image%204.JPG)`,
       }}
     >
-      {/* Dark blue gradient overlay */}
-      <div className="absolute inset-0 bg-[#0f2a44]/88" />
+      <div className="absolute inset-0 bg-black/35" />
       {/* Subtle gold ambient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#caa74d]/8 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-64 bg-[#caa74d]/6 rounded-full blur-3xl pointer-events-none" />
@@ -71,16 +70,16 @@ const RankingsSection = () => {
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-8">
-            <p className="text-[#b30000] font-body font-semibold tracking-[0.22em] uppercase text-xs md:text-sm mb-3">
+            <p className="text-[#ffd36b] font-body font-semibold tracking-[0.22em] uppercase text-xs md:text-sm mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
               Our Achievements
             </p>
             <h2
               id="trust-heading"
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#caa74d] mb-5 leading-tight"
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-5 leading-tight drop-shadow-[0_3px_12px_rgba(0,0,0,0.75)]"
             >
               Excellence in Education
             </h2>
-            <p className="font-body text-[#1a4a7a] font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body text-white/90 font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
               Recognized for quality education and committed to student success and global exposure
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#caa74d] to-transparent mx-auto mt-6 rounded-full" />
@@ -91,7 +90,7 @@ const RankingsSection = () => {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-7">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#caa74d]/40" />
-            <span className="text-[#caa74d] font-body font-bold tracking-widest uppercase text-xs px-4 py-1.5 rounded-full">
+            <span className="text-[#ffe08a] font-body font-bold tracking-widest uppercase text-xs px-4 py-1.5 rounded-full bg-black/20 backdrop-blur-sm drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
               Trust &amp; Accreditation
             </span>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#caa74d]/40" />
@@ -131,7 +130,7 @@ const RankingsSection = () => {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-7">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#b30000]/40" />
-            <span className="text-[#b30000] font-body font-bold tracking-widest uppercase text-xs px-4 py-1.5 rounded-full border border-[#b30000]/30 bg-[#b30000]/10 shadow-[0_10px_28px_rgba(179,0,0,0.12)]">
+            <span className="text-[#ffe08a] font-body font-bold tracking-widest uppercase text-xs px-4 py-1.5 rounded-full border border-[#caa74d]/35 bg-black/20 backdrop-blur-sm shadow-[0_10px_28px_rgba(0,0,0,0.18)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
               Student Success
             </span>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#b30000]/40" />

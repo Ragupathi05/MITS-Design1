@@ -78,7 +78,6 @@ const Footer = () => {
                 { label: "Affiliations & Accreditations", href: "/affiliations-accreditations" },
                 { label: "Public Self Disclosures", href: "/psd" },
                 { label: "Circulars", href: "https://mits.ac.in/circulars" },
-                { label: "Accreditations & Rankings", href: "/about" },
                 { label: "Cells", href: "https://mits.ac.in/cells" },
               ].map((link) => (
                 <li key={link.label}>

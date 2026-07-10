@@ -10,6 +10,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import CampusLifeSection from "@/components/CampusLifeSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import FloatingAutonomousTab from "@/components/FloatingAutonomousTab";
 
 const orgSchema = {
   "@context": "https://schema.org",
@@ -72,6 +73,7 @@ const Index = () => {
         <TestimonialsSection />
         <CampusLifeSection />
       </main>
+      <FloatingAutonomousTab />
       <Footer />
     </div>
   );

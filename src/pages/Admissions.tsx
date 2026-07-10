@@ -446,7 +446,7 @@ const Admissions = () => {
           </div>
         </section>
 
-        {/* ── FINAL CTA ── */}}
+        {/* ── FINAL CTA ── */}
         <section className="relative py-32 overflow-hidden">
           <img src={`${BASE}admissions/admission2.jpg`} alt="MITS Campus" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0f2a44]/95 via-[#0f2a44]/82 to-[#b30000]/72" />

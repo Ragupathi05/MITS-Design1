@@ -82,6 +82,13 @@ import {
   checkLists,
   manualsTable,
   qualityInitiatives,
+  qualityInitiativesOverview,
+  newsletterDocs,
+  handbookDocs,
+  iqacPolicies,
+  mitsDtbuPolicies,
+  meetingsMom,
+  meetingsDtbu,
   contact,
   bannerImage,
   type Doc,
@@ -543,13 +550,11 @@ const IQAC = () => {
 
                 {active === "policies" && (
                   <section>
-                    <SectionHeader eyebrow="Policies" title="IQAC Policies & Framework" description="Institutional quality policies governing academic audit, feedback, benchmarks, and NAAC 2024 reforms." />
-                    <SubHeader title="Academic Audit Policy" />
-                    <DocGrid docs={filter(aaaPolicyDocs)} />
-                    <SubHeader title="Stakeholder Feedback Policy" />
-                    <DocGrid docs={filter(feedbackPolicy)} />
-                    <SubHeader title="NAAC 2024 Reforms — Institutional Policies" />
-                    <DocGrid docs={filter(naacReforms2024.slice(0, 8))} />
+                    <SectionHeader eyebrow="Policies" title="IQAC Policies & Framework" description="Comprehensive quality policies governing MITS and MITS Deemed to be University (DTBU) operations." />
+                    <SubHeader title="IQAC Policies" />
+                    <DocGrid docs={filter(iqacPolicies)} />
+                    <SubHeader title="Policies (MITS DTBU)" />
+                    <DocGrid docs={filter(mitsDtbuPolicies)} />
                   </section>
                 )}
 
@@ -585,8 +590,8 @@ const IQAC = () => {
                 {active === "initiatives" && (
                   <section>
                     <SectionHeader eyebrow="Quality" title="IQAC Quality Initiatives" description="Core institutional levers deployed by IQAC to embed quality across academics, governance and student experience." />
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {qualityInitiatives.map((q, i) => (
+                    <div className="grid md:grid-cols-2 gap-4 mb-8">
+                      {qualityInitiativesOverview.map((q, i) => (
                         <motion.div
                           key={i} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}
                           className="relative overflow-hidden rounded-2xl bg-white border border-[#0f2a44]/10 p-6 shadow-sm"
@@ -598,6 +603,8 @@ const IQAC = () => {
                         </motion.div>
                       ))}
                     </div>
+                    <SubHeader title="Quality Initiative Documents" />
+                    <DocGrid docs={filter(qualityInitiatives)} />
                   </section>
                 )}
 
@@ -628,7 +635,11 @@ const IQAC = () => {
 
                 {active === "meetings" && (
                   <section>
-                    <SectionHeader eyebrow="Minutes of Meeting" title="IQAC Meeting Records" description="Year-wise minutes, agendas and resolutions of IQAC review meetings including IQAC Hours reports (last Thursday of every month)." />
+                    <SectionHeader eyebrow="Minutes of Meeting" title="IQAC Meeting Records" description="Year-wise minutes, agendas and resolutions of IQAC review meetings for MITS and MITS Deemed to be University (DTBU)." />
+                    <SubHeader title="Minutes of the Meeting" />
+                    <DocGrid docs={filter(meetingsMom)} />
+                    <SubHeader title="Minutes of Meeting (MITS DTBU)" />
+                    <DocGrid docs={filter(meetingsDtbu)} />
                     <SubHeader title="IQAC Hours — Monthly Reports" />
                     <DocGrid docs={filter(iqacHoursReports)} />
                   </section>
@@ -848,6 +859,9 @@ const IQAC = () => {
                 {active === "newsletter" && (
                   <section>
                     <SectionHeader eyebrow="Communication" title="MITS Newsletter" description="Departmental and institutional newsletters archive." />
+                    <div className="mb-6">
+                      <DocGrid docs={filter(newsletterDocs)} />
+                    </div>
                     <a href="https://mits.ac.in/newsletter" target="_blank" rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#caa74d] text-[#0f2a44] font-semibold hover:bg-[#dbb95c]">
                       <ExternalLink className="w-4 h-4" /> Open Newsletter Archive
@@ -858,11 +872,7 @@ const IQAC = () => {
                 {active === "handbook" && (
                   <section>
                     <SectionHeader eyebrow="Handbook" title="Institutional Handbook" description="Handbook curated by IQAC covering academic and administrative processes, files to be maintained and general information." />
-                    <DocGrid docs={filter([
-                      { title: "Files to be Maintained by Department (B.Tech)", url: "https://mits.ac.in/assets/pdf/iqac/Files%20to%20be_maintained%20by%20Department%20for%20B.Tech%20V0.1.pdf", type: "pdf" },
-                      { title: "General Information to be Maintained by Department", url: "https://mits.ac.in/assets/pdf/iqac/General%20Information%20to%20be%20maintained%20by%20Department.pdf", type: "pdf" },
-                      { title: "Action Taken Reports to be Maintained", url: "https://mits.ac.in/assets/pdf/iqac/Action%20Taken%20Reports%20to%20be%20maintained.pdf", type: "pdf" },
-                    ])} />
+                    <DocGrid docs={filter(handbookDocs)} />
                   </section>
                 )}
 
@@ -988,19 +998,29 @@ const IQAC = () => {
                     <SectionHeader eyebrow="Contact" title="IQAC Contact" description="Get in touch with the Internal Quality Assurance Cell for accreditation, audit, feedback and quality-related matters." />
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-2xl p-6">
-                        <p className="text-xs uppercase tracking-[0.2em] text-[#caa74d] mb-3">Office</p>
-                        <h3 className="font-display text-xl font-bold">{contact.office}</h3>
-                        <p className="font-body text-white/80 text-sm mt-1">{contact.institute}</p>
-                        <div className="mt-6 space-y-3 font-body text-sm">
+                        <p className="text-xs uppercase tracking-[0.2em] text-[#caa74d] mb-3">IQAC Team</p>
+                        
+                        <div className="mb-4">
+                          <h3 className="font-display text-lg font-bold">{contact.coordinator}</h3>
+                          <p className="font-body text-[#caa74d] text-xs font-semibold uppercase tracking-wider">{contact.title}</p>
+                        </div>
+                        
+                        <div className="mb-4 pt-2 border-t border-white/10">
+                          <h4 className="font-display text-sm font-bold">{contact.coCoordinator1}</h4>
+                          <p className="font-body text-white/70 text-xs">{contact.coCoordinator1Title}</p>
+                        </div>
+
+                        <div className="mb-4 pt-2 border-t border-white/10">
+                          <h4 className="font-display text-sm font-bold">{contact.coCoordinator2}</h4>
+                          <p className="font-body text-white/70 text-xs">{contact.coCoordinator2Title}</p>
+                        </div>
+                        
+                        <div className="mt-6 space-y-3 font-body text-sm pt-4 border-t border-white/10">
                           <div className="flex items-start gap-3"><MapPin className="w-4 h-4 text-[#caa74d] mt-0.5" />{contact.address}</div>
                           <div className="flex items-center gap-3"><Mail className="w-4 h-4 text-[#caa74d]" /><a href={`mailto:${contact.email}`} className="hover:text-[#caa74d]">{contact.email}</a></div>
                           <div className="flex items-center gap-3"><Phone className="w-4 h-4 text-[#caa74d]" /><a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="hover:text-[#caa74d]">{contact.phone}</a></div>
-                          <div className="flex items-start gap-3"><Calendar className="w-4 h-4 text-[#caa74d] mt-0.5" />{contact.hours}</div>
+                          {contact.mobile && <div className="flex items-center gap-3"><Phone className="w-4 h-4 text-[#caa74d]" /><span>Mobile: {contact.mobile}</span></div>}
                         </div>
-                        <a href={contact.maps} target="_blank" rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-lg bg-[#caa74d] text-[#0f2a44] font-semibold text-sm hover:bg-[#dbb95c]">
-                          <MapPin className="w-4 h-4" /> Open in Google Maps
-                        </a>
                       </div>
                       <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10">
                         <h3 className="font-display text-lg font-bold text-[#0f2a44] mb-3">Quick Links</h3>

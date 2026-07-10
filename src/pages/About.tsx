@@ -81,7 +81,7 @@ const About = () => {
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">About MITS</p>
             <h1
-              className="font-display text-4xl md:text-6xl font-bold mb-5"
+              className="font-display text-4xl md:text-6xl font-bold mb-5 text-white"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Shaping Futures <span className="text-[#ffd15c]">Since 1998</span>
