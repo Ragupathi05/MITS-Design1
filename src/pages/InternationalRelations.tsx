@@ -607,7 +607,7 @@ const GlobalSection = () => {
   );
 };
 
-const EventCard = ({ e }: { e: { date: string; title: string; description: string } }) => {
+const EventCard = ({ e }: { e: { date: string; title: string; description: string; reportUrl?: string } }) => {
   const [showFull, setShowFull] = useState(false);
   const needsTruncation = e.description.length > 280;
   const text = showFull ? e.description : (needsTruncation ? `${e.description.substring(0, 260)}...` : e.description);
