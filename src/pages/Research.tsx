@@ -1251,10 +1251,8 @@ const Research = () => {
               <TabsContent value="ipr"><IPRSection /></TabsContent>
               <TabsContent value="collaborations"><CollaborationsSection /></TabsContent>
               <TabsContent value="ipfc"><IPFCSection /></TabsContent>
-              <TabsContent value="consultancy"><ConsultancySection /></TabsContent>
               <TabsContent value="innovation"><InnovationSection /></TabsContent>
-              <TabsContent value="research-centres"><ResearchCentresSection /></TabsContent>
-              <TabsContent value="mdrf"><MDRFSection /></TabsContent>
+
               <TabsContent value="foundation"><FoundationSection /></TabsContent>
               <TabsContent value="wwrc"><WWRCSection /></TabsContent>
             </Tabs>
