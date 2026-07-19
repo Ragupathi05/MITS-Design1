@@ -86,8 +86,8 @@ export const collections = [
 ];
 
 export const quickAccess = [
-  { title: "Library Catalogue (OPAC)", href: "https://mits.ac.in/library" },
-  { title: "Digital Library", href: "https://mits.ac.in/library" },
+  //{ title: "Library Catalogue (OPAC)", href: "https://mits.ac.in/library" },
+  //{ title: "Digital Library", href: "https://mits.ac.in/library" },
   { title: "IEEE Xplore", href: "https://ieeexplore.ieee.org/" },
   { title: "Springer Nature", href: "https://link.springer.com/" },
   { title: "EBSCO", href: "https://www.ebsco.com/" },
