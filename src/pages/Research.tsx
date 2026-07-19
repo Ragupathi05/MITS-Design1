@@ -511,41 +511,59 @@ const PatentsSection = () => {
 
 /* ─── POLICIES TAB ─── */
 const PoliciesSection = () => (
-  <ScrollReveal>
-    <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-      <SectionHeading title="Policies" subtitle="Research and innovation policies governing MITS R&D activities." />
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-primary/5 border-b border-border">
-              <th className="text-left px-4 py-3 font-semibold text-foreground w-16">S.No</th>
-              <th className="text-left px-4 py-3 font-semibold text-foreground">Name of the Policy</th>
-              <th className="text-left px-4 py-3 font-semibold text-foreground">View</th>
-            </tr>
-          </thead>
-          <tbody>
-            {policiesData.map((p, i) => (
-              <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
-                <td className="px-4 py-3 text-muted-foreground">{p.sno}</td>
-                <td className="px-4 py-3 font-medium text-foreground">{p.title}</td>
-                <td className="px-4 py-3">
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" /> View
-                  </a>
-                </td>
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Policies" subtitle="Research and innovation policies governing MITS R&D activities." />
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-primary/5 border-b border-border">
+                <th className="text-left px-4 py-3 font-semibold text-foreground w-16">S.No</th>
+                <th className="text-left px-4 py-3 font-semibold text-foreground">Name of the Policy</th>
+                <th className="text-left px-4 py-3 font-semibold text-foreground">View</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {policiesData.map((p, i) => (
+                <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
+                  <td className="px-4 py-3 text-muted-foreground">{p.sno}</td>
+                  <td className="px-4 py-3 font-medium text-foreground">{p.title}</td>
+                  <td className="px-4 py-3">
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" /> View
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-  </ScrollReveal>
+    </ScrollReveal>
+
+    {/* SEED Grant Policy — inline */}
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading
+          title="SEED Grant Policy"
+          subtitle="The SEED Money scheme supports faculty-led early-stage research at MITS. Application, utilisation, expenditure and completion forms are provided below."
+        />
+        <div className="grid sm:grid-cols-2 gap-3">
+          {seedGrantDocs.map((d) => (
+            <LinkCard key={d.title} title={d.title} link={d.link} icon={FileText} />
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
 );
+
 
 /* ─── EVENTS TAB ─── */
 const EventsSection = () => {
