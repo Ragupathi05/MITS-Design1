@@ -81,24 +81,31 @@ const ImageCarousel = ({ images }: { images: string[] }) => {
 
   return (
     <>
-      <div className="relative w-full h-[260px] sm:h-[350px] md:h-[480px] overflow-hidden rounded-2xl border border-border bg-muted shadow-md group mb-8">
+      <div className="relative w-full aspect-video overflow-hidden rounded-2xl border border-border bg-secondary/95 shadow-md group mb-8">
+        {/* Blurred backdrop fill (same image, scaled + blurred) — prevents empty bars while keeping subject intact */}
+        <div
+          className="absolute inset-0 bg-center bg-cover scale-110 blur-2xl opacity-40"
+          style={{ backgroundImage: `url("${images[currentIndex]}")` }}
+          aria-hidden
+        />
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex}
             src={images[currentIndex]}
             alt="International Relations"
-            initial={{ opacity: 0, scale: 1.03 }}
+            initial={{ opacity: 0, scale: 1.01 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.97 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 w-full h-full object-cover cursor-zoom-in"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-contain cursor-zoom-in"
             onClick={() => setLightbox(images[currentIndex])}
             onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
           />
         </AnimatePresence>
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+        {/* Subtle bottom gradient for dot legibility */}
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
 
         {/* Navigation Arrows */}
         {images.length > 1 && (
@@ -120,7 +127,7 @@ const ImageCarousel = ({ images }: { images: string[] }) => {
 
         {/* Indicator Dots */}
         {images.length > 1 && (
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 bg-black/25 px-3 py-1.5 rounded-full backdrop-blur-sm">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
             {images.map((_, idx) => (
               <button
                 key={idx}
@@ -133,6 +140,7 @@ const ImageCarousel = ({ images }: { images: string[] }) => {
           </div>
         )}
       </div>
+
 
       <AnimatePresence>
         {lightbox && (
@@ -160,19 +168,25 @@ const GalleryGrid = ({ images }: { images: string[] }) => {
           <button
             key={i}
             onClick={() => setLightbox(src)}
-            className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-muted"
+            className="group relative aspect-video overflow-hidden rounded-xl bg-secondary/90"
           >
+            <div
+              className="absolute inset-0 bg-center bg-cover scale-110 blur-xl opacity-40"
+              style={{ backgroundImage: `url("${src}")` }}
+              aria-hidden
+            />
             <img
               src={src}
               alt=""
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
               onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
         ))}
       </div>
+
       <AnimatePresence>
         {lightbox && (
           <motion.div
@@ -593,7 +607,7 @@ const GlobalSection = () => {
   );
 };
 
-const EventCard = ({ e }: { e: { date: string; title: string; description: string } }) => {
+const EventCard = ({ e }: { e: { date: string; title: string; description: string; reportUrl?: string } }) => {
   const [showFull, setShowFull] = useState(false);
   const needsTruncation = e.description.length > 280;
   const text = showFull ? e.description : (needsTruncation ? `${e.description.substring(0, 260)}...` : e.description);
