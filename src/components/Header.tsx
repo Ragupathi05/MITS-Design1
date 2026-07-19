@@ -48,6 +48,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Infrastructure", href: "/infrastructure" },
       { label: "International Relations", href: "/international-relations" },
+      { label: "Cells & Committees", href: "/cells" },
       { label: "MITS Radio", href: "/mits-radio" },
       { label: "Moodle Login", href: "https://moodle.mits.ac.in/" },
       { label: "Contact Us", href: "/contact" },
