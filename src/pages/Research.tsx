@@ -16,7 +16,7 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  researchOverview, projectsData, publicationsData, patentsData,
+  researchOverview, projectsData, publicationsData, patentsData, seedGrantDocs, writingTipsContent,
   policiesData, eventsData, documentsData, iprCellData, mdrfData,
   researchVisionMission, keyAchievements, scopusPublications, wosPublications,
   hIndexTrend, projectFunding, patentsAYWise, patentTotals,
@@ -40,10 +40,8 @@ const sectionTabs = [
   { id: "academic", label: "Academic", icon: GraduationCap },
   { id: "ipr", label: "IPR Cell", icon: Scale },
   { id: "collaborations", label: "Collaborations", icon: Handshake },
-  { id: "consultancy", label: "Consultancy", icon: Wrench },
   { id: "innovation", label: "Innovation", icon: Sparkles },
-  { id: "research-centres", label: "Research Centres", icon: Library },
-  { id: "mdrf", label: "MDRF", icon: Globe },
+
   { id: "foundation", label: "MITS Foundation", icon: Rocket },
   { id: "wwrc", label: "WWRC", icon: Droplets },
 ];
@@ -266,12 +264,35 @@ const ProjectsSection = () => (
     <ScrollReveal delay={0.1}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="Research Resources" />
-        <div className="grid sm:grid-cols-2 gap-3">
+        <div className="grid sm:grid-cols-2 gap-3 mb-6">
           <LinkCard title="Research Areas" link={projectsData.subSections[0].link!} icon={Microscope} />
-          <LinkCard title="Writing Tips for Projects" link={projectsData.subSections[2].link!} icon={BookOpen} />
+        </div>
+        <div className="border border-border rounded-xl p-5 bg-muted/20">
+          <h3 className="font-display text-lg font-bold text-foreground mb-2 flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-primary" /> Writing Tips for Research Proposals
+          </h3>
+          <p className="text-sm text-muted-foreground mb-4">{writingTipsContent.intro}</p>
+          <Accordion type="single" collapsible>
+            {writingTipsContent.sections.map((s, i) => (
+              <AccordionItem key={i} value={`tip-${i}`}>
+                <AccordionTrigger className="text-sm font-semibold text-foreground">{s.heading}</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="space-y-1.5">
+                    {s.points.map((p, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <ChevronRight className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </ScrollReveal>
+
 
     <ScrollReveal delay={0.15}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
@@ -500,61 +521,72 @@ const PatentsSection = () => {
       <ScrollReveal delay={0.12}>
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
           <SectionHeading title={patentsData.title} subtitle={patentsData.description} />
-          <div className="grid sm:grid-cols-2 gap-4 mb-4">
+          <div className="grid sm:grid-cols-2 gap-4">
             <LinkCard title="Download Patent Details (Excel)" link={patentsData.patentDetailsLink} icon={Download} />
-            <LinkCard title="View All Patents on mits.ac.in" link={patentsData.moreLink} icon={ExternalLink} />
+            <LinkCard title="View All Patents" link={patentsData.patentDetailsLink} icon={FileText} />
           </div>
-          <a
-            href={patentsData.iprCellLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
-          >
-            <ExternalLink className="w-4 h-4" /> More details at mits.ac.in/researchpatents
-          </a>
         </div>
       </ScrollReveal>
+
     </div>
   );
 };
 
 /* ─── POLICIES TAB ─── */
 const PoliciesSection = () => (
-  <ScrollReveal>
-    <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-      <SectionHeading title="Policies" subtitle="Research and innovation policies governing MITS R&D activities." />
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-primary/5 border-b border-border">
-              <th className="text-left px-4 py-3 font-semibold text-foreground w-16">S.No</th>
-              <th className="text-left px-4 py-3 font-semibold text-foreground">Name of the Policy</th>
-              <th className="text-left px-4 py-3 font-semibold text-foreground">View</th>
-            </tr>
-          </thead>
-          <tbody>
-            {policiesData.map((p, i) => (
-              <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
-                <td className="px-4 py-3 text-muted-foreground">{p.sno}</td>
-                <td className="px-4 py-3 font-medium text-foreground">{p.title}</td>
-                <td className="px-4 py-3">
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" /> View
-                  </a>
-                </td>
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Policies" subtitle="Research and innovation policies governing MITS R&D activities." />
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-primary/5 border-b border-border">
+                <th className="text-left px-4 py-3 font-semibold text-foreground w-16">S.No</th>
+                <th className="text-left px-4 py-3 font-semibold text-foreground">Name of the Policy</th>
+                <th className="text-left px-4 py-3 font-semibold text-foreground">View</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {policiesData.map((p, i) => (
+                <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
+                  <td className="px-4 py-3 text-muted-foreground">{p.sno}</td>
+                  <td className="px-4 py-3 font-medium text-foreground">{p.title}</td>
+                  <td className="px-4 py-3">
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" /> View
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-  </ScrollReveal>
+    </ScrollReveal>
+
+    {/* SEED Grant Policy — inline */}
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading
+          title="SEED Grant Policy"
+          subtitle="The SEED Money scheme supports faculty-led early-stage research at MITS. Application, utilisation, expenditure and completion forms are provided below."
+        />
+        <div className="grid sm:grid-cols-2 gap-3">
+          {seedGrantDocs.map((d) => (
+            <LinkCard key={d.title} title={d.title} link={d.link} icon={FileText} />
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
 );
+
 
 /* ─── EVENTS TAB ─── */
 const EventsSection = () => {
@@ -1260,10 +1292,8 @@ const Research = () => {
               <TabsContent value="ipr"><IPRSection /></TabsContent>
               <TabsContent value="collaborations"><CollaborationsSection /></TabsContent>
               <TabsContent value="ipfc"><IPFCSection /></TabsContent>
-              <TabsContent value="consultancy"><ConsultancySection /></TabsContent>
               <TabsContent value="innovation"><InnovationSection /></TabsContent>
-              <TabsContent value="research-centres"><ResearchCentresSection /></TabsContent>
-              <TabsContent value="mdrf"><MDRFSection /></TabsContent>
+
               <TabsContent value="foundation"><FoundationSection /></TabsContent>
               <TabsContent value="wwrc"><WWRCSection /></TabsContent>
             </Tabs>
