@@ -5,7 +5,6 @@ import {
   Search,
   Grid,
   List,
-  ExternalLink,
   HeartHandshake,
   Scale,
   Award,
@@ -23,6 +22,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { cellCategories, type CellItem, type CellCategory } from "@/data/cellsData";
+import { cellsDetailData } from "@/data/cellsDetailData";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -261,7 +261,7 @@ export default function Cells() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.02 }}
                       key={`${cell.categoryId}-${cell.name}`}
-                      className="group bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm p-6 hover:shadow-lg hover:border-[#caa74d] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                      className="group bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm p-6 hover:shadow-lg hover:border-[#caa74d] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between cursor-pointer"
                     >
                       <div>
                         {/* Card Top / Badges */}
@@ -290,14 +290,23 @@ export default function Cells() {
                         <span className="text-xs font-medium text-[#caa74d] group-hover:underline">
                           View details
                         </span>
-                        <a
-                          href={cell.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-8 h-8 rounded-full bg-gray-50 text-gray-400 hover:bg-[#b31317] hover:text-white flex items-center justify-center transition-all shadow-sm"
-                        >
-                          <ArrowUpRight className="w-4 h-4" />
-                        </a>
+                        {cell.detailId && cellsDetailData[cell.detailId] ? (
+                          <Link
+                            to={`/cells/${cell.detailId}`}
+                            className="w-8 h-8 rounded-full bg-gray-50 text-gray-400 hover:bg-[#b31317] hover:text-white flex items-center justify-center transition-all shadow-sm"
+                          >
+                            <ArrowUpRight className="w-4 h-4" />
+                          </Link>
+                        ) : (
+                          <a
+                            href={cell.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-8 h-8 rounded-full bg-gray-50 text-gray-400 hover:bg-[#b31317] hover:text-white flex items-center justify-center transition-all shadow-sm"
+                          >
+                            <ArrowUpRight className="w-4 h-4" />
+                          </a>
+                        )}
                       </div>
                     </motion.div>
                   );
@@ -331,33 +340,41 @@ export default function Cells() {
                             {idx + 1}
                           </td>
                           <td className="py-4 px-6 font-semibold text-[#0f2a44]">
-                            <a
-                              href={cell.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="hover:text-[#b31317] transition-colors inline-flex items-center gap-1.5"
-                            >
-                              {cell.name}
-                              {cell.abbreviation && (
-                                <span className="text-[10px] bg-red-50 text-[#b31317] border border-red-100 px-2 py-0.5 rounded font-bold uppercase tracking-wide">
-                                  {cell.abbreviation}
-                                </span>
-                              )}
-                            </a>
+                            {cell.detailId && cellsDetailData[cell.detailId] ? (
+                              <Link to={`/cells/${cell.detailId}`} className="hover:text-[#b31317] transition-colors inline-flex items-center gap-1.5">
+                                {cell.name}
+                                {cell.abbreviation && (
+                                  <span className="text-[10px] bg-red-50 text-[#b31317] border border-red-100 px-2 py-0.5 rounded font-bold uppercase tracking-wide">
+                                    {cell.abbreviation}
+                                  </span>
+                                )}
+                              </Link>
+                            ) : (
+                              <a href={cell.href} target="_blank" rel="noopener noreferrer" className="hover:text-[#b31317] transition-colors inline-flex items-center gap-1.5">
+                                {cell.name}
+                                {cell.abbreviation && (
+                                  <span className="text-[10px] bg-red-50 text-[#b31317] border border-red-100 px-2 py-0.5 rounded font-bold uppercase tracking-wide">
+                                    {cell.abbreviation}
+                                  </span>
+                                )}
+                              </a>
+                            )}
                           </td>
                           <td className="py-4 px-6 hidden md:table-cell text-gray-500 text-xs font-medium">
                             {cell.categoryTitle}
                           </td>
                           <td className="py-4 px-6 text-center">
-                            <a
-                              href={cell.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors hover:underline"
-                            >
-                              <span>View Cell</span>
-                              <ExternalLink className="w-3.5 h-3.5 shrink-0" />
-                            </a>
+                            {cell.detailId && cellsDetailData[cell.detailId] ? (
+                              <Link to={`/cells/${cell.detailId}`} className="inline-flex items-center gap-1 text-xs font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors hover:underline">
+                                <span>View Cell</span>
+                                <ChevronRight className="w-3.5 h-3.5 shrink-0" />
+                              </Link>
+                            ) : (
+                              <a href={cell.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors hover:underline">
+                                <span>View Cell</span>
+                                <ChevronRight className="w-3.5 h-3.5 shrink-0" />
+                              </a>
+                            )}
                           </td>
                         </tr>
                       ))}
