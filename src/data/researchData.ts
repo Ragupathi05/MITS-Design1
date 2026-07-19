@@ -570,6 +570,6 @@ export const academicResearchData = {
   ],
   links: [
     { title: "Research Scholars List", link: "https://mits.ac.in/assets/pdf/research/Enrolled%20Research%20Scholars-List.pdf" },
-    { title: "Research Centres", link: "https://mits.ac.in/research-centres" },
+    //{ title: "Research Centres", link: "https://mits.ac.in/research-centres" },
   ],
 };
