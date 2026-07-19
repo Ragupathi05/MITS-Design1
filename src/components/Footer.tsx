@@ -8,10 +8,10 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const socialLinks = [
-  { icon: Facebook, href: "https://www.facebook.com/MITSMadanapalle", label: "Facebook" },
+  { icon: Facebook, href: "https://www.facebook.com/MITSCOLLEGEMPL/", label: "Facebook" },
   { icon: Instagram, href: "https://www.instagram.com/mits_mpl/", label: "Instagram" },
   { icon: XIcon, href: "https://x.com/mits_mpl", label: "X (Twitter)" },
-  { icon: Linkedin, href: "https://www.linkedin.com/school/madanapalle-institute-of-technology-science", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/", label: "LinkedIn" },
   { icon: Youtube, href: "https://www.youtube.com/@mitsdeemedtobeuniversity", label: "YouTube" },
 ];
 
