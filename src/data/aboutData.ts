@@ -437,5 +437,5 @@ export const aboutSections: AboutSectionDef[] = [
   { key: "academic-council", label: "Academic Council", href: "/about/academic-council", description: "Highest academic authority for curriculum and academic reforms." },
   { key: "bos", label: "Board of Studies (BoS)", href: "/about/bos", description: "Departmental academic boards across schools." },
   { key: "organogram", label: "Organogram", href: "/about/organogram", description: "Organisational structure of MITS Deemed to be University." },
-  { key: "mandatory-disclosures", label: "Mandatory Disclosures", href: "/about/mandatory-disclosures", description: "Statutory compliance, audit reports and accreditations." },
+  { key: "important-links", label: "Important Links", href: "#", description: "NIRF, NAAC, Accreditations, Public Self Disclosures, and Mandatory Disclosures." },
 ];

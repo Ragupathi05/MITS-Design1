@@ -2,7 +2,7 @@ import { Calendar, ChevronRight, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
-import { getNewsEventImageSrc, latestNews, newsEvents } from "@/data/newsEvents";
+import { getNewsEventImageSrc, newsEvents } from "@/data/newsEvents";
 import InstagramFeed from "@/components/InstagramFeed";
 
 const NewsEventsSection = () => {
@@ -19,38 +19,10 @@ const NewsEventsSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 mb-12">
-          <ScrollReveal className="lg:col-span-7">
-            <div className="bg-white border border-border rounded-2xl p-5 shadow-sm lg:h-[600px] flex flex-col">
+        <div className="mb-12">
+          <ScrollReveal>
+            <div className="bg-white border border-border rounded-2xl p-5 shadow-sm lg:h-[600px] flex flex-col w-full">
               <InstagramFeed />
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal className="lg:col-span-5" delay={0.08}>
-            <div className="bg-white border border-border rounded-2xl p-5 shadow-sm h-full lg:h-[600px] flex flex-col">
-              <h3 className="font-display text-3xl md:text-4xl font-bold text-[#0f172a] mb-5">
-                Latest <span className="text-[#b30000]">News</span>
-              </h3>
-              <div className="flex-1 overflow-y-auto pr-1 space-y-3 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-muted/60 [&::-webkit-scrollbar-thumb]:bg-secondary/40 [&::-webkit-scrollbar-thumb]:rounded-full">
-                {latestNews.map((item) => (
-                  <Link
-                    key={item.id}
-                    to={`/news-events/${item.slug}`}
-                    className="flex gap-3 rounded-xl p-2.5 hover:bg-muted/40 transition-colors"
-                  >
-                    <img
-                      src={getNewsEventImageSrc(item.image)}
-                      alt={item.title}
-                      loading="lazy"
-                      className="w-28 h-20 object-cover object-center rounded-md border border-border shrink-0"
-                    />
-                    <div className="min-w-0">
-                      <h4 className="font-display text-[#b30000] font-bold text-base leading-snug line-clamp-2 mb-1">{item.title}</h4>
-                      <p className="font-body text-[#1a1a1a] text-sm leading-relaxed line-clamp-3">{item.summary}</p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
             </div>
           </ScrollReveal>
         </div>

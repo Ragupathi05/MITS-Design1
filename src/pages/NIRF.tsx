@@ -447,9 +447,9 @@ const NIRF = () => {
                 <Link to="/about/mandatory-disclosures" className="px-5 py-3 rounded-lg bg-white text-[#b31317] font-body font-bold text-sm text-center hover:bg-[#caa74d] hover:text-[#0f2a44] transition-colors inline-flex items-center justify-center gap-2">
                   Mandatory Disclosures <ChevronRight className="w-4 h-4" />
                 </Link>
-                <a href="https://mits.ac.in/naac" target="_blank" rel="noopener noreferrer" className="px-5 py-3 rounded-lg bg-[#0f2a44] text-white font-body font-bold text-sm text-center hover:bg-[#caa74d] hover:text-[#0f2a44] transition-colors inline-flex items-center justify-center gap-2">
-                  NAAC Portal <ExternalLink className="w-4 h-4" />
-                </a>
+                <Link to="/naac" className="px-5 py-3 rounded-lg bg-[#0f2a44] text-white font-body font-bold text-sm text-center hover:bg-[#caa74d] hover:text-[#0f2a44] transition-colors inline-flex items-center justify-center gap-2">
+                  NAAC Portal <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </div>

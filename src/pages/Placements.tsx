@@ -1,11 +1,11 @@
-﻿import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import { Award, BookOpen, Building, IndianRupee, TrendingUp, Users, Target, Briefcase, GraduationCap, Star, ChevronRight, ArrowRight, CheckCircle2, Zap, Trophy, Globe, Clock, Heart, Mail, Phone, MapPin, ExternalLink, ChevronDown, Calendar, Video, FileText, Link2, Users2, Building2, Sparkles, TrendingDown, BarChart3, PieChart, Activity } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { useNavigate, useParams, useLocation, Link } from "react-router-dom";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -86,7 +86,6 @@ type TeamMember = {
 };
 
 const placementTeam: TeamMember[] = [
-  // Removed unverified entry (no matching profile on official pages)
   {
     name: "Dr. S. V. S. Ganga Devi",
     qualification: "Ph.D. (SPMVV, Tirupathi)",
@@ -117,7 +116,6 @@ const placementTeam: TeamMember[] = [
     designation: "Placement Officer",
     department: "Placements",
     profileUrl: "#",
-    image: "https://ui-avatars.com/api/?name=J+T+Drupad&background=F3F4F6&color=111827&rounded=true&size=256",
   },
   {
     name: "Mr. S. Naveen Kumar",
@@ -125,6 +123,7 @@ const placementTeam: TeamMember[] = [
     designation: "Placement Officer",
     department: "Placements",
     profileUrl: "https://mits.ac.in/facultyprofile/1090",
+    image: "https://mits.ac.in/public/uploads/faculty/f34e520484bb61226d29fcb583cb91a3.JPG",
   },
   {
     name: "Mr. D. V. Sameer Kumar",
@@ -132,6 +131,7 @@ const placementTeam: TeamMember[] = [
     designation: "Placement Officer",
     department: "MBA",
     profileUrl: "https://mits.ac.in/facultyprofile/642",
+    image: "https://mits.ac.in/public/uploads/faculty/DSC_7003.JPG",
   },
   {
     name: "Mr. G. Naresh",
@@ -139,7 +139,6 @@ const placementTeam: TeamMember[] = [
     designation: "AAO",
     department: "Placements",
     profileUrl: "#",
-    image: "https://ui-avatars.com/api/?name=G+Naresh&background=F3F4F6&color=111827&rounded=true&size=256",
   },
 ];
 
@@ -147,16 +146,10 @@ const trainingTeam: TeamMember[] = [
   {
     name: "Dr. K. Dasthagiri Basha",
     qualification: "Ph.D. (Sri Venkateswara University)",
-    designation: "Quatitative / Reasoning Aptitude Trainer",
+    designation: "Quantitative / Reasoning Aptitude Trainer",
     department: "MBA",
     profileUrl: "https://mits.ac.in/facultyprofile/284",
-  },
-  {
-    name: "Dr. S. V. Rasajna",
-    qualification: "Ph.D. (Andhra University)",
-    designation: "Soft Skills Trainer",
-    department: "E & FL",
-    profileUrl: "https://mits.ac.in/facultyprofile/598",
+    image: "https://mits.ac.in/public/uploads/faculty/f0e6516ebfe4f08e473f3c2980faf553.jpg",
   },
   {
     name: "Dr. Rajesh Thulasidass",
@@ -164,6 +157,7 @@ const trainingTeam: TeamMember[] = [
     designation: "Verbal Trainer",
     department: "E & FL",
     profileUrl: "https://mits.ac.in/facultyprofile/699",
+    image: "https://mits.ac.in/public/uploads/faculty/07b8118684b156622ba362fbaf1d380e.JPG",
   },
   {
     name: "Mr. Anandakumar. V",
@@ -171,6 +165,7 @@ const trainingTeam: TeamMember[] = [
     designation: "Verbal & Soft Skills Trainer",
     department: "E & FL",
     profileUrl: "https://mits.ac.in/facultyprofile/348",
+    image: "https://mits.ac.in/public/uploads/faculty/0c33d86fe4d7354686893bdf16462456.jpg",
   },
   {
     name: "Mr. T. Rama Mohan",
@@ -178,13 +173,15 @@ const trainingTeam: TeamMember[] = [
     designation: "Verbal & Soft Skills Trainer",
     department: "E & FL",
     profileUrl: "https://mits.ac.in/facultyprofile/423",
+    image: "https://mits.ac.in/public/uploads/faculty/rammohan.jpg",
   },
   {
     name: "Mr. Darshan. B. V",
     qualification: "M.Tech. (University BDT College of Engineering)",
-    designation: "Quatitative / Reasoning Aptitude Trainer",
+    designation: "Quantitative / Reasoning Aptitude Trainer",
     department: "ME",
     profileUrl: "https://mits.ac.in/facultyprofile/492",
+    image: "https://mits.ac.in/public/uploads/faculty/Darshan.%20B.V.JPG",
   },
   {
     name: "Mr. A. Naveen Chandra",
@@ -192,6 +189,7 @@ const trainingTeam: TeamMember[] = [
     designation: "Aptitude & Reasoning Trainer",
     department: "MCA",
     profileUrl: "https://mits.ac.in/facultyprofile/487",
+    image: "https://mits.ac.in/public/uploads/faculty/chandra.png",
   },
   {
     name: "Mr. Chollangi Venkata Ramu",
@@ -199,6 +197,7 @@ const trainingTeam: TeamMember[] = [
     designation: "Aptitude Trainer",
     department: "EEE",
     profileUrl: "https://mits.ac.in/facultyprofile/641",
+    image: "https://mits.ac.in/public/uploads/faculty/CHOLLANGI.jpeg",
   },
   {
     name: "Mr. Shaik Tipu Rahaman",
@@ -214,7 +213,6 @@ const trainingTeam: TeamMember[] = [
     designation: "AAO",
     department: "Training",
     profileUrl: "#",
-    image: "https://ui-avatars.com/api/?name=V+Srilatha&background=F3F4F6&color=111827&rounded=true&size=256",
   },
 ];
 
@@ -483,19 +481,23 @@ const TeamFacultyCard = ({
   member: TeamMember;
   accent: string;
 }) => {
-  const profileUrl = member.profileUrl && member.profileUrl !== "#" ? member.profileUrl : null;
+  const hasInternalProfile = member.profileUrl && member.profileUrl !== "#";
+  const internalSlug = member.name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+  const [imgError, setImgError] = useState(false);
 
   return (
     <div className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 flex flex-col items-center text-center">
-      <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
-        {member.image ? (
+      <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-full bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-4 border-white ring-2 ring-slate-200 group-hover:ring-primary/30 transition-all shadow-lg">
+        {member.image && !imgError ? (
           <img
             src={member.image}
             alt={member.name}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = "https://mits.ac.in/images/inner-banner.jpg";
-            }}
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${accent} text-white font-bold text-3xl`}>
@@ -507,27 +509,19 @@ const TeamFacultyCard = ({
       <p className="text-[11px] uppercase tracking-[0.14em] text-primary font-semibold mb-1 truncate max-w-full">
         {member.department}
       </p>
-      <h4 className="font-extrabold text-secondary mb-1 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
+      <h4 className="font-bold text-secondary mb-1 leading-tight text-[15px]" style={{ fontFamily: "var(--font-body)" }}>
         {member.name}
       </h4>
       <p className="text-[13px] text-primary font-semibold mb-0.5">{member.designation}</p>
       <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{member.qualification}</p>
 
       <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">
-        {profileUrl ? (
-          <a
-            href={profileUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest no-underline"
-          >
-            View Profile <ChevronRight className="w-3 h-3" />
-          </a>
-        ) : (
-          <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-400 bg-slate-100 px-4 py-1.5 rounded-full uppercase tracking-widest cursor-not-allowed">
-            No Profile
-          </span>
-        )}
+        <Link
+          to={`/placements/team/${internalSlug}`}
+          className="inline-flex items-center gap-1.5 text-[11px] font-bold text-primary bg-primary/5 px-4 py-1.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors uppercase tracking-widest no-underline"
+        >
+          View Profile <ChevronRight className="w-3 h-3" />
+        </Link>
       </div>
     </div>
   );
@@ -547,7 +541,9 @@ const Placements = () => {
     setActiveTab(id);
     try {
       navigate(`/placements/${id}`, { replace: true });
-    } catch (e) {}
+    } catch (e) {
+      console.debug(e);
+    }
     setSidebarOpen(false);
   };
 

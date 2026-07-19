@@ -1,7 +1,7 @@
-﻿import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronDown, Play, Pause } from "lucide-react";
 const BASE = import.meta.env.BASE_URL;
 
 interface Slide {
@@ -34,10 +34,7 @@ const slides: Slide[] = [
     subHighlight: "",
     leftLogo: "",
     rightLogo: "",
-    buttons: [
-      { label: "Explore", href: "#about", style: "outline" },
-      { label: "Apply Now", href: "https://admission.mits.ac.in/", style: "primary", external: true },
-    ],
+    buttons: [],
     align: "center",
   },
   {
@@ -47,10 +44,7 @@ const slides: Slide[] = [
     eyebrow: "",
     title: "",
     tagline: "",
-    buttons: [
-      { label: "Apply Now", href: "https://admission.mits.ac.in/", style: "primary", external: true },
-      { label: "Brochure", href: "https://mits.ac.in/public/uploads/static-pdf/College%20Brochure-2026.pdf", style: "outline", external: true },
-    ],
+    buttons: [],
     align: "right",
   },
   {
@@ -61,9 +55,7 @@ const slides: Slide[] = [
     title: "",
     tagline: "",
     highlight: "",
-    buttons: [
-      { label: "View Placements", href: "/placements", style: "primary" },
-    ],
+    buttons: [],
     align: "right",
   },
   {
@@ -111,6 +103,9 @@ const HeroSection = () => {
   const [dir,     setDir]               = useState(1);
   const [campusShrunk, setCampusShrunk] = useState(false);
   const [isVisible, setIsVisible]       = useState(true);
+  const [isPlaying, setIsPlaying]       = useState(true);
+  const [isHovered, setIsHovered]       = useState(false);
+  const [isTabVisible, setIsTabVisible] = useState(true);
   const videoRef   = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -121,6 +116,17 @@ const HeroSection = () => {
 
   const prev = () => go((current - 1 + slides.length) % slides.length);
   const next = useCallback(() => go((current + 1) % slides.length), [current, go]);
+
+  // Listen to visibilitychange (tab focus/blur)
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      setIsTabVisible(document.visibilityState === "visible");
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   // IntersectionObserver
   useEffect(() => {
@@ -134,49 +140,83 @@ const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Play/pause video on visibility and move to next slide when scrolled down
+  // Play/pause video on visibility, play state, or tab visibility (ignores hover so video plays continuously)
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
     const currentSlide = slides[current];
     if (!currentSlide.video) return;
-    if (isVisible) {
+    if (isVisible && isPlaying && isTabVisible) {
       video.play().catch(() => {});
     } else {
       video.pause();
-      // Move to next slide when user scrolls down
-      next();
+      // Move to next slide when user scrolls down (only if autoplay active)
+      if (!isVisible && isPlaying && isTabVisible) {
+        next();
+      }
     }
-  }, [isVisible, current, next]);
+  }, [isVisible, current, isPlaying, isTabVisible, next]);
 
   // Reset + restart video when slide changes
   useEffect(() => {
     if (slides[current].video) {
       const video = videoRef.current;
-      if (video) { video.currentTime = 0; video.play().catch(() => {}); }
+      if (video) {
+        video.currentTime = 0;
+        if (isPlaying && isVisible && isTabVisible) {
+          video.play().catch(() => {});
+        }
+      }
     }
-  }, [current]);
+  }, [current, isPlaying, isVisible, isTabVisible]);
 
-  // Slide timer / video-end
+  // Slide timer / video-end (13 seconds)
   useEffect(() => {
+    if (!isPlaying || !isTabVisible) return;
+
+    // Pause slide transition if hovered (except on first slide)
+    if (isHovered && current !== 0) return;
+
     const currentSlide = slides[current];
     if (currentSlide.video) {
       const video = videoRef.current;
       if (!video) return;
+      
       let fallbackTimer: ReturnType<typeof setTimeout> | null = null;
       if (!isVisible) {
-        fallbackTimer = setTimeout(() => next(), 5000);
+        fallbackTimer = setTimeout(() => next(), 13000);
       }
-      const onEnded = () => { if (isVisible) next(); };
+      
+      // If the video ended while hovered, transition immediately upon mouse leave
+      if (video.ended) {
+        next();
+        return;
+      }
+
+      const onEnded = () => {
+        if (isVisible) next();
+      };
+      
       video.addEventListener("ended", onEnded);
       return () => {
         if (fallbackTimer) clearTimeout(fallbackTimer);
         video.removeEventListener("ended", onEnded);
       };
     }
-    const t = setInterval(next, 5000);
+
+    const t = setInterval(next, 13000);
     return () => clearInterval(t);
-  }, [next, current, isVisible]);
+  }, [next, current, isVisible, isPlaying, isHovered, isTabVisible]);
+
+  const handleMouseEnter = () => {
+    if (window.matchMedia("(hover: hover)").matches) {
+      setIsHovered(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   const slide = slides[current];
   const contentAlign =
@@ -187,6 +227,8 @@ const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className="relative w-full overflow-hidden hero-section"
     >
       {/* Backgrounds */}
@@ -390,13 +432,26 @@ className="w-full h-full object-cover"
 
         {/* Bottom controls */}
         <div className="relative z-20 flex items-center justify-between px-3 sm:px-6 md:px-16 pb-3 sm:pb-4 md:pb-6">
-          <div className="flex items-center gap-1.5 sm:gap-2 mx-auto">
-            {slides.map((_, i) => (
-              <button key={i} onClick={() => go(i)} aria-label={`Go to slide ${i + 1}`}
-                className={`rounded-full transition-all duration-400 ${
-                  i === current ? "w-6 sm:w-8 h-1.5 sm:h-2 bg-[#caa74d]" : "w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white/35 hover:bg-white/60"
-                }`} />
-            ))}
+          <div className="flex items-center gap-3.5 mx-auto">
+            <button
+              onClick={() => setIsPlaying(!isPlaying)}
+              aria-label={isPlaying ? "Pause autoplay" : "Play autoplay"}
+              className="text-white/60 hover:text-[#caa74d] transition-colors p-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#caa74d]"
+            >
+              {isPlaying ? (
+                <Pause className="w-4 h-4" />
+              ) : (
+                <Play className="w-4 h-4" />
+              )}
+            </button>
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              {slides.map((_, i) => (
+                <button key={i} onClick={() => go(i)} aria-label={`Go to slide ${i + 1}`}
+                  className={`rounded-full transition-all duration-400 ${
+                    i === current ? "w-6 sm:w-8 h-1.5 sm:h-2 bg-[#caa74d]" : "w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white/35 hover:bg-white/60"
+                  }`} />
+              ))}
+            </div>
           </div>
           <a href="#about" aria-label="Scroll down" className="text-white/50 hover:text-[#caa74d] transition-colors hidden md:block">
             <ChevronDown className="w-4 h-4 md:w-5 md:h-5" />

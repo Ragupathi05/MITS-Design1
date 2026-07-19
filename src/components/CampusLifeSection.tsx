@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { campusLifeData } from "@/data/galleryData/campusLife";
 
 // Map keys to their route and icon
-const categoryConfig: Record<string, { href: string; icon: any }> = {
+const categoryConfig: Record<string, { href: string; icon: React.ComponentType<{ className?: string }> }> = {
   clubs: { href: "/campus-life/student-clubs", icon: Users },
   cultural: { href: "/campus-life/cultural-life", icon: Sparkles },
   sports: { href: "/sports", icon: Dumbbell },
@@ -30,7 +30,13 @@ const getLocalUrl = (url: string) => {
   return url;
 };
 
-const SlideshowCard = ({ catKey, category }: { catKey: string; category: any }) => {
+interface CampusLifeCategory {
+  title: string;
+  description: string;
+  images: string[];
+}
+
+const SlideshowCard = ({ catKey, category }: { catKey: string; category: CampusLifeCategory }) => {
   const [imgIndex, setImgIndex] = useState(0);
   const images = category.images;
   const config = categoryConfig[catKey];

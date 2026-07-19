@@ -240,6 +240,157 @@ const AboutSection = () => (
   </div>
 );
 
+const domainMap: Record<string, string> = {
+  "Bowling Green State University (BGSU)": "bgsu.edu",
+  "Rivier University": "rivier.edu",
+  "University of Applied Sciences, Hagenberg – Upper Austria": "fh-ooe.at",
+  "BRNO University of Technology": "vutbr.cz",
+  "Maharishi Vedic University": "meru.international",
+  "University of Eastern Finland": "uef.fi",
+  "Karlsruhe Institute of Technology": "kit.edu",
+  "University of Aizu": "u-aizu.ac.jp",
+  "Ichinoseki College (NIT)": "ichinoseki.ac.jp",
+  "Iwate Prefectural University – Faculty of Software & Information Science": "iwate-pu.ac.jp",
+  "Asia University": "asia.edu.tw",
+  "Providence University": "pu.edu.tw",
+  "National Chiao Tung University (NCTU)": "nycu.edu.tw",
+  "National Chung Cheng University (NCCU)": "ccu.edu.tw",
+  "Pusan National University": "pusan.ac.kr",
+  "Kookmin University": "kookmin.ac.kr",
+  "GS Co., Ltd. – Gyeonggi-do": "gscorp.co.kr",
+  "Nanyang Technological University (NTU)": "ntu.edu.sg",
+  "Rise & Shine Group of Companies": "riseandshinegroup.com",
+  "Jenmars Technical Services LLC": "jenmars.com",
+};
+
+const getDomain = (url: string) => {
+  try {
+    if (!url || url === "#") return null;
+    const clean = url
+      .replace("https://www.", "")
+      .replace("http://www.", "")
+      .replace("https://", "")
+      .replace("http://", "");
+    return clean.split("/")[0];
+  } catch (e) {
+    return null;
+  }
+};
+
+const FallbackCrest = ({ name }: { name: string }) => {
+  const isCompany =
+    name.toLowerCase().includes("group") ||
+    name.toLowerCase().includes("services") ||
+    name.toLowerCase().includes("co., ltd.");
+
+  if (isCompany) {
+    return (
+      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#caa74d]/10 to-[#caa74d]/20 border border-[#caa74d]/30 flex items-center justify-center p-3 text-[#caa74d] shrink-0 shadow-sm">
+        <svg
+          viewBox="0 0 24 24"
+          className="w-full h-full text-[#caa74d] fill-none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+          <line x1="6" y1="6" x2="6.01" y2="6" />
+          <line x1="6" y1="18" x2="6.01" y2="18" />
+        </svg>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 flex items-center justify-center p-2.5 text-primary shrink-0 shadow-sm">
+      <svg
+        viewBox="0 0 100 100"
+        className="w-full h-full text-primary fill-none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M50 12 L82 22 V55 C82 72 67 83 50 88 C33 83 18 72 18 55 V22 Z" />
+        <path d="M35 48 H65 M50 35 V62" strokeWidth="2" strokeDasharray="3 3" />
+        <path d="M35 55 L50 65 L65 55" strokeWidth="2" />
+        <circle cx="50" cy="35" r="5" className="fill-primary" />
+      </svg>
+    </div>
+  );
+};
+
+const localLogos: Record<string, string> = {
+  "Bowling Green State University (BGSU)": "Logos/bgsu.png",
+  "University of Applied Sciences, Hagenberg – Upper Austria": "Logos/fh-ooe.png",
+  "BRNO University of Technology": "Logos/brno.png",
+  "The University of South Bohemia in České Budějovice": "Logos/jcu.png",
+  "Maharishi Vedic University": "Logos/meru.png",
+  "University of Aizu": "Logos/aizu.png",
+  "Ichinoseki College (NIT)": "Logos/ichinoseki.png",
+  "Iwate Prefectural University – Faculty of Software & Information Science": "Logos/iwate.png",
+  "Asia University": "Logos/asia.png",
+  "Providence University": "Logos/providence.png",
+  "Pusan National University": "Logos/pusan.png",
+  "Kookmin University": "Logos/kookmin.png",
+};
+
+const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
+  const [imgFailed, setImgFailed] = useState(false);
+  const BASE = import.meta.env.BASE_URL;
+  const localLogo = localLogos[p.name];
+  const domain = domainMap[p.name] || getDomain(p.website);
+  const logoUrl = localLogo
+    ? `${BASE}${localLogo}`
+    : domain && p.website !== "#"
+      ? `https://logo.clearbit.com/${domain}`
+      : null;
+
+  return (
+    <a
+      href={p.website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group rounded-2xl border border-border bg-white p-5 hover:shadow-xl hover:-translate-y-1 hover:border-[#caa74d]/50 transition-all flex flex-col justify-between"
+    >
+      <div>
+        <div className="flex items-start justify-between gap-3 mb-4">
+          {!imgFailed && logoUrl ? (
+            <div className="h-14 flex items-center bg-white shrink-0">
+              <img
+                src={logoUrl}
+                alt={`${p.name} logo`}
+                className="h-full w-auto object-contain max-w-[140px]"
+                onError={() => setImgFailed(true)}
+              />
+            </div>
+          ) : (
+            <FallbackCrest name={p.name} />
+          )}
+          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors mt-1" />
+        </div>
+        <h4
+          className="font-bold text-secondary text-base leading-snug"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          {p.name}
+        </h4>
+        <p className="text-xs text-muted-foreground mt-1.5 flex items-center gap-1">
+          <MapPin className="w-3 h-3 text-primary shrink-0" />
+          {p.country}
+        </p>
+      </div>
+      {p.highlight && (
+        <p className="text-xs text-secondary/70 mt-4 leading-relaxed border-t border-border pt-3">
+          {p.highlight}
+        </p>
+      )}
+    </a>
+  );
+};
+
 const MoUSection = () => {
   const grouped = partners.reduce((acc, p) => {
     (acc[p.region] ||= []).push(p);
@@ -260,16 +411,7 @@ const MoUSection = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {list.map((p) => (
-              <a key={p.name} href={p.website} target="_blank" rel="noopener noreferrer"
-                className="group rounded-2xl border border-border bg-white p-5 hover:shadow-xl hover:-translate-y-1 hover:border-primary/40 transition-all">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <div className="p-2 rounded-lg bg-primary/5 text-primary"><Landmark className="w-5 h-5" /></div>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                </div>
-                <h4 className="font-bold text-secondary text-base leading-snug" style={{ fontFamily: "var(--font-display)" }}>{p.name}</h4>
-                <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1"><MapPin className="w-3 h-3" />{p.country}</p>
-                {p.highlight && <p className="text-xs text-secondary/70 mt-3 leading-relaxed border-t border-border pt-3">{p.highlight}</p>}
-              </a>
+              <PartnerCard key={p.name} p={p} />
             ))}
           </div>
         </div>
@@ -451,7 +593,7 @@ const GlobalSection = () => {
   );
 };
 
-const EventCard = ({ e }: { e: any }) => {
+const EventCard = ({ e }: { e: { date: string; title: string; description: string } }) => {
   const [showFull, setShowFull] = useState(false);
   const needsTruncation = e.description.length > 280;
   const text = showFull ? e.description : (needsTruncation ? `${e.description.substring(0, 260)}...` : e.description);
@@ -591,6 +733,7 @@ const StanfordTeaser = () => (
 /* ---------- MAIN PAGE ---------- */
 
 const InternationalRelations = () => {
+  const BASE = import.meta.env.BASE_URL;
   const location = useLocation();
   const navigate = useNavigate();
   const initial = (location.hash.replace("#", "") as Section) || "about";
@@ -613,11 +756,23 @@ const InternationalRelations = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#143557] to-[#0a1f33] text-white py-16 md:py-24">
+        <div className="absolute inset-0 opacity-25">
+          <img
+            src={`${BASE}Hero-Section/image%206.jpg`}
+            alt="MITS Campus"
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).src = `${BASE}Hero-Section/image%201.JPG`;
+            }}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0f2a44]/95 via-[#0f2a44]/80 to-[#0a1f33]/95" />
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-15"
           style={{
             backgroundImage:
               "radial-gradient(circle at 20% 20%, #caa74d 0%, transparent 40%), radial-gradient(circle at 80% 80%, #b31317 0%, transparent 50%)",
@@ -658,19 +813,19 @@ const InternationalRelations = () => {
             </motion.p>
           </div>
         </div>
-
-        {/* Stats strip */}
-        <div className="max-w-7xl mx-auto px-4 md:px-6 -mt-10 relative z-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 bg-white rounded-2xl shadow-xl border border-border p-4 md:p-6">
-            {heroStats.map((s) => (
-              <div key={s.label} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-                <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
+
+      {/* Stats strip */}
+      <div className="max-w-7xl mx-auto px-4 md:px-6 -mt-10 md:-mt-14 relative z-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 bg-white rounded-2xl shadow-xl border border-border p-4 md:p-6">
+          {heroStats.map((s) => (
+            <div key={s.label} className="text-center">
+              <div className="text-2xl md:text-3xl font-bold text-[#0f2a44]" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
+              <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Tabs + Content */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
@@ -725,26 +880,26 @@ const InternationalRelations = () => {
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-xl font-bold mb-1" style={{ fontFamily: "var(--font-display)" }}>{contactCard.office}</h3>
-                  <p className="text-sm text-white/80 mb-4">{contactCard.institute}</p>
-                  <div className="space-y-2 text-sm">
+                  <h3 className="text-xl font-bold mb-1 text-white" style={{ fontFamily: "var(--font-display)" }}>{contactCard.office}</h3>
+                  <p className="text-sm text-white/90 mb-4">{contactCard.institute}</p>
+                  <div className="space-y-2 text-sm text-white/95">
                     <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent shrink-0" />{contactCard.address}</div>
                     <div className="flex items-center gap-2"><Calendar className="w-4 h-4 text-accent" />{contactCard.timings}</div>
-                    <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /><a href={`tel:${contactCard.phone}`} className="hover:underline">{contactCard.phone}</a></div>
-                    <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-accent" /><a href={`mailto:${contactCard.email}`} className="hover:underline">{contactCard.email}</a></div>
+                    <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /><a href={`tel:${contactCard.phone}`} className="hover:underline text-white">{contactCard.phone}</a></div>
+                    <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-accent" /><a href={`mailto:${contactCard.email}`} className="hover:underline text-white">{contactCard.email}</a></div>
                   </div>
                   <div className="flex flex-wrap gap-2 mt-5">
                     <a href={`mailto:${contactCard.email}`}><Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2"><Mail className="w-4 h-4" />Email</Button></a>
-                    <a href={`tel:${contactCard.phone}`}><Button size="sm" variant="outline" className="border-white/40 text-white hover:bg-white/10 gap-2"><Phone className="w-4 h-4" />Call</Button></a>
-                    <a href={contactCard.mapsUrl} target="_blank" rel="noopener noreferrer"><Button size="sm" variant="outline" className="border-white/40 text-white hover:bg-white/10 gap-2"><MapPin className="w-4 h-4" />Directions</Button></a>
+                    <a href={`tel:${contactCard.phone}`}><Button size="sm" variant="outline" className="border-white/40 text-white bg-transparent hover:bg-white/10 hover:text-white gap-2"><Phone className="w-4 h-4" />Call</Button></a>
+                    <a href={contactCard.mapsUrl} target="_blank" rel="noopener noreferrer"><Button size="sm" variant="outline" className="border-white/40 text-white bg-transparent hover:bg-white/10 hover:text-white gap-2"><MapPin className="w-4 h-4" />Directions</Button></a>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <h4 className="text-sm font-bold text-accent uppercase tracking-wide">IRO Team</h4>
                   {contactCard.team.map((t) => (
                     <div key={t.name} className="rounded-lg bg-white/5 border border-white/10 p-3">
-                      <div className="font-semibold text-sm">{t.name}</div>
-                      <div className="text-xs text-white/70">{t.designation}</div>
+                      <div className="font-semibold text-sm text-white">{t.name}</div>
+                      <div className="text-xs text-white/80">{t.designation}</div>
                       {t.email && <a href={`mailto:${t.email}`} className="text-xs text-accent hover:underline mt-1 inline-flex items-center gap-1"><Mail className="w-3 h-3" />{t.email}</a>}
                     </div>
                   ))}

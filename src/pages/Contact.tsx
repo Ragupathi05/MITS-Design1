@@ -2,8 +2,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
+import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Globe, MessageSquare, Send } from "lucide-react";
 import { useState } from "react";
+
+const BASE = import.meta.env.BASE_URL;
 
 const contactCards = [
   { icon: MapPin, title: "Visit Us", lines: ["Madanapalle Institute of Technology & Science", "Post Box No. 14, Angallu", "Madanapalle – 517325, A.P., India"], accent: "from-[#b30000] to-[#d93030]" },
@@ -42,28 +45,34 @@ const Contact = () => {
       />
       <main>
         {/* Hero */}
-        <div className="relative h-72 md:h-80 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0f2a44] via-[#1a3d5c] to-[#0f2a44]" />
-          <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#b30000]/25 blur-3xl" />
-          <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-[#caa74d]/20 blur-3xl" />
-          <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
-          <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
+        <section
+          className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
+          style={{
+            backgroundImage: `url(${BASE}Hero-Section/image%202.JPG)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 40%",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/80" />
+          <div className="relative z-10 container mx-auto px-4 text-center">
             <ScrollReveal>
-              <p className="text-[#caa74d] font-semibold tracking-[0.25em] uppercase text-xs md:text-sm mb-3">Get In Touch</p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Contact MITS</h1>
-              <p className="font-body text-base md:text-lg text-white/85 max-w-2xl mx-auto">
+              <p className="text-[#ffd15c] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">Get In Touch</p>
+              <h1 className="font-display text-4xl md:text-6xl font-bold mb-5 text-white">Contact MITS</h1>
+              <p className="text-white/80 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mt-4">
                 We're here to answer your questions about admissions, programmes, and campus life.
               </p>
             </ScrollReveal>
           </div>
-          <div className="absolute bottom-4 left-6">
-            <ol className="flex items-center gap-1.5 text-sm">
-              <li><a href="/" className="text-white/70 hover:text-white">Home</a></li>
-              <li className="text-white/50">›</li>
-              <li className="text-white font-semibold">Contact</li>
-            </ol>
+          <div className="absolute bottom-4 left-6 z-10">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-1.5 text-sm text-white/80">
+                <li><Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
+                <li className="text-white/50">›</li>
+                <li className="text-[#ffd15c] font-semibold">Contact</li>
+              </ol>
+            </nav>
           </div>
-        </div>
+        </section>
 
         {/* Contact info cards */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-background">

@@ -283,6 +283,99 @@ export const departmentsData: Record<string, DepartmentData> = {
     ],
   },
 
+  bioinfo: {
+    key: "bioinfo",
+    name: "Bioinformatics",
+    shortName: "Bioinformatics",
+    established: "2010",
+    bannerImage: deptImg("bioinformatics"),
+    about: "The Bioinformatics program at MITS is an interdisciplinary undergraduate curriculum under the School of Engineering. It integrates biological sciences with computational tools, programming, and data analysis to address complex challenges in genomics, proteomics, systems biology, and computational drug discovery. The program is designed to produce skilled graduates with expertise in both biological data analysis and engineering principles.",
+    vision: "To be a center of excellence in interdisciplinary education and research at the intersection of biology and computing, preparing professionals to address global scientific challenges.",
+    mission: [
+      "To provide high-quality education in computational biology, genomics, and programming.",
+      "To encourage interdisciplinary research and collaboration across the School of Engineering and School of Computing.",
+      "To prepare students for professional careers in biotech and IT sectors with strong problem-solving capabilities."
+    ],
+    nbaAccredited: false,
+    hod: {
+      name: "Dr. Dipankar Roy",
+      designation: "Dean, School of Engineering",
+      qualification: "Ph.D. (University of Pisa, Italy)",
+      image: "https://mits.ac.in/public/uploads/faculty/default.jpg",
+      profileUrl: "https://mits.ac.in/facultyprofile/dean-engineering"
+    },
+    achievements: {
+      consultancyAmount: "N/A",
+      researchProjects: "Interdisciplinary",
+      patents: "3+",
+      publications: "50+"
+    },
+    teachingApproach: {
+      description: "Our teaching methodology focuses on experiential learning, computational laboratory sessions, and project-based assignments.",
+      points: [
+        "Hands-on database exploration and sequence analysis tools",
+        "Outcome-based education framework integrated with MOOC courses",
+        "Interdisciplinary projects in genomics and molecular modeling"
+      ]
+    },
+    courses: [
+      "B.Tech in Bioinformatics"
+    ],
+    contactInfo: {
+      email: "admissions@mits.ac.in",
+      phone: "+91-8571-280255; 280706"
+    },
+    faculty: [
+      {
+        name: "Dr. Dipankar Roy",
+        designation: "Dean, School of Engineering",
+        qualification: "Ph.D. (University of Pisa, Italy)",
+        image: "https://mits.ac.in/public/uploads/faculty/default.jpg",
+        profileUrl: "https://mits.ac.in/facultyprofile/dean-engineering"
+      }
+    ],
+    detailedAchievements: [],
+    facilities: [
+      {
+        name: "Bioinformatics Computational Lab",
+        description: "Equipped with specialized bioinformatics tools, databases, and molecular modeling software.",
+        image: ""
+      }
+    ],
+    patents: [],
+    publications: [],
+    consultancy: [],
+    events: [],
+    mous: [],
+    placement: {
+      percentage: "85%",
+      averagePackage: "₹6 LPA",
+      highestPackage: "₹10 LPA",
+      topRecruiters: ["Cognizant", "TCS", "Accenture", "Wipro"]
+    },
+    studentProjects: [],
+    subjects: [
+      {
+        code: "20BI101",
+        name: "Introduction to Bioinformatics",
+        semester: 3,
+        type: "core"
+      },
+      {
+        code: "20BI102",
+        name: "Biological Databases & Tools",
+        semester: 4,
+        type: "core"
+      }
+    ],
+    documents: [
+      {
+        title: "B.Tech Bioinformatics Academic Calendar 2025-26",
+        url: "https://mits.ac.in/public/uploads/ugc/B.Tech%20Bioinformatics%20Academic%20Calendar%202025-26.pdf"
+      }
+    ]
+  },
+
   ce: {
     key: "ce",
     name: "Civil Engineering",

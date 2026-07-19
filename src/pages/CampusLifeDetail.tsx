@@ -30,24 +30,9 @@ const CampusLifeDetail = ({ categoryKey }: CampusLifeDetailProps) => {
   const navigate = useNavigate();
   const category = campusLifeData[categoryKey];
 
-  if (!category) {
-    return (
-      <div className="min-h-screen bg-background flex flex-col justify-between">
-        <Header />
-        <div className="container mx-auto px-4 py-20 text-center">
-          <h2 className="text-3xl font-bold mb-4">Category Not Found</h2>
-          <Link to="/" className="text-primary hover:underline">Return to Home</Link>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  const { title, stats, description, highlights, images } = category;
-
   // Carousel State
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const carouselImages = images.slice(0, 10); // Use first 10 for carousel showcase
+  const carouselImages = category ? category.images.slice(0, 10) : []; // Use first 10 for carousel showcase
 
   useEffect(() => {
     if (carouselImages.length <= 1) return;
@@ -74,6 +59,24 @@ const CampusLifeDetail = ({ categoryKey }: CampusLifeDetailProps) => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxOpen, lightboxIndex]);
+
+  // Skeletons state for lazy loaded image grid
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+
+  if (!category) {
+    return (
+      <div className="min-h-screen bg-background flex flex-col justify-between">
+        <Header />
+        <div className="container mx-auto px-4 py-20 text-center">
+          <h2 className="text-3xl font-bold mb-4">Category Not Found</h2>
+          <Link to="/" className="text-primary hover:underline">Return to Home</Link>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  const { title, stats, description, highlights, images } = category;
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
@@ -115,9 +118,6 @@ const CampusLifeDetail = ({ categoryKey }: CampusLifeDetailProps) => {
   const relatedCategories = Object.entries(campusLifeData)
     .filter(([key]) => key !== categoryKey)
     .slice(0, 3);
-
-  // Skeletons state for lazy loaded image grid
-  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
 
   return (
     <div className="min-h-screen bg-background">

@@ -1,5 +1,19 @@
-﻿import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+
+const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" {...props} fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
+const socialLinks = [
+  { icon: Facebook, href: "https://www.facebook.com/MITSMadanapalle", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/mits_mpl/", label: "Instagram" },
+  { icon: XIcon, href: "https://x.com/mits_mpl", label: "X (Twitter)" },
+  { icon: Linkedin, href: "https://www.linkedin.com/school/madanapalle-institute-of-technology-science", label: "LinkedIn" },
+  { icon: Youtube, href: "https://www.youtube.com/@mitsdeemedtobeuniversity", label: "YouTube" },
+];
 
 const Footer = () => {
   return (
@@ -36,6 +50,26 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+            <div className="mt-6 pt-6 border-t border-white/10 space-y-4">
+              <h4 className="font-display font-bold text-white text-sm">Get in touch</h4>
+              <p className="font-body text-white/60 text-xs">Find out more here</p>
+              <div className="flex flex-col gap-2">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-[#b31317] hover:bg-[#990000] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm text-center"
+                >
+                  Get the details now
+                </Link>
+                <a
+                  href="https://mits.ac.in/public/uploads/static-pdf/College%20Brochure-2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-[#b31317] hover:bg-[#990000] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm text-center"
+                >
+                  Download Brochure
+                </a>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -49,7 +83,6 @@ const Footer = () => {
                 { label: "Placements", href: "/placements" },
                 { label: "Contact", href: "/contact" },
                 { label: "Apply Now", href: "/admissions" },
-                { label: "Brochure", href: "https://mits.ac.in/public/uploads/static-pdf/College%20Brochure-2026.pdf" },
                 { label: "Scholarships", href: "/admissions" },
                 { label: "Mandatory Disclosure", href: "/about/mandatory-disclosures" },
               ].map((link) => (
@@ -79,6 +112,8 @@ const Footer = () => {
                 { label: "Public Self Disclosures", href: "/psd" },
                 { label: "Circulars", href: "https://mits.ac.in/circulars" },
                 { label: "Cells", href: "https://mits.ac.in/cells" },
+                { label: "MITS Radio", href: "/mits-radio" },
+                { label: "Moodle Login", href: "https://moodle.mits.ac.in/" },
               ].map((link) => (
                 <li key={link.label}>
                   {link.href && /^https?:\/\//.test(link.href) ? (
@@ -93,22 +128,62 @@ const Footer = () => {
 
           <div>
             <h3 className="font-display font-bold text-[#caa74d] text-base mb-4">Connect</h3>
-            <div className="flex gap-3">
-              {([Facebook, Twitter, Linkedin, Youtube] as const).map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#caa74d] hover:text-[#0f172a] transition-colors"
-                  aria-label={["Facebook", "Twitter", "LinkedIn", "YouTube"][i]}
-                >
-                  <Icon className="w-5 h-5" aria-hidden="true" />
-                </a>
-              ))}
+            <div className="flex flex-wrap gap-2">
+              {socialLinks.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#caa74d] hover:text-[#0f2a44] transition-all duration-200"
+                    aria-label={item.label}
+                  >
+                    <Icon className="w-5 h-5" aria-hidden="true" />
+                  </a>
+                );
+              })}
             </div>
-            <div className="mt-6 text-sm space-y-2">
-              <a href="#" className="block font-body text-white/80 hover:text-[#caa74d] transition-colors">Privacy Policy</a>
-              <Link to="/about/mandatory-disclosures" className="block font-body text-white/80 hover:text-[#caa74d] transition-colors">Mandatory Disclosure</Link>
-              <a href="#" className="block font-body text-white/80 hover:text-[#caa74d] transition-colors">Sitemap</a>
+            <div className="mt-4 text-sm">
+              <Link to="/terms-conditions-policy" className="block font-body text-white/80 hover:text-[#caa74d] transition-colors">Privacy Policy</Link>
+            </div>
+            <iframe
+              src="https://maps.google.com/maps?q=Madanapalle%20Institute%20of%20Technology%20%26%20Science&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-[180px] rounded-lg border border-white/10 mt-4 shadow-inner"
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="MITS Location Map"
+            />
+            <div className="mt-6 pt-6 border-t border-white/10">
+              <p className="font-body text-white/60 text-xs mb-2">Download MITS Radio 90.8 CRS</p>
+              <div className="flex gap-2">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.atc.mitsradio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 max-w-[110px]"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Google Play Store"
+                    className="w-full h-auto hover:opacity-90 transition-opacity"
+                  />
+                </a>
+                <a
+                  href="https://apps.apple.com/in/app/mits-radio-90-8-cr/id1668776731"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 max-w-[110px]"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                    alt="Apple App Store"
+                    className="w-full h-auto hover:opacity-90 transition-opacity"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>

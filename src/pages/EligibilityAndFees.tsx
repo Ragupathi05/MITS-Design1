@@ -1,444 +1,715 @@
-﻿import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { UserCheck, Star, Phone, Globe } from "lucide-react";
+import { UserCheck, Star, Phone, Globe, Layers, Globe2, Award } from "lucide-react";
 
 const eligibility = [
   {
-    program: "B.Tech (All Branches)",
+    program: "B.Tech (Regular / 4-Year)",
     criteria: [
-      "10+2 with minimum 70% aggregate (varies by branch)",
-      "Valid score in JEE / State CET / CBSE / ICSE or equivalent",
-      "Direct admission for top rankers and high scorers",
-    ],
+      "10+2 with Physics, Mathematics, and Chemistry/Biology as compulsory subjects.",
+      "Minimum 50% aggregate marks in the qualifying examination (45% for reserved categories).",
+      "Valid rank in MITSUCET, JEE Main, or State-level Engineering Entrance Exams (e.g., AP EAPCET)."
+    ]
+  },
+  {
+    program: "B.Tech (Lateral Entry / 3-Year)",
+    criteria: [
+      "Passed a minimum 3-year or 2-year (Lateral Entry) Engineering Diploma with at least 50% marks (45% for reserved categories).",
+      "OR passed B.Sc. Degree with at least 50% marks and cleared Mathematics at 10+2 level.",
+      "Merit ranking based on ECET scores or qualifying diploma academic performance."
+    ]
+  },
+  {
+    program: "BBA & BCA",
+    criteria: [
+      "10+2 in any stream (Commerce, Science, Arts) from a recognized Board.",
+      "Minimum 50% aggregate marks in the qualifying examination.",
+      "Admissions through MITSUCET rank or academic merit lists."
+    ]
+  },
+  {
+    program: "MBA & MCA",
+    criteria: [
+      "Passed recognized Bachelor's Degree of minimum 3 years' duration.",
+      "Minimum 50% aggregate marks in the qualifying degree (45% for reserved categories).",
+      "Valid score in State ICET or national entrance tests (CAT, MAT, NIMCET)."
+    ]
   },
   {
     program: "M.Tech",
     criteria: [
-      "Relevant UG degree with minimum 60% aggregate",
-      "Valid GATE / PGECET or equivalent score",
-    ],
-  },
-  {
-    program: "BBA / BCA",
-    criteria: [
-      "10+2 with minimum 75% aggregate",
-      "Direct admission for merit students",
-    ],
-  },
-  {
-    program: "MBA / MCA",
-    criteria: [
-      "UG degree with minimum 60% aggregate",
-      "Valid ICET / CAT / MAT or equivalent score",
-    ],
-  },
+      "Passed B.E./B.Tech in relevant Engineering discipline from a recognized University.",
+      "Minimum 50% aggregate marks in the qualifying degree (45% for reserved categories).",
+      "Valid score in GATE, PGECET, or undergraduate merit rankings."
+    ]
+  }
 ];
 
-/* ── shared table classes ── */
-const TH = "py-3 px-4 text-center font-bold text-sm border border-gray-300 bg-[#d8ec7a] text-[#222]";
-const TD = "py-2.5 px-4 text-center text-sm border border-gray-300 align-middle";
-const SCHOOL_TD = "py-2.5 px-4 text-left text-sm font-bold border border-gray-300 align-middle bg-[#dfead1]";
-const PROG_TD = "py-2.5 px-4 text-left text-sm font-semibold border border-gray-300 align-middle";
-const BASE_TD = "py-2.5 px-4 text-center text-sm font-bold border border-gray-300 align-middle bg-[#f3f3f3]";
-const FINAL_TD = "py-2.5 px-4 text-center text-sm font-bold border border-gray-300 align-middle text-[#b30000] text-base";
+/* Shared table styling classes - sans-serif and comfortable dimensions */
+const TH = "py-3 px-4 text-center font-extrabold text-xs md:text-sm uppercase tracking-wider border border-slate-200 bg-[#0f2a44] text-white font-sans";
+const TD = "py-3.5 px-4 text-center text-xs md:text-sm border border-slate-200 align-middle text-slate-700 font-semibold leading-relaxed font-sans";
+const SCHOOL_TD = "py-3.5 px-4 text-left text-xs md:text-sm font-extrabold border border-slate-200 align-middle bg-[#f8fafc] text-[#0f2a44] leading-relaxed font-sans";
+const PROG_TD = "py-3.5 px-4 text-left text-xs md:text-sm font-bold border border-slate-200 align-middle text-slate-800 leading-relaxed font-sans";
+const BASE_TD = "py-3.5 px-4 text-center text-xs md:text-sm font-extrabold border border-slate-200 align-middle bg-slate-50 text-slate-900 leading-relaxed font-sans";
+const FINAL_TD = "py-3.5 px-4 text-center text-xs md:text-sm font-extrabold border border-slate-200 align-middle text-[#b31317] bg-red-50/40 leading-relaxed font-sans";
 
 const EligibilityAndFees = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
     <Header />
     <SEO
-      title="MITS Fee Structure & Eligibility 2026 – B.Tech, MBA, MCA"
-      description="MITS Madanapalle 2026-27 fee structure: B.Tech from ₹50,000/sem, MBA/MCA ₹60,000/sem. Merit-based fee waivers via JEE, AP EAMCET, MITSUCET. Check eligibility criteria for all programmes."
+      title="Fee Structure & Scholarship Eligibility – MITS Deemed to be University"
+      description="Official tuition fee matrix, regular B.Tech/PG scholarships, lateral entry fee structure, and SAARC country fee concessions at MITS."
       canonical="/eligibility-and-fees"
     />
-    <main>
-
-      {/* ── HERO ── */}
-      <section className="relative pt-32 md:pt-40 pb-20 bg-gradient-to-br from-secondary via-secondary/95 to-primary/20 overflow-hidden">
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <ScrollReveal>
-            <Badge className="mb-4 text-lg bg-accent/80">Admissions 2026</Badge>
-            <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-4">
-              Eligibility &amp; Fee Structure
-            </h1>
-            <p className="text-white/80 text-xl max-w-3xl mx-auto mb-8">
-              Explore eligibility criteria and transparent fee structure for all programs at MITS Deemed to be University.
-            </p>
-          </ScrollReveal>
+    <main className="flex-grow">
+      {/* Spacer for sticky header */}
+      <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
+      
+      {/* Hero Banner */}
+      <section className="relative bg-gradient-to-br from-[#0f2a44] via-[#123150] to-[#07192b] text-white py-16 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
+        
+        <div className="container mx-auto px-4 md:px-8 relative z-10 text-center space-y-4">
+          <Badge className="text-xs font-semibold bg-[#caa74d] text-[#0f2a44] hover:bg-[#b08d37] uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm">
+            AY 2026-27 Admissions
+          </Badge>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight !text-white font-sans" style={{ color: "white" }}>
+            Eligibility &amp; Fee Structure
+          </h1>
+          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-sans">
+            Official program fees, lateral entry schedules, academic criteria, and SAARC student concession lists.
+          </p>
         </div>
       </section>
 
-      {/* ── ELIGIBILITY ── */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+      {/* ELIGIBILITY SECTION */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-8 space-y-8">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Eligibility Criteria</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">Check your eligibility for various UG &amp; PG programs</p>
+            <div className="text-center space-y-2">
+              <p className="text-[#b31317] font-bold tracking-widest uppercase text-xs md:text-sm">Qualifications</p>
+              <h2 className="font-sans text-xl md:text-3xl font-extrabold text-[#0f2a44]">Eligibility Guidelines</h2>
+              <p className="text-slate-505 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">Ensure you meet the academic requirements before starting the online application.</p>
             </div>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {eligibility.map((item, i) => (
-              <Card key={i} className="p-6 shadow-md hover:shadow-xl transition-all">
-                <h3 className="font-display text-xl font-bold text-primary mb-3 flex items-center gap-2">
-                  <UserCheck className="w-6 h-6 text-accent" /> {item.program}
-                </h3>
-                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  {item.criteria.map((c, j) => <li key={j}>{c}</li>)}
-                </ul>
-              </Card>
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <Card className="p-6 h-full border-slate-200 hover:border-[#caa74d] hover:shadow-xl transition-all duration-300 flex flex-col justify-between rounded-2xl bg-white">
+                  <div>
+                    <h3 className="font-sans text-base md:text-lg font-bold text-[#0f2a44] mb-4 flex items-center gap-2 border-b border-slate-100 pb-2">
+                      <UserCheck className="w-5 h-5 text-[#caa74d]" /> {item.program}
+                    </h3>
+                    <ul className="space-y-2.5">
+                      {item.criteria.map((c, j) => (
+                        <li key={j} className="flex items-start gap-2.5 text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#caa74d] mt-1.5 shrink-0" />
+                          <span>{c}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── FEE STRUCTURE ── */}
-      <section className="py-16 bg-[#f5f5f5]">
-        <div className="container mx-auto px-4">
+      {/* FEE STRUCTURE SECTION */}
+      <section className="py-16 bg-slate-50 border-t border-slate-200/50">
+        <div className="container mx-auto px-4 md:px-8 space-y-16">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <p className="text-[#b30000] font-semibold tracking-widest uppercase text-sm mb-2">2026–27</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0f2a44] mb-3">Fee Structure</h2>
-              <p className="text-gray-500 max-w-2xl mx-auto">Transparent and merit-based fee structure for all programs</p>
+            <div className="text-center space-y-2">
+              <p className="text-[#b31317] font-bold tracking-widest uppercase text-xs md:text-sm">Concessions &amp; Fees</p>
+              <h2 className="font-sans text-xl md:text-3xl font-extrabold text-[#0f2a44]">Fee &amp; Scholarship Matrix</h2>
+              <p className="text-slate-505 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">Official fee lists and merit-based concessions applicable for domestic and international admissions.</p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto space-y-10">
-
-            {/* ── TABLE 1: School of Engineering ── */}
-            <ScrollReveal>
-              <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
-                <table className="w-full border-collapse text-sm">
+          {/* TABLE 1: B.Tech Regular Group 1 */}
+          <ScrollReveal>
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-xl font-bold text-[#0f2a44] flex items-center gap-2 font-sans">
+                <Layers className="w-5 h-5 text-[#caa74d]" /> 1. B.Tech. Regular Fee (Engineering Group 1 &amp; Core Group)
+              </h3>
+              <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <table className="w-full border-collapse text-xs md:text-sm">
                   <thead>
                     <tr>
-                      <th className={TH}>Schools</th>
-                      <th className={TH}>Program Name</th>
-                      <th className={TH}>Base Fee<br />(Fee/Sem)</th>
-                      <th className={TH}>10+2 (%)</th>
-                      <th className={TH}>CBSE / ICSE</th>
-                      <th className={TH}>Any State CETs</th>
-                      <th className={TH}>JEE</th>
-                      <th className={TH}>Final Fee<br />(Fee/Sem)</th>
+                      <th className={TH} rowSpan={2}>Program Group</th>
+                      <th className={TH} rowSpan={2}>Base Fee / Sem</th>
+                      <th className={TH} colSpan={4}>Scholarship Criteria (Any One)</th>
+                      <th className={TH} rowSpan={2}>Final Fee / Sem</th>
+                    </tr>
+                    <tr className="bg-slate-800 text-white/90 text-[11px] font-semibold">
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">10+2 %</th>
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">CBSE/ICSE GPA</th>
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">State CET Rank</th>
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">JEE Rank</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {/* ECE */}
                     <tr>
-                      <td className={SCHOOL_TD} rowSpan={9}>School of<br />Engineering</td>
-                      <td className={PROG_TD}>B.Tech. Electronics &amp; Communication Engineering</td>
-                      <td className={BASE_TD} rowSpan={5}>₹99,000</td>
-                      <td className={TD}>90–100</td>
-                      <td className={TD}>9 and above</td>
-                      <td className={TD}>≤10000</td>
-                      <td className={TD}>≤30000</td>
-                      <td className={FINAL_TD}>₹80,000</td>
+                      <td className={PROG_TD} rowSpan={5}>
+                        1. B.Tech. Electronics &amp; Communication Engg.<br />
+                        2. B.Tech. Bioinformatics<br />
+                        3. B.Tech. Computer Science &amp; Engg.<br />
+                        4. B.Tech. CSE (AI &amp; Robotics)
+                      </td>
+                      <td className={BASE_TD} rowSpan={5}>₹ 99,000</td>
+                      <td className={TD}>90 – 100</td>
+                      <td className={TD}>&ge; 9</td>
+                      <td className={TD}>&le; 10,000</td>
+                      <td className={TD}>&le; 30,000</td>
+                      <td className={FINAL_TD}>₹ 80,000</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>85 – 89.99</td>
+                      <td className={TD}>&ge; 8</td>
+                      <td className={TD}>10,001 – 15,000</td>
+                      <td className={TD}>30,001 – 50,000</td>
+                      <td className={FINAL_TD}>₹ 85,000</td>
                     </tr>
                     <tr>
-                      <td className={PROG_TD} rowSpan={4}>B.Tech. Bioinformatics</td>
-                      <td className={TD}>85–89.99</td>
-                      <td className={TD}>8 and above</td>
-                      <td className={TD}>10001–15000</td>
-                      <td className={TD}>30001–50000</td>
-                      <td className={FINAL_TD}>₹85,000</td>
+                      <td className={TD}>80 – 84.99</td>
+                      <td className={TD}>&ge; 7</td>
+                      <td className={TD}>15,001 – 25,000</td>
+                      <td className={TD}>50,001 – 70,000</td>
+                      <td className={FINAL_TD}>₹ 90,000</td>
                     </tr>
-                    <tr>
-                      <td className={TD}>80–84.99</td>
-                      <td className={TD}>7 and above</td>
-                      <td className={TD}>15001–25000</td>
-                      <td className={TD}>50001–70000</td>
-                      <td className={FINAL_TD}>₹90,000</td>
-                    </tr>
-                    <tr>
-                      <td className={TD}>70–79.99</td>
-                      <td className={TD}>6 and above</td>
-                      <td className={TD}>25001–40000</td>
-                      <td className={TD}>70001–90000</td>
-                      <td className={FINAL_TD}>₹95,000</td>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>70 – 79.99</td>
+                      <td className={TD}>&ge; 6</td>
+                      <td className={TD}>25,001 – 40,000</td>
+                      <td className={TD}>70,001 – 90,000</td>
+                      <td className={FINAL_TD}>₹ 95,000</td>
                     </tr>
                     <tr>
                       <td className={TD} colSpan={4}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹99,000</td>
+                      <td className={FINAL_TD}>₹ 99,000</td>
                     </tr>
-                    {/* Civil / Mech / EEE */}
-                    <tr>
-                      <td className={PROG_TD}>B.Tech. Civil Engineering</td>
-                      <td className={BASE_TD} rowSpan={3}>₹65,000</td>
-                      <td className={TD}>85–100</td>
-                      <td className={TD}>8 and above</td>
-                      <td className={TD}>≤10000</td>
-                      <td className={TD}>≤50000</td>
-                      <td className={FINAL_TD}>₹50,000</td>
+
+                    <tr className="border-t-2 border-slate-200">
+                      <td className={PROG_TD} rowSpan={4}>
+                        1. B.Tech. Civil Engineering<br />
+                        2. B.Tech. Mechanical Engineering<br />
+                        3. B.Tech. Electrical &amp; Electronics Engg.
+                      </td>
+                      <td className={BASE_TD} rowSpan={4}>₹ 65,000</td>
+                      <td className={TD}>85 – 100</td>
+                      <td className={TD}>&ge; 8</td>
+                      <td className={TD}>&le; 10,000</td>
+                      <td className={TD}>&le; 50,000</td>
+                      <td className={FINAL_TD}>₹ 50,000</td>
                     </tr>
-                    <tr>
-                      <td className={PROG_TD}>B.Tech. Mechanical Engineering</td>
-                      <td className={TD}>75–84.99</td>
-                      <td className={TD}>7 and above</td>
-                      <td className={TD}>≤30000</td>
-                      <td className={TD}>50001–80000</td>
-                      <td className={FINAL_TD}>₹55,000</td>
-                    </tr>
-                    <tr>
-                      <td className={PROG_TD}>B.Tech. Electrical &amp; Electronics Engineering</td>
-                      <td className={TD}>65–74.99</td>
-                      <td className={TD}>6 and above</td>
-                      <td className={TD}>≤50000</td>
-                      <td className={TD}>80001–120000</td>
-                      <td className={FINAL_TD}>₹60,000</td>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>75 – 84.99</td>
+                      <td className={TD}>&ge; 7</td>
+                      <td className={TD}>&le; 30,000</td>
+                      <td className={TD}>50,001 – 80,000</td>
+                      <td className={FINAL_TD}>₹ 55,000</td>
                     </tr>
                     <tr>
-                      <td className={TD} colSpan={6}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹65,000</td>
+                      <td className={TD}>65 – 74.99</td>
+                      <td className={TD}>&ge; 6</td>
+                      <td className={TD}>&le; 50,000</td>
+                      <td className={TD}>80,001 – 1,20,000</td>
+                      <td className={FINAL_TD}>₹ 60,000</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD} colSpan={4}>Other eligible candidates</td>
+                      <td className={FINAL_TD}>₹ 65,000</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </ScrollReveal>
+            </div>
+          </ScrollReveal>
 
-            {/* ── TABLE 2: School of Computing ── */}
-            <ScrollReveal delay={0.1}>
-              <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
-                <table className="w-full border-collapse text-sm">
+          {/* TABLE 2: B.Tech Regular Group 2 */}
+          <ScrollReveal>
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-xl font-bold text-[#0f2a44] flex items-center gap-2 font-sans">
+                <Layers className="w-5 h-5 text-[#caa74d]" /> 2. B.Tech. Regular Fee (Computing Group 2)
+              </h3>
+              <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <table className="w-full border-collapse text-xs md:text-sm">
                   <thead>
                     <tr>
-                      <th className={TH}>Schools</th>
-                      <th className={TH}>Program Name</th>
-                      <th className={TH}>Base Fee<br />(Fee/Sem)</th>
-                      <th className={TH}>10+2 (%)</th>
-                      <th className={TH}>CBSE / ICSE</th>
-                      <th className={TH}>Any State CETs</th>
-                      <th className={TH}>JEE</th>
-                      <th className={TH}>Final Fee<br />(Fee/Sem)</th>
+                      <th className={TH} rowSpan={2}>Program Name</th>
+                      <th className={TH} rowSpan={2}>Base Fee / Sem</th>
+                      <th className={TH} colSpan={4}>Scholarship Criteria (Any One)</th>
+                      <th className={TH} rowSpan={2}>Final Fee / Sem</th>
+                    </tr>
+                    <tr className="bg-slate-800 text-white/90 text-[11px] font-semibold">
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">10+2 %</th>
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">CBSE/ICSE GPA</th>
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">State CET Rank</th>
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">JEE Rank</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className={SCHOOL_TD} rowSpan={5}>School of<br />Computing</td>
-                      <td className={PROG_TD}>B.Tech. Computer Science &amp; Engineering</td>
-                      <td className={BASE_TD} rowSpan={4}>₹1,25,000</td>
-                      <td className={TD}>95–100</td>
-                      <td className={TD}>9 and above</td>
-                      <td className={TD}>≤10000</td>
-                      <td className={TD}>≤30000</td>
-                      <td className={FINAL_TD}>₹99,000</td>
+                      <td className={PROG_TD} rowSpan={5}>
+                        1. B.Tech. CSE (AI &amp; Data Science)<br />
+                        2. B.Tech. CSE (AI &amp; ML)<br />
+                        3. B.Tech. CSE (Cyber Security)
+                      </td>
+                      <td className={BASE_TD} rowSpan={5}>₹ 1,25,000</td>
+                      <td className={TD}>95 – 100</td>
+                      <td className={TD}>&ge; 9</td>
+                      <td className={TD}>&le; 10,000</td>
+                      <td className={TD}>&le; 30,000</td>
+                      <td className={FINAL_TD}>₹ 99,000</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>90 – 94.99</td>
+                      <td className={TD}>&ge; 8</td>
+                      <td className={TD}>10,001 – 15,000</td>
+                      <td className={TD}>30,001 – 50,000</td>
+                      <td className={FINAL_TD}>₹ 1,07,500</td>
                     </tr>
                     <tr>
-                      <td className={PROG_TD}>B.Tech. CSE (AI &amp; Data Science)</td>
-                      <td className={TD}>90–94.99</td>
-                      <td className={TD}>8 and above</td>
-                      <td className={TD}>10001–15000</td>
-                      <td className={TD}>30001–50000</td>
-                      <td className={FINAL_TD}>₹1,07,500</td>
+                      <td className={TD}>85 – 89.99</td>
+                      <td className={TD}>&ge; 7</td>
+                      <td className={TD}>15,001 – 25,000</td>
+                      <td className={TD}>50,001 – 70,000</td>
+                      <td className={FINAL_TD}>₹ 1,12,500</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>75 – 84.99</td>
+                      <td className={TD}>&ge; 6</td>
+                      <td className={TD}>25,001 – 40,000</td>
+                      <td className={TD}>70,001 – 90,000</td>
+                      <td className={FINAL_TD}>₹ 1,17,500</td>
                     </tr>
                     <tr>
-                      <td className={PROG_TD}>B.Tech. CSE (AI &amp; ML)</td>
-                      <td className={TD}>85–89.99</td>
-                      <td className={TD}>7 and above</td>
-                      <td className={TD}>15001–25000</td>
-                      <td className={TD}>50001–70000</td>
-                      <td className={FINAL_TD}>₹1,12,500</td>
-                    </tr>
-                    <tr>
-                      <td className={PROG_TD}>B.Tech. CSE (Cyber Security)</td>
-                      <td className={TD}>75–84.99</td>
-                      <td className={TD}>6 and above</td>
-                      <td className={TD}>25001–40000</td>
-                      <td className={TD}>70001–90000</td>
-                      <td className={FINAL_TD}>₹1,17,500</td>
-                    </tr>
-                    <tr>
-                      <td className={TD} colSpan={6}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹1,25,000</td>
+                      <td className={TD} colSpan={4}>Other eligible candidates</td>
+                      <td className={FINAL_TD}>₹ 1,25,000</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </ScrollReveal>
+            </div>
+          </ScrollReveal>
 
-            {/* ── TABLE 3: School of Business / Sciences – UG ── */}
-            <ScrollReveal delay={0.1}>
-              <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
-                <table className="w-full border-collapse text-sm">
+          {/* TABLE 3: UG BBA & BCA */}
+          <ScrollReveal>
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-xl font-bold text-[#0f2a44] flex items-center gap-2 font-sans">
+                <Layers className="w-5 h-5 text-[#caa74d]" /> 3. School of Business &amp; School of Sciences (UG Programs)
+              </h3>
+              <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <table className="w-full border-collapse text-xs md:text-sm">
                   <thead>
                     <tr>
-                      <th className={TH}>Schools</th>
                       <th className={TH}>Program Name</th>
-                      <th className={TH}>Base Fee<br />(Fee/Sem)</th>
-                      <th className={TH}>Qualifying Exam (%)</th>
-                      <th className={TH}>Final Fee<br />(Fee/Sem)</th>
+                      <th className={TH}>Base Fee / Sem</th>
+                      <th className={TH}>10+2 % Scholarship Criteria</th>
+                      <th className={TH}>Final Fee / Sem</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className={SCHOOL_TD} rowSpan={3}>School of Business<br />School of Sciences</td>
-                      <td className={PROG_TD}>BBA – Bachelor of Business Administration</td>
-                      <td className={BASE_TD}>₹45,000</td>
-                      <td className={TD}>75–100</td>
-                      <td className={FINAL_TD}>₹37,500</td>
+                      <td className={PROG_TD} rowSpan={2}>
+                        1. BBA – Bachelor of Business Administration<br />
+                        2. BCA – Bachelor of Computer Applications
+                      </td>
+                      <td className={BASE_TD} rowSpan={2}>₹ 45,000</td>
+                      <td className={TD}>75 – 100</td>
+                      <td className={FINAL_TD}>₹ 37,500</td>
                     </tr>
-                    <tr>
-                      <td className={PROG_TD}>BCA – Bachelor of Computer Applications</td>
-                      <td className={BASE_TD}>₹45,000</td>
-                      <td className={TD}>75–100</td>
-                      <td className={FINAL_TD}>₹37,500</td>
-                    </tr>
-                    <tr>
-                      <td className={TD} colSpan={3}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹45,000</td>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>Other eligible candidates</td>
+                      <td className={FINAL_TD}>₹ 45,000</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </ScrollReveal>
+            </div>
+          </ScrollReveal>
 
-            {/* ── TABLE 4: M.Tech ── */}
-            <ScrollReveal delay={0.1}>
-              <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
-                <table className="w-full border-collapse text-sm">
+          {/* TABLE 4: MITSUCET Ranks */}
+          <ScrollReveal>
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-xl font-bold text-[#0f2a44] flex items-center gap-2 font-sans">
+                <Star className="w-5 h-5 text-[#caa74d]" /> 4. MITSUCET Merit Fee Waiver (B.Tech. Regular)
+              </h3>
+              <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <table className="w-full border-collapse text-xs md:text-sm">
                   <thead>
                     <tr>
-                      <th className={TH}>Schools</th>
-                      <th className={TH}>Program Name</th>
-                      <th className={TH}>Base Fee<br />(Fee/Sem)</th>
-                      <th className={TH}>UG CGPA</th>
-                      <th className={TH}>PGECET / Other CET Rank</th>
-                      <th className={TH}>GATE</th>
-                      <th className={TH}>Final Fee<br />(Fee/Sem)</th>
+                      <th className={TH} rowSpan={2}>Rank in MITSUCET</th>
+                      <th className={TH} rowSpan={2}>Tuition Fee Waiver</th>
+                      <th className={TH} colSpan={3}>Tuition Fee / Semester (₹)</th>
+                    </tr>
+                    <tr className="bg-slate-800 text-white/90 text-[11px] font-semibold">
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">CSE / CSE Variants</th>
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">Civil / EEE / Mech</th>
+                      <th className="py-2.5 px-3 border border-slate-700 text-center">ECE / Bioinformatics / CSE / CSE (AI&amp;R)</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {[
-                      { prog: "M.Tech. VLSI Design & Embedded Systems",                              cgpa: "9 and above", cet: "<100",  gate: "Qualified with any rank", fee: "₹0" },
-                      { prog: "M.Tech. Civil Engg. (Construction Engg. & Management)",               cgpa: "8 and above", cet: "<300",  gate: "—",                      fee: "₹10,000" },
-                      { prog: "M.Tech. Automation and Robotics",                                     cgpa: "7 and above", cet: "<500",  gate: "—",                      fee: "₹20,000" },
-                      { prog: "M.Tech. Electric Vehicle Technology",                                 cgpa: "Other eligible candidates", cet: "", gate: "",              fee: "₹35,000" },
-                      { prog: "M.Tech. Computer Science and Engineering",                              cgpa: "As per eligibility",        cet: "", gate: "",              fee: "₹35,000" },
-                      { prog: "M.Tech. Computer Science and Engineering (AI and ML)",                    cgpa: "As per eligibility",        cet: "", gate: "",              fee: "₹35,000" },
-                    ].map((r, i) => (
-                      <tr key={i}>
-                        {i === 0 && <td className={SCHOOL_TD} rowSpan={6}>School of Engineering /<br />School of Computing</td>}
-                        <td className={PROG_TD}>{r.prog}</td>
-                        <td className={BASE_TD}>₹35,000</td>
-                        {r.cet !== "" ? (
-                          <>
-                            <td className={TD}>{r.cgpa}</td>
-                            <td className={TD}>{r.cet}</td>
-                            <td className={TD}>{r.gate}</td>
-                          </>
-                        ) : (
-                          <td className={TD} colSpan={3}>{r.cgpa}</td>
-                        )}
-                        <td className={FINAL_TD}>{r.fee}</td>
-                      </tr>
-                    ))}
+                    <tr>
+                      <td className={PROG_TD}>Rank 1</td>
+                      <td className={TD}>100% Waiver</td>
+                      <td className={FINAL_TD}>₹ 0</td>
+                      <td className={FINAL_TD}>₹ 0</td>
+                      <td className={FINAL_TD}>₹ 0</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={PROG_TD}>Rank 2 – 5</td>
+                      <td className={TD}>75% Waiver</td>
+                      <td className={TD}>₹ 31,250</td>
+                      <td className={TD}>₹ 16,250</td>
+                      <td className={TD}>₹ 24,750</td>
+                    </tr>
+                    <tr>
+                      <td className={PROG_TD}>Rank 6 – 10</td>
+                      <td className={TD}>50% Waiver</td>
+                      <td className={TD}>₹ 62,500</td>
+                      <td className={TD}>₹ 32,500</td>
+                      <td className={TD}>₹ 49,500</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={PROG_TD}>Rank 11 – 20</td>
+                      <td className={TD}>25% Waiver</td>
+                      <td className={TD}>₹ 93,750</td>
+                      <td className={TD}>₹ 48,750</td>
+                      <td className={TD}>₹ 74,250</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
-            </ScrollReveal>
+            </div>
+          </ScrollReveal>
 
-            {/* ── TABLE 5: MBA / MCA ── */}
-            <ScrollReveal delay={0.1}>
-              <div className="overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
-                <table className="w-full border-collapse text-sm">
+          {/* TABLE 5: PG program fees */}
+          <ScrollReveal>
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-xl font-bold text-[#0f2a44] flex items-center gap-2 font-sans">
+                <Layers className="w-5 h-5 text-[#caa74d]" /> 5. Post Graduate (PG) Program Fees
+              </h3>
+              <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <table className="w-full border-collapse text-xs md:text-sm">
                   <thead>
                     <tr>
-                      <th className={TH}>Schools</th>
                       <th className={TH}>Program Name</th>
-                      <th className={TH}>Base Fee<br />(Fee/Sem)</th>
-                      <th className={TH}>Qualifying Exam (%)</th>
-                      <th className={TH}>ICET / Other CET Rank</th>
-                      <th className={TH}>CAT / MAT Percentile</th>
-                      <th className={TH}>Final Fee<br />(Fee/Sem)</th>
+                      <th className={TH}>Base Fee / Sem</th>
+                      <th className={TH} colSpan={3}>Scholarship Criteria (Any One)</th>
+                      <th className={TH}>Final Fee / Sem</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className={SCHOOL_TD} rowSpan={3}>School of Business<br />School of Sciences</td>
-                      <td className={PROG_TD}>MBA – Master of Business Administration</td>
-                      <td className={BASE_TD}>₹60,000</td>
-                      <td className={TD}>75–100</td>
-                      <td className={TD}>&lt;500</td>
-                      <td className={TD}>75 and above</td>
-                      <td className={FINAL_TD}>₹50,000</td>
+                      <td className={PROG_TD} rowSpan={4}>
+                        1. M.Tech. VLSI Design &amp; Embedded Systems<br />
+                        2. M.Tech. Civil Engg. (Construction Engg. &amp; Mgmt.)<br />
+                        3. M.Tech. Automation and Robotics<br />
+                        4. M.Tech. Electric Vehicle Technology<br />
+                        5. M.Tech. Computer Science &amp; Engineering<br />
+                        6. M.Tech. CSE (AI &amp; ML)
+                      </td>
+                      <td className={BASE_TD} rowSpan={4}>₹ 35,000</td>
+                      <td className="py-3 px-4 border border-slate-200 font-extrabold bg-[#f8fafc] text-center text-xs md:text-sm text-[#0f2a44] font-sans" colSpan={3}>
+                        Qualifying Exams: UG CGPA / PGECET Rank / GATE Score
+                      </td>
+                      <td className={FINAL_TD} rowSpan={1}>—</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>UG CGPA &ge; 9.0</td>
+                      <td className={TD}>PGECET Rank &lt; 100</td>
+                      <td className={TD}>GATE Qualified (Any Rank)</td>
+                      <td className={FINAL_TD}>₹ 0</td>
                     </tr>
                     <tr>
-                      <td className={PROG_TD}>MCA – Master of Computer Applications</td>
-                      <td className={BASE_TD}>₹60,000</td>
-                      <td className={TD}>75–100</td>
-                      <td className={TD}>&lt;500</td>
+                      <td className={TD}>UG CGPA &ge; 8.0</td>
+                      <td className={TD}>PGECET Rank &lt; 300</td>
                       <td className={TD}>—</td>
-                      <td className={FINAL_TD}>₹50,000</td>
+                      <td className={FINAL_TD}>₹ 10,000</td>
                     </tr>
-                    <tr>
-                      <td className={TD} colSpan={5}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹60,000</td>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>UG CGPA &ge; 7.0</td>
+                      <td className={TD}>PGECET Rank &lt; 500</td>
+                      <td className={TD}>—</td>
+                      <td className={FINAL_TD}>₹ 20,000</td>
+                    </tr>
+
+                    <tr className="border-t-2 border-slate-200">
+                      <td className={PROG_TD} rowSpan={2}>
+                        MBA – Master of Business Administration
+                      </td>
+                      <td className={BASE_TD} rowSpan={2}>₹ 60,000</td>
+                      <td className={TD}>Qualifying %: 75 – 100</td>
+                      <td className={TD}>ICET Rank &lt; 500</td>
+                      <td className={TD}>CAT / MAT %tile &ge; 75</td>
+                      <td className={FINAL_TD}>₹ 50,000</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD} colSpan={3}>Other eligible candidates</td>
+                      <td className={FINAL_TD}>₹ 60,000</td>
+                    </tr>
+
+                    <tr className="border-t-2 border-slate-200">
+                      <td className={PROG_TD} rowSpan={2}>
+                        MCA – Master of Computer Applications
+                      </td>
+                      <td className={BASE_TD} rowSpan={2}>₹ 60,000</td>
+                      <td className={TD}>Qualifying %: 75 – 100</td>
+                      <td className={TD} colSpan={2}>ICET Rank &lt; 500</td>
+                      <td className={FINAL_TD}>₹ 50,000</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD} colSpan={3}>Other eligible candidates</td>
+                      <td className={FINAL_TD}>₹ 60,000</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </ScrollReveal>
+            </div>
+          </ScrollReveal>
 
-            {/* ── MITSUCET Fee Waiver ── */}
-            <ScrollReveal delay={0.1}>
-              <div className="max-w-sm overflow-x-auto rounded-2xl shadow-xl border border-gray-200">
-                <table className="w-full border-collapse text-sm">
-                  <thead>
-                    <tr>
-                      <th className="py-4 px-6 text-left font-bold bg-[#b30000] text-white" colSpan={2}>
-                        <span className="flex items-center gap-2">
-                          <Star className="w-4 h-4 text-yellow-300" /> MITSUCET Fee Waiver
-                        </span>
-                      </th>
-                    </tr>
-                    <tr className="bg-[#900000] text-white/80 text-xs uppercase tracking-widest">
-                      <th className="py-2.5 px-6 text-left font-semibold border border-[#7a0000]">Rank</th>
-                      <th className="py-2.5 px-6 text-right font-semibold border border-[#7a0000]">Waiver</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      { rank: "Rank 1",     waiver: "100%" },
-                      { rank: "Rank 2–5",   waiver: "75%" },
-                      { rank: "Rank 6–10",  waiver: "50%" },
-                      { rank: "Rank 10–20", waiver: "25%" },
-                    ].map((fw, i) => (
-                      <tr key={i} className={`border-b border-gray-100 ${i % 2 === 0 ? "bg-white" : "bg-[#fff8f8]"} hover:bg-[#fff0f0] transition-colors`}>
-                        <td className="py-3 px-6 font-semibold text-[#0f2a44] border border-gray-200">{fw.rank}</td>
-                        <td className="py-3 px-6 text-right border border-gray-200">
-                          <span className="bg-[#b30000] text-white text-xs font-bold px-4 py-1.5 rounded-full">{fw.waiver}</span>
-                        </td>
+          {/* TABLE 6: Lateral Entry */}
+          <ScrollReveal>
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-xl font-bold text-[#0f2a44] flex items-center gap-2 font-sans">
+                <Layers className="w-5 h-5 text-[#caa74d]" /> 6. B.Tech. Lateral Entry Fee (Diploma Holders)
+              </h3>
+              
+              <div className="grid lg:grid-cols-[1.2fr_1fr] gap-6">
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <table className="w-full border-collapse text-xs md:text-sm">
+                    <thead>
+                      <tr>
+                        <th className={TH}>Program Name</th>
+                        <th className={TH}>Tuition Fee / Semester</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </ScrollReveal>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className={PROG_TD}>
+                          1. B.Tech. Civil Engineering (CIV)<br />
+                          2. B.Tech. Electrical &amp; Electronics Engineering (EEE)<br />
+                          3. B.Tech. Mechanical Engineering (MEC)<br />
+                          4. B.Tech. CSE<br />
+                          5. B.Tech. CSE (Artificial Intelligence)<br />
+                          6. B.Tech. CSE (Data Science)
+                        </td>
+                        <td className={FINAL_TD}>₹ 45,000</td>
+                      </tr>
+                      <tr className="bg-slate-50/40">
+                        <td className={PROG_TD}>B.Tech. Electronics &amp; Communication Engg. (ECE)</td>
+                        <td className={FINAL_TD}>₹ 50,000</td>
+                      </tr>
+                      <tr>
+                        <td className={PROG_TD}>
+                          1. B.Tech. CSE (AI &amp; ML)<br />
+                          2. B.Tech. CSE (Cyber Security)
+                        </td>
+                        <td className={FINAL_TD}>₹ 60,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
-          </div>
+                {/* Lateral Entry Scholarships */}
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-col justify-between">
+                  <table className="w-full border-collapse text-xs md:text-sm">
+                    <thead>
+                      <tr>
+                        <th className="py-3 px-4 font-bold bg-[#caa74d] text-[#0f2a44] text-center border-b border-slate-200 font-sans" colSpan={3}>
+                          <span className="flex items-center justify-center gap-1.5 font-bold">
+                            <Award className="w-4 h-4" /> LE Scholarship Bracket
+                          </span>
+                        </th>
+                      </tr>
+                      <tr className="bg-[#0f2a44] text-white text-[11px] font-semibold">
+                        <th className="py-2.5 px-3 border border-slate-700 text-center font-bold">Waiver</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center font-bold">Diploma Marks</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center font-bold">ECET Rank</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="py-3 px-3 border border-slate-200 text-center font-bold text-slate-800">75%</td>
+                        <td className={TD}>&gt; 95%</td>
+                        <td className={TD}>&lt; 500</td>
+                      </tr>
+                      <tr className="bg-slate-50/40">
+                        <td className="py-3 px-3 border border-slate-200 text-center font-bold text-slate-800">50%</td>
+                        <td className={TD}>&gt; 90%</td>
+                        <td className={TD}>&lt; 1,000</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 px-3 border border-slate-200 text-center font-bold text-slate-800">25%</td>
+                        <td className={TD}>&gt; 80%</td>
+                        <td className={TD}>&lt; 3,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div className="p-4 bg-slate-50 text-slate-550 text-xs md:text-sm leading-relaxed font-semibold border-t border-slate-100 font-sans">
+                    <span className="text-[#b31317] font-bold">Note:</span> 100% Scholarship offered to the topper of each Diploma College. Regular fee applies if candidates do not qualify any waiver bracket.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* TABLE 7: SAARC countries */}
+          <ScrollReveal>
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-xl font-bold text-[#0f2a44] flex items-center gap-2 font-sans">
+                <Globe2 className="w-5 h-5 text-[#caa74d]" /> 7. Discounted Fee for SAARC Countries (International)
+              </h3>
+              
+              <div className="space-y-6">
+                {/* UG */}
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <table className="w-full border-collapse text-xs md:text-sm">
+                    <thead>
+                      <tr>
+                        <th className="py-3 px-4 font-bold bg-[#0f2a44] text-white text-left font-sans" colSpan={7}>UG programs (SAARC)</th>
+                      </tr>
+                      <tr className="bg-slate-800 text-white text-[11px] font-semibold">
+                        <th className="py-2.5 px-3 border border-slate-700 text-left">Program Name</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Actual Total Fee</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Year 1</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Year 2</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Year 3</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Year 4</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Total (After Concession)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className={PROG_TD}>
+                          1. B.Tech. ECE <br />
+                          2. B.Tech. Bioinformatics
+                        </td>
+                        <td className={BASE_TD}>₹ 7,92,000</td>
+                        <td className={TD}>₹ 1,69,000</td>
+                        <td className={TD}>₹ 1,00,000</td>
+                        <td className={TD}>₹ 1,00,000</td>
+                        <td className={TD}>₹ 1,00,000</td>
+                        <td className={FINAL_TD}>₹ 4,69,000</td>
+                      </tr>
+                      <tr className="bg-slate-50/40">
+                        <td className={PROG_TD}>
+                          1. B.Tech. Civil<br />
+                          2. B.Tech. Mechanical<br />
+                          3. B.Tech. EEE
+                        </td>
+                        <td className={BASE_TD}>₹ 5,20,000</td>
+                        <td className={TD}>₹ 1,26,000</td>
+                        <td className={TD}>₹ 88,200</td>
+                        <td className={TD}>₹ 88,200</td>
+                        <td className={TD}>₹ 88,200</td>
+                        <td className={FINAL_TD}>₹ 3,90,600</td>
+                      </tr>
+                      <tr>
+                        <td className={PROG_TD}>
+                          1. B.Tech. CSE<br />
+                          2. B.Tech. CSE (AI &amp; DS)<br />
+                          3. B.Tech. CSE (AI &amp; ML)<br />
+                          4. B.Tech. CSE (AI &amp; Robotics)<br />
+                          5. B.Tech. CSE (Cyber Security)
+                        </td>
+                        <td className={BASE_TD}>₹ 10,00,000</td>
+                        <td className={TD}>₹ 1,99,000</td>
+                        <td className={TD}>₹ 1,25,000</td>
+                        <td className={TD}>₹ 1,25,000</td>
+                        <td className={TD}>₹ 1,25,000</td>
+                        <td className={FINAL_TD}>₹ 5,74,000</td>
+                      </tr>
+                      <tr className="bg-slate-50/40">
+                        <td className={PROG_TD}>
+                          1. BBA <br />
+                          2. BCA
+                        </td>
+                        <td className={BASE_TD}>₹ 2,70,000</td>
+                        <td className={TD}>₹ 60,000</td>
+                        <td className={TD}>₹ 40,000</td>
+                        <td className={TD}>₹ 40,000</td>
+                        <td className={TD}>—</td>
+                        <td className={FINAL_TD}>₹ 1,40,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* PG */}
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <table className="w-full border-collapse text-xs md:text-sm">
+                    <thead>
+                      <tr>
+                        <th className="py-3 px-4 font-bold bg-[#0f2a44] text-white text-left font-sans" colSpan={5}>PG programs (SAARC)</th>
+                      </tr>
+                      <tr className="bg-slate-800 text-white text-[11px] font-semibold">
+                        <th className="py-2.5 px-3 border border-slate-700 text-left">Program Name</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Actual Total Fee</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Year 1</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Year 2</th>
+                        <th className="py-2.5 px-3 border border-slate-700 text-center">Total (After Concession)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className={PROG_TD}>M.Tech. (All Specializations)</td>
+                        <td className={BASE_TD}>₹ 1,40,000</td>
+                        <td className={TD}>₹ 50,000</td>
+                        <td className={TD}>₹ 40,000</td>
+                        <td className={FINAL_TD}>₹ 90,000</td>
+                      </tr>
+                      <tr className="bg-slate-50/40">
+                        <td className={PROG_TD}>MBA – Master of Business Administration</td>
+                        <td className={BASE_TD}>₹ 2,40,000</td>
+                        <td className={TD}>₹ 1,00,000</td>
+                        <td className={TD}>₹ 70,000</td>
+                        <td className={FINAL_TD}>₹ 1,70,000</td>
+                      </tr>
+                      <tr>
+                        <td className={PROG_TD}>MCA – Master of Computer Applications</td>
+                        <td className={BASE_TD}>₹ 2,40,000</td>
+                        <td className={TD}>₹ 1,00,000</td>
+                        <td className={TD}>₹ 70,000</td>
+                        <td className={FINAL_TD}>₹ 1,70,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="container mx-auto px-4 text-center">
+      {/* CTA SECTION */}
+      <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10">
+        <div className="container mx-auto px-4 md:px-8 text-center space-y-4">
           <ScrollReveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4">Ready to Apply?</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-6">
-              For detailed eligibility, scholarships, and personalized guidance, contact our admissions team or apply online.
+            <h2 className="font-sans text-xl md:text-3xl font-extrabold text-[#0f2a44] mb-2">Ready to Apply?</h2>
+            <p className="text-slate-550 max-w-xl mx-auto mb-6 text-xs md:text-sm leading-relaxed font-sans">
+              For detailed eligibility, scholarship clearances, or admissions guidance, contact our counselors or apply online.
             </p>
-            <a href="https://admission.mits.ac.in/" target="_blank" rel="noopener noreferrer">
-              <button className="bg-[#b30000] hover:bg-[#900000] text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-all text-lg mb-6">
-                Apply Now
-              </button>
-            </a>
-            <div className="mt-4 text-[#e66a00] font-bold text-lg space-y-1">
+            <div className="flex flex-wrap gap-4 justify-center mb-6">
+              <a href="https://admission.mits.ac.in/" target="_blank" rel="noopener noreferrer">
+                <button className="bg-[#b31317] hover:bg-[#990000] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-transform hover:scale-[1.02] text-xs md:text-sm font-sans">
+                  Start Application Portal
+                </button>
+              </a>
+            </div>
+            <div className="mt-4 text-[#b31317] font-bold text-sm md:text-base space-y-1 font-sans">
               <p className="flex items-center justify-center gap-2">
-                <Phone className="w-5 h-5" /> 7330 803 555 &nbsp;/&nbsp; 7330 852 555
+                <Phone className="w-5 h-5 text-slate-550" /> 7330 803 555 &nbsp;/&nbsp; 7330 852 555
               </p>
-              <p className="flex items-center justify-center gap-2">
-                <Globe className="w-5 h-5" /> www.mits.ac.in
+              <p className="flex items-center justify-center gap-2 text-slate-600">
+                <Globe className="w-5 h-5 text-slate-400" /> www.mits.ac.in
               </p>
             </div>
           </ScrollReveal>
@@ -451,6 +722,3 @@ const EligibilityAndFees = () => (
 );
 
 export default EligibilityAndFees;
-
-
-

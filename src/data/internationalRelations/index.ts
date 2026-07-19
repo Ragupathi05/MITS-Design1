@@ -113,25 +113,17 @@ export const contactCard = {
 
 export const partners: Partner[] = [
   { name: "Bowling Green State University (BGSU)", country: "USA", region: "US", website: "https://www.bgsu.edu/", highlight: "MoU signed 17 Feb 2025; Pathway, joint research, exchange & curriculum framing." },
-  { name: "Rivier University", country: "USA", region: "US", website: "https://www.rivier.edu/", highlight: "Student exchange collaboration initiated 20 Feb 2025." },
   { name: "University of Applied Sciences, Hagenberg – Upper Austria", country: "Austria", region: "Europe", website: "https://fh-ooe.at/en" },
   { name: "BRNO University of Technology", country: "Czech Republic", region: "Europe", website: "https://www.vut.cz/en/?aid_redir=1" },
+  { name: "The University of South Bohemia in České Budějovice", country: "Czech Republic", region: "Europe", website: "https://www.jcu.cz/en" },
   { name: "Maharishi Vedic University", country: "Holland", region: "Europe", website: "https://meru.international/" },
-  { name: "University of Eastern Finland", country: "Finland", region: "Europe", website: "https://www.uef.fi/en", highlight: "Professor-level student research programme." },
-  { name: "Karlsruhe Institute of Technology", country: "Germany", region: "Europe", website: "https://www.kit.edu/english/", highlight: "Professor-level Mechanical research collaboration." },
   { name: "University of Aizu", country: "Japan", region: "Japan", website: "https://u-aizu.ac.jp/en/", highlight: "Long-standing research internship & MS programme partner." },
   { name: "Ichinoseki College (NIT)", country: "Japan", region: "Japan", website: "https://www.ichinoseki.ac.jp/english.html", highlight: "Host institute for the Sakura Science Exchange Program." },
   { name: "Iwate Prefectural University – Faculty of Software & Information Science", country: "Japan", region: "Japan", website: "https://www.iwate-pu.ac.jp/en/" },
   { name: "Asia University", country: "Taiwan", region: "Taiwan", website: "https://www.asia.edu.tw/", highlight: "Summer & semester exchange since 2017-18." },
   { name: "Providence University", country: "Taiwan", region: "Taiwan", website: "https://enpu.pu.edu.tw/", highlight: "Sponsor of the Global Immersion Program 2018-19." },
-  { name: "National Chiao Tung University (NCTU)", country: "Taiwan", region: "Taiwan", website: "https://www.nycu.edu.tw/en", highlight: "Professor-level ECE research internships." },
-  { name: "National Chung Cheng University (NCCU)", country: "Taiwan", region: "Taiwan", website: "https://www.ccu.edu.tw/eindex.php" },
   { name: "Pusan National University", country: "South Korea", region: "South Korea", website: "https://www.pusan.ac.kr/eng/Main.do" },
   { name: "Kookmin University", country: "South Korea", region: "South Korea", website: "https://english.kookmin.ac.kr/" },
-  { name: "GS Co., Ltd. – Gyeonggi-do", country: "South Korea", region: "South Korea", website: "https://www.gscorp.co.kr/", highlight: "2025-26 industry research internship host." },
-  { name: "Nanyang Technological University (NTU)", country: "Singapore", region: "Singapore", website: "https://www.ntu.edu.sg/", highlight: "NTU-India Connect programme partner." },
-  { name: "Rise & Shine Group of Companies", country: "Dubai, UAE", region: "Middle East", website: "https://www.riseandshinegroup.com/", highlight: "Civil engineering internships." },
-  { name: "Jenmars Technical Services LLC", country: "Dubai, UAE", region: "Middle East", website: "#", highlight: "MBA internships." },
 ];
 
 export const partnerImages = [

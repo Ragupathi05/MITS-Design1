@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 import AboutMegaMenu from "@/components/AboutMegaMenu";
 import { aboutSections } from "@/data/aboutData";
 
@@ -14,7 +15,7 @@ const navItems: NavItem[] = [
     label: "About",
     href: "/about",
     mega: "about",
-    children: aboutSections.map((s) => ({ label: s.label, href: s.href })),
+    children: aboutSections.filter((s) => s.href !== "#").map((s) => ({ label: s.label, href: s.href })),
   },
   {
     label: "Academics",
@@ -32,8 +33,10 @@ const navItems: NavItem[] = [
     href: "/admissions",
     children: [
       { label: "Admission Process", href: "/admissions" },
-      { label: "Apply Online", href: "https://admission.mits.ac.in/" },
+      { label: "National Admission Procedure", href: "/national-admissions-procedure" },
+      { label: "International Admission Procedure", href: "/international-admissions-procedure" },
       { label: "Eligibility & Fees", href: "/eligibility-and-fees" },
+      { label: "Apply Online", href: "https://admission.mits.ac.in/" },
     ],
   },
   { label: "Research", href: "/research" },
@@ -44,12 +47,9 @@ const navItems: NavItem[] = [
     href: "/infrastructure",
     children: [
       { label: "Infrastructure", href: "/infrastructure" },
-      { label: "NIRF", href: "/nirf" },
-      { label: "NAAC", href: "/naac" },
-      { label: "Affiliations & Accreditations", href: "/affiliations-accreditations" },
-      { label: "Public Self Disclosures", href: "/psd" },
-      { label: "Mandatory Disclosures", href: "/about/mandatory-disclosures" },
       { label: "International Relations", href: "/international-relations" },
+      { label: "MITS Radio", href: "/mits-radio" },
+      { label: "Moodle Login", href: "https://moodle.mits.ac.in/" },
       { label: "Contact Us", href: "/contact" },
     ],
   },
@@ -89,25 +89,36 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? "shadow-xl" : ""}`}>
       {/* Top ticker bar */}
       <div className="bg-primary text-primary-foreground hidden md:block overflow-hidden">
-        <div className="h-9 flex items-center">
-          <div className="bg-accent text-accent-foreground font-bold text-xs px-4 h-full flex items-center shrink-0 z-10">
-            🎓 ADMISSIONS 2026
-          </div>
-          <div className="overflow-hidden flex-1 relative">
-            <div className="flex whitespace-nowrap animate-marquee">
-              {[1, 2].map((n) => (
-                <span key={n} className="inline-flex items-center gap-6 px-8 text-sm font-semibold">
-                  <span className="text-accent font-bold tracking-wide">🌟 Admissions for 2026 are NOW OPEN!</span>
-                  <span className="text-primary-foreground/60">•</span>
-                  <span>Apply today at MITS — Deemed to be University</span>
-                  <span className="text-primary-foreground/60">•</span>
-                  <span className="text-accent font-bold">🚀 Limited seats — Don't miss out!</span>
-                  <span className="text-primary-foreground/60">•</span>
-                  <span>NAAC A+ Accredited | UGC Recognized | AICTE Approved</span>
-                  <span className="text-primary-foreground/60">•</span>
-                </span>
-              ))}
+        <div className="h-9 flex items-center justify-between">
+          <div className="flex items-center h-full overflow-hidden flex-1">
+            <div className="bg-accent text-accent-foreground font-bold text-xs px-4 h-full flex items-center shrink-0 z-10">
+              🎓 ADMISSIONS 2026
             </div>
+            <div className="overflow-hidden flex-1 relative">
+              <div className="flex whitespace-nowrap animate-marquee">
+                {[1, 2].map((n) => (
+                  <span key={n} className="inline-flex items-center gap-6 px-8 text-sm font-semibold">
+                    <span className="text-accent font-bold tracking-wide">🌟 Admissions for 2026 are NOW OPEN!</span>
+                    <span className="text-primary-foreground/60">•</span>
+                    <span>Apply today at MITS — Deemed to be University</span>
+                    <span className="text-primary-foreground/60">•</span>
+                    <span className="text-accent font-bold">🚀 Limited seats — Don't miss out!</span>
+                    <span className="text-primary-foreground/60">•</span>
+                    <span>NAAC A+ Accredited | UGC Recognized | AICTE Approved</span>
+                    <span className="text-primary-foreground/60">•</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center gap-4 px-6 text-xs font-semibold shrink-0 z-20 bg-primary h-full">
+            <Link to="/mits-radio" className="hover:text-accent transition-colors flex items-center gap-1">
+              <span>📻</span> MITS Radio
+            </Link>
+            <span className="text-primary-foreground/30">|</span>
+            <a href="https://moodle.mits.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">
+              <span>🖥️</span> Moodle Login
+            </a>
           </div>
         </div>
       </div>
@@ -149,7 +160,7 @@ const Header = () => {
                     <AboutMegaMenu open={openDropdown === item.label} onClose={() => setOpenDropdown(null)} />
                   ) : (
                     <div
-                      className={`absolute top-full left-0 mt-0 pt-1 min-w-[220px] z-50 transition-all duration-200 ${
+                      className={`absolute top-full left-0 mt-0 pt-1 w-max z-50 transition-all duration-200 ${
                         openDropdown === item.label ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
                       }`}
                     >
@@ -162,7 +173,7 @@ const Header = () => {
                               href={child.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                              className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium whitespace-nowrap"
                               style={{ fontFamily: "var(--font-body)" }}
                             >
                               {child.label}
@@ -171,7 +182,7 @@ const Header = () => {
                             <Link
                               key={child.label}
                               to={child.href}
-                              className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                              className="block px-4 py-2.5 text-base text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium whitespace-nowrap"
                               style={{ fontFamily: "var(--font-body)" }}
                             >
                               {child.label}
@@ -215,63 +226,77 @@ const Header = () => {
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="xl:hidden bg-white border-t border-border shadow-lg max-h-[70vh] overflow-y-auto">
-          <nav className="w-full px-[20px] py-4 flex flex-col gap-1">
-            {navItems.map((item) => (
-              <div key={item.label}>
-                <div className="flex items-center justify-between">
-                  <Link
-                    to={item.href}
-                    className={`flex-1 text-sm font-semibold py-2.5 transition-colors ${
-                      isActive(item.href) ? "text-primary" : "text-secondary hover:text-primary"
-                    }`}
-                    onClick={() => !item.children && setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <button
-                      className="p-2 text-secondary hover:text-primary"
-                      onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="xl:hidden bg-white border-t border-border shadow-lg max-h-[70vh] overflow-y-auto"
+          >
+            <nav className="w-full px-[20px] py-4 flex flex-col gap-1">
+              {navItems.map((item) => (
+                <div key={item.label}>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      to={item.href}
+                      className={`flex-1 text-sm font-semibold py-2.5 transition-colors ${
+                        isActive(item.href) ? "text-primary" : "text-secondary hover:text-primary"
+                      }`}
+                      onClick={() => setMobileOpen(false)}
                     >
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileExpanded === item.label ? "rotate-180" : ""}`} />
-                    </button>
+                      {item.label}
+                    </Link>
+                    {item.children && (
+                      <button
+                        className="p-2 text-secondary hover:text-primary"
+                        onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+                      >
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileExpanded === item.label ? "rotate-180" : ""}`} />
+                      </button>
+                    )}
+                  </div>
+                  {item.children && mobileExpanded === item.label && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      className="pl-4 pb-2 space-y-1 overflow-hidden"
+                    >
+                      {item.children.map((child) => {
+                        const isExternal = child.href.startsWith("http");
+                        return isExternal ? (
+                          <a
+                            key={child.label}
+                            href={child.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-sm text-muted-foreground hover:text-primary py-1.5 transition-colors"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {child.label}
+                          </a>
+                        ) : (
+                          <Link
+                            key={child.label}
+                            to={child.href}
+                            className="block text-sm text-muted-foreground hover:text-primary py-1.5 transition-colors"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {child.label}
+                          </Link>
+                        );
+                      })}
+                    </motion.div>
                   )}
                 </div>
-                {item.children && mobileExpanded === item.label && (
-                  <div className="pl-4 pb-2 space-y-1">
-                    {item.children.map((child) => {
-                      const isExternal = child.href.startsWith("http");
-                      return isExternal ? (
-                        <a
-                          key={child.label}
-                          href={child.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block text-sm text-muted-foreground hover:text-primary py-1.5 transition-colors"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          {child.label}
-                        </a>
-                      ) : (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          className="block text-sm text-muted-foreground hover:text-primary py-1.5 transition-colors"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          {child.label}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-        </div>
-      )}
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

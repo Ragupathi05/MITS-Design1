@@ -27,6 +27,7 @@ const Gallery = lazy(() => import("./pages/Gallery"));
 const CampusLifeDetail = lazy(() => import("./pages/CampusLifeDetail"));
 const DepartmentPage = lazy(() => import("./pages/DepartmentPage"));
 const FacultyProfilePage = lazy(() => import("./pages/FacultyProfilePage"));
+const PlacementFacultyProfilePage = lazy(() => import("./pages/PlacementFacultyProfilePage"));
 const Leadership = lazy(() => import("./pages/about/Leadership"));
 const LeadershipProfile = lazy(() => import("./pages/about/LeadershipProfile"));
 const AcademicLeadership = lazy(() => import("./pages/about/AcademicLeadership"));
@@ -44,6 +45,10 @@ const AffiliationsAccreditations = lazy(() => import("./pages/AffiliationsAccred
 const PublicSelfDisclosures = lazy(() => import("./pages/PublicSelfDisclosures"));
 const InternationalRelations = lazy(() => import("./pages/InternationalRelations"));
 const StanfordInitiative = lazy(() => import("./pages/StanfordInitiative"));
+const MitsRadio = lazy(() => import("./pages/MitsRadio"));
+const TermsConditionsPolicy = lazy(() => import("./pages/TermsConditionsPolicy"));
+const NationalAdmissionsProcedure = lazy(() => import("./pages/NationalAdmissionsProcedure"));
+const InternationalAdmissionsProcedure = lazy(() => import("./pages/InternationalAdmissionsProcedure"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -120,6 +125,11 @@ const App = () => (
             <Route path="/department/:deptKey" element={<DepartmentPage />} />
             <Route path="/department/:deptKey/faculty/:slug" element={<FacultyProfilePage />} />
             <Route path="/department/:deptKey/:section" element={<DepartmentPage />} />
+            <Route path="/mits-radio" element={<MitsRadio />} />
+            <Route path="/terms-conditions-policy" element={<TermsConditionsPolicy />} />
+            <Route path="/national-admissions-procedure" element={<NationalAdmissionsProcedure />} />
+            <Route path="/international-admissions-procedure" element={<InternationalAdmissionsProcedure />} />
+            <Route path="/placements/team/:slug" element={<PlacementFacultyProfilePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

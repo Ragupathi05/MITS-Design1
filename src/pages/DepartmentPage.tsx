@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
@@ -596,11 +596,11 @@ const DepartmentPage = () => {
                                     <CardContent className="p-3 flex items-center justify-between">
                                       <div className="flex-1 min-w-0 pr-3">
                                         <p className="text-sm font-medium text-secondary">{p.title}</p>
-                                        {'inventors' in p && (p as any).inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {String((p as any).inventors)}</p>}
+                                        {'inventors' in p && (p as Record<string, unknown>).inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {String((p as Record<string, unknown>).inventors)}</p>}
                                         {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
                                         {isCMS && <p className="text-xs text-primary font-medium mt-1 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
-                                        {'external_link' in p && (p as any).external_link && !isCMS && (
-                                          <a href={String((p as any).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                        {'external_link' in p && (p as Record<string, unknown>).external_link && !isCMS && (
+                                          <a href={String((p as Record<string, unknown>).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
                                             <ExternalLink className="w-3 h-3" />View
                                           </a>
                                         )}
@@ -654,11 +654,11 @@ const DepartmentPage = () => {
                                 <div className="flex flex-wrap items-center gap-3 mt-1">
                                   {p.authors && <span className="text-xs text-muted-foreground">{p.authors}</span>}
                                   {p.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>}
-                                  {('venue' in p) && (p as any).venue && <span className="text-xs text-muted-foreground italic">{String((p as any).venue)}</span>}
-                                  {('indexing' in p) && (p as any).indexing && <span className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{String((p as any).indexing)}</span>}
+                                  {('venue' in p) && (p as Record<string, unknown>).venue && <span className="text-xs text-muted-foreground italic">{String((p as Record<string, unknown>).venue)}</span>}
+                                  {('indexing' in p) && (p as Record<string, unknown>).indexing && <span className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{String((p as Record<string, unknown>).indexing)}</span>}
                                   {isCMS && <span className="text-xs text-primary font-medium flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</span>}
-                                  {!isCMS && ('doi' in p) && (p as any).doi && <a href={`https://doi.org/${(p as any).doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
-                                  {!isCMS && ('external_link' in p) && (p as any).external_link && <a href={String((p as any).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />Link</a>}
+                                  {!isCMS && ('doi' in p) && (p as Record<string, unknown>).doi && <a href={`https://doi.org/${(p as Record<string, unknown>).doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                                  {!isCMS && ('external_link' in p) && (p as Record<string, unknown>).external_link && <a href={String((p as Record<string, unknown>).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />Link</a>}
                                 </div>
                               </CardContent>
                             </Card>
@@ -917,8 +917,8 @@ const DepartmentPage = () => {
                                 <h4 className="font-semibold text-sm text-secondary flex-1">{s.name}</h4>
                                 <span className="shrink-0 text-xs font-bold text-muted-foreground bg-muted px-2 py-0.5 rounded-full">Sem {s.semester}</span>
                               </div>
-                              {(s as any).code && <p className="text-xs text-muted-foreground">Code: {String((s as any).code)}</p>}
-                              {(s as any).credits && <p className="text-xs text-primary font-medium">Credits: {String((s as any).credits)}</p>}
+                              {(s as Record<string, unknown>).code && <p className="text-xs text-muted-foreground">Code: {String((s as Record<string, unknown>).code)}</p>}
+                              {(s as Record<string, unknown>).credits && <p className="text-xs text-primary font-medium">Credits: {String((s as Record<string, unknown>).credits)}</p>}
                             </CardContent>
                           </Card>
                         ))}

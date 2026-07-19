@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -80,11 +80,11 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
     },
     {
       school: "School of Management",
-      courses: [{ name: "BBA - Bachelor of Business Administration", icon: BriefcaseBusiness, link: "/department/bba" }],
+      courses: [{ name: "BBA - Bachelor of Business Administration", icon: BriefcaseBusiness, link: "/department/mba" }],
     },
     {
       school: "School of Science",
-      courses: [{ name: "BCA - Bachelor of Computer Applications", icon: Monitor, link: "/department/bca" }],
+      courses: [{ name: "BCA - Bachelor of Computer Applications", icon: Monitor, link: "/department/mca" }],
     },
   ],
   pg: [

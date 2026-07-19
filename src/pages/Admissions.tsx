@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import {
   ArrowRight, Download, UserRoundPlus, FileText,
   ShieldCheck, ClipboardCheck, IndianRupee, TrendingUp,
@@ -216,6 +217,65 @@ const Admissions = () => {
             </motion.div>
 
 
+          </div>
+        </section>
+
+        {/* ── ADMISSION PROCEDURES ── */}
+        <section className="py-20 bg-slate-50 border-y border-slate-200/50">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <div className="text-center mb-14">
+                <p className="text-[#b30000] font-semibold tracking-widest uppercase text-sm mb-2">Admission Paths</p>
+                <h2 className="font-display text-4xl md:text-5xl font-bold text-[#0f2a44] mb-3">Admission Procedures</h2>
+                <p className="text-gray-500 max-w-xl mx-auto">Please select the appropriate pathway based on your residency status to review eligibility, quotas, and registration steps.</p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <ScrollReveal delay={0.1}>
+                <Card className="p-8 bg-white border border-slate-200 hover:border-[#caa74d] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
+                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#0f2a44] group-hover:bg-[#caa74d] transition-colors" />
+                  <div className="space-y-4">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-[10px] uppercase font-bold tracking-wider">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#caa74d]" /> Domestic Candidates
+                    </span>
+                    <h3 className="font-display text-2xl font-bold text-[#0f2a44]">National Admission Procedure</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">
+                      Detailed admissions criteria, quotas, tie-breaker rules, and lateral entry procedures (direct 2nd year B.Tech) for candidates applying within India.
+                    </p>
+                  </div>
+                  <div className="pt-6">
+                    <Link to="/national-admissions-procedure">
+                      <Button className="w-full bg-[#0f2a44] hover:bg-[#caa74d] hover:text-[#0f2a44] text-white font-bold py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group-hover:translate-y-[-2px]">
+                        Explore National Procedure <ArrowRight className="w-4 h-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                </Card>
+              </ScrollReveal>
+
+              <ScrollReveal delay={0.2}>
+                <Card className="p-8 bg-white border border-slate-200 hover:border-[#caa74d] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
+                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#0f2a44] group-hover:bg-[#caa74d] transition-colors" />
+                  <div className="space-y-4">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-[10px] uppercase font-bold tracking-wider">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500" /> NRI &amp; Foreign Nationals
+                    </span>
+                    <h3 className="font-display text-2xl font-bold text-[#0f2a44]">International Admission Procedure</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">
+                      Guidelines for foreign nationals, NRI status holders, OCI, PIO, and NRI-sponsored candidates. Information on AIU equivalence, Student Visas, and registration.
+                    </p>
+                  </div>
+                  <div className="pt-6">
+                    <Link to="/international-admissions-procedure">
+                      <Button className="w-full bg-[#0f2a44] hover:bg-[#caa74d] hover:text-[#0f2a44] text-white font-bold py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group-hover:translate-y-[-2px]">
+                        Explore International Procedure <ArrowRight className="w-4 h-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                </Card>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 

@@ -248,7 +248,7 @@ const PublicSelfDisclosures = () => {
         <ScrollReveal>
           <section className="rounded-2xl bg-gradient-to-br from-[#0f2a44] to-[#11355a] text-white p-7 md:p-10 mt-10">
             <p className="text-[#caa74d] uppercase tracking-[0.3em] text-xs font-semibold mb-2">Related Portals</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold mb-6">Explore More Compliance Portals</h2>
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-6 text-white">Explore More Compliance Portals</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {related.map((r) => (
                 <Link
@@ -256,7 +256,7 @@ const PublicSelfDisclosures = () => {
                   to={r.to}
                   className="group flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#caa74d] transition-colors"
                 >
-                  <span className="font-body font-semibold text-sm">{r.label}</span>
+                  <span className="font-body font-semibold text-sm text-white">{r.label}</span>
                   <ChevronRight className="w-4 h-4 text-[#caa74d] group-hover:translate-x-1 transition-transform" />
                 </Link>
               ))}

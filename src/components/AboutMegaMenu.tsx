@@ -52,10 +52,10 @@ const previewMap: Record<string, { title: string; body: string; image: string }>
     body: "Complete organisational hierarchy of MITS Deemed to be University.",
     image: `${BASE}Hero-Section/image%203.JPG`,
   },
-  "mandatory-disclosures": {
-    title: "Mandatory Disclosures",
-    body: "Statutory disclosures, audit reports, AICTE/NBA approvals and accreditations.",
-    image: `${BASE}Hero-Section/image%204.JPG`,
+  "important-links": {
+    title: "Important Links",
+    body: "Quick access to institutional certifications, quality ratings, and public disclosures.",
+    image: `${BASE}Hero-Section/image%205.JPG`,
   },
 };
 
@@ -118,24 +118,43 @@ const AboutMegaMenu = ({ open, onClose }: Props) => {
                   <ul className="space-y-0.5">
                     {aboutSections.map((s) => (
                       <li key={s.key}>
-                        <Link
-                          to={s.href}
-                          onMouseEnter={() => setHovered(s.key)}
-                          onClick={onClose}
-                          className={`group flex items-center justify-between px-3 py-2.5 rounded-md text-sm font-semibold transition-colors duration-150 ${
-                            hovered === s.key
-                              ? "bg-primary/10 text-primary"
-                              : "text-secondary hover:bg-primary/5 hover:text-primary"
-                          }`}
-                          style={{ fontFamily: "var(--font-body)" }}
-                        >
-                          <span>{s.label}</span>
-                          <ChevronRight
-                            className={`w-4 h-4 transition-transform ${
-                              hovered === s.key ? "translate-x-0.5 text-primary" : "text-secondary/40"
+                        {s.href === "#" ? (
+                          <button
+                            onMouseEnter={() => setHovered(s.key)}
+                            className={`group flex items-center justify-between w-full px-3 py-2.5 rounded-md text-sm font-semibold transition-colors duration-150 ${
+                              hovered === s.key
+                                ? "bg-primary/10 text-primary"
+                                : "text-secondary hover:bg-primary/5 hover:text-primary"
                             }`}
-                          />
-                        </Link>
+                            style={{ fontFamily: "var(--font-body)" }}
+                          >
+                            <span>{s.label}</span>
+                            <ChevronRight
+                              className={`w-4 h-4 transition-transform ${
+                                hovered === s.key ? "translate-x-0.5 text-primary" : "text-secondary/40"
+                              }`}
+                            />
+                          </button>
+                        ) : (
+                          <Link
+                            to={s.href}
+                            onMouseEnter={() => setHovered(s.key)}
+                            onClick={onClose}
+                            className={`group flex items-center justify-between px-3 py-2.5 rounded-md text-sm font-semibold transition-colors duration-150 ${
+                              hovered === s.key
+                                ? "bg-primary/10 text-primary"
+                                : "text-secondary hover:bg-primary/5 hover:text-primary"
+                            }`}
+                            style={{ fontFamily: "var(--font-body)" }}
+                          >
+                            <span>{s.label}</span>
+                            <ChevronRight
+                              className={`w-4 h-4 transition-transform ${
+                                hovered === s.key ? "translate-x-0.5 text-primary" : "text-secondary/40"
+                              }`}
+                            />
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -175,6 +194,27 @@ const AboutMegaMenu = ({ open, onClose }: Props) => {
                         </p>
                         {hovered === "leadership" && renderLeaderGrid(institutionalLeaders)}
                         {hovered === "academic-leadership" && renderLeaderGrid(academicLeaders)}
+                        {hovered === "important-links" && (
+                          <div className="flex flex-col gap-1.5 mt-2">
+                            {[
+                              { label: "NIRF", href: "/nirf" },
+                              { label: "NAAC", href: "/naac" },
+                              { label: "Affiliations & Accreditations", href: "/affiliations-accreditations" },
+                              { label: "Public Self Disclosures", href: "/psd" },
+                              { label: "Mandatory Disclosures", href: "/about/mandatory-disclosures" },
+                            ].map((link) => (
+                              <Link
+                                key={link.label}
+                                to={link.href}
+                                onClick={onClose}
+                                className="flex items-center gap-1.5 py-1 text-sm font-bold text-secondary hover:text-primary transition-colors group"
+                              >
+                                <ChevronRight className="w-3.5 h-3.5 text-primary opacity-0 -translate-x-1.5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" />
+                                <span className="group-hover:translate-x-0.5 transition-transform duration-150">{link.label}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   </AnimatePresence>
