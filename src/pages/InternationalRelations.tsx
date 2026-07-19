@@ -168,19 +168,25 @@ const GalleryGrid = ({ images }: { images: string[] }) => {
           <button
             key={i}
             onClick={() => setLightbox(src)}
-            className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-muted"
+            className="group relative aspect-video overflow-hidden rounded-xl bg-secondary/90"
           >
+            <div
+              className="absolute inset-0 bg-center bg-cover scale-110 blur-xl opacity-40"
+              style={{ backgroundImage: `url("${src}")` }}
+              aria-hidden
+            />
             <img
               src={src}
               alt=""
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
               onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
         ))}
       </div>
+
       <AnimatePresence>
         {lightbox && (
           <motion.div
