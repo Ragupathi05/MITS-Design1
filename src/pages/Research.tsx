@@ -500,20 +500,13 @@ const PatentsSection = () => {
       <ScrollReveal delay={0.12}>
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
           <SectionHeading title={patentsData.title} subtitle={patentsData.description} />
-          <div className="grid sm:grid-cols-2 gap-4 mb-4">
+          <div className="grid sm:grid-cols-2 gap-4">
             <LinkCard title="Download Patent Details (Excel)" link={patentsData.patentDetailsLink} icon={Download} />
-            <LinkCard title="View All Patents on mits.ac.in" link={patentsData.moreLink} icon={ExternalLink} />
+            <LinkCard title="View All Patents" link={patentsData.patentDetailsLink} icon={FileText} />
           </div>
-          <a
-            href={patentsData.iprCellLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
-          >
-            <ExternalLink className="w-4 h-4" /> More details at mits.ac.in/researchpatents
-          </a>
         </div>
       </ScrollReveal>
+
     </div>
   );
 };
