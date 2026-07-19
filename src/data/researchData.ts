@@ -207,8 +207,6 @@ export const patentsData = {
   title: "Patent Details",
   description: "MITS faculty and students have filed patents across various engineering and science disciplines. The details of patents filed, published, and granted are listed below.",
   patentDetailsLink: "https://mits.ac.in/assets/pdf/patent/Patent_2024.xlsx",
-  iprCellLink: "https://mits.ac.in/researchpatents",
-  moreLink: "https://mits.ac.in/researchpatents",
 };
 
 export const policiesData = [
@@ -216,8 +214,18 @@ export const policiesData = [
   { sno: 2, title: "Seed Money Policy", link: "https://mits.ac.in/assets/pdf/research/Seed%20Money%20Policy.pdf" },
   { sno: 3, title: "MITS Startup Policy", link: "https://mits.ac.in/assets/pdf/research/MITS-Startup-Policy.pdf" },
   { sno: 4, title: "MITS Intellectual Property Rights Policy", link: "https://mits.ac.in/assets/pdf/admin/MITS-IPR-Policy.pdf" },
-  { sno: 5, title: "MITS-Benefits", link: "https://mits.ac.in/assets/pdf/research/MITS-Benefits.pdf" },
 ];
+
+// SEED Grant Policy — inline documents (recreated from mits.ac.in/seed-money-policy)
+export const seedGrantDocs = [
+  { title: "SEED Grant Policy", link: "https://mits.ac.in/assets/pdf/research/Seed%20Money%20Policy.pdf" },
+  { title: "Annexure-I — SEED Grant Application", link: "https://mits.ac.in/assets/pdf/research/Annexure-I%20SEED%20Grant%20application.pdf" },
+  { title: "Annexure-II — SEED-UC", link: "https://mits.ac.in/assets/pdf/research/Annexure-II%20SEED-UC.pdf" },
+  { title: "Annexure-III — SEED Expenditure", link: "https://mits.ac.in/assets/pdf/research/Annexure-III%20SEED%20Expenditure.pdf" },
+  { title: "Annexure-IV — SEED Completion Report", link: "https://mits.ac.in/assets/pdf/research/Annexure-IV%20SEED%20COMPLETION%20REPORT.pdf" },
+  { title: "Annexure-V — SEED Grant Declaration", link: "https://mits.ac.in/assets/pdf/research/Annexure-V%20SEED%20Grant%20declaration.pdf" },
+];
+
 
 export const eventsData = [
   { title: "One-Day National Level Workshop on \"Fundamentals and Disputes in IPR, WIPO Distance Learning Courses, and Pitching for Angel Investors\"", dept: "Dept. of Computer Applications in association with R&D Cell", date: "20th December 2025", link: "https://mits.ac.in/assets/pdf/ca/Fundamentals%20and%20Disputes%20in%20IPR,%20WIPO%20Distance%20Learning%20Courses,%20and%20Pitching%20for%20Angel%20Investors-min.pdf" },
