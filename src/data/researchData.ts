@@ -505,10 +505,10 @@ export const innovationData = {
     "Industry mentoring, IPR support and prototype labs",
   ],
   links: [
-    { title: "Innovation Portal", link: "https://mits.ac.in/innovation" },
     { title: "MITS Foundation (Incubation)", link: "https://mitsfoundation.org/" },
     { title: "Startup Policy", link: "https://mits.ac.in/assets/pdf/research/MITS-Startup-Policy.pdf" },
   ],
+
 };
 
 export const researchCentresData = {
