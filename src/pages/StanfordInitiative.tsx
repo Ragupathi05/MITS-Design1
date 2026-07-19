@@ -183,12 +183,18 @@ const StanfordInitiative = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {stanfordGallery.map((src) => (
             <button key={src} onClick={() => setLightbox(src)}
-              className="group aspect-[4/3] rounded-xl overflow-hidden bg-muted">
-              <img src={src} loading="lazy" alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="group relative aspect-video rounded-xl overflow-hidden bg-secondary/90">
+              <div
+                className="absolute inset-0 bg-center bg-cover scale-110 blur-xl opacity-40"
+                style={{ backgroundImage: `url("${src}")` }}
+                aria-hidden
+              />
+              <img src={src} loading="lazy" alt="" className="relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                 onError={(e) => ((e.target as HTMLImageElement).style.display = "none")} />
             </button>
           ))}
         </div>
+
       </section>
 
       <AnimatePresence>
