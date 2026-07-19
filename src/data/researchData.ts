@@ -60,22 +60,81 @@ export const projectsData = {
       { title: "Advanced Lab Equipment - Physics", link: "https://mits.ac.in/assets/pdf/research/List%20of%20Advanced%20Lab%20Equipment-Physics.pdf" },
       { title: "Advanced Lab Equipment - Chemistry", link: "https://mits.ac.in/assets/pdf/research/List%20of%20Advanced%20Lab%20Equipment-Chemistry.pdf" },
     ]},
-    { title: "Writing Tips for Projects", link: "https://mits.ac.in/tips" },
   ],
   fundingAgencies: {
     indian: [
-      { name: "DST SERB", link: "http://www.serb.gov.in/home.php" },
-      { name: "University Grants Commission (UGC)", link: "http://www.ugc.ac.in/page/XII-Plan-Guidelines.aspx" },
-      { name: "Indian Council of Social Science Research (ICSSR)", link: "http://icssr.org/" },
-      { name: "Indian Space Research Organization (ISRO)", link: "http://www.icssr.org/rp_main.htm" },
-      { name: "Indian Council of Agricultural Research (ICAR)", link: "http://www.icar.org.in/files/reports/other-reports/financial-assistance.pdf" },
-      { name: "Department of Science and Technology", link: "https://mits.ac.in/dst.html" },
-      { name: "Department of Biotechnology", link: "https://mits.ac.in/dbt.html" },
-      { name: "Department of Atomic Energy", link: "https://mits.ac.in/dae.html" },
-      { name: "Defence Research and Development Organization", link: "https://mits.ac.in/drdo.html" },
+      { name: "DST SERB", link: "https://serb.gov.in/" },
+      { name: "University Grants Commission (UGC)", link: "https://www.ugc.gov.in/" },
+      { name: "Indian Council of Social Science Research (ICSSR)", link: "https://icssr.org/" },
+      { name: "Indian Space Research Organisation (ISRO)", link: "https://www.isro.gov.in/" },
+      { name: "Indian Council of Agricultural Research (ICAR)", link: "https://www.icar.org.in/" },
+      { name: "Department of Science & Technology (DST)", link: "https://dst.gov.in/" },
+      { name: "Department of Biotechnology (DBT)", link: "https://dbt.gov.in/" },
+      { name: "Department of Atomic Energy (DAE)", link: "https://dae.gov.in/" },
+      { name: "Defence Research & Development Organisation (DRDO)", link: "https://www.drdo.gov.in/" },
     ],
   },
 };
+
+// Writing Tips for Projects — recreated from MITS official content, rendered inline.
+export const writingTipsContent = {
+  intro:
+    "Practical guidelines to help faculty and scholars write competitive research project proposals for national funding agencies.",
+  sections: [
+    {
+      heading: "1. Understand the Call",
+      points: [
+        "Read the scheme guidelines, eligibility, deadlines and format thoroughly.",
+        "Identify the funding agency's thrust areas and align the proposal accordingly.",
+        "Check the maximum budget, duration and eligible institutions.",
+      ],
+    },
+    {
+      heading: "2. Craft a Strong Title & Abstract",
+      points: [
+        "Keep the title concise, specific and outcome-oriented.",
+        "The abstract must summarise the problem, approach, novelty and expected outcomes in 200–300 words.",
+      ],
+    },
+    {
+      heading: "3. Problem Statement & Objectives",
+      points: [
+        "State the research gap with recent citations.",
+        "Define 3–5 SMART objectives — Specific, Measurable, Achievable, Relevant, Time-bound.",
+      ],
+    },
+    {
+      heading: "4. Methodology & Work Plan",
+      points: [
+        "Present the work plan as clear phases with milestones and deliverables.",
+        "Include a Gantt chart, risk-mitigation strategy and evaluation metrics.",
+      ],
+    },
+    {
+      heading: "5. Budget Justification",
+      points: [
+        "Justify each budget head — manpower, equipment, consumables, travel, contingency, overheads.",
+        "Ensure the budget matches the scheme's ceiling and norms.",
+      ],
+    },
+    {
+      heading: "6. Impact & Outcomes",
+      points: [
+        "Highlight scientific, technological, societal and economic impact.",
+        "List expected publications, patents, prototypes and skill outcomes.",
+      ],
+    },
+    {
+      heading: "7. Presentation & Compliance",
+      points: [
+        "Follow the prescribed template, page limits, fonts and formatting.",
+        "Obtain institutional endorsements and forward the proposal through the R&D Cell.",
+        "Proof-read for clarity, grammar and citation accuracy before submission.",
+      ],
+    },
+  ],
+};
+
 
 export type Publication = {
   name: string;
