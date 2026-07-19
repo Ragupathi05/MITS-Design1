@@ -264,12 +264,35 @@ const ProjectsSection = () => (
     <ScrollReveal delay={0.1}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="Research Resources" />
-        <div className="grid sm:grid-cols-2 gap-3">
+        <div className="grid sm:grid-cols-2 gap-3 mb-6">
           <LinkCard title="Research Areas" link={projectsData.subSections[0].link!} icon={Microscope} />
-          <LinkCard title="Writing Tips for Projects" link={projectsData.subSections[2].link!} icon={BookOpen} />
+        </div>
+        <div className="border border-border rounded-xl p-5 bg-muted/20">
+          <h3 className="font-display text-lg font-bold text-foreground mb-2 flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-primary" /> Writing Tips for Research Proposals
+          </h3>
+          <p className="text-sm text-muted-foreground mb-4">{writingTipsContent.intro}</p>
+          <Accordion type="single" collapsible>
+            {writingTipsContent.sections.map((s, i) => (
+              <AccordionItem key={i} value={`tip-${i}`}>
+                <AccordionTrigger className="text-sm font-semibold text-foreground">{s.heading}</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="space-y-1.5">
+                    {s.points.map((p, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <ChevronRight className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </ScrollReveal>
+
 
     <ScrollReveal delay={0.15}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
