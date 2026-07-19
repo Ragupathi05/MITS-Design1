@@ -294,11 +294,6 @@ export const iprCellData = {
     { title: "MITS Intellectual Property Rights Policy", link: "https://mits.ac.in/assets/pdf/admin/MITS-IPR-Policy.pdf" },
     { title: "MITS Patent Details", link: "https://mits.ac.in/assets/pdf/patent/Patent_2024.xlsx" },
   ],
-  // IPR Events are now rendered inline inside the Research page — sourced from `eventsData` above.
-  iprEventsInline: true as const,
-  _endMark: [
-
-  ],
   contacts: [
     { name: "Dr. P. Sivaiah", role: "Coordinator", dept: "Associate Professor, Dept. of ME", email: "dean_research@mits.ac.in" },
     { name: "Dr. K. Arul Kumar", role: "Co-Coordinator", dept: "Associate Professor, Dept. of EEE", email: "arulkumark@mits.ac.in" },
