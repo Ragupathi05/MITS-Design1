@@ -40,10 +40,8 @@ const sectionTabs = [
   { id: "academic", label: "Academic", icon: GraduationCap },
   { id: "ipr", label: "IPR Cell", icon: Scale },
   { id: "collaborations", label: "Collaborations", icon: Handshake },
-  { id: "consultancy", label: "Consultancy", icon: Wrench },
   { id: "innovation", label: "Innovation", icon: Sparkles },
-  { id: "research-centres", label: "Research Centres", icon: Library },
-  { id: "mdrf", label: "MDRF", icon: Globe },
+
   { id: "foundation", label: "MITS Foundation", icon: Rocket },
   { id: "wwrc", label: "WWRC", icon: Droplets },
 ];
