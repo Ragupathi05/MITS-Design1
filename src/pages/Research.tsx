@@ -16,7 +16,7 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  researchOverview, projectsData, publicationsData, patentsData,
+  researchOverview, projectsData, publicationsData, patentsData, seedGrantDocs,
   policiesData, eventsData, documentsData, iprCellData, mdrfData,
   researchVisionMission, keyAchievements, scopusPublications, wosPublications,
   hIndexTrend, projectFunding, patentsAYWise, patentTotals,
