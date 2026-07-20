@@ -111,7 +111,7 @@ const Footer = () => {
                 { label: "Affiliations & Accreditations", href: "/affiliations-accreditations" },
                 { label: "Public Self Disclosures", href: "/psd" },
                 { label: "Circulars", href: "https://mits.ac.in/circulars" },
-                { label: "Cells", href: "https://mits.ac.in/cells" },
+                { label: "Cells & Committees", href: "/cells" },
                 { label: "MITS Radio", href: "/mits-radio" },
                 { label: "Moodle Login", href: "https://moodle.mits.ac.in/" },
               ].map((link) => (
