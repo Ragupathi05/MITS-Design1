@@ -29,6 +29,12 @@ export const researchOverview = {
       email: "adresearchoffice@mits.ac.in",
       phone: "+91-8571-280255; 280706",
     },
+    {
+      name: "Dr. N. Nanda Kumar Reddy",
+      role: "Associate Dean – R&D - Ph.D. Programs",
+      email: "adphdprograms@mits.ac.in",
+      phone: "+91-8571-280255; 280706",
+    },
   ],
 };
 
@@ -63,7 +69,7 @@ export const projectsData = {
   ],
   fundingAgencies: {
     indian: [
-      { name: "DST SERB", link: "https://serb.gov.in/" },
+      { name: "ANRF", link: "https://serb.gov.in/" },
       { name: "University Grants Commission (UGC)", link: "https://www.ugc.gov.in/" },
       { name: "Indian Council of Social Science Research (ICSSR)", link: "https://icssr.org/" },
       { name: "Indian Space Research Organisation (ISRO)", link: "https://www.isro.gov.in/" },
@@ -203,28 +209,28 @@ export const publicationsData = {
   moreLink: "https://mits.ac.in/publications",
 };
 
-export const patentsData = {
-  title: "Patent Details",
-  description: "MITS faculty and students have filed patents across various engineering and science disciplines. The details of patents filed, published, and granted are listed below.",
-  patentDetailsLink: "https://mits.ac.in/assets/pdf/patent/Patent_2024.xlsx",
-};
+// export const patentsData = {
+//   title: "Patent Details",
+//   description: "MITS faculty and students have filed patents across various engineering and science disciplines. The details of patents filed, published, and granted are listed below.",
+//   patentDetailsLink: "https://mits.ac.in/assets/pdf/patent/Patent_2024.xlsx",
+// };
 
 export const policiesData = [
   { sno: 1, title: "Publication Incentive Policy", link: "https://mits.ac.in/assets/pdf/research/Incentive%20Policy%202025-26.pdf" },
-  { sno: 2, title: "Seed Money Policy", link: "https://mits.ac.in/assets/pdf/research/Seed%20Money%20Policy.pdf" },
+  { sno: 2, title: "Seed Grant Policy", link: "https://mits.ac.in/assets/pdf/research/Seed%20Money%20Policy.pdf" },
   { sno: 3, title: "MITS Startup Policy", link: "https://mits.ac.in/assets/pdf/research/MITS-Startup-Policy.pdf" },
   { sno: 4, title: "MITS Intellectual Property Rights Policy", link: "https://mits.ac.in/assets/pdf/admin/MITS-IPR-Policy.pdf" },
 ];
 
 // SEED Grant Policy — inline documents (recreated from mits.ac.in/seed-money-policy)
-export const seedGrantDocs = [
-  { title: "SEED Grant Policy", link: "https://mits.ac.in/assets/pdf/research/Seed%20Money%20Policy.pdf" },
-  { title: "Annexure-I — SEED Grant Application", link: "https://mits.ac.in/assets/pdf/research/Annexure-I%20SEED%20Grant%20application.pdf" },
-  { title: "Annexure-II — SEED-UC", link: "https://mits.ac.in/assets/pdf/research/Annexure-II%20SEED-UC.pdf" },
-  { title: "Annexure-III — SEED Expenditure", link: "https://mits.ac.in/assets/pdf/research/Annexure-III%20SEED%20Expenditure.pdf" },
-  { title: "Annexure-IV — SEED Completion Report", link: "https://mits.ac.in/assets/pdf/research/Annexure-IV%20SEED%20COMPLETION%20REPORT.pdf" },
-  { title: "Annexure-V — SEED Grant Declaration", link: "https://mits.ac.in/assets/pdf/research/Annexure-V%20SEED%20Grant%20declaration.pdf" },
-];
+// export const seedGrantDocs = [
+//   { title: "SEED Grant Policy", link: "https://mits.ac.in/assets/pdf/research/Seed%20Money%20Policy.pdf" },
+//   { title: "Annexure-I — SEED Grant Application", link: "https://mits.ac.in/assets/pdf/research/Annexure-I%20SEED%20Grant%20application.pdf" },
+//   { title: "Annexure-II — SEED-UC", link: "https://mits.ac.in/assets/pdf/research/Annexure-II%20SEED-UC.pdf" },
+//   { title: "Annexure-III — SEED Expenditure", link: "https://mits.ac.in/assets/pdf/research/Annexure-III%20SEED%20Expenditure.pdf" },
+//   { title: "Annexure-IV — SEED Completion Report", link: "https://mits.ac.in/assets/pdf/research/Annexure-IV%20SEED%20COMPLETION%20REPORT.pdf" },
+//   { title: "Annexure-V — SEED Grant Declaration", link: "https://mits.ac.in/assets/pdf/research/Annexure-V%20SEED%20Grant%20declaration.pdf" },
+// ];
 
 
 export const eventsData = [
@@ -250,12 +256,12 @@ export const eventsData = [
   { title: "Faculty Appreciation through Incentives for Research Publications & SWAYAM-NPTEL Toppers for A.Y. 2021-22", dept: "R&D Cell", date: "14th September 2022", link: "https://mits.ac.in/assets/pdf/research/1.%20Incentives%2014th%20Nov%202022%20_2021-22.pdf" },
 ];
 
-export const documentsData = [
-  { title: "Institutional Ethics Committee", link: "https://mits.ac.in/assets/pdf/research/ethics%20committee.pdf" },
-  { title: "MITS R&D Steering Committee Members", link: "https://mits.ac.in/assets/pdf/research/MITS%20RandD%20Steering%20Committee%20Members.pdf" },
-  { title: "R&D Cell Formation Committee", link: "https://mits.ac.in/assets/pdf/research/R&D%20Cell%20Fomation.PDF" },
-  { title: "IPR Cell Committee", link: "https://mits.ac.in/assets/pdf/research/IPR%20Cell%20-%20Office%20Order%20-%202023.pdf" },
-];
+// export const documentsData = [
+//   { title: "Institutional Ethics Committee", link: "https://mits.ac.in/assets/pdf/research/ethics%20committee.pdf" },
+//   { title: "MITS R&D Steering Committee Members", link: "https://mits.ac.in/assets/pdf/research/MITS%20RandD%20Steering%20Committee%20Members.pdf" },
+//   { title: "R&D Cell Formation Committee", link: "https://mits.ac.in/assets/pdf/research/R&D%20Cell%20Fomation.PDF" },
+//   { title: "IPR Cell Committee", link: "https://mits.ac.in/assets/pdf/research/IPR%20Cell%20-%20Office%20Order%20-%202023.pdf" },
+// ];
 
 export const iprCellData = {
   title: "Intellectual Property Rights Cell",
@@ -296,7 +302,7 @@ export const iprCellData = {
   ],
   contacts: [
     { name: "Dr. P. Sivaiah", role: "Coordinator", dept: "Associate Professor, Dept. of ME", email: "dean_research@mits.ac.in" },
-    { name: "Dr. K. Arul Kumar", role: "Co-Coordinator", dept: "Associate Professor, Dept. of EEE", email: "arulkumark@mits.ac.in" },
+    // { name: "Dr. K. Arul Kumar", role: "Co-Coordinator", dept: "Associate Professor, Dept. of EEE", email: "arulkumark@mits.ac.in" },
   ],
 };
 
@@ -347,7 +353,6 @@ export const keyAchievements: { label: string; value: string; sub?: string }[] =
   { label: "Consultancy Revenue", value: "₹1.77 Cr", sub: "Generated till F.Y. 2025-26" },
   { label: "SCI / Scopus Publications", value: "3,000+", sub: "Articles in reputed journals" },
   { label: "Total Patents", value: "315", sub: "120 Granted • 176 Published • 13 under exam • 6 filed" },
-  { label: "Copyrights / Trademarks / GI", value: "06 / 03 / 23", sub: "Intellectual property portfolio" },
   { label: "Faculty & Student Incentives", value: "₹121.16 L", sub: "For publications, projects & consultancy" },
   { label: "MSME Incubation Centre", value: "Established", sub: "Supported by MSME, Govt. of India" },
   { label: "Startup Companies", value: "20+", sub: "Established in MITS Incubation Centre" },
@@ -359,23 +364,15 @@ export const keyAchievements: { label: string; value: string; sub?: string }[] =
 /* Bar chart datasets (from uploaded graphs) */
 
 export const scopusPublications = [
-  { label: "2026*", value: 222 }, { label: "2025", value: 707 }, { label: "2024", value: 523 },
-  { label: "2023", value: 334 }, { label: "2022", value: 238 }, { label: "2021", value: 187 },
-  { label: "2020", value: 208 }, { label: "2019", value: 221 }, { label: "2018", value: 161 },
-  { label: "2017", value: 103 }, { label: "2016", value: 74 }, { label: "2015", value: 33 },
-  { label: "2014", value: 21 }, { label: "2013", value: 12 }, { label: "2012", value: 11 },
-  { label: "2011", value: 14 }, { label: "2010", value: 6 }, { label: "2009", value: 4 },
-  { label: "2008", value: 4 }, { label: "2007", value: 1 },
+  { label: "2021", value: 187 }, { label: "2022", value: 238 },
+  { label: "2023", value: 334 }, { label: "2024", value: 523 },
+  { label: "2025", value: 707 }, { label: "2026*", value: 222 },
 ];
 
 export const wosPublications = [
-  { label: "2026*", value: 136 }, { label: "2025", value: 226 }, { label: "2024", value: 127 },
-  { label: "2023", value: 110 }, { label: "2022", value: 114 }, { label: "2021", value: 118 },
-  { label: "2020", value: 140 }, { label: "2019", value: 128 }, { label: "2018", value: 52 },
-  { label: "2017", value: 28 }, { label: "2016", value: 24 }, { label: "2015", value: 7 },
-  { label: "2014", value: 8 }, { label: "2013", value: 6 }, { label: "2012", value: 2 },
-  { label: "2011", value: 7 }, { label: "2010", value: 1 }, { label: "2009", value: 3 },
-  { label: "2008", value: 3 },
+  { label: "2021", value: 118 }, { label: "2022", value: 114 },
+  { label: "2023", value: 110 }, { label: "2024", value: 127 },
+  { label: "2025", value: 226 }, { label: "2026*", value: 136 },
 ];
 
 export const hIndexTrend = [
@@ -385,25 +382,25 @@ export const hIndexTrend = [
 ];
 
 export const projectFunding = [
-  { label: "2025-26", value: 16.65 }, { label: "2024-25", value: 111.10 },
-  { label: "2023-24", value: 210.30 }, { label: "2022-23", value: 30.01 },
-  { label: "2021-22", value: 3.67 }, { label: "2020-21", value: 24.90 },
-  { label: "2019-20", value: 147.90 }, { label: "2018-19", value: 215.00 },
-  { label: "2017-18", value: 103.08 }, { label: "2016-17", value: 738.54 },
-  { label: "2015-16", value: 149.01 }, { label: "2014-15", value: 61.87 },
-  { label: "2013-14", value: 32.40 },
+  { label: "2013-14", value: 32.40 }, { label: "2014-15", value: 61.87 },
+  { label: "2015-16", value: 149.01 }, { label: "2016-17", value: 738.54 },
+  { label: "2017-18", value: 103.08 }, { label: "2018-19", value: 215.00 },
+  { label: "2019-20", value: 147.90 }, { label: "2020-21", value: 24.90 },
+  { label: "2021-22", value: 3.67 }, { label: "2022-23", value: 30.01 },
+  { label: "2023-24", value: 210.30 }, { label: "2024-25", value: 111.10 },
+  { label: "2025-26", value: 16.65 },
 ];
 
 export const patentsAYWise = [
-  { year: "2025-26*", filed: 3,  published: 35, underExam: 0, granted: 20, total: 58 },
-  { year: "2024-25",  filed: 0,  published: 39, underExam: 9, granted: 47,  total: 95 },
-  { year: "2023-24",  filed: 0,  published: 46, underExam: 1, granted: 37, total: 84 },
-  { year: "2022-23",  filed: 2,  published: 23, underExam: 1, granted: 6, total: 32 },
-  { year: "2021-22",  filed: 1,  published: 14,  underExam: 0, granted: 4,  total: 19 },
-  { year: "2020-21",  filed: 0,  published: 10, underExam: 1, granted: 4,  total: 15 },
-  { year: "2019-20",  filed: 0,  published: 6,  underExam: 1,  granted: 2,  total: 9  },
-  { year: "2018-19",  filed: 0,  published: 1,  underExam: 0,  granted: 0,  total: 1  },
   { year: "2017-18",  filed: 0,  published: 2,  underExam: 0,  granted: 0,  total: 2  },
+  { year: "2018-19",  filed: 0,  published: 1,  underExam: 0,  granted: 0,  total: 1  },
+  { year: "2019-20",  filed: 0,  published: 6,  underExam: 1,  granted: 2,  total: 9  },
+  { year: "2020-21",  filed: 0,  published: 10, underExam: 1,  granted: 4,  total: 15 },
+  { year: "2021-22",  filed: 1,  published: 14, underExam: 0,  granted: 4,  total: 19 },
+  { year: "2022-23",  filed: 2,  published: 23, underExam: 1,  granted: 6,  total: 32 },
+  { year: "2023-24",  filed: 0,  published: 46, underExam: 1,  granted: 37, total: 84 },
+  { year: "2024-25",  filed: 0,  published: 39, underExam: 9,  granted: 47, total: 95 },
+  { year: "2025-26*", filed: 3,  published: 35, underExam: 0,  granted: 20, total: 58 },
 ];
 
 export const patentTotals = { total: 315, filed: 6, published: 176, underExamination: 13, granted: 120 };
@@ -529,23 +526,23 @@ export const researchCentresData = {
   ],
 };
 
-export const advisoryCommitteeData = {
-  title: "Research Advisory Committee",
-  description:
-    "The Research Advisory Committee guides the R&D Cell in policy, priority setting and quality assurance. The committee comprises eminent academicians, industry experts and senior administrators.",
-  members: [
-    { name: "Dr. R. Thulasiram Naidu", designation: "Advisor - R&D & Consultancy", affiliation: "MITS" },
-    { name: "Dr. P. Sivaiah", designation: "Associate Dean - R&D", affiliation: "MITS" },
-    { name: "External Expert", designation: "Industry Expert", affiliation: "To be nominated" },
-    { name: "External Expert", designation: "Academician", affiliation: "To be nominated" },
-  ],
-  responsibilities: [
-    "Advise on research priorities and strategic directions",
-    "Review progress of research programmes and projects",
-    "Recommend policy improvements for R&D ecosystem",
-    "Facilitate industry-academia linkages",
-  ],
-};
+// export const advisoryCommitteeData = {
+//   title: "Research Advisory Committee",
+//   description:
+//     "The Research Advisory Committee guides the R&D Cell in policy, priority setting and quality assurance. The committee comprises eminent academicians, industry experts and senior administrators.",
+//   members: [
+//     { name: "Dr. R. Thulasiram Naidu", designation: "Advisor - R&D & Consultancy", affiliation: "MITS" },
+//     { name: "Dr. P. Sivaiah", designation: "Associate Dean - R&D", affiliation: "MITS" },
+//     { name: "External Expert", designation: "Industry Expert", affiliation: "To be nominated" },
+//     { name: "External Expert", designation: "Academician", affiliation: "To be nominated" },
+//   ],
+//   responsibilities: [
+//     "Advise on research priorities and strategic directions",
+//     "Review progress of research programmes and projects",
+//     "Recommend policy improvements for R&D ecosystem",
+//     "Facilitate industry-academia linkages",
+//   ],
+// };
 
 export const academicResearchData = {
   title: "Academic Research Programmes",

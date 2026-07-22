@@ -30,13 +30,14 @@ const BASE = import.meta.env.BASE_URL;
 
 const sectionTabs = [
   { id: "overview", label: "Overview", icon: BookOpen },
-  { id: "projects", label: "Projects", icon: Briefcase },
   { id: "publications", label: "Publications", icon: FileText },
+  { id: "projects", label: "Projects", icon: Briefcase },
   { id: "patents", label: "Patents", icon: Lightbulb },
   { id: "policies", label: "Policies", icon: Shield },
   { id: "events", label: "Events", icon: Calendar },
-  { id: "documents", label: "Documents", icon: Layers },
-  { id: "advisory", label: "Advisory", icon: Users },
+  // { id: "documents", label: "Documents", icon: Layers },
+  // { id: "advisory", label: "Advisory", icon: Users },
+  { id: "Committee", label: "Committee", icon: Users },
   { id: "academic", label: "Academic", icon: GraduationCap },
   { id: "ipr", label: "IPR Cell", icon: Scale },
   { id: "collaborations", label: "Collaborations", icon: Handshake },
@@ -83,7 +84,7 @@ const OverviewSection = () => (
           transfer and consultancy activities, and plays a vital role in fostering interdisciplinary
           research, innovation, and academic & technological growth of the Institution.
         </p>
-        <div className="grid sm:grid-cols-2 gap-4">
+        {/* <div className="grid sm:grid-cols-2 gap-4">
           <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
             <h3 className="font-semibold text-foreground flex items-center gap-2 mb-2">
               <GraduationCap className="w-5 h-5 text-primary" /> Recognised Research Centre
@@ -96,7 +97,7 @@ const OverviewSection = () => (
             </h3>
             <p className="text-muted-foreground text-sm">{researchOverview.scholarStipend}</p>
           </div>
-        </div>
+        </div> */}
         <a
           href={researchOverview.enrolledScholarsLink}
           target="_blank"
@@ -171,7 +172,7 @@ const OverviewSection = () => (
       </div>
     </ScrollReveal>
 
-    {/* H-Index chart */}
+    {/* H-Index chart
     <ScrollReveal delay={0.12}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="H-Index Growth" subtitle="MITS institutional H-Index trend (Scopus, 2019 – 2025)." />
@@ -181,7 +182,7 @@ const OverviewSection = () => (
         </div>
         <BarChart data={hIndexTrend} rotateLabels={false} height={280} />
       </div>
-    </ScrollReveal>
+    </ScrollReveal> */}
 
     {/* Contacts */}
     <ScrollReveal delay={0.15}>
@@ -211,23 +212,19 @@ const ProjectsSection = () => (
     <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="Project Funding Analytics" subtitle="Year-wise sanctioned project funding (Amount in ₹ Lakhs)." />
-        <div className="grid sm:grid-cols-3 gap-4 mb-6">
-          <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Total Sanctioned</p>
-            <p className="font-display text-3xl font-bold text-primary mt-1">₹18.44 Cr</p>
-            <p className="text-xs text-muted-foreground mt-1">Cumulative R&amp;D / seminar grants till date</p>
-          </div>
-          <div className="bg-accent/10 border border-accent/20 rounded-xl p-5">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Peak Year</p>
-            <p className="font-display text-3xl font-bold text-foreground mt-1">₹738.54 L</p>
-            <p className="text-xs text-muted-foreground mt-1">F.Y. 2016-17 — Largest single-year inflow</p>
-          </div>
-          <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-5">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Active Window</p>
-            <p className="font-display text-3xl font-bold text-foreground mt-1">2013 – 2026</p>
-            <p className="text-xs text-muted-foreground mt-1">13 years of continuous sponsored research</p>
-          </div>
-        </div>
+        <div className="grid place-items-center mb-6">
+  <div className="w-full max-w-md bg-primary/5 border border-primary/20 rounded-xl p-5">
+    <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+      Total Sanctioned
+    </p>
+    <p className="font-display text-3xl font-bold text-primary mt-1">
+      ₹18.44 Cr
+    </p>
+    <p className="text-xs text-muted-foreground mt-1">
+      Cumulative R&amp;D / seminar grants till date
+    </p>
+  </div>
+</div>
         <BarChart data={projectFunding} unit="Amount in ₹ Lakhs" height={300} />
       </div>
     </ScrollReveal>
@@ -327,7 +324,7 @@ const PublicationsSection = () => {
       <ScrollReveal>
         <div className="grid sm:grid-cols-3 gap-4">
           <div className="bg-card border border-border rounded-2xl p-5">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Scopus Documents</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Scopus Documents (2007 - Till Date)</p>
             <p className="font-display text-3xl font-bold text-primary mt-1">3,085</p>
             <p className="text-xs text-muted-foreground mt-1">1,545 unique authors • Scopus ID 60107346</p>
           </div>
@@ -349,12 +346,12 @@ const PublicationsSection = () => {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="bg-card border border-border rounded-2xl p-6">
             <h3 className="font-display text-lg font-bold text-foreground mb-1">Publications in Scopus</h3>
-            <p className="text-xs text-muted-foreground mb-4">Year-wise Scopus indexed publications (2007 – 2026*).</p>
+            <p className="text-xs text-muted-foreground mb-4">Year-wise Scopus indexed publications (2021 – 2026*).</p>
             <BarChart data={scopusPublications} height={280} />
           </div>
           <div className="bg-card border border-border rounded-2xl p-6">
             <h3 className="font-display text-lg font-bold text-foreground mb-1">WoS Indexed Publications</h3>
-            <p className="text-xs text-muted-foreground mb-4">Year-wise Web of Science indexed publications (2008 – 2026*).</p>
+            <p className="text-xs text-muted-foreground mb-4">Year-wise Web of Science indexed publications (2021 – 2026*).</p>
             <BarChart data={wosPublications} height={280} accent="hsl(var(--accent))" />
           </div>
         </div>
@@ -451,12 +448,11 @@ const PatentsSection = () => {
       <ScrollReveal delay={0.05}>
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
           <SectionHeading title="Patent Portfolio Breakdown" subtitle="Includes Patents, Copyrights, Trademarks & Geographical Indications (GI)." />
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
             {[
               { l: "Copyrights", v: "06" },
               { l: "Trademarks", v: "03" },
-              { l: "GI", v: "23" },
-              { l: "Under Examination", v: "13" },
+              { l: "GI", v: "23" }, 
             ].map((s) => (
               <div key={s.l} className="bg-muted/40 border border-border rounded-xl p-4 text-center">
                 <p className="font-display text-2xl font-bold text-foreground">{s.v}</p>
@@ -518,7 +514,7 @@ const PatentsSection = () => {
         </div>
       </ScrollReveal>
 
-      <ScrollReveal delay={0.12}>
+      {/* <ScrollReveal delay={0.12}>
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
           <SectionHeading title={patentsData.title} subtitle={patentsData.description} />
           <div className="grid sm:grid-cols-2 gap-4">
@@ -526,7 +522,7 @@ const PatentsSection = () => {
             <LinkCard title="View All Patents" link={patentsData.patentDetailsLink} icon={FileText} />
           </div>
         </div>
-      </ScrollReveal>
+      </ScrollReveal> */}
 
     </div>
   );
@@ -571,7 +567,7 @@ const PoliciesSection = () => (
     </ScrollReveal>
 
     {/* SEED Grant Policy — inline */}
-    <ScrollReveal delay={0.05}>
+    {/* <ScrollReveal delay={0.05}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading
           title="SEED Grant Policy"
@@ -583,7 +579,7 @@ const PoliciesSection = () => (
           ))}
         </div>
       </div>
-    </ScrollReveal>
+    </ScrollReveal> */}
   </div>
 );
 
@@ -635,18 +631,18 @@ const EventsSection = () => {
 };
 
 /* ─── DOCUMENTS TAB ─── */
-const DocumentsSection = () => (
-  <ScrollReveal>
-    <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-      <SectionHeading title="Documents" subtitle="Committee formations and institutional ethics documents." />
-      <div className="grid sm:grid-cols-2 gap-3">
-        {documentsData.map((d) => (
-          <LinkCard key={d.title} title={d.title} link={d.link} icon={FileText} />
-        ))}
-      </div>
-    </div>
-  </ScrollReveal>
-);
+// const DocumentsSection = () => (
+//   <ScrollReveal>
+//     <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+//       <SectionHeading title="Documents" subtitle="Committee formations and institutional ethics documents." />
+//       <div className="grid sm:grid-cols-2 gap-3">
+//         {documentsData.map((d) => (
+//           <LinkCard key={d.title} title={d.title} link={d.link} icon={FileText} />
+//         ))}
+//       </div>
+//     </div>
+//   </ScrollReveal>
+// );
 
 /* ─── IPR CELL TAB ─── */
 const IPRSection = () => (
@@ -772,37 +768,37 @@ const IPRSection = () => (
 );
 
 /* ─── ADVISORY COMMITTEE TAB ─── */
-const AdvisorySection = () => (
-  <div className="space-y-6">
-    <ScrollReveal>
-      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title={advisoryCommitteeData.title} subtitle={advisoryCommitteeData.description} />
-        <div className="grid sm:grid-cols-2 gap-4">
-          {advisoryCommitteeData.members.map((m, i) => (
-            <div key={i} className="border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-card-foreground text-sm">{m.name}</h4>
-              <p className="text-primary text-xs font-medium mt-1">{m.designation}</p>
-              <p className="text-muted-foreground text-xs mt-1">{m.affiliation}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </ScrollReveal>
-    <ScrollReveal delay={0.05}>
-      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Responsibilities" />
-        <ul className="grid sm:grid-cols-2 gap-3">
-          {advisoryCommitteeData.responsibilities.map((r, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-              <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              <span>{r}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </ScrollReveal>
-  </div>
-);
+// const AdvisorySection = () => (
+//   <div className="space-y-6">
+//     <ScrollReveal>
+//       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+//         <SectionHeading title={advisoryCommitteeData.title} subtitle={advisoryCommitteeData.description} />
+//         <div className="grid sm:grid-cols-2 gap-4">
+//           {advisoryCommitteeData.members.map((m, i) => (
+//             <div key={i} className="border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+//               <h4 className="font-bold text-card-foreground text-sm">{m.name}</h4>
+//               <p className="text-primary text-xs font-medium mt-1">{m.designation}</p>
+//               <p className="text-muted-foreground text-xs mt-1">{m.affiliation}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </ScrollReveal>
+//     <ScrollReveal delay={0.05}>
+//       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+//         <SectionHeading title="Responsibilities" />
+//         <ul className="grid sm:grid-cols-2 gap-3">
+//           {advisoryCommitteeData.responsibilities.map((r, i) => (
+//             <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+//               <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+//               <span>{r}</span>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </ScrollReveal>
+//   </div>
+// );
 
 /* ─── ACADEMIC RESEARCH TAB ─── */
 const AcademicResearchSection = () => (
@@ -1286,8 +1282,8 @@ const Research = () => {
               <TabsContent value="patents"><PatentsSection /></TabsContent>
               <TabsContent value="policies"><PoliciesSection /></TabsContent>
               <TabsContent value="events"><EventsSection /></TabsContent>
-              <TabsContent value="documents"><DocumentsSection /></TabsContent>
-              <TabsContent value="advisory"><AdvisorySection /></TabsContent>
+              {/* <TabsContent value="documents"><DocumentsSection /></TabsContent> */}
+              {/* <TabsContent value="advisory"><AdvisorySection /></TabsContent> */}
               <TabsContent value="academic"><AcademicResearchSection /></TabsContent>
               <TabsContent value="ipr"><IPRSection /></TabsContent>
               <TabsContent value="collaborations"><CollaborationsSection /></TabsContent>
