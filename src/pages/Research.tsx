@@ -218,10 +218,10 @@ const ProjectsSection = () => (
       Total Sanctioned
     </p>
     <p className="font-display text-3xl font-bold text-primary mt-1">
-      ₹18.44 Cr
+      ₹18.46 Cr
     </p>
     <p className="text-xs text-muted-foreground mt-1">
-      Cumulative R&amp;D / seminar grants till date
+      Cumulative Research Projects / Workshops/ seminar grants till date
     </p>
   </div>
 </div>
@@ -232,14 +232,14 @@ const ProjectsSection = () => (
     <ScrollReveal delay={0.05}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="Sanctioned Research Projects" subtitle="Download year-wise funded project reports." />
-        <a
+        {/* <a
           href={projectsData.sanctionedProjects.allProjectsLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity mb-6"
         >
           <Download className="w-4 h-4" /> Download All Projects (PDF)
-        </a>
+        </a> */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {projectsData.sanctionedProjects.yearWise.map((y) => (
             <a
@@ -322,38 +322,38 @@ const PublicationsSection = () => {
     <div className="space-y-6">
       {/* Stat strip */}
       <ScrollReveal>
-        <div className="grid sm:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 gap-4">
           <div className="bg-card border border-border rounded-2xl p-5">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Scopus Documents (2007 - Till Date)</p>
-            <p className="font-display text-3xl font-bold text-primary mt-1">3,085</p>
-            <p className="text-xs text-muted-foreground mt-1">1,545 unique authors • Scopus ID 60107346</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Scopus Indexed Publications (2007 - Till Date)</p>
+            <p className="font-display text-3xl font-bold text-primary mt-1">3,200+</p>
+            {/* <p className="text-xs text-muted-foreground mt-1">• Scopus ID 60107346</p> */}
           </div>
-          <div className="bg-card border border-border rounded-2xl p-5">
+          {/* <div className="bg-card border border-border rounded-2xl p-5">
             <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">SCI / Scopus Articles</p>
             <p className="font-display text-3xl font-bold text-foreground mt-1">3,000+</p>
             <p className="text-xs text-muted-foreground mt-1">Published in reputed indexed journals</p>
-          </div>
+          </div> */}
           <div className="bg-card border border-border rounded-2xl p-5">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">H-Index (2025)</p>
-            <p className="font-display text-3xl font-bold text-accent mt-1">70</p>
-            <p className="text-xs text-muted-foreground mt-1">Up from 21 in 2019 — sustained growth</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">H-Index (2026*)</p>
+            <p className="font-display text-3xl font-bold text-accent mt-1">75</p>
+            {/* <p className="text-xs text-muted-foreground mt-1">sustained growth</p> */}
           </div>
         </div>
       </ScrollReveal>
 
       {/* Scopus + WoS charts */}
       <ScrollReveal delay={0.05}>
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-1 gap-8">
           <div className="bg-card border border-border rounded-2xl p-6">
             <h3 className="font-display text-lg font-bold text-foreground mb-1">Publications in Scopus</h3>
             <p className="text-xs text-muted-foreground mb-4">Year-wise Scopus indexed publications (2021 – 2026*).</p>
             <BarChart data={scopusPublications} height={280} />
           </div>
-          <div className="bg-card border border-border rounded-2xl p-6">
+          {/* <div className="bg-card border border-border rounded-2xl p-6">
             <h3 className="font-display text-lg font-bold text-foreground mb-1">WoS Indexed Publications</h3>
             <p className="text-xs text-muted-foreground mb-4">Year-wise Web of Science indexed publications (2021 – 2026*).</p>
             <BarChart data={wosPublications} height={280} accent="hsl(var(--accent))" />
-          </div>
+          </div> */}
         </div>
       </ScrollReveal>
 
@@ -447,16 +447,16 @@ const PatentsSection = () => {
       {/* Composition + AY-wise chart */}
       <ScrollReveal delay={0.05}>
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-          <SectionHeading title="Patent Portfolio Breakdown" subtitle="Includes Patents, Copyrights, Trademarks & Geographical Indications (GI)." />
+          {/* <SectionHeading title="Patent Portfolio Breakdown" subtitle="Includes Patents, Copyrights, Trademarks & Geographical Indications (GI)." /> */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
             {[
-              { l: "Copyrights", v: "06" },
+              { l: "Copyrights", v: "08" },
               { l: "Trademarks", v: "03" },
-              { l: "GI", v: "23" }, 
+              { l: "GI", v: "30" }, 
             ].map((s) => (
-              <div key={s.l} className="bg-muted/40 border border-border rounded-xl p-4 text-center">
-                <p className="font-display text-2xl font-bold text-foreground">{s.v}</p>
-                <p className="text-xs text-muted-foreground mt-1">{s.l}</p>
+              <div key={s.l} className="bg-muted/40 border border-border rounded-2xl p-6 text-center">
+                <p className="font-display text-5xl font-bold text-foreground">{s.v}</p>
+                <p className="text-xs text-muted-foreground mt-2">{s.l}</p>
               </div>
             ))}
           </div>
@@ -492,7 +492,7 @@ const PatentsSection = () => {
             <table className="w-full text-sm">
               <thead className="bg-primary/5">
                 <tr>
-                  {["A.Y.", "Filed", "Published", "Under Exam.", "Granted", "Total"].map((h) => (
+                  {["A.Y.", "Filed", "Published","Granted", "Total"].map((h) => (
                     <th key={h} className="text-left px-4 py-3 font-semibold text-foreground whitespace-nowrap">{h}</th>
                   ))}
                 </tr>
@@ -503,7 +503,7 @@ const PatentsSection = () => {
                     <td className="px-4 py-3 font-semibold text-foreground">{p.year}</td>
                     <td className="px-4 py-3 text-muted-foreground">{p.filed}</td>
                     <td className="px-4 py-3 text-muted-foreground">{p.published}</td>
-                    <td className="px-4 py-3 text-muted-foreground">{p.underExam}</td>
+                    {/* <td className="px-4 py-3 text-muted-foreground">{p.underExam}</td> */}
                     <td className="px-4 py-3 text-muted-foreground">{p.granted}</td>
                     <td className="px-4 py-3 font-semibold text-primary">{p.total}</td>
                   </tr>
@@ -643,6 +643,8 @@ const EventsSection = () => {
 //     </div>
 //   </ScrollReveal>
 // );
+/* committe Tab */
+
 
 /* ─── IPR CELL TAB ─── */
 const IPRSection = () => (

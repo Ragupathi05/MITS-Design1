@@ -24,15 +24,15 @@ export const researchOverview = {
       phone: "+91-8571-280255; 280706",
     },
     {
-      name: "Mr. G. Mallikarjuna",
-      role: "AAO - R&D",
-      email: "adresearchoffice@mits.ac.in",
-      phone: "+91-8571-280255; 280706",
-    },
-    {
       name: "Dr. N. Nanda Kumar Reddy",
       role: "Associate Dean – R&D - Ph.D. Programs",
       email: "adphdprograms@mits.ac.in",
+      phone: "+91-8571-280255; 280706",
+    },
+    {
+      name: "Mr. G. Mallikarjuna",
+      role: "AAO - R&D",
+      email: "adresearchoffice@mits.ac.in",
       phone: "+91-8571-280255; 280706",
     },
   ],
@@ -44,6 +44,7 @@ export const projectsData = {
     allProjectsLink:
       "https://mits.ac.in/assets/pdf/research/Sanctioned%20Research%20Projects.pdf",
     yearWise: [
+      { year: "2025-26", link: "public\\Research\\2025-26 Projects.pdf" },
       { year: "2024-25", link: "https://mits.ac.in/assets/pdf/research/Research%20Projects%202024-25.pdf" },
       { year: "2023-24", link: "https://mits.ac.in/assets/pdf/research/Research%20Projects%202023-24.pdf" },
       { year: "2022-23", link: "https://mits.ac.in/assets/pdf/research/Research%20Projects%202022-23.pdf" },
@@ -349,10 +350,10 @@ export const researchVisionMission = {
 
 export const keyAchievements: { label: string; value: string; sub?: string }[] = [
   { label: "Top 2% Scientists (Stanford)", value: "Listed", sub: "Most Influential Scientists worldwide" },
-  { label: "R&D / Seminar Grants", value: "₹18.44 Cr", sub: "Sanctioned by funding agencies till date" },
+  { label: "Research Projects/ Workshops/ Seminar Grants", value: "₹18.46 Cr", sub: "Sanctioned by funding agencies till date" },
   { label: "Consultancy Revenue", value: "₹1.77 Cr", sub: "Generated till F.Y. 2025-26" },
-  { label: "SCI / Scopus Publications", value: "3,000+", sub: "Articles in reputed journals" },
-  { label: "Total Patents", value: "315", sub: "120 Granted • 176 Published • 13 under exam • 6 filed" },
+  { label: "SCI / Scopus Publications", value: "3,200+", sub: "Articles in reputed journals" },
+  { label: "Total Patents", value: "364", sub: "118 Granted • 240 Published • 6 filed" },
   { label: "Faculty & Student Incentives", value: "₹121.16 L", sub: "For publications, projects & consultancy" },
   { label: "MSME Incubation Centre", value: "Established", sub: "Supported by MSME, Govt. of India" },
   { label: "Startup Companies", value: "20+", sub: "Established in MITS Incubation Centre" },
@@ -365,8 +366,8 @@ export const keyAchievements: { label: string; value: string; sub?: string }[] =
 
 export const scopusPublications = [
   { label: "2021", value: 187 }, { label: "2022", value: 238 },
-  { label: "2023", value: 334 }, { label: "2024", value: 523 },
-  { label: "2025", value: 707 }, { label: "2026*", value: 222 },
+  { label: "2023", value: 334 }, { label: "2024", value: 522 },
+  { label: "2025", value: 716 }, { label: "2026*", value: 383 },
 ];
 
 export const wosPublications = [
@@ -382,28 +383,29 @@ export const hIndexTrend = [
 ];
 
 export const projectFunding = [
-  { label: "2013-14", value: 32.40 }, { label: "2014-15", value: 61.87 },
-  { label: "2015-16", value: 149.01 }, { label: "2016-17", value: 738.54 },
-  { label: "2017-18", value: 103.08 }, { label: "2018-19", value: 215.00 },
-  { label: "2019-20", value: 147.90 }, { label: "2020-21", value: 24.90 },
+  // { label: "2013-14", value: 32.40 }, { label: "2014-15", value: 61.87 },
+  // { label: "2015-16", value: 149.01 }, { label: "2016-17", value: 738.54 },
+  // { label: "2017-18", value: 103.08 }, { label: "2018-19", value: 215.00 },
+  // { label: "2019-20", value: 147.90 }, 
+  { label: "2020-21", value: 24.90 },
   { label: "2021-22", value: 3.67 }, { label: "2022-23", value: 30.01 },
   { label: "2023-24", value: 210.30 }, { label: "2024-25", value: 111.10 },
-  { label: "2025-26", value: 16.65 },
+  { label: "2025-26", value: 19.09 },
 ];
 
 export const patentsAYWise = [
-  { year: "2017-18",  filed: 0,  published: 2,  underExam: 0,  granted: 0,  total: 2  },
-  { year: "2018-19",  filed: 0,  published: 1,  underExam: 0,  granted: 0,  total: 1  },
-  { year: "2019-20",  filed: 0,  published: 6,  underExam: 1,  granted: 2,  total: 9  },
-  { year: "2020-21",  filed: 0,  published: 10, underExam: 1,  granted: 4,  total: 15 },
-  { year: "2021-22",  filed: 1,  published: 14, underExam: 0,  granted: 4,  total: 19 },
-  { year: "2022-23",  filed: 2,  published: 23, underExam: 1,  granted: 6,  total: 32 },
-  { year: "2023-24",  filed: 0,  published: 46, underExam: 1,  granted: 37, total: 84 },
-  { year: "2024-25",  filed: 0,  published: 39, underExam: 9,  granted: 47, total: 95 },
-  { year: "2025-26*", filed: 3,  published: 35, underExam: 0,  granted: 20, total: 58 },
+  // { year: "2017-18",  filed: 0,  published: 2,  underExam: 0,  granted: 0,  total: 2  },
+  // { year: "2018-19",  filed: 0,  published: 1,  underExam: 0,  granted: 0,  total: 1  },
+  // { year: "2019-20",  filed: 0,  published: 6,  underExam: 1,  granted: 2,  total: 9  },
+  { year: "2021",  filed: 0,  published: 14,   granted: 4,  total: 18 },
+  { year: "2022",  filed: 2,  published: 26,   granted: 3,  total: 31 },
+  { year: "2023",  filed: 1,  published: 20,   granted: 17,  total: 38 },
+  { year: "2024",  filed: 1,  published: 16,   granted: 47, total: 108 },
+  { year: "2025",  filed: 1,  published: 87,   granted: 42, total: 130 },
+  { year: "2026*", filed: 1,  published: 20,   granted: 2, total: 23 },
 ];
 
-export const patentTotals = { total: 315, filed: 6, published: 176, underExamination: 13, granted: 120 };
+export const patentTotals = { total: 364, filed: 6, published: 240, granted: 118 };
 
 export const mitsFoundationData = {
   title: "MITS Foundation",
