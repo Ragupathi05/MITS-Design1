@@ -44,7 +44,7 @@ export const projectsData = {
     allProjectsLink:
       "https://mits.ac.in/assets/pdf/research/Sanctioned%20Research%20Projects.pdf",
     yearWise: [
-      { year: "2025-26", link: "public\\Research\\2025-26 Projects.pdf" },
+      { year: "2025-26", link: "Research/2025-26 Projects.pdf", local: true },
       { year: "2024-25", link: "https://mits.ac.in/assets/pdf/research/Research%20Projects%202024-25.pdf" },
       { year: "2023-24", link: "https://mits.ac.in/assets/pdf/research/Research%20Projects%202023-24.pdf" },
       { year: "2022-23", link: "https://mits.ac.in/assets/pdf/research/Research%20Projects%202022-23.pdf" },

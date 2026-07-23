@@ -244,7 +244,7 @@ const ProjectsSection = () => (
           {projectsData.sanctionedProjects.yearWise.map((y) => (
             <a
               key={y.year}
-              href={y.link}
+              href={(y as any).local ? `${BASE}${y.link}` : y.link}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-muted rounded-xl px-4 py-3 hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-all group"
