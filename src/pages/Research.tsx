@@ -98,14 +98,14 @@ const OverviewSection = () => (
             <p className="text-muted-foreground text-sm">{researchOverview.scholarStipend}</p>
           </div>
         </div> */}
-        <a
+        {/* <a
           href={researchOverview.enrolledScholarsLink}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
         >
           <Download className="w-4 h-4" /> List of Enrolled Research Scholars
-        </a>
+        </a> */}
       </div>
     </ScrollReveal>
 
