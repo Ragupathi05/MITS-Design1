@@ -44,7 +44,8 @@ const sectionTabs = [
   { id: "innovation", label: "Innovation", icon: Sparkles },
 
   { id: "foundation", label: "MITS Foundation", icon: Rocket },
-  { id: "wwrc", label: "WWRC", icon: Droplets },
+  { id: "mdrf", label: "MDRF", icon: Globe },
+  { id: "wwrc", label: "WWRC", icon: Recycle },
 ];
 
 /* ─── Reusable Card ─── */
@@ -1065,57 +1066,8 @@ const ResearchCentresSection = () => (
   </div>
 );
 
-/* ─── MDRF TAB ─── */
-const MDRFSection = () => (
-  <div className="space-y-8">
-    <ScrollReveal>
-      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title={mdrfData.title} />
-        <p className="text-muted-foreground leading-relaxed mb-4">{mdrfData.about}</p>
-        <p className="text-muted-foreground leading-relaxed mb-4">{mdrfData.platform}</p>
-        <a href="https://mits.ac.in/mdrf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
-          <ExternalLink className="w-4 h-4" /> Visit MDRF Portal
-        </a>
-      </div>
-    </ScrollReveal>
 
-    <ScrollReveal delay={0.05}>
-      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Purpose" />
-        <p className="text-muted-foreground text-sm leading-relaxed mb-3">{mdrfData.purpose}</p>
-        <p className="text-muted-foreground text-sm leading-relaxed mb-3">{mdrfData.industryPerspective}</p>
-        <p className="text-muted-foreground text-sm leading-relaxed">{mdrfData.societalImpact}</p>
-      </div>
-    </ScrollReveal>
 
-    <ScrollReveal delay={0.1}>
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-card border border-border rounded-2xl p-6">
-          <SectionHeading title="Objectives" />
-          <ul className="space-y-2">
-            {mdrfData.objectives.map((obj, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <span>{obj}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="bg-card border border-border rounded-2xl p-6">
-          <SectionHeading title="Goals" />
-          <ul className="space-y-2">
-            {mdrfData.goals.map((g, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <span>{g}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </ScrollReveal>
-  </div>
-);
 
 /* ─── MITS FOUNDATION TAB ─── */
 const FoundationSection = () => (
@@ -1153,6 +1105,88 @@ const FoundationSection = () => (
   </div>
 );
 
+/* ─── MDRF TAB ─── */
+const MDRFSection = () => (
+  <div className="space-y-6">
+    {/* Header */}
+    <ScrollReveal>
+      <div className="bg-gradient-to-br from-blue-50 dark:from-blue-950/30 via-background to-indigo-50 dark:to-indigo-950/10 border border-border rounded-2xl p-6 md:p-8">
+        <div className="flex items-start gap-4 mb-5">
+          <div className="w-14 h-14 rounded-2xl bg-blue-600/15 flex items-center justify-center shrink-0">
+            <Globe className="w-7 h-7 text-blue-600" />
+          </div>
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Multidisciplinary Research Forum (MDRF)</h2>
+            <p className="text-xs text-blue-700 dark:text-blue-400 font-semibold mt-1 uppercase tracking-wider">Constituted 2024 • Cross-Disciplinary Research • MITS Deemed University</p>
+          </div>
+        </div>
+        <p className="text-muted-foreground leading-relaxed text-sm">
+          The Multidisciplinary Research Forum (MDRF) at Madanapalle Institute of Technology &amp; Science (MITS), Deemed to be University, was constituted in 2024 with the vision of fostering collaborative research across diverse engineering and science disciplines.
+        </p>
+        <p className="text-muted-foreground leading-relaxed text-sm mt-3">
+          The forum serves as a unified platform that brings together faculty, researchers, and students to address complex real-world challenges through integrated knowledge and innovative approaches. MDRF promotes a culture of research synergy, interdisciplinary collaboration, and knowledge sharing, aligned with national priorities and emerging global technological trends.
+        </p>
+      </div>
+    </ScrollReveal>
+
+    {/* Purpose */}
+    <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Purpose" />
+        <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+          <p>The Multidisciplinary Research Forum (MDRF) aims to create a cohesive research ecosystem where expertise from Civil, Mechanical, Electrical, Electronics, and Computer Science disciplines is integrated to solve complex engineering and societal problems. By fostering collaboration across domains, the forum enhances academic learning, promotes innovative thinking, and improves the overall quality of research and curriculum delivery.</p>
+          <p>From an industry perspective, MDRF supports the development of practical, scalable, and technology-driven solutions by integrating core engineering knowledge with modern tools such as automation, data analytics, artificial intelligence, and sustainable practices. This approach bridges the gap between academia and industry, strengthens consultancy and funded research, and enhances employability.</p>
+          <p>In terms of societal impact, the forum focuses on addressing critical challenges such as sustainable infrastructure, renewable energy, environmental conservation, smart systems, and healthcare technologies. By combining multidisciplinary expertise, MDRF facilitates the development of innovative, cost-effective, and socially relevant solutions that contribute to sustainable development and societal well-being.</p>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    {/* Objectives + Goals */}
+    <ScrollReveal delay={0.08}>
+      <div className="grid lg:grid-cols-2 gap-6">
+        {/* Objectives */}
+        <div className="bg-card border border-border rounded-2xl p-6">
+          <SectionHeading title="Objectives" />
+          <ul className="space-y-3">
+            {[
+              "To promote collaborative research across diverse departments and disciplines.",
+              "To identify societal and industrial problems and develop Interdisciplinary Research solutions.",
+              "To strengthen the University's research ecosystem on thrust / high priority areas through seminars, workshops, and capacity-building activities under this forum.",
+              "To encourage faculty to actively submit the interdisciplinary research proposals to national/international funding agencies.",
+            ].map((obj, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-blue-600/15 flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="text-blue-700 dark:text-blue-400 text-[11px] font-bold">{i + 1}</span>
+                </div>
+                <span className="text-sm text-muted-foreground leading-snug">{obj}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* Goals */}
+        <div className="bg-card border border-border rounded-2xl p-6">
+          <SectionHeading title="Goals" />
+          <ul className="space-y-3">
+            {[
+              "To promote a culture of regular research talks and scholarly discussions.",
+              "To mentor young researchers, early-career faculty and students.",
+              "To foster strong partnerships with industries, research labs, and universities for joint research.",
+              "To establish interdisciplinary research clusters addressing contemporary societal and technological challenges.",
+              "To secure external research funding through multidisciplinary project proposals to national/international funding agencies (DST, ANRF, MSME, AICTE, Industry etc.).",
+              "To enhance the research output and impact through collaborative projects and high quality publications.",
+            ].map((goal, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <ChevronRight className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                <span className="text-sm text-muted-foreground leading-snug">{goal}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+);
+
 /* ─── WWRC TAB ─── */
 const WWRCSection = () => {
   const [activeWwrc, setActiveWwrc] = useState<string>("about");
@@ -1183,14 +1217,14 @@ const WWRCSection = () => {
     <div className="space-y-6">
       {/* Header card */}
       <ScrollReveal>
-        <div className="bg-gradient-to-br from-green-950/30 via-background to-emerald-900/10 border border-border rounded-2xl p-6 md:p-8">
+        <div className="bg-gradient-to-br from-green-50 dark:from-green-950/30 via-background to-emerald-50 dark:to-emerald-900/10 border border-border rounded-2xl p-6 md:p-8">
           <div className="flex items-start gap-4 mb-4">
-            <div className="w-14 h-14 rounded-2xl bg-green-500/15 flex items-center justify-center shrink-0">
-              <Recycle className="w-7 h-7 text-green-500" />
+            <div className="w-14 h-14 rounded-2xl bg-green-600/15 flex items-center justify-center shrink-0">
+              <Recycle className="w-7 h-7 text-green-700 dark:text-green-400" />
             </div>
             <div>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Waste to Wealth Research Centre (W2WRC)</h2>
-              <p className="text-xs text-green-500 font-semibold mt-1 uppercase tracking-wider">Circular Economy • Waste Valorization • Sustainable Innovation</p>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Waste to Wealth Research Centre (WWRC)</h2>
+              <p className="text-xs text-green-700 dark:text-green-400 font-semibold mt-1 uppercase tracking-wider">Circular Economy • Waste Valorization • Sustainable Innovation</p>
             </div>
           </div>
           <p className="text-muted-foreground leading-relaxed text-sm">
@@ -1213,7 +1247,7 @@ const WWRCSection = () => {
                 onClick={() => setActiveWwrc(t.id)}
                 className={`whitespace-nowrap px-5 py-3.5 text-sm font-semibold transition-colors shrink-0 border-b-2 ${
                   activeWwrc === t.id
-                    ? "border-green-500 text-green-600 bg-green-500/5"
+                    ? "border-green-600 text-green-700 dark:text-green-400 bg-green-600/8"
                     : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 }`}
               >
@@ -1274,9 +1308,9 @@ const WWRCSection = () => {
                     "Industrial & Hazardous Waste Valorization",
                     "Circular Economy Modelling & Policy Innovation",
                   ].map((area, i) => (
-                    <li key={i} className="flex items-start gap-3 bg-green-500/5 border border-green-500/20 rounded-xl p-4">
-                      <div className="w-7 h-7 rounded-full bg-green-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-600 text-xs font-bold">{i + 1}</span>
+                    <li key={i} className="flex items-start gap-3 bg-green-50 dark:bg-green-500/5 border border-green-200 dark:border-green-500/20 rounded-xl p-4">
+                      <div className="w-7 h-7 rounded-full bg-green-200 dark:bg-green-500/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="text-green-800 dark:text-green-400 text-xs font-bold">{i + 1}</span>
                       </div>
                       <span className="text-sm text-foreground font-medium leading-snug">{area}</span>
                     </li>
@@ -1301,7 +1335,7 @@ const WWRCSection = () => {
                     <tbody>
                       {projects.map((p, i) => (
                         <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
-                          <td className="px-4 py-3 font-bold text-green-600 text-center">{p.sno}</td>
+                          <td className="px-4 py-3 font-bold text-green-700 dark:text-green-400 text-center">{p.sno}</td>
                           <td className="px-4 py-3 whitespace-nowrap font-medium text-foreground">{p.year}</td>
                           <td className="px-4 py-3 text-muted-foreground leading-relaxed">{p.title}</td>
                           <td className="px-4 py-3 whitespace-nowrap font-medium text-foreground">{p.team}</td>
@@ -1451,6 +1485,7 @@ const Research = () => {
               <TabsContent value="innovation"><InnovationSection /></TabsContent>
 
               <TabsContent value="foundation"><FoundationSection /></TabsContent>
+              <TabsContent value="mdrf"><MDRFSection /></TabsContent>
               <TabsContent value="wwrc"><WWRCSection /></TabsContent>
             </Tabs>
           </div>
