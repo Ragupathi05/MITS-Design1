@@ -1204,11 +1204,8 @@ const MDRFSection = () => {
   ];
 
   const mdrfGallery = [
-    { src: "https://mits.ac.in/public/uploads/research/ad-1.JPG", title: "MDRF Event 1" },
-    { src: "https://mits.ac.in/public/uploads/research/ad-2.JPG", title: "MDRF Event 2" },
-    { src: "https://mits.ac.in/public/uploads/research/ad-4.JPG", title: "MDRF Workshop" },
-    { src: "https://mits.ac.in/public/uploads/research/ad-5.JPG", title: "MDRF Research Presentation" },
-    { src: "https://mits.ac.in/public/uploads/research/ad-6.JPG", title: "MDRF Collaboration" },
+    { src: "https://mits.ac.in/public/uploads/event/mdrf-1.jpeg", title: "MDRF Presentation by Dr. G. Bala Narasimha" },
+    { src: "https://mits.ac.in/public/uploads/event/mdrf-2.jpeg", title: "MDRF Seminar & Faculty Discussion" },
   ];
 
   return (
@@ -1560,15 +1557,36 @@ const MDRFSection = () => {
             {activeMdrf === "projects" && (
               <div className="space-y-6">
                 <div>
-                  <SectionHeading title="MDRF Interdisciplinary Projects" subtitle="Active and completed collaborative multidisciplinary research projects." />
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Projects under MDRF integrate core engineering disciplines (Civil, Mechanical, EEE, ECE, CSE) and Basic Sciences to address societal and industrial challenges.
-                  </p>
-                </div>
-                <div className="border border-border rounded-xl p-5 bg-card">
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    For a complete list of ongoing sponsored projects across all departments, please navigate to the main <strong>Projects</strong> tab on the Research portal.
-                  </p>
+                  <h3 className="font-display text-2xl font-bold mb-4">Projects</h3>
+                  <div className="overflow-x-auto rounded-xl border border-border">
+                    <table className="w-full text-sm">
+                      <thead className="bg-primary/10 border-b border-border">
+                        <tr>
+                          <th className="text-center px-4 py-3 font-semibold text-foreground whitespace-nowrap">S.No</th>
+                          <th className="text-center px-4 py-3 font-semibold text-foreground whitespace-nowrap">Academic Year</th>
+                          <th className="text-left px-4 py-3 font-semibold text-foreground">Title of the Project</th>
+                          <th className="text-left px-4 py-3 font-semibold text-foreground whitespace-nowrap">Team</th>
+                          <th className="text-center px-4 py-3 font-semibold text-foreground whitespace-nowrap">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-border/50 bg-background">
+                          <td className="px-4 py-3 font-bold text-primary text-center">1.</td>
+                          <td className="px-4 py-3 text-center whitespace-nowrap font-medium text-foreground">2025-26</td>
+                          <td className="px-4 py-3 text-foreground leading-relaxed">
+                            Investigation of Nanofluid-Coated SMA Actuators to Achieve Rapid Cooling Cycles and Enhanced Functional Durability
+                          </td>
+                          <td className="px-4 py-3 whitespace-nowrap font-medium text-foreground">Dr. G. Bala Narasimha</td>
+                          <td className="px-4 py-3 text-center">
+                            <span className="inline-flex items-center gap-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-400/30 text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap">
+                              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                              Ongoing
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             )}
@@ -1577,14 +1595,26 @@ const MDRFSection = () => {
             {activeMdrf === "gallery" && (
               <div className="space-y-6">
                 <div>
-                  <SectionHeading title="MDRF Event & Activity Gallery" />
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-                  {mdrfGallery.map((img, i) => (
-                    <div key={i} className="aspect-video rounded-lg overflow-hidden border border-border bg-muted">
-                      <img src={img.src} alt={img.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-                    </div>
-                  ))}
+                  <h3 className="font-display text-2xl font-bold mb-4">Gallery</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {mdrfGallery.map((img, i) => (
+                      <div key={i} className="rounded-xl overflow-hidden border border-border bg-muted group shadow-sm">
+                        <div className="aspect-[4/3] overflow-hidden">
+                          <img
+                            src={img.src}
+                            alt={img.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).src = "https://placehold.co/600x450/1e293b/38bdf8?text=MDRF+Gallery";
+                            }}
+                          />
+                        </div>
+                        <div className="p-3 bg-card border-t border-border">
+                          <p className="text-xs font-medium text-foreground text-center">{img.title}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
@@ -1592,25 +1622,37 @@ const MDRFSection = () => {
             {/* 9 — Contact */}
             {activeMdrf === "contact" && (
               <div className="space-y-6">
-                <div>
-                  <SectionHeading title="Contact Multidisciplinary Research Forum (MDRF)" />
+                <div className="bg-primary/5 border border-primary/20 rounded-xl p-3 md:p-4">
+                  <h3 className="font-display text-xl font-bold text-primary mb-1">Contact us</h3>
                 </div>
-                <div className="border border-border rounded-xl p-6 bg-card max-w-xl">
-                  <h4 className="font-bold text-foreground text-base mb-2">MDRF Office / R&amp;D Cell</h4>
-                  <p className="text-muted-foreground text-xs leading-relaxed mb-4">
-                    Madanapalle Institute of Technology &amp; Science (MITS)<br />
-                    Deemed to be University<br />
-                    Madanapalle-Kadiri Road, Angallu, Madanapalle - 517325<br />
-                    Annamayya District, Andhra Pradesh, India.
-                  </p>
-                  <div className="space-y-2 text-xs text-muted-foreground">
+                <div className="border border-border rounded-xl p-6 bg-card max-w-2xl space-y-4">
+                  <div>
+                    <h4 className="font-bold text-foreground text-lg">Dr. G. Bala Narasimha</h4>
+                    <p className="text-muted-foreground text-sm font-medium">Co-ordinator</p>
+                  </div>
+
+                  <div className="space-y-2 text-sm text-muted-foreground border-t border-border/60 pt-4">
                     <p className="flex items-center gap-2">
-                      <Phone className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                      <span>+91-8571-280255 / 280706</span>
+                      <Mail className="w-4 h-4 text-primary shrink-0" />
+                      <span>E Mail: <a href="mailto:mdrf@mits.ac.in" className="text-primary hover:underline font-medium">mdrf@mits.ac.in</a></span>
                     </p>
                     <p className="flex items-center gap-2">
-                      <Mail className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                      <span>rdcell@mits.ac.in</span>
+                      <Phone className="w-4 h-4 text-primary shrink-0" />
+                      <span>Phone: +91-8571-280255; 280706</span>
+                    </p>
+                  </div>
+
+                  <div className="border-t border-border/60 pt-4">
+                    <h5 className="font-semibold text-foreground text-sm mb-1.5 flex items-center gap-1.5">
+                      <Building2 className="w-4 h-4 text-primary shrink-0" />
+                      Address :
+                    </h5>
+                    <p className="text-muted-foreground text-xs leading-relaxed pl-5">
+                      Madanapalle Institute of Technology &amp; Science<br />
+                      Deemed to be University<br />
+                      Madanapalle-Kadiri Road<br />
+                      kurabalakota Mandal, Madanapalle-517325<br />
+                      Andhra Pradesh, India
                     </p>
                   </div>
                 </div>
