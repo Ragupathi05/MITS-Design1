@@ -1106,86 +1106,443 @@ const FoundationSection = () => (
 );
 
 /* ─── MDRF TAB ─── */
-const MDRFSection = () => (
-  <div className="space-y-6">
-    {/* Header */}
-    <ScrollReveal>
-      <div className="bg-gradient-to-br from-blue-50 dark:from-blue-950/30 via-background to-indigo-50 dark:to-indigo-950/10 border border-border rounded-2xl p-6 md:p-8">
-        <div className="flex items-start gap-4 mb-5">
-          <div className="w-14 h-14 rounded-2xl bg-blue-600/15 flex items-center justify-center shrink-0">
-            <Globe className="w-7 h-7 text-blue-600" />
-          </div>
-          <div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Multidisciplinary Research Forum (MDRF)</h2>
-            <p className="text-xs text-blue-700 dark:text-blue-400 font-semibold mt-1 uppercase tracking-wider">Constituted 2024 • Cross-Disciplinary Research • MITS Deemed University</p>
-          </div>
-        </div>
-        <p className="text-muted-foreground leading-relaxed text-sm">
-          The Multidisciplinary Research Forum (MDRF) at Madanapalle Institute of Technology &amp; Science (MITS), Deemed to be University, was constituted in 2024 with the vision of fostering collaborative research across diverse engineering and science disciplines.
-        </p>
-        <p className="text-muted-foreground leading-relaxed text-sm mt-3">
-          The forum serves as a unified platform that brings together faculty, researchers, and students to address complex real-world challenges through integrated knowledge and innovative approaches. MDRF promotes a culture of research synergy, interdisciplinary collaboration, and knowledge sharing, aligned with national priorities and emerging global technological trends.
-        </p>
-      </div>
-    </ScrollReveal>
+const MDRFSection = () => {
+  const [activeMdrf, setActiveMdrf] = useState<string>("about");
 
-    {/* Purpose */}
-    <ScrollReveal delay={0.05}>
-      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Purpose" />
-        <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-          <p>The Multidisciplinary Research Forum (MDRF) aims to create a cohesive research ecosystem where expertise from Civil, Mechanical, Electrical, Electronics, and Computer Science disciplines is integrated to solve complex engineering and societal problems. By fostering collaboration across domains, the forum enhances academic learning, promotes innovative thinking, and improves the overall quality of research and curriculum delivery.</p>
-          <p>From an industry perspective, MDRF supports the development of practical, scalable, and technology-driven solutions by integrating core engineering knowledge with modern tools such as automation, data analytics, artificial intelligence, and sustainable practices. This approach bridges the gap between academia and industry, strengthens consultancy and funded research, and enhances employability.</p>
-          <p>In terms of societal impact, the forum focuses on addressing critical challenges such as sustainable infrastructure, renewable energy, environmental conservation, smart systems, and healthcare technologies. By combining multidisciplinary expertise, MDRF facilitates the development of innovative, cost-effective, and socially relevant solutions that contribute to sustainable development and societal well-being.</p>
-        </div>
-      </div>
-    </ScrollReveal>
+  const mdrfTabs = [
+    { id: "about",        label: "About MDRF" },
+    { id: "admin",        label: "Administrative Support" },
+    { id: "clusters",     label: "Research Areas & Clusters" },
+    { id: "partnerships", label: "Partnerships / Collaborations" },
+    { id: "facilities",   label: "Facilities" },
+    { id: "outcomes",     label: "Outcomes" },
+    { id: "projects",     label: "Projects" },
+    { id: "gallery",      label: "Gallery" },
+    { id: "contact",      label: "Contact" },
+  ];
 
-    {/* Objectives + Goals */}
-    <ScrollReveal delay={0.08}>
-      <div className="grid lg:grid-cols-2 gap-6">
-        {/* Objectives */}
-        <div className="bg-card border border-border rounded-2xl p-6">
-          <SectionHeading title="Objectives" />
-          <ul className="space-y-3">
-            {[
-              "To promote collaborative research across diverse departments and disciplines.",
-              "To identify societal and industrial problems and develop Interdisciplinary Research solutions.",
-              "To strengthen the University's research ecosystem on thrust / high priority areas through seminars, workshops, and capacity-building activities under this forum.",
-              "To encourage faculty to actively submit the interdisciplinary research proposals to national/international funding agencies.",
-            ].map((obj, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-blue-600/15 flex items-center justify-center shrink-0 mt-0.5">
-                  <span className="text-blue-700 dark:text-blue-400 text-[11px] font-bold">{i + 1}</span>
+  const thrustAreas = [
+    "High performance materials for Defense Applications",
+    "Bio Materials & devices",
+    "Electrical Vehicle Technology",
+    "Sustainable and Green Technologies",
+    "Semiconductor technologies",
+    "Nano materials and devices",
+    "Smart Technologies",
+  ];
+
+  const deptFacilities = [
+    {
+      dept: "Civil Engineering",
+      desc: "Laboratories for structural engineering, material testing, geotechnical, environmental, and fluid mechanics. Supports research in sustainable construction, smart infrastructure, surveying, and GIS.",
+      link: "https://mits.ac.in/public/uploads/departments/Civil Engineering Labs.pdf",
+      label: "Civil Research Facilities (PDF)",
+    },
+    {
+      dept: "Mechanical Engineering",
+      desc: "Laboratories for Design, Product development, Conventional Manufacturing, Advanced manufacturing, Thermal engineering, Automation and Robotics.",
+      link: "https://mits.ac.in/assets/pdf/mech/Research Labs in the Department ME.pdf",
+      label: "ME Research Facilities (PDF)",
+    },
+    {
+      dept: "Electrical & Electronics Engineering (EEE)",
+      desc: "Laboratories for power systems, electrical machines, control systems, power electronics, and circuit analysis. Focus on renewable energy and energy management systems.",
+      link: "https://mits.ac.in/assets/pdf/eee/Research & Industry Supported Labs  EEE.pdf",
+      label: "EEE Research Facilities (PDF)",
+    },
+    {
+      dept: "Electronics and Communication Engineering (ECE)",
+      desc: "Laboratories for embedded systems, wireless communication, signal processing, VLSI, circuit design, IoT, and smart systems hardware testing.",
+      link: "https://mits.ac.in/public/uploads/departments/labs.pdf",
+      label: "ECE Research Facilities (PDF)",
+    },
+    {
+      dept: "Computer Science & Engineering (CSE)",
+      desc: "Advanced computer labs for programming, data science, AI, machine learning, cloud computing, cybersecurity, and data analytics.",
+      links: [
+        { label: "CSE Lab Details", url: "https://mits.ac.in/assets/pdf/cse/CSE%20Lab%20Details.pdf" },
+        { label: "CSE-AI Lab Details", url: "https://mits.ac.in/assets/pdf/cse/AI LAB DETAILS.pdf" },
+        { label: "CSE-CyberSecurity Lab Details", url: "https://mits.ac.in/assets/pdf/cse/Lab%20Details%20Dept.%20of%20CSE(Cyber%20Security).pdf" },
+        { label: "CST Research Facilities", url: "https://mits.ac.in/public/uploads/departments/8787aafa08f6df23fb7e650ed58d904d.pdf" },
+        { label: "CSE-DS Lab Details", url: "https://mits.ac.in/public/uploads/departments/DS_Lab Softwares.pdf" },
+      ],
+    },
+    {
+      dept: "Chemistry",
+      desc: "Laboratories for chemical analysis, material synthesis, environmental chemistry, energy materials, corrosion studies, and material science.",
+      link: "https://mits.ac.in/assets/pdf/bsh/Research%20Facilities%20-%20Chemistry.pdf",
+      label: "Chemistry Research Facilities (PDF)",
+    },
+    {
+      dept: "Physics",
+      desc: "Laboratories for experimental and applied physics, optics, advanced materials, nanotechnology, and basic instrumentation.",
+      link: "https://mits.ac.in/assets/pdf/bsh/Research Facilities - Physics.pdf",
+      label: "Physics Research Facilities (PDF)",
+    },
+  ];
+
+  const mdrfGallery = [
+    { src: "https://mits.ac.in/public/uploads/research/ad-1.JPG", title: "MDRF Event 1" },
+    { src: "https://mits.ac.in/public/uploads/research/ad-2.JPG", title: "MDRF Event 2" },
+    { src: "https://mits.ac.in/public/uploads/research/ad-4.JPG", title: "MDRF Workshop" },
+    { src: "https://mits.ac.in/public/uploads/research/ad-5.JPG", title: "MDRF Research Presentation" },
+    { src: "https://mits.ac.in/public/uploads/research/ad-6.JPG", title: "MDRF Collaboration" },
+  ];
+
+  return (
+    <div className="space-y-6">
+      {/* Header banner */}
+      <ScrollReveal>
+        <div className="bg-gradient-to-br from-blue-50 dark:from-blue-950/30 via-background to-indigo-50 dark:to-indigo-950/10 border border-border rounded-2xl p-6 md:p-8">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-14 h-14 rounded-2xl bg-blue-600/15 flex items-center justify-center shrink-0">
+              <Globe className="w-7 h-7 text-blue-600 dark:text-blue-400" />
+            </div>
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Multidisciplinary Research Forum (MDRF)</h2>
+              <p className="text-xs text-blue-700 dark:text-blue-400 font-semibold mt-1 uppercase tracking-wider">Constituted 2024 • Cross-Disciplinary Synergies • MITS Deemed University</p>
+            </div>
+          </div>
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            The Multidisciplinary Research Forum (MDRF) at Madanapalle Institute of Technology &amp; Science (MITS), Deemed to be University, was constituted in 2024 with the vision of fostering collaborative research across diverse engineering and science disciplines.
+          </p>
+        </div>
+      </ScrollReveal>
+
+      {/* Sub-tab Navigation */}
+      <ScrollReveal delay={0.05}>
+        <div className="bg-card border border-border rounded-2xl overflow-hidden">
+          <div className="flex overflow-x-auto border-b border-border scrollbar-none">
+            {mdrfTabs.map((t) => (
+              <button
+                key={t.id}
+                onClick={() => setActiveMdrf(t.id)}
+                className={`whitespace-nowrap px-4 py-3.5 text-xs md:text-sm font-semibold transition-colors shrink-0 border-b-2 ${
+                  activeMdrf === t.id
+                    ? "border-blue-600 text-blue-700 dark:text-blue-400 bg-blue-600/8"
+                    : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                }`}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Sub-tab Content Panels */}
+          <div className="p-6 md:p-8">
+
+            {/* 1 — About MDRF */}
+            {activeMdrf === "about" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="Multidisciplinary Research @ MITS" />
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                    The Multidisciplinary Research Forum (MDRF) at Madanapalle Institute of Technology &amp; Science (MITS), Deemed to be University, was constituted in 2024 with the vision of fostering collaborative research across diverse engineering and science disciplines.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    The forum serves as a unified platform that brings together faculty, researchers, and students to address complex real-world challenges through integrated knowledge and innovative approaches. MDRF promotes a culture of research synergy, interdisciplinary collaboration, and knowledge sharing, aligned with national priorities and emerging global technological trends.
+                  </p>
                 </div>
-                <span className="text-sm text-muted-foreground leading-snug">{obj}</span>
-              </li>
-            ))}
-          </ul>
+
+                <div className="border-t border-border/60 pt-6">
+                  <SectionHeading title="Purpose" />
+                  <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                    <p><strong>Academic & Research Ecosystem:</strong> The forum aims to create a cohesive research ecosystem where expertise from Civil, Mechanical, Electrical, Electronics, and Computer Science disciplines is integrated to solve complex engineering and societal problems.</p>
+                    <p><strong>Industry Alignment:</strong> MDRF supports the development of practical, scalable, and technology-driven solutions by integrating core engineering knowledge with modern tools such as automation, data analytics, artificial intelligence, and sustainable practices.</p>
+                    <p><strong>Societal Impact:</strong> Focuses on addressing critical challenges such as sustainable infrastructure, renewable energy, environmental conservation, smart systems, and healthcare technologies.</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 border-t border-border/60 pt-6">
+                  <div className="bg-muted/30 border border-border rounded-xl p-5">
+                    <SectionHeading title="Objectives" />
+                    <ul className="space-y-2.5">
+                      {[
+                        "To promote collaborative research across diverse departments and disciplines.",
+                        "To identify societal and industrial problems and develop Interdisciplinary Research solutions.",
+                        "To strengthen the University's research ecosystem on thrust / high priority areas through seminars, workshops, and capacity-building activities.",
+                        "To encourage faculty to actively submit interdisciplinary research proposals to national/international funding agencies.",
+                      ].map((obj, i) => (
+                        <li key={i} className="flex items-start gap-2.5 text-xs md:text-sm text-muted-foreground">
+                          <ChevronRight className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                          <span>{obj}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="bg-muted/30 border border-border rounded-xl p-5">
+                    <SectionHeading title="Goals" />
+                    <ul className="space-y-2.5">
+                      {[
+                        "To promote a culture of regular research talks and scholarly discussions.",
+                        "To mentor young researchers, early-career faculty, and students.",
+                        "To foster strong partnerships with industries, research labs, and universities for joint research.",
+                        "To establish interdisciplinary research clusters addressing contemporary societal and technological challenges.",
+                        "To secure external research funding through multidisciplinary project proposals (DST, ANRF, MSME, AICTE, Industry).",
+                        "To enhance research output and impact through collaborative projects and high-quality publications.",
+                      ].map((goal, i) => (
+                        <li key={i} className="flex items-start gap-2.5 text-xs md:text-sm text-muted-foreground">
+                          <ChevronRight className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                          <span>{goal}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* 2 — Administrative Support */}
+            {activeMdrf === "admin" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="Administrative Support Framework" />
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    MITS has established a supportive administrative framework to promote interdisciplinary research collaborations. At MITS, interdisciplinary research activities are coordinated through the Research &amp; Development (R&amp;D) Cell under institutional leadership.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="border border-border rounded-xl p-5 bg-card">
+                    <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">1</span>
+                      Research Clusters
+                    </h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">
+                      Brings together faculty and researchers from different departments to work collaboratively on common research themes, ensuring seamless integration of cross-domain knowledge.
+                    </p>
+                  </div>
+
+                  <div className="border border-border rounded-xl p-5 bg-card">
+                    <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">2</span>
+                      Research Funding
+                    </h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">
+                      R&amp;D Cell identifies national/international funding, provides internal Seed Funding Initiatives for early prototypes, and offers Institutional Research Grants.
+                    </p>
+                  </div>
+
+                  <div className="border border-border rounded-xl p-5 bg-card">
+                    <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">3</span>
+                      Training & Mentorship
+                    </h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">
+                      Regular Workshops, Seminars, Mentorship Programs, Faculty Development Programs (FDPs), and Proposal Writing Workshops to help submit competitive proposals.
+                    </p>
+                  </div>
+
+                  <div className="border border-border rounded-xl p-5 bg-card">
+                    <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">4</span>
+                      Interdisciplinary Collaborations
+                    </h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">
+                      Knowledge Exchange symposiums, interdepartmental projects, industry &amp; institutional partnerships, and international joint research programs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="border border-border rounded-xl p-5 bg-blue-50/50 dark:bg-blue-950/20">
+                  <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">5</span>
+                    Facilities & Infrastructure Support
+                  </h4>
+                  <p className="text-muted-foreground text-xs leading-relaxed">
+                    Provides access to advanced interdepartmental labs, comprehensive digital library journal access, and dedicated Intellectual Property (IPR) &amp; Innovation support for filing patents.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* 3 — Research Areas & Clusters */}
+            {activeMdrf === "clusters" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="Thrust Areas & Research Clusters" subtitle="High-priority interdisciplinary research domains identified under MDRF." />
+                </div>
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {thrustAreas.map((area, index) => (
+                    <div key={index} className="border border-border rounded-xl p-4 bg-muted/20 hover:bg-muted/40 transition-colors flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-blue-600/15 text-blue-600 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                        0{index + 1}
+                      </div>
+                      <span className="text-sm font-medium text-foreground leading-snug">{area}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 4 — Partnerships / Collaborations */}
+            {activeMdrf === "partnerships" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="Partnerships & Research Collaborations" />
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    MDRF actively promotes strategic alliances with premier academic institutions, national research centers, and industry leaders to conduct joint research, exchange expertise, and solve industrial problems.
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="border border-border rounded-xl p-5 bg-card">
+                    <h4 className="font-semibold text-foreground text-sm mb-2">Industry Connect</h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">Consultancy, sponsored research projects, and collaborative lab setups with core engineering & tech industries.</p>
+                  </div>
+                  <div className="border border-border rounded-xl p-5 bg-card">
+                    <h4 className="font-semibold text-foreground text-sm mb-2">Academic Alliances</h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">Joint publications, co-guided Ph.D. research, and faculty/student knowledge exchange programs with reputed universities.</p>
+                  </div>
+                  <div className="border border-border rounded-xl p-5 bg-card">
+                    <h4 className="font-semibold text-foreground text-sm mb-2">National Research Labs</h4>
+                    <p className="text-muted-foreground text-xs leading-relaxed">Collaborative proposal submissions to DST, ANRF, AICTE, MSME, and other funding bodies.</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* 5 — Facilities */}
+            {activeMdrf === "facilities" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="Departmental Facilities & Infrastructure for MDRF" subtitle="Explore research facilities and downloadable laboratory details across departments." />
+                </div>
+                <div className="grid gap-4">
+                  {deptFacilities.map((fac, idx) => (
+                    <div key={idx} className="border border-border rounded-xl p-5 bg-card hover:border-primary/40 transition-colors">
+                      <h4 className="font-semibold text-foreground text-base mb-1">{fac.dept}</h4>
+                      <p className="text-muted-foreground text-xs leading-relaxed mb-3">{fac.desc}</p>
+                      {fac.link && (
+                        <a
+                          href={fac.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          {fac.label}
+                        </a>
+                      )}
+                      {fac.links && (
+                        <div className="flex flex-wrap gap-2 pt-1">
+                          {fac.links.map((lk, li) => (
+                            <a
+                              key={li}
+                              href={lk.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-xs font-medium bg-muted px-2.5 py-1 rounded-md text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                            >
+                              <ExternalLink className="w-3 h-3" />
+                              {lk.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 6 — Outcomes */}
+            {activeMdrf === "outcomes" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="MDRF Key Research Outcomes" />
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    The Multidisciplinary Research Forum strives to deliver tangible outcomes across high-impact publications, patents, interdisciplinary grants, and technological solutions.
+                  </p>
+                </div>
+                <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                  <div className="border border-border rounded-xl p-4 bg-muted/20">
+                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">3,080+</p>
+                    <p className="text-xs text-muted-foreground mt-1 font-medium">Scopus Publications</p>
+                  </div>
+                  <div className="border border-border rounded-xl p-4 bg-muted/20">
+                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">₹18.44 Cr</p>
+                    <p className="text-xs text-muted-foreground mt-1 font-medium">Funded Research Projects</p>
+                  </div>
+                  <div className="border border-border rounded-xl p-4 bg-muted/20">
+                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">200+</p>
+                    <p className="text-xs text-muted-foreground mt-1 font-medium">Patents Published & Granted</p>
+                  </div>
+                  <div className="border border-border rounded-xl p-4 bg-muted/20">
+                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">H-Index 70</p>
+                    <p className="text-xs text-muted-foreground mt-1 font-medium">Institutional Impact</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* 7 — Projects */}
+            {activeMdrf === "projects" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="MDRF Interdisciplinary Projects" subtitle="Active and completed collaborative multidisciplinary research projects." />
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Projects under MDRF integrate core engineering disciplines (Civil, Mechanical, EEE, ECE, CSE) and Basic Sciences to address societal and industrial challenges.
+                  </p>
+                </div>
+                <div className="border border-border rounded-xl p-5 bg-card">
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    For a complete list of ongoing sponsored projects across all departments, please navigate to the main <strong>Projects</strong> tab on the Research portal.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* 8 — Gallery */}
+            {activeMdrf === "gallery" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="MDRF Event & Activity Gallery" />
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+                  {mdrfGallery.map((img, i) => (
+                    <div key={i} className="aspect-video rounded-lg overflow-hidden border border-border bg-muted">
+                      <img src={img.src} alt={img.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 9 — Contact */}
+            {activeMdrf === "contact" && (
+              <div className="space-y-6">
+                <div>
+                  <SectionHeading title="Contact Multidisciplinary Research Forum (MDRF)" />
+                </div>
+                <div className="border border-border rounded-xl p-6 bg-card max-w-xl">
+                  <h4 className="font-bold text-foreground text-base mb-2">MDRF Office / R&amp;D Cell</h4>
+                  <p className="text-muted-foreground text-xs leading-relaxed mb-4">
+                    Madanapalle Institute of Technology &amp; Science (MITS)<br />
+                    Deemed to be University<br />
+                    Madanapalle-Kadiri Road, Angallu, Madanapalle - 517325<br />
+                    Annamayya District, Andhra Pradesh, India.
+                  </p>
+                  <div className="space-y-2 text-xs text-muted-foreground">
+                    <p className="flex items-center gap-2">
+                      <Phone className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                      <span>+91-8571-280255 / 280706</span>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <Mail className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                      <span>rdcell@mits.ac.in</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+          </div>
         </div>
-        {/* Goals */}
-        <div className="bg-card border border-border rounded-2xl p-6">
-          <SectionHeading title="Goals" />
-          <ul className="space-y-3">
-            {[
-              "To promote a culture of regular research talks and scholarly discussions.",
-              "To mentor young researchers, early-career faculty and students.",
-              "To foster strong partnerships with industries, research labs, and universities for joint research.",
-              "To establish interdisciplinary research clusters addressing contemporary societal and technological challenges.",
-              "To secure external research funding through multidisciplinary project proposals to national/international funding agencies (DST, ANRF, MSME, AICTE, Industry etc.).",
-              "To enhance the research output and impact through collaborative projects and high quality publications.",
-            ].map((goal, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <ChevronRight className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
-                <span className="text-sm text-muted-foreground leading-snug">{goal}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </ScrollReveal>
-  </div>
-);
+      </ScrollReveal>
+    </div>
+  );
+};
 
 /* ─── WWRC TAB ─── */
 const WWRCSection = () => {
