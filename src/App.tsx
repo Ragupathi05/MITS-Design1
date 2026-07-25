@@ -51,6 +51,7 @@ const NationalAdmissionsProcedure = lazy(() => import("./pages/NationalAdmission
 const InternationalAdmissionsProcedure = lazy(() => import("./pages/InternationalAdmissionsProcedure"));
 const Cells = lazy(() => import("./pages/Cells"));
 const CellDetail = lazy(() => import("./pages/CellDetail"));
+const Careers = lazy(() => import("./pages/Careers"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -134,6 +135,8 @@ const App = () => (
             <Route path="/placements/team/:slug" element={<PlacementFacultyProfilePage />} />
             <Route path="/cells" element={<Cells />} />
             <Route path="/cells/:id" element={<CellDetail />} />
+            <Route path="/career" element={<Careers />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

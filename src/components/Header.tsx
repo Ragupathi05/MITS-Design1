@@ -46,6 +46,7 @@ const navItems: NavItem[] = [
     label: "More",
     href: "/infrastructure",
     children: [
+      { label: "Careers", href: "/career" },
       { label: "Infrastructure", href: "/infrastructure" },
       { label: "International Relations", href: "/international-relations" },
       { label: "MITS Radio", href: "/mits-radio" },
