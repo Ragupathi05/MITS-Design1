@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -300,108 +302,41 @@ const Careers = () => {
 
           {/* TAB 2 — VC POSITION */}
           {activeTab === "vc" && (
-            <div className="space-y-8">
+            <div className="space-y-6">
               <ScrollReveal>
-                {/* Poster container matching official MITS VC poster */}
-                <div className="bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 md:p-12 border border-blue-900/50 shadow-2xl space-y-8">
-                  {/* Header */}
-                  <div className="text-center space-y-3 border-b border-blue-800/50 pb-8">
-                    <span className="inline-block bg-amber-400/20 text-amber-300 border border-amber-400/40 text-xs font-extrabold uppercase px-4 py-1.5 rounded-full tracking-widest">
-                      INVITATION FOR APPLICATIONS
-                    </span>
-                    <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
-                      VICE-CHANCELLOR (VC)
-                    </h2>
-                    <p className="text-lg font-bold text-amber-300">Madanapalle Institute of Technology &amp; Science (MITS)</p>
-                    <p className="text-xs text-slate-300">Deemed to be University under Section 3 of UGC Act, 1956 • Established 1998 • www.mits.ac.in</p>
+                <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl p-2 sm:p-4">
+                  {/* Full VC recruitment poster image */}
+                  <div className="w-full rounded-xl overflow-hidden shadow-md bg-white">
+                    <img
+                      src="https://mits.ac.in/assets/vcposition.jpeg"
+                      alt="MITS Vice-Chancellor Recruitment Poster"
+                      className="w-full h-auto object-contain mx-auto"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = "https://mits.ac.in/assets/images/vcpos.png";
+                      }}
+                    />
                   </div>
 
-                  {/* 4 Cards Grid */}
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-slate-900/80 border border-blue-800/60 rounded-2xl p-6 space-y-2">
-                      <h4 className="font-bold text-amber-300 text-base flex items-center gap-2">
-                        <Landmark className="w-5 h-5 text-amber-300 shrink-0" />
-                        ABOUT THE INSTITUTION
-                      </h4>
-                      <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                        Madanapalle Institute of Technology &amp; Science (MITS), situated in Madanapalle, Andhra Pradesh, was established in 1998 and attained the status of a Deemed to be University in 2025. A premier institution dedicated to academic excellence, research, innovation, industry collaboration, and societal impact.
-                      </p>
-                    </div>
-
-                    <div className="bg-slate-900/80 border border-blue-800/60 rounded-2xl p-6 space-y-2">
-                      <h4 className="font-bold text-amber-300 text-base flex items-center gap-2">
-                        <UserCheck className="w-5 h-5 text-amber-300 shrink-0" />
-                        THE ROLE
-                      </h4>
-                      <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                        MITS invites applications from accomplished academicians for the position of Vice-Chancellor (VC). The incumbent will bring a distinguished research profile, an internationally recognized record of leadership, and a forward-looking vision for global higher education.
-                      </p>
-                    </div>
-
-                    <div className="bg-slate-900/80 border border-blue-800/60 rounded-2xl p-6 space-y-2">
-                      <h4 className="font-bold text-amber-300 text-base flex items-center gap-2">
-                        <Users className="w-5 h-5 text-amber-300 shrink-0" />
-                        CANDIDATE PROFILE
-                      </h4>
-                      <ul className="space-y-1.5 text-slate-300 text-xs sm:text-sm">
-                        <li className="flex items-start gap-2">
-                          <span className="text-amber-300 font-bold">&gt;</span> Exemplify academic excellence and integrity.
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-amber-300 font-bold">&gt;</span> Possess strong governance and strategic management capabilities.
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-amber-300 font-bold">&gt;</span> Effectively motivate and guide faculty, students, and stakeholders.
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-amber-300 font-bold">&gt;</span> Advance the University's mission and international aspirations.
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="bg-slate-900/80 border border-blue-800/60 rounded-2xl p-6 space-y-2">
-                      <h4 className="font-bold text-amber-300 text-base flex items-center gap-2">
-                        <Award className="w-5 h-5 text-amber-300 shrink-0" />
-                        ELIGIBILITY &amp; PREFERENCE
-                      </h4>
-                      <ul className="space-y-1.5 text-slate-300 text-xs sm:text-sm">
-                        <li><strong>• Age:</strong> Candidates around 55 years of age preferred; max age shall not exceed 59 years.</li>
-                        <li><strong>• Qualifications:</strong> As per UGC norms for Vice-Chancellor appointments.</li>
-                        <li><strong>• Experience:</strong> Prior Leadership experience at IIT's / IIM's / IIIT's or universities ranked within top 300 QS World University Rankings.</li>
-                        <li><strong>• Profile:</strong> Distinguished research record with international recognition.</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* REMUNERATION BOX */}
-                  <div className="bg-gradient-to-r from-amber-500/10 via-amber-400/20 to-amber-500/10 border-2 border-amber-400/40 rounded-2xl p-6 text-center space-y-2">
-                    <p className="text-slate-300 text-xs font-bold uppercase tracking-widest">REMUNERATION &amp; COMPENSATION</p>
-                    <h3 className="font-display text-3xl sm:text-4xl font-black text-amber-300">
-                      ANNUAL CTC: ₹1 CRORE
-                    </h3>
-                    <p className="text-slate-300 text-xs font-semibold">Rupees One Crore Only • Benchmark against top global institutions</p>
-                  </div>
-
-                  {/* HOW TO APPLY & DEADLINE */}
-                  <div className="bg-slate-900 border border-blue-800 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                  {/* HOW TO APPLY BAR */}
+                  <div className="bg-[#0b2c5f] text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl mt-6">
                     <div className="space-y-2">
-                      <h4 className="font-bold text-white text-base">HOW TO APPLY</h4>
-                      <p className="text-slate-300 text-xs sm:text-sm">
+                      <h4 className="font-extrabold text-white text-lg sm:text-xl tracking-wide uppercase">HOW TO APPLY</h4>
+                      <p className="text-slate-200 text-xs sm:text-sm">
                         Eligible and interested academic leaders are invited to submit their detailed CV with Vision Statement to:
                       </p>
-                      <a
-                        href="mailto:leadershipsearch@mits.ac.in"
-                        className="inline-flex items-center gap-2 bg-amber-400 text-slate-950 font-bold text-sm px-4 py-2 rounded-lg hover:bg-amber-300 transition-colors mt-1"
-                      >
-                        <Mail className="w-4 h-4" />
-                        leadershipsearch@mits.ac.in
-                      </a>
+                      <div className="pt-1">
+                        <a
+                          href="mailto:leadershipsearch@mits.ac.in"
+                          className="inline-block bg-[#ffd166] text-[#0b2c5f] font-bold text-sm sm:text-base px-6 py-3 rounded-xl hover:bg-amber-300 transition-colors shadow-md"
+                        >
+                          leadershipsearch@mits.ac.in
+                        </a>
+                      </div>
                     </div>
-
-                    <div className="text-center md:text-right border-t md:border-t-0 md:border-l border-blue-800 pt-4 md:pt-0 md:pl-8">
-                      <p className="text-xs text-slate-400 font-medium">LAST DATE FOR APPLICATION</p>
-                      <p className="font-display text-2xl font-extrabold text-amber-300 mt-1">15th MAY 2026</p>
-                      <p className="text-[11px] text-slate-400 mt-2">Leadership Search Committee • +91 91000 80999</p>
+                    <div className="text-center md:text-right shrink-0">
+                      <p className="font-extrabold text-white text-sm sm:text-lg tracking-wider uppercase">
+                        LAST DATE : 15 MAY 2026
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -411,106 +346,41 @@ const Careers = () => {
 
           {/* TAB 3 — DIRECTOR TRAINING & PLACEMENTS */}
           {activeTab === "director-tp" && (
-            <div className="space-y-8">
+            <div className="space-y-6">
               <ScrollReveal>
-                <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-lg">
-                  {/* Poster Image */}
-                  <div className="w-full bg-slate-900 overflow-hidden">
+                <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl p-2 sm:p-4">
+                  {/* Full Director T&P poster image */}
+                  <div className="w-full rounded-xl overflow-hidden shadow-md bg-white">
                     <img
                       src="https://mits.ac.in/assets/dtp5.jpg"
-                      alt="Director Training & Placements Position"
-                      className="w-full h-auto object-cover max-h-[500px]"
+                      alt="Director Training & Placements Position Poster"
+                      className="w-full h-auto object-contain mx-auto"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = "https://placehold.co/1200x500/0f172a/38bdf8?text=Director+-+Training+%26+Placements";
+                        (e.target as HTMLImageElement).src = "https://mits.ac.in/assets/images/dtp.png";
                       }}
                     />
                   </div>
 
-                  {/* Content details */}
-                  <div className="p-6 md:p-8 space-y-8">
-                    <div>
-                      <span className="text-xs font-bold text-primary uppercase tracking-wider">Strategic Executive Leadership Role</span>
-                      <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mt-1">
-                        Director — Training &amp; Placements
-                      </h2>
-                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mt-2">
-                        Madanapalle Institute of Technology and Science (Deemed to be University) invites applications from accomplished Training &amp; Placement leaders and industry professionals for the position of <strong>Director – Training &amp; Placements</strong>. This is a strategic leadership role responsible for driving university placement outcomes, industry partnerships, and student career readiness at a national and global scale.
+                  {/* HOW TO APPLY BAR */}
+                  <div className="bg-[#0b2c5f] text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl mt-6">
+                    <div className="space-y-2">
+                      <h4 className="font-extrabold text-white text-lg sm:text-xl tracking-wide uppercase">HOW TO APPLY</h4>
+                      <p className="text-slate-200 text-xs sm:text-sm">
+                        Eligible and interested Candidates are invited to submit their Application to:
                       </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      {/* Key Responsibilities */}
-                      <div className="bg-muted/30 border border-border rounded-xl p-6 space-y-4">
-                        <h4 className="font-bold text-foreground text-lg flex items-center gap-2">
-                          <CheckCircle2 className="w-5 h-5 text-primary" />
-                          KEY RESPONSIBILITIES
-                        </h4>
-                        <ul className="space-y-3 text-xs sm:text-sm text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary font-bold">•</span>
-                            <span>Lead the training and placement team and transform the Training &amp; Placement ecosystem with a strategic, outcome-driven approach.</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary font-bold">•</span>
-                            <span>Build and maintain strong relationships with top recruiters, MNCs, startups, and global organizations.</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary font-bold">•</span>
-                            <span>Design and implement structured training programs (technical, aptitude, soft skills, career readiness).</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary font-bold">•</span>
-                            <span>Drive internship programs, live industry projects, and pre-placement engagements.</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary font-bold">•</span>
-                            <span>Achieve high placement benchmarks in terms of percentage, CTC, and recruiter diversity.</span>
-                          </li>
-                        </ul>
-                      </div>
-
-                      {/* Eligibility Criteria */}
-                      <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 space-y-4">
-                        <h4 className="font-bold text-primary text-lg flex items-center gap-2">
-                          <GraduationCap className="w-5 h-5 text-primary" />
-                          ELIGIBILITY CRITERIA
-                        </h4>
-                        <ul className="space-y-3 text-xs sm:text-sm text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                            <span><strong>Postgraduate degree (MBA/PGDM preferred)</strong> from a reputed institution; Ph.D. is an added advantage.</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                            <span>Minimum <strong>15–20 years of experience</strong> in Training &amp; Placements / Corporate Relations / Talent Acquisition.</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                            <span>Demonstrated success in achieving high-quality placement outcomes in reputed institutions.</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* How to apply */}
-                    <div className="bg-slate-900 text-white rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
-                      <div>
-                        <h4 className="font-bold text-amber-300 text-base">HOW TO APPLY</h4>
-                        <p className="text-slate-300 text-xs sm:text-sm mt-1">
-                          Eligible and interested candidates are invited to submit their application to:
-                        </p>
+                      <div className="pt-1">
                         <a
-                          href="mailto:directortrainingplacement@mits.ac.in"
-                          className="inline-flex items-center gap-2 bg-amber-400 text-slate-950 font-bold text-sm px-4 py-2 rounded-lg hover:bg-amber-300 transition-colors mt-2"
+                          href="mailto:executivesearch@mits.ac.in"
+                          className="inline-block bg-[#ffd166] text-[#0b2c5f] font-bold text-sm sm:text-base px-6 py-3 rounded-xl hover:bg-amber-300 transition-colors shadow-md"
                         >
-                          <Mail className="w-4 h-4" />
-                          directortrainingplacement@mits.ac.in
+                          executivesearch@mits.ac.in
                         </a>
                       </div>
-                      <div className="text-center md:text-right shrink-0">
-                        <p className="text-xs text-slate-400">LAST DATE FOR APPLICATION</p>
-                        <p className="font-display text-2xl font-extrabold text-amber-300">20 MAY 2026</p>
-                      </div>
+                    </div>
+                    <div className="text-center md:text-right shrink-0">
+                      <p className="font-extrabold text-white text-sm sm:text-lg tracking-wider uppercase">
+                        LAST DATE : 20 MAY 2026
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -523,40 +393,72 @@ const Careers = () => {
             <div className="space-y-6">
               <ScrollReveal>
                 <div className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-6">
-                  <SectionHeading title="Dean Positions Offered" subtitle="Academic leadership positions across constituent Schools at MITS." />
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    MITS Deemed to be University invites applications for Dean Positions from distinguished academicians with proven administrative competence, visionary leadership, and an outstanding research track record.
-                  </p>
-
-                  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    {[
-                      "School of Engineering",
-                      "School of Computing",
-                      "School of Management",
-                      "School of Artificial Intelligence & ML",
-                      "Research & Development Cell",
-                    ].map((school, i) => (
-                      <div key={i} className="border border-border rounded-xl p-4 bg-muted/20 flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary font-bold text-xs flex items-center justify-center shrink-0">
-                          0{i + 1}
-                        </div>
-                        <span className="font-semibold text-foreground text-sm">{school}</span>
-                      </div>
-                    ))}
+                  <div className="text-center space-y-3">
+                    <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground">
+                      Deans Recruitment Drive for the Academic Year 2026-27
+                    </h2>
+                    <p className="text-muted-foreground text-xs md:text-sm max-w-4xl mx-auto leading-relaxed text-justify md:text-center">
+                      Madanapalle Institute of Technology &amp; Science (MITS) since its establishment in 1998, has evolved into an Autonomous Institution in 2014 and was conferred Deemed to be University status by Ministry of Education &amp; UGC, New Delhi vide Notification No. 9-1/2025-U.3(A) dated 15th July, 2025. MITS Deemed to be University is poised for exponential growth invites applications from self-motivated, committed and competent academic leaders who can make a difference and add significant value to the University.
+                    </p>
+                    <p className="text-red-700 dark:text-red-400 font-bold text-xs md:text-sm pt-2">
+                      Applications received for the mentioned positions till 30.04.2026 will be scrutinized and Interviews shall be conducted in the month of May 2026.
+                    </p>
                   </div>
 
-                  <div className="border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div>
-                      <h4 className="font-bold text-foreground text-base">How to Apply</h4>
-                      <p className="text-muted-foreground text-xs">Send detailed resume with publication list &amp; vision document to jobs@mits.ac.in</p>
+                  {/* Table */}
+                  <div className="overflow-x-auto border border-red-900/30 rounded-xl shadow-sm">
+                    <h3 className="font-bold text-lg text-foreground px-4 py-3 bg-muted/40 border-b border-border">Dean Positions</h3>
+                    <table className="w-full text-left text-xs md:text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-[#8b0000] text-white font-bold">
+                          <th className="p-3.5 border-r border-red-950/20 w-1/3 min-w-[200px]">Positions</th>
+                          <th className="p-3.5">Qualification, Experience &amp; Pay</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-border bg-card">
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-bold text-foreground align-top border-r border-border">
+                            Dean - Artificial Intelligence &amp; Machine Learning
+                          </td>
+                          <td className="p-4 space-y-2 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / IIM / Foreign University (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 15 years of Post Ph.D. experience in Academics / Research / Industry and relevant experience for the offered positions</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.41 LPA based on the Credentials</p>
+                            <p className="text-xs italic"><strong className="text-red-800 dark:text-red-400">Note:</strong> Applicants for the positions must also meet the eligibility criteria as specified in the UGC guidelines.</p>
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-bold text-foreground align-top border-r border-border">
+                            Dean - Online &amp; Distance Education
+                          </td>
+                          <td className="p-4 space-y-2 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / IIM / Foreign University (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 15 years of Post Ph.D. experience in Academics / Research / Industry and relevant experience for the offered positions</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.36 LPA based on the Credentials</p>
+                            <p className="text-xs italic"><strong className="text-red-800 dark:text-red-400">Note:</strong> Applicants for the positions must also meet the eligibility criteria as specified in the UGC guidelines.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* Red Notice Box & Contact Card */}
+                  <div className="space-y-4 pt-4">
+                    <div className="bg-[#8b0000] text-white text-center p-4 rounded-xl font-semibold text-xs md:text-sm shadow-md">
+                      Applications received for the above mentioned positions till 30.04.2026, will be scrutinized and interviews shall be conducted in the month of May 2026. Selected applicants shall be sent offer letters and can join the university on or before 01-07-2026.
                     </div>
-                    <a
-                      href="mailto:jobs@mits.ac.in"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-5 py-2.5 rounded-xl hover:bg-primary/90 transition-colors text-xs"
-                    >
-                      <Mail className="w-4 h-4" />
-                      jobs@mits.ac.in
-                    </a>
+
+                    <div className="bg-card border-2 border-red-800/40 rounded-xl p-6 text-center space-y-2 shadow-sm">
+                      <p className="text-sm font-bold text-foreground">
+                        Interested applicants may send their updated resumes to{" "}
+                        <a href="mailto:jobs@mits.ac.in" className="text-blue-600 dark:text-blue-400 hover:underline">
+                          jobs@mits.ac.in
+                        </a>
+                      </p>
+                      <p className="text-xs sm:text-sm font-bold text-red-800 dark:text-red-400">
+                        For further details, please contact: 9100080999 / 9160020744 / 9100973274
+                      </p>
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>
@@ -568,47 +470,214 @@ const Careers = () => {
             <div className="space-y-6">
               <ScrollReveal>
                 <div className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-6">
-                  <SectionHeading title="Faculty Positions Offered" subtitle="Faculty Recruitment Drive for Academic Year 2026-27" />
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Applications are invited for Professors, Associate Professors, and Assistant Professors across the following engineering and science disciplines:
-                  </p>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="border border-border rounded-xl p-5 bg-muted/20">
-                      <h4 className="font-bold text-foreground text-sm mb-2">School of Computing &amp; AI</h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed">
-                        CSE, Artificial Intelligence, Machine Learning, Data Science, Cyber Security, Networks, CST, MCA.
-                      </p>
-                    </div>
-                    <div className="border border-border rounded-xl p-5 bg-muted/20">
-                      <h4 className="font-bold text-foreground text-sm mb-2">School of Engineering</h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed">
-                        Electronics &amp; Communication Engineering (ECE), Electrical &amp; Electronics Engineering (EEE), Mechanical Engineering (ME), Civil Engineering (CE).
-                      </p>
-                    </div>
-                    <div className="border border-border rounded-xl p-5 bg-muted/20">
-                      <h4 className="font-bold text-foreground text-sm mb-2">Management &amp; Humanities</h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed">
-                        Management Studies (MBA, BBA), English, Mathematics, Physics, Chemistry.
-                      </p>
-                    </div>
-                    <div className="border border-border rounded-xl p-5 bg-primary/5 border-primary/20">
-                      <h4 className="font-bold text-primary text-sm mb-2">Qualifications &amp; Salary</h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed">
-                        As per AICTE / UGC norms. Higher pay package for Ph.D. holders from IITs, IISc, NITs, and reputed foreign universities.
-                      </p>
-                    </div>
+                  <div className="text-center space-y-3">
+                    <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground">
+                      Faculty Recruitment Drive for the Academic Year 2026-27
+                    </h2>
+                    <p className="text-muted-foreground text-xs md:text-sm max-w-4xl mx-auto leading-relaxed text-justify md:text-center">
+                      Madanapalle Institute of Technology &amp; Science (MITS) since its establishment in 1998, has evolved into an Autonomous Institution in 2014 and was conferred Deemed to be University status by Ministry of Education &amp; UGC, New Delhi vide Notification No. 9-1/2025-U.3(A) dated 15th July, 2025. MITS Deemed to be University is poised for exponential growth invites applications from self-motivated, committed and competent academic leaders who can make a difference and add significant value to the University.
+                    </p>
                   </div>
 
-                  <div className="border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-xs text-muted-foreground">Email your updated resume &amp; certificates to: <strong>jobs@mits.ac.in</strong></p>
-                    <a
-                      href="mailto:jobs@mits.ac.in"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-5 py-2.5 rounded-xl hover:bg-primary/90 transition-colors text-xs shrink-0"
-                    >
-                      <Mail className="w-4 h-4" />
-                      Apply via Email
-                    </a>
+                  {/* Faculty Table */}
+                  <div className="overflow-x-auto border border-red-900/30 rounded-xl shadow-sm">
+                    <h3 className="font-bold text-lg text-foreground px-4 py-3 bg-muted/40 border-b border-border">Faculty Positions</h3>
+                    <table className="w-full text-left text-xs md:text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-[#8b0000] text-white font-bold">
+                          <th className="p-3.5 border-r border-red-950/20 w-1/4 min-w-[150px]">Department</th>
+                          <th className="p-3.5 border-r border-red-950/20 w-1/4 min-w-[150px]">Positions</th>
+                          <th className="p-3.5">Qualification, Experience &amp; Pay</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-border bg-card">
+                        {/* School of Computing */}
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td rowSpan={4} className="p-4 font-bold text-foreground align-top border-r border-border bg-muted/10">
+                            School of Computing
+                          </td>
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> CSE - Artificial Intelligence / Machine Learning / Data Science / Cyber Security / Robotics</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 12 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.36 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Associate Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> CSE - Artificial Intelligence / Machine Learning / Data Science / Cyber Security / Robotics</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 7 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.30 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Senior Assistant Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> CSE - Artificial Intelligence / Machine Learning / Data Science / Cyber Security / Robotics</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 2 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.18 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Assistant Professor with M.Tech Qualification
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> M.Tech. in appropriate discipline from a reputed university. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> CSE - Artificial Intelligence / Machine Learning / Data Science / Cyber Security / Robotics</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 2 Years of Post M.Tech. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.12 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+
+                        {/* Computer Applications */}
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-bold text-foreground align-top border-r border-border bg-muted/10">
+                            Computer Applications
+                          </td>
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at UG &amp; M.Tech. / M.C.A)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 15 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale at minimum of Rs.36 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+
+                        {/* Electronics & Communication Engineering */}
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td rowSpan={3} className="p-4 font-bold text-foreground align-top border-r border-border bg-muted/10">
+                            Electronics &amp; Communication Engineering
+                          </td>
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Signal Processing / Embedded Systems / VLSI Design / Antenna Microwave</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 12 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.30 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Associate Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Signal Processing / Embedded Systems / VLSI Design / Antenna Microwave</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 7 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.28 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Assistant Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Signal Processing / Embedded Systems / VLSI Design / Antenna Microwave</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 3 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale at minimum of Rs.12 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+
+                        {/* Electrical & Electronics Engineering */}
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td rowSpan={2} className="p-4 font-bold text-foreground align-top border-r border-border bg-muted/10">
+                            Electrical &amp; Electronics Engineering
+                          </td>
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Electrical Vehicle Technology / Control Systems / Power Systems</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 12 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale at minimum of Rs.30 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Associate Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at B.Tech. &amp; M.Tech.)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Electrical Vehicle Technology / Control Systems / Power Systems</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 7 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.28 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+
+                        {/* Mathematics / Physics / Chemistry / English */}
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-bold text-foreground align-top border-r border-border bg-muted/10">
+                            Mathematics / Physics / Chemistry / English
+                          </td>
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / EFLU / Foreign University. (with First Class at UG &amp; PG)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 15 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per revised AICTE Pay Scale of a Minimum of Rs.30 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+
+                        {/* Management Studies */}
+                        <tr className="hover:bg-muted/30 transition-colors">
+                          <td className="p-4 font-bold text-foreground align-top border-r border-border bg-muted/10">
+                            Management Studies
+                          </td>
+                          <td className="p-4 font-semibold text-foreground align-top border-r border-border">
+                            Assistant Professor
+                          </td>
+                          <td className="p-4 space-y-1.5 text-muted-foreground">
+                            <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIM / IIT / NIT. (with First class at UG &amp; PG in Management)</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 2 Years of Post Ph.D. experience in Academics / Research / Industry</p>
+                            <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale at minimum of Rs.12 LPA.</p>
+                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* Red Notice Box & Contact Card */}
+                  <div className="space-y-4 pt-4">
+                    <div className="bg-card border-2 border-red-800/40 rounded-xl p-6 text-center space-y-2 shadow-sm">
+                      <p className="text-sm font-bold text-foreground">
+                        Interested applicants may send their updated resumes to{" "}
+                        <a href="mailto:jobs@mits.ac.in" className="text-blue-600 dark:text-blue-400 hover:underline">
+                          jobs@mits.ac.in
+                        </a>
+                      </p>
+                      <p className="text-xs sm:text-sm font-bold text-red-800 dark:text-red-400">
+                        For further details, please contact: 9100080999 / 9160020744 / 9100973274
+                      </p>
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>
@@ -617,24 +686,170 @@ const Careers = () => {
 
           {/* TAB 6 — BENEFITS */}
           {activeTab === "benefits" && (
-            <div className="space-y-6">
+            <div className="space-y-8">
               <ScrollReveal>
-                <div>
-                  <SectionHeading title="MITS Employee Benefits & Perks" subtitle="We empower our faculty and staff with an enriching work ecosystem." />
-                  <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
-                    {benefitsList.map((b, idx) => {
-                      const IconComp = b.icon;
-                      return (
-                        <div key={idx} className="bg-card border border-border rounded-2xl p-5 hover:border-primary/40 transition-colors space-y-3">
-                          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                            <IconComp className="w-5 h-5" />
-                          </div>
-                          <h4 className="font-bold text-foreground text-sm">{b.title}</h4>
-                          <p className="text-muted-foreground text-xs leading-relaxed">{b.desc}</p>
-                        </div>
-                      );
-                    })}
+                <div className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-8">
+                  <div>
+                    <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground mb-3">MITS Employee Benefits</h2>
+                    <p className="text-sm font-semibold text-primary">MITS offers the following opportunities and attractive Employee Benefits</p>
                   </div>
+
+                  {/* Research Publications */}
+                  <div className="space-y-6">
+                    <h3 className="font-bold text-xl text-foreground border-b border-border pb-2">Research Publications:</h3>
+
+                    {/* Category A */}
+                    <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-3">
+                      <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">Category - A : Top rated Publications</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        The 1st author of the publication must be from MITS. The incentive amount shall be Rs. 25,000/- per publication which will be distributed in the ratio of 70:30. The 1st author necessarily from MITS shall be eligible for 70% of Rs. 25,000/- and the balance amount shall be distributed amongst the remaining authors from MITS. There shall be no limit to number of authors. The 2nd publication from the same author shall be rewarded with Rs. 30,000/-, and the 1st author shall be eligible for 70% of Rs. 30,000/- and the balance amount shall be paid as referred above. The 3rd publication from the same author shall be rewarded with Rs. 50,000/- and the 1st author shall be eligible for 70% of Rs. 50,000/- and the balance shall be distributed as referred above.
+                      </p>
+                      <div className="text-xs text-muted-foreground space-y-1 pl-3 border-l-2 border-primary">
+                        <p className="font-bold text-foreground">The following four conditions are to be fulfilled for providing publication incentive under Category - A :</p>
+                        <p>1. Journal should be indexed in SCI/SCIE/SSCI with 5-year average Impact factor &gt; 7 (for Subject area: Engineering), &gt; 14 (for Subject area: Sciences) and, &gt;3 (for Subject area: Humanities, Social Sciences and Management studies).</p>
+                        <p>2. Journal should be in Top 10% Q1 rated list as per the Scopus database in the respective discipline.</p>
+                        <p className="italic font-medium text-amber-700 dark:text-amber-400 mt-2">Note: The articles which does not fall under Category-A will be considered under Category B</p>
+                      </div>
+                    </div>
+
+                    {/* Category B */}
+                    <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-2">
+                      <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">
+                        Category - B : Science Citation Index (SCI), Science Citation Index Expanded (SCIE) and Social Science Citation Index (SSCI) Journals.
+                      </h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        The 1st author of the publication must be from MITS. The incentive amount shall be Rs. 16,000/- per publication published in Q1 &amp; Q2 journals and Rs.14,000/- per publication published in Q3 &amp; Q4 journals. If the paper is contributed by more than one author, the incentive amount will be distributed in the ratio of 70:30. The 1st author shall be eligible for 70% amount and the balance amount shall be distributed amongst the remaining authors from MITS.
+                      </p>
+                    </div>
+
+                    {/* Category C */}
+                    <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-2">
+                      <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">Category - C : Scopus Indexed Journals.</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        The 1st author of the publication must be from MITS. The incentive amount shall be Rs. 11,000/- per publication published in Q1 &amp; Q2 journals and Rs.9,000/- per publication published in Q3 &amp; Q4 journals. If the paper is contributed by more than one author, the incentive amount will be distributed in the ratio of 70:30. The 1st author shall be eligible for 70% amount and the balance amount shall be distributed amongst the remaining authors from MITS.
+                      </p>
+                    </div>
+
+                    {/* Category D */}
+                    <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-2">
+                      <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">Category - D : For book chapter publications reflecting in Scopus Database.</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        The 1st author of the publication must be from MITS. The incentive amount shall be Rs. 3,000/- per book chapter. If the book chapter is contributed by more than one author, the incentive amount will be distributed in the ratio of 70:30. The 1st author shall be eligible for 70% amount and the balance amount shall be distributed amongst the remaining authors from MITS.
+                      </p>
+                    </div>
+
+                    {/* Category E */}
+                    <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-2">
+                      <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">
+                        Category - E : If 1st author is not from 'Madanapalle Institute of Technology &amp; Science'.
+                      </h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        The articles published under Category A, Category B, Category C &amp; Category D will get an incentive equivalent to 30% of the total amount of the respective category. The amount shall be distributed amongst the authors from MITS.
+                      </p>
+                    </div>
+
+                    {/* Category F */}
+                    <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-2">
+                      <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">
+                        Category - F : Research articles published in ABDC indexed (only A&amp;B) journals, open-access journals indexed by WOS/Scopus and conference proceedings published in the Scopus database. The journal publisher should be Nature, IEEE, Elsevier, Springer Nature, Taylor &amp; Francis, Wiley, SAGE, ASCE, ASME, Inderscience, MDPI, AMS, AIP, IOP, Cambridge University Press, ACS.
+                      </h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        The incentive for articles published in Category - F shall be 50% of the amount specified for Categories A to E.
+                      </p>
+                      <p className="text-xs italic text-red-700 dark:text-red-400 font-medium">
+                        Note: Articles published in Q1 journal under 'Category F' shall be eligible to get an additional incentive amount of Rs.2000 per paper for 'Categories A to C' and Rs.1000 per paper for 'Categories E'.
+                      </p>
+                    </div>
+
+                    {/* Category G */}
+                    <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-2">
+                      <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">
+                        Category - G : Student publications (Scopus indexed Journals and conference proceedings):
+                      </h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        The articles published under Category G will get an incentive amount of Rs. 1000/- per student in a research article. Number of students should be equal to the student batch size in the student project work/internship.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Consultancy Projects */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Consultancy Projects</h3>
+                    <ul className="space-y-3 text-xs md:text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2.5">
+                        <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
+                        <span>If the faculty and staff contributed their knowledge, time and skill for the Consultancy Projects without utilising the resources of the Institute (like laboratory, equipment's, computer, software etc.) they will get an incentive of 70% of the net amount earned through the project.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
+                        <span>If the resources of the Institute (like laboratory, equipment's, computer, software etc.) and other facilities like OD etc. have been utilised for the execution of Consultancy projects the faculty and the staff involved in such projects will get 50% of the net amount earned from the project.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Funded Project Proposals */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Funded Project Proposals</h3>
+                    <div className="flex items-start gap-2.5 text-xs md:text-sm text-muted-foreground">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
+                      <span>10% of the total Non-Recurring grant of funded Research Project will be paid as incentive to Project Investigator/Investigators. 5% of such grant will be paid on receipt of first instalment of research project grant and the remaining balance of 5% amount on completion and submission of all relevant documents to the funding agency and after receipt of final instalment of the research grant.</span>
+                    </div>
+                  </div>
+
+                  {/* Conferences / Seminars / Workshops / Symposia */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Conferences / Seminars / Workshops / Symposia</h3>
+                    <div className="flex items-start gap-2.5 text-xs md:text-sm text-muted-foreground">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
+                      <span>Full sponsorship (limited to Rs.15,000/- each) is also provided to all faculty members after completion of the probation period for a maximum of two conferences / seminars / workshops / symposiums per year held within India and during the vacation time at IITs, NITs. Beyond the stipulated two opportunities, only registration fee may be payable at the discretion of Management.</span>
+                    </div>
+                  </div>
+
+                  {/* Hospitalization Benefits */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Hospitalization Benefits</h3>
+                    <div className="flex items-start gap-2.5 text-xs md:text-sm text-muted-foreground">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
+                      <span>Contributory Cashless Medical Health Insurance Scheme limited to Rs. 5 Lakhs on Family floater scheme</span>
+                    </div>
+                  </div>
+
+                  {/* Other Benefits */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Other Benefits</h3>
+                    <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
+                      {[
+                        "Sports and Gym facilities in the Campus.",
+                        "Casual leave for 15 days in a year on prorate basis based on date of joining in the 1st year.",
+                        "Vacation of 3 days, 1 week and 2 weeks depending on service.",
+                        "Flexi work hours of 8 hours between 8am to 6 pm. 2nd & 4th Saturdays are holidays.",
+                        "Paid vacation during summer as per institution norms.",
+                        "Research seed fund support.",
+                        "Leaves available (CL, ML etc.,)",
+                      ].map((benefit, i) => (
+                        <li key={i} className="flex items-start gap-2.5">
+                          <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Special Benefits for Ph.D. holders */}
+                  <div className="space-y-3 bg-red-900/5 border border-red-900/20 p-5 rounded-2xl">
+                    <h3 className="font-bold text-lg text-red-900 dark:text-red-400 border-b border-red-900/20 pb-2">Special Benefits for Ph.D. holders</h3>
+                    <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2.5">
+                        <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
+                        <span>Mobile Sim with 4G data card.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
+                        <span>News Paper will be provided at the residence.</span>
+                      </li>
+                    </ul>
+                  </div>
+
                 </div>
               </ScrollReveal>
             </div>
@@ -644,15 +859,130 @@ const Careers = () => {
           {activeTab === "press" && (
             <div className="space-y-6">
               <ScrollReveal>
-                <div className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-4">
-                  <SectionHeading title="Press Release & Advertisements" subtitle="Recruitment notifications published in leading national dailies." />
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Official advertisements for MITS Deemed to be University recruitment drives published in leading national newspapers including The Hindu, Times of India, and Deccan Chronicle.
-                  </p>
-                  <div className="border border-border rounded-xl p-5 bg-muted/20">
-                    <p className="text-xs text-muted-foreground">
-                      For detailed advertisement clippings or media inquiries, please reach out to the HR Recruitment team at <strong>jobs@mits.ac.in</strong>.
+                <div className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-6">
+                  <div>
+                    <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground mb-2">Press Release</h2>
+                    <p className="text-muted-foreground text-xs md:text-sm">
+                      Official recruitment drive notifications and advertisements published in leading national dailies.
                     </p>
+                  </div>
+
+                  {/* Advertisements Grid */}
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {[
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 10.04.2023 Advertised on Website",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/Advertisement -JNTUA Ratification Paper -2023 copy_page-0001.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 25.11.2020 Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/20-hinduclip-25-11-2020.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 19.02.2020 Times of India",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/18-times19-02-2020.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 18.02.2020 Eenadu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/17-eenadu2020-18.02.2020.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 06.04.2016 Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/16-The Hindu Papert-06.04.2016.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 27.02.2015 Eenadu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/15-EENADU Paper-27.02.2015.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 04.03.2015 The Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/14-The Hindu Paper-04.03.2015.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 22.04.2015 Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/13-The Hindu Paper-22.04.2015.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 12.03.2014 The Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/12-The Hindu Paper-12.03.2014.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 14.03.2014 EENADU Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/11-EEnadu Paper-14.03.2014.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 08.03.2013 EEnadu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/10-EENADU Paper-08.03.2013.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 13.03.2013 The Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/9-The Hindu Paper-13.03.2013.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 27.03.2013 Deccan Herald (Bangalore)",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/8-Deccan Herald Paper (Bangalore)-27.03.2013.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 21.11.2012 The Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/7-The Hindu Paper-21.11.2012.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 16.11.2012 EENADU Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/6-Eenadu Paper-16.11.2012.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 29.08.2012 The Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/5-Hindu Paper-29.08.2012.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 21.08.2012 EEnadu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/4-Eenadu Paper-21.08.2012.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 21.08.2012 Eenadu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/3-Eenadu Paper-21.08.2012.jpg",
+                      },
+                      {
+                        title: "Faculty Recruitment",
+                        paper: "Date of the Advertisement : 04.04.2012 The Hindu Paper",
+                        img: "https://mits.ac.in/public/uploads/pressrelease/2-Hindu Paper-04.04.2012.jpg",
+                      },
+                    ].map((item, idx) => (
+                      <div key={idx} className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+                        <div className="aspect-[3/4] bg-muted overflow-hidden p-2">
+                          <img
+                            src={encodeURI(item.img)}
+                            alt={item.title}
+                            className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).src = "https://placehold.co/400x550/1e293b/38bdf8?text=Press+Advertisement";
+                            }}
+                          />
+                        </div>
+                        <div className="p-4 bg-muted/20 border-t border-border flex-1 flex flex-col justify-between">
+                          <h4 className="font-bold text-red-800 dark:text-red-400 text-xs sm:text-sm">{item.title}</h4>
+                          <p className="text-[11px] text-muted-foreground mt-1">{item.paper}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </ScrollReveal>
