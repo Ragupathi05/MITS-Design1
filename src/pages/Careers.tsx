@@ -1,8 +1,6 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import PageShell from "@/components/PageShell";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
 import {
   Briefcase,
@@ -26,6 +24,13 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const SectionHeading = ({ title, subtitle }: { title: string; subtitle?: string }) => (
+  <div className="mb-4">
+    <h3 className="font-display text-2xl font-bold text-foreground tracking-tight">{title}</h3>
+    {subtitle && <p className="text-muted-foreground text-xs md:text-sm mt-1">{subtitle}</p>}
+  </div>
+);
 
 const Careers = () => {
   const [activeTab, setActiveTab] = useState<string>("overview");
@@ -122,7 +127,9 @@ const Careers = () => {
   ];
 
   return (
-    <PageShell>
+    <div className="min-h-screen bg-background flex flex-col pt-20">
+      <Header />
+      <main className="flex-1">
       <SEO
         title="Careers & Faculty Recruitment | MITS Deemed to be University"
         description="Explore career opportunities, faculty positions, Vice-Chancellor (VC) position, Director Training & Placements recruitment, and employee benefits at Madanapalle Institute of Technology & Science (MITS)."
@@ -689,7 +696,9 @@ const Careers = () => {
 
         </div>
       </section>
-    </PageShell>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
