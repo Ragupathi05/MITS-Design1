@@ -1,4 +1,4 @@
-﻿import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
@@ -9,7 +9,7 @@ import {
   Building2, GraduationCap, Globe, Download, ExternalLink, Calendar,
   Users, ChevronDown, ChevronRight, Mail, Phone, Shield, Briefcase,
   Target, Eye, ArrowRight, Layers, Scale, TrendingUp, Rocket, Droplets,
-  Sparkles, Trophy, Handshake, Library, Wrench,
+  Sparkles, Trophy, Handshake, Library, Wrench, Recycle,
 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
@@ -1154,40 +1154,198 @@ const FoundationSection = () => (
 );
 
 /* ─── WWRC TAB ─── */
-const WWRCSection = () => (
-  <div className="space-y-6">
-    <ScrollReveal>
-      <div className="bg-gradient-to-br from-secondary/10 via-background to-primary/5 border border-border rounded-2xl p-6 md:p-8">
-        <div className="flex items-start gap-4 mb-4">
-          <div className="w-14 h-14 rounded-2xl bg-secondary/15 flex items-center justify-center shrink-0">
-            <Droplets className="w-7 h-7 text-secondary" />
+const WWRCSection = () => {
+  const [activeWwrc, setActiveWwrc] = useState<string>("about");
+
+  const wwrcTabs = [
+    { id: "about",    label: "About WWRC" },
+    { id: "admin",    label: "Administrative Support" },
+    { id: "areas",    label: "Research Areas" },
+    { id: "projects", label: "Projects" },
+    { id: "gallery",  label: "Gallery" },
+  ];
+
+  const projects = [
+    { sno: 1, year: "2025 – 2026", title: "Mechanical properties of PP fiber reinforced concrete with partial replacement of Aggregates with glass waste.", team: "Dr. Vijay Kumar Natesan", status: "On Going" },
+    { sno: 2, year: "2025 – 2026", title: "Mechanical Properties of coconut Fibre Reinforced Concrete with Partial Replacement of Aggregates using Glass Waste.", team: "Dr. Vijay Kumar Natesan", status: "On Going" },
+    { sno: 3, year: "2025 – 2026", title: "Smart waste management solutions for MITS campus Madanapalle.", team: "Dr. N Tagore Sai Priya", status: "On Going" },
+    { sno: 4, year: "2025 – 2026", title: "A study on Utilization of C & D waste and granite dust as a Fine Aggregate in Paver Blocks and Plain Cement Concrete.", team: "Dr. Sudheer Kumar Y", status: "On Going" },
+  ];
+
+  const galleryImages = [
+    { src: "https://mits.ac.in/Civil1.jpg", alt: "WWRC Activity 1" },
+    { src: "https://mits.ac.in/Civil2.jpg", alt: "WWRC Activity 2" },
+    { src: "https://mits.ac.in/Civil3.jpg", alt: "WWRC Activity 3" },
+    { src: "https://mits.ac.in/Civil4.jpg", alt: "WWRC Activity 4" },
+  ];
+
+  return (
+    <div className="space-y-6">
+      {/* Header card */}
+      <ScrollReveal>
+        <div className="bg-gradient-to-br from-green-950/30 via-background to-emerald-900/10 border border-border rounded-2xl p-6 md:p-8">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-14 h-14 rounded-2xl bg-green-500/15 flex items-center justify-center shrink-0">
+              <Recycle className="w-7 h-7 text-green-500" />
+            </div>
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Waste to Wealth Research Centre (W2WRC)</h2>
+              <p className="text-xs text-green-500 font-semibold mt-1 uppercase tracking-wider">Circular Economy • Waste Valorization • Sustainable Innovation</p>
+            </div>
           </div>
-          <div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">{wwrcData.title}</h2>
-            <p className="text-xs text-secondary font-semibold mt-1 uppercase tracking-wider">Sustainable Water & Environmental Research</p>
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            The Waste to Wealth Research Centre (WWRC) was established in 2024 with the vision of transforming waste streams into valuable resources through innovative, sustainable, and commercially viable technologies. The centre serves as a dedicated hub bringing together environmental engineers, chemists, biotechnologists, material scientists, and policy researchers to address the growing challenge of waste management while unlocking economic value.
+          </p>
+          <p className="text-muted-foreground leading-relaxed text-sm mt-3">
+            By integrating scientific excellence with entrepreneurial thinking, W2WRC promotes a culture of closed-loop systems, resource efficiency, and low-carbon innovation, aligned with national missions such as Swachh Bharat, LiFE (Lifestyle for Environment), and the UN Sustainable Development Goals (SDGs).
+          </p>
+        </div>
+      </ScrollReveal>
+
+      {/* Tab navigator */}
+      <ScrollReveal delay={0.05}>
+        <div className="bg-card border border-border rounded-2xl overflow-hidden">
+          {/* Tab bar */}
+          <div className="flex overflow-x-auto border-b border-border scrollbar-none">
+            {wwrcTabs.map((t) => (
+              <button
+                key={t.id}
+                onClick={() => setActiveWwrc(t.id)}
+                className={`whitespace-nowrap px-5 py-3.5 text-sm font-semibold transition-colors shrink-0 border-b-2 ${
+                  activeWwrc === t.id
+                    ? "border-green-500 text-green-600 bg-green-500/5"
+                    : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                }`}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Tab panels */}
+          <div className="p-6 md:p-8">
+
+            {/* 1 — About */}
+            {activeWwrc === "about" && (
+              <div className="space-y-4">
+                <SectionHeading title="About Waste to Wealth Research Center" />
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  The Waste to Wealth Research Centre (WWRC) was established in 2024 with the vision of transforming waste streams into valuable resources through innovative, sustainable, and commercially viable technologies. The centre serves as a dedicated hub bringing together environmental engineers, chemists, biotechnologists, material scientists, and policy researchers to address the growing challenge of waste management while unlocking economic value.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  By integrating scientific excellence with entrepreneurial thinking, W2WRC promotes a culture of closed-loop systems, resource efficiency, and low-carbon innovation, aligned with national missions such as Swachh Bharat, LiFE (Lifestyle for Environment), and the UN Sustainable Development Goals (SDGs).
+                </p>
+              </div>
+            )}
+
+            {/* 2 — Administrative Support */}
+            {activeWwrc === "admin" && (
+              <div className="space-y-4">
+                <SectionHeading title="Administrative Support" />
+                <ul className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "Research Clusters",
+                    "Research Funding",
+                    "Training and Mentorship",
+                    "Industry Collaborations",
+                    "Research Facilities and Infrastructure",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 bg-muted/40 rounded-xl p-4 border border-border">
+                      <div className="w-8 h-8 rounded-lg bg-green-500/15 flex items-center justify-center shrink-0">
+                        <ChevronRight className="w-4 h-4 text-green-500" />
+                      </div>
+                      <span className="text-sm text-foreground font-medium leading-snug pt-1">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* 3 — Research Areas */}
+            {activeWwrc === "areas" && (
+              <div className="space-y-4">
+                <SectionHeading title="Research Areas" />
+                <ul className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "Organic Waste to Bioenergy & Bio-products",
+                    "Plastic & Polymer Circularity",
+                    "E-waste & Critical Metal Recovery",
+                    "Construction & Demolition (C&D) Waste Reuse",
+                    "Industrial & Hazardous Waste Valorization",
+                    "Circular Economy Modelling & Policy Innovation",
+                  ].map((area, i) => (
+                    <li key={i} className="flex items-start gap-3 bg-green-500/5 border border-green-500/20 rounded-xl p-4">
+                      <div className="w-7 h-7 rounded-full bg-green-500/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="text-green-600 text-xs font-bold">{i + 1}</span>
+                      </div>
+                      <span className="text-sm text-foreground font-medium leading-snug">{area}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* 4 — Projects */}
+            {activeWwrc === "projects" && (
+              <div className="space-y-4">
+                <SectionHeading title="Projects" subtitle="Active research projects under the Waste to Wealth Research Centre (2025–2026)." />
+                <div className="overflow-x-auto rounded-xl border border-border">
+                  <table className="w-full text-sm">
+                    <thead className="bg-green-500/10 border-b border-border">
+                      <tr>
+                        {["S. No", "Academic Year", "Title of the Project", "Team", "Status"].map((h) => (
+                          <th key={h} className="text-left px-4 py-3 font-semibold text-foreground whitespace-nowrap">{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {projects.map((p, i) => (
+                        <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
+                          <td className="px-4 py-3 font-bold text-green-600 text-center">{p.sno}</td>
+                          <td className="px-4 py-3 whitespace-nowrap font-medium text-foreground">{p.year}</td>
+                          <td className="px-4 py-3 text-muted-foreground leading-relaxed">{p.title}</td>
+                          <td className="px-4 py-3 whitespace-nowrap font-medium text-foreground">{p.team}</td>
+                          <td className="px-4 py-3">
+                            <span className="inline-flex items-center gap-1 bg-amber-500/10 text-amber-600 border border-amber-400/30 text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap">
+                              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                              {p.status}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* 5 — Gallery */}
+            {activeWwrc === "gallery" && (
+              <div className="space-y-4">
+                <SectionHeading title="Gallery" subtitle="Images from W2WRC activities, lab work, and field projects." />
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {galleryImages.map((img, i) => (
+                    <div key={i} className="aspect-square rounded-xl overflow-hidden border border-border bg-muted group">
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = "https://placehold.co/400x400/1a3a2a/22c55e?text=W2WRC";
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
-        <p className="text-muted-foreground leading-relaxed">{wwrcData.description}</p>
-        <a href={wwrcData.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 bg-secondary text-secondary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
-          <ExternalLink className="w-4 h-4" /> Visit WWRC Portal
-        </a>
-      </div>
-    </ScrollReveal>
-    <ScrollReveal delay={0.05}>
-      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Focus Areas" />
-        <ul className="grid sm:grid-cols-2 gap-3">
-          {wwrcData.focusAreas.map((f, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-              <Droplets className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
-              <span>{f}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </ScrollReveal>
-  </div>
-);
+      </ScrollReveal>
+    </div>
+  );
+};
 
 const Research = () => {
   const [activeTab, setActiveTab] = useState("overview");
