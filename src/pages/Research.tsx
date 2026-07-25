@@ -1134,50 +1134,72 @@ const MDRFSection = () => {
   const deptFacilities = [
     {
       dept: "Civil Engineering",
-      desc: "Laboratories for structural engineering, material testing, geotechnical, environmental, and fluid mechanics. Supports research in sustainable construction, smart infrastructure, surveying, and GIS.",
+      paragraphs: [
+        "The Civil Engineering department has well-equipped laboratories for structural engineering and material testing.",
+        "It also includes geotechnical, environmental, and fluid mechanics labs to support basic and advanced studies.",
+        "The department supports research in sustainable construction and smart infrastructure. It also provides surveying and GIS tools for field work and data analysis.",
+      ],
       link: "https://mits.ac.in/public/uploads/departments/Civil Engineering Labs.pdf",
-      label: "Civil Research Facilities (PDF)",
+      label: "Civil Research Facilities",
     },
     {
       dept: "Mechanical Engineering",
-      desc: "Laboratories for Design, Product development, Conventional Manufacturing, Advanced manufacturing, Thermal engineering, Automation and Robotics.",
+      paragraphs: [
+        "The Mechanical Engineering department has well-equipped laboratories for Design, Product development. Conventional Manufacturing, Advanced manufacturing, Thermal engineering, Automation and Robotics.",
+      ],
       link: "https://mits.ac.in/assets/pdf/mech/Research Labs in the Department ME.pdf",
-      label: "ME Research Facilities (PDF)",
+      label: "ME Research Facilities",
     },
     {
       dept: "Electrical & Electronics Engineering (EEE)",
-      desc: "Laboratories for power systems, electrical machines, control systems, power electronics, and circuit analysis. Focus on renewable energy and energy management systems.",
+      paragraphs: [
+        "The Electrical and Electronics Engineering (EEE) department has well-equipped laboratories for power systems, electrical machines, and control systems. It also includes facilities for power electronics and circuit analysis.",
+        "The department supports research in renewable energy and energy management systems. Simulation tools and practical setups are available for designing and testing electrical systems.",
+      ],
       link: "https://mits.ac.in/assets/pdf/eee/Research & Industry Supported Labs  EEE.pdf",
-      label: "EEE Research Facilities (PDF)",
+      label: "EEE Research Facilities",
     },
     {
       dept: "Electronics and Communication Engineering (ECE)",
-      desc: "Laboratories for embedded systems, wireless communication, signal processing, VLSI, circuit design, IoT, and smart systems hardware testing.",
+      paragraphs: [
+        "The Electronics and Communication Engineering (ECE) department has well-equipped laboratories for embedded systems, communication, and electronics. It includes facilities for signal processing, VLSI, and circuit design.",
+        "The department supports research in areas such as IoT, wireless communication, and smart systems. Facilities are available for hardware development, testing, and real-time applications.",
+      ],
       link: "https://mits.ac.in/public/uploads/departments/labs.pdf",
-      label: "ECE Research Facilities (PDF)",
+      label: "ECE Research Facilities",
     },
     {
-      dept: "Computer Science & Engineering (CSE)",
-      desc: "Advanced computer labs for programming, data science, AI, machine learning, cloud computing, cybersecurity, and data analytics.",
+      dept: "Computer Science & Engineering",
+      paragraphs: [
+        "The Computer Science and Engineering (CSE) department has well-equipped computer laboratories with advanced systems. It provides access to tools and software for programming, data science, artificial intelligence, and machine learning.",
+        "The department supports research in areas such as AI, Data Analytics, Cloud Computing, and Cybersecurity. Facilities are available for software development, simulation, and Data analysis.",
+      ],
       links: [
-        { label: "CSE Lab Details", url: "https://mits.ac.in/assets/pdf/cse/CSE%20Lab%20Details.pdf" },
-        { label: "CSE-AI Lab Details", url: "https://mits.ac.in/assets/pdf/cse/AI LAB DETAILS.pdf" },
-        { label: "CSE-CyberSecurity Lab Details", url: "https://mits.ac.in/assets/pdf/cse/Lab%20Details%20Dept.%20of%20CSE(Cyber%20Security).pdf" },
+        { label: "CSE Research Facilities", url: "https://mits.ac.in/assets/pdf/cse/CSE%20Lab%20Details.pdf" },
+        { label: "CSE-AI Research Facilities", url: "https://mits.ac.in/assets/pdf/cse/AI LAB DETAILS.pdf" },
+        { label: "CSE-CS Research Facilities", url: "https://mits.ac.in/assets/pdf/cse/Lab%20Details%20Dept.%20of%20CSE(Cyber%20Security).pdf" },
         { label: "CST Research Facilities", url: "https://mits.ac.in/public/uploads/departments/8787aafa08f6df23fb7e650ed58d904d.pdf" },
-        { label: "CSE-DS Lab Details", url: "https://mits.ac.in/public/uploads/departments/DS_Lab Softwares.pdf" },
+        { label: "CSE - DS Research Facilities", url: "https://mits.ac.in/public/uploads/departments/DS_Lab Softwares.pdf" },
+        { label: "CSE - AI and ML Research Facilities", url: "#" },
       ],
     },
     {
       dept: "Chemistry",
-      desc: "Laboratories for chemical analysis, material synthesis, environmental chemistry, energy materials, corrosion studies, and material science.",
+      paragraphs: [
+        "The Chemistry department has well-equipped laboratories for chemical analysis and material synthesis. It provides facilities for conducting experiments related to environmental chemistry and material science.",
+        "The department supports research in areas such as energy materials, corrosion studies, and sustainability. Facilities are available for testing, analysis, and interdisciplinary research applications.",
+      ],
       link: "https://mits.ac.in/assets/pdf/bsh/Research%20Facilities%20-%20Chemistry.pdf",
-      label: "Chemistry Research Facilities (PDF)",
+      label: "Chemistry Research Facilities",
     },
     {
       dept: "Physics",
-      desc: "Laboratories for experimental and applied physics, optics, advanced materials, nanotechnology, and basic instrumentation.",
+      paragraphs: [
+        "The Physics department has well-equipped laboratories for experimental and applied physics. It provides facilities for studies in optics, materials, and basic instrumentation.",
+        "The department supports research in areas such as advanced materials and nanotechnology. Facilities are available for testing, measurement, and interdisciplinary research applications.",
+      ],
       link: "https://mits.ac.in/assets/pdf/bsh/Research Facilities - Physics.pdf",
-      label: "Physics Research Facilities (PDF)",
+      label: "Physics Research Facilities",
     },
   ];
 
@@ -1295,64 +1317,118 @@ const MDRFSection = () => {
 
             {/* 2 — Administrative Support */}
             {activeMdrf === "admin" && (
-              <div className="space-y-6">
+              <div className="space-y-6 text-foreground text-sm leading-relaxed">
                 <div>
-                  <SectionHeading title="Administrative Support Framework" />
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    MITS has established a supportive administrative framework to promote interdisciplinary research collaborations. At MITS, interdisciplinary research activities are coordinated through the Research &amp; Development (R&amp;D) Cell under institutional leadership.
+                  <h3 className="font-display text-2xl font-bold mb-3">Administrative Support</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
+                    Madanapalle Institute of Technology &amp; Science (MITS) recognizes the growing importance of interdisciplinary research in addressing complex real-world challenges and has established a supportive administrative framework to promote such collaborations. This framework provides essential resources, encourages interaction among departments, and simplifies the research process for faculty and students working across disciplines.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    At MITS, interdisciplinary research activities are coordinated through the Research &amp; Development (R&amp;D) Cell, functioning under the guidance of the institute leadership. The R&amp;D Cell provides strategic direction, facilitates collaboration among various departments, and ensures that research initiatives are aligned with the institution’s academic goals and societal needs.
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="border border-border rounded-xl p-5 bg-card">
-                    <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">1</span>
-                      Research Clusters
-                    </h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">
-                      Brings together faculty and researchers from different departments to work collaboratively on common research themes, ensuring seamless integration of cross-domain knowledge.
-                    </p>
-                  </div>
-
-                  <div className="border border-border rounded-xl p-5 bg-card">
-                    <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">2</span>
-                      Research Funding
-                    </h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">
-                      R&amp;D Cell identifies national/international funding, provides internal Seed Funding Initiatives for early prototypes, and offers Institutional Research Grants.
-                    </p>
-                  </div>
-
-                  <div className="border border-border rounded-xl p-5 bg-card">
-                    <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">3</span>
-                      Training & Mentorship
-                    </h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">
-                      Regular Workshops, Seminars, Mentorship Programs, Faculty Development Programs (FDPs), and Proposal Writing Workshops to help submit competitive proposals.
-                    </p>
-                  </div>
-
-                  <div className="border border-border rounded-xl p-5 bg-card">
-                    <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">4</span>
-                      Interdisciplinary Collaborations
-                    </h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">
-                      Knowledge Exchange symposiums, interdepartmental projects, industry &amp; institutional partnerships, and international joint research programs.
-                    </p>
-                  </div>
+                <div className="border-t border-border pt-5">
+                  <h4 className="font-bold text-lg text-foreground mb-2">1. Research Clusters</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Madanapalle Institute of Technology &amp; Science (MITS) promotes interdisciplinary research through well-defined research clusters. These clusters bring together faculty and researchers from different departments to work collaboratively on common research themes, ensuring integration of knowledge across disciplines.
+                  </p>
                 </div>
 
-                <div className="border border-border rounded-xl p-5 bg-blue-50/50 dark:bg-blue-950/20">
-                  <h4 className="font-semibold text-foreground text-base mb-2 flex items-center gap-2">
-                    <span className="w-6 h-6 rounded-full bg-blue-600/15 text-blue-600 text-xs font-bold flex items-center justify-center">5</span>
-                    Facilities & Infrastructure Support
-                  </h4>
-                  <p className="text-muted-foreground text-xs leading-relaxed">
-                    Provides access to advanced interdepartmental labs, comprehensive digital library journal access, and dedicated Intellectual Property (IPR) &amp; Innovation support for filing patents.
+                <div className="border-t border-border pt-5">
+                  <h4 className="font-bold text-lg text-foreground mb-2">2. Research Funding</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
+                    Madanapalle Institute of Technology &amp; Science (MITS) provides structured financial and administrative support to encourage faculty and researchers to secure research funding, particularly for interdisciplinary projects. The institute promotes a proactive research culture by offering internal funding opportunities.
                   </p>
+                  <ul className="space-y-2.5 pl-1">
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>R&amp;D Cell Support:</strong> The Research &amp; Development (R&amp;D) Cell actively identifies suitable national and international funding opportunities and guides faculty in proposal preparation, submission, and follow-up processes.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Seed Funding Initiatives:</strong> The institution provides internal seed funding to support innovative interdisciplinary research projects, enabling preliminary studies, prototype development, and data collection.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Institutional Research Grants:</strong> MITS encourages faculty to undertake collaborative research by offering internal grants and financial assistance. In recent years, the institute has consistently supported faculty members with funding to initiate and strengthen interdisciplinary research efforts.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-t border-border pt-5">
+                  <h4 className="font-bold text-lg text-foreground mb-2">3. Training and Mentorship</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
+                    Madanapalle Institute of Technology &amp; Science (MITS) emphasizes continuous learning and skill enhancement to promote interdisciplinary research. The institution conducts various training and mentoring activities to equip faculty and students with the necessary knowledge and competencies. Key initiatives include:
+                  </p>
+                  <ul className="space-y-2.5 pl-1">
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Workshops and Seminars:</strong> Regularly organized sessions focusing on interdisciplinary research methodologies, effective research communication, and collaborative teamwork.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Mentorship Programs:</strong> Senior faculty guide students and early-career researchers in adopting interdisciplinary approaches and developing quality research outcomes.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Faculty Development Programs (FDPs):</strong> Periodic training programs designed to enhance faculty expertise in emerging areas, research tools, and interdisciplinary domains.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Webinars and Capacity-Building Initiatives:</strong> Online and offline sessions addressing research strategies, funding opportunities, proposal development, and project management.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Proposal Writing Workshops:</strong> MITS organizes sessions and mentoring support to help faculty develop strong and competitive research proposals, especially for interdisciplinary themes.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-t border-border pt-5">
+                  <h4 className="font-bold text-lg text-foreground mb-2">4. Bridging Interdisciplinary Collaborations</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
+                    Madanapalle Institute of Technology &amp; Science (MITS) fosters interdisciplinary collaboration by creating platforms and support systems that encourage interaction, joint research, and knowledge exchange across domains. Key initiatives include:
+                  </p>
+                  <ul className="space-y-2.5 pl-1">
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Knowledge Exchange:</strong> Organizing interdisciplinary seminars, workshops, and research symposiums to bring together faculty, researchers, and experts from diverse fields.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Interdepartmental Research Collaboration:</strong> Encouraging faculty to initiate cross-departmental research projects with necessary administrative, technical, and logistical support.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Industry and Institutional Collaborations:</strong> Promoting partnerships with industries, research organizations, and academic institutions to address real-world challenges through interdisciplinary approaches.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>International Research Collaborations:</strong> Facilitating collaborations with global institutions through joint research initiatives, funding opportunities, and faculty/student exchange programs.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-t border-border pt-5">
+                  <h4 className="font-bold text-lg text-foreground mb-2">5. Research Facilities and Infrastructure:</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
+                    Madanapalle Institute of Technology &amp; Science (MITS) provides a robust ecosystem of shared resources and infrastructure to support interdisciplinary research and innovation. The institution ensures that faculty and students have access to advanced facilities, knowledge resources, and innovation spaces to carry out high-quality research. Key provisions include:
+                  </p>
+                  <ul className="space-y-2.5 pl-1">
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Advanced Research Facilities:</strong> Well-equipped laboratories across departments to support experimental and interdisciplinary research activities.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Library and Digital Resources:</strong> Access to a wide range of scientific journals, e-books, research databases, and digital repositories that facilitate cross-disciplinary learning and research.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-muted-foreground">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong>Intellectual Property and Innovation Support:</strong> Guidance and support for patent filing, intellectual property rights (IPR), and technology transfer to promote research commercialization.</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             )}
@@ -1411,8 +1487,12 @@ const MDRFSection = () => {
                 <div className="grid gap-4">
                   {deptFacilities.map((fac, idx) => (
                     <div key={idx} className="border border-border rounded-xl p-5 bg-card hover:border-primary/40 transition-colors">
-                      <h4 className="font-semibold text-foreground text-base mb-1">{fac.dept}</h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed mb-3">{fac.desc}</p>
+                      <h4 className="font-semibold text-foreground text-base mb-2">{fac.dept}</h4>
+                      <div className="space-y-2 mb-3">
+                        {fac.paragraphs.map((p, pi) => (
+                          <p key={pi} className="text-muted-foreground text-xs leading-relaxed">{p}</p>
+                        ))}
+                      </div>
                       {fac.link && (
                         <a
                           href={fac.link}
