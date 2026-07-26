@@ -49,7 +49,7 @@ const navItems: NavItem[] = [
       { label: "Careers", href: "/career" },
       { label: "Infrastructure", href: "/infrastructure" },
       { label: "International Relations", href: "/international-relations" },
-      { label: "MITS Radio", href: "/mits-radio" },
+      { label: "MITS Radio 90.8 CRS", href: "/mits-radio" },
       { label: "Moodle Login", href: "https://moodle.mits.ac.in/" },
       { label: "Contact Us", href: "/contact" },
     ],
@@ -114,7 +114,7 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-4 px-6 text-xs font-semibold shrink-0 z-20 bg-primary h-full">
             <Link to="/mits-radio" className="hover:text-accent transition-colors flex items-center gap-1">
-              <span>📻</span> MITS Radio
+              <span>📻</span> MITS Radio 90.8 CRS
             </Link>
             <span className="text-primary-foreground/30">|</span>
             <a href="https://moodle.mits.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">

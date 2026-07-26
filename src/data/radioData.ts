@@ -32,7 +32,7 @@ export const radioCoordinator = {
   designation: "CRS Coordinator",
   phone: "08571-220388, 8712655126, 9100973388",
   email: "mitsradio90.8cr@mits.ac.in",
-  address: "Madanapalle Institute of Technology & Science\nDeemed to be University\nPost Box No: 14, Kadiri Road,\nAngallu Madanapalle-517325,\nAndhra Pradesh, India",
+  address: "Madanapalle Institute of Technology & Science\nDeemed to be University\n Kadiri Road,\nAngallu Madanapalle-517325,\nAndhra Pradesh, India",
 };
 
 export const radioContacts = [
@@ -45,7 +45,7 @@ export const radioContacts = [
 export const radioTeam: TeamMember[] = [
   {
     name: "Dr. K. Sathesh",
-    designation: "Associate Professor & Coordinator",
+    designation: "CRS Coordinator",
     role: "Overall station coordination, compliance, and institutional integration.",
     image: "https://mits.ac.in/public/uploads/radio/13fab1a0c3d589eb6eddc0b189f208d8.jpg",
   },
@@ -61,6 +61,12 @@ export const radioTeam: TeamMember[] = [
     role: "Community outreach, volunteer management, script reviews, and on-air operations supervision.",
     image: "https://mits.ac.in/public/uploads/radio/2dad09bb9bda30210815d524b0693d7e.jpg",
   },
+  {
+    name: "Mr. B. Pawan Kumar",
+    designation: "AV Technician",
+    role: "Audio-visual setup, live sound mixing, equipment maintenance, and technical troubleshooting during broadcasts.",
+    image: "https://mits.ac.in/public/uploads/radio/1e0f3c7d8b9a4f2c8e5b6d7a9f3c2e1b.jpg",
+  }
 ];
 
 export const thematicFocusAreas = [

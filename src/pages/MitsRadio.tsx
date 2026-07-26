@@ -206,7 +206,7 @@ const MitsRadio = () => {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#e8c96a] text-xs font-semibold tracking-wider uppercase mb-5"
             >
               <Radio className="w-3.5 h-3.5 animate-pulse text-[#caa74d]" />
-              90.8 MHz FM · Voice of the Community
+              90.8 MHz CRS · Voice of the Community
             </motion.div>
 
             <motion.h1
@@ -214,7 +214,7 @@ const MitsRadio = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl bg-gradient-to-r from-[#e8c96a] via-[#f7df8a] to-white bg-clip-text text-transparent"
-              style={{ fontFamily: "var(--font-display)" }}
+              style={{ fontFamily: "var(--font-display)", fontVariantNumeric: "lining-nums" }}
             >
               MITS Community Radio 90.8 CRS
             </motion.h1>
@@ -332,7 +332,7 @@ const MitsRadio = () => {
                                 {isPlaying ? "Broadcasting Live Content..." : "Stream Paused"}
                               </p>
                               <p className="text-[10px] text-white/70">
-                                90.8 MHz FM Studio
+                                90.8 MHz CRS Studio
                               </p>
                             </div>
                           </div>
@@ -476,7 +476,7 @@ const MitsRadio = () => {
                       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
                         <div className="lg:col-span-8 text-secondary text-sm md:text-base leading-relaxed space-y-4 text-left">
                           <p>
-                            <strong>MITS RADIO 90.8 CRS</strong> is Madanapalle's 1st FM Community Radio operating from the Madanapalle Institute of Technology & Science - Deemed to be University. Sourced on 24 years of academic excellence, MITS is approved by AICTE and affiliated to JNTUA, Anantapur. It functions under the leadership of Ratakonda Ranga Reddy Educational Academy.
+                            <strong>MITS RADIO 90.8 CRS</strong> is Madanapalle's 1st Community Radio operating from the Madanapalle Institute of Technology & Science - Deemed to be University. Sourced on 24 years of academic excellence, MITS is approved by AICTE and affiliated to JNTUA, Anantapur. It functions under the leadership of Ratakonda Ranga Reddy Educational Academy.
                           </p>
                           <p>
                             <strong>Dr. N. Vijaya Bhaskar Choudary,</strong> Chancellor, initiated the station under the stewardship of <strong>Ms. Keerthi Nadella,</strong> Executive Director, and <strong>Dr. C. Yuvaraj,</strong> Vice Chancellor (I/c), MITS. It targets culminating societal activities by blending core informational objectives with art and entertainment.
@@ -523,7 +523,7 @@ const MitsRadio = () => {
                         <h3 className="font-display text-xl font-bold text-[#0f2a44] mb-5 border-b border-border/70 pb-2">
                           Our Team
                         </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                           {radioTeam.map((member, idx) => (
                             <div key={idx} className="bg-white rounded-xl border border-border shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all">
                               <div className="h-48 md:h-52 overflow-hidden bg-muted">
@@ -712,16 +712,28 @@ const MitsRadio = () => {
                       </h2>
 
                       <div className="space-y-8">
-                        {/* Milestone 1 */}
+                        {/* Milestone 1 — Radio Inauguration */}
                         <div className="border border-border rounded-2xl p-5 bg-white shadow-sm">
                           <h3 className="font-display font-bold text-lg text-[#0f2a44] mb-3">
-                            Radio Inauguration Banner
+                            Radio Inauguration
                           </h3>
-                          <div className="rounded-xl overflow-hidden mb-4 border border-border">
+                          {/* Inauguration banner image from old site */}
+                          <div className="rounded-xl overflow-hidden mb-3 border border-border">
                             <img
-                              src="https://mits.ac.in/public/uploads/radio/index1.jpg"
-                              alt="Inauguration Group Banner"
+                              src="https://mits.ac.in/assets/radio/inauguration.JPG"
+                              alt="MITS Radio Inauguration Banner"
                               className="w-full h-auto object-contain bg-muted"
+                              onError={(e) => {
+                                e.currentTarget.src = "https://mits.ac.in/public/uploads/radio/index1.jpg";
+                              }}
+                            />
+                          </div>
+                          {/* Embedded inauguration PDF */}
+                          <div className="rounded-xl overflow-hidden mb-4 border border-border bg-white">
+                            <iframe
+                              src="https://mits.ac.in/assets/radio/radio%20inaguaration.pdf"
+                              title="Radio Inauguration PDF"
+                              className="w-full h-[600px] border-0"
                             />
                           </div>
                           <div className="flex justify-between items-center flex-wrap gap-2 pt-3 border-t border-border/50">
@@ -739,16 +751,20 @@ const MitsRadio = () => {
                           </div>
                         </div>
 
-                        {/* Milestone 2 */}
+                        {/* Milestone 2 — Mann Ki Baat */}
                         <div className="border border-border rounded-2xl p-5 bg-white shadow-sm">
                           <h3 className="font-display font-bold text-lg text-[#0f2a44] mb-3">
                             Mann Ki Baat 100th Episode Celebration
                           </h3>
+                          {/* Mann Ki Baat banner image from old site */}
                           <div className="rounded-xl overflow-hidden mb-4 border border-border">
                             <img
-                              src="https://mits.ac.in/public/uploads/radio/image1.png"
+                              src="https://mits.ac.in/assets/radio/mann ki baat.JPG"
                               alt="Mann Ki Baat 100th Episode Celebration"
                               className="w-full h-auto object-contain bg-muted"
+                              onError={(e) => {
+                                e.currentTarget.src = "https://mits.ac.in/public/uploads/radio/image1.png";
+                              }}
                             />
                           </div>
                           <div className="flex justify-between items-center flex-wrap gap-2 pt-3 border-t border-border/50">
@@ -956,8 +972,8 @@ const MitsRadio = () => {
                               <p className="leading-relaxed">
                                 <strong>Address:</strong><br />
                                 Madanapalle Institute of Technology & Science<br />
-                                Deemed to be University, Kadiri Road,<br />
-                                Kurabalakota Mandal, Madanapalle-517325,<br />
+                                Deemed to be University<br /> 
+                                Kadiri Road, Kurabalakota Mandal, Madanapalle-517325,<br />
                                 Andhra Pradesh, India.
                               </p>
                             </div>
