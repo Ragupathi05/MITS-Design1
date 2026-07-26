@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
@@ -16,13 +16,13 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  researchOverview, projectsData, publicationsData, patentsData, seedGrantDocs, writingTipsContent,
-  policiesData, eventsData, documentsData, iprCellData, mdrfData,
-  researchVisionMission, keyAchievements, scopusPublications, wosPublications,
-  hIndexTrend, projectFunding, patentsAYWise, patentTotals,
-  mitsFoundationData, wwrcData, collaborationData,
+  researchOverview, projectsData, publicationsData, writingTipsContent,
+  policiesData, eventsData, iprCellData,
+  researchVisionMission, keyAchievements, scopusPublications,
+  projectFunding, patentsAYWise, patentTotals,
+  mitsFoundationData, collaborationData,
   ipfcData, consultancyData, innovationData, researchCentresData,
-  advisoryCommitteeData, academicResearchData,
+  academicResearchData, yearWisePublications,committeeData,
 } from "@/data/researchData";
 import BarChart from "@/components/research/BarChart";
 
@@ -37,7 +37,7 @@ const sectionTabs = [
   { id: "events", label: "Events", icon: Calendar },
   // { id: "documents", label: "Documents", icon: Layers },
   // { id: "advisory", label: "Advisory", icon: Users },
-  { id: "Committee", label: "Committee", icon: Users },
+  { id: "committee", label: "Committee", icon: Users },
   { id: "academic", label: "Academic", icon: GraduationCap },
   { id: "ipr", label: "IPR Cell", icon: Scale },
   { id: "collaborations", label: "Collaborations", icon: Handshake },
@@ -226,22 +226,16 @@ const ProjectsSection = () => (
     </p>
   </div>
 </div>
-        <BarChart data={projectFunding} unit="Amount in ₹ Lakhs" height={300} />
-      </div>
-    </ScrollReveal>
+        <div className="mb-2 text-center">
+  <p className="text-sm font-semibold text-muted-foreground">Amount in ₹ Lakhs</p>
+</div>
+<BarChart data={projectFunding} height={300} />  
+</div>  </ScrollReveal>
 
     <ScrollReveal delay={0.05}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="Sanctioned Research Projects" subtitle="Download year-wise funded project reports." />
-        {/* <a
-          href={projectsData.sanctionedProjects.allProjectsLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity mb-6"
-        >
-          <Download className="w-4 h-4" /> Download All Projects (PDF)
-        </a> */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {projectsData.sanctionedProjects.yearWise.map((y) => (
             <a
               key={y.year}
@@ -398,20 +392,42 @@ const PublicationsSection = () => {
                   </div>
                 )}
               </div>
+            
             ))}
           </div>
           <div className="mt-6">
-            <a
+            {/* <a
               href={publicationsData.moreLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
             >
               <ExternalLink className="w-4 h-4" /> View All Publications on mits.ac.in
-            </a>
+            </a> */}
+
           </div>
         </div>
       </ScrollReveal>
+      <ScrollReveal delay={0.05}>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Year Wise Publications" subtitle="Download year-wise publication reports." />
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          {yearWisePublications.map((y) => (
+            <a
+              key={y.year}
+              href={(y as any).local ? `${BASE}${y.link}` : y.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-muted rounded-xl px-4 py-3 hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-all group"
+            >
+              <Calendar className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground">E.Y. {y.year}</span>
+              <ExternalLink className="w-3.5 h-3.5 text-muted-foreground ml-auto group-hover:text-primary" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
     </div>
   );
 };
@@ -423,10 +439,6 @@ const PatentsSection = () => {
     { label: "Patents Published", value: patentTotals.published, color: "hsl(var(--accent))" },
     { label: "Patents Granted", value: patentTotals.granted, color: "hsl(var(--secondary))" },
   ];
-  const filed = patentsAYWise.map((p) => ({ label: p.year, value: p.filed }));
-  const published = patentsAYWise.map((p) => ({ label: p.year, value: p.published }));
-  const granted = patentsAYWise.map((p) => ({ label: p.year, value: p.granted }));
-  const totalAY = patentsAYWise.map((p) => ({ label: p.year, value: p.total }));
   return (
     <div className="space-y-6">
       {/* Headline totals */}
@@ -447,9 +459,9 @@ const PatentsSection = () => {
 
       {/* Composition + AY-wise chart */}
       <ScrollReveal delay={0.05}>
-        <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <div className="bg-card border border-border rounded-4xl p-6 md:p-8">
           {/* <SectionHeading title="Patent Portfolio Breakdown" subtitle="Includes Patents, Copyrights, Trademarks & Geographical Indications (GI)." /> */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 mb-6">
             {[
               { l: "Copyrights", v: "08" },
               { l: "Trademarks", v: "03" },
@@ -457,36 +469,30 @@ const PatentsSection = () => {
             ].map((s) => (
               <div key={s.l} className="bg-muted/40 border border-border rounded-2xl p-6 text-center">
                 <p className="font-display text-5xl font-bold text-foreground">{s.v}</p>
-                <p className="text-xs text-muted-foreground mt-2">{s.l}</p>
+                <p className="text-sm font-semibold text-card-foreground mt-2 uppercase tracking-wider">{s.l}</p>
               </div>
             ))}
           </div>
-          <BarChart data={totals} rotateLabels={false} height={220} />
-        </div>
+          <BarChart data={totals} rotateLabels={false} height={420} minBarSpacing={200} />        </div>
       </ScrollReveal>
 
       {/* AY-wise charts */}
       <ScrollReveal delay={0.08}>
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
           <SectionHeading title="Patents — Academic Year wise" subtitle="Filed, published, granted and total patents across academic years." />
-          <div className="grid lg:grid-cols-2 gap-6">
-            <div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Total Patents</p>
-              <BarChart data={totalAY} height={240} />
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Patents Granted</p>
-              <BarChart data={granted} height={240} accent="hsl(var(--accent))" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Patents Published</p>
-              <BarChart data={published} height={240} accent="hsl(var(--secondary))" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Patents Filed</p>
-              <BarChart data={filed} height={240} />
-            </div>
-          </div>
+          <BarChart
+            series={[
+              { name: "Total",     color: "hsl(var(--primary))" },
+              { name: "Published", color: "hsl(var(--accent))" },
+              { name: "Granted",   color: "hsl(var(--secondary))" },
+              { name: "Filed",     color: "#f59e0b" },
+            ]}
+            seriesData={patentsAYWise.map((p) => ({
+              label: p.year,
+              values: [p.total, p.published, p.granted, p.filed],
+            }))}
+            height={380}
+          />
 
           {/* Table */}
           <div className="overflow-x-auto mt-6 border border-border rounded-xl">
@@ -631,21 +637,42 @@ const EventsSection = () => {
   );
 };
 
-/* ─── DOCUMENTS TAB ─── */
-// const DocumentsSection = () => (
-//   <ScrollReveal>
-//     <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-//       <SectionHeading title="Documents" subtitle="Committee formations and institutional ethics documents." />
-//       <div className="grid sm:grid-cols-2 gap-3">
-//         {documentsData.map((d) => (
-//           <LinkCard key={d.title} title={d.title} link={d.link} icon={FileText} />
-//         ))}
-//       </div>
-//     </div>
-//   </ScrollReveal>
-// );
-/* committe Tab */
+/* ─── COMMITTEES TAB ─── */
 
+const CommitteeSection = () => (
+  <div className="space-y-6">
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="Research Committees" subtitle="Key committees governing research, innovation and intellectual property at MITS." />
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-primary/5 border-b border-border">
+                <th className="text-left px-4 py-3 font-semibold text-foreground w-16">S.No</th>
+                <th className="text-left px-4 py-3 font-semibold text-foreground">Name of the Committee</th>
+                <th className="text-left px-4 py-3 font-semibold text-foreground">View</th>
+              </tr>
+            </thead>
+            <tbody>
+              {committeeData.map((p, i) => (
+                <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
+                  <td className="px-4 py-3 text-muted-foreground">{p.sno}</td>
+                  <td className="px-4 py-3 font-medium text-foreground">{p.title}</td>
+                  <td className="px-4 py-3">
+                    <a href={p.link} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline">
+                      <ExternalLink className="w-3.5 h-3.5" /> View
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+);
 
 /* ─── IPR CELL TAB ─── */
 const IPRSection = () => (
@@ -1957,6 +1984,7 @@ const Research = () => {
               <TabsContent value="events"><EventsSection /></TabsContent>
               {/* <TabsContent value="documents"><DocumentsSection /></TabsContent> */}
               {/* <TabsContent value="advisory"><AdvisorySection /></TabsContent> */}
+              <TabsContent value="committee"><CommitteeSection /></TabsContent>
               <TabsContent value="academic"><AcademicResearchSection /></TabsContent>
               <TabsContent value="ipr"><IPRSection /></TabsContent>
               <TabsContent value="collaborations"><CollaborationsSection /></TabsContent>

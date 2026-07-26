@@ -155,6 +155,34 @@ export type PublicationYear = {
   entries: Publication[];
 };
 
+export const yearWisePublications = [
+  { year: "2007", link: "Research\\Year wise Publications\\2007.pdf", local: true },
+  { year: "2008", link: "Research\\Year wise Publications\\2008.pdf", local: true },
+  { year: "2009", link: "Research\\Year wise Publications\\2009.pdf", local: true },
+  { year: "2010", link: "Research\\Year wise Publications\\2010.pdf", local: true },
+  { year: "2011", link: "Research\\Year wise Publications\\2011.pdf", local: true },
+  { year: "2013", link: "Research\\Year wise Publications\\2013.pdf", local: true },
+  { year: "2014", link: "Research\\Year wise Publications\\2014.pdf", local: true },
+  { year: "2015", link: "Research\\Year wise Publications\\2015.pdf", local: true },
+  { year: "2016", link: "Research\\Year wise Publications\\2016.pdf", local: true },
+  { year: "2017", link: "Research\\Year wise Publications\\2017.pdf", local: true },
+  { year: "2018", link: "Research\\Year wise Publications\\2018.pdf", local: true },
+  { year: "2019", link: "Research\\Year wise Publications\\2019.pdf", local: true },
+  { year: "2020", link: "Research\\Year wise Publications\\2020.pdf", local: true },
+  { year: "2021", link: "Research\\Year wise Publications\\2021.pdf", local: true },
+  { year: "2022", link: "Research\\Year wise Publications\\2022.pdf", local: true },
+  { year: "2023", link: "Research\\Year wise Publications\\2023.pdf", local: true },
+  { year: "2024", link: "Research\\Year wise Publications\\2024.pdf", local: true },
+  { year: "2025", link: "Research\\Year wise Publications\\2025.pdf", local: true },
+  { year: "2026", link: "Research\\Year wise Publications\\21-07-2026.pdf", local: true },
+];
+
+export const committeeData = [
+  { sno: 1, title: "Publication Incentive Policy", link: "Research\\committe\\Research Incentive Policy Committee 2026-27.pdf", local: true },
+  { sno: 2, title: "Seed Grant Policy", link: "Research\\committe\\Seed Grant Comittee 2026-27.pdf", local: true },
+  { sno: 3, title: "MITS Startup Policy", link: "" },
+  { sno: 4, title: "MITS Intellectual Property Rights Policy", link: "" },
+];
 export const publicationsData = {
   title: "Research Publications",
   subtitle: "Top Rated Journals — MITS Affiliated Publications",
@@ -207,7 +235,7 @@ export const publicationsData = {
       ],
     },
   ],
-  moreLink: "https://mits.ac.in/publications",
+  // moreLink: "https://mits.ac.in/publications",
 };
 
 // export const patentsData = {
