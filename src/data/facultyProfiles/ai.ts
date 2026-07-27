@@ -15,6 +15,125 @@ export interface FacultyProfile {
 }
 
 export const aiProfiles: Record<string, FacultyProfile> = {
+    "Dr. Y. Ravi Raju": {
+    "name": "Dr. Y. Ravi Raju",
+    "designation": "Asst. Professor",
+    "email": "dryraviraju@mits.ac.in",
+    "officeAddress": "NPN-204",
+    "image": "https://mits.ac.in/public/uploads/faculty/DSC_7883.JPG",
+    "sections": [
+        {
+            "title": "Details of Educational Qualification",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Course": "Ph.D.",
+                    "Specialization": "C.S.E",
+                    "Branch": "Ph.D",
+                    "College Name/University": "Kalinga University",
+                    "Year of Passing": "2026"
+                },
+                {
+                    "S.No": "2",
+                    "Course": "M.Tech.",
+                    "Specialization": "C.S.E",
+                    "Branch": "C.S.E",
+                    "College Name/University": "B.V.C Engineering College, JNT University, Kakinada",
+                    "Year of Passing": "2012"
+                },
+                {
+                    "S.No": "3",
+                    "Course": "B.Tech.",
+                    "Specialization": "C.S.E",
+                    "Branch": "C.S.E",
+                    "College Name/University": "B.V.C.Institute of Technology and Science, JNT University, Kakinada",
+                    "Year of Passing": "2008"
+                }
+            ]
+        },
+        {
+            "title": "Research Areas",
+            "content": "Computer Networks, Cyber Security, Bigdata Analytics"
+        },
+        {
+            "title": "Research Identifiers",
+            "content": [
+                {
+                    "Identifier": "Scopus",
+                    "Link": "https://www.scopus.com/authid/detail.uri?authorId=57212565415"
+                },
+                {
+                    "Identifier": "Vidwan",
+                    "Link": "https://vidwan.inflibnet.ac.in/profile/460682"
+                },
+                {
+                    "Identifier": "Google scholar",
+                    "Link": "https://scholar.google.com/citations?user=Pvg4GngAAAAJ&hl=en"
+                },
+                {
+                    "Identifier": "h-Index (As per Scopus Data)",
+                    "Link": "5"
+                }
+            ]
+        },
+        {
+            "title": "Publication Details",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2024-25",
+                    "Author Position": "3",
+                    "Details of Research Publication": "A Machine Learning Approach in Communication 5G-6G Network",
+                    "Indexing": "Scopus",
+                    "Publication": "Article",
+                    "Journal Quartile": "Q3"
+                },
+                {
+                    "S.No": "2",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2024-25",
+                    "Author Position": "1",
+                    "Details of Research Publication": "Optimization of Natural Language Processing Models for Multilingual Legal Document Analysis",
+                    "Indexing": "Scopus",
+                    "Publication": "Conference Proceedings",
+                    "Journal Quartile": ""
+                },
+                {
+                    "S.No": "3",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2024-25",
+                    "Author Position": "2",
+                    "Details of Research Publication": "Integrating the Internet of Things to Protect Electric Vehicle Control Systems from Cyber Attacks",
+                    "Indexing": "Scopus",
+                    "Publication": "Article",
+                    "Journal Quartile": "Q2"
+                },
+                {
+                    "S.No": "4",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2024-25",
+                    "Author Position": "3",
+                    "Details of Research Publication": "Wearable Devices and Health Monitoring: Big Data and AI for Remote Patient Care",
+                    "Indexing": "Scopus",
+                    "Publication": "Book Chapter",
+                    "Journal Quartile": ""
+                },
+                {
+                    "S.No": "5",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2024-25",
+                    "Author Position": "4",
+                    "Details of Research Publication": "Disease Biomarker Discovery with Big Data Analysis",
+                    "Indexing": "Scopus",
+                    "Publication": "Book Chapter",
+                    "Journal Quartile": ""
+                }
+            ]
+        }
+    ]
+},
+
     "Dr. R. Kalpana": {
       name: "Dr. R. Kalpana",
       designation: "Professor & Head",

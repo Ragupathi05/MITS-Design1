@@ -15,6 +15,102 @@ export interface FacultyProfile {
 }
 
 export const cseProfiles: Record<string, FacultyProfile> = {
+  "Mrs. M. Sri Lakshmi Preethi": {
+    "name": "Mrs. M. Sri Lakshmi Preethi",
+    "designation": "Asst. Professor",
+    "email": "srilakshmipreethim@mits.ac.in",
+    "officeAddress": "NPN-204",
+    "image": "https://mits.ac.in/public/uploads/faculty/Sri Lakshmi Preethi.JPG",
+    "sections": [
+        {
+            "title": "Details of Educational Qualification",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Course": "Ph.D.",
+                    "Specialization": "ML, DL & CS",
+                    "Branch": "CSE",
+                    "College Name/University": "Presidency University",
+                    "Year of Passing": "Pursuing"
+                },
+                {
+                    "S.No": "2",
+                    "Course": "M.Tech.",
+                    "Specialization": "Software Engineering",
+                    "Branch": "CSE",
+                    "College Name/University": "Ellenki Engineering College, JNTU Hyderabad",
+                    "Year of Passing": "2014"
+                },
+                {
+                    "S.No": "3",
+                    "Course": "B.Tech.",
+                    "Specialization": "Information Technology",
+                    "Branch": "CSE",
+                    "College Name/University": "Chirala Engineering College, JNTU Kakinada",
+                    "Year of Passing": "2012"
+                }
+            ]
+        },
+        {
+            "title": "Research Identifiers",
+            "content": [
+                {
+                    "Identifier": "Scopus",
+                    "Link": "https://www.scopus.com/authid/detail.uri?authorId=60522588600"
+                },
+                {
+                    "Identifier": "Vidwan",
+                    "Link": "https://mits.irins.org/profile/561697"
+                },
+                {
+                    "Identifier": "Google scholar",
+                    "Link": "https://scholar.google.com/citations?user=_yxGVAkAAAAJ"
+                }
+            ]
+        },
+        {
+            "title": "Patents",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Affiliation": "MITS",
+                    "Academic Year": "2025",
+                    "Application ID": "202541098168",
+                    "Title of the Patent": "INTELLIGENT IOT-ENABLED ENERGY MANAGEMENT FRAMEWORK FOR SMART CLASSROOMS USING MACHINE LEARNING IN HIGHER EDUCATION",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "2",
+                    "Affiliation": "MITS",
+                    "Academic Year": "2024",
+                    "Application ID": "202441058856 A",
+                    "Title of the Patent": "ENHANCED STRESS DETECTION IN SOCIAL NETWORK MESSAGES WITH IOT AND MACHINE LEARNING",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "3",
+                    "Affiliation": "Others",
+                    "Academic Year": "2023",
+                    "Application ID": "202341009964",
+                    "Title of the Patent": "A NEW METHOD OF UNMANNED AERIAL VEHICLE MONITORING SYSTEM FOR AGRICULTURE TERRESTRIAL FARMING USING MACHINE LEARNING TECHNIQUES",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "4",
+                    "Affiliation": "Others",
+                    "Academic Year": "2020",
+                    "Application ID": "202041030734 A",
+                    "Title of the Patent": "AN INTERNET OF THINGS BASED SYSTEM FOR BICYCLE",
+                    "Status": "Published"
+                }
+            ]
+        },
+        {
+            "title": "Awards & Achievements",
+            "content": "Certified in Executive Certificate Program In Cyber Security By IIT KANPUR"
+        }
+    ]
+},
     "Dr. M. Sreedevi": {
       name: "Dr. M. Sreedevi",
       designation: "Professor & Head",
@@ -338,36 +434,138 @@ export const cseProfiles: Record<string, FacultyProfile> = {
       ]
     },
 
-    "Dr. N. Krishnaiah": {
-      name: "Dr. N. Krishnaiah",
-      designation: "Assoc. Professor",
-      email: "drkrishnaiahn@mits.ac.in",
-      officeAddress: "NPN204",
-      image: "https://mits.ac.in/public/uploads/faculty/nallam.jpeg",
-      sections: [
+      "Dr. N. Krishnaiah": {
+    "name": "Dr. N. Krishnaiah",
+    "designation": "Assoc. Professor",
+    "email": "drkrishnaiahn@mits.ac.in",
+    "officeAddress": "NPN-204",
+    "image": "https://mits.ac.in/public/uploads/faculty/nallam.jpeg",
+    "sections": [
         {
-          title: "Details of Educational Qualification",
-          content: [
-            {"S.No": "1", "Course": "Ph.D.", "Specialization": "CSE", "Branch": "CSE", "College Name/University": "JNTUK, Kakinada", "Year of Passing": "2018"},
-            {"S.No": "2", "Course": "M.Tech.", "Specialization": "CSE", "Branch": "CSE", "College Name/University": "JNTUK, Kakinada", "Year of Passing": "2009"},
-            {"S.No": "3", "Course": "B.Tech.", "Specialization": "CSE", "Branch": "CSE", "College Name/University": "SVCET, Chittoor", "Year of Passing": "2005"}
-          ]
+            "title": "Details of Educational Qualification",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Course": "Ph.D.",
+                    "Specialization": "Software Engineering",
+                    "Branch": "CSE",
+                    "College Name/University": "JNTUK Kakinada",
+                    "Year of Passing": "2024"
+                },
+                {
+                    "S.No": "2",
+                    "Course": "M.Tech.",
+                    "Specialization": "Software Engineering",
+                    "Branch": "CSE",
+                    "College Name/University": "JNTUH",
+                    "Year of Passing": "2011"
+                },
+                {
+                    "S.No": "3",
+                    "Course": "B.Tech.",
+                    "Specialization": "CSE",
+                    "Branch": "CSE",
+                    "College Name/University": "JNTUH",
+                    "Year of Passing": "2008"
+                }
+            ]
         },
         {
-          title: "Research Areas",
-          content: "Big Data Analytics, Machine learning, Computer Networks & Data warehousing and Mining"
+            "title": "Research Areas",
+            "content": "Machine Learning, Deep Learning, Software Engineering"
         },
         {
-          title: "Research Identifiers",
-          content: [
-            {"Identifier": "Scopus", "Link": "https://www.scopus.com/authid/detail.uri?authorId=57831317500"},
-            {"Identifier": "Vidwan", "Link": "https://vidwan.inflibnet.ac.in/profile/509386"},
-            {"Identifier": "Google scholar", "Link": "https://scholar.google.com/citations?user=RO6Cob4AAAAJ&hl=en"},
-            {"Identifier": "h-Index (As per Scopus Data)", "Link": "3"}
-          ]
+            "title": "Research Identifiers",
+            "content": [
+                {
+                    "Identifier": "Scopus",
+                    "Link": "https://www.scopus.com/authid/detail.uri?authorId=57204907139"
+                },
+                {
+                    "Identifier": "Vidwan",
+                    "Link": "https://vidwan.inflibnet.ac.in/profile/502120"
+                },
+                {
+                    "Identifier": "Google scholar",
+                    "Link": "https://scholar.google.com/citations?hl=en&user=3Wlyd-IAAAAJ"
+                },
+                {
+                    "Identifier": "h-Index",
+                    "Link": "2"
+                }
+            ]
+        },
+        {
+            "title": "Patents",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Affiliation": "Others",
+                    "Academic Year": "2025",
+                    "Application ID": "202541043218",
+                    "Title of the Patent": "Elevating Agriculture: Advanced Hops Classification for Precision Crop Management and Quality Harvests",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "2",
+                    "Affiliation": "Others",
+                    "Academic Year": "2025",
+                    "Application ID": "202541027013",
+                    "Title of the Patent": "Time Series Analysis-Based Prediction of Dengue Spread Using Climate Data",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "3",
+                    "Affiliation": "Others",
+                    "Academic Year": "2024",
+                    "Application ID": "202441080860",
+                    "Title of the Patent": "An Advanced System For Real-Time Contactless Vital Sign Estimation",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "4",
+                    "Affiliation": "Others",
+                    "Academic Year": "2024",
+                    "Application ID": "202441080855",
+                    "Title of the Patent": "Xgboost Model Based Alpha Signal Prediction Using Microblogging Data From Social Media",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "5",
+                    "Affiliation": "Others",
+                    "Academic Year": "2024",
+                    "Application ID": "202441050598",
+                    "Title of the Patent": "Smart Locker System Using Dactylogram",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "6",
+                    "Affiliation": "Others",
+                    "Academic Year": "2021",
+                    "Application ID": "AU 2021101471",
+                    "Title of the Patent": "IoT Enabled Wall Climbing Robot For Security",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "7",
+                    "Affiliation": "Others",
+                    "Academic Year": "2021",
+                    "Application ID": "202141043198",
+                    "Title of the Patent": "Automatic Network Operation And Management To Improve Network Resource Utilization And Operational Reliability Using Machine Learning Algorithms",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "8",
+                    "Affiliation": "Others",
+                    "Academic Year": "2019",
+                    "Application ID": "201941047156",
+                    "Title of the Patent": "Data Mining For Discovering Informative Knowledge In Complex Data",
+                    "Status": "Published"
+                }
+            ]
         }
-      ]
-    },
+    ]
+},
 
     "Dr. D. J. Ashpin Pabi": {
       name: "Dr. D. J. Ashpin Pabi",
@@ -456,66 +654,155 @@ export const cseProfiles: Record<string, FacultyProfile> = {
       ]
     },
 
-    "Dr. K. Sree Divya": {
-      name: "Dr. K. Sree Divya",
-      designation: "Asst. Professor",
-      email: "drsreedivyak@mits.ac.in",
-      officeAddress: "NPN204",
-      image: "https://mits.ac.in/public/uploads/faculty/DSC_7933.JPG",
-      sections: [
+      "Dr. K. Sree Divya": {
+    "name": "Dr. K. Sree Divya",
+    "designation": "Asst. Professor",
+    "email": "drksreedivya@mits.ac.in",
+    "officeAddress": "NPN-204",
+    "image": "https://mits.ac.in/public/uploads/faculty/DSC_7933.JPG",
+    "sections": [
         {
-          title: "Details of Educational Qualification",
-          content: [
-            {"S.No": "1", "Course": "Ph.D.", "Specialization": "Machine Learning and Data Analytics", "Branch": "CSE", "College Name/University": "Sri Padmavathi Mahila Viswa Vidyalayam", "Year of Passing": "2021"},
-            {"S.No": "2", "Course": "M.Tech.", "Specialization": "CSE", "Branch": "CSE", "College Name/University": "JNTU Anantapur", "Year of Passing": "2014"},
-            {"S.No": "3", "Course": "B.Tech.", "Specialization": "Information Technology", "Branch": "Information Technology", "College Name/University": "JNTU Hyderabad", "Year of Passing": "2006"}
-          ]
+            "title": "Details of Educational Qualification",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Course": "Ph.D.",
+                    "Specialization": "Machine Learning and Data Analytics",
+                    "Branch": "CSE",
+                    "College Name/University": "Sri Padmavathi Mahila Viswa Vidyalayam",
+                    "Year of Passing": "2021"
+                },
+                {
+                    "S.No": "2",
+                    "Course": "M.Tech.",
+                    "Specialization": "CSE",
+                    "Branch": "CSE",
+                    "College Name/University": "JNTU Anantapur",
+                    "Year of Passing": "2014"
+                },
+                {
+                    "S.No": "3",
+                    "Course": "B.Tech.",
+                    "Specialization": "Information Technology",
+                    "Branch": "Information Technology",
+                    "College Name/University": "JNTU Hyderabad",
+                    "Year of Passing": "2006"
+                }
+            ]
         },
         {
-          title: "Research Areas",
-          content: "Deep Learning, Natural Language Processing"
+            "title": "Research Areas",
+            "content": "Deep Learning, Natural Language Processing"
         },
         {
-          title: "Research Identifiers",
-          content: [
-            {"Identifier": "Scopus", "Link": "https://www.scopus.com/authid/detail.uri?authorId=57955831000"},
-            {"Identifier": "Vidwan", "Link": "https://vidwan.inflibnet.ac.in/profile/460458"},
-            {"Identifier": "Google scholar", "Link": "https://scholar.google.com/citations?user=Sl6XF40AAAAJ&hl=en‬"},
-            {"Identifier": "h-Index (As per Scopus Data)", "Link": "1"}
-          ]
+            "title": "Research Identifiers",
+            "content": [
+                {
+                    "Identifier": "Scopus",
+                    "Link": "https://www.scopus.com/authid/detail.uri?authorId=57955831000"
+                },
+                {
+                    "Identifier": "Vidwan",
+                    "Link": "https://vidwan.inflibnet.ac.in/profile/460458"
+                },
+                {
+                    "Identifier": "Google scholar",
+                    "Link": "https://scholar.google.com/citations?user=Sl6XF40AAAAJ"
+                }
+            ]
         },
         {
-          title: "Publication Details",
-          content: [
-            {"S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Cloudburst Prediction System Smart Innovation Systems and Technologies 117 SIST, pp. 117-125, 2026", "Indexing": "Scopus", "Publication": "Conference Proceedings", "Journal Quartile": "Q4"},
-            {"S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "MOFA+-GAT: A Novel Deep Learning Framework for Multi-Omics Integration and Drug Metabolite Pathway PredictionJournal of Applied Bioanalysis 11(3), pp. 728-742", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "An Improved Mutual Exclusion Mac Protocol For Mac Layer In Manet To Overcome Hidden And Exposed Terminal Problem Journal of Theoretical and Applied Information Technology., 2024, 102(4), pp. 1627–1636", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Optimizing Task Scheduling: Exploring Advanced Machine Learning In Dew-Powered Cloud Environments Scalable Computing., 2024, 25(5), pp. 3701–3714", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Implementing Blockchain Based DApp for Secure Sharing of Students' Credentials 2024 IEEE 9th International Conference for Convergence in Technology, I2CT 2024, 2024", "Indexing": "Scopus", "Publication": "Conference Proceedings", "Journal Quartile": "Q4"},
-            {"S.No": "6", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Asset Mapping Using K-NN to Evaluate the Distance Measure Between Assets  International Journal of Future Generation Communication and Networking, Vol. 13, No. 4, pp. 2587– 2597", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "7", "Publication Affiliation": "Others", "Academic Year": "2020", "Author Position": "1", "Details of Research Publication": "Comparative Analysis Of Classifiers And Ensembles In Asset Mapping Using Big Data International Journal of Advanced Research in Engineering and Technology (IJARET), Volume 12, Issue 1, January 2021, pp. 971-980", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "8", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "XGBoost Classifier to ExtractAsset Mapping  Features Advances in Computational and Bio-Engineering Springer Publication, ISSN: 2662- 3447", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "9", "Publication Affiliation": "Others", "Academic Year": "2018", "Author Position": "1", "Details of Research Publication": "Machine learning algorithms in big data analytics InternationaL Journal of Computer Sci. Eng 6 (1), 63-70", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q4"}
-          ]
+            "title": "Publication Details",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2025",
+                    "Author Position": "1",
+                    "Details of Research Publication": "Cloudburst Prediction System Smart Innovation Systems and Technologies 117 SIST, pp. 117-125, 2026",
+                    "Indexing": "Scopus",
+                    "Publication": "Conference Proceedings",
+                    "Journal Quartile": "Q4"
+                },
+                {
+                    "S.No": "2",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2025",
+                    "Author Position": "1",
+                    "Details of Research Publication": "MOFA+-GAT: A Novel Deep Learning Framework for Multi-Omics Integration and Drug Metabolite Pathway Prediction Journal of Applied Bioanalysis 11(3), pp. 728-742",
+                    "Indexing": "Scopus",
+                    "Publication": "Article",
+                    "Journal Quartile": "Q3"
+                },
+                {
+                    "S.No": "3",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2024",
+                    "Author Position": "1",
+                    "Details of Research Publication": "An Improved Mutual Exclusion Mac Protocol For Mac Layer In Manet To Overcome Hidden And Exposed Terminal Problem Journal of Theoretical and Applied Information Technology., 2024, 102(4), pp. 1627-1636",
+                    "Indexing": "Scopus",
+                    "Publication": "Article",
+                    "Journal Quartile": "Q4"
+                },
+                {
+                    "S.No": "4",
+                    "Publication Affiliation": "MITS",
+                    "Academic Year": "2024",
+                    "Author Position": "1",
+                    "Details of Research Publication": "Implementing Blockchain Based DApp for Secure Sharing of Students' Credentials 2024 IEEE 9th International Conference for Convergence in Technology, I2CT 2024, 2024",
+                    "Indexing": "Scopus",
+                    "Publication": "Conference Proceedings",
+                    "Journal Quartile": "Q4"
+                },
+                {
+                    "S.No": "5",
+                    "Publication Affiliation": "Others",
+                    "Academic Year": "2019",
+                    "Author Position": "1",
+                    "Details of Research Publication": "XGBoost Classifier to ExtractAsset Mapping Features Advances in Computational and Bio-Engineering Springer Publication",
+                    "Indexing": "Scopus",
+                    "Publication": "Article",
+                    "Journal Quartile": "Q1"
+                }
+            ]
         },
         {
-          title: "Patents",
-          content: [
-            {"S.No": "1", "Affiliation": "MITS", "Academic Year": "2023", "Application ID": "202341072767", "Title of the Patent": "Evaluation Of Packet Traffic Abnormally Beacon  Analysis For Icmp Ping Flood Identification Of Attack", "Status": "Published"},
-            {"S.No": "2", "Affiliation": "Others", "Academic Year": "2021", "Application ID": "202141060116", "Title of the Patent": "Automatic Detection Of Shoulder Pain", "Status": "Published"},
-            {"S.No": "3", "Affiliation": "Others", "Academic Year": "2020", "Application ID": "2020101563", "Title of the Patent": "An Artificial Intelligence Based System To Assist  Blind Person", "Status": "Published"}
-          ]
+            "title": "Patents",
+            "content": [
+                {
+                    "S.No": "1",
+                    "Affiliation": "MITS",
+                    "Academic Year": "2023",
+                    "Application ID": "202341072767",
+                    "Title of the Patent": "Evaluation Of Packet Traffic Abnormally Beacon Analysis For Icmp Ping Flood Identification Of Attack",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "2",
+                    "Affiliation": "Others",
+                    "Academic Year": "2021",
+                    "Application ID": "202141060116",
+                    "Title of the Patent": "Automatic Detection Of Shoulder Pain",
+                    "Status": "Published"
+                },
+                {
+                    "S.No": "3",
+                    "Affiliation": "Others",
+                    "Academic Year": "2020",
+                    "Application ID": "2020101563",
+                    "Title of the Patent": "An Artificial Intelligence Based System To Assist Blind Person",
+                    "Status": "Published"
+                }
+            ]
         },
         {
-          title: "Awards/Achievements",
-          content: [
-            "GATE Exam Qualified in Computer science and Engineering,2011.",
-            "APSET Exam Qualified in Computer Science,2018.",
-            "Acted as a mentor in SIH Grand Finale at K.L.University Vijayawada"
-          ]
+            "title": "Awards & Achievements",
+            "content": ["GATE Exam Qualified in Computer science and Engineering, 2011.",
+            "APSET Exam Qualified in Computer Science, 2018.", 
+            "Acted as a mentor in SIH Grand Finale at K.L.University Vijayawada"]
         }
-      ]
-    },
+    ]
+},
 
     "Dr. G. Sreenivasulu": {
       name: "Dr. G. Sreenivasulu",
