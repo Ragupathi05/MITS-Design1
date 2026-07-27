@@ -49,6 +49,11 @@ const MitsRadio = lazy(() => import("./pages/MitsRadio"));
 const TermsConditionsPolicy = lazy(() => import("./pages/TermsConditionsPolicy"));
 const NationalAdmissionsProcedure = lazy(() => import("./pages/NationalAdmissionsProcedure"));
 const InternationalAdmissionsProcedure = lazy(() => import("./pages/InternationalAdmissionsProcedure"));
+const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage"));
+const RefundPolicyPage = lazy(() => import("./pages/RefundPolicyPage"));
+const AQARCriterionPage = lazy(() => import("./pages/AQARCriterionPage").then(m => ({ default: m.AQARCriterionPage })));
+const EContentPage = lazy(() => import("./pages/EContentPage"));
+const NewsletterPage = lazy(() => import("./pages/NewsletterPage"));
 const Cells = lazy(() => import("./pages/Cells"));
 const CellDetail = lazy(() => import("./pages/CellDetail"));
 const Careers = lazy(() => import("./pages/Careers"));
@@ -115,6 +120,8 @@ const App = () => (
             <Route path="/nirf" element={<NIRF />} />
             <Route path="/naac" element={<NAAC />} />
             <Route path="/iqac" element={<IQAC />} />
+            <Route path="/aqarcriteria" element={<AQARCriterionPage />} />
+            <Route path="/aqar-criterion" element={<AQARCriterionPage />} />
             <Route path="/affiliations-accreditations" element={<AffiliationsAccreditations />} />
             <Route path="/psd" element={<PublicSelfDisclosures />} />
             <Route path="/public-self-disclosures" element={<PublicSelfDisclosures />} />
@@ -130,9 +137,13 @@ const App = () => (
             <Route path="/department/:deptKey/:section" element={<DepartmentPage />} />
             <Route path="/mits-radio" element={<MitsRadio />} />
             <Route path="/terms-conditions-policy" element={<TermsConditionsPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/refund-policy" element={<RefundPolicyPage />} />
             <Route path="/national-admissions-procedure" element={<NationalAdmissionsProcedure />} />
             <Route path="/international-admissions-procedure" element={<InternationalAdmissionsProcedure />} />
             <Route path="/placements/team/:slug" element={<PlacementFacultyProfilePage />} />
+            <Route path="/e-content" element={<EContentPage />} />
+            <Route path="/newsletter" element={<NewsletterPage />} />
             <Route path="/cells" element={<Cells />} />
             <Route path="/cells/:id" element={<CellDetail />} />
             <Route path="/career" element={<Careers />} />

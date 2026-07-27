@@ -44,7 +44,6 @@ type SectionKey =
   | "overview"
   | "highlights"
   | "cycle1"
-  | "iqac"
   | "ssr"
   | "criteria"
   | "dvv-ep"
@@ -57,7 +56,6 @@ const sections: { key: SectionKey; label: string; icon: React.ComponentType<{ cl
   { key: "overview", label: "Overview", icon: BookOpen },
   { key: "highlights", label: "Highlights", icon: Sparkles },
   { key: "cycle1", label: "Cycle 1 (2020)", icon: Trophy },
-  { key: "iqac", label: "IQAC", icon: ShieldCheck },
   { key: "ssr", label: "SSR", icon: ClipboardList },
   { key: "criteria", label: "Criteria 1–7", icon: ScrollText },
   { key: "dvv-ep", label: "DVV / Extended Profile", icon: GraduationCap },
@@ -100,7 +98,10 @@ const DocCard = ({ doc, highlight }: { doc: DocLink; highlight?: boolean }) => {
           {isVideo ? "Video" : isLink ? "External Link" : "PDF Document"}
         </p>
       </div>
-      <Download className="w-5 h-5 text-primary/40 group-hover:text-[#caa74d] transition-colors shrink-0" />
+      {(() => {
+        const ActionIcon = isLink || isVideo ? ExternalLink : Download;
+        return <ActionIcon className="w-5 h-5 text-primary/40 group-hover:text-[#caa74d] transition-colors shrink-0" />;
+      })()}
     </motion.a>
   );
 };
@@ -372,25 +373,6 @@ const NAAC = () => {
                       description="Complete documentation set submitted and issued during the first cycle of NAAC accreditation."
                     />
                     <DocGrid docs={filter(cycle1Documents)} />
-                  </section>
-                )}
-
-                {active === "iqac" && (
-                  <section>
-                    <SectionHeader
-                      eyebrow="Quality Assurance"
-                      title="Internal Quality Assurance Cell"
-                      description="IQAC is the nodal body driving institutional quality enhancement, benchmarking and NAAC compliance at MITS."
-                    />
-                    <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-2xl p-6 md:p-8 mb-6">
-                      <p className="font-body text-white/85 leading-relaxed">
-                        The IQAC develops a system for conscious, consistent and catalytic improvement in
-                        the overall performance of MITS — by promoting measures for institutional functioning
-                        towards quality enhancement through internalization of quality culture and
-                        institutionalization of best practices.
-                      </p>
-                    </div>
-                    <DocGrid docs={filter(iqacLinks)} />
                   </section>
                 )}
 

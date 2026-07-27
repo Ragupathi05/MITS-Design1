@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronRight,
+  ChevronLeft,
   FileText,
   ExternalLink,
   Award,
@@ -38,6 +39,7 @@ import {
   Files,
   Star,
   ClipboardCheck,
+  CheckCircle2,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -47,8 +49,17 @@ import {
   strategies,
   functions as iqacFunctions,
   benefits,
+  followUp,
+  qualityFrameworkImg,
+  organogramPdf,
+  compositionIntroText,
+  compositionMitsText,
   compositionNotes,
   compositionYearly,
+  aqarSubmissionParagraphs,
+  aqarTimelineParagraphs,
+  aqarReportsYearly,
+  iqacENotices,
   organogram,
   naacReforms2024,
   milestones,
@@ -74,7 +85,6 @@ import {
   iqacHoursReports,
   ugcMandate,
   iqacEvents,
-  eNoticeBoard,
   auditFormats,
   naacFormats,
   nbaFormats,
@@ -89,10 +99,30 @@ import {
   mitsDtbuPolicies,
   meetingsMom,
   meetingsDtbu,
+  iso21001Subtabs,
+  imsSubtabs,
+  aqarReportsList,
+  userReportsDocs,
+  userFeedbackSections,
+  userAaaDocs,
+  userAaaRefDocs,
+  userStrategicDocs,
+  userBestPracticesDocs,
+  userSssDocs,
+  userAnnualReportsDocs,
+  userIqacHoursDocs,
+  userHandbookDocs,
+  userUgcMandateDocs,
+  userIqacEventsDocs,
+  userEiqacDocs,
+  userGalleryDocs,
+  userManualsTableData,
   contact,
   bannerImage,
   type Doc,
 } from "@/data/iqac";
+
+const BASE = import.meta.env.BASE_URL;
 
 type SectionKey =
   | "about"
@@ -106,6 +136,8 @@ type SectionKey =
   | "milestones"
   | "meetings"
   | "certifications"
+  | "iso"
+  | "ims"
   | "aicte"
   | "aqar"
   | "reports"
@@ -141,6 +173,8 @@ const sections: { key: SectionKey; label: string; icon: React.ComponentType<{ cl
   { key: "milestones", label: "Milestones", icon: Milestone, group: "Operations" },
   { key: "meetings", label: "Minutes of Meeting", icon: ClipboardList, group: "Operations" },
   { key: "certifications", label: "Certifications", icon: Award, group: "Accreditation" },
+  { key: "iso", label: "ISO 21001 : 2018 EOMS", icon: ShieldCheck, group: "Accreditation" },
+  { key: "ims", label: "IMS (ISO 14001:2015 & ISO 50001:2018)", icon: ShieldCheck, group: "Accreditation" },
   { key: "aicte", label: "AICTE Quality Mandate", icon: Trophy, group: "Accreditation" },
   { key: "aqar", label: "AQAR", icon: ClipboardCheck, group: "Accreditation" },
   { key: "reports", label: "Reports", icon: FileText, group: "Accreditation" },
@@ -171,14 +205,42 @@ const GOLD = "#caa74d";
 const DocCard = ({ doc }: { doc: Doc }) => {
   const isVideo = doc.type === "video";
   const isLink = doc.type === "link";
+  const isInternal = doc.url.startsWith("/");
   const Icon = isVideo ? Video : isLink ? ExternalLink : FileText;
   const label =
     isVideo ? "Video" :
-    isLink ? "External Link" :
+    isLink ? (isInternal ? "Internal Page" : "External Link") :
     doc.type === "xlsx" ? "Excel Document" :
     doc.type === "doc" ? "Word Document" :
     doc.type === "zip" ? "Archive" :
     "PDF Document";
+
+  const ActionIcon = isLink || isVideo ? ExternalLink : Download;
+
+  const cardContent = (
+    <>
+      <div className={`shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-lg flex items-center justify-center bg-gradient-to-br ${isVideo ? "from-[#b31317] to-[#8a0e12]" : isLink ? "from-[#b31317] to-[#8a0e12]" : "from-[#0f2a44] to-[#11355a]"} text-white`}>
+        <Icon className="w-5 h-5" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <p className="font-body font-semibold text-[#0f2a44] text-sm md:text-[15px] leading-snug">{doc.title}</p>
+        <p className="font-body text-[11px] text-[#0f2a44]/60 mt-1 uppercase tracking-wider">{label}</p>
+      </div>
+      <ActionIcon className="w-5 h-5 text-[#0f2a44]/40 group-hover:text-[#b31317] transition-colors shrink-0" />
+    </>
+  );
+
+  if (isInternal) {
+    return (
+      <Link
+        to={doc.url}
+        className="group relative flex items-center gap-4 rounded-xl border border-[#0f2a44]/10 bg-white p-4 md:p-5 shadow-sm transition-all hover:shadow-[0_12px_32px_rgba(15,42,68,0.12)] hover:border-[#caa74d]"
+      >
+        {cardContent}
+      </Link>
+    );
+  }
+
   return (
     <motion.a
       href={doc.url}
@@ -187,14 +249,7 @@ const DocCard = ({ doc }: { doc: Doc }) => {
       whileHover={{ y: -3 }}
       className="group relative flex items-center gap-4 rounded-xl border border-[#0f2a44]/10 bg-white p-4 md:p-5 shadow-sm transition-all hover:shadow-[0_12px_32px_rgba(15,42,68,0.12)] hover:border-[#caa74d]"
     >
-      <div className={`shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-lg flex items-center justify-center bg-gradient-to-br ${isVideo ? "from-[#b31317] to-[#8a0e12]" : isLink ? "from-[#caa74d] to-[#a8862e]" : "from-[#0f2a44] to-[#11355a]"} text-white`}>
-        <Icon className="w-5 h-5" />
-      </div>
-      <div className="flex-1 min-w-0">
-        <p className="font-body font-semibold text-[#0f2a44] text-sm md:text-[15px] leading-snug">{doc.title}</p>
-        <p className="font-body text-[11px] text-[#0f2a44]/60 mt-1 uppercase tracking-wider">{label}</p>
-      </div>
-      <Download className="w-5 h-5 text-primary/40 group-hover:text-[#caa74d] transition-colors shrink-0" />
+      {cardContent}
     </motion.a>
   );
 };
@@ -204,7 +259,7 @@ const DocGrid = ({ docs }: { docs: Doc[] }) =>
     <p className="font-body text-[#0f2a44]/60 italic">No documents match your search.</p>
   ) : (
     <div className="grid sm:grid-cols-2 gap-4">
-      {docs.map((d) => <DocCard key={d.title + d.url} doc={d} />)}
+      {docs.map((d, i) => <DocCard key={d.title + d.url + i} doc={d} />)}
     </div>
   );
 
@@ -215,6 +270,424 @@ const SectionHeader = ({ eyebrow, title, description }: { eyebrow: string; title
     {description && <p className="font-body text-[#0f2a44]/70 mt-3 max-w-3xl leading-relaxed">{description}</p>}
   </div>
 );
+
+const IQACENoticeBoardTicker = () => {
+  const scrollRef = useState<HTMLDivElement | null>(null);
+  const [container, setContainer] = useState<HTMLDivElement | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const scroll = (direction: "left" | "right") => {
+    if (container) {
+      const scrollAmount = direction === "left" ? -460 : 460;
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className="mb-8 rounded-2xl border border-[#0f2a44]/15 bg-white shadow-md overflow-hidden">
+      {/* Header bar matching official website red styling with navigation controls */}
+      <div className="bg-[#b31317] text-white px-5 py-3.5 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <Bell className="w-5 h-5 animate-pulse text-[#caa74d]" />
+          <h3 className="font-display font-bold text-base md:text-xl text-white">IQAC E-Notice Board</h3>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="hidden sm:inline-block text-[11px] font-semibold tracking-wider uppercase bg-white/15 px-3 py-1 rounded-full text-white/90 mr-1">
+            Live Updates
+          </span>
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Previous notice"
+            className="p-1.5 rounded-lg bg-white/15 hover:bg-white/30 text-white transition-colors cursor-pointer"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Next notice"
+            className="p-1.5 rounded-lg bg-white/15 hover:bg-white/30 text-white transition-colors cursor-pointer"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+
+      {/* Auto-scrollable ticker container with larger cards & 120s slow movement */}
+      <div
+        className="relative p-5 md:p-6 bg-gradient-to-br from-slate-50/80 to-white overflow-hidden"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div
+          ref={(el) => setContainer(el)}
+          className="overflow-x-auto scrollbar-none flex gap-5 py-2"
+          style={{ scrollBehavior: 'smooth' }}
+        >
+          <motion.div
+            className="flex gap-5 shrink-0"
+            animate={isPaused ? { x: undefined } : { x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 120 }}
+          >
+            {[...iqacENotices, ...iqacENotices].map((item, idx) => (
+              <div
+                key={idx}
+                className="w-[340px] sm:w-[420px] md:w-[480px] shrink-0 bg-white rounded-2xl border border-slate-200 p-5 md:p-6 shadow-sm hover:border-[#b31317] hover:shadow-lg transition-all flex flex-col justify-between"
+              >
+                <div className="space-y-2.5">
+                  <div className="flex items-start justify-between gap-3">
+                    <h4 className="font-display font-bold text-[#0f2a44] text-base md:text-lg leading-snug">
+                      {item.title}
+                    </h4>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#b31317] shrink-0 mt-1.5" />
+                  </div>
+                  <p className="font-body text-xs md:text-sm text-slate-700 leading-relaxed">
+                    {item.detail}
+                  </p>
+                </div>
+
+                {item.url && (
+                  <div className="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>{item.linkText || "Click here for Details"}</span>
+                    </a>
+                  </div>
+                )}
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const IQACMilestonesSlider = () => {
+  const [selectedYearIdx, setSelectedYearIdx] = useState(0);
+  const currentMilestone = milestones[selectedYearIdx] || milestones[0];
+
+  const handlePrev = () => {
+    setSelectedYearIdx((prev) => (prev > 0 ? prev - 1 : milestones.length - 1));
+  };
+
+  const handleNext = () => {
+    setSelectedYearIdx((prev) => (prev < milestones.length - 1 ? prev + 1 : 0));
+  };
+
+  return (
+    <div className="mb-10 space-y-6">
+      {/* Header bar matching official website red styling */}
+      <div className="rounded-2xl border border-[#0f2a44]/15 bg-white shadow-xl overflow-hidden">
+        <div className="bg-[#b31317] text-white px-5 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Milestone className="w-5 h-5 text-[#caa74d]" />
+            <h3 className="font-display font-bold text-base md:text-xl text-white tracking-wider">MILESTONES</h3>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handlePrev}
+              aria-label="Previous Milestone"
+              className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <span className="text-xs font-bold tracking-widest uppercase bg-white/15 px-3 py-1 rounded-full text-white">
+              {currentMilestone.year}
+            </span>
+            <button
+              onClick={handleNext}
+              aria-label="Next Milestone"
+              className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Non-scrollable Year Matrix Grid */}
+        <div className="p-6 md:p-8 bg-gradient-to-br from-slate-50 via-white to-slate-50/50 space-y-6">
+          <p className="text-xs uppercase tracking-widest font-bold text-slate-400 text-center md:text-left">
+            Select Year to View Milestone
+          </p>
+
+          <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-8 gap-2 md:gap-3">
+            {milestones.map((m, idx) => {
+              const isSelected = idx === selectedYearIdx;
+              return (
+                <button
+                  key={m.year}
+                  onClick={() => setSelectedYearIdx(idx)}
+                  className={`py-2 px-3 rounded-xl transition-all cursor-pointer focus:outline-none flex flex-col items-center justify-center gap-0.5 ${
+                    isSelected
+                      ? "bg-gradient-to-br from-[#b31317] to-[#8a0e12] text-white shadow-md ring-2 ring-[#caa74d] scale-105"
+                      : "bg-white text-slate-700 border border-slate-200 hover:border-[#b31317] hover:text-[#b31317] hover:shadow-xs"
+                  }`}
+                >
+                  <span className={`text-xs md:text-sm font-extrabold font-display ${isSelected ? "text-white" : ""}`}>
+                    {m.year}
+                  </span>
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full ${
+                      isSelected ? "bg-[#caa74d]" : "bg-slate-300"
+                    }`}
+                  />
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Active Milestone Card Box */}
+          <motion.div
+            key={currentMilestone.year}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-6 bg-white rounded-2xl border border-slate-200/80 p-6 md:p-8 shadow-md flex flex-col md:flex-row items-center gap-6 text-center md:text-left relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#caa74d]/10 to-transparent rounded-bl-full pointer-events-none" />
+            
+            <div className="w-28 h-28 md:w-36 md:h-36 shrink-0 rounded-2xl bg-gradient-to-br from-slate-50 to-white p-4 border border-slate-200 shadow-sm flex items-center justify-center">
+              <img
+                src="https://mits.ac.in/assets/images/mits-logo.png"
+                alt="MITS Deemed to be University Logo"
+                className="w-full h-auto max-h-full object-contain"
+              />
+            </div>
+            
+            <div className="space-y-3 flex-1">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
+                <span className="px-3.5 py-1 rounded-full bg-[#b31317] text-white font-extrabold text-xs md:text-sm shadow-xs">
+                  Year {currentMilestone.year}
+                </span>
+                <span className="px-3 py-1 rounded-full bg-[#caa74d]/15 text-[#0f2a44] font-bold text-xs">
+                  MITS Quality Milestone
+                </span>
+              </div>
+              
+              <h4 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44]">
+                {currentMilestone.year === "2025"
+                  ? "Deemed to be University Conferment"
+                  : currentMilestone.year === "2021"
+                  ? "NAAC 'A+' Grade Accreditation"
+                  : currentMilestone.year === "2015"
+                  ? "UGC & JNTUA Autonomous Status"
+                  : currentMilestone.year === "2008"
+                  ? "Establishment of IQAC Cell"
+                  : currentMilestone.year === "1998"
+                  ? "Founding of MITS Institution"
+                  : `Institutional Achievement ${currentMilestone.year}`}
+              </h4>
+              
+              <p className="font-body text-slate-700 text-sm md:text-base leading-relaxed max-w-2xl">
+                {currentMilestone.text}
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Bottom Navigation Buttons */}
+          <div className="flex items-center justify-between pt-2 border-t border-slate-100">
+            <button
+              onClick={handlePrev}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-[#b31317] hover:border-[#b31317] text-xs md:text-sm font-semibold transition-all shadow-xs cursor-pointer"
+            >
+              <ChevronLeft className="w-4 h-4" /> Previous Year
+            </button>
+            <span className="text-xs text-slate-400 font-medium hidden sm:inline">
+              {selectedYearIdx + 1} of {milestones.length} Milestones
+            </span>
+            <button
+              onClick={handleNext}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#b31317] text-white hover:bg-[#8a0e12] text-xs md:text-sm font-semibold transition-all shadow-xs cursor-pointer"
+            >
+              Next Year <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ISOEOMSSection = () => {
+  const [activeTabId, setActiveTabId] = useState(iso21001Subtabs[0].id);
+  const [subSearch, setSubSearch] = useState("");
+
+  const currentSubtab = iso21001Subtabs.find((t) => t.id === activeTabId) || iso21001Subtabs[0];
+
+  const filteredDocs = currentSubtab.docs.filter((d) =>
+    d.title.toLowerCase().includes(subSearch.toLowerCase())
+  );
+
+  return (
+    <section className="space-y-6">
+      <SectionHeader
+        eyebrow="ISO Accreditation"
+        title="ISO 21001 : 2018 EOMS"
+        description="Educational Organizations Management System (EOMS) certifications, policies, manuals, procedures, exhibits, forms, flowcharts, SOPs and MRM records."
+      />
+
+      {/* Horizontal Top Sub-Tab Switcher (Single main sidebar design) */}
+      <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-6 md:p-8 shadow-sm space-y-6">
+        
+        {/* Top Horizontal Subtabs Navigation */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 scrollbar-thin scrollbar-thumb-slate-300">
+          {iso21001Subtabs.map((tab) => {
+            const isActive = tab.id === activeTabId;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  setActiveTabId(tab.id);
+                  setSubSearch("");
+                }}
+                className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs md:text-sm font-body font-semibold transition-all cursor-pointer ${
+                  isActive
+                    ? "bg-[#b31317] text-white shadow-md"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 border border-slate-200/80"
+                }`}
+              >
+                <span>{tab.title}</span>
+                <span
+                  className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                    isActive ? "bg-white/20 text-white" : "bg-slate-200 text-slate-600"
+                  }`}
+                >
+                  {tab.docs.length}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Content Header & Filter */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2 border-t border-slate-100">
+          <div>
+            <h3 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44]">
+              {currentSubtab.title}
+            </h3>
+            <p className="text-xs text-slate-500 mt-1">
+              Showing {filteredDocs.length} of {currentSubtab.docs.length} documents
+            </p>
+          </div>
+
+          {/* Search Filter */}
+          <div className="relative w-full sm:w-64">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={subSearch}
+              onChange={(e) => setSubSearch(e.target.value)}
+              placeholder="Filter documents..."
+              className="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-xs font-body focus:outline-none focus:border-[#b31317] focus:bg-white"
+            />
+          </div>
+        </div>
+
+        {/* Documents Grid */}
+        {filteredDocs.length === 0 ? (
+          <div className="p-8 text-center bg-slate-50 rounded-xl border border-slate-200 text-slate-500 text-sm">
+            No matching documents found.
+          </div>
+        ) : (
+          <DocGrid docs={filteredDocs as Doc[]} />
+        )}
+      </div>
+    </section>
+  );
+};
+
+const IMSEOMSSection = () => {
+  const [activeTabId, setActiveTabId] = useState(imsSubtabs[0].id);
+  const [subSearch, setSubSearch] = useState("");
+
+  const currentSubtab = imsSubtabs.find((t) => t.id === activeTabId) || imsSubtabs[0];
+
+  const filteredDocs = currentSubtab.docs.filter((d) =>
+    d.title.toLowerCase().includes(subSearch.toLowerCase())
+  );
+
+  return (
+    <section className="space-y-6">
+      <SectionHeader
+        eyebrow="Integrated Management System"
+        title="IMS (ISO 14001:2015 and ISO 50001:2018)"
+        description="Integrated Environmental and Energy Management System policies, manuals, review records, annexures and formats."
+      />
+
+      {/* Horizontal Top Sub-Tab Switcher (Single main sidebar design) */}
+      <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-6 md:p-8 shadow-sm space-y-6">
+        
+        {/* Top Horizontal Subtabs Navigation */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 scrollbar-thin scrollbar-thumb-slate-300">
+          {imsSubtabs.map((tab) => {
+            const isActive = tab.id === activeTabId;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  setActiveTabId(tab.id);
+                  setSubSearch("");
+                }}
+                className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs md:text-sm font-body font-semibold transition-all cursor-pointer ${
+                  isActive
+                    ? "bg-[#b31317] text-white shadow-md"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 border border-slate-200/80"
+                }`}
+              >
+                <span>{tab.title}</span>
+                <span
+                  className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                    isActive ? "bg-white/20 text-white" : "bg-slate-200 text-slate-600"
+                  }`}
+                >
+                  {tab.docs.length}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Content Header & Filter */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2 border-t border-slate-100">
+          <div>
+            <h3 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44]">
+              {currentSubtab.title}
+            </h3>
+            <p className="text-xs text-slate-500 mt-1">
+              Showing {filteredDocs.length} of {currentSubtab.docs.length} documents
+            </p>
+          </div>
+
+          {/* Search Filter */}
+          <div className="relative w-full sm:w-64">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={subSearch}
+              onChange={(e) => setSubSearch(e.target.value)}
+              placeholder="Filter documents..."
+              className="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-xs font-body focus:outline-none focus:border-[#b31317] focus:bg-white"
+            />
+          </div>
+        </div>
+
+        {/* Documents Grid */}
+        {filteredDocs.length === 0 ? (
+          <div className="p-8 text-center bg-slate-50 rounded-xl border border-slate-200 text-slate-500 text-sm">
+            No matching documents found.
+          </div>
+        ) : (
+          <DocGrid docs={filteredDocs as Doc[]} />
+        )}
+      </div>
+    </section>
+  );
+};
 
 const SubHeader = ({ title }: { title: string }) => (
   <h3 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44] mt-10 mb-4 flex items-center gap-2">
@@ -263,58 +736,64 @@ const IQAC = () => {
     <div className="min-h-screen bg-[#faf7f2]">
       <Header />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#152f4f] to-[#0a1d33] text-white">
-        <div
-          className="absolute inset-0 opacity-40 mix-blend-overlay"
-          style={{ backgroundImage: `url(${bannerImage})`, backgroundSize: "cover", backgroundPosition: "center" }}
-        />
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{ backgroundImage: "radial-gradient(circle at 20% 20%, #caa74d 0%, transparent 40%), radial-gradient(circle at 80% 80%, #b31317 0%, transparent 50%)" }}
-        />
-        <div className="container relative mx-auto px-4 py-16 md:py-24">
-          <nav className="flex items-center gap-2 text-sm text-white/70 mb-6 font-body">
-            <Link to="/" className="hover:text-[#caa74d] transition-colors">Home</Link>
-            <ChevronRight className="w-4 h-4" />
-            <Link to="/naac" className="hover:text-[#caa74d] transition-colors">NAAC</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-[#caa74d]">IQAC Portal</span>
-          </nav>
-          <div className="max-w-4xl">
-            <motion.p
-              initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#caa74d] text-xs font-semibold uppercase tracking-[0.2em] mb-5"
-            >
-              <ShieldCheck className="w-3.5 h-3.5" /> Internal Quality Assurance Cell
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-              className="font-display text-4xl md:text-6xl font-bold leading-tight text-white"
-            >
-              Quality Assurance<br /><span className="text-[#caa74d]">at MITS</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-              className="font-body text-lg md:text-xl text-white/85 mt-6 max-w-3xl leading-relaxed"
-            >
-              Driving institutional excellence through continuous quality enhancement, accreditation, academic audits,
-              best practices and outcome-based education — anchored in NAAC, NBA, ISO 21001:2018 and UGC frameworks.
-            </motion.p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10 max-w-3xl">
-              {[
-                { k: "NAAC", v: "A+ Grade" },
-                { k: "ISO", v: "21001:2018" },
-                { k: "AQARs", v: "Submitted" },
-                { k: "Est.", v: "IQAC 2008" },
-              ].map((s) => (
-                <div key={s.k} className="rounded-xl border border-white/15 bg-white/5 backdrop-blur px-4 py-3">
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-[#caa74d]">{s.k}</p>
-                  <p className="font-display text-xl font-bold text-white mt-1">{s.v}</p>
-                </div>
-              ))}
-            </div>
+      {/* Hero — Same exact design as About Page */}
+      <section
+        className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
+        style={{
+          backgroundImage: `url(${BASE}Hero-Section/image%205.JPG)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/85" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+            Internal Quality Assurance Cell
+          </p>
+          <h1
+            className="font-display text-4xl md:text-6xl font-bold mb-5 text-white tracking-tight"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Quality Assurance <span className="text-[#ffd15c]">at MITS</span>
+          </h1>
+          <p className="text-white/90 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mt-4">
+            Driving institutional excellence through continuous quality enhancement, accreditation, academic audits,
+            best practices and outcome-based education — anchored in NAAC, NBA, ISO 21001:2018 and UGC frameworks.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8 max-w-2xl mx-auto">
+            {[
+              { k: "NAAC", v: "A+ Grade" },
+              { k: "ISO", v: "21001:2018" },
+              { k: "AQARs", v: "Submitted" },
+              { k: "Est.", v: "IQAC 2008" },
+            ].map((s) => (
+              <div key={s.k} className="p-3 rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 text-center">
+                <p className="font-display font-extrabold text-[#ffd15c] text-sm md:text-base">{s.v}</p>
+                <p className="font-body text-[11px] text-white/80 font-medium uppercase tracking-wider">{s.k}</p>
+              </div>
+            ))}
           </div>
+        </div>
+
+        <div className="absolute bottom-4 left-6 z-10">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex items-center gap-1.5 text-sm text-white/90">
+              <li>
+                <Link to="/" className="text-white/70 hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li className="text-white/50">›</li>
+              <li>
+                <Link to="/naac" className="text-white/70 hover:text-white transition-colors">
+                  NAAC
+                </Link>
+              </li>
+              <li className="text-white/50">›</li>
+              <li className="text-[#ffd15c] font-semibold">IQAC Portal</li>
+            </ol>
+          </nav>
         </div>
       </section>
 
@@ -349,10 +828,10 @@ const IQAC = () => {
                             <button
                               key={s.key}
                               onClick={() => setActive(s.key)}
-                              className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] font-body font-medium text-left transition-all ${
+                              className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] font-body font-semibold text-left transition-all ${
                                 isActive
-                                  ? "bg-gradient-to-r from-[#0f2a44] to-[#11355a] text-[#caa74d] shadow-md"
-                                  : "text-[#0f2a44]/75 hover:bg-[#0f2a44]/5 hover:text-[#0f2a44]"
+                                  ? "bg-gradient-to-r from-[#b31317] to-[#8a0e12] text-white shadow-md shadow-[#b31317]/20"
+                                  : "text-[#0f2a44]/75 hover:bg-[#b31317]/10 hover:text-[#b31317]"
                               }`}
                             >
                               <Icon className="w-4 h-4 shrink-0" />
@@ -399,7 +878,7 @@ const IQAC = () => {
                           key={s.key}
                           onClick={() => { setActive(s.key); setMobileNavOpen(false); }}
                           className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-xs font-body font-medium text-left ${
-                            active === s.key ? "bg-[#0f2a44] text-[#caa74d]" : "text-[#0f2a44]/75 hover:bg-[#0f2a44]/5"
+                            active === s.key ? "bg-[#b31317] text-white font-bold shadow-xs" : "text-[#0f2a44]/75 hover:bg-[#b31317]/10"
                           }`}
                         >
                           <Icon className="w-3.5 h-3.5 shrink-0" />
@@ -423,6 +902,8 @@ const IQAC = () => {
               >
                 {active === "about" && (
                   <section>
+                    <IQACENoticeBoardTicker />
+
                     <SectionHeader eyebrow="Introduction" title="About IQAC" />
                     <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-6 md:p-8 shadow-sm space-y-4 font-body text-[#0f2a44]/85 leading-relaxed">
                       {about.intro.map((p, i) => <p key={i}>{p}</p>)}
@@ -443,9 +924,17 @@ const IQAC = () => {
                       </div>
                     </div>
 
-                    <SubHeader title="E-Notice Board" />
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {eNoticeBoard.slice(0, 10).map((n, i) => <NoticeCard key={i} notice={n} />)}
+                    {/* Official IQAC Quality Framework Infographic */}
+                    <div className="mt-8 bg-white rounded-2xl border border-[#0f2a44]/10 p-4 md:p-6 shadow-sm">
+                      <h3 className="font-display text-lg font-bold text-[#0f2a44] mb-4">IQAC Quality Framework</h3>
+                      <img
+                        src={qualityFrameworkImg}
+                        alt="MITS IQAC Quality Framework"
+                        className="w-full h-auto rounded-xl border border-slate-200"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
                     </div>
                   </section>
                 )}
@@ -466,7 +955,8 @@ const IQAC = () => {
                         </ul>
                       </div>
                       <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-2xl p-6">
-                        <h3 className="font-display text-lg font-bold mb-3">Strategies</h3>
+                        <h3 className="font-display text-xl font-bold mb-3 text-[#caa74d]">Strategies</h3>
+                        <p className="text-xs text-white/70 mb-3">IQAC shall evolve mechanisms and procedures for:</p>
                         <ul className="space-y-2 font-body text-sm text-white/90">
                           {strategies.map((s, i) => (
                             <li key={i} className="flex gap-2"><span className="text-[#caa74d]">›</span>{s}</li>
@@ -491,14 +981,29 @@ const IQAC = () => {
                           ))}
                         </div>
                       </div>
-                      <div>
-                        <h3 className="font-display text-lg font-bold text-[#0f2a44] mb-3">Benefits</h3>
-                        <div className="space-y-2">
-                          {benefits.map((b, i) => (
-                            <div key={i} className="bg-gradient-to-br from-[#faf7f2] to-white rounded-lg p-4 border border-[#caa74d]/30 font-body text-sm text-[#0f2a44]/85 flex gap-3">
-                              <Trophy className="w-4 h-4 text-[#b31317] shrink-0 mt-0.5" />{b}
-                            </div>
-                          ))}
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="font-display text-lg font-bold text-[#0f2a44] mb-3">Benefits</h3>
+                          <div className="space-y-2">
+                            {benefits.map((b, i) => (
+                              <div key={i} className="bg-gradient-to-br from-[#faf7f2] to-white rounded-lg p-4 border border-[#caa74d]/30 font-body text-sm text-[#0f2a44]/85 flex gap-3">
+                                <Trophy className="w-4 h-4 text-[#b31317] shrink-0 mt-0.5" />{b}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Follow Up Section */}
+                        <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10">
+                          <h3 className="font-display text-lg font-bold text-[#0f2a44] mb-3">Follow Up</h3>
+                          <ul className="space-y-2.5 font-body text-sm text-[#0f2a44]/85">
+                            {followUp.map((fu, i) => (
+                              <li key={i} className="flex gap-2.5 items-start">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#b31317] shrink-0 mt-2" />
+                                <span>{fu}</span>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -507,16 +1012,29 @@ const IQAC = () => {
 
                 {active === "composition" && (
                   <section>
-                    <SectionHeader eyebrow="Governance" title="IQAC Composition" description="MITS IQAC has been meticulously constituted based on NAAC and UGC guidelines, with year-wise notifications available below." />
-                    <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10 mb-6">
-                      <h3 className="font-display text-lg font-bold text-[#0f2a44] mb-3">Composition Framework</h3>
-                      <ul className="grid sm:grid-cols-2 gap-2 font-body text-sm text-[#0f2a44]/85">
+                    <SectionHeader eyebrow="Governance" title="IQAC Composition" description={compositionIntroText} />
+                    <div className="bg-white rounded-2xl p-6 md:p-8 border border-[#0f2a44]/10 mb-6 space-y-4">
+                      <p className="font-body text-[#0f2a44]/85 text-sm font-semibold">
+                        The composition of the IQAC may be as follows:
+                      </p>
+                      <ul className="grid sm:grid-cols-2 gap-2.5 font-body text-sm text-[#0f2a44]/85">
                         {compositionNotes.map((c, i) => (
-                          <li key={i} className="flex gap-2"><span className="text-[#caa74d]">•</span>{c}</li>
+                          <li key={i} className="flex gap-2.5 items-start">
+                            <span className="w-2 h-2 rounded-full bg-[#caa74d] shrink-0 mt-1.5" />
+                            <span>{c}</span>
+                          </li>
                         ))}
                       </ul>
                     </div>
-                    <SubHeader title="Year-wise Committee Notifications" />
+
+                    <div className="bg-gradient-to-br from-[#faf7f2] to-white rounded-2xl p-6 border border-[#caa74d]/30 mb-8 space-y-3">
+                      <h3 className="font-display font-bold text-[#0f2a44] text-lg">Composition of Internal Quality Assurance Cell</h3>
+                      <p className="font-body text-sm text-[#0f2a44]/85 leading-relaxed">
+                        {compositionMitsText}
+                      </p>
+                    </div>
+
+                    <SubHeader title="Composition Notifications & Committee Members" />
                     <DocGrid docs={filter(compositionYearly)} />
                   </section>
                 )}
@@ -524,25 +1042,24 @@ const IQAC = () => {
                 {active === "organogram" && (
                   <section>
                     <SectionHeader eyebrow="Structure" title="IQAC Organogram" />
-                    <div className="bg-white rounded-2xl p-6 md:p-10 border border-[#0f2a44]/10">
-                      <p className="font-body text-[#0f2a44]/80 leading-relaxed mb-6">{organogram.note}</p>
-                      <div className="grid gap-3 max-w-3xl mx-auto">
-                        {[
-                          { level: "Apex", role: "Chairperson — Vice-Chancellor / Head of Institution", color: "from-[#b31317] to-[#8a0e12]" },
-                          { level: "L2", role: "IQAC Director", color: "from-[#0f2a44] to-[#11355a]" },
-                          { level: "L3", role: "IQAC Coordinator", color: "from-[#0f2a44] to-[#11355a]" },
-                          { level: "L4", role: "Criterion Coordinators (I–VII)", color: "from-[#caa74d] to-[#a8862e]" },
-                          { level: "L5", role: "Department IQAC Coordinators", color: "from-[#caa74d] to-[#a8862e]" },
-                          { level: "L6", role: "Functional Cells & Committees", color: "from-[#0f2a44]/70 to-[#11355a]/70" },
-                        ].map((n, i) => (
-                          <motion.div
-                            key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}
-                            className={`bg-gradient-to-r ${n.color} text-white rounded-xl px-5 py-4 flex items-center gap-4 shadow`}
-                          >
-                            <span className="font-mono text-xs opacity-70">{n.level}</span>
-                            <span className="font-display font-semibold">{n.role}</span>
-                          </motion.div>
-                        ))}
+                    <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10 overflow-hidden">
+                      <div className="flex items-center justify-between mb-4">
+                        <p className="font-body text-[#0f2a44]/80 text-sm">{organogram.note}</p>
+                        <a
+                          href={organogramPdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0f2a44] text-white text-xs font-semibold hover:bg-[#11355a] transition-colors shrink-0"
+                        >
+                          <Download className="w-3.5 h-3.5" /> Download PDF
+                        </a>
+                      </div>
+                      <div className="w-full rounded-xl overflow-hidden border border-slate-200 bg-slate-50 min-h-[600px]">
+                        <iframe
+                          src={organogramPdf}
+                          title="IQAC Organogram PDF"
+                          className="w-full h-[750px] border-0"
+                        />
                       </div>
                     </div>
                   </section>
@@ -551,16 +1068,39 @@ const IQAC = () => {
                 {active === "policies" && (
                   <section>
                     <SectionHeader eyebrow="Policies" title="IQAC Policies & Framework" description="Comprehensive quality policies governing MITS and MITS Deemed to be University (DTBU) operations." />
-                    <SubHeader title="IQAC Policies" />
-                    <DocGrid docs={filter(iqacPolicies)} />
                     <SubHeader title="Policies (MITS DTBU)" />
                     <DocGrid docs={filter(mitsDtbuPolicies)} />
+                    <SubHeader title="IQAC Policies" />
+                    <DocGrid docs={filter(iqacPolicies)} />
                   </section>
                 )}
 
                 {active === "activities" && (
                   <section>
-                    <SectionHeader eyebrow="Timeline" title="Activities of IQAC" description="Chronological log of IQAC-conducted programmes, audits and initiatives." />
+                    <SectionHeader eyebrow="Overview & Timeline" title="Activities of IQAC" description="Official activities flowchart and chronological log of IQAC-conducted programmes, audits and initiatives." />
+                    
+                    {/* Embedded Official PDF Flowchart */}
+                    <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-4 md:p-6 shadow-sm mb-8">
+                      <div className="flex items-center justify-end mb-4">
+                        <a
+                          href="https://mits.ac.in/assets/pdf/iqac/Activities of IQAC.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#b31317] text-white text-xs font-semibold hover:bg-[#8a0e12] transition-colors"
+                        >
+                          <Download className="w-3.5 h-3.5" /> Download PDF
+                        </a>
+                      </div>
+                      <div className="w-full h-[650px] md:h-[850px] rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
+                        <iframe
+                          src="https://mits.ac.in/assets/pdf/iqac/Activities of IQAC.pdf"
+                          title="Activities of IQAC PDF"
+                          className="w-full h-full"
+                        />
+                      </div>
+                    </div>
+
+                    <SubHeader title="Chronological Events & Reports" />
                     <div className="relative pl-6 border-l-2 border-[#caa74d]/40 space-y-6">
                       {filter(iqacEvents.map((e) => ({ title: `${e.title} — ${e.date}`, url: e.url || "#", type: "pdf" as const }))).map((e, i) => {
                         const original = iqacEvents.find((x) => `${x.title} — ${x.date}` === e.title);
@@ -589,57 +1129,70 @@ const IQAC = () => {
 
                 {active === "initiatives" && (
                   <section>
-                    <SectionHeader eyebrow="Quality" title="IQAC Quality Initiatives" description="Core institutional levers deployed by IQAC to embed quality across academics, governance and student experience." />
-                    <div className="grid md:grid-cols-2 gap-4 mb-8">
-                      {qualityInitiativesOverview.map((q, i) => (
-                        <motion.div
-                          key={i} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}
-                          className="relative overflow-hidden rounded-2xl bg-white border border-[#0f2a44]/10 p-6 shadow-sm"
+                    <SectionHeader eyebrow="Quality Framework" title="IQAC Quality Initiatives" description="Core institutional levers deployed by IQAC to embed quality across academics, governance and student experience." />
+                    
+                    {/* Infographic 1: Quality Framework */}
+                    <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-4 md:p-6 shadow-sm mb-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="font-display text-lg font-bold text-[#0f2a44]">MITS IQAC Quality Framework</h3>
+                        <a
+                          href="https://mits.ac.in/assets/pdf/iqac/MITS IQAC Quality Framework-1.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0f2a44] text-white text-xs font-semibold hover:bg-primary transition-colors"
                         >
-                          <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-[#caa74d]/30 to-transparent" />
-                          <p className="font-body text-xs uppercase tracking-[0.18em] text-[#caa74d] font-semibold">Initiative {i + 1}</p>
-                          <h3 className="font-display text-xl font-bold text-[#0f2a44] mt-2">{q.title}</h3>
-                          <p className="font-body text-sm text-[#0f2a44]/70 mt-2 leading-relaxed">{q.desc}</p>
-                        </motion.div>
-                      ))}
+                          <Download className="w-3.5 h-3.5" /> Download Framework PDF
+                        </a>
+                      </div>
+                      <img
+                        src="https://mits.ac.in/assets/images/MITS IQAC-Quality Framework.png"
+                        alt="MITS IQAC Quality Framework"
+                        className="w-full h-auto rounded-xl border border-slate-200"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = qualityFrameworkImg;
+                        }}
+                      />
                     </div>
-                    <SubHeader title="Quality Initiative Documents" />
+
+                    {/* Infographic 2: Monthly Quality Review / IQAC Hours */}
+                    <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-4 md:p-6 shadow-sm mb-8">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="font-display text-lg font-bold text-[#0f2a44]">MITS IQAC Monthly Quality Review | IQAC Hours</h3>
+                        <a
+                          href="https://mits.ac.in/assets/pdf/iqac/MITS-IQAC Hours.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0f2a44] text-white text-xs font-semibold hover:bg-primary transition-colors"
+                        >
+                          <Download className="w-3.5 h-3.5" /> Download IQAC Hours PDF
+                        </a>
+                      </div>
+                      <img
+                        src="https://mits.ac.in/assets/images/MITS IQAC-Monthly review.png"
+                        alt="MITS IQAC Monthly Quality Review"
+                        className="w-full h-auto rounded-xl border border-slate-200"
+                      />
+                    </div>
+
+                    <SubHeader title="Quality Initiatives Documents" />
                     <DocGrid docs={filter(qualityInitiatives)} />
                   </section>
                 )}
 
                 {active === "milestones" && (
                   <section>
-                    <SectionHeader eyebrow="Journey" title="MITS Quality Milestones" description="Key institutional milestones since the IQAC was established in 2008." />
-                    <div className="relative">
-                      <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#caa74d]/40 hidden md:block" />
-                      <div className="space-y-6">
-                        {milestones.map((m, i) => (
-                          <motion.div
-                            key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                            className={`relative md:grid md:grid-cols-2 md:gap-8 ${i % 2 ? "" : ""}`}
-                          >
-                            <div className={`${i % 2 ? "md:col-start-2" : "md:text-right"}`}>
-                              <div className="bg-white rounded-xl p-5 border border-[#0f2a44]/10 shadow-sm inline-block max-w-md">
-                                <p className="font-display text-3xl font-bold text-[#b31317]">{m.year}</p>
-                                <p className="font-body text-sm text-[#0f2a44]/80 mt-2">{m.text}</p>
-                              </div>
-                            </div>
-                            <span className="hidden md:block absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-[#caa74d] border-4 border-[#faf7f2]" />
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
+                    <SectionHeader eyebrow="Journey" title="MITS Quality Milestones" description="Key institutional milestones since the IQAC was established." />
+                    <IQACMilestonesSlider />
                   </section>
                 )}
 
                 {active === "meetings" && (
                   <section>
                     <SectionHeader eyebrow="Minutes of Meeting" title="IQAC Meeting Records" description="Year-wise minutes, agendas and resolutions of IQAC review meetings for MITS and MITS Deemed to be University (DTBU)." />
-                    <SubHeader title="Minutes of the Meeting" />
-                    <DocGrid docs={filter(meetingsMom)} />
                     <SubHeader title="Minutes of Meeting (MITS DTBU)" />
                     <DocGrid docs={filter(meetingsDtbu)} />
+                    <SubHeader title="Minutes of the Meeting" />
+                    <DocGrid docs={filter(meetingsMom)} />
                     <SubHeader title="IQAC Hours — Monthly Reports" />
                     <DocGrid docs={filter(iqacHoursReports)} />
                   </section>
@@ -652,6 +1205,10 @@ const IQAC = () => {
                   </section>
                 )}
 
+                {active === "iso" && <ISOEOMSSection />}
+
+                {active === "ims" && <IMSEOMSSection />}
+
                 {active === "aicte" && (
                   <section>
                     <SectionHeader eyebrow="Regulator" title="AICTE Quality Mandate" description="AICTE's quality initiatives, examination reforms, PARAKH, NEAT, ONOD, NETF and the MITS 360° Feedback participation record." />
@@ -663,172 +1220,265 @@ const IQAC = () => {
                 )}
 
                 {active === "aqar" && (
-                  <section>
-                    <SectionHeader eyebrow="AQAR" title="Annual Quality Assurance Report" description="AQAR is submitted online to NAAC every year for each completed academic year, in accordance with NAAC's Manage AQAR portal." />
-                    <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-2xl p-6 mb-6">
-                      <p className="font-body text-white/85 leading-relaxed text-sm">
-                        For each cycle of accreditation with a validity of 5 years, HEIs submit 4 AQARs. Institutions with 'A' grade in three consecutive cycles submit 6 AQARs over 7 years. MITS submits AQARs annually before 31st December for the previous completed academic year.
-                      </p>
+                  <section className="space-y-6">
+                    <SectionHeader
+                      eyebrow="AQAR"
+                      title="Submission of Annual Quality Assurance Report (AQAR)"
+                      description="Year-wise submitted AQAR reports and metric-wise AQAR criterion documentation."
+                    />
+
+                    {/* Prominent Single Card for AQAR Criterion Wise Details */}
+                    <div className="bg-gradient-to-r from-[#b31317] via-[#940f13] to-[#750b0f] text-white rounded-2xl p-6 md:p-8 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
+                      <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 opacity-10 pointer-events-none">
+                        <Award className="w-64 h-64 text-white" />
+                      </div>
+                      
+                      <div className="space-y-2 max-w-2xl relative z-10">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-[#caa74d] text-xs font-extrabold uppercase tracking-wider">
+                          <Sparkles className="w-3.5 h-3.5" /> NAAC Metric Analysis
+                        </div>
+                        <h3 className="font-display text-2xl md:text-3xl font-extrabold text-white">
+                          AQAR Criterion Wise Details
+                        </h3>
+                        <p className="text-white/85 text-xs md:text-sm leading-relaxed font-body">
+                          Access complete metric-wise reports and documentation across all 7 NAAC criteria (Curricular Aspects, Teaching-Learning, Research, Infrastructure, Student Support, Governance, Best Practices) and Extended Profile.
+                        </p>
+                      </div>
+
+                      <Link
+                        to="/aqarcriteria"
+                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#caa74d] hover:bg-[#b8953c] text-[#0f2a44] font-body font-extrabold text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 relative z-10"
+                      >
+                        <span>Explore AQAR Criterion Wise</span>
+                        <ChevronRight className="w-4 h-4" />
+                      </Link>
                     </div>
-                    <SubHeader title="AQAR & Supporting Documents" />
-                    <DocGrid docs={filter(naacFormats)} />
-                    <SubHeader title="Stakeholder Feedback — Action Taken Reports" />
-                    <DocGrid docs={filter(actionTakenReports)} />
-                    <SubHeader title="ATR — Evidences" />
-                    <DocGrid docs={filter(atrEvidence)} />
+
+                    {/* Year-Wise AQAR Reports Table */}
+                    <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-6 md:p-8 shadow-sm space-y-6">
+                      <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <div>
+                          <h3 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44]">
+                            Year-wise AQAR Reports
+                          </h3>
+                          <p className="text-xs text-slate-500 mt-1">
+                            Official Annual Quality Assurance Reports submitted to NAAC.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="overflow-x-auto rounded-xl border border-slate-200">
+                        <table className="w-full text-left text-xs md:text-sm border-collapse">
+                          <thead>
+                            <tr className="bg-[#b31317] text-white font-bold uppercase tracking-wider">
+                              <th className="py-3.5 px-6">Academic Year</th>
+                              <th className="py-3.5 px-6 text-right">AQAR Document</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-200 bg-white font-body">
+                            {aqarReportsList.map((item, idx) => (
+                              <tr key={idx} className="hover:bg-slate-50/90 transition-colors">
+                                <td className="py-4 px-6 font-bold text-[#0f2a44]">
+                                  <div className="flex items-center gap-3">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-[#b31317]" />
+                                    <span className="text-sm md:text-base font-display">{item.year}</span>
+                                  </div>
+                                </td>
+                                <td className="py-4 px-6 text-right">
+                                  {item.reportUrl && item.reportUrl !== "#" ? (
+                                    <a
+                                      href={item.reportUrl}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#b31317] hover:bg-[#8a0e12] text-white text-xs md:text-sm font-bold transition-colors shadow-2xs"
+                                    >
+                                      <FileText className="w-4 h-4" /> View AQAR Report
+                                    </a>
+                                  ) : (
+                                    <span className="text-xs text-slate-400 font-medium italic">Document Pending</span>
+                                  )}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </section>
                 )}
 
                 {active === "reports" && (
                   <section>
-                    <SectionHeader eyebrow="Reports" title="Institutional Reports Repository" description="Consolidated repository of MITS annual reports, IQAC hours reports and quality reports." />
-                    <SubHeader title="MITS Annual Reports" />
-                    <DocGrid docs={filter(annualReports)} />
-                    <SubHeader title="IQAC Hours Reports" />
-                    <DocGrid docs={filter(iqacHoursReports)} />
+                    <SectionHeader eyebrow="Reports" title="Reports" description="Official NAAC Peer Team Reports and External Peer Team Reports." />
+                    <DocGrid docs={filter(userReportsDocs)} />
                   </section>
                 )}
 
                 {active === "feedback" && (
-                  <section>
-                    <SectionHeader eyebrow="Feedback" title="Stakeholder Feedback System" description="Structured multi-stakeholder feedback loop covering students, faculty, parents, alumni, employers and experts — with published policy, questionnaires, ATRs and evidences." />
-                    <SubHeader title="Policy & Questionnaires" />
-                    <DocGrid docs={filter(feedbackPolicy)} />
-                    <SubHeader title="Action Taken Reports" />
-                    <DocGrid docs={filter(actionTakenReports)} />
-                    <SubHeader title="Evidence on ATR" />
-                    <DocGrid docs={filter(atrEvidence)} />
+                  <section className="space-y-6">
+                    <SectionHeader eyebrow="Feedback" title="Feedback System" description="AICTE 360 Degree Feedback, Stakeholder Feedback Policy, Questionnaires, ATRs, Evidences and Online Forms." />
+                    
+                    <SubHeader title="AICTE's 360 Degree Feedback" />
+                    <DocGrid docs={filter(userFeedbackSections.aicte360)} />
+
+                    <SubHeader title="Stakeholder Feedback" />
+                    <DocGrid docs={filter(userFeedbackSections.stakeholderPolicy)} />
+
+                    <SubHeader title="Stakeholder Feedback - Action Taken Report" />
+                    <DocGrid docs={filter(userFeedbackSections.stakeholderAtr)} />
+
+                    <SubHeader title="Evidences on ATR" />
+                    <DocGrid docs={filter(userFeedbackSections.evidencesAtr)} />
+
                     <SubHeader title="Online Feedback Forms" />
-                    <div className="grid sm:grid-cols-2 gap-3">
-                      {feedbackForms.map((f) => (
-                        <a key={f.label} href={f.url} target="_blank" rel="noopener noreferrer"
-                          className="flex items-center justify-between gap-3 bg-white rounded-lg p-4 border border-[#0f2a44]/10 hover:border-[#caa74d] transition"
+                    <div className="space-y-4">
+                      <h4 className="font-display font-bold text-[#0f2a44] text-sm">Feedback on Curriculum</h4>
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {userFeedbackSections.onlineCurriculumForms.map((f) => (
+                          <a
+                            key={f.category}
+                            href={f.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#b31317] hover:shadow-md transition-all group"
+                          >
+                            <span className="font-body font-semibold text-xs text-[#0f2a44] group-hover:text-[#b31317]">
+                              {f.category}
+                            </span>
+                            <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 group-hover:text-[#b31317]">
+                              View <ExternalLink className="w-3.5 h-3.5" />
+                            </span>
+                          </a>
+                        ))}
+                      </div>
+
+                      <div className="pt-2">
+                        <a
+                          href={userFeedbackSections.curriculumIndustryExpert.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#b31317] hover:bg-white hover:shadow-md transition-all group"
                         >
-                          <span className="font-body text-sm text-[#0f2a44] font-medium">{f.label}</span>
-                          <ExternalLink className="w-4 h-4 text-[#caa74d]" />
+                          <span className="font-display font-bold text-sm text-[#0f2a44] group-hover:text-[#b31317]">
+                            {userFeedbackSections.curriculumIndustryExpert.title}
+                          </span>
+                          <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 group-hover:text-[#b31317]">
+                            View <ExternalLink className="w-3.5 h-3.5" />
+                          </span>
                         </a>
-                      ))}
+                      </div>
                     </div>
+
+                    <SubHeader title="Other Feedback Views" />
+                    <DocGrid docs={filter(userFeedbackSections.otherFeedbackViews)} />
                   </section>
                 )}
 
                 {active === "aaa" && (
-                  <section>
-                    <SectionHeader eyebrow="AAA" title="Academic & Administrative Audit" description={aaaOverview.policy} />
-                    <div className="grid md:grid-cols-2 gap-4 mb-8">
-                      <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10">
-                        <h3 className="font-display font-bold text-[#0f2a44] mb-2">Academic Audit</h3>
-                        <p className="font-body text-sm text-[#0f2a44]/80">{aaaOverview.academic}</p>
+                  <section className="space-y-6">
+                    <SectionHeader eyebrow="AAA" title="Academic and Administrative Audit (AAA)" />
+                    
+                    <div className="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm space-y-4 font-body text-sm text-slate-700 leading-relaxed">
+                      <p>
+                        Madanapalle Institute of Technology &amp; Science is committed to maintaining and enhancing academic excellence through a structured Quality assurance mechanism. Academic &amp; Administrative audit serves as a critical tool to assess, monitor, and improve the quality of Teaching &amp; Learning, and Academic processes and the administrative system to support the quality of such a delivery. This policy applies to all Academic Departments, Programs, and Faculty members, ensuring a systematic review of instructional methods, curriculum effectiveness, student engagement, Faculty performance, and overall academic governance. Audit process of quality of education impart and assess compliance with accreditation bodies such as NAAC, NBA and other regulatory requirements for its sustenance is monitored through the Internal Quality Assurance Cell (IQAC).
+                      </p>
+
+                      <div className="grid md:grid-cols-2 gap-4 pt-2">
+                        <div className="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                          <h4 className="font-display font-bold text-[#0f2a44] text-base mb-2">Academic Audit</h4>
+                          <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                            Academic Audit is a structured and methodical approach to evaluate the Quality of an Institution's academic processes. It involves a deliberate and systematic sampling to assess the effectiveness of Academic delivery, encompassing areas such as Teaching-Learning practices, Curriculum Design and evaluation, Research initiatives, outreach programs, and other related academic endeavours. This process aligns with quality assurance principles and aims to evaluate the effectiveness of Academic Procedures and Processes adopted by Departments for quality enhancement.
+                          </p>
+                        </div>
+
+                        <div className="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                          <h4 className="font-display font-bold text-[#0f2a44] text-base mb-2">Administrative Audit</h4>
+                          <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                            Administrative Audit focuses on evaluating the effectiveness of various administrative processes that facilitate academic activities. This includes areas such as student support services, management of Academic Infrastructure, Campus maintenance, IT services, student facilities, and measures ensuring the safety and security of students and the campus as a whole. Audit process typically involves sampling methods and conducting targeted interviews with relevant stakeholders.
+                          </p>
+                        </div>
                       </div>
-                      <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10">
-                        <h3 className="font-display font-bold text-[#0f2a44] mb-2">Administrative Audit</h3>
-                        <p className="font-body text-sm text-[#0f2a44]/80">{aaaOverview.administrative}</p>
+
+                      <div className="pt-2">
+                        <DocCard doc={userAaaDocs.policy} />
                       </div>
                     </div>
-                    <SubHeader title="AAA Policy" />
-                    <DocGrid docs={filter(aaaPolicyDocs)} />
-                    <SubHeader title="External Audit Reports" />
-                    <DocGrid docs={filter(externalAuditReports)} />
-                    <SubHeader title="Internal Audit Reports" />
-                    <DocGrid docs={filter(internalAuditReports)} />
-                    <SubHeader title="External Audit — Action Taken Reports" />
-                    <DocGrid docs={filter(externalAuditATR)} />
-                    <SubHeader title="Internal Audit — Action Taken Reports" />
-                    <DocGrid docs={filter(internalAuditATR)} />
+
+                    <SubHeader title="Academic and Administrative Audit (AAA) Reports" />
+                    
+                    <h4 className="font-display font-bold text-[#0f2a44] text-base mt-4 mb-2">External Audit Reports</h4>
+                    <DocGrid docs={filter(userAaaDocs.externalReports)} />
+
+                    <h4 className="font-display font-bold text-[#0f2a44] text-base mt-6 mb-2">Internal Audit Reports</h4>
+                    <DocGrid docs={filter(userAaaDocs.internalReports)} />
+
+                    <SubHeader title="Action Taken Reports (ATR)" />
+
+                    <h4 className="font-display font-bold text-[#0f2a44] text-base mt-4 mb-2">External Audit ATR</h4>
+                    <DocGrid docs={filter(userAaaDocs.externalAtr)} />
+
+                    <h4 className="font-display font-bold text-[#0f2a44] text-base mt-6 mb-2">Internal Audit ATR</h4>
+                    <DocGrid docs={filter(userAaaDocs.internalAtr)} />
                   </section>
                 )}
 
                 {active === "aaaRef" && (
                   <section>
-                    <SectionHeader eyebrow="References" title="AAA & References — Assessment, Accreditation, Approvals, Rankings" description="Reference manuals, SOPs and methodology documents from NAAC, NBA and NIRF." />
-                    <DocGrid docs={filter(aaaReferences)} />
+                    <SectionHeader eyebrow="References" title="Assessment, Accreditations, Approvals, and Rankings (AAA & R) References" description="Reference manuals, SSR, SOPs, guidelines and methodology documents from NAAC, NBA, and NIRF." />
+                    <DocGrid docs={filter(userAaaRefDocs)} />
                   </section>
                 )}
 
                 {active === "strategic" && (
                   <section>
-                    <SectionHeader eyebrow="Vision to Action" title="Strategic Plan" description="MITS Strategic Plan (2022-23 to 2026-27), implementation progress and annual gap analyses." />
-                    <div className="grid sm:grid-cols-3 gap-3 mb-6">
-                      {[
-                        { k: "Vision", v: "Globally recognized research & academic institution" },
-                        { k: "Horizon", v: "2022-23 → 2026-27" },
-                        { k: "Review", v: "Annual Gap Analysis" },
-                      ].map((s) => (
-                        <div key={s.k} className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-xl p-4">
-                          <p className="text-xs uppercase tracking-[0.18em] text-[#caa74d]">{s.k}</p>
-                          <p className="font-body font-semibold mt-1 text-sm">{s.v}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <DocGrid docs={filter(strategicPlan)} />
+                    <SectionHeader eyebrow="Vision to Action" title="Strategic Plan" description="Strategic Plan Implementation, Gap Analysis Reports, and Strategic Plan (2022-23 to 2026-27)." />
+                    <DocGrid docs={filter(userStrategicDocs)} />
                   </section>
                 )}
 
                 {active === "bestPractices" && (
                   <section>
-                    <SectionHeader eyebrow="NAAC Criterion 7" title="Best Practices of the Institute" description="IQAC-institutionalised best practices with measurable outcomes." />
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {[
-                        { title: "Mentor-Mentee System", obj: "Personalized academic & emotional support through structured mentor-mentee pairing.", out: "Documented weekly reports and student counselling records across all departments." },
-                        { title: "Outcome-Based Education (OBE)", obj: "Systematic PO/PSO/CO attainment and closing-the-loop reviews.", out: "OBE templates, CO-PO assessment for R20 and R23 curricula across UG & PG." },
-                        { title: "Guru Dakshta — Faculty Induction", obj: "Comprehensive induction of newly appointed faculty under UGC's FIP framework.", out: "Annual FIP conducted with published reports since AY 2024-25." },
-                        { title: "Stakeholder Feedback Loop", obj: "Multi-stakeholder feedback with policy, questionnaire, ATR and evidence.", out: "Publicly available ATRs from 2018-19 onwards with department-level evidence." },
-                      ].map((b, i) => (
-                        <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}
-                          className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10"
-                        >
-                          <h3 className="font-display text-lg font-bold text-[#0f2a44]">{b.title}</h3>
-                          <p className="font-body text-xs text-[#caa74d] uppercase tracking-wider mt-2">Objective</p>
-                          <p className="font-body text-sm text-[#0f2a44]/80">{b.obj}</p>
-                          <p className="font-body text-xs text-[#caa74d] uppercase tracking-wider mt-3">Outcome</p>
-                          <p className="font-body text-sm text-[#0f2a44]/80">{b.out}</p>
-                        </motion.div>
-                      ))}
-                    </div>
+                    <SectionHeader eyebrow="Best Practices" title="Best Practice of the Institute" description="Institutionalised best practices of Madanapalle Institute of Technology & Science." />
+                    <DocGrid docs={filter(userBestPracticesDocs)} />
                   </section>
                 )}
 
                 {active === "distinctive" && (
-                  <section>
-                    <SectionHeader eyebrow="Institutional Distinctiveness" title="Distinctive Performance" description="Areas where MITS demonstrates a distinctive institutional identity." />
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {[
-                        { t: "Deemed to be University", d: "Section 3 of UGC Act, 1956 — Gazette Notification 15.07.2025." },
-                        { t: "NAAC A+ Cycle 1", d: "First cycle A+ Grade valid 2021–2026." },
-                        { t: "NBA Multi-Programme", d: "UG & PG programmes accredited by NBA up to 2028." },
-                        { t: "ISO 21001:2018", d: "Educational Organizations Management System — TUV SUD surveillance annually." },
-                        { t: "NIRF Ranked", d: "Engineering band 201-300 in NIRF 2024 & 2025." },
-                        { t: "ISTE Best Private Engineering College", d: "National Award 2016-17." },
-                      ].map((d, i) => (
-                        <div key={i} className="bg-gradient-to-br from-[#faf7f2] to-white rounded-2xl border border-[#caa74d]/30 p-5">
-                          <Star className="w-6 h-6 text-[#caa74d] mb-2" />
-                          <h3 className="font-display font-bold text-[#0f2a44]">{d.t}</h3>
-                          <p className="font-body text-sm text-[#0f2a44]/75 mt-1">{d.d}</p>
-                        </div>
-                      ))}
+                  <section className="space-y-6">
+                    <SectionHeader
+                      eyebrow="Institutional Distinctiveness"
+                      title="Distinctive Performance of the Institute"
+                    />
+                    
+                    <div className="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm space-y-6">
+                      <p className="font-body text-base text-[#0f2a44] font-medium">
+                        The IQAC shall have the following functions:
+                      </p>
+
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+                        {[
+                          { t: "Deemed to be University Status", d: "Declared Deemed to be University u/s 3 of UGC Act, 1956 — Gazette Notification dated 15.07.2025." },
+                          { t: "NAAC A+ Accreditation", d: "Accredited with NAAC A+ Grade in Cycle 1." },
+                          { t: "NBA Accreditation", d: "Tier-I NBA accredited UG and PG engineering and professional programs." },
+                          { t: "ISO 21001:2018 EOMS Certified", d: "Certified Educational Organizations Management System for quality assurance." },
+                          { t: "NIRF Ranked Institution", d: "Consistently ranked in NIRF Innovation, Engineering, and Overall bands." },
+                          { t: "Global Pathways & Internationalization", d: "Active dual-degree & credit transfer partnerships with leading foreign universities." },
+                        ].map((d, i) => (
+                          <div key={i} className="bg-slate-50/80 hover:bg-white rounded-xl border border-slate-200 hover:border-[#b31317]/40 p-5 transition-all shadow-2xs">
+                            <Star className="w-5 h-5 text-[#caa74d] mb-2" />
+                            <h4 className="font-display font-bold text-[#0f2a44] text-base">{d.t}</h4>
+                            <p className="font-body text-xs md:text-sm text-slate-600 mt-1.5 leading-relaxed">{d.d}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </section>
                 )}
 
                 {active === "sss" && (
                   <section>
-                    <SectionHeader eyebrow="SSS" title="Student Satisfaction Survey" description="Annual SSS on teaching-learning process, facilities and student experience." />
-                    <div className="grid sm:grid-cols-3 gap-4 mb-6">
-                      {[
-                        { k: "Coverage", v: "All UG & PG" },
-                        { k: "Frequency", v: "Annual" },
-                        { k: "Analysis", v: "Published in AQAR" },
-                      ].map((s) => (
-                        <div key={s.k} className="bg-white rounded-xl p-5 border border-[#0f2a44]/10">
-                          <p className="text-xs uppercase tracking-[0.18em] text-[#caa74d]">{s.k}</p>
-                          <p className="font-display text-xl font-bold text-[#0f2a44] mt-1">{s.v}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <a href="https://74.235.98.35/mits_fb_iqac_24/feedback_form.php" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#caa74d] text-[#0f2a44] font-semibold hover:bg-[#dbb95c]">
-                      <ExternalLink className="w-4 h-4" /> Take the Student Satisfaction Survey
-                    </a>
+                    <SectionHeader eyebrow="SSS" title="Student Satisfaction Survey" description="Annual Student Satisfaction Survey reports evaluating teaching-learning process, infrastructure and overall student experience." />
+                    <DocGrid docs={filter(userSssDocs)} />
                   </section>
                 )}
 
@@ -850,61 +1500,67 @@ const IQAC = () => {
                 )}
 
                 {active === "annual" && (
-                  <section>
-                    <SectionHeader eyebrow="Annual Reports" title="MITS Annual Report" description="Institution-wide annual reports covering academics, research, placements, infrastructure and governance." />
-                    <DocGrid docs={filter(annualReports)} />
+                  <section className="space-y-6">
+                    <SectionHeader eyebrow="Annual Reports" title="MITS Annual Report & IQAC Hours Reports" description="Institution-wide annual reports covering academics, research, placements, infrastructure, governance, and monthly IQAC hours reports." />
+                    
+                    <SubHeader title="MITS Annual Reports" />
+                    <DocGrid docs={filter(userAnnualReportsDocs)} />
+
+                    <SubHeader title="IQAC Hours Reports" />
+                    <DocGrid docs={filter(userIqacHoursDocs)} />
                   </section>
                 )}
 
                 {active === "newsletter" && (
                   <section>
                     <SectionHeader eyebrow="Communication" title="MITS Newsletter" description="Departmental and institutional newsletters archive." />
-                    <div className="mb-6">
-                      <DocGrid docs={filter(newsletterDocs)} />
-                    </div>
-                    <a href="https://mits.ac.in/newsletter" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#caa74d] text-[#0f2a44] font-semibold hover:bg-[#dbb95c]">
-                      <ExternalLink className="w-4 h-4" /> Open Newsletter Archive
-                    </a>
+                    <DocGrid docs={filter(newsletterDocs)} />
                   </section>
                 )}
 
                 {active === "handbook" && (
                   <section>
                     <SectionHeader eyebrow="Handbook" title="Institutional Handbook" description="Handbook curated by IQAC covering academic and administrative processes, files to be maintained and general information." />
-                    <DocGrid docs={filter(handbookDocs)} />
+                    <DocGrid docs={filter(userHandbookDocs)} />
                   </section>
                 )}
 
                 {active === "ugc" && (
                   <section>
                     <SectionHeader eyebrow="UGC" title="UGC Quality Mandate" description="Guidelines, frameworks and quality initiatives from UGC, MoE and allied national bodies." />
-                    <DocGrid docs={filter(ugcMandate)} />
+                    <DocGrid docs={filter(userUgcMandateDocs)} />
                   </section>
                 )}
 
                 {active === "events" && (
-                  <section>
-                    <SectionHeader eyebrow="Events" title="IQAC Events & Collaborations" description="Professional development programmes, workshops, audits, expert talks and collaborations conducted by IQAC." />
-                    <div className="space-y-3">
-                      {filter(iqacEvents.map((e) => ({ title: e.title, url: e.url || "#", type: "pdf" as const }))).map((_, i) => {
-                        const e = iqacEvents[i]; if (!e) return null;
+                  <section className="space-y-6">
+                    <SectionHeader
+                      eyebrow="Events"
+                      title="IQAC Events & Collaborations"
+                      description="Professional development programmes, workshops, audits, expert talks and collaborations conducted by IQAC."
+                    />
+                    
+                    <div className="bg-white rounded-2xl p-5 md:p-7 border border-slate-200 shadow-sm space-y-3.5">
+                      {userIqacEventsDocs.map((item, idx) => {
+                        const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase().trim());
+                        if (search.trim() && !matchesSearch) return null;
+
                         return (
-                          <div key={i} className="bg-white rounded-xl p-4 border border-[#0f2a44]/10 flex gap-4 items-start">
-                            <div className="shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-[#0f2a44] to-[#11355a] text-white flex items-center justify-center">
-                              <Calendar className="w-5 h-5" />
-                            </div>
-                            <div className="flex-1">
-                              <p className="font-display font-semibold text-[#0f2a44]">{e.title}</p>
-                              <p className="font-body text-xs text-[#b31317] font-bold mt-0.5 uppercase tracking-wider">{e.date}</p>
-                            </div>
-                            {e.url && (
-                              <a href={e.url} target="_blank" rel="noopener noreferrer"
-                                className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#caa74d] hover:underline">
-                                Report <Download className="w-3 h-3" />
-                              </a>
-                            )}
-                          </div>
+                          <a
+                            key={idx}
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-start gap-3 text-xs md:text-sm font-semibold text-[#0f2a44] hover:text-[#b31317] transition-colors group border-b border-slate-100 pb-3 last:border-0 last:pb-0"
+                          >
+                            <span className="w-5 h-5 rounded-full bg-red-100 text-[#b31317] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#b31317] group-hover:text-white transition-colors">
+                              <ChevronRight className="w-3.5 h-3.5" />
+                            </span>
+                            <span className="flex-1 leading-normal">
+                              {item.title}
+                            </span>
+                            <Download className="w-4 h-4 text-slate-400 group-hover:text-[#b31317] shrink-0 mt-0.5" />
+                          </a>
                         );
                       })}
                     </div>
@@ -913,16 +1569,8 @@ const IQAC = () => {
 
                 {active === "eiqac" && (
                   <section>
-                    <SectionHeader eyebrow="Digital IQAC" title="e-IQAC" description="MITS e-IQAC portal — internal tracker for departments, cells and committees." />
-                    <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10">
-                      <p className="font-body text-[#0f2a44]/80 mb-4">
-                        The MITS e-IQAC internal tracker consolidates department-level compliance, activities, and quality documentation. Access is restricted to campus network users.
-                      </p>
-                      <a href="http://172.16.0.222/" target="_blank" rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#0f2a44] text-[#caa74d] font-semibold hover:bg-[#152f4f]">
-                        <Globe className="w-4 h-4" /> Open e-IQAC Tracker (Intranet)
-                      </a>
-                    </div>
+                    <SectionHeader eyebrow="Digital IQAC" title="e-IQAC Trackers" description="MITS e-IQAC portal — internal tracker for departments, cells and committees." />
+                    <DocGrid docs={filter(userEiqacDocs)} />
                   </section>
                 )}
 
@@ -934,41 +1582,70 @@ const IQAC = () => {
                 )}
 
                 {active === "manuals" && (
-                  <section>
-                    <SectionHeader eyebrow="Downloads" title="Manuals / Formats / Guidelines" description="Comprehensive downloads for department, audit, NAAC, NBA and NIRF formats along with functional check-lists." />
-                    <SubHeader title="Audit Formats" />
-                    <DocGrid docs={filter(auditFormats)} />
-                    <SubHeader title="NAAC Formats" />
-                    <DocGrid docs={filter(naacFormats)} />
-                    <SubHeader title="NBA / OBE Formats" />
-                    <DocGrid docs={filter(nbaFormats)} />
-                    <SubHeader title="NIRF Formats" />
-                    <DocGrid docs={filter(nirfFormats)} />
-                    <SubHeader title="Check Lists" />
-                    <DocGrid docs={filter(checkLists)} />
-                    <SubHeader title="Department Manuals & Templates" />
-                    <div className="space-y-4">
-                      {manualsTable.map((m) => {
-                        const matched = filter(m.docs);
-                        if (matched.length === 0 && search.trim()) return null;
-                        return (
-                          <div key={m.no} className="bg-white rounded-xl p-4 border border-[#0f2a44]/10">
-                            <div className="flex items-center gap-3 mb-3">
-                              <span className="w-8 h-8 rounded-lg bg-[#caa74d]/15 text-[#caa74d] font-bold text-sm flex items-center justify-center">{m.no}</span>
-                              <h4 className="font-display font-bold text-[#0f2a44]">{m.title}</h4>
-                            </div>
-                            <div className="grid sm:grid-cols-2 gap-2">
-                              {(search.trim() ? matched : m.docs).map((d) => (
-                                <a key={d.url} href={d.url} target="_blank" rel="noopener noreferrer"
-                                  className="flex items-center gap-2 text-sm text-[#0f2a44]/80 hover:text-[#caa74d] px-3 py-2 rounded-lg bg-[#faf7f2] hover:bg-[#caa74d]/10">
-                                  <Download className="w-3.5 h-3.5 shrink-0" />
-                                  <span className="truncate">{d.title}</span>
-                                </a>
-                              ))}
-                            </div>
-                          </div>
-                        );
-                      })}
+                  <section className="space-y-6">
+                    <SectionHeader eyebrow="Downloads" title="Manual / Format / Guidelines" description="Comprehensive downloads for department, audit, NAAC, NBA and NIRF formats along with functional check-lists." />
+                    
+                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse">
+                          <thead>
+                            <tr className="bg-[#b31317] text-white">
+                              <th className="py-3.5 px-5 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white w-16 text-center">
+                                S.No
+                              </th>
+                              <th className="py-3.5 px-5 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white">
+                                Manual / Format / Templates
+                              </th>
+                              <th className="py-3.5 px-5 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white">
+                                View Formats
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-100 font-body text-sm text-slate-700">
+                            {userManualsTableData.map((row) => {
+                              const matchesSearch =
+                                row.title.toLowerCase().includes(search.toLowerCase().trim()) ||
+                                row.formats.some(f => f.name.toLowerCase().includes(search.toLowerCase().trim()));
+                              if (search.trim() && !matchesSearch) return null;
+
+                              return (
+                                <tr key={row.sno} className="hover:bg-red-50/30 transition-colors">
+                                  <td className="py-4 px-5 font-bold text-slate-500 text-center align-top">
+                                    {row.sno}
+                                  </td>
+                                  <td className="py-4 px-5 font-bold text-[#0f2a44] align-top">
+                                    {row.title}
+                                  </td>
+                                  <td className="py-4 px-5 align-top">
+                                    {row.formats.length === 0 ? (
+                                      <span className="text-slate-400 italic text-xs">-</span>
+                                    ) : (
+                                      <div className="flex flex-col gap-2">
+                                        {row.formats.map((fmt, idx) => (
+                                          <a
+                                            key={idx}
+                                            href={fmt.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 text-xs font-semibold text-[#b31317] hover:text-[#8a0e12] hover:underline"
+                                          >
+                                            {fmt.type === "link" ? (
+                                              <ExternalLink className="w-3.5 h-3.5 shrink-0 text-[#caa74d]" />
+                                            ) : (
+                                              <Download className="w-3.5 h-3.5 shrink-0 text-[#b31317]" />
+                                            )}
+                                            <span>{fmt.name}</span>
+                                          </a>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </section>
                 )}
@@ -976,71 +1653,106 @@ const IQAC = () => {
                 {active === "gallery" && (
                   <section>
                     <SectionHeader eyebrow="Gallery" title="IQAC Gallery" description="Snapshots from IQAC-conducted programmes, audits and faculty development workshops." />
-                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                      {iqacEvents.slice(0, 12).map((e, i) => (
-                        <a key={i} href={e.url || "#"} target="_blank" rel="noopener noreferrer"
-                          className="group relative overflow-hidden rounded-xl bg-white border border-[#0f2a44]/10 aspect-[4/3] flex flex-col">
-                          <div className="flex-1 flex items-center justify-center bg-gradient-to-br from-[#0f2a44] to-[#152f4f]">
-                            <Calendar className="w-12 h-12 text-[#caa74d]/70" />
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                      {userGalleryDocs.map((item, i) => (
+                        <div key={i} className="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col">
+                          <div className="aspect-[4/3] bg-slate-100 overflow-hidden relative">
+                            <img
+                              src={item.img}
+                              alt={item.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              onError={(e) => {
+                                (e.target as HTMLElement).style.display = 'none';
+                              }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                              <span className="text-xs text-white font-medium">{item.title}</span>
+                            </div>
                           </div>
-                          <div className="p-3">
-                            <p className="font-body text-xs font-bold text-[#b31317] uppercase tracking-wider">{e.date}</p>
-                            <p className="font-body text-sm text-[#0f2a44] mt-1 line-clamp-2">{e.title}</p>
+                          <div className="p-4 bg-white border-t border-slate-100">
+                            <p className="font-display font-bold text-xs md:text-sm text-[#0f2a44] line-clamp-2">
+                              {item.title}
+                            </p>
                           </div>
-                        </a>
+                        </div>
                       ))}
                     </div>
                   </section>
                 )}
 
                 {active === "contact" && (
-                  <section>
-                    <SectionHeader eyebrow="Contact" title="IQAC Contact" description="Get in touch with the Internal Quality Assurance Cell for accreditation, audit, feedback and quality-related matters." />
+                  <section className="space-y-6">
+                    <SectionHeader eyebrow="Contact" title="Contact Us" description="Internal Quality Assurance Cell (IQAC), Madanapalle Institute of Technology & Science." />
+                    
                     <div className="grid md:grid-cols-2 gap-6">
-                      <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-2xl p-6">
-                        <p className="text-xs uppercase tracking-[0.2em] text-[#caa74d] mb-3">IQAC Team</p>
-                        
-                        <div className="mb-4">
-                          <h3 className="font-display text-lg font-bold">{contact.coordinator}</h3>
-                          <p className="font-body text-[#caa74d] text-xs font-semibold uppercase tracking-wider">{contact.title}</p>
-                        </div>
-                        
-                        <div className="mb-4 pt-2 border-t border-white/10">
-                          <h4 className="font-display text-sm font-bold">{contact.coCoordinator1}</h4>
-                          <p className="font-body text-white/70 text-xs">{contact.coCoordinator1Title}</p>
+                      {/* IQAC Team Card */}
+                      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-5">
+                        <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+                          <div className="w-10 h-10 rounded-xl bg-red-50 text-[#b31317] flex items-center justify-center font-bold">
+                            <Users className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h3 className="font-display font-bold text-lg text-[#0f2a44]">IQAC Team</h3>
+                            <p className="text-xs text-slate-500 font-medium">Core Administration & Coordination</p>
+                          </div>
                         </div>
 
-                        <div className="mb-4 pt-2 border-t border-white/10">
-                          <h4 className="font-display text-sm font-bold">{contact.coCoordinator2}</h4>
-                          <p className="font-body text-white/70 text-xs">{contact.coCoordinator2Title}</p>
-                        </div>
-                        
-                        <div className="mt-6 space-y-3 font-body text-sm pt-4 border-t border-white/10">
-                          <div className="flex items-start gap-3"><MapPin className="w-4 h-4 text-[#caa74d] mt-0.5" />{contact.address}</div>
-                          <div className="flex items-center gap-3"><Mail className="w-4 h-4 text-[#caa74d]" /><a href={`mailto:${contact.email}`} className="hover:text-[#caa74d]">{contact.email}</a></div>
-                          <div className="flex items-center gap-3"><Phone className="w-4 h-4 text-[#caa74d]" /><a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="hover:text-[#caa74d]">{contact.phone}</a></div>
-                          {contact.mobile && <div className="flex items-center gap-3"><Phone className="w-4 h-4 text-[#caa74d]" /><span>Mobile: {contact.mobile}</span></div>}
+                        <div className="space-y-4">
+                          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                            <h4 className="font-display font-bold text-base text-[#0f2a44]">Dr. K. Sathesh</h4>
+                            <p className="text-xs font-semibold text-[#b31317] uppercase tracking-wider mt-0.5">IQAC & NAAC Coordinator</p>
+                          </div>
+
+                          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                            <h4 className="font-display font-bold text-base text-[#0f2a44]">Mrs. Kowsalya P</h4>
+                            <p className="text-xs font-semibold text-slate-600 uppercase tracking-wider mt-0.5">IQAC Document Manager</p>
+                          </div>
+
+                          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                            <h4 className="font-display font-bold text-base text-[#0f2a44]">Mrs. K. Revathi</h4>
+                            <p className="text-xs font-semibold text-slate-600 uppercase tracking-wider mt-0.5">IQAC Document Manager</p>
+                          </div>
                         </div>
                       </div>
-                      <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10">
-                        <h3 className="font-display text-lg font-bold text-[#0f2a44] mb-3">Quick Links</h3>
-                        <div className="space-y-2">
-                          <Link to="/naac" className="flex items-center justify-between p-3 bg-[#faf7f2] rounded-lg hover:bg-[#caa74d]/10">
-                            <span className="font-body font-medium text-[#0f2a44]">NAAC Accreditation Portal</span>
-                            <ChevronRight className="w-4 h-4 text-[#caa74d]" />
-                          </Link>
-                          <Link to="/nirf" className="flex items-center justify-between p-3 bg-[#faf7f2] rounded-lg hover:bg-[#caa74d]/10">
-                            <span className="font-body font-medium text-[#0f2a44]">NIRF Rankings</span>
-                            <ChevronRight className="w-4 h-4 text-[#caa74d]" />
-                          </Link>
-                          <Link to="/affiliations-accreditations" className="flex items-center justify-between p-3 bg-[#faf7f2] rounded-lg hover:bg-[#caa74d]/10">
-                            <span className="font-body font-medium text-[#0f2a44]">Affiliations & Accreditations</span>
-                            <ChevronRight className="w-4 h-4 text-[#caa74d]" />
-                          </Link>
-                          <Link to="/psd" className="flex items-center justify-between p-3 bg-[#faf7f2] rounded-lg hover:bg-[#caa74d]/10">
-                            <span className="font-body font-medium text-[#0f2a44]">Public Self Disclosures</span>
-                            <ChevronRight className="w-4 h-4 text-[#caa74d]" />
-                          </Link>
+
+                      {/* Address & Communication Card */}
+                      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-5">
+                        <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+                          <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#caa74d] flex items-center justify-center font-bold">
+                            <MapPin className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h3 className="font-display font-bold text-lg text-[#0f2a44]">Address & Contact Details</h3>
+                            <p className="text-xs text-slate-500 font-medium">Campus Location & Email Directory</p>
+                          </div>
+                        </div>
+
+                        <div className="space-y-4 text-sm font-body text-slate-700">
+                          <div>
+                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Address</p>
+                            <p className="font-semibold text-[#0f2a44]">Room No: SRB211A</p>
+                            <p>Madanapalle Institute of Technology & Science</p>
+                            <p className="text-xs text-slate-500 font-medium">Deemed to be University</p>
+                            <p>Madanapalle-Kadiri Road, Kurabalakota Mandal</p>
+                            <p>Madanapalle - 517325, Andhra Pradesh, India</p>
+                          </div>
+
+                          <div className="pt-3 border-t border-slate-100">
+                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                              <Phone className="w-3.5 h-3.5 text-[#b31317]" /> Phone Numbers
+                            </p>
+                            <p className="font-semibold text-[#0f2a44]">+91-08571280255, 9100973388</p>
+                          </div>
+
+                          <div className="pt-3 border-t border-slate-100">
+                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                              <Mail className="w-3.5 h-3.5 text-[#b31317]" /> Email Addresses
+                            </p>
+                            <div className="flex flex-col gap-1">
+                              <a href="mailto:iqaccell@mits.ac.in" className="font-semibold text-[#b31317] hover:underline">iqaccell@mits.ac.in</a>
+                              <a href="mailto:iqac-coordinator@mits.ac.in" className="font-semibold text-[#b31317] hover:underline">iqac-coordinator@mits.ac.in</a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

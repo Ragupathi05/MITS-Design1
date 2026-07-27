@@ -63,15 +63,57 @@ export const benefits = [
   "Build an organised methodology of documentation and internal communication."
 ];
 
+export const qualityFrameworkImg = "https://mits.ac.in/assets/images/MITS IQAC Quality Framework.png";
+export const organogramPdf = "https://mits.ac.in/assets/pdf/iqac/IQAC Organogram.pdf";
+
+export const followUp = [
+  "The AQAR shall be approved by the statutory bodies of the institution for the follow up action for necessary quality enhancement measures.",
+  "The institution shall regularly submit its AQARs to NAAC.",
+  "The Institution shall submit AQARs and / or Quality Radars (QRs) and follow up reports of AQARs to the UGC as and when called for.",
+  "The IQAC must create its exclusive window on its institutional website, to regularly report on its activities as well as for hosting the AQAR."
+];
+
 // ---------------- COMPOSITION ----------------
+export const compositionIntroText = "IQAC may be constituted in every institution under the Chairmanship of the Head of the institution with heads of important academic and administrative units and a few teachers and a few distinguished educationists and representatives of local management and stakeholders";
+
+export const compositionMitsText = "Cognizant of MITS College's commitment to quality assurance, the IQAC has been seamlessly integrated as a core element, focused on instituting robust processes that maintain exceptional standards across various critical institutional activities. The composition of the IQAC has been meticulously devised, taking into consideration the counsel and recommendations of accreditation bodies and committees. Here, we present the composition of the IQAC at MITS College:";
+
 export const compositionNotes = [
   "Chairperson: Head of the Institution",
   "A few senior administrative officers",
   "Three to eight teachers",
   "One member from the Management",
   "One/two nominees from local society, Students and Alumni",
-  "One/two nominees from Employers/Industrialists/stakeholders",
-  "One of the senior teachers as the Coordinator/Director of the IQAC"
+  "One/two nominees from Employers /Industrialists/stakeholders",
+  "One of the senior teachers as the coordinator/Director of the IQAC"
+];
+
+// ---------------- AQAR SUBMISSION ----------------
+export const aqarSubmissionParagraphs = [
+  "As per the Guidelines all the HEIS need to submit AQAR online. Submitting AQAR by e-mail/hard copy is not be accepted w.e.f 1st January 2019.",
+  "HEIs which have not yet registered to online portal of NAAC need to follow the registration process and requested to register immediately. This is applicable to all HEIs which have been accredited by NAAC. Those who not registered to online portal are not able to submit the AQAR. (For further details of registration process, kindly refer NAAC Website – Apply online page).",
+  "After registration the AQAR will be available in HEI portal, under the Manage AQAR menu.",
+  "The academic year displayed in the portal under the Manage AQAR menu for filling AQAR does not consider the reports submitted earlier by email.",
+  "After submission of AQAR, it will be verified by NAAC and clarification may be asked regarding the data/information provided in the AQAR.",
+  "During clarification period the HEIs can edit their AQAR based on the clarification requested or may provide the reason for 0/Nil data for any of the metrics, in the response box and re-submit the AQAR. The last date for submission of response will be 15 days from date of clarification requested.",
+  "After re-verification of the response submitted by HEI the AQAR will be accepted.",
+  "For each cycle of accreditation with validity period of 5 years, HEIs have to submit only 4 AQARs. In case of extended validity by NAAC for HEIs with ‘A’ grade in three consecutive cycles, wherein the validity period is increased to 7, the HEIs have to submit 6 AQARs."
+];
+
+export const aqarTimelineParagraphs = [
+  "All accredited HEIs have to submit AQAR regularly to NAAC. On completion of the Academic year, HEIs have to submit the AQAR on or before 31st December of every year, irrespective of their Date of Accreditation.",
+  "If an HEI is accredited on 16 Sept. 2019, the HEI need to submit the AQAR of 2018-2019 before December 31, 2019. It means, previous Completed Academic Year (2018-2019) AQAR needs to be submitted.",
+  "If an HEI is accredited on 12 March 2020, the HEI need to submit the AQAR of 2019-2020 before December 31, 2020. It means, previous Completed Academic Year (2019-2020) AQAR needs to be submitted."
+];
+
+export const aqarReportsYearly: Doc[] = [
+  { title: "AQAR 2023-24 Report", url: "https://mits.ac.in/assets/pdf/iqac/AQAR 2023-24.pdf", type: "pdf" },
+  { title: "AQAR 2022-23 Report", url: "https://mits.ac.in/public/uploads/naac/AQAR 2022-23.pdf", type: "pdf" },
+  { title: "AQAR 2021-22 Report", url: "https://mits.ac.in/public/uploads/naac/AQAR%202021-2022.pdf", type: "pdf" },
+  { title: "AQAR 2020-21 Report", url: "https://mits.ac.in/public/uploads/naac/AQAR%202020-2021.pdf", type: "pdf" },
+  { title: "AQAR 2019-20 Report", url: "https://mits.ac.in/public/uploads/naac/AQAR2019-20.pdf", type: "pdf" },
+  { title: "AQAR 2018-19 Report", url: "https://mits.ac.in/public/uploads/naac/AQAR2018-19.pdf", type: "pdf" },
+  { title: "AQAR 2017-18 Report", url: "https://mits.ac.in/public/uploads/naac/AQAR2017-18.pdf", type: "pdf" }
 ];
 
 export const compositionYearly: Doc[] = [
@@ -213,7 +255,23 @@ export const naacReforms2024: Doc[] = [
 ];
 
 // ---------------- MILESTONES ----------------
-export const milestones = [];
+export const milestones = [
+  { year: "2025", text: "Conferred Deemed to be University status by Ministry of Education, Govt. of India under Section 3 of UGC Act, 1956." },
+  { year: "2024", text: "NAAC A+ Grade reaccreditation & NBA Accreditation extension for B.Tech programs till 2027." },
+  { year: "2023", text: "ISO 21001:2018 EOMS Certification & Launch of IQAC Monthly Quality Review / IQAC Hours." },
+  { year: "2022", text: "NIRF Innovation Ranking & NBA Accreditation for MBA and MCA postgraduate programs." },
+  { year: "2021", text: "NAAC 'A+' Grade Accreditation in Cycle 1 with top score & establishment of Advanced Research Centers." },
+  { year: "2020", text: "Implementation of NEP 2020 Guidelines & Digital LMS Learning Transformation." },
+  { year: "2019", text: "NBA Accreditation for 5 UG Engineering Programs & Golden Jubilee Research Grant Awards." },
+  { year: "2018", text: "UGC Autonomous Status extension and SIRO recognition by DSIR, Ministry of Science & Technology." },
+  { year: "2017", text: "Establishment of Incubation Center & Center of Excellence in Microelectronics." },
+  { year: "2016", text: "UGC 2(f) & 12(B) Recognition & AICTE-CII Gold Category Ranking." },
+  { year: "2015", text: "Conferred Autonomous Status by UGC & JNTUA Ananthapuramu." },
+  { year: "2014", text: "NBA Accreditation for major B.Tech branches (CSE, ECE, EEE, ME)." },
+  { year: "2012", text: "Establishment of Industry-Institute Interaction Cell & R&D Center." },
+  { year: "2008", text: "Establishment of Internal Quality Assurance Cell (IQAC) at MITS." },
+  { year: "1998", text: "Establishment of Madanapalle Institute of Technology & Science." }
+];
 
 // ---------------- CERTIFICATIONS ----------------
 export const certifications: Doc[] = [
@@ -742,7 +800,7 @@ export const econtent: Doc[] = [
   },
   {
     "title": "e-Content by MITS Faculty",
-    "url": "https://mits.ac.in/e-content",
+    "url": "/e-content",
     "type": "link"
   }
 ];
@@ -962,8 +1020,8 @@ export const iqacHoursReports: Doc[] = [
 // ---------------- NEWSLETTERS & HANDBOOKS ----------------
 export const newsletterDocs: Doc[] = [
   {
-    "title": "NewsLetter",
-    "url": "https://mits.ac.in/newsletter",
+    "title": "MITS Newsletter Archive",
+    "url": "/newsletter",
     "type": "link"
   }
 ];
@@ -1236,26 +1294,198 @@ export const iqacEvents: IqacEvent[] = [
     "url": "https://mits.ac.in/assets/pdf/iqac/ISO Stage 2 Audit Report.pdf"
   }
 ];
-export const eNoticeBoard = [
+export const iqacENotices = [
   {
-    "title": "Click here for Event Details",
-    "date": "AY 2025-26",
-    "url": "https://mits.ac.in/assets/pdf/iqac/IQAC PDP poster-2026.pdf"
+    title: "Professional Development Programme",
+    detail: "NITTTRC Professional Development Programme on \"AI in Teaching and Learning\". 06th April - 10th April 2026",
+    url: "https://mits.ac.in/assets/pdf/iqac/IQAC PDP poster-2026.pdf",
+    linkText: "Click here for Event Details"
   },
   {
-    "title": "Click here for Event Details",
-    "date": "AY 2025-26",
-    "url": "https://mits.ac.in/assets/pdf/iqac/IQAC poster_PDP.pdf"
+    title: "Internal Academic Audit",
+    detail: "Internal Academic Audit for the Academic Year 2025-26 – I Semester for UG (II/III/IV-Year B.Tech) and PG (MBA, MCA, M.Tech) programs. 9th – 13th March 2026. Conducted by : PAARC & IQAC Team - MITS",
+    url: null,
+    linkText: null
   },
   {
-    "title": "Click here for Event Banner",
-    "date": "AY 2025-26",
-    "url": "https://mits.ac.in/assets/pdf/iqac/NITTTR Banner.pdf"
+    title: "Review Meeting",
+    detail: "ISO 21001:2018 EOMS Surveillance Audit. 22nd to 24th January, 2026",
+    url: null,
+    linkText: null
   },
   {
-    "title": "Click here for Event Brochure",
-    "date": "AY 2025-26",
-    "url": "https://mits.ac.in/assets/pdf/iqac/NITTTR Brochure.pdf"
+    title: "Review Meeting",
+    detail: "Cell / Committee Review Meeting. From 5th November 2025 to 12th January 2026",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Guru Dakshta",
+    detail: "Guru Dakshta (Faculty Induction Program (FIP)). Date: 27th October - 14th November 2025 | Venue: Seminar Hall- A | Time: 4:00 to 5:00 PM | Conducted By: IQAC - MITS",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Professional Development Programme",
+    detail: "NITTTRC Professional Development Programme on \"UI / UX DESIGN\". 30th June - 04th July 2025",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "26th June 2025 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "24th April 2025 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "27th March 2025 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Professional Development Programme",
+    detail: "NITTTRC Professional Development Programme on \"National Educational Policy NEP 2020 & Institutional Development\". 10th - 14th March 2025",
+    url: "https://mits.ac.in/assets/pdf/iqac/IQAC poster_PDP.pdf",
+    linkText: "Click here for Event Details"
+  },
+  {
+    title: "Audit",
+    detail: "ISO 21001:2018 EOMS Surveillance Audit. 10th – 11th March 2025",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "27th February 2025 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Professional Development Programme",
+    detail: "NITTTRC Professional Development Programme on \"Augmented Reality & Virtual Reality\". 24th February - 1st March 2025",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "30th January 2025 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "26th December 2024 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "External Academic & Administrative Audit (AAA)",
+    detail: "Academic Year : 2023-24. 18th - 19th December 2024. Conducted By: IQAC - MITS",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Guru Dakshta (Faculty Induction Program (FIP))",
+    detail: "Date: 17th - 27th September 2024 | Venue: Seminar Hall- A | Time: 4:00 to 5:00 PM | Conducted by : IQAC - MITS",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Internal Audit",
+    detail: "Internal Academic & Administrative Audit for the Academic Year 2023-24 – II Semester. Date : September 9th to 13th & 17th, 2024. Conducted by : PAARC & IQAC Team - MITS",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "29th August 2024 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "27th June 2024 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "30th May 2024 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Internal Audit",
+    detail: "Internal Audit for the Academic Year 2023-24 - I Semester for MBA, MCA & BSH. Date : 1st & 2nd May, 2024. Conducted by : PAARC & IQAC Team - MITS",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "25th April 2024 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "28th March 2024 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "29th February 2024 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "NITTTR Professional Development Program on \"NBA Accreditation\"",
+    detail: "February 12th – 16th 2024",
+    url: "https://mits.ac.in/assets/pdf/iqac/NITTTR Banner.pdf",
+    linkText: "Click here for Event Banner"
+  },
+  {
+    title: "NITTTRC Professional Development Program on \"NBA Accreditation\"",
+    detail: "February 12th – 17th 2024",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "25th January 2024 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Internal Audit",
+    detail: "Internal Audit for the Academic Year 2023-24 - I Semester for all the Engineering Departments. Date : 3rd - 12th January, 2024. Conducted by : PAARC & IQAC Team - MITS",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "Internal Inspection",
+    detail: "Internal Inspection of Status of Documents maintained by MITS Cells / Committees. Date : 22nd December 2023. Conducted by : PAARC & IQAC Team - MITS",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "ISO Audit 21001 : 2018",
+    detail: "ISO Audit 21001 : 2018 Stage 2 Audit. 30th November – 01st December 2023",
+    url: null,
+    linkText: null
+  },
+  {
+    title: "IQAC Hours",
+    detail: "28th December 2023 (Last Thursday of Every Month) | Time: 10:00 AM - 04:00 PM",
+    url: null,
+    linkText: null
   }
 ];
 
@@ -2833,27 +3063,27 @@ export const iqacPolicies: Doc[] = [
   },
   {
     "title": "About Us",
-    "url": "https://mits.ac.in/about-us",
+    "url": "/about",
     "type": "link"
   },
   {
     "title": "Contact Us",
-    "url": "https://mits.ac.in/contactus",
+    "url": "/contact",
     "type": "link"
   },
   {
     "title": "Website Privacy Policy",
-    "url": "https://mits.ac.in/privacy-policy",
+    "url": "/privacy-policy",
     "type": "link"
   },
   {
     "title": "Terms & Conditions Policy",
-    "url": "https://mits.ac.in/terms-conditions-policy",
+    "url": "/terms-conditions-policy",
     "type": "link"
   },
   {
     "title": "Refund Policy",
-    "url": "https://mits.ac.in/refund-policy",
+    "url": "/refund-policy",
     "type": "link"
   }
 ];
@@ -3106,3 +3336,8 @@ export const contact = {
 };
 
 export const bannerImage = "https://mits.ac.in/images/inner-banner.jpg";
+
+export { iso21001Subtabs, type ISOSubtab } from "./isoData";
+export { imsSubtabs, type IMSSubtab } from "./imsData";
+export { aqarReportsList, aqarCriteriaData, type AQARCriterion, type AQARReportItem } from "./aqarData";
+export { userReportsDocs, userFeedbackSections, userAaaDocs, userAaaRefDocs, userStrategicDocs, userBestPracticesDocs, userSssDocs, userAnnualReportsDocs, userIqacHoursDocs, userHandbookDocs, userUgcMandateDocs, userIqacEventsDocs, userEiqacDocs, userGalleryDocs, userManualsTableData } from "./userUpdatedSections";

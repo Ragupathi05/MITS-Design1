@@ -188,7 +188,11 @@ export default function CellDetail() {
                               <FileText className="w-4 h-4 shrink-0 text-[#caa74d]" />
                               {displayTitle}
                             </span>
-                            <Download className="w-4 h-4 shrink-0 text-gray-400 group-hover:text-[#b31317] transition-colors" />
+                            {(() => {
+                              const isPdf = doc.href.includes(".pdf") || doc.href.includes(".doc") || doc.href.includes(".xlsx");
+                              const ActionIcon = isPdf ? Download : ExternalLink;
+                              return <ActionIcon className="w-4 h-4 shrink-0 text-gray-400 group-hover:text-[#b31317] transition-colors" />;
+                            })()}
                           </a>
                         </li>
                       );

@@ -108,6 +108,7 @@ const Footer = () => {
                 { label: "Campus Life", href: "/campus-life" },
                 { label: "NIRF", href: "/nirf" },
                 { label: "NAAC", href: "/naac" },
+                { label: "IQAC", href: "/iqac" },
                 { label: "Affiliations & Accreditations", href: "/affiliations-accreditations" },
                 { label: "Public Self Disclosures", href: "/psd" },
                 { label: "Circulars", href: "https://mits.ac.in/circulars" },

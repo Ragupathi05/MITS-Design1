@@ -73,16 +73,53 @@ function brandFor(identifier: string) {
   return { color: "from-slate-700 to-slate-500", label: identifier };
 }
 
-function isTableContent(content: unknown): content is Record<string, string>[] {
+function isTableContent(content: unknown): content is Record<string, unknown>[] {
   if (!Array.isArray(content) || content.length === 0) return false;
-  return typeof content[0] === "object" && content[0] !== null;
+  const first = content[0];
+  if (typeof first !== "object" || first === null) return false;
+  // If first item has Identifier and Link, it is a link list, not a tabular dataset
+  if ("Link" in first && "Identifier" in first && Object.keys(first).length <= 3) return false;
+  return true;
 }
 
 function isLinkList(content: unknown): boolean {
   if (!Array.isArray(content) || content.length === 0) return false;
-  const first = content[0];
-  if (typeof first !== "object" || first === null) return false;
-  return "Link" in first && "Identifier" in first;
+  return content.every((item) => typeof item === "object" && item !== null && "Link" in item && "Identifier" in item);
+}
+
+function renderCellContent(val: unknown): React.ReactNode {
+  if (val === null || val === undefined || val === "") return "-";
+  if (typeof val === "string" || typeof val === "number" || typeof val === "boolean") {
+    const str = String(val);
+    if (str.startsWith("http://") || str.startsWith("https://")) {
+      return (
+        <a href={str} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
+          {str}
+        </a>
+      );
+    }
+    return str;
+  }
+  if (typeof val === "object") {
+    const obj = val as Record<string, unknown>;
+    if ("Identifier" in obj && "Link" in obj) {
+      const link = String(obj.Link || "");
+      return (
+        <span>
+          <span className="font-semibold text-secondary">{String(obj.Identifier)}: </span>
+          {link.startsWith("http") ? (
+            <a href={link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
+              {link}
+            </a>
+          ) : (
+            <span>{link}</span>
+          )}
+        </span>
+      );
+    }
+    return Object.values(obj).filter(Boolean).map(String).join(" - ");
+  }
+  return String(val);
 }
 
 function renderSectionContent(section: FacultySection) {
@@ -127,7 +164,7 @@ function renderSectionContent(section: FacultySection) {
                 {rows.map((r, i) => (
                   <tr key={i} className="hover:bg-slate-50/70 odd:bg-white even:bg-slate-50/30">
                     {columns.map((c) => (
-                      <td key={c} className="px-4 py-3 text-slate-700 align-top">{r[c] || "-"}</td>
+                      <td key={c} className="px-4 py-3 text-slate-700 align-top">{renderCellContent(r[c])}</td>
                     ))}
                   </tr>
                 ))}
@@ -141,7 +178,7 @@ function renderSectionContent(section: FacultySection) {
                 {columns.map((c) => (
                   <div key={c} className="flex flex-col py-1.5 border-b border-slate-100 last:border-0">
                     <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">{c}</span>
-                    <span className="text-sm text-slate-800">{r[c] || "-"}</span>
+                    <span className="text-sm text-slate-800">{renderCellContent(r[c])}</span>
                   </div>
                 ))}
               </div>
@@ -152,10 +189,10 @@ function renderSectionContent(section: FacultySection) {
     }
     return (
       <ul className="space-y-2">
-        {(content as string[]).map((item, i) => (
+        {(content as unknown[]).map((item, i) => (
           <li key={i} className="flex items-start gap-3 text-slate-700">
             <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-            <span>{item}</span>
+            <span>{renderCellContent(item)}</span>
           </li>
         ))}
       </ul>
@@ -423,7 +460,14 @@ const FacultyProfilePage = () => {
             )}
 
             {mainSections.map((section, i) => {
-              const Icon = SECTION_ICONS[section.title] || BookOpen;
+              const displayTitle = section.title
+                .replace(/<\/?[^>]+(>|$)/g, "")
+                .replace(/^strong>/i, "")
+                .replace(/^<\/strong>/i, "")
+                .replace(/<\/strong>?$/i, "")
+                .replace(/^[^a-zA-Z0-9]+|[:\s]+$/g, "")
+                .trim();
+              const Icon = SECTION_ICONS[section.title] || SECTION_ICONS[displayTitle] || BookOpen;
               return (
                 <motion.section
                   key={i}
@@ -438,7 +482,7 @@ const FacultyProfilePage = () => {
                       <Icon className="w-5 h-5" />
                     </div>
                     <h2 className="text-lg md:text-xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
-                      {section.title}
+                      {displayTitle}
                     </h2>
                   </header>
                   <div className="p-5 md:p-6">{renderSectionContent(section)}</div>

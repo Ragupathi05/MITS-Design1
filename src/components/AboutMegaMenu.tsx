@@ -199,6 +199,7 @@ const AboutMegaMenu = ({ open, onClose }: Props) => {
                             {[
                               { label: "NIRF", href: "/nirf" },
                               { label: "NAAC", href: "/naac" },
+                              { label: "IQAC", href: "/iqac" },
                               { label: "Affiliations & Accreditations", href: "/affiliations-accreditations" },
                               { label: "Public Self Disclosures", href: "/psd" },
                               { label: "Mandatory Disclosures", href: "/about/mandatory-disclosures" },
