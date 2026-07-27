@@ -22,7 +22,7 @@ import {
   projectFunding, patentsAYWise, patentTotals,
   mitsFoundationData, collaborationData,
   ipfcData, consultancyData, innovationData, researchCentresData,
-  academicResearchData, yearWisePublications,committeeData,
+  academicResearchData, yearWisePublications,committeeData,wosPublications,hIndexTrend,
 } from "@/data/researchData";
 import BarChart from "@/components/research/BarChart";
 
@@ -33,12 +33,12 @@ const sectionTabs = [
   { id: "publications", label: "Publications", icon: FileText },
   { id: "projects", label: "Projects", icon: Briefcase },
   { id: "patents", label: "Patents", icon: Lightbulb },
-  { id: "policies", label: "Policies", icon: Shield },
+  { id: "policies", label: "Policies & Committees", icon: Shield },
   { id: "events", label: "Events", icon: Calendar },
   // { id: "documents", label: "Documents", icon: Layers },
   // { id: "advisory", label: "Advisory", icon: Users },
-  { id: "committee", label: "Committee", icon: Users },
-  { id: "academic", label: "Academic", icon: GraduationCap },
+  // { id: "committee", label: "Committee", icon: Users },
+  { id: "academic", label: "Academic Research Programs", icon: GraduationCap },
   { id: "ipr", label: "IPR Cell", icon: Scale },
   { id: "collaborations", label: "Collaborations", icon: Handshake },
   { id: "innovation", label: "Innovation", icon: Sparkles },
@@ -212,6 +212,22 @@ const ProjectsSection = () => (
     {/* Funding analytics */}
     <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="About Projects" />
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          The faculty members of MITS, Deemed to be University have consistently exhibited a strong commitment to research, innovation,
+           and academic excellence through their active involvement in sponsored research and development activities. The university has 
+           attracted research/seminar/conference grants from renowned national funding agencies including DST, SERB, ISRO, MSME, ICSSR, UGC,
+            AICTE, ANRF and several other governmental and industrial organizations.  These projects exhibit a consistent emphasis on STEM research 
+            fields and collaborations with many organizations to tackle current issues. This demonstrates the organization's commitment towards significant research and development. 
+            Researchers at MITS are engaged in carrying out impactful projects in diverse areas such as science, engineering, emerging technologies, healthcare, sustainability, 
+            and interdisciplinary domains. Along with successfully completed and ongoing projects, faculty members continuously submit innovative research proposals to various funding agencies,
+             reflecting the institution’s vibrant research ecosystem and dedication to solving real-world societal and technological challenges. 
+             These efforts demonstrate MITS University’s emphasis on high-quality research, industry interaction, innovation-led growth, and meaningful contributions to national and global scientific advancement.
+        </p>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="Project Funding Analytics" subtitle="Year-wise sanctioned project funding (Amount in ₹ Lakhs)." />
         <div className="grid place-items-center mb-6">
   <div className="w-full max-w-md bg-primary/5 border border-primary/20 rounded-xl p-5">
@@ -317,9 +333,23 @@ const PublicationsSection = () => {
     <div className="space-y-6">
       {/* Stat strip */}
       <ScrollReveal>
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="About Publications" />
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          MITS, Deemed to be University has emerged as a distinguished centre for research, innovation,
+           and knowledge creation with a strong commitment toward addressing global challenges through impactful scientific contributions.
+          The university has consistently demonstrated excellence in research through quality publications in reputed international and national journals, conferences, and academic proceedings 
+          indexed in Scopus and Web of Science databases. With a rapidly growing research ecosystem, MITS has made remarkable contributions in emerging areas such as Artificial Intelligence, 
+          Machine Learning, Smart Healthcare, Renewable Energy, Advanced Materials, Cyber Security, Sustainable Infrastructure, and Data Science.
+          The institution’s research initiatives are closely aligned with the United Nations Sustainable Development Goals (SDGs), contributing to advancements in healthcare, clean energy, environmental sustainability, smart technologies, and societal development.
+          Faculty members and researchers at MITS actively collaborate with premier national and international institutions, industries, and research organizations, thereby enhancing the quality, visibility, and global impact of their research outcomes.
+        </p>
+      </div>
+    </ScrollReveal>
+      <ScrollReveal>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="bg-card border border-border rounded-2xl p-5">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Scopus Indexed Publications (2007 - Till Date)</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Scopus/WOS Indexed Publications</p>
             <p className="font-display text-3xl font-bold text-primary mt-1">3,200+</p>
             {/* <p className="text-xs text-muted-foreground mt-1">• Scopus ID 60107346</p> */}
           </div>
@@ -329,7 +359,7 @@ const PublicationsSection = () => {
             <p className="text-xs text-muted-foreground mt-1">Published in reputed indexed journals</p>
           </div> */}
           <div className="bg-card border border-border rounded-2xl p-5">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">H-Index (2026*)</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">H-Index </p>
             <p className="font-display text-3xl font-bold text-accent mt-1">75</p>
             {/* <p className="text-xs text-muted-foreground mt-1">sustained growth</p> */}
           </div>
@@ -338,17 +368,25 @@ const PublicationsSection = () => {
 
       {/* Scopus + WoS charts */}
       <ScrollReveal delay={0.05}>
-        <div className="grid lg:grid-cols-1 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           <div className="bg-card border border-border rounded-2xl p-6">
-            <h3 className="font-display text-lg font-bold text-foreground mb-1">Publications in Scopus</h3>
-            <p className="text-xs text-muted-foreground mb-4">Year-wise Scopus indexed publications (2021 – 2026*).</p>
+            <h3 className="font-display text-lg font-bold text-foreground mb-1">Publications Details</h3>
+            <p className="text-xs text-muted-foreground mb-4">Scopus Indexed Publications .</p>
             <BarChart data={scopusPublications} height={280} />
           </div>
-          {/* <div className="bg-card border border-border rounded-2xl p-6">
+          <div className="bg-card border border-border rounded-2xl p-6">
             <h3 className="font-display text-lg font-bold text-foreground mb-1">WoS Indexed Publications</h3>
-            <p className="text-xs text-muted-foreground mb-4">Year-wise Web of Science indexed publications (2021 – 2026*).</p>
+            <p className="text-xs text-muted-foreground mb-4">Web of Science indexed publications .</p>
             <BarChart data={wosPublications} height={280} accent="hsl(var(--accent))" />
-          </div> */}
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="H-Index Growth" />
+        <div className="flex items-center gap-3 mb-4 text-xs">
+          <TrendingUp className="w-4 h-4 text-primary" />
+          {/* <span className="text-muted-foreground">H-Index has grown from <b className="text-foreground">21</b> in 2019 to <b className="text-foreground">70</b> in 2025.</span> */}
+        </div>
+        <BarChart data={hIndexTrend} rotateLabels={false} height={280} />
+      </div>
         </div>
       </ScrollReveal>
 
@@ -434,8 +472,9 @@ const PublicationsSection = () => {
 
 /* ─── PATENTS TAB ─── */
 const PatentsSection = () => {
+  
   const totals = [
-    { label: "Total Patents", value: patentTotals.total, color: "hsl(var(--primary))" },
+    { label: "Total IPR", value: patentTotals.total, color: "hsl(var(--primary))" },
     { label: "Patents Published", value: patentTotals.published, color: "hsl(var(--accent))" },
     { label: "Patents Granted", value: patentTotals.granted, color: "hsl(var(--secondary))" },
   ];
@@ -443,9 +482,21 @@ const PatentsSection = () => {
     <div className="space-y-6">
       {/* Headline totals */}
       <ScrollReveal>
-        <div className="grid sm:grid-cols-3 gap-4">
+      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+        <SectionHeading title="About Patents" />
+        <p className="text-muted-foreground leading-relaxed mb-4">
+        The university consistently motivates faculty members, researchers, and students to transform innovative ideas and research outcomes 
+        into valuable intellectual property with significant societal and industrial impact. Through periodic workshops, training programs, expert mentoring, 
+        and dedicated institutional support, the IPR Cell promotes a strong culture of innovation, creativity, and entrepreneurship while enhancing collaboration between
+         academia and industry. The increasing number of patent applications, granted patents, copyrights, trademarks, and technology-driven innovations demonstrates
+          MITS University’s dedication to research excellence, knowledge commercialization, and meaningful contributions to national and global technological progress.
+        </p>
+      </div>
+    </ScrollReveal>
+      <ScrollReveal>
+        <div className="grid sm:grid-cols-3 gap-4 color transition-all duration-300">
           {[
-            { l: "Total Patents", v: patentTotals.total, cls: "text-primary" },
+            { l: "Total IPR", v: patentTotals.total, cls: "text-primary" },
             { l: "Published", v: patentTotals.published, cls: "text-accent" },
             { l: "Granted", v: patentTotals.granted, cls: "text-secondary" },
           ].map((s) => (
@@ -639,40 +690,40 @@ const EventsSection = () => {
 
 /* ─── COMMITTEES TAB ─── */
 
-const CommitteeSection = () => (
-  <div className="space-y-6">
-    <ScrollReveal>
-      <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Research Committees" subtitle="Key committees governing research, innovation and intellectual property at MITS." />
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-primary/5 border-b border-border">
-                <th className="text-left px-4 py-3 font-semibold text-foreground w-16">S.No</th>
-                <th className="text-left px-4 py-3 font-semibold text-foreground">Name of the Committee</th>
-                <th className="text-left px-4 py-3 font-semibold text-foreground">View</th>
-              </tr>
-            </thead>
-            <tbody>
-              {committeeData.map((p, i) => (
-                <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
-                  <td className="px-4 py-3 text-muted-foreground">{p.sno}</td>
-                  <td className="px-4 py-3 font-medium text-foreground">{p.title}</td>
-                  <td className="px-4 py-3">
-                    <a href={p.link} target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline">
-                      <ExternalLink className="w-3.5 h-3.5" /> View
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </ScrollReveal>
-  </div>
-);
+// const CommitteeSection = () => (
+//   <div className="space-y-6">
+//     <ScrollReveal>
+//       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+//         <SectionHeading title="Research Committees" subtitle="Key committees governing research, innovation and intellectual property at MITS." />
+//         <div className="overflow-x-auto">
+//           <table className="w-full text-sm">
+//             <thead>
+//               <tr className="bg-primary/5 border-b border-border">
+//                 <th className="text-left px-4 py-3 font-semibold text-foreground w-16">S.No</th>
+//                 <th className="text-left px-4 py-3 font-semibold text-foreground">Name of the Committee</th>
+//                 <th className="text-left px-4 py-3 font-semibold text-foreground">View</th>
+//               </tr>
+//             </thead>
+//             <tbody>
+//               {committeeData.map((p, i) => (
+//                 <tr key={p.sno} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/30"}`}>
+//                   <td className="px-4 py-3 text-muted-foreground">{p.sno}</td>
+//                   <td className="px-4 py-3 font-medium text-foreground">{p.title}</td>
+//                   <td className="px-4 py-3">
+//                     <a href={p.link} target="_blank" rel="noopener noreferrer"
+//                       className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline">
+//                       <ExternalLink className="w-3.5 h-3.5" /> View
+//                     </a>
+//                   </td>
+//                 </tr>
+//               ))}
+//             </tbody>
+//           </table>
+//         </div>
+//       </div>
+//     </ScrollReveal>
+//   </div>
+// );
 
 /* ─── IPR CELL TAB ─── */
 const IPRSection = () => (
@@ -1984,7 +2035,7 @@ const Research = () => {
               <TabsContent value="events"><EventsSection /></TabsContent>
               {/* <TabsContent value="documents"><DocumentsSection /></TabsContent> */}
               {/* <TabsContent value="advisory"><AdvisorySection /></TabsContent> */}
-              <TabsContent value="committee"><CommitteeSection /></TabsContent>
+              {/* <TabsContent value="committee"><CommitteeSection /></TabsContent> */}
               <TabsContent value="academic"><AcademicResearchSection /></TabsContent>
               <TabsContent value="ipr"><IPRSection /></TabsContent>
               <TabsContent value="collaborations"><CollaborationsSection /></TabsContent>

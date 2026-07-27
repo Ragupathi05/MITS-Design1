@@ -30,6 +30,18 @@ export const researchOverview = {
       phone: "+91-8571-280255; 280706",
     },
     {
+      name: "Dr. Maneesh Kumar Singh",
+      role: "Assistant Dean – R&D - Ph.D. Programs",
+      email: "assistantdeanphdprograms@mits.ac.in",
+      phone: "+91-8571-280255; 280706",
+    },
+    {
+      name: "Dr. M. Bhargavi",
+      role: "Research Assistant",
+      email: "rioffice@mits.ac.in",
+      phone: "+91-8571-280255; 280706",
+    },
+    {
       name: "Mr. G. Mallikarjuna",
       role: "AAO - R&D",
       email: "adresearchoffice@mits.ac.in",
@@ -401,13 +413,14 @@ export const scopusPublications = [
 export const wosPublications = [
   { label: "2021", value: 118 }, { label: "2022", value: 114 },
   { label: "2023", value: 110 }, { label: "2024", value: 127 },
-  { label: "2025", value: 226 }, { label: "2026*", value: 136 },
+  { label: "2025", value: 226 }, { label: "2026*", value: 195 },
 ];
 
 export const hIndexTrend = [
-  { label: "2019", value: 21 }, { label: "2020", value: 31 }, { label: "2021", value: 36 },
+  // { label: "2019", value: 21 }, { label: "2020", value: 31 },
+   { label: "2021", value: 36 },
   { label: "2022", value: 45 }, { label: "2023", value: 55 }, { label: "2024", value: 64 },
-  { label: "2025", value: 70 },
+  { label: "2025", value: 70 }, { label: "2026*", value: 75 },
 ];
 
 export const projectFunding = [
