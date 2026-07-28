@@ -316,9 +316,46 @@ const ProjectsSection = () => (
     <ScrollReveal delay={0.2}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="Funding Agencies" subtitle="National agencies providing research grants." />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {projectsData.fundingAgencies.indian.map((a) => (
-            <LinkCard key={a.name} title={a.name} link={a.link} icon={Building2} />
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+          {[
+            { name: "Department of Science & Technology",          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emblem_of_India.svg/120px-Emblem_of_India.svg.png",                                                                    link: "https://dst.gov.in/" },
+            { name: "AICTE",                                        logo: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/AICTE_Logo.svg/200px-AICTE_Logo.svg.png",                                                                                    link: "https://www.aicte-india.org/" },
+            { name: "AP State Disaster Management Authority",       logo: "https://apsdma.ap.gov.in/images/apsdma-logo.png",                                                                                                                                link: "https://apsdma.ap.gov.in/" },
+            { name: "DAE",                                          logo: "https://dae.gov.in/sites/default/files/dae-logo.png",                                                                                                                            link: "https://dae.gov.in/" },
+            { name: "DRDO",                                         logo: "https://www.drdo.gov.in/sites/default/files/inline-images/drdo-logo.png",                                                                                                        link: "https://www.drdo.gov.in/" },
+            { name: "ICMR",                                         logo: "https://main.icmr.nic.in/sites/default/files/ICMR_New_Logo.png",                                                                                                                link: "https://main.icmr.nic.in/" },
+            { name: "ICSSR",                                        logo: "https://icssr.org/sites/default/files/icssr-logo.png",                                                                                                                           link: "https://icssr.org/" },
+            { name: "ISRO",                                         logo: "https://www.isro.gov.in/media_isro/image/index/Isro_logo.png.webp",                                                                                                             link: "https://www.isro.gov.in/" },
+            { name: "MeitY",                                        logo: "https://www.meity.gov.in/sites/upload_files/dit/files/meity-logo.png",                                                                                                           link: "https://www.meity.gov.in/" },
+            { name: "MSME",                                         logo: "https://msme.gov.in/sites/default/files/msme-logo.png",                                                                                                                          link: "https://msme.gov.in/" },
+            { name: "SERB / ANRF",                                  logo: "https://anrf.gov.in/sites/default/files/2023-09/ANRF-Logo.png",                                                                                                                 link: "https://anrf.gov.in/" },
+            { name: "UGC",                                          logo: "https://www.ugc.gov.in/images/ugc-logo.png",                                                                                                                                     link: "https://www.ugc.gov.in/" },
+            { name: "Ministry of Education",                        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emblem_of_India.svg/120px-Emblem_of_India.svg.png",                                                                    link: "https://www.education.gov.in/" },
+            { name: "Ministry of Environment, Forest & Climate Change", logo: "https://moef.gov.in/wp-content/uploads/2017/08/moef-logo.png",                                                                                                             link: "https://moef.gov.in/" },
+            { name: "DBT",                                          logo: "https://dbtindia.gov.in/sites/default/files/DBT%20Logo%20New_0.png",                                                                                                            link: "https://dbtindia.gov.in/" },
+          ].map((agency) => (
+            <a
+              key={agency.name}
+              href={agency.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center gap-2 bg-card border border-border rounded-2xl p-4 hover:border-primary/40 hover:shadow-lg transition-all duration-300 group min-h-[120px]"
+            >
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img
+                  src={agency.logo}
+                  alt={agency.name}
+                  className="max-h-16 max-w-[64px] object-contain group-hover:scale-110 transition-transform duration-300"
+                  onError={(e) => {
+                    const t = e.target as HTMLImageElement;
+                    t.style.display = "none";
+                    (t.nextElementSibling as HTMLElement)?.classList.remove("hidden");
+                  }}
+                />
+                <span className="hidden w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary text-center leading-tight p-1">{agency.name.slice(0,4)}</span>
+              </div>
+              <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-primary transition-colors text-center leading-tight line-clamp-2">{agency.name}</span>
+            </a>
           ))}
         </div>
       </div>
