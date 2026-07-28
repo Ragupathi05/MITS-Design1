@@ -366,27 +366,24 @@ const PublicationsSection = () => {
         </div>
       </ScrollReveal>
 
-      {/* Scopus + WoS charts */}
+      {/* All 3 charts in one section */}
       <ScrollReveal delay={0.05}>
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="bg-card border border-border rounded-2xl p-6">
-            <h3 className="font-display text-lg font-bold text-foreground mb-1">Publications Details</h3>
-            <p className="text-xs text-muted-foreground mb-4">Scopus Indexed Publications .</p>
-            <BarChart data={scopusPublications} height={280} />
+        <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">Publications Details</h2>
+          <div className="grid lg:grid-cols-3 gap-6">
+            <div className="border border-border rounded-xl p-5">
+              <p className="font-sans text-sm font-semibold text-muted-foreground italic mb-4">Scopus Indexed Publications</p>
+              <BarChart data={scopusPublications} height={280} />
+            </div>
+            <div className="border border-border rounded-xl p-5">
+              <p className="font-sans text-sm font-semibold text-muted-foreground italic mb-4">Web of Science Indexed Publications</p>
+              <BarChart data={wosPublications} height={280} accent="hsl(var(--accent))" />
+            </div>
+            <div className="border border-border rounded-xl p-5">
+              <p className="font-sans text-sm font-semibold text-muted-foreground italic mb-4">H-Index</p>
+              <BarChart data={hIndexTrend} rotateLabels={false} height={280} />
+            </div>
           </div>
-          <div className="bg-card border border-border rounded-2xl p-6">
-            <h3 className="font-display text-lg font-bold text-foreground mb-1">WoS Indexed Publications</h3>
-            <p className="text-xs text-muted-foreground mb-4">Web of Science indexed publications .</p>
-            <BarChart data={wosPublications} height={280} accent="hsl(var(--accent))" />
-          </div>
-          <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="H-Index Growth" />
-        <div className="flex items-center gap-3 mb-4 text-xs">
-          <TrendingUp className="w-4 h-4 text-primary" />
-          {/* <span className="text-muted-foreground">H-Index has grown from <b className="text-foreground">21</b> in 2019 to <b className="text-foreground">70</b> in 2025.</span> */}
-        </div>
-        <BarChart data={hIndexTrend} rotateLabels={false} height={280} />
-      </div>
         </div>
       </ScrollReveal>
 
@@ -466,6 +463,28 @@ const PublicationsSection = () => {
         </div>
       </div>
     </ScrollReveal>
+
+      {/* SDGs Publications & Book Chapters — PDF boxes, no title */}
+      <ScrollReveal delay={0.08}>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            { label: "SDGs Publications", icon: FileText },
+            { label: "Book / Book Chapters", icon: BookOpen },
+          ].map(({ label, icon: Icon }) => (
+            <a
+              key={label}
+              href="#"
+              className="flex items-center gap-4 bg-card border border-border rounded-2xl p-5 hover:border-primary/40 hover:shadow-md transition-all duration-300 group"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-105 transition-all">
+                <Icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+              </div>
+              <span className="text-sm font-semibold text-card-foreground group-hover:text-primary transition-colors flex-1">{label}</span>
+              <ExternalLink className="w-4 h-4 text-muted-foreground shrink-0 group-hover:text-primary transition-colors" />
+            </a>
+          ))}
+        </div>
+      </ScrollReveal>
     </div>
   );
 };
@@ -1987,7 +2006,7 @@ const Research = () => {
                     <TabsTrigger
                       key={tab.id}
                       value={tab.id}
-                      className="flex items-center gap-1.5 px-3 py-2 text-xs md:text-sm font-medium rounded-lg whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all"
+                      className="flex items-center gap-1.5 px-3 py-2 text-xs md:text-sm font-medium rounded-lg whitespace-nowrap transition-all duration-200 hover:bg-primary/10 hover:text-primary hover:scale-[1.03] hover:shadow-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
                     >
                       <tab.icon className="w-4 h-4" />
                       {tab.label}
