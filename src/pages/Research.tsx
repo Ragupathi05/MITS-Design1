@@ -77,7 +77,7 @@ const OverviewSection = () => (
     <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="About Research & Development Cell" />
-        <p className="text-muted-foreground leading-relaxed mb-4">
+        <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
           In alignment with the vision of the University to promote academic excellence, innovation
           and impactful research, the Research &amp; Development (R&amp;D) Cell at MITS, Deemed to
           be University, strengthens and supports the university's research ecosystem. The Cell
@@ -117,13 +117,13 @@ const OverviewSection = () => (
           <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2 mb-3">
             <Eye className="w-5 h-5 text-primary" /> Vision
           </h3>
-          <p className="text-muted-foreground text-sm leading-relaxed">{researchVisionMission.vision}</p>
+          <p className="text-muted-foreground text-sm leading-relaxed text-justify">{researchVisionMission.vision}</p>
         </div>
         <div className="bg-card border border-border rounded-2xl p-6">
           <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2 mb-3">
             <Target className="w-5 h-5 text-primary" /> Mission
           </h3>
-          <p className="text-muted-foreground text-sm leading-relaxed">{researchVisionMission.mission}</p>
+          <p className="text-muted-foreground text-sm leading-relaxed text-justify">{researchVisionMission.mission}</p>
         </div>
       </div>
     </ScrollReveal>
@@ -213,7 +213,7 @@ const ProjectsSection = () => (
     <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="About Projects" />
-        <p className="text-muted-foreground leading-relaxed mb-4">
+        <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
           The faculty members of MITS, Deemed to be University have consistently exhibited a strong commitment to research, innovation,
            and academic excellence through their active involvement in sponsored research and development activities. The university has 
            attracted research/seminar/conference grants from renowned national funding agencies including DST, SERB, ISRO, MSME, ICSSR, UGC,
@@ -279,7 +279,7 @@ const ProjectsSection = () => (
           <h3 className="font-display text-lg font-bold text-foreground mb-2 flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-primary" /> Writing Tips for Research Proposals
           </h3>
-          <p className="text-sm text-muted-foreground mb-4">{writingTipsContent.intro}</p>
+          <p className="text-sm text-muted-foreground mb-4 text-justify">{writingTipsContent.intro}</p>
           <Accordion type="single" collapsible>
             {writingTipsContent.sections.map((s, i) => (
               <AccordionItem key={i} value={`tip-${i}`}>
@@ -335,7 +335,7 @@ const PublicationsSection = () => {
       <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="About Publications" />
-        <p className="text-muted-foreground leading-relaxed mb-4">
+        <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
           MITS, Deemed to be University has emerged as a distinguished centre for research, innovation,
            and knowledge creation with a strong commitment toward addressing global challenges through impactful scientific contributions.
           The university has consistently demonstrated excellence in research through quality publications in reputed international and national journals, conferences, and academic proceedings 
@@ -484,7 +484,7 @@ const PatentsSection = () => {
       <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading title="About Patents" />
-        <p className="text-muted-foreground leading-relaxed mb-4">
+        <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
         The university consistently motivates faculty members, researchers, and students to transform innovative ideas and research outcomes 
         into valuable intellectual property with significant societal and industrial impact. Through periodic workshops, training programs, expert mentoring, 
         and dedicated institutional support, the IPR Cell promotes a strong culture of innovation, creativity, and entrepreneurship while enhancing collaboration between
@@ -734,9 +734,9 @@ const IPRSection = () => (
         <div className="space-y-4">
           <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-5">
             <h3 className="font-semibold text-foreground mb-2">National IPR Policy</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{iprCellData.nationalPolicy}</p>
+            <p className="text-muted-foreground text-sm leading-relaxed text-justify">{iprCellData.nationalPolicy}</p>
           </div>
-          <p className="text-muted-foreground text-sm leading-relaxed">{iprCellData.rationale}</p>
+          <p className="text-muted-foreground text-sm leading-relaxed text-justify">{iprCellData.rationale}</p>
           <a href={iprCellData.committeeLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
             <Download className="w-4 h-4" /> MITS IPR Committee 2025-26
           </a>
@@ -750,13 +750,13 @@ const IPRSection = () => (
           <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2 mb-3">
             <Eye className="w-5 h-5 text-primary" /> Vision
           </h3>
-          <p className="text-muted-foreground text-sm leading-relaxed">{iprCellData.vision}</p>
+          <p className="text-muted-foreground text-sm leading-relaxed text-justify">{iprCellData.vision}</p>
         </div>
         <div className="bg-card border border-border rounded-2xl p-6">
           <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2 mb-3">
             <Target className="w-5 h-5 text-primary" /> Mission
           </h3>
-          <p className="text-muted-foreground text-sm leading-relaxed">{iprCellData.mission}</p>
+          <p className="text-muted-foreground text-sm leading-relaxed text-justify">{iprCellData.mission}</p>
         </div>
       </div>
     </ScrollReveal>
@@ -891,7 +891,7 @@ const AcademicResearchSection = () => (
           {academicResearchData.programmes.map((p, i) => (
             <div key={i} className="bg-muted/40 border border-border rounded-xl p-5">
               <h3 className="font-semibold text-foreground mb-2">{p.name}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{p.details}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed text-justify">{p.details}</p>
             </div>
           ))}
         </div>
@@ -1062,19 +1062,19 @@ const InnovationSection = () => (
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="border border-border rounded-xl p-5">
             <h3 className="font-semibold text-foreground mb-2">Startup Support</h3>
-            <p className="text-muted-foreground text-sm">20+ startups incubated with MSME support, mentoring and seed funding.</p>
+            <p className="text-muted-foreground text-sm text-justify">20+ startups incubated with MSME support, mentoring and seed funding.</p>
           </div>
           <div className="border border-border rounded-xl p-5">
             <h3 className="font-semibold text-foreground mb-2">Entrepreneurship</h3>
-            <p className="text-muted-foreground text-sm">Regular hackathons, idea pitches and innovation challenges for students and faculty.</p>
+            <p className="text-muted-foreground text-sm text-justify">Regular hackathons, idea pitches and innovation challenges for students and faculty.</p>
           </div>
           <div className="border border-border rounded-xl p-5">
             <h3 className="font-semibold text-foreground mb-2">Idea Lab</h3>
-            <p className="text-muted-foreground text-sm">AICTE IDEA Lab provides prototype development, 3D printing and hands-on innovation support.</p>
+            <p className="text-muted-foreground text-sm text-justify">AICTE IDEA Lab provides prototype development, 3D printing and hands-on innovation support.</p>
           </div>
           <div className="border border-border rounded-xl p-5">
             <h3 className="font-semibold text-foreground mb-2">Incubation Activities</h3>
-            <p className="text-muted-foreground text-sm">MITS Foundation incubation centre offers co-working space, IPR support and investor connect.</p>
+            <p className="text-muted-foreground text-sm text-justify">MITS Foundation incubation centre offers co-working space, IPR support and investor connect.</p>
           </div>
         </div>
       </div>
@@ -1161,7 +1161,7 @@ const FoundationSection = () => (
             <p className="text-xs text-primary font-semibold mt-1 uppercase tracking-wider">Section 8 Company • Incubation & Innovation</p>
           </div>
         </div>
-        <p className="text-muted-foreground leading-relaxed">{mitsFoundationData.description}</p>
+        <p className="text-muted-foreground leading-relaxed text-justify">{mitsFoundationData.description}</p>
         <a href={mitsFoundationData.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
           <ExternalLink className="w-4 h-4" /> Visit mitsfoundation.org
         </a>
@@ -1300,7 +1300,7 @@ const MDRFSection = () => {
               <p className="text-xs text-blue-700 dark:text-blue-400 font-semibold mt-1 uppercase tracking-wider">Constituted 2024 • Cross-Disciplinary Synergies • MITS Deemed University</p>
             </div>
           </div>
-          <p className="text-muted-foreground leading-relaxed text-sm">
+          <p className="text-muted-foreground leading-relaxed text-sm text-justify">
             The Multidisciplinary Research Forum (MDRF) at Madanapalle Institute of Technology &amp; Science (MITS), Deemed to be University, was constituted in 2024 with the vision of fostering collaborative research across diverse engineering and science disciplines.
           </p>
         </div>
@@ -1333,10 +1333,10 @@ const MDRFSection = () => {
               <div className="space-y-6">
                 <div>
                   <SectionHeading title="Multidisciplinary Research @ MITS" />
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3 text-justify">
                     The Multidisciplinary Research Forum (MDRF) at Madanapalle Institute of Technology &amp; Science (MITS), Deemed to be University, was constituted in 2024 with the vision of fostering collaborative research across diverse engineering and science disciplines.
                   </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed text-justify">
                     The forum serves as a unified platform that brings together faculty, researchers, and students to address complex real-world challenges through integrated knowledge and innovative approaches. MDRF promotes a culture of research synergy, interdisciplinary collaboration, and knowledge sharing, aligned with national priorities and emerging global technological trends.
                   </p>
                 </div>
@@ -1344,9 +1344,9 @@ const MDRFSection = () => {
                 <div className="border-t border-border/60 pt-6">
                   <SectionHeading title="Purpose" />
                   <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-                    <p><strong>Academic & Research Ecosystem:</strong> The forum aims to create a cohesive research ecosystem where expertise from Civil, Mechanical, Electrical, Electronics, and Computer Science disciplines is integrated to solve complex engineering and societal problems.</p>
-                    <p><strong>Industry Alignment:</strong> MDRF supports the development of practical, scalable, and technology-driven solutions by integrating core engineering knowledge with modern tools such as automation, data analytics, artificial intelligence, and sustainable practices.</p>
-                    <p><strong>Societal Impact:</strong> Focuses on addressing critical challenges such as sustainable infrastructure, renewable energy, environmental conservation, smart systems, and healthcare technologies.</p>
+                    <p className="text-justify"><strong>Academic & Research Ecosystem:</strong> The forum aims to create a cohesive research ecosystem where expertise from Civil, Mechanical, Electrical, Electronics, and Computer Science disciplines is integrated to solve complex engineering and societal problems.</p>
+                    <p className="text-justify"><strong>Industry Alignment:</strong> MDRF supports the development of practical, scalable, and technology-driven solutions by integrating core engineering knowledge with modern tools such as automation, data analytics, artificial intelligence, and sustainable practices.</p>
+                    <p className="text-justify"><strong>Societal Impact:</strong> Focuses on addressing critical challenges such as sustainable infrastructure, renewable energy, environmental conservation, smart systems, and healthcare technologies.</p>
                   </div>
                 </div>
 
@@ -1395,24 +1395,24 @@ const MDRFSection = () => {
               <div className="space-y-6 text-foreground text-sm leading-relaxed">
                 <div>
                   <h3 className="font-display text-2xl font-bold mb-3">Administrative Support</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-3">
+                  <p className="text-muted-foreground leading-relaxed mb-3 text-justify">
                     Madanapalle Institute of Technology &amp; Science (MITS) recognizes the growing importance of interdisciplinary research in addressing complex real-world challenges and has established a supportive administrative framework to promote such collaborations. This framework provides essential resources, encourages interaction among departments, and simplifies the research process for faculty and students working across disciplines.
                   </p>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-justify">
                     At MITS, interdisciplinary research activities are coordinated through the Research &amp; Development (R&amp;D) Cell, functioning under the guidance of the institute leadership. The R&amp;D Cell provides strategic direction, facilitates collaboration among various departments, and ensures that research initiatives are aligned with the institution’s academic goals and societal needs.
                   </p>
                 </div>
 
                 <div className="border-t border-border pt-5">
                   <h4 className="font-bold text-lg text-foreground mb-2">1. Research Clusters</h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-justify">
                     Madanapalle Institute of Technology &amp; Science (MITS) promotes interdisciplinary research through well-defined research clusters. These clusters bring together faculty and researchers from different departments to work collaboratively on common research themes, ensuring integration of knowledge across disciplines.
                   </p>
                 </div>
 
                 <div className="border-t border-border pt-5">
                   <h4 className="font-bold text-lg text-foreground mb-2">2. Research Funding</h4>
-                  <p className="text-muted-foreground leading-relaxed mb-3">
+                  <p className="text-muted-foreground leading-relaxed mb-3 text-justify">
                     Madanapalle Institute of Technology &amp; Science (MITS) provides structured financial and administrative support to encourage faculty and researchers to secure research funding, particularly for interdisciplinary projects. The institute promotes a proactive research culture by offering internal funding opportunities.
                   </p>
                   <ul className="space-y-2.5 pl-1">
@@ -1433,7 +1433,7 @@ const MDRFSection = () => {
 
                 <div className="border-t border-border pt-5">
                   <h4 className="font-bold text-lg text-foreground mb-2">3. Training and Mentorship</h4>
-                  <p className="text-muted-foreground leading-relaxed mb-3">
+                  <p className="text-muted-foreground leading-relaxed mb-3 text-justify">
                     Madanapalle Institute of Technology &amp; Science (MITS) emphasizes continuous learning and skill enhancement to promote interdisciplinary research. The institution conducts various training and mentoring activities to equip faculty and students with the necessary knowledge and competencies. Key initiatives include:
                   </p>
                   <ul className="space-y-2.5 pl-1">
@@ -1462,7 +1462,7 @@ const MDRFSection = () => {
 
                 <div className="border-t border-border pt-5">
                   <h4 className="font-bold text-lg text-foreground mb-2">4. Bridging Interdisciplinary Collaborations</h4>
-                  <p className="text-muted-foreground leading-relaxed mb-3">
+                  <p className="text-muted-foreground leading-relaxed mb-3 text-justify">
                     Madanapalle Institute of Technology &amp; Science (MITS) fosters interdisciplinary collaboration by creating platforms and support systems that encourage interaction, joint research, and knowledge exchange across domains. Key initiatives include:
                   </p>
                   <ul className="space-y-2.5 pl-1">
@@ -1487,7 +1487,7 @@ const MDRFSection = () => {
 
                 <div className="border-t border-border pt-5">
                   <h4 className="font-bold text-lg text-foreground mb-2">5. Research Facilities and Infrastructure:</h4>
-                  <p className="text-muted-foreground leading-relaxed mb-3">
+                  <p className="text-muted-foreground leading-relaxed mb-3 text-justify">
                     Madanapalle Institute of Technology &amp; Science (MITS) provides a robust ecosystem of shared resources and infrastructure to support interdisciplinary research and innovation. The institution ensures that faculty and students have access to advanced facilities, knowledge resources, and innovation spaces to carry out high-quality research. Key provisions include:
                   </p>
                   <ul className="space-y-2.5 pl-1">
@@ -1532,22 +1532,22 @@ const MDRFSection = () => {
               <div className="space-y-6">
                 <div>
                   <SectionHeading title="Partnerships & Research Collaborations" />
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed text-justify">
                     MDRF actively promotes strategic alliances with premier academic institutions, national research centers, and industry leaders to conduct joint research, exchange expertise, and solve industrial problems.
                   </p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="border border-border rounded-xl p-5 bg-card">
                     <h4 className="font-semibold text-foreground text-sm mb-2">Industry Connect</h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">Consultancy, sponsored research projects, and collaborative lab setups with core engineering & tech industries.</p>
+                    <p className="text-muted-foreground text-xs leading-relaxed text-justify">Consultancy, sponsored research projects, and collaborative lab setups with core engineering & tech industries.</p>
                   </div>
                   <div className="border border-border rounded-xl p-5 bg-card">
                     <h4 className="font-semibold text-foreground text-sm mb-2">Academic Alliances</h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">Joint publications, co-guided Ph.D. research, and faculty/student knowledge exchange programs with reputed universities.</p>
+                    <p className="text-muted-foreground text-xs leading-relaxed text-justify">Joint publications, co-guided Ph.D. research, and faculty/student knowledge exchange programs with reputed universities.</p>
                   </div>
                   <div className="border border-border rounded-xl p-5 bg-card">
                     <h4 className="font-semibold text-foreground text-sm mb-2">National Research Labs</h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">Collaborative proposal submissions to DST, ANRF, AICTE, MSME, and other funding bodies.</p>
+                    <p className="text-muted-foreground text-xs leading-relaxed text-justify">Collaborative proposal submissions to DST, ANRF, AICTE, MSME, and other funding bodies.</p>
                   </div>
                 </div>
               </div>
@@ -1565,7 +1565,7 @@ const MDRFSection = () => {
                       <h4 className="font-semibold text-foreground text-base mb-2">{fac.dept}</h4>
                       <div className="space-y-2 mb-3">
                         {fac.paragraphs.map((p, pi) => (
-                          <p key={pi} className="text-muted-foreground text-xs leading-relaxed">{p}</p>
+                          <p key={pi} className="text-muted-foreground text-xs leading-relaxed text-justify">{p}</p>
                         ))}
                       </div>
                       {fac.link && (
@@ -1606,7 +1606,7 @@ const MDRFSection = () => {
               <div className="space-y-6">
                 <div>
                   <SectionHeading title="MDRF Key Research Outcomes" />
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 text-justify">
                     The Multidisciplinary Research Forum strives to deliver tangible outcomes across high-impact publications, patents, interdisciplinary grants, and technological solutions.
                   </p>
                 </div>
@@ -1784,10 +1784,10 @@ const WWRCSection = () => {
               <p className="text-xs text-green-700 dark:text-green-400 font-semibold mt-1 uppercase tracking-wider">Circular Economy • Waste Valorization • Sustainable Innovation</p>
             </div>
           </div>
-          <p className="text-muted-foreground leading-relaxed text-sm">
+          <p className="text-muted-foreground leading-relaxed text-sm text-justify">
             The Waste to Wealth Research Centre (WWRC) was established in 2024 with the vision of transforming waste streams into valuable resources through innovative, sustainable, and commercially viable technologies. The centre serves as a dedicated hub bringing together environmental engineers, chemists, biotechnologists, material scientists, and policy researchers to address the growing challenge of waste management while unlocking economic value.
           </p>
-          <p className="text-muted-foreground leading-relaxed text-sm mt-3">
+          <p className="text-muted-foreground leading-relaxed text-sm mt-3 text-justify">
             By integrating scientific excellence with entrepreneurial thinking, W2WRC promotes a culture of closed-loop systems, resource efficiency, and low-carbon innovation, aligned with national missions such as Swachh Bharat, LiFE (Lifestyle for Environment), and the UN Sustainable Development Goals (SDGs).
           </p>
         </div>
@@ -1820,10 +1820,10 @@ const WWRCSection = () => {
             {activeWwrc === "about" && (
               <div className="space-y-4">
                 <SectionHeading title="About Waste to Wealth Research Center" />
-                <p className="text-muted-foreground leading-relaxed text-sm">
+                <p className="text-muted-foreground leading-relaxed text-sm text-justify">
                   The Waste to Wealth Research Centre (WWRC) was established in 2024 with the vision of transforming waste streams into valuable resources through innovative, sustainable, and commercially viable technologies. The centre serves as a dedicated hub bringing together environmental engineers, chemists, biotechnologists, material scientists, and policy researchers to address the growing challenge of waste management while unlocking economic value.
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-sm">
+                <p className="text-muted-foreground leading-relaxed text-sm text-justify">
                   By integrating scientific excellence with entrepreneurial thinking, W2WRC promotes a culture of closed-loop systems, resource efficiency, and low-carbon innovation, aligned with national missions such as Swachh Bharat, LiFE (Lifestyle for Environment), and the UN Sustainable Development Goals (SDGs).
                 </p>
               </div>
