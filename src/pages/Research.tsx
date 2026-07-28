@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   BookOpen, FlaskConical, Lightbulb, Microscope, FileText, Award,
   Building2, GraduationCap, Globe, Download, ExternalLink, Calendar,
@@ -1941,32 +1941,6 @@ const WWRCSection = () => {
 const Research = () => {
   const [activeTab, setActiveTab] = useState("overview");
 
-  useEffect(() => {
-    const el = document.getElementById("tab-scroll");
-    const leftFade = document.getElementById("tab-fade-left");
-    const rightFade = document.getElementById("tab-fade-right");
-    if (!el || !leftFade || !rightFade) return;
-
-    const update = () => {
-      const canScroll = el.scrollWidth > el.clientWidth;
-      if (!canScroll) {
-        leftFade.classList.add("hidden");
-        rightFade.classList.add("hidden");
-        return;
-      }
-      leftFade.classList.toggle("hidden", el.scrollLeft <= 2);
-      rightFade.classList.toggle("hidden", el.scrollLeft + el.clientWidth >= el.scrollWidth - 2);
-    };
-
-    el.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    update();
-    return () => {
-      el.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -2006,25 +1980,20 @@ const Research = () => {
         <section className="py-6 md:py-12 bg-background -mt-1">
           <div className="container mx-auto px-4">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
-              {/* Scrollable Tab List */}
-              <div className="relative mb-8 -mx-4 px-4">
-                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none hidden" id="tab-fade-left" />
-                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" id="tab-fade-right" />
-                <div className="overflow-x-auto pb-2" id="tab-scroll" style={{ scrollbarWidth: "thin", scrollbarColor: "hsl(var(--primary)) transparent" }}>
-                  <TabsList className="inline-flex h-auto p-1 bg-muted rounded-xl gap-1 w-max">
-                    {sectionTabs.map((tab) => (
-                      <TabsTrigger
-                        key={tab.id}
-                        value={tab.id}
-                        className="flex items-center gap-1.5 px-3 py-2 text-xs md:text-sm font-medium rounded-lg whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all"
-                      >
-                        <tab.icon className="w-4 h-4" />
-                        <span className="hidden sm:inline">{tab.label}</span>
-                        <span className="sm:hidden">{tab.label.length > 8 ? tab.label.slice(0, 6) + "…" : tab.label}</span>
-                      </TabsTrigger>
-                    ))}
-                  </TabsList>
-                </div>
+              {/* Two-row Tab List */}
+              <div className="mb-8">
+                <TabsList className="flex flex-wrap h-auto p-1 bg-muted rounded-xl gap-1 w-full justify-start">
+                  {sectionTabs.map((tab) => (
+                    <TabsTrigger
+                      key={tab.id}
+                      value={tab.id}
+                      className="flex items-center gap-1.5 px-3 py-2 text-xs md:text-sm font-medium rounded-lg whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all"
+                    >
+                      <tab.icon className="w-4 h-4" />
+                      {tab.label}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
               </div>
 
               <TabsContent value="overview"><OverviewSection /></TabsContent>
