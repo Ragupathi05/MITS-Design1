@@ -121,6 +121,7 @@ const statIconFor = (key: string): any => {
 const facilityIconFor = (title: string): any => {
   const map: Record<string, any> = {
     "Digital Library": Monitor,
+    "SOUL 3.0": Database,
     Photocopying: Copy,
     Printing: Printer,
     Scanning: ScanLine,
@@ -249,14 +250,12 @@ const Library = () => {
                     </p>
                     <p>
                       The library operates on the INFLIBNET <strong className="text-foreground">SOUL 3.0</strong>
-                      integrated library management system and offers barcoded circulation, an online OPAC, remote
-                      access to e-resources through <strong className="text-foreground">Knimbus</strong>, and
+                      integrated library management system and offers barcoded circulation, an online OPAC, and
                       network-wide document delivery via <strong className="text-foreground">DELNET</strong>.
                     </p>
                     <p>
-                      With access to <strong className="text-foreground">IEEE, Springer Nature, EBSCO</strong>, the
-                      <strong className="text-foreground"> National Digital Library of India</strong>, and
-                      <strong className="text-foreground"> INFLIBNET N-LIST</strong>, students and faculty gain a
+                      With access to <strong className="text-foreground">IEEE, Springer Nature, EBSCO</strong>,and the
+                      <strong className="text-foreground"> National Digital Library of India</strong>, students and faculty gain a
                       research-ready digital environment alongside the print collection.
                     </p>
                   </div>
@@ -483,39 +482,6 @@ const Library = () => {
               title="Library facilities that support study and access"
               subtitle="Merged physical and digital infrastructure presented as one cohesive support system."
             />
-
-            <div className="grid md:grid-cols-3 gap-5 mb-5">
-              {[
-                {
-                  icon: Monitor,
-                  title: "Digital Library",
-                  desc: "30 dedicated systems with high-speed internet access for digital learning and research.",
-                },
-                {
-                  icon: Database,
-                  title: "SOUL 3.0",
-                  desc: "INFLIBNET software for circulation, cataloguing and OPAC-based discovery.",
-                },
-                {
-                  icon: Globe,
-                  title: "Remote Access",
-                  desc: "Off-campus access to subscribed content through Knimbus and institutional resources.",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.08 }}
-                  className="rounded-xl border border-border bg-secondary text-white p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
-                >
-                  <item.icon className="w-8 h-8 text-accent mb-4" />
-                  <h3 className="font-display text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-white/85 leading-relaxed">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {facilities.map((facility, index) => {

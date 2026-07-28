@@ -11,9 +11,11 @@ import { meProfiles } from './me';
 import { mbaProfiles } from './mba';
 import { bshProfiles } from './bsh';
 
+export type FacultyContentItem = string | Record<string, string>;
+
 export interface FacultySection {
   title: string;
-  content: string | string[] | Record<string, string>[];
+  content: string | FacultyContentItem[];
 }
 
 export interface FacultyProfile {

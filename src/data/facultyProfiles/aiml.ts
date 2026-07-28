@@ -720,7 +720,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2021",
             "Author Position": "3",
-            "Details of Research Publication": "Matrix Factorization based recommendation system using hybrid optimization technique Research article in &ldquo;European Union Digital Library &ldquo;published in 19-02-2021.EAI Endorsed Transactions on Energy Web 07 2021 - 09 2021 | Volume 8 | Issue 35 | e14",
+            "Details of Research Publication": "Matrix Factorization based recommendation system using hybrid optimization technique Research article in "European Union Digital Library "published in 19-02-2021.EAI Endorsed Transactions on Energy Web 07 2021 - 09 2021 | Volume 8 | Issue 35 | e14",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
@@ -1019,7 +1019,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "3",
-            "Details of Research Publication": "Leveraging EfficientNetB3 in a Deep Learning Framework for High-Accuracy MRI Tumor Classification&rdquo;, CMC-Computers, Materials & Continua, DOI:10.32604/cmc.2024.053563",
+            "Details of Research Publication": "Leveraging EfficientNetB3 in a Deep Learning Framework for High-Accuracy MRI Tumor Classification", CMC-Computers, Materials & Continua, DOI:10.32604/cmc.2024.053563",
             "Indexing": "SCIE",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
@@ -1039,7 +1039,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "2",
-            "Details of Research Publication": "Predictive Modeling of Academic Success using Extreme Learning Machine&rdquo;, at ICCICCT – 2024",
+            "Details of Research Publication": "Predictive Modeling of Academic Success using Extreme Learning Machine", at ICCICCT – 2024",
             "Indexing": "Scopus",
             "Publication": "Book Chapter",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1049,7 +1049,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "2",
-            "Details of Research Publication": "A Review on Smart Agriculture System&rdquo;, at ICCICCT – 2024",
+            "Details of Research Publication": "A Review on Smart Agriculture System", at ICCICCT – 2024",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1079,7 +1079,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2022",
             "Author Position": "3",
-            "Details of Research Publication": "Analyzing How E-Learning and Virtual Reality could be Integrated to Enhance Studies&rdquo;, ECS Transactions, 107 (1) 13163-13173 (2022), The Electrochemical Society",
+            "Details of Research Publication": "Analyzing How E-Learning and Virtual Reality could be Integrated to Enhance Studies", ECS Transactions, 107 (1) 13163-13173 (2022), The Electrochemical Society",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
@@ -1109,7 +1109,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2018",
             "Author Position": "1",
-            "Details of Research Publication": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network&rdquo;, International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11,2018",
+            "Details of Research Publication": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network", International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11,2018",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
@@ -1119,7 +1119,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2015",
             "Author Position": "1",
-            "Details of Research Publication": "A Survey on study of various machine learning methods for classification&ldquo; International Journal of Database Theory and Application Vol 8. No 5(2015)",
+            "Details of Research Publication": "A Survey on study of various machine learning methods for classification" International Journal of Database Theory and Application Vol 8. No 5(2015)",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
@@ -1129,7 +1129,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2014",
             "Author Position": "1",
-            "Details of Research Publication": "A Comparative Study on Different Meta-Cognitive Learning for Classification Problems &ldquo; Journal of NanoScience and NanoTechnology - Spring Edition Vol 2, No 1 (2014)",
+            "Details of Research Publication": "A Comparative Study on Different Meta-Cognitive Learning for Classification Problems " Journal of NanoScience and NanoTechnology - Spring Edition Vol 2, No 1 (2014)",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1501,9 +1501,9 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
       {
         "title": "Awards/Achievements",
         "content": [
-          "Top Performing Mentor for Course on &ldquo;Introduction on Intellectual Property to Engineers and Technologists&rdquo; - Jan to Apr 2025 - NPTEL.",
-          "Top Performing Mentor for Course on &ldquo;Cloud Computing and Distributed Systems&rdquo; - Jan to Mar 2024 - NPTEL",
-          "&ldquo;Certificate of Excellence&rdquo; for the program &ldquo;Use of ICT Education for on-line and Blended Learning&rdquo; - October, 2016 - IIT Bombay.",
+          "Top Performing Mentor for Course on "Introduction on Intellectual Property to Engineers and Technologists" - Jan to Apr 2025 - NPTEL.",
+          "Top Performing Mentor for Course on "Cloud Computing and Distributed Systems" - Jan to Mar 2024 - NPTEL",
+          ""Certificate of Excellence" for the program "Use of ICT Education for on-line and Blended Learning" - October, 2016 - IIT Bombay.",
           "Ratified as Assistant Professor, JNTU Anantapuramu - June 2015 - JNTU Anantapuramu."
         ]
       },
@@ -2306,7 +2306,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "3",
-            "Details of Research Publication": "Title:&ldquo;Locating Patient Health Data Theft Using Gradient Boosting with Hybrid Microwave Transmission-Based Wearable Device&rdquo; Conference Name: International Conference on Signal Processing, Computation, Electronics, Power and Telecommunication (IConSCEPT) Publisher: IEEE DOI: 10.1109/IConSCEPT61884.2024.10627827 Page: 1-6, Published: July 4, 2024 Published: July 4, 2024",
+            "Details of Research Publication": "Title:"Locating Patient Health Data Theft Using Gradient Boosting with Hybrid Microwave Transmission-Based Wearable Device" Conference Name: International Conference on Signal Processing, Computation, Electronics, Power and Telecommunication (IConSCEPT) Publisher: IEEE DOI: 10.1109/IConSCEPT61884.2024.10627827 Page: 1-6, Published: July 4, 2024 Published: July 4, 2024",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -2326,7 +2326,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2022",
             "Author Position": "4",
-            "Details of Research Publication": "Title: &ldquo;Accelerating Alzheimer's Research with Machine Learning Models for Improved Detection&rdquo; Conference Name: 7th International Conference on Electronics, Communication and Aerospace Technology (ICECA) Publisher: IEEE DOI: 10.1109/ICECA58529.2023.10395855 Page: 855-862, Published: Feb. 9, 2024",
+            "Details of Research Publication": "Title: "Accelerating Alzheimer's Research with Machine Learning Models for Improved Detection" Conference Name: 7th International Conference on Electronics, Communication and Aerospace Technology (ICECA) Publisher: IEEE DOI: 10.1109/ICECA58529.2023.10395855 Page: 855-862, Published: Feb. 9, 2024",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -3147,7 +3147,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "1",
-            "Details of Research Publication": "&ldquo;Integrating DCCS-Net for High-Fidelity Watermarking and Tampering Detection in Brain Scan Images&rdquo; in 2024 IEEE 6th International Conference on Cybernetics, Cognition and Machine Learning Applications (ICCCMLA) 19 – 20 October 2024. DOI: 10.1109/ICCCMLA63077.2024.10871454",
+            "Details of Research Publication": ""Integrating DCCS-Net for High-Fidelity Watermarking and Tampering Detection in Brain Scan Images" in 2024 IEEE 6th International Conference on Cybernetics, Cognition and Machine Learning Applications (ICCCMLA) 19 – 20 October 2024. DOI: 10.1109/ICCCMLA63077.2024.10871454",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
@@ -3157,7 +3157,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "1",
-            "Details of Research Publication": "&ldquo;Enhanced Brain Tumor MRI Scan Reconstruction via the EI-Fusion-Net Model&rdquo; in International Journal of Intelligent Engineering and Systems (INASS), Vol.17, No.4, May 29, 2024. DOI: 10.22266/ijies2024.0831.53",
+            "Details of Research Publication": ""Enhanced Brain Tumor MRI Scan Reconstruction via the EI-Fusion-Net Model" in International Journal of Intelligent Engineering and Systems (INASS), Vol.17, No.4, May 29, 2024. DOI: 10.22266/ijies2024.0831.53",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
@@ -3167,7 +3167,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2023",
             "Author Position": "3",
-            "Details of Research Publication": "&ldquo;Multi Objective Evaluator Model Development for Analyze the Customer Behavior&rdquo; in 3rd International Conference on Advancement in Electronics & Communication Engineering (AECE) 23 – 24 November 2023. DOI: https://doi.org/10.1109/AECE59614.2023.10428189",
+            "Details of Research Publication": ""Multi Objective Evaluator Model Development for Analyze the Customer Behavior" in 3rd International Conference on Advancement in Electronics & Communication Engineering (AECE) 23 – 24 November 2023. DOI: https://doi.org/10.1109/AECE59614.2023.10428189",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
@@ -3177,7 +3177,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2022",
             "Author Position": "1",
-            "Details of Research Publication": "&ldquo;A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores&rdquo; in IEEE MysuruCon 2022 – 2nd edition of the Flagship International Conference Series of IEEE Mysuru Subsection in Association with IEEE Bangalore Section Hosted by JSS Science & Technology University, Bengaluru, 16th & 17th October 2022. DOI: 10.1109/MysuruCon55714.2022.9972746",
+            "Details of Research Publication": ""A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores" in IEEE MysuruCon 2022 – 2nd edition of the Flagship International Conference Series of IEEE Mysuru Subsection in Association with IEEE Bangalore Section Hosted by JSS Science & Technology University, Bengaluru, 16th & 17th October 2022. DOI: 10.1109/MysuruCon55714.2022.9972746",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
@@ -3200,14 +3200,14 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
       {
         "title": "Awards/Achievements",
         "content": [
-          "Acted as Reviewer for Two Day &ldquo;National Conference on Recent Advancements in Computing, Communication & Societal Applications (NASA' 23)&rdquo; organized by the Department of Computer Science & Engineering on 19th & 20th April 2023.",
-          "Acted as Reviewer for Two Day &ldquo;IEEE International Conference on Optimization Techniques for Learning (ICOTL' 23)&rdquo; organized by the School of Computers, Madanapalle Institute of Technology & Science, Madanapalle, Andhra Pradesh, India during 7th & 8th December 2023.",
+          "Acted as Reviewer for Two Day "National Conference on Recent Advancements in Computing, Communication & Societal Applications (NASA' 23)" organized by the Department of Computer Science & Engineering on 19th & 20th April 2023.",
+          "Acted as Reviewer for Two Day "IEEE International Conference on Optimization Techniques for Learning (ICOTL' 23)" organized by the School of Computers, Madanapalle Institute of Technology & Science, Madanapalle, Andhra Pradesh, India during 7th & 8th December 2023.",
           {
-            "Identifier": "&ldquo;Best Paper Award for the title Evaluation Ensembles of Machine Learning Models for the Prediction of Smart Phone Addiction&rdquo; presented during the International Conference of Embracing the Digital Horizon",
+            "Identifier": ""Best Paper Award for the title Evaluation Ensembles of Machine Learning Models for the Prediction of Smart Phone Addiction" presented during the International Conference of Embracing the Digital Horizon",
             "Link": "Pioneering Commerce and Management Strategies for a Transformative Future (EDH 2024), organized by Loyala College of Arts & Science, Mettala, Tamil Nadu during 13th – 14th March 2024."
           },
           {
-            "Identifier": "&ldquo;Best Paper Award for the title Diabetes Prediction using Supervised and Unsupervised Learning&rdquo; presented during the International Conference of Embracing the Digital Horizon",
+            "Identifier": ""Best Paper Award for the title Diabetes Prediction using Supervised and Unsupervised Learning" presented during the International Conference of Embracing the Digital Horizon",
             "Link": "Pioneering Commerce and Management Strategies for a Transformative Future (EDH 2024), organized by Loyala College of Arts & Science, Mettala, Tamil Nadu during 13th – 14th March 2024."
           },
           "Recognized as NPTEL Discipline Star.",
@@ -3217,15 +3217,15 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
           "Received Appreciation as mentor for the NPTEL Online Certification Course Privacy and Security in online social media.",
           "Received Appreciation as mentor for the NPTEL Online Certification Course Understanding Incubation and Entrepreneurship.",
           "Received Appreciation for acting as Co-Convener for ASHV – 2K25.",
-          "Organized a MoU Exchange between &ldquo;Dept. of CSE – AI & ML and Xenovex Technologies&rdquo; on 8th November 2024.",
-          "Organized a MoU Exchange between &ldquo;Dept. of CSE – AI & ML and Techno hub Software Solutions&rdquo; on 21st November 2024.",
-          "Organized an Expert Talk on &ldquo;Software Life Cycle&rdquo; on 21st November 2024.",
-          "Organized a 5 Days Skill Development Program on &ldquo;Python Programming&rdquo; from 25th November to 29th November 2024.",
-          "Organized a MoU Exchange between &ldquo;Dept. of CSE – AI & ML and Menmozhi Technologies&rdquo; on 2nd December 2024.",
-          "Organized a Hands-on session on &ldquo;GenAI Tools and App Development&rdquo; on 2nd December 2024.",
+          "Organized a MoU Exchange between "Dept. of CSE – AI & ML and Xenovex Technologies" on 8th November 2024.",
+          "Organized a MoU Exchange between "Dept. of CSE – AI & ML and Techno hub Software Solutions" on 21st November 2024.",
+          "Organized an Expert Talk on "Software Life Cycle" on 21st November 2024.",
+          "Organized a 5 Days Skill Development Program on "Python Programming" from 25th November to 29th November 2024.",
+          "Organized a MoU Exchange between "Dept. of CSE – AI & ML and Menmozhi Technologies" on 2nd December 2024.",
+          "Organized a Hands-on session on "GenAI Tools and App Development" on 2nd December 2024.",
           {
-            "Identifier": "Organized a 3 Day Hands-on Workshop on &ldquo;Web and Mobile App Development",
-            "Link": "From Basics to Deployment&rdquo; from 27th January to 29th January 2025."
+            "Identifier": "Organized a 3 Day Hands-on Workshop on "Web and Mobile App Development",
+            "Link": "From Basics to Deployment" from 27th January to 29th January 2025."
           },
           {
             "Identifier": "Organized a Workshop on \"AI & ML Product Development Bootcamp",
@@ -3233,7 +3233,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
           },
           "Organized a Faculty Development Program on \"Microsoft Azure AI Engineer Associate\" was organized by Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning) in association with ICT ACADEMY 07th to 11th April 2025.",
           "Organized a National Level Technical Symposium \"AIMEX 2k25\" was organized by Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning) on 23rd April 2025.",
-          "Organized a Two-Day Career Guidance Programme on &ldquo;Engineering Elevates and Enlightens&rdquo; was organized by Department of Computer Science and Engineering (AI and ML) on 9th and 10th September 2025."
+          "Organized a Two-Day Career Guidance Programme on "Engineering Elevates and Enlightens" was organized by Department of Computer Science and Engineering (AI and ML) on 9th and 10th September 2025."
         ]
       }
     ]
@@ -3466,7 +3466,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2022-23",
             "Author Position": "2",
-            "Details of Research Publication": "A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores&rdquo; in IEEE MysuruCon 2022 – 2nd edition of the Flagship International Conference Series of IEEE Mysuru Subsection in Association with IEEE Bangalore Section Hosted by JSS Science & Technology University, Bengaluru, 16th & 17th October 2022. DOI: 10.1109/MysuruCon55714.2022.9972746",
+            "Details of Research Publication": "A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores" in IEEE MysuruCon 2022 – 2nd edition of the Flagship International Conference Series of IEEE Mysuru Subsection in Association with IEEE Bangalore Section Hosted by JSS Science & Technology University, Bengaluru, 16th & 17th October 2022. DOI: 10.1109/MysuruCon55714.2022.9972746",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
@@ -3514,11 +3514,11 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
         "title": "Awards/Achievements",
         "content": [
           {
-            "Identifier": "&ldquo;Best Paper Award for the title Deep Learning-Based Emotion Recognition System with Depression Detection Capability&rdquo; presented during the International Conference of Embracing the Digital Horizon",
+            "Identifier": ""Best Paper Award for the title Deep Learning-Based Emotion Recognition System with Depression Detection Capability" presented during the International Conference of Embracing the Digital Horizon",
             "Link": "Pioneering Commerce and Management Strategies for a Transformative Future (EDH 2024), organized by Loyala College of Arts & Science, Mettala, Tamil Nadu during 13th – 14th March 2024."
           },
           {
-            "Identifier": "&ldquo;Best Paper Award for the title Evaluating Ensemble Machine Learning Approaches for Accurate Flight Pricing Predictions&rdquo; presented during the International Conference of Embracing the Digital Horizon",
+            "Identifier": ""Best Paper Award for the title Evaluating Ensemble Machine Learning Approaches for Accurate Flight Pricing Predictions" presented during the International Conference of Embracing the Digital Horizon",
             "Link": "Pioneering Commerce and Management Strategies for a Transformative Future (EDH 2024), organized by Loyala College of Arts & Science, Mettala, Tamil Nadu during 13th – 14th March 2024."
           },
           "Recognized as NPTEL Discipline Star July – Dec 2025",
