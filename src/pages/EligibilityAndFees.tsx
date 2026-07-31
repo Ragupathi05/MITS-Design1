@@ -2,9 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
+import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { UserCheck, Star, Phone, Globe, Layers, Globe2, Award } from "lucide-react";
+
+const BASE = import.meta.env.BASE_URL;
 
 const eligibility = [
   {
@@ -66,23 +69,46 @@ const EligibilityAndFees = () => (
       canonical="/eligibility-and-fees"
     />
     <main className="flex-grow">
-      {/* Spacer for sticky header */}
-      <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
-      
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-[#0f2a44] via-[#123150] to-[#07192b] text-white py-16 md:py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
-        
-        <div className="container mx-auto px-4 md:px-8 relative z-10 text-center space-y-4">
-          <Badge className="text-xs font-semibold bg-[#caa74d] text-[#0f2a44] hover:bg-[#b08d37] uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm">
+      <section
+        className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
+        style={{
+          backgroundImage: `url(${BASE}Hero-Section/image%205.JPG)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
+        <div className="relative z-10 container mx-auto px-4 md:px-8 text-center space-y-4">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm">
             AY 2026-27 Admissions
-          </Badge>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight !text-white font-sans" style={{ color: "white" }}>
-            Eligibility &amp; Fee Structure
+          </p>
+          <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+            Eligibility &amp; <span className="text-[#ffd15c]">Fee Structure</span>
           </h1>
-          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-sans">
+          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Official program fees, lateral entry schedules, academic criteria, and SAARC student concession lists.
           </p>
+        </div>
+
+        <div className="absolute bottom-4 left-6 z-10">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex items-center gap-1.5 text-sm text-white/90">
+              <li>
+                <Link to="/" className="text-white/70 hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li className="text-white/50">›</li>
+              <li>
+                <Link to="/admissions" className="text-white/70 hover:text-white transition-colors">
+                  Admissions
+                </Link>
+              </li>
+              <li className="text-white/50">›</li>
+              <li className="text-[#ffd15c] font-semibold">Eligibility &amp; Fee Structure</li>
+            </ol>
+          </nav>
         </div>
       </section>
 

@@ -77,25 +77,49 @@ const About = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">About MITS</p>
-            <h1
-              className="font-display text-4xl md:text-6xl font-bold mb-5 text-white"
-              style={{ fontFamily: "var(--font-display)" }}
+            <p
+              className="text-[#ffb300] font-extrabold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4"
+              style={{ textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.8)" }}
             >
-              Shaping Futures <span className="text-[#ffd15c]">Since 1998</span>
+              About MITS
+            </p>
+            <h1
+              className="font-display text-4xl md:text-6xl font-extrabold mb-5 text-white tracking-tight"
+              style={{
+                fontFamily: "var(--font-display)",
+                textShadow: "0 3px 15px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.9)",
+              }}
+            >
+              Shaping Futures <span className="text-[#ffd15c]" style={{ textShadow: "0 3px 15px rgba(0,0,0,0.95), 0 0 10px rgba(0,0,0,0.8)" }}>Since 1998</span>
             </h1>
-            <p className="text-white/80 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mt-4">
+            <p
+              className="text-white font-medium text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mt-4"
+              style={{ textShadow: "0 2px 10px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.9)" }}
+            >
               Madanapalle Institute of Technology &amp; Science — a premier institution committed to academic excellence, research innovation, and holistic development.
             </p>
           </div>
           <div className="absolute bottom-4 left-6 z-10">
             <nav aria-label="Breadcrumb">
-              <ol className="flex items-center gap-1.5 text-sm text-white/80">
-                <li><Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
-                <li className="text-white/50">›</li>
-                <li className="text-[#ffd15c] font-semibold">About</li>
+              <ol className="flex items-center gap-1.5 text-sm text-white/90">
+                <li>
+                  <Link
+                    to="/"
+                    className="text-white/80 hover:text-white transition-colors"
+                    style={{ textShadow: "0 1px 6px rgba(0,0,0,0.9)" }}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="text-white/60">›</li>
+                <li
+                  className="text-[#ffd15c] font-bold"
+                  style={{ textShadow: "0 1px 6px rgba(0,0,0,0.9)" }}
+                >
+                  About
+                </li>
               </ol>
             </nav>
           </div>

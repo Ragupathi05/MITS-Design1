@@ -24,7 +24,7 @@ const sidebarTabs = [
 ];
 
 const stats = [
-  { icon: IndianRupee, value: 21, suffix: " LPA", label: "Highest Package", color: "from-amber-500 to-orange-500" },
+  { icon: IndianRupee, value: 23, suffix: " LPA", label: "Highest Package", color: "from-amber-500 to-orange-500" },
   { icon: TrendingUp, value: 6.8, suffix: " LPA", label: "Average Package", color: "from-emerald-500 to-teal-500" },
   { icon: Users, value: 94, suffix: "%", label: "Placement Rate", color: "from-blue-500 to-cyan-500" },
   { icon: Building, value: 200, suffix: "+", label: "Total Recruiters", color: "from-violet-500 to-purple-500" },

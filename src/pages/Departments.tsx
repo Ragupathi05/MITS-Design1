@@ -363,7 +363,7 @@ const Departments = () => {
           />
           
           {/* Dynamic Overlay with school color */}
-          <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:opacity-90 transition-opacity duration-300`} />
+          <div className={`absolute inset-0 bg-gradient-to-t bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)] group-hover:opacity-90 transition-opacity duration-300`} />
 
           {/* School color accent border on hover */}
           <div className={`absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-transparent transition-all duration-300 bg-gradient-to-r ${schoolAccent} opacity-0 group-hover:opacity-100`} style={{ padding: '2px' }}>
@@ -406,7 +406,7 @@ const Departments = () => {
               alt="MITS Departments & Schools" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
+            <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">

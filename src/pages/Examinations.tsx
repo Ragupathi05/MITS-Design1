@@ -9,7 +9,10 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+
+const BASE = import.meta.env.BASE_URL;
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 import {
@@ -175,32 +178,49 @@ const Examinations = () => {
       <Header />
       <main className="flex-1">
         {/* HERO */}
-        <section className="relative pt-32 md:pt-40 pb-14 md:pb-20 overflow-hidden bg-[#0a0f1f]">
-          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--primary)/.6),transparent_50%),radial-gradient(circle_at_80%_60%,hsl(var(--accent)/.4),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[url('https://mits.ac.in/images/inner-banner.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0a0f1f]" />
+        <section
+          className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
+          style={{
+            backgroundImage: `url(${BASE}Hero-Section/image%205.JPG)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.p
-              initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-              className="text-accent font-semibold tracking-[0.25em] uppercase text-xs md:text-sm mb-4 inline-flex items-center gap-2"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4 inline-flex items-center gap-2"
             >
-              <Sparkles className="w-4 h-4" /> MITS Deemed to be University
+              <Sparkles className="w-4 h-4 text-[#ffb300]" /> MITS Deemed to be University
             </motion.p>
             <motion.h1
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-              className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "var(--font-display)" }}
             >
-              Office of <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-100">Controller of Examinations</span>
+              Office of <span className="text-[#ffd15c]">Controller of Examinations</span>
             </motion.h1>
           </div>
           <div className="absolute bottom-4 left-6 z-10">
             <nav aria-label="Breadcrumb">
-              <ol className="flex items-center gap-1.5 text-sm">
-                <li><a href="/" className="text-white/70 hover:text-white transition-colors">Home</a></li>
-                <li className="text-white/50">&gt;</li>
-                <li><a href="/academics" className="text-white/70 hover:text-white transition-colors">Academics</a></li>
-                <li className="text-white/50">&gt;</li>
-                <li className="text-white font-semibold">Examinations</li>
+              <ol className="flex items-center gap-1.5 text-sm text-white/90">
+                <li>
+                  <Link to="/" className="text-white/70 hover:text-white transition-colors">
+                    Home
+                  </Link>
+                </li>
+                <li className="text-white/50">›</li>
+                <li>
+                  <Link to="/academics" className="text-white/70 hover:text-white transition-colors">
+                    Academics
+                  </Link>
+                </li>
+                <li className="text-white/50">›</li>
+                <li className="text-[#ffd15c] font-semibold">Examinations</li>
               </ol>
             </nav>
           </div>

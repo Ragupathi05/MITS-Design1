@@ -15,6 +15,9 @@ export type Partner = {
   country: string;
   region: "US" | "Europe" | "Japan" | "Taiwan" | "South Korea" | "Singapore" | "Middle East" | "Other";
   website: string;
+  ranking?: string;
+  description?: string;
+  strengths?: string[];
   highlight?: string;
 };
 
@@ -51,11 +54,44 @@ export type Fellow = {
 /* ---------- ABOUT ---------- */
 
 export const aboutIR = {
+  title: "MITS Deemed to be University - A Global Academic Community",
   intro: [
-    "MITS – Deemed to be University envisions becoming a globally recognized academic and research higher education institution. MITS has recruited faculty members with doctoral degrees from reputed foreign universities across the world. Many of MITS professors also have post-doctoral or industrial experience from abroad, and the institute has hosted faculty from abroad through seminars and conferences.",
-    "The culture of internationalization is fostered by sending students abroad for internship programmes, student exchanges, short-term laboratory research and summer study programmes, while welcoming students from partner institutions to MITS under the exchange banner. Students can compete for several types of study-abroad scholarships to support their quest for international experience. The MITS International Relations Office handles institution-level international affairs including outbound and inbound opportunities.",
-    "MITS focus on sending students abroad for international experience started in 2016 when the first batch of students went for the University Innovation Fellowship Program of d.school, Hasso Plattner Institute, Stanford University, California, USA. This process further accelerated when the first batch of five students went to Asia University, Taichung, Taiwan for fully-paid full-semester internships.",
+    "MITS- Deemed to be University is committed to becoming a globally recognized institution for academic excellence, innovation, and research. Internationalization is a key pillar of this vision, creating opportunities for the students, empowering the faculty and researchers to engage with leading institutions across the world. It has built a strong international academic ecosystem by recruiting distinguished faculty members from renowned universities worldwide, who have valuable research experiences and international industry exposure. Their expertise is enriching this ecosystem with global perspectives.",
+    "MITS further strengthens its international outlook by regularly hosting eminent scholars, researchers and professionals from across the globe through seminars, conferences, workshops and collaborative research initiatives.",
   ],
+  functionsTitle: "Functions of IRO in Creating a Vibrant Multicultural Campus Environment",
+  functionsDesc: "MITS strongly believes that global exposure is essential for developing future-ready professionals. IRO facilitates both inbound and outbound international engagement by connecting students and faculty with a wide range of global opportunities in building international networks, experience diverse cultures, exploring innovation ecosystems to develop a strong cross-cultural competency for an interconnected world.",
+  centralHubObjectives: [
+    "Global partnerships and MoUs",
+    "Outbound mobility programs for students and faculty",
+    "Inbound exchange and visiting student programs",
+    "International internships and research collaboration opportunities",
+    "Scholarship guidance and mobility support",
+    "Coordination of global events and collaborations",
+  ],
+  studentBenefits: [
+    "Gain international academic exposure at one of the world's leading universities",
+    "Understand the impact of disruptive technologies across industries",
+    "Exposure to project-based and experiential learning approaches",
+    "Develop critical thinking and problem-solving skills",
+    "Strengthen their profile for internships, placements, and higher studies",
+    "Build global awareness and professional confidence",
+    "Network with global community",
+    "Foreign Language Instruction",
+  ],
+  journey: {
+    title: "Our International Journey",
+    text: "The University's journey toward global engagement began in 2016, marking an important milestone in its internationalization efforts. The first batch of students participated in the prestigious University Innovation Fellowship Program at the Hasso Plattner Institute of Design (d.school), Stanford University, California, USA, where 60 students received training in innovation, design thinking, and leadership.",
+  },
+  longTermObjectives: [
+    "Create a Sustainable Ecosystem for Internationalization",
+    "Foster collaborative research, Twinning Programmes and Global Educational Pathways",
+    "Create long-term knowledge partners with International institutions, broadening the scope of research collaboration, and deepening institutional partnerships – noting that reaffirming the strategic importance of bilateral research",
+    "International Higher Education Fairs",
+    "Co-teaching courses and Co-host conferences",
+    "Planning and implementation of cooperative research projects",
+  ],
+  tagline: "Committed to Building a Globally Connected Learning Ecosystem",
   goal: "Promotion of the Institution's Internationalization and Academic Exchanges.",
   mission: [
     "Promote academic collaborations and faculty & student exchange programmes with foreign universities and research organisations.",
@@ -63,15 +99,6 @@ export const aboutIR = {
     "Facilitate MITS students' internships, scholarships and other opportunities for global exposure.",
     "Serve as the international contact and assist visiting faculty and foreign students.",
     "Help international students with their life in India and Madanapalle (including admission information, academic and psychological counselling).",
-  ],
-  shortTerm: [
-    "Encourage MITS faculty and students to avail global opportunities.",
-    "Set up efficient service for international communication.",
-    "Encourage outstanding students and provide increased opportunities to participate in internship & scholarship programmes of top-ranked institutions like NTU India Connect, USC Viterbi Scholarship, S. N. Bose Scholars program (Fulbright), Globalink Research Internship – Canada, etc.",
-  ],
-  longTerm: [
-    "Establish MITS' name on the international horizon.",
-    "Advance MITS' academic reputation internationally.",
   ],
   office:
     "Dr. S. Narayanan is the Advisor – International Relations Office, under whose guidance the IRO operates. The IRO of MITS is headed by Dr. Sremmant Basu, Dean of Administration & International Relations, supported by Mrs. U. Vijaya Lakshmi, Senior Manager – International Relations & Professional Counsellor, and Mrs. P. L. Susmitha, Assistant Manager. All departments have international coordinators and country-specific coordinators as well.",
@@ -112,18 +139,121 @@ export const contactCard = {
 /* ---------- MoUs ---------- */
 
 export const partners: Partner[] = [
-  { name: "Bowling Green State University (BGSU)", country: "USA", region: "US", website: "https://www.bgsu.edu/", highlight: "MoU signed 17 Feb 2025; Pathway, joint research, exchange & curriculum framing." },
-  { name: "University of Applied Sciences, Hagenberg – Upper Austria", country: "Austria", region: "Europe", website: "https://fh-ooe.at/en" },
-  { name: "BRNO University of Technology", country: "Czech Republic", region: "Europe", website: "https://www.vut.cz/en/?aid_redir=1" },
-  { name: "The University of South Bohemia in České Budějovice", country: "Czech Republic", region: "Europe", website: "https://www.jcu.cz/en" },
-  { name: "Maharishi Vedic University", country: "Holland", region: "Europe", website: "https://meru.international/" },
-  { name: "University of Aizu", country: "Japan", region: "Japan", website: "https://u-aizu.ac.jp/en/", highlight: "Long-standing research internship & MS programme partner." },
-  { name: "Ichinoseki College (NIT)", country: "Japan", region: "Japan", website: "https://www.ichinoseki.ac.jp/english.html", highlight: "Host institute for the Sakura Science Exchange Program." },
-  { name: "Iwate Prefectural University – Faculty of Software & Information Science", country: "Japan", region: "Japan", website: "https://www.iwate-pu.ac.jp/en/" },
-  { name: "Asia University", country: "Taiwan", region: "Taiwan", website: "https://www.asia.edu.tw/", highlight: "Summer & semester exchange since 2017-18." },
-  { name: "Providence University", country: "Taiwan", region: "Taiwan", website: "https://enpu.pu.edu.tw/", highlight: "Sponsor of the Global Immersion Program 2018-19." },
-  { name: "Pusan National University", country: "South Korea", region: "South Korea", website: "https://www.pusan.ac.kr/eng/Main.do" },
-  { name: "Kookmin University", country: "South Korea", region: "South Korea", website: "https://english.kookmin.ac.kr/" },
+  {
+    name: "Bowling Green State University (BGSU)",
+    country: "USA",
+    region: "US",
+    website: "https://www.bgsu.edu/",
+    ranking: "QS Sustainability Rankings 2026: 1501+ band",
+    description: "Bowling Green State University (BGSU) is a public research university in Bowling Green, Ohio, known for being the No. 1 Public University in Ohio that students say they would choose again. Founded for the public good with over 114 years of history, BGSU is nationally ranked for its strengths in business, engineering, computer science, education, health sciences, psychology, media, and supply chain management/business. BGSU emphasizes applied research, innovation, experiential learning through internships and co-ops, and strong industry partnerships.",
+    strengths: ["Business & Supply Chain Management", "Engineering & Computer Science", "Education & Health Sciences", "Media & Arts", "Experiential Learning & Co-ops"],
+    highlight: "MoU signed 17 Feb 2025; Pathway, joint research, exchange & curriculum framing."
+  },
+  {
+    name: "University of Applied Sciences Upper Austria (Hagenberg Campus)",
+    country: "Austria",
+    region: "Europe",
+    website: "https://fh-ooe.at/en",
+    description: "The University of Applied Sciences Upper Austria aims to be the leading university of applied sciences in Austria, based on a strong student-centered approach with outstanding applied research, modern services, and strong regional and international connections. Hagenberg Campus is internationally recognized for its excellence in information technology, software engineering, artificial intelligence, cybersecurity, data science, media technology, and communication engineering. It equips students with practical skills and career opportunities in digital and tech sectors.",
+    strengths: ["Information Technology & Software Engineering", "Artificial Intelligence & Cybersecurity", "Data Science & Media Technology", "Communication Engineering", "Project-Based Learning & Industry Collaboration"],
+    highlight: "Leading Austrian university of applied sciences for AI, IT & software engineering."
+  },
+  {
+    name: "Brno University of Technology (BUT)",
+    country: "Czech Republic",
+    region: "Europe",
+    website: "https://www.vut.cz/en/?aid_redir=1",
+    ranking: "QS World University Rankings 2027: #=588",
+    description: "Established in 1899, Brno University of Technology (BUT) is one of the largest and most prestigious technical universities in the Czech Republic. Located in Brno, a leading technology and innovation hub, BUT is recognized for excellence in Engineering, Information Technology, Architecture, Business, and Applied Sciences. Offers modern research facilities and extensive industry collaborations with global companies such as IBM, Siemens, Bosch, and Honeywell, alongside Erasmus+ exchange opportunities.",
+    strengths: ["Engineering & Information Technology", "Architecture & Applied Sciences", "IBM, Siemens, Bosch & Honeywell Industry Ties", "Erasmus+ & Global Partnerships"],
+    highlight: "Ranked #=588 in QS World University Rankings 2027."
+  },
+  {
+    name: "The University of South Bohemia in České Budějovice (USB)",
+    country: "Czech Republic",
+    region: "Europe",
+    website: "https://www.jcu.cz/en",
+    ranking: "QS World University Rankings 2027: #1201–1400",
+    description: "Established in 1991, The University of South Bohemia (USB) is a leading public university in the Czech Republic renowned for excellence in Life Sciences, Agriculture, Fisheries, Environmental Sciences, Biology, Health Sciences, and Education. USB maintains extensive international partnerships and actively participates in Erasmus+ and global exchange programs, offering a supportive academic environment with a focus on sustainability, innovation, and applied research.",
+    strengths: ["Life Sciences & Environmental Sciences", "Agriculture & Fisheries", "Biology & Health Sciences", "Erasmus+ Exchange & Sustainability Research"],
+    highlight: "Ranked #1201–1400 in QS World University Rankings 2027."
+  },
+  {
+    name: "Maharishi Vedic University",
+    country: "Holland",
+    region: "Europe",
+    website: "https://meru.international/",
+    description: "Maharishi Vedic University, based in the Netherlands, is a specialized institution dedicated to Consciousness-Based Education, integrating Vedic knowledge with modern education, personal development, and scientific research. Inspired by Maharishi Mahesh Yogi, the university emphasizes Holistic Learning Through Transcendental Meditation, Yoga, Vedic Sciences, and Leadership Development, attracting global students seeking academic knowledge combined with mental well-being.",
+    strengths: ["Consciousness-Based Education", "Transcendental Meditation & Yoga", "Vedic Sciences & Leadership Development", "Holistic Education & Mental Well-being"],
+    highlight: "Unique holistic education network integrating Vedic science with modern research."
+  },
+  {
+    name: "University of Aizu (UoA)",
+    country: "Japan",
+    region: "Japan",
+    website: "https://u-aizu.ac.jp/en/",
+    description: "Established in 1993 in Fukushima Prefecture, The University of Aizu (UoA) is Japan's first university dedicated exclusively to computer science and engineering. Renowned for innovative education and research, UoA offers programs in Computer Science, Artificial Intelligence, Software Engineering, Cybersecurity, Data Science, and Information Systems. Highly international environment with English-taught courses and cutting-edge computing facilities.",
+    strengths: ["Exclusive Computer Science & Engineering Focus", "AI, ICT & Cybersecurity Research", "English-Taught Degree Programs", "Global Outlook & Research Excellence"],
+    highlight: "Japan's premier CS university; long-standing research internship & MS pathway partner."
+  },
+  {
+    name: "Ichinoseki College (National Institute of Technology - KOSEN)",
+    country: "Japan",
+    region: "Japan",
+    website: "https://www.ichinoseki.ac.jp/english.html",
+    description: "Established in 1964 in Iwate Prefecture, National Institute of Technology (KOSEN), Ichinoseki College is one of Japan's prestigious KOSEN colleges dedicated to producing highly skilled engineers through practice-oriented education. Offers specialized programs in Mechanical Engineering, Electrical & Electronic Engineering, Control & Information Systems, Chemical & Biotechnology, and Civil Engineering with strong hands-on industry training.",
+    strengths: ["Practical Engineering Education", "Mechanical, EEE, Biotech & Civil Engineering", "Advanced Technical Training & Employability", "Sakura Science Exchange Host"],
+    highlight: "Host institute for the Sakura Science Exchange Program in Japan."
+  },
+  {
+    name: "Iwate Prefectural University (Faculty of Software & Information Science)",
+    country: "Japan",
+    region: "Japan",
+    website: "https://www.iwate-pu.ac.jp/en/",
+    description: "The Faculty of Software and Information Science at Iwate Prefectural University (IPU), established in 1998 in Iwate Prefecture, is recognized for excellence in software engineering, artificial intelligence, data science, cybersecurity, networking, and information systems. Emphasizes a balance of theoretical knowledge and practical application with industry, government, and international university collaborations.",
+    strengths: ["High-Quality Software & IT Education", "Cutting-edge AI & Info Tech Research", "Industry-Oriented Curriculum", "Modern Computing Research Facilities"],
+    highlight: "Advanced software engineering & AI research collaboration partner."
+  },
+  {
+    name: "Asia University (AU)",
+    country: "Taiwan",
+    region: "Taiwan",
+    website: "https://www.asia.edu.tw/",
+    ranking: "QS World University Rankings 2027: #=649",
+    description: "Asia University (AU), established in 2001 in Taichung, Taiwan, is a leading private university recognized for excellence in Artificial Intelligence, Information Technology, Health Sciences, Management, Design, and Creative Innovation. Ranked #=649 in QS World University Rankings 2027, AU is known for its modern campus, interdisciplinary education, AI & smart healthcare research, and strong industry partnerships.",
+    strengths: ["AI & Smart Healthcare Research", "Information Technology & Management", "Creative Innovation & Design", "Industry-Linked Exchange Programs"],
+    highlight: "Ranked #=649 in QS World University Rankings 2027; Semester exchange partner since 2017-18."
+  },
+  {
+    name: "Providence University",
+    country: "Taiwan",
+    region: "Taiwan",
+    website: "https://enpu.pu.edu.tw/",
+    ranking: "QS Asian University Rankings 2026: #951–1000",
+    description: "Providence University, established in 1956 in Taichung, Taiwan, is a well-respected private university known for strengths in business & management, foreign languages, humanities, social sciences, IT, and applied sciences. Ranked #951–1000 in QS Asian University Rankings 2026, offering student-centered learning, student exchange, dual-degree, and internship opportunities.",
+    strengths: ["Business & Management", "Foreign Languages & Multilingual Education", "Information Technology & Applied Sciences", "Dual-Degree & Internship Pathways"],
+    highlight: "Ranked #951–1000 in QS Asian University Rankings 2026; Sponsor of Global Immersion Program."
+  },
+  {
+    name: "Pusan National University (PNU)",
+    country: "South Korea",
+    region: "South Korea",
+    website: "https://www.pusan.ac.kr/eng/Main.do",
+    ranking: "QS World University Rankings 2027: #=449",
+    description: "Pusan National University (PNU), established in 1946, is one of South Korea's leading national research universities, located in Busan. Ranked #=449 in QS World University Rankings 2027, PNU is renowned for excellence in Engineering, Natural Sciences, Medicine, Business, Information Technology, and Environmental Sciences with high-impact research and top graduate employability.",
+    strengths: ["High-Impact Research & STEM Programs", "Engineering, Natural Sciences & Medicine", "Business & Environmental Sciences", "Excellent Graduate Employability"],
+    highlight: "Ranked #=449 in QS World University Rankings 2027; South Korea's top national research university."
+  },
+  {
+    name: "Kookmin University",
+    country: "South Korea",
+    region: "South Korea",
+    website: "https://english.kookmin.ac.kr/",
+    ranking: "QS World University Rankings 2027: #1001–1200",
+    description: "Established in 1946 in Seoul, South Korea, Kookmin University is ranked #1001–1200 in QS World University Rankings 2027. Recognized for strengths in Engineering, Computer Science, Artificial Intelligence, Automotive Engineering, Business, Design, and Architecture. Known for innovation-driven education and close collaboration with industry in mobility, smart technologies, and digital transformation.",
+    strengths: ["Automotive Engineering & Mobility", "Artificial Intelligence & Computer Science", "Business, Design & Architecture", "Industry Linkages & Entrepreneurship"],
+    highlight: "Ranked #1001–1200 in QS World University Rankings 2027; Leading Korean mobility & AI university."
+  }
 ];
 
 export const partnerImages = [
