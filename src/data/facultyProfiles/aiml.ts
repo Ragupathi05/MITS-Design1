@@ -1501,9 +1501,9 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
       {
         "title": "Awards/Achievements",
         "content": [
-          "Top Performing Mentor for Course on "Introduction on Intellectual Property to Engineers and Technologists" - Jan to Apr 2025 - NPTEL.",
-          "Top Performing Mentor for Course on "Cloud Computing and Distributed Systems" - Jan to Mar 2024 - NPTEL",
-          ""Certificate of Excellence" for the program "Use of ICT Education for on-line and Blended Learning" - October, 2016 - IIT Bombay.",
+          "Top Performing Mentor for Course on Introduction on Intellectual Property to Engineers and Technologists - Jan to Apr 2025 - NPTEL.",
+          "Top Performing Mentor for Course on Cloud Computing and Distributed Systems - Jan to Mar 2024 - NPTEL",
+          "Certificate of Excellence for the program Use of ICT Education for on-line and Blended Learning - October, 2016 - IIT Bombay.",
           "Ratified as Assistant Professor, JNTU Anantapuramu - June 2015 - JNTU Anantapuramu."
         ]
       },
@@ -3200,14 +3200,14 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
       {
         "title": "Awards/Achievements",
         "content": [
-          "Acted as Reviewer for Two Day "National Conference on Recent Advancements in Computing, Communication & Societal Applications (NASA' 23)" organized by the Department of Computer Science & Engineering on 19th & 20th April 2023.",
-          "Acted as Reviewer for Two Day "IEEE International Conference on Optimization Techniques for Learning (ICOTL' 23)" organized by the School of Computers, Madanapalle Institute of Technology & Science, Madanapalle, Andhra Pradesh, India during 7th & 8th December 2023.",
+          "Acted as Reviewer for Two Day National Conference on Recent Advancements in Computing, Communication & Societal Applications (NASA 23) organized by the Department of Computer Science & Engineering on 19th & 20th April 2023.",
+          "Acted as Reviewer for Two Day IEEE International Conference on Optimization Techniques for Learning (ICOTL 23) organized by the School of Computers, Madanapalle Institute of Technology & Science, Madanapalle, Andhra Pradesh, India during 7th & 8th December 2023.",
           {
-            "Identifier": ""Best Paper Award for the title Evaluation Ensembles of Machine Learning Models for the Prediction of Smart Phone Addiction" presented during the International Conference of Embracing the Digital Horizon",
+            "Identifier": "Best Paper Award for the title Evaluation Ensembles of Machine Learning Models for the Prediction of Smart Phone Addiction presented during the International Conference of Embracing the Digital Horizon",
             "Link": "Pioneering Commerce and Management Strategies for a Transformative Future (EDH 2024), organized by Loyala College of Arts & Science, Mettala, Tamil Nadu during 13th – 14th March 2024."
           },
           {
-            "Identifier": ""Best Paper Award for the title Diabetes Prediction using Supervised and Unsupervised Learning" presented during the International Conference of Embracing the Digital Horizon",
+            "Identifier": "Best Paper Award for the title Diabetes Prediction using Supervised and Unsupervised Learning presented during the International Conference of Embracing the Digital Horizon",
             "Link": "Pioneering Commerce and Management Strategies for a Transformative Future (EDH 2024), organized by Loyala College of Arts & Science, Mettala, Tamil Nadu during 13th – 14th March 2024."
           },
           "Recognized as NPTEL Discipline Star.",
@@ -3217,15 +3217,15 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
           "Received Appreciation as mentor for the NPTEL Online Certification Course Privacy and Security in online social media.",
           "Received Appreciation as mentor for the NPTEL Online Certification Course Understanding Incubation and Entrepreneurship.",
           "Received Appreciation for acting as Co-Convener for ASHV – 2K25.",
-          "Organized a MoU Exchange between "Dept. of CSE – AI & ML and Xenovex Technologies" on 8th November 2024.",
-          "Organized a MoU Exchange between "Dept. of CSE – AI & ML and Techno hub Software Solutions" on 21st November 2024.",
-          "Organized an Expert Talk on "Software Life Cycle" on 21st November 2024.",
-          "Organized a 5 Days Skill Development Program on "Python Programming" from 25th November to 29th November 2024.",
-          "Organized a MoU Exchange between "Dept. of CSE – AI & ML and Menmozhi Technologies" on 2nd December 2024.",
-          "Organized a Hands-on session on "GenAI Tools and App Development" on 2nd December 2024.",
+          "Organized a MoU Exchange between Dept. of CSE – AI & ML and Xenovex Technologies on 8th November 2024.",
+          "Organized a MoU Exchange between Dept. of CSE – AI & ML and Techno hub Software Solutions on 21st November 2024.",
+          "Organized an Expert Talk on Software Life Cycle on 21st November 2024.",
+          "Organized a 5 Days Skill Development Program on Python Programming from 25th November to 29th November 2024.",
+          "Organized a MoU Exchange between Dept. of CSE – AI & ML and Menmozhi Technologies on 2nd December 2024.",
+          "Organized a Hands-on session on GenAI Tools and App Development on 2nd December 2024.",
           {
-            "Identifier": "Organized a 3 Day Hands-on Workshop on "Web and Mobile App Development",
-            "Link": "From Basics to Deployment" from 27th January to 29th January 2025."
+            "Identifier": "Organized a 3 Day Hands-on Workshop on Web and Mobile App Development",
+            "Link": "From Basics to Deployment from 27th January to 29th January 2025."
           },
           {
             "Identifier": "Organized a Workshop on \"AI & ML Product Development Bootcamp",
@@ -3233,7 +3233,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
           },
           "Organized a Faculty Development Program on \"Microsoft Azure AI Engineer Associate\" was organized by Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning) in association with ICT ACADEMY 07th to 11th April 2025.",
           "Organized a National Level Technical Symposium \"AIMEX 2k25\" was organized by Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning) on 23rd April 2025.",
-          "Organized a Two-Day Career Guidance Programme on "Engineering Elevates and Enlightens" was organized by Department of Computer Science and Engineering (AI and ML) on 9th and 10th September 2025."
+          "Organized a Two-Day Career Guidance Programme on Engineering Elevates and Enlightens was organized by Department of Computer Science and Engineering (AI and ML) on 9th and 10th September 2025."
         ]
       }
     ]
@@ -3514,11 +3514,11 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
         "title": "Awards/Achievements",
         "content": [
           {
-            "Identifier": ""Best Paper Award for the title Deep Learning-Based Emotion Recognition System with Depression Detection Capability" presented during the International Conference of Embracing the Digital Horizon",
+            "Identifier": "Best Paper Award for the title Deep Learning-Based Emotion Recognition System with Depression Detection Capability presented during the International Conference of Embracing the Digital Horizon",
             "Link": "Pioneering Commerce and Management Strategies for a Transformative Future (EDH 2024), organized by Loyala College of Arts & Science, Mettala, Tamil Nadu during 13th – 14th March 2024."
           },
           {
-            "Identifier": ""Best Paper Award for the title Evaluating Ensemble Machine Learning Approaches for Accurate Flight Pricing Predictions" presented during the International Conference of Embracing the Digital Horizon",
+            "Identifier": "Best Paper Award for the title Evaluating Ensemble Machine Learning Approaches for Accurate Flight Pricing Predictions presented during the International Conference of Embracing the Digital Horizon",
             "Link": "Pioneering Commerce and Management Strategies for a Transformative Future (EDH 2024), organized by Loyala College of Arts & Science, Mettala, Tamil Nadu during 13th – 14th March 2024."
           },
           "Recognized as NPTEL Discipline Star July – Dec 2025",
