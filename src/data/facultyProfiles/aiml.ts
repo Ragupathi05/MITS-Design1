@@ -1019,7 +1019,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "3",
-            "Details of Research Publication": "Leveraging EfficientNetB3 in a Deep Learning Framework for High-Accuracy MRI Tumor Classification", CMC-Computers, Materials & Continua, DOI:10.32604/cmc.2024.053563",
+            "Details of Research Publication": "Leveraging EfficientNetB3 in a Deep Learning Framework for High-Accuracy MRI Tumor Classification, CMC-Computers, Materials & Continua, DOI:10.32604/cmc.2024.053563",
             "Indexing": "SCIE",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
@@ -1039,7 +1039,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "2",
-            "Details of Research Publication": "Predictive Modeling of Academic Success using Extreme Learning Machine", at ICCICCT – 2024",
+            "Details of Research Publication": "Predictive Modeling of Academic Success using Extreme Learning Machine, at ICCICCT - 2024",
             "Indexing": "Scopus",
             "Publication": "Book Chapter",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1049,7 +1049,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "2",
-            "Details of Research Publication": "A Review on Smart Agriculture System", at ICCICCT – 2024",
+            "Details of Research Publication": "A Review on Smart Agriculture System, at ICCICCT - 2024",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1079,7 +1079,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2022",
             "Author Position": "3",
-            "Details of Research Publication": "Analyzing How E-Learning and Virtual Reality could be Integrated to Enhance Studies", ECS Transactions, 107 (1) 13163-13173 (2022), The Electrochemical Society",
+            "Details of Research Publication": "Analyzing How E-Learning and Virtual Reality could be Integrated to Enhance Studies, ECS Transactions, 107 (1) 13163-13173 (2022), The Electrochemical Society",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
@@ -1109,7 +1109,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2018",
             "Author Position": "1",
-            "Details of Research Publication": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network", International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11,2018",
+            "Details of Research Publication": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network, International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11,2018",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
@@ -1119,7 +1119,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2015",
             "Author Position": "1",
-            "Details of Research Publication": "A Survey on study of various machine learning methods for classification" International Journal of Database Theory and Application Vol 8. No 5(2015)",
+            "Details of Research Publication": "A Survey on study of various machine learning methods for classification, International Journal of Database Theory and Application Vol 8. No 5(2015)",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
@@ -1129,7 +1129,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2014",
             "Author Position": "1",
-            "Details of Research Publication": "A Comparative Study on Different Meta-Cognitive Learning for Classification Problems " Journal of NanoScience and NanoTechnology - Spring Edition Vol 2, No 1 (2014)",
+            "Details of Research Publication": "A Comparative Study on Different Meta-Cognitive Learning for Classification Problems, Journal of NanoScience and NanoTechnology - Spring Edition Vol 2, No 1 (2014)",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -2306,7 +2306,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "3",
-            "Details of Research Publication": "Title:"Locating Patient Health Data Theft Using Gradient Boosting with Hybrid Microwave Transmission-Based Wearable Device" Conference Name: International Conference on Signal Processing, Computation, Electronics, Power and Telecommunication (IConSCEPT) Publisher: IEEE DOI: 10.1109/IConSCEPT61884.2024.10627827 Page: 1-6, Published: July 4, 2024 Published: July 4, 2024",
+            "Details of Research Publication": "Title: Locating Patient Health Data Theft Using Gradient Boosting with Hybrid Microwave Transmission-Based Wearable Device, Conference Name: International Conference on Signal Processing, Computation, Electronics, Power and Telecommunication (IConSCEPT) Publisher: IEEE DOI: 10.1109/IConSCEPT61884.2024.10627827 Page: 1-6, Published: July 4, 2024 Published: July 4, 2024",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -2326,7 +2326,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2022",
             "Author Position": "4",
-            "Details of Research Publication": "Title: "Accelerating Alzheimer's Research with Machine Learning Models for Improved Detection" Conference Name: 7th International Conference on Electronics, Communication and Aerospace Technology (ICECA) Publisher: IEEE DOI: 10.1109/ICECA58529.2023.10395855 Page: 855-862, Published: Feb. 9, 2024",
+            "Details of Research Publication": "Title: Accelerating Alzheimer's Research with Machine Learning Models for Improved Detection, Conference Name: 7th International Conference on Electronics, Communication and Aerospace Technology (ICECA) Publisher: IEEE DOI: 10.1109/ICECA58529.2023.10395855 Page: 855-862, Published: Feb. 9, 2024",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -3147,7 +3147,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "1",
-            "Details of Research Publication": ""Integrating DCCS-Net for High-Fidelity Watermarking and Tampering Detection in Brain Scan Images" in 2024 IEEE 6th International Conference on Cybernetics, Cognition and Machine Learning Applications (ICCCMLA) 19 – 20 October 2024. DOI: 10.1109/ICCCMLA63077.2024.10871454",
+            "Details of Research Publication": "Integrating DCCS-Net for High-Fidelity Watermarking and Tampering Detection in Brain Scan Images, in 2024 IEEE 6th International Conference on Cybernetics, Cognition and Machine Learning Applications (ICCCMLA) 19 – 20 October 2024. DOI: 10.1109/ICCCMLA63077.2024.10871454",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
@@ -3157,7 +3157,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2024",
             "Author Position": "1",
-            "Details of Research Publication": ""Enhanced Brain Tumor MRI Scan Reconstruction via the EI-Fusion-Net Model" in International Journal of Intelligent Engineering and Systems (INASS), Vol.17, No.4, May 29, 2024. DOI: 10.22266/ijies2024.0831.53",
+            "Details of Research Publication": "Enhanced Brain Tumor MRI Scan Reconstruction via the EI-Fusion-Net Model, in International Journal of Intelligent Engineering and Systems (INASS), Vol.17, No.4, May 29, 2024. DOI: 10.22266/ijies2024.0831.53",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
@@ -3167,7 +3167,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2023",
             "Author Position": "3",
-            "Details of Research Publication": ""Multi Objective Evaluator Model Development for Analyze the Customer Behavior" in 3rd International Conference on Advancement in Electronics & Communication Engineering (AECE) 23 – 24 November 2023. DOI: https://doi.org/10.1109/AECE59614.2023.10428189",
+            "Details of Research Publication": "Multi Objective Evaluator Model Development for Analyze the Customer Behavior, in 3rd International Conference on Advancement in Electronics & Communication Engineering (AECE) 23 – 24 November 2023. DOI: https://doi.org/10.1109/AECE59614.2023.10428189",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
@@ -3177,7 +3177,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2022",
             "Author Position": "1",
-            "Details of Research Publication": ""A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores" in IEEE MysuruCon 2022 – 2nd edition of the Flagship International Conference Series of IEEE Mysuru Subsection in Association with IEEE Bangalore Section Hosted by JSS Science & Technology University, Bengaluru, 16th & 17th October 2022. DOI: 10.1109/MysuruCon55714.2022.9972746",
+            "Details of Research Publication": "A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores, in IEEE MysuruCon 2022 – 2nd edition of the Flagship International Conference Series of IEEE Mysuru Subsection in Association with IEEE Bangalore Section Hosted by JSS Science & Technology University, Bengaluru, 16th & 17th October 2022. DOI: 10.1109/MysuruCon55714.2022.9972746",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
@@ -3466,7 +3466,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "MITS",
             "Academic Year": "2022-23",
             "Author Position": "2",
-            "Details of Research Publication": "A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores" in IEEE MysuruCon 2022 – 2nd edition of the Flagship International Conference Series of IEEE Mysuru Subsection in Association with IEEE Bangalore Section Hosted by JSS Science & Technology University, Bengaluru, 16th & 17th October 2022. DOI: 10.1109/MysuruCon55714.2022.9972746",
+            "Details of Research Publication": "A Deep Learning-based Methodology for Predicting Monkey Pox from Skin Sores, in IEEE MysuruCon 2022 – 2nd edition of the Flagship International Conference Series of IEEE Mysuru Subsection in Association with IEEE Bangalore Section Hosted by JSS Science & Technology University, Bengaluru, 16th & 17th October 2022. DOI: 10.1109/MysuruCon55714.2022.9972746",
             "Indexing": "Scopus",
             "Publication": "Conference Proceedings",
             "Journal Quartile (Q1/Q2/Q3/Q4)": ""

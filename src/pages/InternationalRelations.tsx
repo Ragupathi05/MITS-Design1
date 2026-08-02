@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import LanguageSwitcher from "@/components/international-relations/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { cn, slugify } from "@/lib/utils";
 import {
@@ -816,72 +815,306 @@ const MoUSection = () => {
   );
 };
 
-const InternshipsSection = () => (
-  <div className="space-y-10">
-    <SectionTitle title="Internships & Exchange Programs" subtitle="Research internships, student exchange and academic mobility across MITS' global network." />
-    <ImageCarousel images={internshipGallery} />
-    <div className="grid gap-6">
-      {internships.map((p) => (
-        <div key={p.title} className="rounded-2xl border border-border bg-white overflow-hidden">
-          <div className="p-6 border-b border-border bg-gradient-to-r from-primary/5 to-transparent">
-            <div className="flex flex-wrap items-start justify-between gap-3">
-              <div>
-                <h3 className="text-xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>{p.title}</h3>
-                <div className="flex flex-wrap items-center gap-3 mt-2 text-xs text-muted-foreground">
-                  {p.country && <span className="inline-flex items-center gap-1"><Globe className="w-3 h-3" />{p.country}</span>}
-                  {p.partner && <span className="inline-flex items-center gap-1"><Building2 className="w-3 h-3" />{p.partner}</span>}
-                  {p.period && <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />{p.period}</span>}
-                </div>
-              </div>
-              {p.reportUrl && (
-                <a href={p.reportUrl} target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" variant="outline" className="gap-2"><FileText className="w-4 h-4" />Report</Button>
-                </a>
+/** Extracts the first 4-digit year from a period string, for year-wise grouping. */
+const getProgramYear = (period?: string): string => {
+  if (!period) return "Undated";
+  const match = period.match(/\d{4}/);
+  return match ? match[0] : "Undated";
+};
+
+const ParticipantsModal = ({
+  program,
+  onClose,
+}: {
+  program: (typeof internships)[number] | null;
+  onClose: () => void;
+}) => (
+  <AnimatePresence>
+    {program && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-[200] bg-[#0f2a44]/60 backdrop-blur-sm flex items-center justify-center p-4"
+        onClick={onClose}
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 12 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: 12 }}
+          transition={{ duration: 0.2 }}
+          onClick={(e) => e.stopPropagation()}
+          className="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[80vh] overflow-hidden flex flex-col"
+        >
+          <div className="p-5 border-b border-border flex items-start justify-between gap-3 bg-gradient-to-r from-[#0f2a44] to-[#152f4f] text-white shrink-0">
+            <div className="min-w-0">
+              <div className="text-[11px] uppercase tracking-widest text-[#caa74d] font-bold mb-1">Participants</div>
+              <h3 className="font-bold leading-snug text-sm md:text-base" style={{ fontFamily: "var(--font-display)" }}>
+                {program.title}
+              </h3>
+            </div>
+            <button onClick={onClose} className="text-white/70 hover:text-white shrink-0">
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+          <div className="overflow-y-auto p-5">
+            <table className="w-full text-sm">
+              <thead className="text-xs uppercase text-muted-foreground border-b border-border">
+                <tr>
+                  <th className="text-left py-2 pr-4">#</th>
+                  <th className="text-left py-2 pr-4">Name</th>
+                  <th className="text-left py-2 pr-4">Department</th>
+                  <th className="text-left py-2">Roll No</th>
+                </tr>
+              </thead>
+              <tbody>
+                {program.participants?.map((s) => (
+                  <tr key={s.sno} className="border-b border-border last:border-0">
+                    <td className="py-2 pr-4 text-muted-foreground">{s.sno}</td>
+                    <td className="py-2 pr-4 font-medium text-secondary">
+                      {s.name}
+                      {s.extra ? <span className="text-muted-foreground font-normal"> ({s.extra})</span> : null}
+                    </td>
+                    <td className="py-2 pr-4">{s.dept}</td>
+                    <td className="py-2 text-muted-foreground">{s.roll}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+);
+
+/** Strips a trailing "(...)" so names like "Ichinoseki College (National Institute of Technology - KOSEN)" compare cleanly. */
+const stripParenthetical = (s: string) => s.replace(/\s*\([^)]*\)\s*/g, "").trim().toLowerCase();
+
+/**
+ * Matches a program's free-text `partner` field (e.g. "University of Aizu") against the
+ * existing MoU `partners` records to find that university's real, already-stored website.
+ * Returns undefined for partners that aren't in our MoU list (e.g. GS Co., Ltd.) rather
+ * than guessing a URL.
+ */
+const findPartnerWebsite = (partnerName?: string): string | undefined => {
+  if (!partnerName) return undefined;
+  const frag = stripParenthetical(partnerName);
+  const match = partners.find((p) => {
+    const core = stripParenthetical(p.name);
+    return core.includes(frag) || frag.includes(core);
+  });
+  return match?.website;
+};
+
+const InternshipProgramCard = ({
+  p,
+  onViewParticipants,
+}: {
+  p: (typeof internships)[number];
+  onViewParticipants: (p: (typeof internships)[number]) => void;
+}) => {
+  const website = findPartnerWebsite(p.partner);
+
+  return (
+    <div className="rounded-2xl border border-border bg-white overflow-hidden hover:shadow-lg transition-all">
+      <div className="p-5 md:p-6 bg-gradient-to-r from-primary/5 to-transparent border-b border-border">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h3 className="text-lg font-bold text-secondary leading-snug" style={{ fontFamily: "var(--font-display)" }}>
+              {p.title}
+            </h3>
+            <div className="flex flex-wrap items-center gap-3 mt-2 text-xs text-muted-foreground">
+              {p.country && (
+                <span className="inline-flex items-center gap-1">
+                  <Globe className="w-3 h-3" />
+                  {p.country}
+                </span>
+              )}
+              {p.partner && (
+                website ? (
+                  <a
+                    href={website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-primary hover:underline font-medium"
+                  >
+                    <Building2 className="w-3 h-3" />
+                    {p.partner}
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-1">
+                    <Building2 className="w-3 h-3" />
+                    {p.partner}
+                  </span>
+                )
+              )}
+              {p.period && (
+                <span className="inline-flex items-center gap-1">
+                  <Calendar className="w-3 h-3" />
+                  {p.period}
+                </span>
               )}
             </div>
-            {p.description && <p className="text-sm text-secondary/80 mt-3">{p.description}</p>}
           </div>
-          {p.participants && (
-            <div className="p-6 overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead className="text-xs uppercase text-muted-foreground border-b border-border">
-                  <tr>
-                    <th className="text-left py-2 pr-4">#</th>
-                    <th className="text-left py-2 pr-4">Name</th>
-                    <th className="text-left py-2 pr-4">Department</th>
-                    <th className="text-left py-2">Roll No</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {p.participants.map((s) => (
-                    <tr key={s.sno} className="border-b border-border last:border-0">
-                      <td className="py-2 pr-4 text-muted-foreground">{s.sno}</td>
-                      <td className="py-2 pr-4 font-medium text-secondary">{s.name}</td>
-                      <td className="py-2 pr-4">{s.dept}</td>
-                      <td className="py-2 text-muted-foreground">{s.roll}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
+          <div className="flex flex-wrap gap-2 shrink-0">
+            {website && (
+              <a href={website} target="_blank" rel="noopener noreferrer">
+                <Button size="sm" variant="outline" className="gap-2">
+                  <Globe className="w-4 h-4" />
+                  University Website
+                </Button>
+              </a>
+            )}
+            {p.reportUrl && (
+              <a href={p.reportUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="sm" variant="outline" className="gap-2">
+                  <FileText className="w-4 h-4" />
+                  Report
+                </Button>
+              </a>
+            )}
+          </div>
         </div>
-      ))}
-    </div>
-
-    <div className="rounded-2xl border border-border bg-muted/30 p-6">
-      <h3 className="font-bold text-secondary mb-3" style={{ fontFamily: "var(--font-display)" }}>Internship Archives</h3>
-      <div className="flex flex-wrap gap-3">
-        {internshipArchives.map((a) => (
-          <a key={a.year} href={a.url} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-4 py-2 text-sm hover:border-primary hover:text-primary transition-colors">
-            <Download className="w-4 h-4" />{a.year} Internships Data
-          </a>
-        ))}
+        {p.activity && (
+          <span className="inline-block mt-3 text-[11px] font-bold uppercase tracking-wide text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+            {p.activity}
+          </span>
+        )}
+        {p.description && <p className="text-sm text-secondary/80 mt-3 leading-relaxed">{p.description}</p>}
       </div>
+      {p.participants && p.participants.length > 0 && (
+        <button
+          onClick={() => onViewParticipants(p)}
+          className="w-full flex items-center justify-between px-5 md:px-6 py-4 hover:bg-slate-50 transition-colors group"
+        >
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-secondary">
+            <Users className="w-4 h-4 text-primary" />
+            {p.participants.length} Participant{p.participants.length === 1 ? "" : "s"}
+          </span>
+          <span className="text-xs font-bold text-primary inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            View List <ArrowRight className="w-3.5 h-3.5" />
+          </span>
+        </button>
+      )}
     </div>
-  </div>
-);
+  );
+};
+
+const InternshipsSection = () => {
+  const [groupBy, setGroupBy] = useState<"year" | "university">("year");
+  const [activeProgram, setActiveProgram] = useState<(typeof internships)[number] | null>(null);
+
+  const byYear = internships.reduce((acc, p) => {
+    const y = getProgramYear(p.period);
+    (acc[y] ||= []).push(p);
+    return acc;
+  }, {} as Record<string, typeof internships>);
+  const years = Object.keys(byYear).sort((a, b) => b.localeCompare(a));
+
+  const byUniversity = internships.reduce((acc, p) => {
+    const u = p.partner || "Other";
+    (acc[u] ||= []).push(p);
+    return acc;
+  }, {} as Record<string, typeof internships>);
+  const universities = Object.keys(byUniversity).sort();
+
+  const groups =
+    groupBy === "year"
+      ? years.map((y) => ({ key: y, label: y === "Undated" ? "Undated" : y, list: byYear[y] }))
+      : universities.map((u) => ({ key: u, label: u, list: byUniversity[u] }));
+
+  return (
+    <div className="space-y-10">
+      <SectionTitle
+        title="Internships & Exchange Programs"
+        subtitle="Research internships, student exchange and academic mobility across MITS' global network."
+      />
+      <ImageCarousel images={internshipGallery} />
+
+      <div className="flex items-center justify-center gap-1 bg-slate-100 rounded-full p-1 w-fit mx-auto">
+        <button
+          onClick={() => setGroupBy("year")}
+          className={cn(
+            "px-5 py-2 rounded-full text-sm font-bold transition-all",
+            groupBy === "year" ? "bg-white text-secondary shadow" : "text-muted-foreground hover:text-secondary"
+          )}
+        >
+          Year-wise
+        </button>
+        <button
+          onClick={() => setGroupBy("university")}
+          className={cn(
+            "px-5 py-2 rounded-full text-sm font-bold transition-all",
+            groupBy === "university" ? "bg-white text-secondary shadow" : "text-muted-foreground hover:text-secondary"
+          )}
+        >
+          University-wise
+        </button>
+      </div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={groupBy}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.25 }}
+          className="space-y-10"
+        >
+          {groups.map((g) => (
+            <div key={g.key} className="space-y-4">
+              <div className="flex items-center justify-between border-b border-border pb-3">
+                <h3
+                  className="font-bold text-secondary text-lg flex items-center gap-2"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  {groupBy === "year" ? (
+                    <Calendar className="w-4 h-4 text-primary" />
+                  ) : (
+                    <Building2 className="w-4 h-4 text-primary" />
+                  )}
+                  {g.label}
+                </h3>
+                <span className="text-xs font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
+                  {g.list.length} Programme{g.list.length === 1 ? "" : "s"}
+                </span>
+              </div>
+              <div className="grid gap-5">
+                {g.list.map((p) => (
+                  <InternshipProgramCard key={`${p.title}__${p.period}`} p={p} onViewParticipants={setActiveProgram} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
+
+      <div className="rounded-2xl border border-border bg-muted/30 p-6">
+        <h3 className="font-bold text-secondary mb-3" style={{ fontFamily: "var(--font-display)" }}>
+          Internship Archives
+        </h3>
+        <div className="flex flex-wrap gap-3">
+          {internshipArchives.map((a) => (
+            <a
+              key={a.year}
+              href={a.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-4 py-2 text-sm hover:border-primary hover:text-primary transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              {a.year} Internships Data
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <ParticipantsModal program={activeProgram} onClose={() => setActiveProgram(null)} />
+    </div>
+  );
+};
 
 const FellowshipsSection = () => (
   <div className="space-y-8">
@@ -1339,7 +1572,6 @@ const InternationalRelations = () => {
       </section>
 
       <Footer />
-      <LanguageSwitcher />
     </div>
   );
 };
