@@ -720,7 +720,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
             "Publication Affiliation": "Others",
             "Academic Year": "2021",
             "Author Position": "3",
-            "Details of Research Publication": "Matrix Factorization based recommendation system using hybrid optimization technique Research article in "European Union Digital Library "published in 19-02-2021.EAI Endorsed Transactions on Energy Web 07 2021 - 09 2021 | Volume 8 | Issue 35 | e14",
+            "Details of Research Publication": "Matrix Factorization based recommendation system using hybrid optimization technique Research article in European Union Digital Library published in 19-02-2021.EAI Endorsed Transactions on Energy Web 07 2021 - 09 2021 | Volume 8 | Issue 35 | e14",
             "Indexing": "Scopus",
             "Publication": "Article",
             "Journal Quartile (Q1/Q2/Q3/Q4)": "-"

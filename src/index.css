@@ -247,3 +247,18 @@ html, body, #root {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Google Translate widget — keep only our own floating UI, hide Google's default chrome */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}

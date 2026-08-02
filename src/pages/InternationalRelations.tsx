@@ -1,16 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
   Globe, Users, GraduationCap, Award, Plane, Sparkles, Calendar,
   BookOpen, FileText, Download, ExternalLink, MapPin, Phone, Mail,
   Building2, ChevronLeft, ChevronRight, Home, ArrowRight, Landmark, Star, CheckCircle2,
+  Search, X,
   type LucideIcon,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LanguageSwitcher from "@/components/international-relations/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, slugify } from "@/lib/utils";
 import {
   aboutIR, aboutGallery, contactCard, partners, partnerImages, type Partner,
   internships, internshipArchives, fellowships, globalPrograms,
@@ -34,7 +36,7 @@ const NAV: { id: Section; label: string; icon: LucideIcon }[] = [
   { id: "stanford",    label: "Stanford Initiative", icon: Star },
 ];
 
-const regionColors: Record<string, string> = {
+export const regionColors: Record<string, string> = {
   US: "bg-blue-100 text-blue-800",
   Europe: "bg-emerald-100 text-emerald-800",
   Japan: "bg-rose-100 text-rose-800",
@@ -47,6 +49,76 @@ const regionColors: Record<string, string> = {
 
 /* ---------- shared UI helpers ---------- */
 
+/** Crossfades through the real IRO delegation/campus photos already defined in heroBanners. */
+const HeroBackdrop = ({ images }: { images: string[] }) => {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    if (!images || images.length <= 1) return;
+    const timer = setInterval(() => setIdx((p) => (p + 1) % images.length), 6000);
+    return () => clearInterval(timer);
+  }, [images?.length]);
+
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div className="absolute inset-0 opacity-30">
+      <AnimatePresence mode="sync">
+        <motion.img
+          key={images[idx]}
+          src={images[idx]}
+          alt="MITS International Relations delegations and partnerships"
+          initial={{ opacity: 0, scale: 1.04 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </AnimatePresence>
+    </div>
+  );
+};
+
+/** Counts up to the numeric portion of a stat value (e.g. "20+", "300+") once it scrolls into view. */
+const AnimatedStat = ({ value, label }: { value: string; label: string }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-40px" });
+  const match = value.match(/^(\d+)(.*)$/);
+  const target = match ? parseInt(match[1], 10) : 0;
+  const suffix = match ? match[2] : "";
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const duration = 1100;
+    const stepMs = 16;
+    const steps = Math.max(1, Math.round(duration / stepMs));
+    const increment = target / steps;
+    let current = 0;
+    let step = 0;
+    const timer = setInterval(() => {
+      step += 1;
+      current += increment;
+      if (step >= steps) {
+        setDisplay(target);
+        clearInterval(timer);
+      } else {
+        setDisplay(Math.floor(current));
+      }
+    }, stepMs);
+    return () => clearInterval(timer);
+  }, [isInView, target]);
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="text-2xl md:text-3xl font-bold text-[#0f2a44]" style={{ fontFamily: "var(--font-display)" }}>
+        {display}
+        {suffix}
+      </div>
+      <div className="text-xs md:text-sm text-muted-foreground mt-1">{label}</div>
+    </div>
+  );
+};
+
 const SectionTitle = ({ title, subtitle }: { title: string; subtitle?: string }) => (
   <div className="mb-8">
     <h2 className="text-3xl md:text-4xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
@@ -57,7 +129,7 @@ const SectionTitle = ({ title, subtitle }: { title: string; subtitle?: string })
   </div>
 );
 
-const ImageCarousel = ({ images }: { images: string[] }) => {
+export const ImageCarousel = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [lightbox, setLightbox] = useState<string | null>(null);
 
@@ -343,16 +415,44 @@ const AboutSection = () => (
     </div>
 
     {/* IRO Leadership & Contact */}
-    <div className="rounded-3xl border border-border bg-gradient-to-r from-[#0f2a44] to-[#152f4f] text-white p-6 md:p-8 shadow-lg">
-      <div className="flex items-center gap-2 text-[#caa74d] font-bold mb-3 uppercase text-xs tracking-widest">
-        <Users className="w-4 h-4" /> International Relations Office (IRO) Leadership
+    <div className="rounded-3xl border border-border bg-gradient-to-r from-[#0f2a44] to-[#152f4f] text-white p-6 md:p-8 shadow-lg space-y-6">
+      <div>
+        <div className="flex items-center gap-2 text-[#caa74d] font-bold mb-3 uppercase text-xs tracking-widest">
+          <Users className="w-4 h-4" /> International Relations Office (IRO) Leadership
+        </div>
+        <p className="text-sm md:text-base leading-relaxed text-white/90">{aboutIR.office}</p>
       </div>
-      <p className="text-sm md:text-base leading-relaxed text-white/90">{aboutIR.office}</p>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2 border-t border-white/10">
+        {contactCard.team.map((t) => (
+          <div key={t.name} className="rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-all flex flex-col gap-2">
+            <div className="w-11 h-11 rounded-full bg-[#caa74d]/20 border border-[#caa74d]/40 text-[#caa74d] flex items-center justify-center font-bold text-sm shrink-0">
+              {t.name
+                .replace(/^(Dr\.|Mrs\.|Mr\.|Ms\.)\s*/, "")
+                .split(" ")
+                .filter(Boolean)
+                .slice(0, 2)
+                .map((w) => w[0])
+                .join("")
+                .toUpperCase()}
+            </div>
+            <div>
+              <div className="font-semibold text-sm text-white leading-snug">{t.name}</div>
+              <div className="text-[11px] text-white/70 mt-0.5 leading-snug">{t.designation}</div>
+            </div>
+            {t.email && (
+              <a href={`mailto:${t.email}`} className="text-[11px] text-[#caa74d] hover:underline inline-flex items-center gap-1 mt-auto pt-1">
+                <Mail className="w-3 h-3" />{t.email}
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 );
 
-const domainMap: Record<string, string> = {
+export const domainMap: Record<string, string> = {
   "Bowling Green State University (BGSU)": "bgsu.edu",
   "Rivier University": "rivier.edu",
   "University of Applied Sciences, Hagenberg – Upper Austria": "fh-ooe.at",
@@ -389,7 +489,7 @@ const getDomain = (url: string) => {
   }
 };
 
-const FallbackCrest = ({ name }: { name: string }) => {
+export const FallbackCrest = ({ name }: { name: string }) => {
   const isCompany =
     name.toLowerCase().includes("group") ||
     name.toLowerCase().includes("services") ||
@@ -434,7 +534,7 @@ const FallbackCrest = ({ name }: { name: string }) => {
   );
 };
 
-const localLogos: Record<string, string> = {
+export const localLogos: Record<string, string> = {
   "Bowling Green State University (BGSU)": "Logos/bgsu.png",
   "Bowling Green State University": "Logos/bgsu.png",
   "University of Applied Sciences Upper Austria (Hagenberg Campus)": "Logos/fh-ooe.png",
@@ -458,7 +558,7 @@ const localLogos: Record<string, string> = {
   "Kookmin University": "Logos/kookmin.png",
 };
 
-const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
+export const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
   const [imgFailed, setImgFailed] = useState(false);
   const BASE = import.meta.env.BASE_URL;
   const localLogo = localLogos[p.name];
@@ -548,11 +648,68 @@ const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
   );
 };
 
+const PartnerLogoTile = ({ p }: { p: (typeof partners)[0] }) => {
+  const [imgFailed, setImgFailed] = useState(false);
+  const BASE = import.meta.env.BASE_URL;
+  const localLogo = localLogos[p.name];
+  const logoUrl = localLogo ? `${BASE}${localLogo}` : null;
+
+  return (
+    <Link
+      to={`/international-relations/mou/${slugify(p.name)}`}
+      className="group relative flex flex-col items-center justify-center gap-3 aspect-square rounded-2xl border border-border bg-white p-5 hover:shadow-xl hover:-translate-y-1 hover:border-[#caa74d]/60 transition-all overflow-hidden"
+    >
+      {!imgFailed && logoUrl ? (
+        <img
+          src={logoUrl}
+          alt={`${p.name} logo`}
+          className="max-h-16 md:max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          onError={() => setImgFailed(true)}
+        />
+      ) : (
+        <FallbackCrest name={p.name} />
+      )}
+
+      {/* Name only appears on hover / focus — the wall itself stays pure logos */}
+      <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 group-focus-visible:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-[#0f2a44] to-[#0f2a44]/90 text-white px-3 py-2.5 text-center">
+        <div className="text-[11px] font-bold leading-tight line-clamp-2">{p.name}</div>
+        <div className="text-[10px] text-white/70 mt-0.5">{p.country}</div>
+      </div>
+
+      <ExternalLink className="absolute top-3 right-3 w-3.5 h-3.5 text-muted-foreground/40 group-hover:text-[#caa74d] transition-colors" />
+    </Link>
+  );
+};
+
 const MoUSection = () => {
-  const grouped = partners.reduce((acc, p) => {
+  const [regionFilter, setRegionFilter] = useState<string>("All");
+  const [query, setQuery] = useState("");
+
+  const availableRegions = useMemo(
+    () => Array.from(new Set(partners.map((p) => p.region))),
+    []
+  );
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return partners.filter((p) => {
+      const matchesRegion = regionFilter === "All" || p.region === regionFilter;
+      const matchesQuery =
+        !q ||
+        p.name.toLowerCase().includes(q) ||
+        p.country.toLowerCase().includes(q) ||
+        (p.strengths || []).some((s) => s.toLowerCase().includes(q));
+      return matchesRegion && matchesQuery;
+    });
+  }, [regionFilter, query]);
+
+  const grouped = filtered.reduce((acc, p) => {
     (acc[p.region] ||= []).push(p);
     return acc;
   }, {} as Record<string, typeof partners>);
+
+  const regionLabel = (region: string) =>
+    region === "US" ? "United States" : region === "Europe" ? "Europe" : region;
 
   return (
     <div className="space-y-10">
@@ -561,6 +718,66 @@ const MoUSection = () => {
         subtitle="MITS – Deemed to be University has active MoUs and global partnerships with leading QS-ranked institutions worldwide."
       />
       <ImageCarousel images={partnerImages} />
+
+      {/* Filter & search bar */}
+      <div className="rounded-2xl border border-border bg-white p-4 md:p-5 shadow-sm space-y-4">
+        <div className="flex flex-col md:flex-row md:items-center gap-3">
+          <div className="relative flex-1">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by university, country, or focus area…"
+              className="w-full pl-10 pr-9 py-2.5 rounded-xl border border-border bg-slate-50 text-sm text-secondary placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/40 transition-all"
+            />
+            {query && (
+              <button
+                onClick={() => setQuery("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-secondary"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+          <span className="text-xs font-semibold text-muted-foreground shrink-0">
+            {filtered.length} of {partners.length} partner{partners.length === 1 ? "" : "s"}
+          </span>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setRegionFilter("All")}
+            className={cn(
+              "px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all",
+              regionFilter === "All"
+                ? "bg-secondary text-white border-secondary"
+                : "bg-white text-secondary border-border hover:border-secondary"
+            )}
+          >
+            All Regions
+          </button>
+          {availableRegions.map((region) => (
+            <button
+              key={region}
+              onClick={() => setRegionFilter(region)}
+              className={cn(
+                "px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all",
+                regionFilter === region
+                  ? cn(regionColors[region], "border-transparent shadow-sm")
+                  : "bg-white text-secondary border-border hover:border-primary"
+              )}
+            >
+              {regionLabel(region)}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {Object.keys(grouped).length === 0 && (
+        <div className="text-center py-16 rounded-2xl border border-dashed border-border bg-slate-50/60">
+          <p className="text-sm text-muted-foreground">No partner universities match your search.</p>
+        </div>
+      )}
+
       {Object.entries(grouped).map(([region, list]) => (
         <div key={region} className="mb-10 last:mb-0 space-y-4">
           <div className="flex items-center justify-between border-b border-border pb-3">
@@ -569,20 +786,32 @@ const MoUSection = () => {
                 {region === "US" ? "US Universities" : region === "Europe" ? "European Universities" : `${region} Universities`}
               </span>
               <h3 className="font-bold text-secondary text-lg" style={{ fontFamily: "var(--font-display)" }}>
-                {region === "US" ? "United States" : region === "Europe" ? "Europe" : region}
+                {regionLabel(region)}
               </h3>
             </div>
             <span className="text-xs font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
               {list.length} Institutional MoUs
             </span>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {list.map((p) => (
-              <PartnerCard key={p.name} p={p} />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            {list.map((p, i) => (
+              <motion.div
+                key={p.name}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.4, delay: (i % 4) * 0.06 }}
+              >
+                <PartnerLogoTile p={p} />
+              </motion.div>
             ))}
           </div>
         </div>
       ))}
+
+      <p className="text-center text-xs text-muted-foreground pt-2">
+        Tap a university crest to view MoU photos, an institutional profile, and its official website.
+      </p>
     </div>
   );
 };
@@ -897,10 +1126,43 @@ const StanfordTeaser = () => (
   </div>
 );
 
+/** Countries strip — derived purely from partners[].country, deduplicated. No data added. */
+const GlobalFootprintStrip = () => {
+  const countryRegion = new Map<string, string>();
+  partners.forEach((p) => {
+    if (!countryRegion.has(p.country)) countryRegion.set(p.country, p.region);
+  });
+  const countries = Array.from(countryRegion.entries());
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 md:px-6 mt-6 md:mt-8">
+      <div className="rounded-2xl border border-border bg-white/70 backdrop-blur-sm px-5 py-4 md:px-8 md:py-5 flex flex-wrap items-center gap-3 md:gap-4 shadow-sm">
+        <span className="text-[11px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground shrink-0 flex items-center gap-2">
+          <Globe className="w-3.5 h-3.5 text-primary" /> Our Global Footprint
+        </span>
+        <div className="h-4 w-px bg-border hidden md:block" />
+        <div className="flex flex-wrap gap-2">
+          {countries.map(([country, region]) => (
+            <span
+              key={country}
+              className={cn(
+                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] md:text-xs font-semibold border border-transparent",
+                regionColors[region] || regionColors.Other
+              )}
+            >
+              <MapPin className="w-3 h-3" />
+              {country}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 /* ---------- MAIN PAGE ---------- */
 
 const InternationalRelations = () => {
-  const BASE = import.meta.env.BASE_URL;
   const location = useLocation();
   const navigate = useNavigate();
   const initial = (location.hash.replace("#", "") as Section) || "about";
@@ -927,16 +1189,7 @@ const InternationalRelations = () => {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#143557] to-[#0a1f33] text-white py-16 md:py-24">
-        <div className="absolute inset-0 opacity-25">
-          <img
-            src={`${BASE}Hero-Section/image%206.jpg`}
-            alt="MITS Campus"
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = `${BASE}Hero-Section/image%201.JPG`;
-            }}
-          />
-        </div>
+        <HeroBackdrop images={heroBanners} />
         <div className="absolute inset-0 bg-gradient-to-br from-[#0f2a44]/95 via-[#0f2a44]/80 to-[#0a1f33]/95" />
         <div
           className="absolute inset-0 opacity-15"
@@ -986,13 +1239,13 @@ const InternationalRelations = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6 -mt-10 md:-mt-14 relative z-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 bg-white rounded-2xl shadow-xl border border-border p-4 md:p-6">
           {heroStats.map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-[#0f2a44]" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-              <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.label}</div>
-            </div>
+            <AnimatedStat key={s.label} value={s.value} label={s.label} />
           ))}
         </div>
       </div>
+
+      {/* Global Footprint strip — countries derived directly from the MoU partner records */}
+      <GlobalFootprintStrip />
 
       {/* Tabs + Content */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
@@ -1008,13 +1261,21 @@ const InternationalRelations = () => {
                     key={n.id}
                     onClick={() => handleNav(n.id)}
                     className={cn(
-                      "shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap lg:w-full lg:justify-start",
+                      "relative shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors whitespace-nowrap lg:w-full lg:justify-start overflow-hidden",
                       isActive
-                        ? "bg-primary text-primary-foreground shadow-md"
+                        ? "text-primary-foreground shadow-md"
                         : "bg-white border border-border text-secondary hover:border-primary hover:text-primary"
                     )}
                   >
-                    <Icon className="w-4 h-4" />{n.label}
+                    {isActive && (
+                      <motion.span
+                        layoutId="ir-nav-active"
+                        className="absolute inset-0 bg-primary"
+                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                      />
+                    )}
+                    <Icon className="w-4 h-4 relative z-10" />
+                    <span className="relative z-10">{n.label}</span>
                   </button>
                 );
               })}
@@ -1078,6 +1339,7 @@ const InternationalRelations = () => {
       </section>
 
       <Footer />
+      <LanguageSwitcher />
     </div>
   );
 };
