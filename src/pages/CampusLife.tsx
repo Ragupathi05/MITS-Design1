@@ -228,7 +228,7 @@ const CinematicHero = () => {
       />
 
       {/* Lightened Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20" />
 
       {/* Animated Particles/Shimmer Effect */}
@@ -747,7 +747,7 @@ const FacilitiesShowcase = () => {
                 />
                 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-primary/90 group-hover:via-primary/70 transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)] group-hover:from-primary/90 group-hover:via-primary/70 transition-all duration-500" />
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">

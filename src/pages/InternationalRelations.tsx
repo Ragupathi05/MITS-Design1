@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Globe, Users, GraduationCap, Award, Plane, Sparkles, Calendar,
   BookOpen, FileText, Download, ExternalLink, MapPin, Phone, Mail,
-  Building2, ChevronLeft, ChevronRight, Home, ArrowRight, Landmark, Star,
+  Building2, ChevronLeft, ChevronRight, Home, ArrowRight, Landmark, Star, CheckCircle2,
   type LucideIcon,
 } from "lucide-react";
 import Header from "@/components/Header";
@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
-  aboutIR, aboutGallery, contactCard, partners, partnerImages,
+  aboutIR, aboutGallery, contactCard, partners, partnerImages, type Partner,
   internships, internshipArchives, fellowships, globalPrograms,
   events, workshops, heroBanner, heroStats,
   internshipGallery, fellowshipGallery, globalGallery, eventGallery,
@@ -205,50 +205,148 @@ const GalleryGrid = ({ images }: { images: string[] }) => {
 /* ---------- Section renderers ---------- */
 
 const AboutSection = () => (
-  <div className="space-y-10">
-    <SectionTitle title="About International Relations" subtitle="MITS – Deemed to be University's global engagement, partnerships and academic mobility." />
+  <div className="space-y-12">
+    <SectionTitle
+      title={aboutIR.title}
+      subtitle={aboutIR.tagline}
+    />
     <ImageCarousel images={aboutGallery} />
+
+    {/* Intro Overview Grid */}
     <div className="grid lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2 space-y-4 text-[15px] leading-relaxed text-secondary/90">
-        {aboutIR.intro.map((p, i) => <p key={i}>{p}</p>)}
+      <div className="lg:col-span-2 space-y-4 text-[15px] leading-relaxed text-secondary/90 bg-white p-6 md:p-8 rounded-2xl border border-border shadow-sm">
+        <h3 className="font-bold text-secondary text-xl mb-3" style={{ fontFamily: "var(--font-display)" }}>
+          A Global Academic Community
+        </h3>
+        {aboutIR.intro.map((p, i) => (
+          <p key={i} className="text-slate-700">{p}</p>
+        ))}
       </div>
       <div className="space-y-4">
-        <div className="rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-white p-6">
-          <div className="flex items-center gap-2 text-primary font-bold mb-2"><Sparkles className="w-4 h-4" />Goal</div>
-          <p className="text-sm text-secondary/90">{aboutIR.goal}</p>
+        <div className="rounded-2xl border border-border bg-gradient-to-br from-[#0f2a44] to-[#11355a] text-white p-6 shadow-md">
+          <div className="flex items-center gap-2 text-[#caa74d] font-bold mb-2 uppercase text-xs tracking-wider">
+            <Sparkles className="w-4 h-4" /> Strategic Goal
+          </div>
+          <p className="text-sm text-white/90 leading-relaxed font-medium">{aboutIR.goal}</p>
         </div>
-        <div className="rounded-2xl border border-border bg-gradient-to-br from-secondary/5 to-white p-6">
-          <div className="flex items-center gap-2 text-secondary font-bold mb-3"><Award className="w-4 h-4" />Mission</div>
-          <ul className="space-y-2 text-sm text-secondary/85">
+        <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+          <div className="flex items-center gap-2 text-primary font-bold mb-3">
+            <Award className="w-5 h-5 text-primary" /> Key Mission
+          </div>
+          <ul className="space-y-2 text-xs md:text-sm text-slate-700">
             {aboutIR.mission.map((m, i) => (
-              <li key={i} className="flex gap-2"><ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />{m}</li>
+              <li key={i} className="flex gap-2">
+                <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span>{m}</span>
+              </li>
             ))}
           </ul>
         </div>
       </div>
     </div>
 
-    <div className="grid md:grid-cols-2 gap-6">
-      <div className="rounded-2xl border border-border bg-white p-6">
-        <h3 className="font-bold text-secondary mb-3" style={{ fontFamily: "var(--font-display)" }}>Short-term Objectives</h3>
-        <ul className="space-y-2 text-sm text-secondary/85">
-          {aboutIR.shortTerm.map((o, i) => (
-            <li key={i} className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />{o}</li>
-          ))}
-        </ul>
+    {/* Functions of IRO & Central Hub */}
+    <div className="bg-gradient-to-br from-slate-900 to-[#0f2a44] text-white p-8 md:p-10 rounded-3xl shadow-xl space-y-6 relative overflow-hidden">
+      <div className="relative z-10">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#caa74d] bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
+          Multicultural Ecosystem
+        </span>
+        <h3 className="text-2xl md:text-3xl font-bold mt-4 mb-3 text-white" style={{ fontFamily: "var(--font-display)" }}>
+          {aboutIR.functionsTitle}
+        </h3>
+        <p className="text-white/80 text-sm md:text-base max-w-4xl leading-relaxed">
+          {aboutIR.functionsDesc}
+        </p>
+
+        <div className="mt-8 border-t border-white/10 pt-6">
+          <h4 className="text-base font-bold text-[#caa74d] mb-4 uppercase tracking-wider text-xs">
+            Central Hub for Global Engagement Objectives
+          </h4>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {aboutIR.centralHubObjectives.map((obj, i) => (
+              <div key={i} className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                <CheckCircle2 className="w-4 h-4 text-[#caa74d] shrink-0" />
+                <span className="text-xs md:text-sm text-white/90 font-medium">{obj}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="rounded-2xl border border-border bg-white p-6">
-        <h3 className="font-bold text-secondary mb-3" style={{ fontFamily: "var(--font-display)" }}>Long-term Objectives</h3>
-        <ul className="space-y-2 text-sm text-secondary/85">
-          {aboutIR.longTerm.map((o, i) => (
-            <li key={i} className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />{o}</li>
+    </div>
+
+    {/* Key Benefits for Students */}
+    <div className="bg-white p-8 rounded-3xl border border-border shadow-sm space-y-6">
+      <div className="flex items-center gap-3 border-b border-border pb-4">
+        <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+          <GraduationCap className="w-5 h-5" />
+        </div>
+        <div>
+          <h3 className="font-bold text-secondary text-xl" style={{ fontFamily: "var(--font-display)" }}>
+            Key Benefits for Students
+          </h3>
+          <p className="text-xs text-muted-foreground">Transformative opportunities gained through MITS International Exposure</p>
+        </div>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {aboutIR.studentBenefits.map((b, i) => (
+          <div key={i} className="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-[#caa74d] hover:shadow-md transition-all group flex flex-col justify-between">
+            <div className="flex items-start gap-2.5">
+              <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                ✓
+              </span>
+              <p className="text-xs md:text-sm text-slate-700 font-medium leading-relaxed group-hover:text-secondary">
+                {b}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Stanford Milestone & Long Term Objectives */}
+    <div className="grid lg:grid-cols-2 gap-8">
+      {/* Journey Milestone */}
+      <div className="rounded-3xl border border-border bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-white p-8 shadow-sm space-y-4 flex flex-col justify-between">
+        <div>
+          <div className="flex items-center gap-2 text-amber-700 font-bold text-xs uppercase tracking-widest mb-2">
+            <Star className="w-4 h-4 text-amber-600" /> Milestone Achievement
+          </div>
+          <h3 className="font-bold text-secondary text-2xl mb-3" style={{ fontFamily: "var(--font-display)" }}>
+            {aboutIR.journey.title}
+          </h3>
+          <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+            {aboutIR.journey.text}
+          </p>
+        </div>
+        <div className="p-4 rounded-2xl bg-white border border-amber-200 text-xs text-amber-900 font-semibold flex items-center gap-3">
+          <Award className="w-5 h-5 text-amber-600 shrink-0" />
+          <span>60 MITS Students Trained at Stanford d.school in Innovation, Design Thinking &amp; Leadership</span>
+        </div>
+      </div>
+
+      {/* Long Term Strategic Objectives */}
+      <div className="rounded-3xl border border-border bg-white p-8 shadow-sm space-y-4">
+        <h3 className="font-bold text-secondary text-2xl mb-2" style={{ fontFamily: "var(--font-display)" }}>
+          Long-Term Strategic Objectives
+        </h3>
+        <p className="text-xs text-muted-foreground mb-4">Expanding MITS global footprint through bilateral research and pathways</p>
+        <ul className="space-y-3">
+          {aboutIR.longTermObjectives.map((obj, i) => (
+            <li key={i} className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 text-xs md:text-sm text-slate-700 font-medium">
+              <ArrowRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span>{obj}</span>
+            </li>
           ))}
         </ul>
       </div>
     </div>
 
-    <div className="rounded-2xl border border-border bg-gradient-to-r from-secondary to-secondary/90 text-white p-6 md:p-8">
-      <div className="flex items-center gap-2 text-accent font-bold mb-3"><Users className="w-4 h-4" />International Relations Office</div>
+    {/* IRO Leadership & Contact */}
+    <div className="rounded-3xl border border-border bg-gradient-to-r from-[#0f2a44] to-[#152f4f] text-white p-6 md:p-8 shadow-lg">
+      <div className="flex items-center gap-2 text-[#caa74d] font-bold mb-3 uppercase text-xs tracking-widest">
+        <Users className="w-4 h-4" /> International Relations Office (IRO) Leadership
+      </div>
       <p className="text-sm md:text-base leading-relaxed text-white/90">{aboutIR.office}</p>
     </div>
   </div>
@@ -338,15 +436,24 @@ const FallbackCrest = ({ name }: { name: string }) => {
 
 const localLogos: Record<string, string> = {
   "Bowling Green State University (BGSU)": "Logos/bgsu.png",
+  "Bowling Green State University": "Logos/bgsu.png",
+  "University of Applied Sciences Upper Austria (Hagenberg Campus)": "Logos/fh-ooe.png",
   "University of Applied Sciences, Hagenberg – Upper Austria": "Logos/fh-ooe.png",
+  "Brno University of Technology (BUT)": "Logos/brno.png",
   "BRNO University of Technology": "Logos/brno.png",
+  "The University of South Bohemia in České Budějovice (USB)": "Logos/jcu.png",
   "The University of South Bohemia in České Budějovice": "Logos/jcu.png",
   "Maharishi Vedic University": "Logos/meru.png",
+  "University of Aizu (UoA)": "Logos/aizu.png",
   "University of Aizu": "Logos/aizu.png",
+  "Ichinoseki College (National Institute of Technology - KOSEN)": "Logos/ichinoseki.png",
   "Ichinoseki College (NIT)": "Logos/ichinoseki.png",
+  "Iwate Prefectural University (Faculty of Software & Information Science)": "Logos/iwate.png",
   "Iwate Prefectural University – Faculty of Software & Information Science": "Logos/iwate.png",
+  "Asia University (AU)": "Logos/asia.png",
   "Asia University": "Logos/asia.png",
   "Providence University": "Logos/providence.png",
+  "Pusan National University (PNU)": "Logos/pusan.png",
   "Pusan National University": "Logos/pusan.png",
   "Kookmin University": "Logos/kookmin.png",
 };
@@ -355,53 +462,89 @@ const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
   const [imgFailed, setImgFailed] = useState(false);
   const BASE = import.meta.env.BASE_URL;
   const localLogo = localLogos[p.name];
-  const domain = domainMap[p.name] || getDomain(p.website);
-  const logoUrl = localLogo
-    ? `${BASE}${localLogo}`
-    : domain && p.website !== "#"
-      ? `https://logo.clearbit.com/${domain}`
-      : null;
+  const logoUrl = localLogo ? `${BASE}${localLogo}` : null;
 
   return (
-    <a
-      href={p.website}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group rounded-2xl border border-border bg-white p-5 hover:shadow-xl hover:-translate-y-1 hover:border-[#caa74d]/50 transition-all flex flex-col justify-between"
-    >
-      <div>
-        <div className="flex items-start justify-between gap-3 mb-4">
+    <div className="group rounded-2xl border border-border bg-white p-6 hover:shadow-xl hover:-translate-y-1 hover:border-[#caa74d]/60 transition-all flex flex-col justify-between h-full">
+      <div className="space-y-4">
+        {/* Top Header with Crest & QS Ranking */}
+        <div className="flex flex-wrap items-start justify-between gap-3">
           {!imgFailed && logoUrl ? (
-            <div className="h-14 flex items-center bg-white shrink-0">
+            <div className="h-12 flex items-center bg-white shrink-0">
               <img
                 src={logoUrl}
                 alt={`${p.name} logo`}
-                className="h-full w-auto object-contain max-w-[140px]"
+                className="h-full w-auto object-contain max-w-[130px]"
                 onError={() => setImgFailed(true)}
               />
             </div>
           ) : (
             <FallbackCrest name={p.name} />
           )}
-          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors mt-1" />
+
+          {p.ranking && (
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-900 border border-amber-200 shrink-0 shadow-sm">
+              <Award className="w-3.5 h-3.5 text-amber-600" />
+              {p.ranking}
+            </span>
+          )}
         </div>
-        <h4
-          className="font-bold text-secondary text-base leading-snug"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          {p.name}
-        </h4>
-        <p className="text-xs text-muted-foreground mt-1.5 flex items-center gap-1">
-          <MapPin className="w-3 h-3 text-primary shrink-0" />
-          {p.country}
-        </p>
+
+        {/* University Title & Country */}
+        <div>
+          <h4
+            className="font-bold text-secondary text-lg leading-snug group-hover:text-primary transition-colors"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            {p.name}
+          </h4>
+          <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1 font-semibold">
+            <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
+            {p.country}
+          </p>
+        </div>
+
+        {/* Full Detailed Description from Document */}
+        {p.description && (
+          <p className="text-xs md:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+            {p.description}
+          </p>
+        )}
+
+        {/* Key Strengths Pills */}
+        {p.strengths && p.strengths.length > 0 && (
+          <div className="space-y-1.5 pt-2">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Key Strengths & Focus Areas</span>
+            <div className="flex flex-wrap gap-1.5">
+              {p.strengths.map((str, idx) => (
+                <span key={idx} className="text-[11px] px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">
+                  {str}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
-      {p.highlight && (
-        <p className="text-xs text-secondary/70 mt-4 leading-relaxed border-t border-border pt-3">
-          {p.highlight}
-        </p>
-      )}
-    </a>
+
+      {/* Footer Highlight & Website Hyperlink Button */}
+      <div className="mt-6 pt-4 border-t border-border space-y-3">
+        {p.highlight && (
+          <p className="text-xs text-secondary/80 font-medium leading-relaxed bg-amber-50/50 p-2.5 rounded-lg border border-amber-100/80">
+            ✨ {p.highlight}
+          </p>
+        )}
+
+        <a
+          href={p.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-50 hover:bg-[#0f2a44] text-slate-800 hover:text-white border border-slate-200 hover:border-[#0f2a44] text-xs font-bold transition-all duration-200 group/btn shadow-sm"
+        >
+          <span>Web Link: {p.name}</span>
+          <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+        </a>
+      </div>
+    </div>
   );
 };
 
@@ -413,17 +556,27 @@ const MoUSection = () => {
 
   return (
     <div className="space-y-10">
-      <SectionTitle title="Memoranda of Understanding" subtitle="MITS – Deemed to be University has active MoUs with the following institutions across the world." />
+      <SectionTitle
+        title="MoUs with QS Ranking Partner Universities"
+        subtitle="MITS – Deemed to be University has active MoUs and global partnerships with leading QS-ranked institutions worldwide."
+      />
       <ImageCarousel images={partnerImages} />
       {Object.entries(grouped).map(([region, list]) => (
-        <div key={region} className="mb-8 last:mb-0">
-          <div className="flex items-center gap-3 mb-4">
-            <span className={cn("px-3 py-1 rounded-full text-xs font-bold", regionColors[region])}>
-              {region === "US" ? "US Universities" : region === "Europe" ? "European Universities" : `${region} Partners`}
+        <div key={region} className="mb-10 last:mb-0 space-y-4">
+          <div className="flex items-center justify-between border-b border-border pb-3">
+            <div className="flex items-center gap-3">
+              <span className={cn("px-3.5 py-1 rounded-full text-xs font-bold shadow-sm", regionColors[region])}>
+                {region === "US" ? "US Universities" : region === "Europe" ? "European Universities" : `${region} Universities`}
+              </span>
+              <h3 className="font-bold text-secondary text-lg" style={{ fontFamily: "var(--font-display)" }}>
+                {region === "US" ? "United States" : region === "Europe" ? "Europe" : region}
+              </h3>
+            </div>
+            <span className="text-xs font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
+              {list.length} Institutional MoUs
             </span>
-            <span className="text-sm text-muted-foreground">{list.length} partners</span>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 gap-6">
             {list.map((p) => (
               <PartnerCard key={p.name} p={p} />
             ))}

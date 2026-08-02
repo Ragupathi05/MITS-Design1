@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { Link } from "react-router-dom";
 import {
   Trophy, Bus, Heart, UtensilsCrossed, Library, Radio,
   Lightbulb, Monitor, MessageSquare, Wifi, ChevronLeft, ChevronRight,
-  ZoomIn, X,
+  ZoomIn, X, ExternalLink,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 
@@ -642,40 +643,46 @@ const Infrastructure = () => {
       <main>
 
         {/* ══════════════════════════════════════════════════════
-            HERO  — full-bleed image with dark overlay
+            HERO  — matching About page design system
            ══════════════════════════════════════════════════════ */}
-        <div className="relative h-[340px] md:h-[420px] overflow-hidden">
-          <img
-            src={campusImages.hero}
-            alt="MITS Campus"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0f2a44]/80 via-[#0f2a44]/55 to-[#0f2a44]/75" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0f2a44]/40 to-transparent" />
-
-          <div className="relative h-full flex flex-col items-center justify-center text-center px-4 z-10">
-            <p className="text-[11px] font-bold tracking-[0.32em] uppercase mb-3"
-              style={{ color: GOLD, textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}>
+        <section
+          className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
+          style={{
+            backgroundImage: `url(${BASE}Hero-Section/image%205.JPG)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
               Campus Life
             </p>
-            <h1 className="font-display text-4xl md:text-[3.5rem] lg:text-[4rem] font-bold text-white mb-4 tracking-tight leading-none"
-              style={{ textShadow: "0 2px 20px rgba(0,0,0,0.35)", fontFamily: "var(--font-display)" }}>
-              Infrastructure
+            <h1
+              className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Campus <span className="text-[#ffd15c]">Infrastructure</span>
             </h1>
-            <p className="text-white/80 text-sm md:text-base max-w-lg mx-auto leading-relaxed"
-              style={{ textShadow: "0 1px 8px rgba(0,0,0,0.3)" }}>
+            <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto mt-4 leading-relaxed">
               World-class facilities designed for academic excellence and holistic development.
             </p>
           </div>
 
-          <div className="absolute bottom-5 left-6 z-10 text-xs text-white/70">
-            <ol className="flex items-center gap-2">
-              <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
-              <li>&rsaquo;</li>
-              <li className="text-white font-semibold">Infrastructure</li>
-            </ol>
+          <div className="absolute bottom-4 left-6 z-10">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-1.5 text-sm text-white/90">
+                <li>
+                  <Link to="/" className="text-white/70 hover:text-white transition-colors">
+                    Home
+                  </Link>
+                </li>
+                <li className="text-white/50">›</li>
+                <li className="text-[#ffd15c] font-semibold">Infrastructure</li>
+              </ol>
+            </nav>
           </div>
-        </div>
+        </section>
 
         {/* ══════════════════════════════════════════════════════
             LIVE STATS STRIP
@@ -828,6 +835,20 @@ const Infrastructure = () => {
                   <p className="text-[14px] md:text-[15px] leading-relaxed" style={{ color: SLATE }}>
                     {current.desc}
                   </p>
+
+                  {(current.key === "library" || current.key === "digital-library") && (
+                    <div className="mt-4 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                      <span className="text-xs text-slate-500 font-medium">Explore collections, digital databases, e-journals, and services</span>
+                      <Link
+                        to="/library"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white transition-all shadow-sm hover:shadow-md hover:scale-[1.02]"
+                        style={{ background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})` }}
+                      >
+                        View Central Library Page
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
 
                 {/* ── PHOTO GALLERY CAROUSEL ── */}

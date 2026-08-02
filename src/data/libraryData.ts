@@ -87,7 +87,7 @@ export const quickAccess = [
   { title: "Springer Nature", href: "https://link.springer.com/" },
   { title: "EBSCO", href: "https://www.ebsco.com/" },
   { title: "DELNET", href: "https://delnet.in/" },
-  { title: "National Digital Library", href: "https://ndl.iitkgp.ac.in/" },
+  { title: "National Digital Library of India", href: "https://ndl.iitkgp.ac.in/" },
 ];
 
 export const libraryContact = {

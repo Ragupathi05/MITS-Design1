@@ -196,21 +196,16 @@ const Library = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/75" />
+          <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Central Library</p>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">
               Knowledge Access <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">at MITS</span>
             </h1>
-            <p className="text-white/80 text-lg max-w-3xl mx-auto mb-6 leading-relaxed">
+            <p className="text-white/80 text-lg max-w-3xl mx-auto leading-relaxed">
               The Central Library is the academic spine of the campus, combining print collections, digital access,
               research support and quiet study spaces in one fully computerised environment.
             </p>
-            <div className="flex justify-center">
-              <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold px-7 rounded-full">
-                <a href="#digital-resources">Explore Digital Resources</a>
-              </Button>
-            </div>
           </div>
           <div className="absolute bottom-4 left-6 z-10">
             <nav aria-label="Breadcrumb">
