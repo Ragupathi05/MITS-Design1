@@ -134,6 +134,17 @@ html, body, #root {
   p {
     line-height: 1.65;
     color: #1a1a1a;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  /* Preserve center/left alignment where explicitly set */
+  .text-center p,
+  p.text-center,
+  .text-left p,
+  p.text-left {
+    text-align: inherit;
+    hyphens: none;
   }
 
   /* Focus states for accessibility */
