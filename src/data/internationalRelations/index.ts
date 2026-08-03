@@ -123,7 +123,7 @@ export const contactCard = {
   office: "Office of International Relations (IRO)",
   institute: "Madanapalle Institute of Technology & Science (Deemed to be University)",
   address:
-    "Angallu (V), Madanapalle - 517325, Annamayya District, Andhra Pradesh, India",
+    "Madanapalle-Kadiri Road, kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India",
   timings: "Mon – Sat: 9:00 AM – 5:00 PM",
   phone: "+91-8571-280255; 280706",
   email: "iro@mits.ac.in",
