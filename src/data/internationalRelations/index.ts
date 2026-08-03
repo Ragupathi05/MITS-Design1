@@ -1,4 +1,4 @@
-// International Relations - MITS Deemed to be University
+﻿// International Relations - MITS Deemed to be University
 // Source: https://mits.ac.in/international-relations
 // All PDFs and images link to official mits.ac.in resources.
 
@@ -125,15 +125,22 @@ export const contactCard = {
   address:
     "Angallu (V), Madanapalle - 517325, Annamayya District, Andhra Pradesh, India",
   timings: "Mon – Sat: 9:00 AM – 5:00 PM",
-  phone: "+91-8571-280255",
+  phone: "+91-8571-280255; 280706",
   email: "iro@mits.ac.in",
   mapsUrl: "https://maps.google.com/?q=Madanapalle+Institute+of+Technology+and+Science",
   team: [
-    { name: "Dr. S. Narayanan", designation: "Advisor – International Relations Office" },
-    { name: "Dr. Sremmant Basu", designation: "Dean – Administration & International Relations" },
-    { name: "Mrs. U. Vijaya Lakshmi", designation: "Senior Manager – International Relations & Student Counsellor", email: "vijayalakshmi@mits.ac.in" },
-    { name: "Mrs. P. L. Susmitha", designation: "Assistant Manager – International Relations" },
+    { name: "Dr. S. Narayanan", designation: "Advisor - International Relations Office" },
+    { name: "Dr. Sremmant Basu", designation: "Dean - Administration & International Relations", email: "dean-administration@mits.ac.in" },
+    { name: "Mrs. U. Vijaya Lakshmi", designation: "Associate Director & Institute Counsellor", email: "vijayalakshmi@mits.ac.in" },
+    { name: "Mrs. P. L. Susmitha", designation: "Assistant Manager - International Relations", email: "susmitha@mits.ac.in" },
   ] as IRPerson[],
+  coordinators: [
+    { name: "Mrs. G. Vasundara Devi", role: "Asst. Professor, CSE Department" },
+    { name: "Dr. Aravind B", role: "Assoc. Professor, CST Department" },
+    { name: "Dr. R. Prithivirajan", role: "Sr. Asst. Professor, Mechanical Department" },
+    { name: "Dr. K. Srinivasa Krishna", role: "Asst. Professor, Masters of Business Management" },
+    { name: "Dr. M. Saravanamuthu", role: "Asst. Professor, Masters of Computer Applications" },
+  ],
 };
 
 /* ---------- MoUs ---------- */

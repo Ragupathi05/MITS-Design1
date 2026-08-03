@@ -1222,15 +1222,62 @@ const GlobalSection = () => {
   );
 };
 
+/** Infers a display category from the event title's own wording — purely presentational, no new facts added. */
+const classifyEvent = (title: string): { label: string; Icon: LucideIcon; classes: string } => {
+  const t = title.toLowerCase();
+  if (t.includes("mou")) {
+    return { label: "MoU Signing", Icon: CheckCircle2, classes: "bg-[#caa74d]/15 text-[#8a6d1f] border-[#caa74d]/30" };
+  }
+  if (t.includes("visit") || t.includes("delegation")) {
+    return { label: "Delegation Visit", Icon: Plane, classes: "bg-secondary/10 text-secondary border-secondary/20" };
+  }
+  if (
+    t.includes("awareness") ||
+    t.includes("seminar") ||
+    t.includes("session") ||
+    t.includes("lecture") ||
+    t.includes("induction") ||
+    t.includes("talk")
+  ) {
+    return { label: "Awareness Programme", Icon: GraduationCap, classes: "bg-primary/10 text-primary border-primary/20" };
+  }
+  if (t.includes("interaction") || t.includes("roundtable")) {
+    return { label: "Interactive Session", Icon: Users, classes: "bg-emerald-50 text-emerald-700 border-emerald-200" };
+  }
+  return { label: "IRO Event", Icon: Globe, classes: "bg-slate-100 text-slate-700 border-slate-200" };
+};
+
+/** Extracts the first 4-digit year from an event/workshop date string, for year-wise timeline grouping. */
+const getEventYear = (date: string): string => {
+  const match = date.match(/\d{4}/);
+  return match ? match[0] : "Undated";
+};
+
 const EventCard = ({ e }: { e: { date: string; title: string; description: string; reportUrl?: string } }) => {
   const [showFull, setShowFull] = useState(false);
   const needsTruncation = e.description.length > 280;
   const text = showFull ? e.description : (needsTruncation ? `${e.description.substring(0, 260)}...` : e.description);
+  const kind = classifyEvent(e.title);
+  const Icon = kind.Icon;
 
   return (
-    <div className="p-6">
-      <div className="text-xs font-bold text-primary uppercase tracking-wide mb-1.5">{e.date}</div>
-      <h3 className="font-bold text-secondary text-lg mb-2 leading-snug" style={{ fontFamily: "var(--font-display)" }}>{e.title}</h3>
+    <div className="p-5 md:p-6">
+      <div className="flex items-start gap-3 mb-3">
+        <div className={cn("w-9 h-9 rounded-xl border flex items-center justify-center shrink-0", kind.classes)}>
+          <Icon className="w-4 h-4" />
+        </div>
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2 mb-1">
+            <span className="text-xs font-bold text-primary uppercase tracking-wide">{e.date}</span>
+            <span className={cn("text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border", kind.classes)}>
+              {kind.label}
+            </span>
+          </div>
+          <h3 className="font-bold text-secondary text-lg leading-snug" style={{ fontFamily: "var(--font-display)" }}>
+            {e.title}
+          </h3>
+        </div>
+      </div>
       <p className="text-sm text-secondary/80 leading-relaxed whitespace-pre-line">
         {text}
         {needsTruncation && (
@@ -1252,25 +1299,118 @@ const EventCard = ({ e }: { e: { date: string; title: string; description: strin
   );
 };
 
-const EventsSection = () => (
-  <div className="space-y-8">
-    <SectionTitle title="International Events & Delegations" subtitle="Visits, MoU signings, awareness programmes and international interactions organised by the IRO." />
-    <ImageCarousel images={eventGallery} />
-    <div className="relative border-l-2 border-primary/30 ml-4 space-y-8 pl-8">
-      {events.map((e, i) => (
-        <motion.div key={i}
-          initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-          transition={{ delay: i * 0.05 }}
-          className="relative">
-          <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-white shadow-md" />
-          <div className="rounded-2xl border border-border bg-white overflow-hidden hover:shadow-lg transition-all">
-            <EventCard e={e} />
-          </div>
+const EventsSection = () => {
+  const [typeFilter, setTypeFilter] = useState<string>("All");
+
+  const eventTypes = useMemo(
+    () => Array.from(new Set(events.map((e) => classifyEvent(e.title).label))),
+    []
+  );
+
+  const filtered = useMemo(
+    () => (typeFilter === "All" ? events : events.filter((e) => classifyEvent(e.title).label === typeFilter)),
+    [typeFilter]
+  );
+
+  const grouped = filtered.reduce((acc, e) => {
+    const y = getEventYear(e.date);
+    (acc[y] ||= []).push(e);
+    return acc;
+  }, {} as Record<string, typeof events>);
+  const years = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
+
+  return (
+    <div className="space-y-8">
+      <SectionTitle
+        title="International Events & Delegations"
+        subtitle="Visits, MoU signings, awareness programmes and international interactions organised by the IRO."
+      />
+      <ImageCarousel images={eventGallery} />
+
+      {/* Type filter */}
+      <div className="flex flex-wrap justify-center gap-2">
+        <button
+          onClick={() => setTypeFilter("All")}
+          className={cn(
+            "px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all",
+            typeFilter === "All"
+              ? "bg-secondary text-white border-secondary"
+              : "bg-white text-secondary border-border hover:border-secondary"
+          )}
+        >
+          All ({events.length})
+        </button>
+        {eventTypes.map((label) => {
+          const count = events.filter((e) => classifyEvent(e.title).label === label).length;
+          const sample = classifyEvent(events.find((e) => classifyEvent(e.title).label === label)!.title);
+          return (
+            <button
+              key={label}
+              onClick={() => setTypeFilter(label)}
+              className={cn(
+                "px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all",
+                typeFilter === label ? cn(sample.classes, "border-transparent shadow-sm") : "bg-white text-secondary border-border hover:border-primary"
+              )}
+            >
+              {label} ({count})
+            </button>
+          );
+        })}
+      </div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={typeFilter}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="relative border-l-2 border-primary/30 ml-4 space-y-10 pl-8"
+        >
+          {years.map((year) => (
+            <div key={year} className="space-y-6">
+              <div className="relative">
+                <div className="absolute -left-[45px] -top-0.5 w-7 h-7 rounded-full bg-secondary text-white flex items-center justify-center ring-4 ring-white shadow-md">
+                  <Calendar className="w-3.5 h-3.5" />
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl md:text-2xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
+                    {year}
+                  </span>
+                  <span className="text-xs font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
+                    {grouped[year].length} Event{grouped[year].length === 1 ? "" : "s"}
+                  </span>
+                </div>
+              </div>
+              <div className="space-y-6">
+                {grouped[year].map((e, i) => (
+                  <motion.div
+                    key={`${e.title}__${e.date}`}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05 }}
+                    className="relative"
+                  >
+                    <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-white shadow-md" />
+                    <div className="rounded-2xl border border-border bg-white overflow-hidden hover:shadow-lg transition-all">
+                      <EventCard e={e} />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
+          {filtered.length === 0 && (
+            <div className="text-center py-12 rounded-2xl border border-dashed border-border bg-slate-50/60 -ml-8">
+              <p className="text-sm text-muted-foreground">No events match this filter.</p>
+            </div>
+          )}
         </motion.div>
-      ))}
+      </AnimatePresence>
     </div>
-  </div>
-);
+  );
+};
 
 const WorkshopsSection = () => (
   <div className="space-y-10">
@@ -1562,6 +1702,13 @@ const InternationalRelations = () => {
                       <div className="font-semibold text-sm text-white">{t.name}</div>
                       <div className="text-xs text-white/80">{t.designation}</div>
                       {t.email && <a href={`mailto:${t.email}`} className="text-xs text-accent hover:underline mt-1 inline-flex items-center gap-1"><Mail className="w-3 h-3" />{t.email}</a>}
+                    </div>
+                  ))}
+                  <h4 className="text-sm font-bold text-accent uppercase tracking-wide pt-2">IR Coordinators & Student Counsellors</h4>
+                  {contactCard.coordinators.map((c) => (
+                    <div key={c.name} className="rounded-lg bg-white/5 border border-white/10 p-3">
+                      <div className="font-semibold text-sm text-white">{c.name}</div>
+                      <div className="text-xs text-white/80">{c.role}</div>
                     </div>
                   ))}
                 </div>
