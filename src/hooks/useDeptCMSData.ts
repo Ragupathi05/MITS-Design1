@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const IS_LOCAL = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
-const CMS_DIRECT = "https://mits-cms.freedev.app/backend/public_api";
+const CMS_DIRECT = "https://aicampus.mits.ac.in/mits-cms/backend/public_api";
 // In production (GitHub Pages) we read pre-fetched static JSON baked at build time.
 // This avoids all CORS issues. The files live at /MITS-Design1/cms-data/<deptKey>/<endpoint>.json
 const STATIC_BASE = "/MITS-Design1/cms-data";
@@ -221,7 +221,7 @@ function normalizeEvents(items: CMSEvent[]): CMSEvent[] {
     type: e.type || e.event_type,
     // In dev, rewrite image URLs through the Vite proxy
     poster: IS_LOCAL && e.poster
-      ? e.poster.replace("https://mits-cms.freedev.app/backend", "/cms-api")
+      ? e.poster.replace("https://aicampus.mits.ac.in/mits-cms/backend", "/cms-api")
       : (e.poster ?? null),
   }));
 }
