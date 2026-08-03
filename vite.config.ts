@@ -36,7 +36,7 @@ function httpsGet(urlPath: string, cookie?: string): Promise<string> {
     if (cookie) headers["Cookie"] = "__test=" + cookie;
 
     const req = https.request(
-      { hostname: "mits-cms.freedev.app", path: urlPath, method: "GET", headers, rejectUnauthorized: false },
+      { hostname: "aicampus.mits.ac.in", path: "/mits-cms" + urlPath, method: "GET", headers, rejectUnauthorized: false },
       (res) => {
         let body = "";
         res.on("data", (chunk) => { body += chunk; });
@@ -90,7 +90,7 @@ function cmsProxyPlugin() {
             };
             if (cachedCookie) headers["Cookie"] = "__test=" + cachedCookie;
             const r = https.request(
-              { hostname: "mits-cms.freedev.app", path: "/backend" + req.url!.slice("/cms-api".length), method: "GET", headers, rejectUnauthorized: false },
+              { hostname: "aicampus.mits.ac.in", path: "/mits-cms/backend" + req.url!.slice("/cms-api".length), method: "GET", headers, rejectUnauthorized: false },
               (resp) => {
                 const chunks: Buffer[] = [];
                 resp.on("data", (c) => chunks.push(c));

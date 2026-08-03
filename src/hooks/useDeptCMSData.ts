@@ -262,7 +262,7 @@ export async function fetchEventDetail(id: number): Promise<CMSEvent | null> {
     // In dev, rewrite image URLs to go through the Vite proxy
     if (IS_LOCAL) {
       const rewrite = (url: string | null | undefined) =>
-        url ? url.replace("https://mits-cms.freedev.app/backend", "/cms-api") : url;
+        url ? url.replace("", "/cms-api") : url;
       ev.poster = rewrite(ev.poster) ?? null;
       ev.gallery = (ev.gallery ?? []).map((u) => rewrite(u) ?? u);
     }
