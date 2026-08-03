@@ -129,18 +129,9 @@ export const contactCard = {
   email: "iro@mits.ac.in",
   mapsUrl: "https://maps.google.com/?q=Madanapalle+Institute+of+Technology+and+Science",
   team: [
-    { name: "Dr. S. Narayanan", designation: "Advisor - International Relations Office" },
-    { name: "Dr. Sremmant Basu", designation: "Dean - Administration & International Relations", email: "dean-administration@mits.ac.in" },
     { name: "Mrs. U. Vijaya Lakshmi", designation: "Associate Director & Institute Counsellor", email: "vijayalakshmi@mits.ac.in" },
     { name: "Mrs. P. L. Susmitha", designation: "Assistant Manager - International Relations", email: "susmitha@mits.ac.in" },
   ] as IRPerson[],
-  coordinators: [
-    { name: "Mrs. G. Vasundara Devi", role: "Asst. Professor, CSE Department" },
-    { name: "Dr. Aravind B", role: "Assoc. Professor, CST Department" },
-    { name: "Dr. R. Prithivirajan", role: "Sr. Asst. Professor, Mechanical Department" },
-    { name: "Dr. K. Srinivasa Krishna", role: "Asst. Professor, Masters of Business Management" },
-    { name: "Dr. M. Saravanamuthu", role: "Asst. Professor, Masters of Computer Applications" },
-  ],
 };
 
 /* ---------- MoUs ---------- */

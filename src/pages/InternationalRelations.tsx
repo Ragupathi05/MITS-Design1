@@ -1704,13 +1704,6 @@ const InternationalRelations = () => {
                       {t.email && <a href={`mailto:${t.email}`} className="text-xs text-accent hover:underline mt-1 inline-flex items-center gap-1"><Mail className="w-3 h-3" />{t.email}</a>}
                     </div>
                   ))}
-                  <h4 className="text-sm font-bold text-accent uppercase tracking-wide pt-2">IR Coordinators & Student Counsellors</h4>
-                  {contactCard.coordinators.map((c) => (
-                    <div key={c.name} className="rounded-lg bg-white/5 border border-white/10 p-3">
-                      <div className="font-semibold text-sm text-white">{c.name}</div>
-                      <div className="text-xs text-white/80">{c.role}</div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
