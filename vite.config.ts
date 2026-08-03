@@ -48,29 +48,35 @@ function httpsGet(urlPath: string, cookie?: string): Promise<string> {
   });
 }
 
+// Strip leading PHP warnings/notices so JSON detection works correctly
+function stripPhpWarnings(body: string): string {
+  // PHP warnings end before the first '{' or '['
+  const idx = body.search(/[{[]/);
+  return idx > 0 ? body.slice(idx) : body;
+}
+
 async function cmsRequest(urlPath: string): Promise<string> {
   // Use cached cookie if still valid
   if (cachedCookie && Date.now() < cacheExpiry) {
-    const body = await httpsGet(urlPath, cachedCookie);
+    const body = stripPhpWarnings(await httpsGet(urlPath, cachedCookie));
     if (!body.trimStart().startsWith("<")) return body;
-    // Cache expired early, clear it
     cachedCookie = null;
   }
 
-  // Get a fresh challenge and solve it
-  const challenge = await httpsGet(urlPath);
-  if (!challenge.trimStart().startsWith("<")) return challenge;
+  const raw = await httpsGet(urlPath);
+  const body = stripPhpWarnings(raw);
+  if (!body.trimStart().startsWith("<")) return body;
 
-  const solved = solveAESChallenge(challenge);
-  if (!solved) throw new Error("Failed to solve AES challenge. HTML: " + challenge.slice(0, 150));
+  // AES challenge (legacy InfinityFree protection)
+  const solved = solveAESChallenge(raw);
+  if (!solved) throw new Error("Failed to solve AES challenge. HTML: " + raw.slice(0, 150));
 
-  // Cache for 5.5 hours (slightly under the 6h max-age)
   cachedCookie = solved;
   cacheExpiry = Date.now() + 5.5 * 60 * 60 * 1000;
 
-  const body = await httpsGet(urlPath, solved);
-  if (body.trimStart().startsWith("<")) throw new Error("Challenge not resolved after solving. Body: " + body.slice(0, 150));
-  return body;
+  const retried = stripPhpWarnings(await httpsGet(urlPath, solved));
+  if (retried.trimStart().startsWith("<")) throw new Error("Challenge not resolved after solving. Body: " + retried.slice(0, 150));
+  return retried;
 }
 
 function cmsProxyPlugin() {

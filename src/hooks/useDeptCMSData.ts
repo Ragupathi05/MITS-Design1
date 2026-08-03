@@ -196,16 +196,21 @@ async function solveCMSChallenge(html: string, retryUrl: string): Promise<string
   }
 }
 
+function stripPhpWarnings(text: string): string {
+  const idx = text.search(/[{[]/);
+  return idx > 0 ? text.slice(idx) : text;
+}
+
 async function safeFetch<T>(endpoint: string, key: string): Promise<T[]> {
   const base = IS_LOCAL ? "/cms-api" : CMS_DIRECT;
   const url = base + "/" + endpoint;
   try {
     const res = await fetch(url, { credentials: "include", signal: AbortSignal.timeout(10000) });
     if (!res.ok) return [];
-    let text = await res.text();
+    let text = stripPhpWarnings(await res.text());
     // CMS bot-protection challenge — solve it and retry once
     if (text.trimStart().startsWith("<")) {
-      text = (await solveCMSChallenge(text, url)) ?? "";
+      text = stripPhpWarnings((await solveCMSChallenge(text, url)) ?? "");
     }
     if (!text || text.trimStart().startsWith("<")) return [];
     const json = JSON.parse(text);
@@ -251,9 +256,9 @@ export async function fetchEventDetail(id: number): Promise<CMSEvent | null> {
   try {
     const res = await fetch(url, { credentials: "include", signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
-    let text = await res.text();
+    let text = stripPhpWarnings(await res.text());
     if (text.trimStart().startsWith("<")) {
-      text = (await solveCMSChallenge(text, url)) ?? "";
+      text = stripPhpWarnings((await solveCMSChallenge(text, url)) ?? "");
     }
     if (!text || text.trimStart().startsWith("<")) return null;
     const json = JSON.parse(text);
