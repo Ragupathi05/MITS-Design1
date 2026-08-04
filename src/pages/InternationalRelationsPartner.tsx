@@ -114,7 +114,7 @@ const nativeTranslations: Record<string, { langLabel: string; description: strin
 };
 
 const cnBadge = (colorClass: string | undefined) =>
-  `px-3.5 py-1 rounded-full text-xs font-bold shadow-sm ${colorClass || "bg-slate-100 text-slate-700"}`;
+  `px-3.5 py-1 rounded-full text-sm font-bold shadow-sm ${colorClass || "bg-slate-100 text-slate-700"}`;
 
 const InternationalRelationsPartner = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -142,12 +142,12 @@ const InternationalRelationsPartner = () => {
   const bodyHighlight = native ? translation.highlight : partner.highlight;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="ir-canvas min-h-screen">
       <Header />
       <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#143557] to-[#0a1f33] text-white py-14 md:py-20">
+      <section className="relative min-h-[500px] overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#143557] to-[#0a1f33] text-white py-14 md:py-20 flex items-center">
         <div
           className="absolute inset-0 opacity-15"
           style={{
@@ -155,7 +155,7 @@ const InternationalRelationsPartner = () => {
               "radial-gradient(circle at 15% 20%, #caa74d 0%, transparent 40%), radial-gradient(circle at 85% 80%, #b31317 0%, transparent 50%)",
           }}
         />
-        <div className="container relative mx-auto px-4 md:px-6">
+        <div className="relative mx-auto w-full max-w-[1900px] px-3 sm:px-6 lg:px-10 xl:px-16">
           <nav className="flex flex-wrap items-center gap-2 text-sm text-white/70 mb-6 font-body">
             <Link to="/" className="hover:text-[#caa74d] transition-colors inline-flex items-center gap-1">
               <Home className="w-3 h-3" />Home
@@ -177,7 +177,9 @@ const InternationalRelationsPartner = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-white flex items-center justify-center p-5 shadow-2xl shrink-0"
+              whileHover={{ y: -6, rotateY: 5, rotateX: -3 }}
+              style={{ transformStyle: "preserve-3d" }}
+              className="w-28 h-28 md:w-40 md:h-40 rounded-[1.75rem] bg-white flex items-center justify-center p-5 shadow-2xl shrink-0 border border-white/70"
             >
               {logoUrl ? (
                 <img src={logoUrl} alt={`${partner.name} logo`} className="max-w-full max-h-full object-contain" />
@@ -189,11 +191,11 @@ const InternationalRelationsPartner = () => {
             <div>
               <div className="flex flex-wrap items-center gap-2 mb-3">
                 <span className={cnBadge(regionColors[partner.region])}>{regionLabel}</span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 border border-white/15 text-white/90">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold bg-white/10 border border-white/15 text-white/90">
                   <MapPin className="w-3 h-3" />{partner.country}
                 </span>
                 {partner.ranking && (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#caa74d]/15 border border-[#caa74d]/40 text-[#caa74d]">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-bold bg-[#caa74d]/15 border border-[#caa74d]/40 text-[#caa74d]">
                     <Award className="w-3 h-3" />{partner.ranking}
                   </span>
                 )}
@@ -225,7 +227,7 @@ const InternationalRelationsPartner = () => {
       </section>
 
       {/* Body */}
-      <section className="max-w-6xl mx-auto px-4 md:px-6 py-12 space-y-12">
+      <section className="mx-auto w-full max-w-[1900px] px-3 sm:px-6 lg:px-10 xl:px-16 py-12 md:py-16 space-y-14">
         {/* Gallery */}
         <div>
           <div className="flex items-center gap-2 mb-4">
@@ -235,7 +237,7 @@ const InternationalRelationsPartner = () => {
             </h2>
           </div>
           {!isSpecific && (
-            <p className="text-xs text-muted-foreground -mt-3 mb-4">
+            <p className="text-sm text-muted-foreground -mt-3 mb-4">
               Dedicated photos for this specific delegation haven't been catalogued yet — showing MITS IRO's general
               MoU &amp; global engagement photo archive in the meantime.
             </p>
@@ -244,7 +246,7 @@ const InternationalRelationsPartner = () => {
         </div>
 
         {/* Profile — centered, justified, with an English ⇄ native-language toggle */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
             <div className="flex items-center gap-2">
               <Landmark className="w-4 h-4 text-primary" />
@@ -256,7 +258,7 @@ const InternationalRelationsPartner = () => {
               <button
                 onClick={() => setShowNative((v) => !v)}
                 className={cn(
-                  "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-bold transition-all",
+                  "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-bold transition-all",
                   showNative
                     ? "bg-[#0f2a44] text-white border-[#0f2a44]"
                     : "bg-white text-secondary border-border hover:border-[#0f2a44]"
@@ -275,7 +277,7 @@ const InternationalRelationsPartner = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25 }}
-              className="rounded-2xl border border-border bg-white p-6 md:p-10 shadow-sm text-center"
+              className="ir-lift-card rounded-[1.8rem] border border-white/80 bg-white/85 p-6 md:p-10 shadow-sm text-center backdrop-blur-xl"
             >
               {bodyDescription && (
                 <p className="text-[15px] md:text-base leading-relaxed text-secondary/90 text-justify [text-align-last:center]">
@@ -288,7 +290,7 @@ const InternationalRelationsPartner = () => {
                   {partner.strengths.map((s) => (
                     <span
                       key={s}
-                      className="px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-50 border border-border text-secondary"
+                      className="px-3 py-1.5 rounded-full text-sm font-semibold bg-slate-50 border border-border text-secondary"
                     >
                       {s}
                     </span>
@@ -313,16 +315,16 @@ const InternationalRelationsPartner = () => {
           </AnimatePresence>
         </div>
         {/* Official University Website — bottom CTA */}
-        <div className="max-w-3xl mx-auto">
-          <div className="rounded-2xl border border-[#caa74d]/40 bg-gradient-to-br from-[#0f2a44] to-[#143557] text-white p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-lg">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="ir-media-deck rounded-[1.8rem] border border-[#caa74d]/40 bg-gradient-to-br from-[#0f2a44] to-[#143557] text-white p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-5">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
                 <Globe className="w-6 h-6 text-[#caa74d]" />
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-[#caa74d] mb-0.5">Official Website</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-[#caa74d] mb-0.5">Official Website</p>
                 <p className="font-bold text-white text-base leading-snug">{partner.name}</p>
-                <p className="text-xs text-white/60 mt-0.5 break-all">{partner.website}</p>
+                <p className="text-sm text-white/60 mt-0.5 break-all">{partner.website}</p>
               </div>
             </div>
             <a

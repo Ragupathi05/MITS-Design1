@@ -30,7 +30,7 @@ import { Button } from "@/components/ui/button";
 const SectionHeading = ({ title, subtitle }: { title: string; subtitle?: string }) => (
   <div className="mb-4">
     <h3 className="font-display text-2xl font-bold text-foreground tracking-tight">{title}</h3>
-    {subtitle && <p className="text-muted-foreground text-xs md:text-sm mt-1">{subtitle}</p>}
+    {subtitle && <p className="text-muted-foreground text-sm md:text-sm mt-1">{subtitle}</p>}
   </div>
 );
 
@@ -143,7 +143,7 @@ const Careers = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-xs font-bold uppercase tracking-wider mb-4">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-sm font-bold uppercase tracking-wider mb-4">
                 <Briefcase className="w-4 h-4 text-blue-400" />
                 Join Our Academic Leadership & Team
               </span>
@@ -166,7 +166,7 @@ const Careers = () => {
               <button
                 key={t.id}
                 onClick={() => setActiveTab(t.id)}
-                className={`whitespace-nowrap px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all shrink-0 ${
+                className={`whitespace-nowrap px-4 py-2.5 rounded-xl text-sm md:text-sm font-semibold transition-all shrink-0 ${
                   activeTab === t.id
                     ? "bg-primary text-primary-foreground shadow-md"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted"
@@ -274,7 +274,7 @@ const Careers = () => {
                             }}
                           />
                         </div>
-                        <h4 className="font-semibold text-foreground text-xs leading-snug">{item.title}</h4>
+                        <h4 className="font-semibold text-foreground text-sm leading-snug">{item.title}</h4>
                       </div>
                     ))}
                   </div>
@@ -321,7 +321,7 @@ const Careers = () => {
                   <div className="bg-[#0b2c5f] text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl mt-6">
                     <div className="space-y-2">
                       <h4 className="font-extrabold text-white text-lg sm:text-xl tracking-wide uppercase">HOW TO APPLY</h4>
-                      <p className="text-slate-200 text-xs sm:text-sm">
+                      <p className="text-slate-200 text-sm sm:text-sm">
                         Eligible and interested academic leaders are invited to submit their detailed CV with Vision Statement to:
                       </p>
                       <div className="pt-1">
@@ -365,7 +365,7 @@ const Careers = () => {
                   <div className="bg-[#0b2c5f] text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl mt-6">
                     <div className="space-y-2">
                       <h4 className="font-extrabold text-white text-lg sm:text-xl tracking-wide uppercase">HOW TO APPLY</h4>
-                      <p className="text-slate-200 text-xs sm:text-sm">
+                      <p className="text-slate-200 text-sm sm:text-sm">
                         Eligible and interested Candidates are invited to submit their Application to:
                       </p>
                       <div className="pt-1">
@@ -397,10 +397,10 @@ const Careers = () => {
                     <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground">
                       Deans Recruitment Drive for the Academic Year 2026-27
                     </h2>
-                    <p className="text-muted-foreground text-xs md:text-sm max-w-4xl mx-auto leading-relaxed text-justify md:text-center">
+                    <p className="text-muted-foreground text-sm md:text-sm max-w-4xl mx-auto leading-relaxed text-justify md:text-center">
                       Madanapalle Institute of Technology &amp; Science (MITS) since its establishment in 1998, has evolved into an Autonomous Institution in 2014 and was conferred Deemed to be University status by Ministry of Education &amp; UGC, New Delhi vide Notification No. 9-1/2025-U.3(A) dated 15th July, 2025. MITS Deemed to be University is poised for exponential growth invites applications from self-motivated, committed and competent academic leaders who can make a difference and add significant value to the University.
                     </p>
-                    <p className="text-red-700 dark:text-red-400 font-bold text-xs md:text-sm pt-2">
+                    <p className="text-red-700 dark:text-red-400 font-bold text-sm md:text-sm pt-2">
                       Applications received for the mentioned positions till 30.04.2026 will be scrutinized and Interviews shall be conducted in the month of May 2026.
                     </p>
                   </div>
@@ -408,7 +408,7 @@ const Careers = () => {
                   {/* Table */}
                   <div className="overflow-x-auto border border-red-900/30 rounded-xl shadow-sm">
                     <h3 className="font-bold text-lg text-foreground px-4 py-3 bg-muted/40 border-b border-border">Dean Positions</h3>
-                    <table className="w-full text-left text-xs md:text-sm border-collapse">
+                    <table className="w-full text-left text-sm md:text-sm border-collapse">
                       <thead>
                         <tr className="bg-[#8b0000] text-white font-bold">
                           <th className="p-3.5 border-r border-red-950/20 w-1/3 min-w-[200px]">Positions</th>
@@ -424,7 +424,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / IIM / Foreign University (with First class at B.Tech. &amp; M.Tech.)</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 15 years of Post Ph.D. experience in Academics / Research / Industry and relevant experience for the offered positions</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.41 LPA based on the Credentials</p>
-                            <p className="text-xs italic"><strong className="text-red-800 dark:text-red-400">Note:</strong> Applicants for the positions must also meet the eligibility criteria as specified in the UGC guidelines.</p>
+                            <p className="text-sm italic"><strong className="text-red-800 dark:text-red-400">Note:</strong> Applicants for the positions must also meet the eligibility criteria as specified in the UGC guidelines.</p>
                           </td>
                         </tr>
                         <tr className="hover:bg-muted/30 transition-colors">
@@ -435,7 +435,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / IIM / Foreign University (with First class at B.Tech. &amp; M.Tech.)</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 15 years of Post Ph.D. experience in Academics / Research / Industry and relevant experience for the offered positions</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.36 LPA based on the Credentials</p>
-                            <p className="text-xs italic"><strong className="text-red-800 dark:text-red-400">Note:</strong> Applicants for the positions must also meet the eligibility criteria as specified in the UGC guidelines.</p>
+                            <p className="text-sm italic"><strong className="text-red-800 dark:text-red-400">Note:</strong> Applicants for the positions must also meet the eligibility criteria as specified in the UGC guidelines.</p>
                           </td>
                         </tr>
                       </tbody>
@@ -444,7 +444,7 @@ const Careers = () => {
 
                   {/* Red Notice Box & Contact Card */}
                   <div className="space-y-4 pt-4">
-                    <div className="bg-[#8b0000] text-white text-center p-4 rounded-xl font-semibold text-xs md:text-sm shadow-md">
+                    <div className="bg-[#8b0000] text-white text-center p-4 rounded-xl font-semibold text-sm md:text-sm shadow-md">
                       Applications received for the above mentioned positions till 30.04.2026, will be scrutinized and interviews shall be conducted in the month of May 2026. Selected applicants shall be sent offer letters and can join the university on or before 01-07-2026.
                     </div>
 
@@ -455,7 +455,7 @@ const Careers = () => {
                           jobs@mits.ac.in
                         </a>
                       </p>
-                      <p className="text-xs sm:text-sm font-bold text-red-800 dark:text-red-400">
+                      <p className="text-sm sm:text-sm font-bold text-red-800 dark:text-red-400">
                         For further details, please contact: 9100080999 / 9160020744 / 9100973274
                       </p>
                     </div>
@@ -474,7 +474,7 @@ const Careers = () => {
                     <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground">
                       Faculty Recruitment Drive for the Academic Year 2026-27
                     </h2>
-                    <p className="text-muted-foreground text-xs md:text-sm max-w-4xl mx-auto leading-relaxed text-justify md:text-center">
+                    <p className="text-muted-foreground text-sm md:text-sm max-w-4xl mx-auto leading-relaxed text-justify md:text-center">
                       Madanapalle Institute of Technology &amp; Science (MITS) since its establishment in 1998, has evolved into an Autonomous Institution in 2014 and was conferred Deemed to be University status by Ministry of Education &amp; UGC, New Delhi vide Notification No. 9-1/2025-U.3(A) dated 15th July, 2025. MITS Deemed to be University is poised for exponential growth invites applications from self-motivated, committed and competent academic leaders who can make a difference and add significant value to the University.
                     </p>
                   </div>
@@ -482,7 +482,7 @@ const Careers = () => {
                   {/* Faculty Table */}
                   <div className="overflow-x-auto border border-red-900/30 rounded-xl shadow-sm">
                     <h3 className="font-bold text-lg text-foreground px-4 py-3 bg-muted/40 border-b border-border">Faculty Positions</h3>
-                    <table className="w-full text-left text-xs md:text-sm border-collapse">
+                    <table className="w-full text-left text-sm md:text-sm border-collapse">
                       <thead>
                         <tr className="bg-[#8b0000] text-white font-bold">
                           <th className="p-3.5 border-r border-red-950/20 w-1/4 min-w-[150px]">Department</th>
@@ -504,7 +504,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> CSE - Artificial Intelligence / Machine Learning / Data Science / Cyber Security / Robotics</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 12 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.36 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
                         <tr className="hover:bg-muted/30 transition-colors">
@@ -516,7 +516,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> CSE - Artificial Intelligence / Machine Learning / Data Science / Cyber Security / Robotics</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 7 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.30 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
                         <tr className="hover:bg-muted/30 transition-colors">
@@ -528,7 +528,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> CSE - Artificial Intelligence / Machine Learning / Data Science / Cyber Security / Robotics</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 2 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.18 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
                         <tr className="hover:bg-muted/30 transition-colors">
@@ -540,7 +540,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> CSE - Artificial Intelligence / Machine Learning / Data Science / Cyber Security / Robotics</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 2 Years of Post M.Tech. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.12 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
 
@@ -556,7 +556,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / Foreign University. (with First class at UG &amp; M.Tech. / M.C.A)</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 15 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale at minimum of Rs.36 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
 
@@ -573,7 +573,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Signal Processing / Embedded Systems / VLSI Design / Antenna Microwave</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 12 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.30 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
                         <tr className="hover:bg-muted/30 transition-colors">
@@ -585,7 +585,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Signal Processing / Embedded Systems / VLSI Design / Antenna Microwave</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 7 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.28 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
                         <tr className="hover:bg-muted/30 transition-colors">
@@ -597,7 +597,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Signal Processing / Embedded Systems / VLSI Design / Antenna Microwave</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 3 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale at minimum of Rs.12 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
 
@@ -614,7 +614,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Electrical Vehicle Technology / Control Systems / Power Systems</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 12 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale at minimum of Rs.30 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
                         <tr className="hover:bg-muted/30 transition-colors">
@@ -626,7 +626,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Specialization:</strong> Electrical Vehicle Technology / Control Systems / Power Systems</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 7 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale, upto Rs.28 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
 
@@ -642,7 +642,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIT / NIT / EFLU / Foreign University. (with First Class at UG &amp; PG)</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 15 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per revised AICTE Pay Scale of a Minimum of Rs.30 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
 
@@ -658,7 +658,7 @@ const Careers = () => {
                             <p><strong className="text-red-800 dark:text-red-400">Qualification:</strong> Ph.D. in appropriate discipline from IIM / IIT / NIT. (with First class at UG &amp; PG in Management)</p>
                             <p><strong className="text-red-800 dark:text-red-400">Experience:</strong> Minimum 2 Years of Post Ph.D. experience in Academics / Research / Industry</p>
                             <p><strong className="text-red-800 dark:text-red-400">Salary:</strong> As per the revised AICTE Pay scale at minimum of Rs.12 LPA.</p>
-                            <p className="text-xs font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
+                            <p className="text-sm font-bold text-red-700 dark:text-red-400">Higher pay for deserving applicants.</p>
                           </td>
                         </tr>
                       </tbody>
@@ -674,7 +674,7 @@ const Careers = () => {
                           jobs@mits.ac.in
                         </a>
                       </p>
-                      <p className="text-xs sm:text-sm font-bold text-red-800 dark:text-red-400">
+                      <p className="text-sm sm:text-sm font-bold text-red-800 dark:text-red-400">
                         For further details, please contact: 9100080999 / 9160020744 / 9100973274
                       </p>
                     </div>
@@ -701,10 +701,10 @@ const Careers = () => {
                     {/* Category A */}
                     <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-3">
                       <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">Category - A : Top rated Publications</h4>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">
                         The 1st author of the publication must be from MITS. The incentive amount shall be Rs. 25,000/- per publication which will be distributed in the ratio of 70:30. The 1st author necessarily from MITS shall be eligible for 70% of Rs. 25,000/- and the balance amount shall be distributed amongst the remaining authors from MITS. There shall be no limit to number of authors. The 2nd publication from the same author shall be rewarded with Rs. 30,000/-, and the 1st author shall be eligible for 70% of Rs. 30,000/- and the balance amount shall be paid as referred above. The 3rd publication from the same author shall be rewarded with Rs. 50,000/- and the 1st author shall be eligible for 70% of Rs. 50,000/- and the balance shall be distributed as referred above.
                       </p>
-                      <div className="text-xs text-muted-foreground space-y-1 pl-3 border-l-2 border-primary">
+                      <div className="text-sm text-muted-foreground space-y-1 pl-3 border-l-2 border-primary">
                         <p className="font-bold text-foreground">The following four conditions are to be fulfilled for providing publication incentive under Category - A :</p>
                         <p>1. Journal should be indexed in SCI/SCIE/SSCI with 5-year average Impact factor &gt; 7 (for Subject area: Engineering), &gt; 14 (for Subject area: Sciences) and, &gt;3 (for Subject area: Humanities, Social Sciences and Management studies).</p>
                         <p>2. Journal should be in Top 10% Q1 rated list as per the Scopus database in the respective discipline.</p>
@@ -717,7 +717,7 @@ const Careers = () => {
                       <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">
                         Category - B : Science Citation Index (SCI), Science Citation Index Expanded (SCIE) and Social Science Citation Index (SSCI) Journals.
                       </h4>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">
                         The 1st author of the publication must be from MITS. The incentive amount shall be Rs. 16,000/- per publication published in Q1 &amp; Q2 journals and Rs.14,000/- per publication published in Q3 &amp; Q4 journals. If the paper is contributed by more than one author, the incentive amount will be distributed in the ratio of 70:30. The 1st author shall be eligible for 70% amount and the balance amount shall be distributed amongst the remaining authors from MITS.
                       </p>
                     </div>
@@ -725,7 +725,7 @@ const Careers = () => {
                     {/* Category C */}
                     <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-2">
                       <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">Category - C : Scopus Indexed Journals.</h4>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">
                         The 1st author of the publication must be from MITS. The incentive amount shall be Rs. 11,000/- per publication published in Q1 &amp; Q2 journals and Rs.9,000/- per publication published in Q3 &amp; Q4 journals. If the paper is contributed by more than one author, the incentive amount will be distributed in the ratio of 70:30. The 1st author shall be eligible for 70% amount and the balance amount shall be distributed amongst the remaining authors from MITS.
                       </p>
                     </div>
@@ -733,7 +733,7 @@ const Careers = () => {
                     {/* Category D */}
                     <div className="bg-muted/30 border border-border p-5 rounded-xl space-y-2">
                       <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">Category - D : For book chapter publications reflecting in Scopus Database.</h4>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">
                         The 1st author of the publication must be from MITS. The incentive amount shall be Rs. 3,000/- per book chapter. If the book chapter is contributed by more than one author, the incentive amount will be distributed in the ratio of 70:30. The 1st author shall be eligible for 70% amount and the balance amount shall be distributed amongst the remaining authors from MITS.
                       </p>
                     </div>
@@ -743,7 +743,7 @@ const Careers = () => {
                       <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">
                         Category - E : If 1st author is not from 'Madanapalle Institute of Technology &amp; Science'.
                       </h4>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">
                         The articles published under Category A, Category B, Category C &amp; Category D will get an incentive equivalent to 30% of the total amount of the respective category. The amount shall be distributed amongst the authors from MITS.
                       </p>
                     </div>
@@ -753,10 +753,10 @@ const Careers = () => {
                       <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">
                         Category - F : Research articles published in ABDC indexed (only A&amp;B) journals, open-access journals indexed by WOS/Scopus and conference proceedings published in the Scopus database. The journal publisher should be Nature, IEEE, Elsevier, Springer Nature, Taylor &amp; Francis, Wiley, SAGE, ASCE, ASME, Inderscience, MDPI, AMS, AIP, IOP, Cambridge University Press, ACS.
                       </h4>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">
                         The incentive for articles published in Category - F shall be 50% of the amount specified for Categories A to E.
                       </p>
-                      <p className="text-xs italic text-red-700 dark:text-red-400 font-medium">
+                      <p className="text-sm italic text-red-700 dark:text-red-400 font-medium">
                         Note: Articles published in Q1 journal under 'Category F' shall be eligible to get an additional incentive amount of Rs.2000 per paper for 'Categories A to C' and Rs.1000 per paper for 'Categories E'.
                       </p>
                     </div>
@@ -766,7 +766,7 @@ const Careers = () => {
                       <h4 className="font-bold text-red-800 dark:text-red-400 text-sm">
                         Category - G : Student publications (Scopus indexed Journals and conference proceedings):
                       </h4>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">
                         The articles published under Category G will get an incentive amount of Rs. 1000/- per student in a research article. Number of students should be equal to the student batch size in the student project work/internship.
                       </p>
                     </div>
@@ -775,7 +775,7 @@ const Careers = () => {
                   {/* Consultancy Projects */}
                   <div className="space-y-3">
                     <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Consultancy Projects</h3>
-                    <ul className="space-y-3 text-xs md:text-sm text-muted-foreground">
+                    <ul className="space-y-3 text-sm md:text-sm text-muted-foreground">
                       <li className="flex items-start gap-2.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
                         <span>If the faculty and staff contributed their knowledge, time and skill for the Consultancy Projects without utilising the resources of the Institute (like laboratory, equipment's, computer, software etc.) they will get an incentive of 70% of the net amount earned through the project.</span>
@@ -790,7 +790,7 @@ const Careers = () => {
                   {/* Funded Project Proposals */}
                   <div className="space-y-3">
                     <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Funded Project Proposals</h3>
-                    <div className="flex items-start gap-2.5 text-xs md:text-sm text-muted-foreground">
+                    <div className="flex items-start gap-2.5 text-sm md:text-sm text-muted-foreground">
                       <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
                       <span>10% of the total Non-Recurring grant of funded Research Project will be paid as incentive to Project Investigator/Investigators. 5% of such grant will be paid on receipt of first instalment of research project grant and the remaining balance of 5% amount on completion and submission of all relevant documents to the funding agency and after receipt of final instalment of the research grant.</span>
                     </div>
@@ -799,7 +799,7 @@ const Careers = () => {
                   {/* Conferences / Seminars / Workshops / Symposia */}
                   <div className="space-y-3">
                     <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Conferences / Seminars / Workshops / Symposia</h3>
-                    <div className="flex items-start gap-2.5 text-xs md:text-sm text-muted-foreground">
+                    <div className="flex items-start gap-2.5 text-sm md:text-sm text-muted-foreground">
                       <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
                       <span>Full sponsorship (limited to Rs.15,000/- each) is also provided to all faculty members after completion of the probation period for a maximum of two conferences / seminars / workshops / symposiums per year held within India and during the vacation time at IITs, NITs. Beyond the stipulated two opportunities, only registration fee may be payable at the discretion of Management.</span>
                     </div>
@@ -808,7 +808,7 @@ const Careers = () => {
                   {/* Hospitalization Benefits */}
                   <div className="space-y-3">
                     <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Hospitalization Benefits</h3>
-                    <div className="flex items-start gap-2.5 text-xs md:text-sm text-muted-foreground">
+                    <div className="flex items-start gap-2.5 text-sm md:text-sm text-muted-foreground">
                       <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
                       <span>Contributory Cashless Medical Health Insurance Scheme limited to Rs. 5 Lakhs on Family floater scheme</span>
                     </div>
@@ -817,7 +817,7 @@ const Careers = () => {
                   {/* Other Benefits */}
                   <div className="space-y-3">
                     <h3 className="font-bold text-lg text-foreground border-b border-border pb-2">Other Benefits</h3>
-                    <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
+                    <ul className="space-y-2 text-sm md:text-sm text-muted-foreground">
                       {[
                         "Sports and Gym facilities in the Campus.",
                         "Casual leave for 15 days in a year on prorate basis based on date of joining in the 1st year.",
@@ -838,7 +838,7 @@ const Careers = () => {
                   {/* Special Benefits for Ph.D. holders */}
                   <div className="space-y-3 bg-red-900/5 border border-red-900/20 p-5 rounded-2xl">
                     <h3 className="font-bold text-lg text-red-900 dark:text-red-400 border-b border-red-900/20 pb-2">Special Benefits for Ph.D. holders</h3>
-                    <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
+                    <ul className="space-y-2 text-sm md:text-sm text-muted-foreground">
                       <li className="flex items-start gap-2.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-red-700 shrink-0 mt-1.5"></span>
                         <span>Mobile Sim with 4G data card.</span>
@@ -862,7 +862,7 @@ const Careers = () => {
                 <div className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-6">
                   <div>
                     <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground mb-2">Press Release</h2>
-                    <p className="text-muted-foreground text-xs md:text-sm">
+                    <p className="text-muted-foreground text-sm md:text-sm">
                       Official recruitment drive notifications and advertisements published in leading national dailies.
                     </p>
                   </div>
@@ -978,7 +978,7 @@ const Careers = () => {
                           />
                         </div>
                         <div className="p-4 bg-muted/20 border-t border-border flex-1 flex flex-col justify-between">
-                          <h4 className="font-bold text-red-800 dark:text-red-400 text-xs sm:text-sm">{item.title}</h4>
+                          <h4 className="font-bold text-red-800 dark:text-red-400 text-sm sm:text-sm">{item.title}</h4>
                           <p className="text-[11px] text-muted-foreground mt-1">{item.paper}</p>
                         </div>
                       </div>

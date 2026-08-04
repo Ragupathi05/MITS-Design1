@@ -56,7 +56,7 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <ScrollReveal>
-              <p className="text-[#ffd15c] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">Get In Touch</p>
+              <p className="text-[#ffd15c] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">Get In Touch</p>
               <h1 className="font-display text-4xl md:text-6xl font-bold mb-5 text-white">Contact MITS</h1>
               <p className="text-white/80 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mt-4">
                 We're here to answer your questions about admissions, programmes, and campus life.
@@ -109,7 +109,7 @@ const Contact = () => {
                 <div className="bg-white border border-border/70 rounded-2xl p-6 md:p-8 shadow-sm h-full">
                   <div className="flex items-center gap-2 mb-2">
                     <MessageSquare className="w-5 h-5 text-[#b30000]" />
-                    <p className="text-[#b30000] text-xs font-semibold uppercase tracking-[0.2em]">Send Message</p>
+                    <p className="text-[#b30000] text-sm font-semibold uppercase tracking-[0.2em]">Send Message</p>
                   </div>
                   <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0f2a44] mb-6">We'd love to hear from you</h2>
                   <form onSubmit={submit} className="space-y-4">

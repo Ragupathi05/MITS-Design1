@@ -1,8 +1,8 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
-// ── CountUp ──────────────────────────────────────────────────────────────────
+// -- CountUp ------------------------------------------------------------------
 const CountUp = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -23,7 +23,7 @@ const CountUp = ({ target, suffix = "" }: { target: number; suffix?: string }) =
   return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
 };
 
-// ── Data ──────────────────────────────────────────────────────────────────────
+// -- Data ----------------------------------------------------------------------
 const trustCards = [
   {
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none" opacity="0.25"/></svg>`,
@@ -41,7 +41,7 @@ const trustCards = [
   },
   {
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21l4-18 4 18"/><path d="M6 15h12"/><circle cx="12" cy="3" r="1.5" fill="currentColor" stroke="none" opacity="0.3"/></svg>`,
-    value: "201–300",
+    value: "201�300",
     label: "NIRF Ranking",
     sub: "Consistently ranked in NIRF Engineering category",
     isStatic: true,
@@ -79,7 +79,7 @@ const successCards = [
   },
 ];
 
-// ── Component ─────────────────────────────────────────────────────────────────
+// -- Component -----------------------------------------------------------------
 const InstitutionsSection = () => {
   return (
     <section className="py-16 bg-[#0a1929] relative overflow-hidden" aria-labelledby="excellence-heading">
@@ -89,10 +89,10 @@ const InstitutionsSection = () => {
 
       <div className="relative z-10 container mx-auto px-4">
 
-        {/* ── Section Header ── */}
+        {/* -- Section Header -- */}
         <ScrollReveal>
           <div className="text-center mb-12">
-            <p className="text-[#caa74d] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">
+            <p className="text-[#caa74d] font-body font-semibold tracking-[0.18em] uppercase text-sm md:text-sm mb-3">
               Our Achievements
             </p>
             <h2
@@ -108,11 +108,11 @@ const InstitutionsSection = () => {
           </div>
         </ScrollReveal>
 
-        {/* ── ROW 1: Trust & Accreditation ── */}
+        {/* -- ROW 1: Trust & Accreditation -- */}
         <ScrollReveal>
           <div className="flex items-center gap-3 mb-5">
             <div className="h-px flex-1 bg-white/10" />
-            <span className="text-[#caa74d] font-body font-semibold tracking-widest uppercase text-xs px-3">
+            <span className="text-[#caa74d] font-body font-semibold tracking-widest uppercase text-sm px-3">
               Trust &amp; Accreditation
             </span>
             <div className="h-px flex-1 bg-white/10" />
@@ -156,7 +156,7 @@ const InstitutionsSection = () => {
                 </p>
 
                 {/* Sub */}
-                <p className="font-body text-white/55 text-xs leading-relaxed">
+                <p className="font-body text-white/55 text-sm leading-relaxed">
                   {card.sub}
                 </p>
               </div>
@@ -164,11 +164,11 @@ const InstitutionsSection = () => {
           ))}
         </div>
 
-        {/* ── ROW 2: Student Success ── */}
+        {/* -- ROW 2: Student Success -- */}
         <ScrollReveal>
           <div className="flex items-center gap-3 mb-5">
             <div className="h-px flex-1 bg-white/10" />
-            <span className="text-[#b30000] font-body font-semibold tracking-widest uppercase text-xs px-3">
+            <span className="text-[#b30000] font-body font-semibold tracking-widest uppercase text-sm px-3">
               Student Success
             </span>
             <div className="h-px flex-1 bg-white/10" />
@@ -212,7 +212,7 @@ const InstitutionsSection = () => {
                 </p>
 
                 {/* Sub */}
-                <p className="font-body text-white/55 text-xs leading-relaxed">
+                <p className="font-body text-white/55 text-sm leading-relaxed">
                   {card.sub}
                 </p>
               </div>

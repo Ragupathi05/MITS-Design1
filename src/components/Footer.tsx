@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="font-display font-bold text-sm text-white">MITS</p>
-                <p className="font-body text-white/70 text-xs">Madanapalle</p>
+                <p className="font-body text-white/70 text-sm">Madanapalle</p>
               </div>
             </div>
             <p className="font-body text-white/80 text-sm leading-relaxed">
@@ -52,11 +52,11 @@ const Footer = () => {
             </div>
             <div className="mt-6 pt-6 border-t border-white/10 space-y-4">
               <h4 className="font-display font-bold text-white text-sm">Get in touch</h4>
-              <p className="font-body text-white/60 text-xs">Find out more here</p>
+              <p className="font-body text-white/60 text-sm">Find out more here</p>
               <div className="flex flex-col gap-2">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-[#b31317] hover:bg-[#990000] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm text-center"
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-[#b31317] hover:bg-[#990000] text-white text-sm font-bold uppercase tracking-wider transition-colors shadow-sm text-center"
                 >
                   Get the details now
                 </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
                   href="https://mits.ac.in/public/uploads/static-pdf/College%20Brochure-2026.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-[#b31317] hover:bg-[#990000] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm text-center"
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-[#b31317] hover:bg-[#990000] text-white text-sm font-bold uppercase tracking-wider transition-colors shadow-sm text-center"
                 >
                   Download Brochure
                 </a>
@@ -158,7 +158,7 @@ const Footer = () => {
               title="MITS Location Map"
             />
             <div className="mt-6 pt-6 border-t border-white/10">
-              <p className="font-body text-white/60 text-xs mb-2">Download MITS Radio 90.8 CRS</p>
+              <p className="font-body text-white/60 text-sm mb-2">Download MITS Radio 90.8 CRS</p>
               <div className="flex gap-2">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.atc.mitsradio"

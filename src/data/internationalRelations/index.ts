@@ -1,10 +1,11 @@
-﻿// International Relations - MITS Deemed to be University
+// International Relations - MITS Deemed to be University
 // Source: https://mits.ac.in/international-relations
 // All PDFs and images link to official mits.ac.in resources.
 
 export type IRPerson = {
   name: string;
   designation: string;
+  initials?: string;
   email?: string;
   phone?: string;
   image?: string;
@@ -100,8 +101,7 @@ export const aboutIR = {
     "Serve as the international contact and assist visiting faculty and foreign students.",
     "Help international students with their life in India and Madanapalle (including admission information, academic and psychological counselling).",
   ],
-  office:
-    "Dr. S. Narayanan is the Advisor – International Relations Office, under whose guidance the IRO operates. The IRO of MITS is headed by Dr. Sremmant Basu, Dean of Administration & International Relations, supported by Mrs. U. Vijaya Lakshmi, Senior Manager – International Relations & Professional Counsellor, and Mrs. P. L. Susmitha, Assistant Manager. All departments have international coordinators and country-specific coordinators as well.",
+  office: "Dr. S. Narayanan is the Senior Advisor – International Relations Office under whose guidance the IRO operates. IRO at Madanapalle Institute of Technology & Science is headed by Mrs. U. Vijaya Lakshmi, Associate Director, International Relations & Institute Counsellor and Mrs. P. L. Susmitha, Assistant Manager. All the departments have international coordinators and country specific coordinators as well.",
 };
 
 export const aboutGallery: string[] = [
@@ -129,8 +129,8 @@ export const contactCard = {
   email: "iro@mits.ac.in",
   mapsUrl: "https://maps.google.com/?q=Madanapalle+Institute+of+Technology+and+Science",
   team: [
-    { name: "Mrs. U. Vijaya Lakshmi", designation: "Associate Director & Institute Counsellor", email: "vijayalakshmi@mits.ac.in" },
-    { name: "Mrs. P. L. Susmitha", designation: "Assistant Manager - International Relations", email: "susmitha@mits.ac.in" },
+    { initials: "UV", name: "Mrs. U. Vijaya Lakshmi", designation: "Associate Director & Institute Counsellor", email: "ad-iro@mits.ac.in" },
+    { initials: "PL", name: "Mrs. P. L. Susmitha", designation: "Assistant Manager - International Relations", email: "susmithap@mits.ac.in" },
   ] as IRPerson[],
 };
 

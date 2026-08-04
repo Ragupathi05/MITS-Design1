@@ -92,7 +92,7 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground hidden md:block overflow-hidden">
         <div className="h-9 flex items-center justify-between">
           <div className="flex items-center h-full overflow-hidden flex-1">
-            <div className="bg-accent text-accent-foreground font-bold text-xs px-4 h-full flex items-center shrink-0 z-10">
+            <div className="bg-accent text-accent-foreground font-bold text-sm px-4 h-full flex items-center shrink-0 z-10">
               🎓 ADMISSIONS 2026
             </div>
             <div className="overflow-hidden flex-1 relative">
@@ -112,7 +112,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-4 px-6 text-xs font-semibold shrink-0 z-20 bg-primary h-full">
+          <div className="flex items-center gap-4 px-6 text-sm font-semibold shrink-0 z-20 bg-primary h-full">
             <Link to="/mits-radio" className="hover:text-accent transition-colors flex items-center gap-1">
               <span>📻</span> MITS Radio 90.8 CRS
             </Link>

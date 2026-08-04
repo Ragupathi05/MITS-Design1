@@ -212,6 +212,92 @@ html, body, #root {
   }
 }
 
+/* International Relations: an editorial, dimensional visual system. */
+@keyframes ir-orbit {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0.001deg); }
+  50% { transform: translate3d(0, -12px, 0) rotate(0.001deg); }
+}
+
+@keyframes ir-grid-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 48px 48px, 0 0; }
+}
+
+@keyframes ir-sheen {
+  0% { transform: translateX(-130%) skewX(-18deg); }
+  100% { transform: translateX(245%) skewX(-18deg); }
+}
+
+@layer utilities {
+  .ir-canvas {
+    /* International university sites generally favour comfortable, high-contrast reading sizes.
+       This scope keeps the broader MITS site untouched while lifting the whole IRO experience. */
+    font-size: 17px;
+    background:
+      radial-gradient(circle at 8% 2%, rgba(14, 165, 233, 0.10), transparent 30rem),
+      radial-gradient(circle at 93% 24%, rgba(202, 167, 77, 0.13), transparent 34rem),
+      linear-gradient(180deg, #f8fafc 0%, #ffffff 38%, #f6f8fc 100%);
+  }
+
+  .ir-canvas .text-xs {
+    font-size: 0.825rem;
+    line-height: 1.45;
+  }
+
+  .ir-canvas .text-sm {
+    font-size: 0.975rem;
+    line-height: 1.58;
+  }
+
+  .ir-canvas .text-base {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+
+  .ir-grid-surface {
+    background-image:
+      linear-gradient(rgba(15, 42, 68, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 42, 68, 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    animation: ir-grid-drift 24s linear infinite;
+  }
+
+  .ir-media-deck {
+    box-shadow: 0 32px 70px -28px rgba(15, 42, 68, 0.56), 0 16px 30px -22px rgba(15, 42, 68, 0.42);
+    transform: perspective(1400px) rotateX(1.5deg);
+    transform-origin: center bottom;
+  }
+
+  .ir-lift-card {
+    box-shadow: 0 18px 42px -30px rgba(15, 42, 68, 0.48);
+    transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+  }
+
+  .ir-lift-card:hover {
+    transform: translateY(-6px) rotateX(1deg);
+    box-shadow: 0 30px 55px -28px rgba(15, 42, 68, 0.52);
+  }
+
+  .ir-logo-tile::after {
+    content: "";
+    position: absolute;
+    inset: -35% auto -35% -18%;
+    width: 32%;
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent);
+    transition: opacity 220ms ease;
+  }
+
+  .ir-logo-tile:hover::after,
+  .ir-logo-tile:focus-visible::after {
+    opacity: 1;
+    animation: ir-sheen 850ms ease forwards;
+  }
+
+  .ir-orbit-float { animation: ir-orbit 6s ease-in-out infinite; }
+  .ir-orbit-float-delayed { animation: ir-orbit 6s ease-in-out 1.7s infinite; }
+}
+
 /* Recruiter marquee */
 @keyframes recruiter-marquee {
   0%   { transform: translateX(0); }
@@ -250,7 +336,10 @@ html, body, #root {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .recruiter-marquee-track {
+  .recruiter-marquee-track,
+  .ir-grid-surface,
+  .ir-orbit-float,
+  .ir-orbit-float-delayed {
     animation: none;
   }
   * {

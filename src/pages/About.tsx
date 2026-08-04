@@ -80,7 +80,7 @@ const About = () => {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p
-              className="text-[#ffb300] font-extrabold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4"
+              className="text-[#ffb300] font-extrabold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4"
               style={{ textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.8)" }}
             >
               About MITS

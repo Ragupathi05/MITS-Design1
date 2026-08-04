@@ -71,7 +71,7 @@ const DocCard = ({ doc }: { doc: NirfDoc }) => {
           {doc.title}
         </p>
         {doc.category && (
-          <p className="font-body text-xs text-[#0f2a44]/60 mt-1 truncate">
+          <p className="font-body text-sm text-[#0f2a44]/60 mt-1 truncate">
             <span className="inline-flex items-center gap-1.5">
               <span className="inline-block w-1 h-1 rounded-full bg-[#caa74d]" />
               {doc.category}
@@ -151,7 +151,7 @@ const NIRF = () => {
             <motion.nav
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex items-center gap-1.5 text-xs md:text-sm text-white/70 mb-6"
+              className="flex items-center gap-1.5 text-sm md:text-sm text-white/70 mb-6"
             >
               <Link to="/" className="hover:text-[#caa74d] transition-colors">Home</Link>
               <ChevronRight className="w-3 h-3" />
@@ -164,7 +164,7 @@ const NIRF = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#e8c96a] text-xs font-body font-semibold tracking-widest uppercase mb-5"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#e8c96a] text-sm font-body font-semibold tracking-widest uppercase mb-5"
             >
               <Sparkles className="w-3.5 h-3.5" />
               Ministry of Education · Government of India
@@ -192,7 +192,7 @@ const NIRF = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="mt-6 flex flex-wrap gap-3 text-xs md:text-sm"
+              className="mt-6 flex flex-wrap gap-3 text-sm md:text-sm"
             >
               <span className="px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur">Institute ID: <span className="text-[#caa74d] font-semibold">{NIRF_INSTITUTE_ID}</span></span>
               <a
@@ -218,7 +218,7 @@ const NIRF = () => {
                   <div className="mt-3 md:mt-4 flex-1">
                     <p className="font-display text-3xl md:text-4xl font-extrabold text-[#0f2a44] leading-none">{h.value}</p>
                     <p className="font-body text-sm font-semibold text-[#b31317] mt-2">{h.label}</p>
-                    <p className="font-body text-xs text-[#0f2a44]/60 mt-1">{h.note}</p>
+                    <p className="font-body text-sm text-[#0f2a44]/60 mt-1">{h.note}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -230,7 +230,7 @@ const NIRF = () => {
         <section className="container mx-auto px-4 py-14 md:py-20">
           <div className="grid lg:grid-cols-12 gap-10 items-start">
             <ScrollReveal className="lg:col-span-7" direction="left">
-              <p className="text-[#b31317] font-body font-semibold tracking-[0.22em] uppercase text-xs mb-3">About NIRF</p>
+              <p className="text-[#b31317] font-body font-semibold tracking-[0.22em] uppercase text-sm mb-3">About NIRF</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0f2a44] leading-tight">
                 A national framework for measuring institutional excellence
               </h2>
@@ -270,7 +270,7 @@ const NIRF = () => {
                     </div>
                     <p className="font-display text-lg font-bold text-[#0f2a44]">{c.code}</p>
                     <p className="font-body text-[11px] text-[#caa74d] font-semibold tracking-wider mt-0.5">{c.id}</p>
-                    <p className="font-body text-xs text-[#0f2a44]/65 mt-2 leading-relaxed">{c.description}</p>
+                    <p className="font-body text-sm text-[#0f2a44]/65 mt-2 leading-relaxed">{c.description}</p>
                   </div>
                 ))}
               </div>
@@ -282,7 +282,7 @@ const NIRF = () => {
         <section id="rankings" className="bg-white border-y border-[#0f2a44]/10">
           <div className="container mx-auto px-4 py-14 md:py-20">
             <div className="text-center mb-10">
-              <p className="text-[#b31317] font-body font-semibold tracking-[0.22em] uppercase text-xs mb-3">Year-wise Submissions</p>
+              <p className="text-[#b31317] font-body font-semibold tracking-[0.22em] uppercase text-sm mb-3">Year-wise Submissions</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0f2a44]">
                 NIRF Rankings &amp; Data Archive
               </h2>
@@ -300,7 +300,7 @@ const NIRF = () => {
                       setActiveTab(t.key);
                       setQuery("");
                     }}
-                    className={`px-4 md:px-5 py-2 md:py-2.5 rounded-full font-body text-xs md:text-sm font-semibold border transition-all ${
+                    className={`px-4 md:px-5 py-2 md:py-2.5 rounded-full font-body text-sm md:text-sm font-semibold border transition-all ${
                       isActive
                         ? "bg-[#0f2a44] text-[#caa74d] border-[#0f2a44] shadow-[0_8px_24px_rgba(15,42,68,0.25)]"
                         : "bg-white text-[#0f2a44] border-[#0f2a44]/15 hover:border-[#caa74d] hover:text-[#b31317]"
@@ -335,7 +335,7 @@ const NIRF = () => {
                       {currentTitle}
                     </h3>
                     {currentRankingNote && (
-                      <p className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#caa74d]/15 text-[#7a5e1a] text-xs font-body font-semibold">
+                      <p className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#caa74d]/15 text-[#7a5e1a] text-sm font-body font-semibold">
                         <Award className="w-3.5 h-3.5" /> {currentRankingNote}
                       </p>
                     )}
@@ -373,7 +373,7 @@ const NIRF = () => {
         <section id="committee" className="container mx-auto px-4 py-14 md:py-20">
           <div className="grid lg:grid-cols-12 gap-10">
             <ScrollReveal className="lg:col-span-7" direction="left">
-              <p className="text-[#b31317] font-body font-semibold tracking-[0.22em] uppercase text-xs mb-3">Institutional Governance</p>
+              <p className="text-[#b31317] font-body font-semibold tracking-[0.22em] uppercase text-sm mb-3">Institutional Governance</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0f2a44]">NIRF Committee</h2>
               <div className="w-20 h-1 bg-[#caa74d] mt-4 mb-6 rounded-full" />
               <p className="font-body text-[#0f2a44]/75 leading-relaxed mb-6">
@@ -391,7 +391,7 @@ const NIRF = () => {
               <div id="contact" className="sticky top-24 rounded-2xl overflow-hidden bg-gradient-to-br from-[#0f2a44]/95 via-[#12334a]/92 to-[#163f57]/95 text-white shadow-[0_20px_50px_rgba(15,42,68,0.25)]">
                   <div className="h-1 bg-gradient-to-r from-[#ffd775] via-[#f7df8a] to-[#ffd775]" />
                   <div className="p-7 md:p-8">
-                    <p className="text-[#f7df8a] font-body font-semibold tracking-[0.22em] uppercase text-xs mb-3">Contact</p>
+                    <p className="text-[#f7df8a] font-body font-semibold tracking-[0.22em] uppercase text-sm mb-3">Contact</p>
                     <h3 className="font-display text-2xl font-bold text-white">NIRF Coordinator</h3>
                     <div className="w-12 h-0.5 bg-[#f7df8a] mt-3 mb-6" />
 
@@ -432,7 +432,7 @@ const NIRF = () => {
           <div className="container mx-auto px-4 py-14 md:py-16 relative">
             <div className="grid md:grid-cols-3 gap-8 items-center">
                 <div className="md:col-span-2">
-                <p className="text-[#e8c96a] font-body font-semibold tracking-[0.22em] uppercase text-xs mb-3">Explore More</p>
+                <p className="text-[#e8c96a] font-body font-semibold tracking-[0.22em] uppercase text-sm mb-3">Explore More</p>
                 <div className="inline-block bg-white/6 backdrop-blur-sm rounded-lg px-5 py-3">
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-white">
                     Accreditations, rankings &amp; statutory disclosures

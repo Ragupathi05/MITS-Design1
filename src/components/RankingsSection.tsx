@@ -70,7 +70,7 @@ const RankingsSection = () => {
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-8">
-            <p className="text-[#ffd36b] font-body font-semibold tracking-[0.22em] uppercase text-xs md:text-sm mb-4 px-4 py-1.5 rounded-full bg-[#0f2a44] border border-[#caa74d]/30 inline-block shadow-[0_4px_16px_rgba(15,42,68,0.4)]">
+            <p className="text-[#ffd36b] font-body font-semibold tracking-[0.22em] uppercase text-sm md:text-sm mb-4 px-4 py-1.5 rounded-full bg-[#0f2a44] border border-[#caa74d]/30 inline-block shadow-[0_4px_16px_rgba(15,42,68,0.4)]">
               Our Achievements
             </p>
             <h2
@@ -90,7 +90,7 @@ const RankingsSection = () => {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-7">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#caa74d]/40" />
-            <span className="text-[#ffd36b] font-body font-bold tracking-widest uppercase text-xs px-5 py-2 rounded-full border border-[#caa74d]/40 bg-[#0f2a44] shadow-[0_4px_20px_rgba(15,42,68,0.45)]">
+            <span className="text-[#ffd36b] font-body font-bold tracking-widest uppercase text-sm px-5 py-2 rounded-full border border-[#caa74d]/40 bg-[#0f2a44] shadow-[0_4px_20px_rgba(15,42,68,0.45)]">
               Trust &amp; Accreditation
             </span>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#caa74d]/40" />
@@ -120,7 +120,7 @@ const RankingsSection = () => {
 
                 <p className="font-display text-4xl font-extrabold text-[#caa74d] mb-1 leading-none">{card.value}</p>
                 <p className="font-body font-bold text-[#0f2a44] text-sm mb-2">{card.label}</p>
-                <p className="font-body text-[#0f2a44]/60 text-xs leading-relaxed">{card.sub}</p>
+                <p className="font-body text-[#0f2a44]/60 text-sm leading-relaxed">{card.sub}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -130,7 +130,7 @@ const RankingsSection = () => {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-7">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#b30000]/40" />
-            <span className="text-[#ffd36b] font-body font-bold tracking-widest uppercase text-xs px-5 py-2 rounded-full border border-[#caa74d]/40 bg-[#0f2a44] shadow-[0_4px_20px_rgba(15,42,68,0.45)]">
+            <span className="text-[#ffd36b] font-body font-bold tracking-widest uppercase text-sm px-5 py-2 rounded-full border border-[#caa74d]/40 bg-[#0f2a44] shadow-[0_4px_20px_rgba(15,42,68,0.45)]">
               Student Success
             </span>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#b30000]/40" />
@@ -160,7 +160,7 @@ const RankingsSection = () => {
 
                 <p className="font-display text-4xl font-extrabold text-[#caa74d] mb-1 leading-none">{card.value}</p>
                 <p className="font-body font-bold text-[#0f2a44] text-sm mb-2">{card.label}</p>
-                <p className="font-body text-[#0f2a44]/60 text-xs leading-relaxed">{card.sub}</p>
+                <p className="font-body text-[#0f2a44]/60 text-sm leading-relaxed">{card.sub}</p>
               </div>
             </ScrollReveal>
           ))}

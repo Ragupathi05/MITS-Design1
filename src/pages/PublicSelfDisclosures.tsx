@@ -44,7 +44,7 @@ const RowItem = ({ row }: { row: PsdRow }) => (
     <div className="flex-1 min-w-0">
       <p className="font-body text-[#0f2a44] text-sm md:text-base font-medium leading-snug">{row.subject}</p>
       {row.details && (
-        <p className="font-body text-xs md:text-sm text-[#0f2a44]/60 mt-1 whitespace-pre-line">{row.details}</p>
+        <p className="font-body text-sm md:text-sm text-[#0f2a44]/60 mt-1 whitespace-pre-line">{row.details}</p>
       )}
       <span className="inline-flex items-center gap-1.5 mt-2 text-[10px] uppercase tracking-wider font-semibold text-[#b31317]">
         <span className="inline-block w-1 h-1 rounded-full bg-[#caa74d]" />
@@ -53,14 +53,14 @@ const RowItem = ({ row }: { row: PsdRow }) => (
     </div>
     <div className="flex flex-wrap gap-2 shrink-0">
       {row.actions.length === 0 ? (
-        <span className="text-xs text-[#0f2a44]/40 italic">No document</span>
+        <span className="text-sm text-[#0f2a44]/40 italic">No document</span>
       ) : (
         row.actions.map((a, i) =>
           a.internal ? (
             <Link
               key={i}
               to={a.href}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#0f2a44] text-white text-xs font-semibold hover:bg-[#11355a] transition-colors"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#0f2a44] text-white text-sm font-semibold hover:bg-[#11355a] transition-colors"
             >
               {a.label} <ChevronRight className="w-3.5 h-3.5" />
             </Link>
@@ -70,7 +70,7 @@ const RowItem = ({ row }: { row: PsdRow }) => (
               href={a.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-[#0f2a44]/15 bg-white text-xs font-semibold text-[#0f2a44] hover:border-[#caa74d] hover:bg-[#fff8e6] transition-colors"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-[#0f2a44]/15 bg-white text-sm font-semibold text-[#0f2a44] hover:border-[#caa74d] hover:bg-[#fff8e6] transition-colors"
             >
               <FileText className="w-3.5 h-3.5 text-[#b31317]" />
               {a.label}
@@ -135,7 +135,7 @@ const PublicSelfDisclosures = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
             Transparency &amp; Governance
           </p>
           <h1
@@ -208,7 +208,7 @@ const PublicSelfDisclosures = () => {
                       <p className="font-display text-lg md:text-xl font-bold text-[#0f2a44] leading-tight">
                         {sec.number}. {sec.title}
                       </p>
-                      <p className="font-body text-xs text-[#0f2a44]/60 mt-1">
+                      <p className="font-body text-sm text-[#0f2a44]/60 mt-1">
                         {sec.rows.length} disclosure{sec.rows.length === 1 ? "" : "s"}
                       </p>
                     </div>
@@ -247,7 +247,7 @@ const PublicSelfDisclosures = () => {
         {/* RELATED */}
         <ScrollReveal>
           <section className="rounded-2xl bg-gradient-to-br from-[#0f2a44] to-[#11355a] text-white p-7 md:p-10 mt-10">
-            <p className="text-[#caa74d] uppercase tracking-[0.3em] text-xs font-semibold mb-2">Related Portals</p>
+            <p className="text-[#caa74d] uppercase tracking-[0.3em] text-sm font-semibold mb-2">Related Portals</p>
             <h2 className="font-display text-2xl md:text-3xl font-bold mb-6 text-white">Explore More Compliance Portals</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {related.map((r) => (

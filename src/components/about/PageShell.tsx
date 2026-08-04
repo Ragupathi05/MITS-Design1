@@ -46,7 +46,7 @@ const PageShell = ({ eyebrow = "About", title, intro, children, bannerImage }: P
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/80" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             {eyebrow && (
-              <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+              <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
                 {eyebrow}
               </p>
             )}

@@ -1,4 +1,4 @@
-﻿import { Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Student Voices</p>
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-sm md:text-sm mb-3">Student Voices</p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-4 leading-tight">Testimonials</h2>
           </div>
         </ScrollReveal>
@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
                   <p className="font-body text-[#1a1a1a] mb-6 leading-[1.8] italic text-base md:text-lg">"{testimonials[active].text}"</p>
                   <div>
                     <p className="font-display font-bold text-[#0f172a] text-xl">{testimonials[active].name}</p>
-                    <p className="font-body text-[#b30000] text-sm font-semibold mt-1">{testimonials[active].type} • {testimonials[active].role}</p>
+                    <p className="font-body text-[#b30000] text-sm font-semibold mt-1">{testimonials[active].type} � {testimonials[active].role}</p>
                   </div>
                 </motion.div>
               </AnimatePresence>

@@ -229,7 +229,7 @@ const PlacementFacultyProfilePage = () => {
         </div>
         <div className="relative container mx-auto px-4 pt-6 pb-12 md:pt-10 md:pb-20">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs md:text-sm text-white/70 mb-6 flex-wrap">
+          <nav className="flex items-center gap-2 text-sm md:text-sm text-white/70 mb-6 flex-wrap">
             <Link to="/" className="hover:text-white">Home</Link>
             <ChevronRight className="w-3 h-3" />
             <Link to="/placements" className="hover:text-white">Placements</Link>
@@ -346,7 +346,7 @@ const PlacementFacultyProfilePage = () => {
                 <h3 className="text-sm uppercase tracking-wider text-slate-500 font-semibold mb-4">Areas of Expertise</h3>
                 <div className="flex flex-wrap gap-2">
                   {researchTags.map((t, i) => (
-                    <span key={i} className="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium border border-primary/20">{t}</span>
+                    <span key={i} className="text-sm px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium border border-primary/20">{t}</span>
                   ))}
                 </div>
               </div>
@@ -405,7 +405,7 @@ const PlacementFacultyProfilePage = () => {
                       <ArrowLeft className="w-3 h-3" /> Previous
                     </div>
                     <div className="font-bold text-secondary group-hover:text-primary">{prev.name}</div>
-                    <div className="text-xs text-slate-500">{prev.designation}</div>
+                    <div className="text-sm text-slate-500">{prev.designation}</div>
                   </Link>
                 ) : <div />}
                 {next ? (
@@ -417,7 +417,7 @@ const PlacementFacultyProfilePage = () => {
                       Next <ArrowRight className="w-3 h-3" />
                     </div>
                     <div className="font-bold text-secondary group-hover:text-primary">{next.name}</div>
-                    <div className="text-xs text-slate-500">{next.designation}</div>
+                    <div className="text-sm text-slate-500">{next.designation}</div>
                   </Link>
                 ) : <div />}
               </div>

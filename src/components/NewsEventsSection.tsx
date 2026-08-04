@@ -11,7 +11,7 @@ const NewsEventsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Stay Updated</p>
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-sm md:text-sm mb-3">Stay Updated</p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-4 leading-tight">Trending, News &amp; Events</h2>
             <p className="font-body text-[#1a1a1a] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               Institutional updates in separate sections inspired by the official MITS portal.
@@ -60,7 +60,7 @@ const NewsEventsSection = () => {
                   <h4 className="text-gray-800 font-bold text-sm leading-snug line-clamp-2 group-hover:text-primary transition-colors duration-300">
                     {item.title}
                   </h4>
-                  <p className="text-gray-500 text-xs mt-1 flex items-center gap-1.5">
+                  <p className="text-gray-500 text-sm mt-1 flex items-center gap-1.5">
                     <Calendar className="w-3 h-3 flex-shrink-0 text-secondary" />
                     {item.date}
                   </p>
@@ -80,16 +80,16 @@ const NewsEventsSection = () => {
                     <h4 className="text-white font-bold text-sm leading-snug line-clamp-2 mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-gray-400 text-xs flex items-center gap-1.5 mb-2">
+                    <p className="text-gray-400 text-sm flex items-center gap-1.5 mb-2">
                       <Calendar className="w-3 h-3 flex-shrink-0" />
                       {item.date}
                     </p>
-                    <p className="text-slate-200 text-xs leading-relaxed line-clamp-3 mb-3">
+                    <p className="text-slate-200 text-sm leading-relaxed line-clamp-3 mb-3">
                       {item.excerpt}
                     </p>
                     <span
                       className="inline-flex items-center gap-1.5 w-fit px-4 py-1.5 rounded-full
-                        bg-secondary text-white text-xs font-semibold shadow-md"
+                        bg-secondary text-white text-sm font-semibold shadow-md"
                     >
                       View Event
                       <ChevronRight className="w-3.5 h-3.5" />

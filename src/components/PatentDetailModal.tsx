@@ -59,9 +59,9 @@ function ModalContent({ patent: p, onClose }: Props) {
           <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-4">
             <FileText className="w-7 h-7 text-white" />
           </div>
-          <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${style.badge} mb-2 inline-block`}>{p.status}</span>
+          <span className={`text-sm font-bold px-2.5 py-0.5 rounded-full ${style.badge} mb-2 inline-block`}>{p.status}</span>
           <h2 className="text-xl font-bold leading-snug mt-1">{p.title}</h2>
-          {p.patent_type && <p className="text-white/70 text-xs mt-1 uppercase tracking-wider">{p.patent_type}</p>}
+          {p.patent_type && <p className="text-white/70 text-sm mt-1 uppercase tracking-wider">{p.patent_type}</p>}
         </div>
 
         <div className="overflow-y-auto flex-1 p-5 space-y-4">

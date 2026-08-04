@@ -104,7 +104,7 @@ const EContentPage: React.FC = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
             E-Content Development Center
           </p>
           <h1
@@ -178,14 +178,14 @@ const EContentPage: React.FC = () => {
             {searchTerm && (
               <button
                 onClick={() => setSearchTerm("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 font-bold"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-slate-400 hover:text-slate-600 font-bold"
               >
                 Clear
               </button>
             )}
           </div>
 
-          <div className="flex items-center gap-2 text-xs font-semibold">
+          <div className="flex items-center gap-2 text-sm font-semibold">
             <button
               onClick={() => setAllExpanded(true)}
               className="px-3.5 py-2 rounded-lg bg-slate-100 text-slate-700 hover:bg-[#b31317] hover:text-white transition-colors"
@@ -209,7 +209,7 @@ const EContentPage: React.FC = () => {
               <span className="font-display font-bold text-sm text-[#0f2a44] uppercase tracking-wider flex items-center gap-2">
                 <Layers className="w-4 h-4 text-[#b31317]" /> Departments
               </span>
-              <span className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-bold">
+              <span className="text-sm bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-bold">
                 {econtentDepartmentsData.length}
               </span>
             </div>
@@ -226,7 +226,7 @@ const EContentPage: React.FC = () => {
                       setActiveDeptId(dept.id);
                       setSearchTerm("");
                     }}
-                    className={`w-full flex items-center justify-between gap-3 px-3.5 py-3 rounded-xl text-left text-xs md:text-sm font-semibold transition-all ${
+                    className={`w-full flex items-center justify-between gap-3 px-3.5 py-3 rounded-xl text-left text-sm md:text-sm font-semibold transition-all ${
                       isActive
                         ? "bg-[#b31317] text-white shadow-md shadow-[#b31317]/20"
                         : "text-slate-700 hover:bg-slate-50 hover:text-[#b31317]"
@@ -254,7 +254,7 @@ const EContentPage: React.FC = () => {
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm border-l-4 border-l-[#b31317]">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <p className="text-xs font-bold text-[#b31317] uppercase tracking-wider">
+                  <p className="text-sm font-bold text-[#b31317] uppercase tracking-wider">
                     Department E-Content Repository
                   </p>
                   <h2 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44] mt-1">
@@ -262,11 +262,11 @@ const EContentPage: React.FC = () => {
                   </h2>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-sm font-semibold">
                     <User className="w-3.5 h-3.5 text-[#caa74d]" />
                     {activeDepartment.facultyList.length} Faculty
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[#b31317] border border-red-100 text-xs font-semibold">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[#b31317] border border-red-100 text-sm font-semibold">
                     <Video className="w-3.5 h-3.5" />
                     {totalLecturesCount} Lectures
                   </span>
@@ -281,7 +281,7 @@ const EContentPage: React.FC = () => {
                 <h3 className="font-display font-bold text-slate-700 text-base">
                   No matching e-content found
                 </h3>
-                <p className="text-xs text-slate-500 mt-1">
+                <p className="text-sm text-slate-500 mt-1">
                   Try adjusting your search query or select another department.
                 </p>
               </div>
@@ -308,14 +308,14 @@ const EContentPage: React.FC = () => {
                             <h3 className="font-display font-bold text-[#b31317] text-base md:text-lg">
                               {fac.name}
                             </h3>
-                            <p className="text-xs text-slate-500 font-medium">
+                            <p className="text-sm text-slate-500 font-medium">
                               {fac.links.length} {fac.links.length === 1 ? "Lecture Available" : "Lectures Available"}
                             </p>
                           </div>
                         </div>
 
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-semibold text-slate-400 hidden sm:inline">
+                          <span className="text-sm font-semibold text-slate-400 hidden sm:inline">
                             {isExpanded ? "Collapse" : "View"}
                           </span>
                           <ChevronDown
@@ -347,11 +347,11 @@ const EContentPage: React.FC = () => {
                                   >
                                     <div className="flex items-start gap-2.5">
                                       <PlayCircle className="w-4 h-4 text-[#b31317] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                                      <span className="font-body text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#b31317] leading-relaxed">
+                                      <span className="font-body text-sm md:text-sm font-semibold text-slate-800 group-hover:text-[#b31317] leading-relaxed">
                                         {link.title}
                                       </span>
                                     </div>
-                                    <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 group-hover:text-[#b31317] shrink-0 pt-0.5">
+                                    <span className="inline-flex items-center gap-1 text-sm font-bold text-blue-600 group-hover:text-[#b31317] shrink-0 pt-0.5">
                                       Watch Video <ExternalLink className="w-3.5 h-3.5" />
                                     </span>
                                   </a>

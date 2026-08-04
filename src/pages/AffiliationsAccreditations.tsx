@@ -123,7 +123,7 @@ const AffiliationsAccreditations = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
             Institutional Recognition
           </p>
           <h1
@@ -171,7 +171,7 @@ const AffiliationsAccreditations = () => {
                     </div>
                     <div className="min-w-0">
                       <p className="font-display text-lg md:text-xl font-bold text-[#0f2a44] leading-tight">{s.title}</p>
-                      <p className="font-body text-xs text-[#0f2a44]/60 mt-1 hidden md:block">
+                      <p className="font-body text-sm text-[#0f2a44]/60 mt-1 hidden md:block">
                         Official institutional disclosure & supporting documents.
                       </p>
                     </div>
@@ -295,7 +295,7 @@ const AffiliationsAccreditations = () => {
                                     <span className="text-[11px] text-[#0f2a44]/55 font-body">{n.period}</span>
                                   </div>
                                   <p className="font-display font-bold text-[#0f2a44] text-base leading-tight">{n.programme}</p>
-                                  <p className="font-body text-xs text-[#caa74d] font-semibold mt-3 inline-flex items-center gap-1">
+                                  <p className="font-body text-sm text-[#caa74d] font-semibold mt-3 inline-flex items-center gap-1">
                                     View Certificate <ExternalLink className="w-3 h-3" />
                                   </p>
                                 </motion.a>

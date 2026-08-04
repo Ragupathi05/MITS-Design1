@@ -47,7 +47,7 @@ const Leadership = () => {
                 {p.qualification && (
                   <p className="text-sm text-secondary/70 mt-1">{p.qualification}</p>
                 )}
-                <p className="mt-3 text-xs uppercase tracking-wide text-muted-foreground">{p.designation}</p>
+                <p className="mt-3 text-sm uppercase tracking-wide text-muted-foreground">{p.designation}</p>
                 <div className="mt-4">
                   <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary">
                     View profile <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />

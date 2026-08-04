@@ -655,7 +655,7 @@ const Infrastructure = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+            <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
               Campus Life
             </p>
             <h1
@@ -708,7 +708,7 @@ const Infrastructure = () => {
                   <p className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-none text-white">
                     {s.value}
                   </p>
-                  <p className="text-[10px] md:text-xs mt-2 font-medium uppercase tracking-wider"
+                  <p className="text-[10px] md:text-sm mt-2 font-medium uppercase tracking-wider"
                     style={{ color: GOLD }}>
                     {s.label}
                   </p>
@@ -827,7 +827,7 @@ const Infrastructure = () => {
                     <h2 className="font-display text-xl md:text-2xl font-bold" style={{ color: DARK_NAVY, fontFamily: "var(--font-display)" }}>
                       {current.title}
                     </h2>
-                    <span className="ml-auto text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-50 border border-slate-100" style={{ color: SLATE }}>
+                    <span className="ml-auto text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-50 border border-slate-100" style={{ color: SLATE }}>
                       {String(currentIdx + 1).padStart(2, "0")} / {String(infrastructureItems.length).padStart(2, "0")}
                     </span>
                   </div>
@@ -838,10 +838,10 @@ const Infrastructure = () => {
 
                   {(current.key === "library" || current.key === "digital-library") && (
                     <div className="mt-4 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
-                      <span className="text-xs text-slate-500 font-medium">Explore collections, digital databases, e-journals, and services</span>
+                      <span className="text-sm text-slate-500 font-medium">Explore collections, digital databases, e-journals, and services</span>
                       <Link
                         to="/library"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white transition-all shadow-sm hover:shadow-md hover:scale-[1.02]"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all shadow-sm hover:shadow-md hover:scale-[1.02]"
                         style={{ background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})` }}
                       >
                         View Central Library Page

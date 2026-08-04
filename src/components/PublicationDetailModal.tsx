@@ -53,11 +53,11 @@ function ModalContent({ publication: pub, onClose }: Props) {
           <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-4">
             <BookOpen className="w-7 h-7 text-white" />
           </div>
-          <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full mb-2 inline-block ${isJournal ? "bg-slate-200 text-slate-700" : "bg-indigo-100 text-indigo-700"}`}>
+          <span className={`text-sm font-bold px-2.5 py-0.5 rounded-full mb-2 inline-block ${isJournal ? "bg-slate-200 text-slate-700" : "bg-indigo-100 text-indigo-700"}`}>
             {isJournal ? "Journal" : "Conference"}
           </span>
           <h2 className="text-lg font-bold leading-snug mt-1">{pub.title}</h2>
-          {pub.venue && <p className="text-white/70 text-xs mt-1 italic">{pub.venue}</p>}
+          {pub.venue && <p className="text-white/70 text-sm mt-1 italic">{pub.venue}</p>}
         </div>
 
         <div className="overflow-y-auto flex-1 p-5 space-y-4">

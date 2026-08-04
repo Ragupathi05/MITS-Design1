@@ -77,7 +77,7 @@ const PlacementsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-[#caa74d] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">Career Success</p>
+            <p className="text-[#caa74d] font-body font-semibold tracking-[0.18em] uppercase text-sm md:text-sm mb-3">Career Success</p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">Placement Highlights</h2>
             <p className="font-body text-white/80 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
               Our students are recruited by top companies across the globe.

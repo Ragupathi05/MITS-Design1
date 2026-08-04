@@ -265,7 +265,7 @@ const DocGrid = ({ docs }: { docs: Doc[] }) =>
 
 const SectionHeader = ({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) => (
   <div className="mb-8">
-    <p className="font-body text-xs uppercase tracking-[0.2em] text-[#caa74d] font-semibold mb-2">{eyebrow}</p>
+    <p className="font-body text-sm uppercase tracking-[0.2em] text-[#caa74d] font-semibold mb-2">{eyebrow}</p>
     <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0f2a44]">{title}</h2>
     {description && <p className="font-body text-[#0f2a44]/70 mt-3 max-w-3xl leading-relaxed">{description}</p>}
   </div>
@@ -340,7 +340,7 @@ const IQACENoticeBoardTicker = () => {
                     </h4>
                     <span className="w-2.5 h-2.5 rounded-full bg-[#b31317] shrink-0 mt-1.5" />
                   </div>
-                  <p className="font-body text-xs md:text-sm text-slate-700 leading-relaxed">
+                  <p className="font-body text-sm md:text-sm text-slate-700 leading-relaxed">
                     {item.detail}
                   </p>
                 </div>
@@ -351,7 +351,7 @@ const IQACENoticeBoardTicker = () => {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors"
+                      className="inline-flex items-center gap-2 text-sm md:text-sm font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       <span>{item.linkText || "Click here for Details"}</span>
@@ -396,7 +396,7 @@ const IQACMilestonesSlider = () => {
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
-            <span className="text-xs font-bold tracking-widest uppercase bg-white/15 px-3 py-1 rounded-full text-white">
+            <span className="text-sm font-bold tracking-widest uppercase bg-white/15 px-3 py-1 rounded-full text-white">
               {currentMilestone.year}
             </span>
             <button
@@ -411,7 +411,7 @@ const IQACMilestonesSlider = () => {
 
         {/* Non-scrollable Year Matrix Grid */}
         <div className="p-6 md:p-8 bg-gradient-to-br from-slate-50 via-white to-slate-50/50 space-y-6">
-          <p className="text-xs uppercase tracking-widest font-bold text-slate-400 text-center md:text-left">
+          <p className="text-sm uppercase tracking-widest font-bold text-slate-400 text-center md:text-left">
             Select Year to View Milestone
           </p>
 
@@ -428,7 +428,7 @@ const IQACMilestonesSlider = () => {
                       : "bg-white text-slate-700 border border-slate-200 hover:border-[#b31317] hover:text-[#b31317] hover:shadow-xs"
                   }`}
                 >
-                  <span className={`text-xs md:text-sm font-extrabold font-display ${isSelected ? "text-white" : ""}`}>
+                  <span className={`text-sm md:text-sm font-extrabold font-display ${isSelected ? "text-white" : ""}`}>
                     {m.year}
                   </span>
                   <span
@@ -460,10 +460,10 @@ const IQACMilestonesSlider = () => {
             
             <div className="space-y-3 flex-1">
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
-                <span className="px-3.5 py-1 rounded-full bg-[#b31317] text-white font-extrabold text-xs md:text-sm shadow-xs">
+                <span className="px-3.5 py-1 rounded-full bg-[#b31317] text-white font-extrabold text-sm md:text-sm shadow-xs">
                   Year {currentMilestone.year}
                 </span>
-                <span className="px-3 py-1 rounded-full bg-[#caa74d]/15 text-[#0f2a44] font-bold text-xs">
+                <span className="px-3 py-1 rounded-full bg-[#caa74d]/15 text-[#0f2a44] font-bold text-sm">
                   MITS Quality Milestone
                 </span>
               </div>
@@ -492,16 +492,16 @@ const IQACMilestonesSlider = () => {
           <div className="flex items-center justify-between pt-2 border-t border-slate-100">
             <button
               onClick={handlePrev}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-[#b31317] hover:border-[#b31317] text-xs md:text-sm font-semibold transition-all shadow-xs cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-[#b31317] hover:border-[#b31317] text-sm md:text-sm font-semibold transition-all shadow-xs cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" /> Previous Year
             </button>
-            <span className="text-xs text-slate-400 font-medium hidden sm:inline">
+            <span className="text-sm text-slate-400 font-medium hidden sm:inline">
               {selectedYearIdx + 1} of {milestones.length} Milestones
             </span>
             <button
               onClick={handleNext}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#b31317] text-white hover:bg-[#8a0e12] text-xs md:text-sm font-semibold transition-all shadow-xs cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#b31317] text-white hover:bg-[#8a0e12] text-sm md:text-sm font-semibold transition-all shadow-xs cursor-pointer"
             >
               Next Year <ChevronRight className="w-4 h-4" />
             </button>
@@ -545,7 +545,7 @@ const ISOEOMSSection = () => {
                   setActiveTabId(tab.id);
                   setSubSearch("");
                 }}
-                className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs md:text-sm font-body font-semibold transition-all cursor-pointer ${
+                className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm md:text-sm font-body font-semibold transition-all cursor-pointer ${
                   isActive
                     ? "bg-[#b31317] text-white shadow-md"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 border border-slate-200/80"
@@ -570,7 +570,7 @@ const ISOEOMSSection = () => {
             <h3 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44]">
               {currentSubtab.title}
             </h3>
-            <p className="text-xs text-slate-500 mt-1">
+            <p className="text-sm text-slate-500 mt-1">
               Showing {filteredDocs.length} of {currentSubtab.docs.length} documents
             </p>
           </div>
@@ -583,7 +583,7 @@ const ISOEOMSSection = () => {
               value={subSearch}
               onChange={(e) => setSubSearch(e.target.value)}
               placeholder="Filter documents..."
-              className="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-xs font-body focus:outline-none focus:border-[#b31317] focus:bg-white"
+              className="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-sm font-body focus:outline-none focus:border-[#b31317] focus:bg-white"
             />
           </div>
         </div>
@@ -633,7 +633,7 @@ const IMSEOMSSection = () => {
                   setActiveTabId(tab.id);
                   setSubSearch("");
                 }}
-                className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs md:text-sm font-body font-semibold transition-all cursor-pointer ${
+                className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm md:text-sm font-body font-semibold transition-all cursor-pointer ${
                   isActive
                     ? "bg-[#b31317] text-white shadow-md"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 border border-slate-200/80"
@@ -658,7 +658,7 @@ const IMSEOMSSection = () => {
             <h3 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44]">
               {currentSubtab.title}
             </h3>
-            <p className="text-xs text-slate-500 mt-1">
+            <p className="text-sm text-slate-500 mt-1">
               Showing {filteredDocs.length} of {currentSubtab.docs.length} documents
             </p>
           </div>
@@ -671,7 +671,7 @@ const IMSEOMSSection = () => {
               value={subSearch}
               onChange={(e) => setSubSearch(e.target.value)}
               placeholder="Filter documents..."
-              className="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-xs font-body focus:outline-none focus:border-[#b31317] focus:bg-white"
+              className="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-sm font-body focus:outline-none focus:border-[#b31317] focus:bg-white"
             />
           </div>
         </div>
@@ -701,10 +701,10 @@ const NoticeCard = ({ notice }: { notice: { title: string; date: string; detail?
       <Bell className="w-4 h-4 text-[#caa74d] mt-0.5 shrink-0" />
       <div className="flex-1 min-w-0">
         <p className="font-body font-semibold text-[#0f2a44] text-sm">{notice.title}</p>
-        <p className="font-body text-xs text-[#0f2a44]/70 mt-1">{notice.date}</p>
-        {notice.detail && <p className="font-body text-xs text-[#0f2a44]/60 mt-1">{notice.detail}</p>}
+        <p className="font-body text-sm text-[#0f2a44]/70 mt-1">{notice.date}</p>
+        {notice.detail && <p className="font-body text-sm text-[#0f2a44]/60 mt-1">{notice.detail}</p>}
         {notice.url && (
-          <a href={notice.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-xs font-semibold text-[#b31317] hover:underline">
+          <a href={notice.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-sm font-semibold text-[#b31317] hover:underline">
             View details <ExternalLink className="w-3 h-3" />
           </a>
         )}
@@ -747,7 +747,7 @@ const IQAC = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
             Internal Quality Assurance Cell
           </p>
           <h1
@@ -845,7 +845,7 @@ const IQAC = () => {
                 </nav>
               </div>
               <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-xl p-5">
-                <p className="font-body text-xs uppercase tracking-[0.2em] text-[#caa74d] mb-2">IQAC Coordinator</p>
+                <p className="font-body text-sm uppercase tracking-[0.2em] text-[#caa74d] mb-2">IQAC Coordinator</p>
                 <p className="font-body text-sm text-white/85">{contact.email}</p>
                 <p className="font-body text-sm text-white/85 mt-1">{contact.phone}</p>
               </div>
@@ -877,7 +877,7 @@ const IQAC = () => {
                         <button
                           key={s.key}
                           onClick={() => { setActive(s.key); setMobileNavOpen(false); }}
-                          className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-xs font-body font-medium text-left ${
+                          className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-body font-medium text-left ${
                             active === s.key ? "bg-[#b31317] text-white font-bold shadow-xs" : "text-[#0f2a44]/75 hover:bg-[#b31317]/10"
                           }`}
                         >
@@ -911,11 +911,11 @@ const IQAC = () => {
 
                     <div className="grid md:grid-cols-2 gap-4 mt-6">
                       <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-2xl p-6">
-                        <p className="text-xs uppercase tracking-[0.2em] text-[#caa74d] mb-2">Vision</p>
+                        <p className="text-sm uppercase tracking-[0.2em] text-[#caa74d] mb-2">Vision</p>
                         <p className="font-body text-white/90 leading-relaxed">{about.vision}</p>
                       </div>
                       <div className="bg-white rounded-2xl p-6 border border-[#0f2a44]/10">
-                        <p className="text-xs uppercase tracking-[0.2em] text-[#caa74d] mb-3">Mission</p>
+                        <p className="text-sm uppercase tracking-[0.2em] text-[#caa74d] mb-3">Mission</p>
                         <ul className="space-y-2 font-body text-[#0f2a44]/85 text-sm">
                           {about.mission.map((m, i) => (
                             <li key={i} className="flex gap-2"><span className="text-[#caa74d]">•</span>{m}</li>
@@ -948,7 +948,7 @@ const IQAC = () => {
                         <ul className="space-y-3">
                           {objectives.map((o, i) => (
                             <li key={i} className="flex gap-3 font-body text-sm text-[#0f2a44]/85">
-                              <span className="shrink-0 w-6 h-6 rounded-full bg-[#caa74d]/15 text-[#caa74d] font-bold text-xs flex items-center justify-center">{i + 1}</span>
+                              <span className="shrink-0 w-6 h-6 rounded-full bg-[#caa74d]/15 text-[#caa74d] font-bold text-sm flex items-center justify-center">{i + 1}</span>
                               <span>{o}</span>
                             </li>
                           ))}
@@ -956,7 +956,7 @@ const IQAC = () => {
                       </div>
                       <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-2xl p-6">
                         <h3 className="font-display text-xl font-bold mb-3 text-[#caa74d]">Strategies</h3>
-                        <p className="text-xs text-white/70 mb-3">IQAC shall evolve mechanisms and procedures for:</p>
+                        <p className="text-sm text-white/70 mb-3">IQAC shall evolve mechanisms and procedures for:</p>
                         <ul className="space-y-2 font-body text-sm text-white/90">
                           {strategies.map((s, i) => (
                             <li key={i} className="flex gap-2"><span className="text-[#caa74d]">›</span>{s}</li>
@@ -1049,7 +1049,7 @@ const IQAC = () => {
                           href={organogramPdf}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0f2a44] text-white text-xs font-semibold hover:bg-[#11355a] transition-colors shrink-0"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0f2a44] text-white text-sm font-semibold hover:bg-[#11355a] transition-colors shrink-0"
                         >
                           <Download className="w-3.5 h-3.5" /> Download PDF
                         </a>
@@ -1086,7 +1086,7 @@ const IQAC = () => {
                           href="https://mits.ac.in/assets/pdf/iqac/Activities of IQAC.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#b31317] text-white text-xs font-semibold hover:bg-[#8a0e12] transition-colors"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#b31317] text-white text-sm font-semibold hover:bg-[#8a0e12] transition-colors"
                         >
                           <Download className="w-3.5 h-3.5" /> Download PDF
                         </a>
@@ -1112,7 +1112,7 @@ const IQAC = () => {
                           >
                             <span className="absolute -left-[31px] top-2 w-4 h-4 rounded-full bg-[#caa74d] border-4 border-[#faf7f2]" />
                             <div className="bg-white rounded-xl p-4 border border-[#0f2a44]/10">
-                              <p className="font-body text-xs text-[#b31317] font-bold uppercase tracking-wider">{original.date}</p>
+                              <p className="font-body text-sm text-[#b31317] font-bold uppercase tracking-wider">{original.date}</p>
                               <p className="font-display font-semibold text-[#0f2a44] mt-1">{original.title}</p>
                               {original.url && (
                                 <a href={original.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-sm text-[#caa74d] font-semibold hover:underline">
@@ -1139,7 +1139,7 @@ const IQAC = () => {
                           href="https://mits.ac.in/assets/pdf/iqac/MITS IQAC Quality Framework-1.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0f2a44] text-white text-xs font-semibold hover:bg-primary transition-colors"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0f2a44] text-white text-sm font-semibold hover:bg-primary transition-colors"
                         >
                           <Download className="w-3.5 h-3.5" /> Download Framework PDF
                         </a>
@@ -1162,7 +1162,7 @@ const IQAC = () => {
                           href="https://mits.ac.in/assets/pdf/iqac/MITS-IQAC Hours.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0f2a44] text-white text-xs font-semibold hover:bg-primary transition-colors"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0f2a44] text-white text-sm font-semibold hover:bg-primary transition-colors"
                         >
                           <Download className="w-3.5 h-3.5" /> Download IQAC Hours PDF
                         </a>
@@ -1234,13 +1234,13 @@ const IQAC = () => {
                       </div>
                       
                       <div className="space-y-2 max-w-2xl relative z-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-[#caa74d] text-xs font-extrabold uppercase tracking-wider">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-[#caa74d] text-sm font-extrabold uppercase tracking-wider">
                           <Sparkles className="w-3.5 h-3.5" /> NAAC Metric Analysis
                         </div>
                         <h3 className="font-display text-2xl md:text-3xl font-extrabold text-white">
                           AQAR Criterion Wise Details
                         </h3>
-                        <p className="text-white/85 text-xs md:text-sm leading-relaxed font-body">
+                        <p className="text-white/85 text-sm md:text-sm leading-relaxed font-body">
                           Access complete metric-wise reports and documentation across all 7 NAAC criteria (Curricular Aspects, Teaching-Learning, Research, Infrastructure, Student Support, Governance, Best Practices) and Extended Profile.
                         </p>
                       </div>
@@ -1261,14 +1261,14 @@ const IQAC = () => {
                           <h3 className="font-display text-xl md:text-2xl font-bold text-[#0f2a44]">
                             Year-wise AQAR Reports
                           </h3>
-                          <p className="text-xs text-slate-500 mt-1">
+                          <p className="text-sm text-slate-500 mt-1">
                             Official Annual Quality Assurance Reports submitted to NAAC.
                           </p>
                         </div>
                       </div>
 
                       <div className="overflow-x-auto rounded-xl border border-slate-200">
-                        <table className="w-full text-left text-xs md:text-sm border-collapse">
+                        <table className="w-full text-left text-sm md:text-sm border-collapse">
                           <thead>
                             <tr className="bg-[#b31317] text-white font-bold uppercase tracking-wider">
                               <th className="py-3.5 px-6">Academic Year</th>
@@ -1290,12 +1290,12 @@ const IQAC = () => {
                                       href={item.reportUrl}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#b31317] hover:bg-[#8a0e12] text-white text-xs md:text-sm font-bold transition-colors shadow-2xs"
+                                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#b31317] hover:bg-[#8a0e12] text-white text-sm md:text-sm font-bold transition-colors shadow-2xs"
                                     >
                                       <FileText className="w-4 h-4" /> View AQAR Report
                                     </a>
                                   ) : (
-                                    <span className="text-xs text-slate-400 font-medium italic">Document Pending</span>
+                                    <span className="text-sm text-slate-400 font-medium italic">Document Pending</span>
                                   )}
                                 </td>
                               </tr>
@@ -1342,10 +1342,10 @@ const IQAC = () => {
                             rel="noopener noreferrer"
                             className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#b31317] hover:shadow-md transition-all group"
                           >
-                            <span className="font-body font-semibold text-xs text-[#0f2a44] group-hover:text-[#b31317]">
+                            <span className="font-body font-semibold text-sm text-[#0f2a44] group-hover:text-[#b31317]">
                               {f.category}
                             </span>
-                            <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 group-hover:text-[#b31317]">
+                            <span className="inline-flex items-center gap-1 text-sm font-bold text-blue-600 group-hover:text-[#b31317]">
                               View <ExternalLink className="w-3.5 h-3.5" />
                             </span>
                           </a>
@@ -1362,7 +1362,7 @@ const IQAC = () => {
                           <span className="font-display font-bold text-sm text-[#0f2a44] group-hover:text-[#b31317]">
                             {userFeedbackSections.curriculumIndustryExpert.title}
                           </span>
-                          <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 group-hover:text-[#b31317]">
+                          <span className="inline-flex items-center gap-1 text-sm font-bold text-blue-600 group-hover:text-[#b31317]">
                             View <ExternalLink className="w-3.5 h-3.5" />
                           </span>
                         </a>
@@ -1386,14 +1386,14 @@ const IQAC = () => {
                       <div className="grid md:grid-cols-2 gap-4 pt-2">
                         <div className="bg-slate-50 rounded-xl p-5 border border-slate-200">
                           <h4 className="font-display font-bold text-[#0f2a44] text-base mb-2">Academic Audit</h4>
-                          <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                          <p className="text-sm md:text-sm text-slate-600 leading-relaxed">
                             Academic Audit is a structured and methodical approach to evaluate the Quality of an Institution's academic processes. It involves a deliberate and systematic sampling to assess the effectiveness of Academic delivery, encompassing areas such as Teaching-Learning practices, Curriculum Design and evaluation, Research initiatives, outreach programs, and other related academic endeavours. This process aligns with quality assurance principles and aims to evaluate the effectiveness of Academic Procedures and Processes adopted by Departments for quality enhancement.
                           </p>
                         </div>
 
                         <div className="bg-slate-50 rounded-xl p-5 border border-slate-200">
                           <h4 className="font-display font-bold text-[#0f2a44] text-base mb-2">Administrative Audit</h4>
-                          <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                          <p className="text-sm md:text-sm text-slate-600 leading-relaxed">
                             Administrative Audit focuses on evaluating the effectiveness of various administrative processes that facilitate academic activities. This includes areas such as student support services, management of Academic Infrastructure, Campus maintenance, IT services, student facilities, and measures ensuring the safety and security of students and the campus as a whole. Audit process typically involves sampling methods and conducting targeted interviews with relevant stakeholders.
                           </p>
                         </div>
@@ -1467,7 +1467,7 @@ const IQAC = () => {
                           <div key={i} className="bg-slate-50/80 hover:bg-white rounded-xl border border-slate-200 hover:border-[#b31317]/40 p-5 transition-all shadow-2xs">
                             <Star className="w-5 h-5 text-[#caa74d] mb-2" />
                             <h4 className="font-display font-bold text-[#0f2a44] text-base">{d.t}</h4>
-                            <p className="font-body text-xs md:text-sm text-slate-600 mt-1.5 leading-relaxed">{d.d}</p>
+                            <p className="font-body text-sm md:text-sm text-slate-600 mt-1.5 leading-relaxed">{d.d}</p>
                           </div>
                         ))}
                       </div>
@@ -1551,7 +1551,7 @@ const IQAC = () => {
                             href={item.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-start gap-3 text-xs md:text-sm font-semibold text-[#0f2a44] hover:text-[#b31317] transition-colors group border-b border-slate-100 pb-3 last:border-0 last:pb-0"
+                            className="flex items-start gap-3 text-sm md:text-sm font-semibold text-[#0f2a44] hover:text-[#b31317] transition-colors group border-b border-slate-100 pb-3 last:border-0 last:pb-0"
                           >
                             <span className="w-5 h-5 rounded-full bg-red-100 text-[#b31317] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#b31317] group-hover:text-white transition-colors">
                               <ChevronRight className="w-3.5 h-3.5" />
@@ -1590,13 +1590,13 @@ const IQAC = () => {
                         <table className="w-full text-left border-collapse">
                           <thead>
                             <tr className="bg-[#b31317] text-white">
-                              <th className="py-3.5 px-5 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white w-16 text-center">
+                              <th className="py-3.5 px-5 font-display font-bold text-sm md:text-sm uppercase tracking-wider text-white w-16 text-center">
                                 S.No
                               </th>
-                              <th className="py-3.5 px-5 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white">
+                              <th className="py-3.5 px-5 font-display font-bold text-sm md:text-sm uppercase tracking-wider text-white">
                                 Manual / Format / Templates
                               </th>
-                              <th className="py-3.5 px-5 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white">
+                              <th className="py-3.5 px-5 font-display font-bold text-sm md:text-sm uppercase tracking-wider text-white">
                                 View Formats
                               </th>
                             </tr>
@@ -1618,7 +1618,7 @@ const IQAC = () => {
                                   </td>
                                   <td className="py-4 px-5 align-top">
                                     {row.formats.length === 0 ? (
-                                      <span className="text-slate-400 italic text-xs">-</span>
+                                      <span className="text-slate-400 italic text-sm">-</span>
                                     ) : (
                                       <div className="flex flex-col gap-2">
                                         {row.formats.map((fmt, idx) => (
@@ -1627,7 +1627,7 @@ const IQAC = () => {
                                             href={fmt.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 text-xs font-semibold text-[#b31317] hover:text-[#8a0e12] hover:underline"
+                                            className="inline-flex items-center gap-2 text-sm font-semibold text-[#b31317] hover:text-[#8a0e12] hover:underline"
                                           >
                                             {fmt.type === "link" ? (
                                               <ExternalLink className="w-3.5 h-3.5 shrink-0 text-[#caa74d]" />
@@ -1666,11 +1666,11 @@ const IQAC = () => {
                               }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                              <span className="text-xs text-white font-medium">{item.title}</span>
+                              <span className="text-sm text-white font-medium">{item.title}</span>
                             </div>
                           </div>
                           <div className="p-4 bg-white border-t border-slate-100">
-                            <p className="font-display font-bold text-xs md:text-sm text-[#0f2a44] line-clamp-2">
+                            <p className="font-display font-bold text-sm md:text-sm text-[#0f2a44] line-clamp-2">
                               {item.title}
                             </p>
                           </div>
@@ -1693,24 +1693,24 @@ const IQAC = () => {
                           </div>
                           <div>
                             <h3 className="font-display font-bold text-lg text-[#0f2a44]">IQAC Team</h3>
-                            <p className="text-xs text-slate-500 font-medium">Core Administration & Coordination</p>
+                            <p className="text-sm text-slate-500 font-medium">Core Administration & Coordination</p>
                           </div>
                         </div>
 
                         <div className="space-y-4">
                           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
                             <h4 className="font-display font-bold text-base text-[#0f2a44]">Dr. K. Sathesh</h4>
-                            <p className="text-xs font-semibold text-[#b31317] uppercase tracking-wider mt-0.5">IQAC & NAAC Coordinator</p>
+                            <p className="text-sm font-semibold text-[#b31317] uppercase tracking-wider mt-0.5">IQAC & NAAC Coordinator</p>
                           </div>
 
                           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
                             <h4 className="font-display font-bold text-base text-[#0f2a44]">Mrs. Kowsalya P</h4>
-                            <p className="text-xs font-semibold text-slate-600 uppercase tracking-wider mt-0.5">IQAC Document Manager</p>
+                            <p className="text-sm font-semibold text-slate-600 uppercase tracking-wider mt-0.5">IQAC Document Manager</p>
                           </div>
 
                           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
                             <h4 className="font-display font-bold text-base text-[#0f2a44]">Mrs. K. Revathi</h4>
-                            <p className="text-xs font-semibold text-slate-600 uppercase tracking-wider mt-0.5">IQAC Document Manager</p>
+                            <p className="text-sm font-semibold text-slate-600 uppercase tracking-wider mt-0.5">IQAC Document Manager</p>
                           </div>
                         </div>
                       </div>
@@ -1723,29 +1723,29 @@ const IQAC = () => {
                           </div>
                           <div>
                             <h3 className="font-display font-bold text-lg text-[#0f2a44]">Address & Contact Details</h3>
-                            <p className="text-xs text-slate-500 font-medium">Campus Location & Email Directory</p>
+                            <p className="text-sm text-slate-500 font-medium">Campus Location & Email Directory</p>
                           </div>
                         </div>
 
                         <div className="space-y-4 text-sm font-body text-slate-700">
                           <div>
-                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Address</p>
+                            <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">Address</p>
                             <p className="font-semibold text-[#0f2a44]">Room No: SRB211A</p>
                             <p>Madanapalle Institute of Technology & Science</p>
-                            <p className="text-xs text-slate-500 font-medium">Deemed to be University</p>
+                            <p className="text-sm text-slate-500 font-medium">Deemed to be University</p>
                             <p>Madanapalle-Kadiri Road, Kurabalakota Mandal</p>
                             <p>Madanapalle - 517325, Andhra Pradesh, India</p>
                           </div>
 
                           <div className="pt-3 border-t border-slate-100">
-                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                            <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
                               <Phone className="w-3.5 h-3.5 text-[#b31317]" /> Phone Numbers
                             </p>
                             <p className="font-semibold text-[#0f2a44]">+91-08571280255, 9100973388</p>
                           </div>
 
                           <div className="pt-3 border-t border-slate-100">
-                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                            <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
                               <Mail className="w-3.5 h-3.5 text-[#b31317]" /> Email Addresses
                             </p>
                             <div className="flex flex-col gap-1">

@@ -158,7 +158,7 @@ const CampusLifeDetail = ({ categoryKey }: CampusLifeDetailProps) => {
             {/* Floating details overlay */}
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="max-w-2xl">
-                <span className="inline-block px-4 py-1 bg-accent text-accent-foreground rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                <span className="inline-block px-4 py-1 bg-accent text-accent-foreground rounded-full text-sm font-bold uppercase tracking-wider mb-3">
                   {stats}
                 </span>
                 <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
@@ -225,7 +225,7 @@ const CampusLifeDetail = ({ categoryKey }: CampusLifeDetailProps) => {
                     </AnimatePresence>
 
                     {/* Gradient bar at bottom */}
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex justify-between items-center text-white text-xs font-semibold">
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex justify-between items-center text-white text-sm font-semibold">
                       <span>Showcase Image {carouselIndex + 1} of {carouselImages.length}</span>
                       <div className="flex gap-1.5">
                         {carouselImages.map((_, idx) => (
@@ -316,7 +316,7 @@ const CampusLifeDetail = ({ categoryKey }: CampusLifeDetailProps) => {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onContextMenu={(e) => e.preventDefault()}
                       />
-                      <div className="absolute top-4 left-4 bg-primary/95 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                      <div className="absolute top-4 left-4 bg-primary/95 text-white font-bold text-sm px-3 py-1 rounded-full uppercase tracking-wider">
                         {item.stats}
                       </div>
                     </div>
@@ -429,7 +429,7 @@ const CampusLifeDetail = ({ categoryKey }: CampusLifeDetailProps) => {
               {/* Bottom Image Counter & Details */}
               <div className="text-white text-center mt-6">
                 <p className="text-lg font-bold tracking-wide">{title} Gallery</p>
-                <p className="text-white/60 text-xs mt-1">
+                <p className="text-white/60 text-sm mt-1">
                   Image {lightboxIndex + 1} of {images.length}
                 </p>
               </div>

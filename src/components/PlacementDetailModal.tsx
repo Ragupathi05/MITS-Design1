@@ -62,7 +62,7 @@ function ModalContent({ placement: p, onClose }: Props) {
           <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-4">
             <Trophy className="w-7 h-7 text-white" />
           </div>
-          <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${style.badge} mb-2 inline-block`}>{p.subtype}</span>
+          <span className={`text-sm font-bold px-2.5 py-0.5 rounded-full ${style.badge} mb-2 inline-block`}>{p.subtype}</span>
           <h2 className="text-xl font-bold leading-snug mt-1">{headline}</h2>
           {subline && <p className="text-white/80 text-sm mt-1">{subline}</p>}
           {!isTraining && p.package && (

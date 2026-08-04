@@ -96,7 +96,7 @@ const LanguageSwitcher = () => {
 
       <AnimatedPanel open={open}>
         <div className="px-4 pt-4 pb-2 flex items-center justify-between border-b border-border">
-          <span className="text-xs font-bold uppercase tracking-widest text-secondary">Select Language</span>
+          <span className="text-sm font-bold uppercase tracking-widest text-secondary">Select Language</span>
           <button onClick={() => setOpen(false)} className="text-muted-foreground hover:text-secondary">
             <X className="w-4 h-4" />
           </button>

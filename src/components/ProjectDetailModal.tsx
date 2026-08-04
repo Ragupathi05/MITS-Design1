@@ -52,7 +52,7 @@ function ModalContent({ project: proj, onClose }: Props) {
             <FolderOpen className="w-7 h-7 text-white" />
           </div>
           {proj.academicYear && (
-            <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-700 mb-2 inline-block">{proj.academicYear}</span>
+            <span className="text-sm font-bold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-700 mb-2 inline-block">{proj.academicYear}</span>
           )}
           <h2 className="text-xl font-bold leading-snug mt-1">{proj.title}</h2>
           {proj.guide && <p className="text-white/80 text-sm mt-1">Guide: {proj.guide}</p>}

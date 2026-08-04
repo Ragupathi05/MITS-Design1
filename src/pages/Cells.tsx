@@ -112,7 +112,7 @@ export default function Cells() {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-4 flex items-center justify-center gap-1.5">
+          <p className="text-[#ffb300] font-bold tracking-[0.25em] uppercase text-sm sm:text-sm mb-4 flex items-center justify-center gap-1.5">
             <Sparkles className="w-4 h-4 text-[#ffd15c] animate-pulse" />
             Governance &amp; Student Ecosystem
           </p>
@@ -131,15 +131,15 @@ export default function Cells() {
         <div className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-xl p-6 md:p-8 grid grid-cols-3 gap-4 text-center divide-x divide-gray-100">
           <div>
             <p className="text-2xl md:text-4xl font-display font-bold text-[#b31317]">{stats.totalCells}</p>
-            <p className="text-xs md:text-sm font-semibold text-[#0f2a44]/65 uppercase tracking-wider mt-1">Total Cells</p>
+            <p className="text-sm md:text-sm font-semibold text-[#0f2a44]/65 uppercase tracking-wider mt-1">Total Cells</p>
           </div>
           <div>
             <p className="text-2xl md:text-4xl font-display font-bold text-[#0f2a44]">{stats.studentWelfare}</p>
-            <p className="text-xs md:text-sm font-semibold text-[#0f2a44]/65 uppercase tracking-wider mt-1">Student Welfare</p>
+            <p className="text-sm md:text-sm font-semibold text-[#0f2a44]/65 uppercase tracking-wider mt-1">Student Welfare</p>
           </div>
           <div>
             <p className="text-2xl md:text-4xl font-display font-bold text-[#caa74d]">{stats.professionalBodies}</p>
-            <p className="text-xs md:text-sm font-semibold text-[#0f2a44]/65 uppercase tracking-wider mt-1">Professional Bodies</p>
+            <p className="text-sm md:text-sm font-semibold text-[#0f2a44]/65 uppercase tracking-wider mt-1">Professional Bodies</p>
           </div>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function Cells() {
           <div className="flex items-center gap-2 overflow-x-auto w-full lg:w-auto pb-3 lg:pb-0 no-scrollbar">
             <button
               onClick={() => setActiveCategory("all")}
-              className={`px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all whitespace-nowrap shrink-0 ${
+              className={`px-4 py-2.5 rounded-full text-sm md:text-sm font-semibold transition-all whitespace-nowrap shrink-0 ${
                 activeCategory === "all"
                   ? "bg-[#0f2a44] text-white shadow-md"
                   : "bg-white text-[#0f2a44] border border-[#0f2a44]/10 hover:bg-[#fff8e6]"
@@ -164,7 +164,7 @@ export default function Cells() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all whitespace-nowrap shrink-0 flex items-center gap-1.5 ${
+                className={`px-4 py-2.5 rounded-full text-sm md:text-sm font-semibold transition-all whitespace-nowrap shrink-0 flex items-center gap-1.5 ${
                   activeCategory === cat.id
                     ? "bg-[#0f2a44] text-white shadow-md"
                     : "bg-white text-[#0f2a44] border border-[#0f2a44]/10 hover:bg-[#fff8e6]"
@@ -238,7 +238,7 @@ export default function Cells() {
                     setSearchQuery("");
                     setActiveCategory("all");
                   }}
-                  className="mt-5 px-5 py-2 rounded-full bg-[#0f2a44] text-white text-xs font-semibold hover:bg-[#11355a] transition-all shadow-sm"
+                  className="mt-5 px-5 py-2 rounded-full bg-[#0f2a44] text-white text-sm font-semibold hover:bg-[#11355a] transition-all shadow-sm"
                 >
                   Clear Filters
                 </button>
@@ -273,7 +273,7 @@ export default function Cells() {
                                 <CategoryIcon className="w-5 h-5" />
                               </div>
                               {cell.abbreviation && (
-                                <span className="bg-[#fff8e6] border border-[#ffd15c]/25 text-[#b31317] text-xs font-bold px-2.5 py-0.5 rounded-full">
+                                <span className="bg-[#fff8e6] border border-[#ffd15c]/25 text-[#b31317] text-sm font-bold px-2.5 py-0.5 rounded-full">
                                   {cell.abbreviation}
                                 </span>
                               )}
@@ -286,7 +286,7 @@ export default function Cells() {
                             </p>
                           </div>
                           <div className="mt-6 pt-4 border-t border-[#0f2a44]/5 flex items-center justify-between">
-                            <span className="text-xs font-medium text-[#caa74d] group-hover:underline">View details</span>
+                            <span className="text-sm font-medium text-[#caa74d] group-hover:underline">View details</span>
                             <span className="w-8 h-8 rounded-full bg-gray-50 text-gray-400 group-hover:bg-[#b31317] group-hover:text-white flex items-center justify-center transition-all shadow-sm">
                               <ArrowUpRight className="w-4 h-4" />
                             </span>
@@ -305,7 +305,7 @@ export default function Cells() {
                                 <CategoryIcon className="w-5 h-5" />
                               </div>
                               {cell.abbreviation && (
-                                <span className="bg-[#fff8e6] border border-[#ffd15c]/25 text-[#b31317] text-xs font-bold px-2.5 py-0.5 rounded-full">
+                                <span className="bg-[#fff8e6] border border-[#ffd15c]/25 text-[#b31317] text-sm font-bold px-2.5 py-0.5 rounded-full">
                                   {cell.abbreviation}
                                 </span>
                               )}
@@ -318,7 +318,7 @@ export default function Cells() {
                             </p>
                           </div>
                           <div className="mt-6 pt-4 border-t border-[#0f2a44]/5 flex items-center justify-between">
-                            <span className="text-xs font-medium text-[#caa74d] group-hover:underline">Visit page</span>
+                            <span className="text-sm font-medium text-[#caa74d] group-hover:underline">Visit page</span>
                             <span className="w-8 h-8 rounded-full bg-gray-50 text-gray-400 group-hover:bg-[#b31317] group-hover:text-white flex items-center justify-center transition-all shadow-sm">
                               <ArrowUpRight className="w-4 h-4" />
                             </span>
@@ -340,7 +340,7 @@ export default function Cells() {
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse text-left">
                     <thead>
-                      <tr className="bg-[#0f2a44] text-white font-display text-xs md:text-sm font-semibold uppercase tracking-wider">
+                      <tr className="bg-[#0f2a44] text-white font-display text-sm md:text-sm font-semibold uppercase tracking-wider">
                         <th className="py-4 px-6 w-16 text-center">S.No</th>
                         <th className="py-4 px-6">Name of the Cell</th>
                         <th className="py-4 px-6 hidden md:table-cell">Category</th>
@@ -377,17 +377,17 @@ export default function Cells() {
                               </a>
                             )}
                           </td>
-                          <td className="py-4 px-6 hidden md:table-cell text-gray-500 text-xs font-medium">
+                          <td className="py-4 px-6 hidden md:table-cell text-gray-500 text-sm font-medium">
                             {cell.categoryTitle}
                           </td>
                           <td className="py-4 px-6 text-center">
                             {cell.detailId && cellsDetailData[cell.detailId] ? (
-                              <Link to={`/cells/${cell.detailId}`} className="inline-flex items-center gap-1 text-xs font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors hover:underline">
+                              <Link to={`/cells/${cell.detailId}`} className="inline-flex items-center gap-1 text-sm font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors hover:underline">
                                 <span>View Cell</span>
                                 <ChevronRight className="w-3.5 h-3.5 shrink-0" />
                               </Link>
                             ) : (
-                              <a href={cell.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors hover:underline">
+                              <a href={cell.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-bold text-[#b31317] hover:text-[#0f2a44] transition-colors hover:underline">
                                 <span>View Cell</span>
                                 <ChevronRight className="w-3.5 h-3.5 shrink-0" />
                               </a>
@@ -408,7 +408,7 @@ export default function Cells() {
           <section className="rounded-2xl bg-gradient-to-br from-[#0f2a44] to-[#11355a] text-white p-8 md:p-12 mt-16 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#caa74d]/5 rounded-full blur-3xl pointer-events-none" />
             
-            <p className="text-[#caa74d] uppercase tracking-[0.25em] text-xs font-bold mb-3 flex items-center gap-2">
+            <p className="text-[#caa74d] uppercase tracking-[0.25em] text-sm font-bold mb-3 flex items-center gap-2">
               <BadgeAlert className="w-4 h-4" />
               Information Disclosures
             </p>

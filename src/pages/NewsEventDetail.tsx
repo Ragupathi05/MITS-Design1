@@ -56,7 +56,7 @@ const NewsEventDetail = () => {
             <article className="bg-card border border-border rounded-2xl overflow-hidden shadow-md">
               <img src={getNewsEventImageSrc(item.image)} alt={item.title} className="w-full h-64 md:h-80 object-cover" />
               <div className="p-6 md:p-8">
-                <p className="text-xs font-semibold text-secondary uppercase tracking-wider mb-3">{item.category}</p>
+                <p className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">{item.category}</p>
                 <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
                   {item.title}
                 </h1>

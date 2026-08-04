@@ -48,7 +48,7 @@ const NewsEvents = () => {
                     />
                   </div>
                   <div className="p-5">
-                    <span className="text-xs font-semibold text-secondary uppercase tracking-wider">{item.category}</span>
+                    <span className="text-sm font-semibold text-secondary uppercase tracking-wider">{item.category}</span>
                     <h2 className="font-display text-lg font-semibold text-card-foreground mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       {item.title}
                     </h2>

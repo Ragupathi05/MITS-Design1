@@ -102,7 +102,7 @@ const SlideshowCard = ({ catKey, category }: { catKey: string; category: CampusL
             <div className="w-10 h-10 rounded-xl bg-accent/20 border border-accent/30 backdrop-blur-md flex items-center justify-center text-accent">
               {config.icon && <config.icon className="w-5 h-5" />}
             </div>
-            <span className="text-accent font-bold text-xs tracking-wider uppercase bg-accent/10 px-3 py-1 rounded-full border border-accent/25">
+            <span className="text-accent font-bold text-sm tracking-wider uppercase bg-accent/10 px-3 py-1 rounded-full border border-accent/25">
               {category.stats}
             </span>
           </div>
@@ -138,7 +138,7 @@ const CampusLifeSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 bg-accent/20 border border-accent/30 text-accent rounded-full text-xs font-bold tracking-widest uppercase mb-4">
+            <span className="inline-block px-4 py-1.5 bg-accent/20 border border-accent/30 text-accent rounded-full text-sm font-bold tracking-widest uppercase mb-4">
               Life at MITS
             </span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tight">

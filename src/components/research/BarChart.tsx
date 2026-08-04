@@ -90,11 +90,11 @@ const BarChart = ({
     return (
       <div className="w-full space-y-1">
         {title && <p className="font-bold text-sm text-foreground">{title}</p>}
-        {subtitle && <p className="text-xs text-muted-foreground mb-2">{subtitle}</p>}
+        {subtitle && <p className="text-sm text-muted-foreground mb-2">{subtitle}</p>}
         {/* Legend */}
         <div className="flex flex-wrap gap-x-5 gap-y-1.5 mb-2 justify-center">
           {series.map((s) => (
-            <span key={s.name} className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground">
+            <span key={s.name} className="flex items-center gap-1.5 text-sm font-semibold text-muted-foreground">
               <span className="w-3 h-3 rounded-sm shrink-0" style={{ background: s.color }} />
               {s.name}
             </span>
@@ -226,7 +226,7 @@ const BarChart = ({
   return (
     <div className="w-full space-y-1">
       {title && <p className="font-bold text-sm text-foreground">{title}</p>}
-      {subtitle && <p className="text-xs text-muted-foreground mb-2">{subtitle}</p>}
+      {subtitle && <p className="text-sm text-muted-foreground mb-2">{subtitle}</p>}
 
       <div className="w-full overflow-x-auto">
         <svg

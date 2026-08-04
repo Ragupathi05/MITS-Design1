@@ -78,7 +78,7 @@ function EventBanner({ src, alt }: { src?: string | null; alt: string }) {
     return (
       <div className="w-full h-56 md:h-72 bg-gradient-to-br from-primary/10 to-primary/5 flex flex-col items-center justify-center gap-2">
         <ImageOff className="w-10 h-10 text-muted-foreground opacity-20" />
-        <span className="text-xs text-muted-foreground opacity-40">No image available</span>
+        <span className="text-sm text-muted-foreground opacity-40">No image available</span>
       </div>
     );
   }
@@ -101,7 +101,7 @@ function EventBanner({ src, alt }: { src?: string | null; alt: string }) {
       {imgState === "error" && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-slate-100">
           <ImageOff className="w-8 h-8 text-muted-foreground opacity-30" />
-          <span className="text-xs text-muted-foreground opacity-40">Image unavailable</span>
+          <span className="text-sm text-muted-foreground opacity-40">Image unavailable</span>
         </div>
       )}
     </div>
@@ -261,12 +261,12 @@ function ModalContent({
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="flex flex-wrap gap-1.5 mb-2">
                   {typeKey ? (
-                    <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${typeColor}`}>
+                    <span className={`text-sm font-semibold px-2.5 py-0.5 rounded-full ${typeColor}`}>
                       {typeKey}
                     </span>
                   ) : null}
                   {event.department ? (
-                    <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white backdrop-blur-sm">
+                    <span className="text-sm font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white backdrop-blur-sm">
                       {event.department}
                     </span>
                   ) : null}
@@ -335,13 +335,13 @@ function ModalContent({
                       <div key={i} className="bg-slate-50 border border-slate-100 rounded-xl p-3">
                         <p className="font-semibold text-sm text-secondary">{p.name}</p>
                         {p.designation ? (
-                          <p className="text-xs text-primary mt-0.5">{p.designation}</p>
+                          <p className="text-sm text-primary mt-0.5">{p.designation}</p>
                         ) : null}
                         {p.organization ? (
-                          <p className="text-xs text-muted-foreground">{p.organization}</p>
+                          <p className="text-sm text-muted-foreground">{p.organization}</p>
                         ) : null}
                         {p.topic ? (
-                          <p className="text-xs italic text-muted-foreground mt-1">
+                          <p className="text-sm italic text-muted-foreground mt-1">
                             Topic: {p.topic}
                           </p>
                         ) : null}
@@ -369,12 +369,12 @@ function ModalContent({
                             <div key={i} className="bg-blue-50 border border-blue-100 rounded-xl p-3">
                               <p className="font-semibold text-sm text-secondary">{c.name}</p>
                               {c.role ? (
-                                <p className="text-xs text-primary mt-0.5">{c.role}</p>
+                                <p className="text-sm text-primary mt-0.5">{c.role}</p>
                               ) : null}
                               {c.phone ? (
                                 <a
                                   href={`tel:${c.phone}`}
-                                  className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors mt-1"
+                                  className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors mt-1"
                                 >
                                   <Phone className="w-3 h-3" />
                                   {c.phone}
@@ -383,7 +383,7 @@ function ModalContent({
                               {c.email ? (
                                 <a
                                   href={`mailto:${c.email}`}
-                                  className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
+                                  className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
                                 >
                                   <Mail className="w-3 h-3" />
                                   {c.email}
@@ -404,12 +404,12 @@ function ModalContent({
                             <div key={i} className="bg-green-50 border border-green-100 rounded-xl p-3">
                               <p className="font-semibold text-sm text-secondary">{c.name}</p>
                               {c.role ? (
-                                <p className="text-xs text-primary mt-0.5">{c.role}</p>
+                                <p className="text-sm text-primary mt-0.5">{c.role}</p>
                               ) : null}
                               {c.phone ? (
                                 <a
                                   href={`tel:${c.phone}`}
-                                  className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors mt-1"
+                                  className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors mt-1"
                                 >
                                   <Phone className="w-3 h-3" />
                                   {c.phone}

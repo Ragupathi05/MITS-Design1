@@ -328,7 +328,7 @@ const Admissions = () => {
                       <div className="relative mb-6">
                         <div className="w-28 h-28 rounded-full bg-white border-4 border-[#b30000] shadow-xl flex flex-col items-center justify-center group-hover:bg-[#b30000] transition-colors duration-300">
                           <step.icon className="w-8 h-8 text-[#b30000] group-hover:text-white transition-colors duration-300" />
-                          <span className="text-xs font-bold text-[#b30000] group-hover:text-white/80 mt-1 transition-colors duration-300">{step.num}</span>
+                          <span className="text-sm font-bold text-[#b30000] group-hover:text-white/80 mt-1 transition-colors duration-300">{step.num}</span>
                         </div>
                       </div>
                       <h3 className="font-display text-xl font-bold text-[#0f2a44] mb-2">{step.title}</h3>

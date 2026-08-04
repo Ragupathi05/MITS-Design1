@@ -35,6 +35,24 @@ const NAV: { id: Section; label: string; icon: LucideIcon }[] = [
   { id: "stanford",    label: "Stanford Initiative", icon: Star },
 ];
 
+/** Full-bleed page container — used everywhere instead of the old narrow max-w-7xl wrapper. */
+const WIDE = "w-full max-w-[1900px] mx-auto px-3 sm:px-6 lg:px-10 xl:px-16";
+
+/**
+ * Each tab gets its own accent so the section doesn't read as one flat navy/gold block —
+ * distinct from MITS' own site-wide red/white identity, and distinct tab-to-tab.
+ */
+const TAB_THEME: Record<Section, { solid: string; soft: string; text: string; ring: string; glow: string }> = {
+  about:       { solid: "bg-[#0f2a44]", soft: "bg-[#0f2a44]/10", text: "text-[#0f2a44]", ring: "ring-[#0f2a44]/30", glow: "shadow-[0_8px_30px_-6px_rgba(15,42,68,0.55)]" },
+  mou:         { solid: "bg-[#caa74d]", soft: "bg-[#caa74d]/15", text: "text-[#8a6d1f]", ring: "ring-[#caa74d]/40", glow: "shadow-[0_8px_30px_-6px_rgba(202,167,77,0.55)]" },
+  internships: { solid: "bg-teal-600",  soft: "bg-teal-50",      text: "text-teal-700",  ring: "ring-teal-400/40", glow: "shadow-[0_8px_30px_-6px_rgba(13,148,136,0.5)]" },
+  fellowships: { solid: "bg-violet-600",soft: "bg-violet-50",    text: "text-violet-700",ring: "ring-violet-400/40", glow: "shadow-[0_8px_30px_-6px_rgba(124,58,237,0.5)]" },
+  global:      { solid: "bg-sky-600",   soft: "bg-sky-50",       text: "text-sky-700",   ring: "ring-sky-400/40", glow: "shadow-[0_8px_30px_-6px_rgba(2,132,199,0.5)]" },
+  events:      { solid: "bg-orange-600",soft: "bg-orange-50",    text: "text-orange-700",ring: "ring-orange-400/40", glow: "shadow-[0_8px_30px_-6px_rgba(234,88,12,0.5)]" },
+  workshops:   { solid: "bg-emerald-600",soft: "bg-emerald-50",  text: "text-emerald-700",ring: "ring-emerald-400/40", glow: "shadow-[0_8px_30px_-6px_rgba(5,150,105,0.5)]" },
+  stanford:    { solid: "bg-[#8C1515]", soft: "bg-[#8C1515]/10", text: "text-[#8C1515]", ring: "ring-[#8C1515]/40", glow: "shadow-[0_8px_30px_-6px_rgba(140,21,21,0.55)]" },
+};
+
 export const regionColors: Record<string, string> = {
   US: "bg-blue-100 text-blue-800",
   Europe: "bg-emerald-100 text-emerald-800",
@@ -113,20 +131,51 @@ const AnimatedStat = ({ value, label }: { value: string; label: string }) => {
         {display}
         {suffix}
       </div>
-      <div className="text-xs md:text-sm text-muted-foreground mt-1">{label}</div>
+      <div className="text-sm md:text-sm text-muted-foreground mt-1">{label}</div>
     </div>
   );
 };
 
 const SectionTitle = ({ title, subtitle }: { title: string; subtitle?: string }) => (
-  <div className="mb-8">
-    <h2 className="text-3xl md:text-4xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
+  <div className="relative mb-8 md:mb-10">
+    <div className="absolute -left-3 top-1 h-10 w-1 rounded-full bg-gradient-to-b from-[#caa74d] to-sky-500" />
+    <h2 className="text-3xl md:text-5xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
       {title}
     </h2>
-    {subtitle && <p className="text-muted-foreground mt-2 max-w-3xl">{subtitle}</p>}
-    <div className="h-1 w-16 bg-primary rounded-full mt-4" />
+    {subtitle && <p className="text-muted-foreground mt-3 max-w-4xl">{subtitle}</p>}
+    <div className="h-1.5 w-24 bg-gradient-to-r from-[#0f2a44] via-[#caa74d] to-sky-400 rounded-full mt-5" />
   </div>
 );
+
+/** Shared leadership content: shown with the office contact details, not instead of them. */
+const IROLeadership = ({ tone = "light" }: { tone?: "light" | "dark" }) => {
+  const dark = tone === "dark";
+
+  return (
+    <div className={cn("border-t pt-4", dark ? "border-white/15" : "border-slate-200") }>
+      <div className={cn("flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.13em]", dark ? "text-[#e8c97a]" : "text-[#0f2a44]")}>
+        <Users className="h-4 w-4" /> International Relations Office (IRO) Leadership
+      </div>
+      <p className={cn("mt-2.5 text-sm leading-relaxed", dark ? "text-white/90" : "text-slate-700")}>
+        {aboutIR.office}
+      </p>
+      <div className="mt-4 flex flex-col gap-2">
+        {contactCard.team.map((member) => (
+          <div key={member.name} className={cn("flex items-start gap-3 rounded-xl border p-3", dark ? "border-white/15 bg-white/5" : "border-slate-200 bg-slate-50/80")}>
+            <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm font-extrabold mt-0.5", dark ? "bg-[#e8c97a] text-[#0f2a44]" : "bg-[#0f2a44] text-[#e8c97a]")}>
+              {member.initials}
+            </span>
+            <div className="min-w-0 flex-1">
+              <div className={cn("text-sm font-bold leading-tight break-words", dark ? "text-white" : "text-[#0f2a44]")}>{member.name}</div>
+              <div className={cn("mt-0.5 text-sm leading-snug break-words", dark ? "text-white/75" : "text-slate-600")}>{member.designation}</div>
+              {member.email && <a href={`mailto:${member.email}`} className={cn("mt-1 inline-flex items-center gap-1 text-sm font-semibold hover:underline break-all", dark ? "text-[#e8c97a]" : "text-primary")}><Mail className="h-3 w-3 shrink-0" />{member.email}</a>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export const ImageCarousel = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -152,44 +201,49 @@ export const ImageCarousel = ({ images }: { images: string[] }) => {
 
   return (
     <>
-      <div className="relative w-full aspect-video overflow-hidden rounded-2xl border border-border bg-secondary/95 shadow-md group mb-8">
+      <div className="ir-media-deck relative w-full min-h-[280px] md:min-h-[440px] lg:min-h-[540px] overflow-hidden rounded-[1.75rem] border border-white/50 bg-[#092239] group mb-10">
         {/* Blurred backdrop fill (same image, scaled + blurred) — prevents empty bars while keeping subject intact */}
         <div
-          className="absolute inset-0 bg-center bg-cover scale-110 blur-2xl opacity-40"
+          className="absolute inset-0 bg-center bg-cover scale-110 blur-2xl opacity-45"
           style={{ backgroundImage: `url("${images[currentIndex]}")` }}
           aria-hidden
         />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#061624]/70 via-transparent to-[#caa74d]/20" />
+        <div className="ir-grid-surface absolute inset-0 opacity-50" aria-hidden />
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex}
             src={images[currentIndex]}
             alt="International Relations"
-            initial={{ opacity: 0, scale: 1.01 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 1.075, rotate: -0.25 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.85, ease: "easeOut" }}
             loading="lazy"
-            className="absolute inset-0 w-full h-full object-contain cursor-zoom-in"
+            className="absolute inset-0 w-full h-full object-contain p-2 md:p-3 cursor-zoom-in"
             onClick={() => setLightbox(images[currentIndex])}
             onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
           />
         </AnimatePresence>
 
-        {/* Subtle bottom gradient for dot legibility */}
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+        {/* Bottom visual control rail */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#061624]/85 to-transparent pointer-events-none" />
+        <div className="absolute left-4 md:left-6 bottom-4 md:bottom-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#061624]/50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white/85 backdrop-blur-md">
+          <Sparkles className="h-3.5 w-3.5 text-[#e8c97a]" /> Visual journal
+        </div>
 
         {/* Navigation Arrows */}
         {images.length > 1 && (
           <>
             <button
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-secondary shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+              className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-secondary shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-secondary shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+              className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-secondary shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -198,7 +252,7 @@ export const ImageCarousel = ({ images }: { images: string[] }) => {
 
         {/* Indicator Dots */}
         {images.length > 1 && (
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+          <div className="absolute bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
             {images.map((_, idx) => (
               <button
                 key={idx}
@@ -283,43 +337,97 @@ const AboutSection = () => (
     />
     <ImageCarousel images={aboutGallery} />
 
-    {/* Intro Overview Grid */}
-    <div className="grid lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2 space-y-4 text-[15px] leading-relaxed text-secondary/90 bg-white p-6 md:p-8 rounded-2xl border border-border shadow-sm">
+    {/* Intro Overview Grid — Contact now sits top-right, beside "A Global Academic Community" */}
+    <div className="grid lg:grid-cols-5 gap-6">
+      <div className="lg:col-span-3 space-y-4 text-[15px] leading-relaxed text-secondary/90 bg-white p-6 md:p-8 rounded-2xl border border-border shadow-sm">
         <h3 className="font-bold text-secondary text-xl mb-3" style={{ fontFamily: "var(--font-display)" }}>
           A Global Academic Community
         </h3>
         {aboutIR.intro.map((p, i) => (
           <p key={i} className="text-slate-700">{p}</p>
         ))}
+        {/* The goal and mission complete the academic-community story, with no unused space below it. */}
+        <div className="grid gap-4 border-t border-slate-200 pt-5 xl:grid-cols-[0.8fr_1.2fr]">
+          <motion.div
+            whileHover={{ rotateX: 3, rotateY: 3, y: -2 }}
+            style={{ transformStyle: "preserve-3d" }}
+            className="rounded-2xl bg-gradient-to-br from-[#0f2a44] to-[#11355a] p-5 text-white shadow-md"
+          >
+            <div className="mb-2 flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#caa74d]">
+              <Sparkles className="h-4 w-4" /> Strategic Goal
+            </div>
+            <p className="text-sm font-medium leading-relaxed text-white/90">{aboutIR.goal}</p>
+          </motion.div>
+          <motion.div
+            whileHover={{ rotateX: 3, rotateY: -3, y: -2 }}
+            style={{ transformStyle: "preserve-3d" }}
+            className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-sm"
+          >
+            <div className="mb-3 flex items-center gap-2 font-bold text-primary">
+              <Award className="h-5 w-5 text-primary" /> Key Mission
+            </div>
+            <ul className="space-y-2.5 text-sm text-slate-700">
+              {aboutIR.mission.map((m, i) => (
+                <li key={i} className="flex gap-2">
+                  <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  <span>{m}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
       </div>
-      <div className="space-y-4">
-        <div className="rounded-2xl border border-border bg-gradient-to-br from-[#0f2a44] to-[#11355a] text-white p-6 shadow-md">
-          <div className="flex items-center gap-2 text-[#caa74d] font-bold mb-2 uppercase text-xs tracking-wider">
-            <Sparkles className="w-4 h-4" /> Strategic Goal
+      <div className="lg:col-span-2 space-y-4">
+        {/* Contact — moved to the top for this landing tab, per the dean's brief */}
+        <motion.div
+          whileHover={{ rotateX: 4, rotateY: -4, y: -3 }}
+          style={{ transformStyle: "preserve-3d" }}
+          className="rounded-2xl border border-white/60 bg-white/70 backdrop-blur-xl p-6 shadow-xl space-y-3"
+        >
+          <div className="flex items-center gap-2 text-[#0f2a44] font-bold text-sm uppercase tracking-widest">
+            <Building2 className="w-4 h-4" /> Contact the IRO
           </div>
-          <p className="text-sm text-white/90 leading-relaxed font-medium">{aboutIR.goal}</p>
-        </div>
-        <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
-          <div className="flex items-center gap-2 text-primary font-bold mb-3">
-            <Award className="w-5 h-5 text-primary" /> Key Mission
+          <div className="space-y-2 text-sm md:text-sm text-slate-700">
+            <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />{contactCard.address}</div>
+            <div className="flex items-center gap-2"><Calendar className="w-4 h-4 text-primary shrink-0" />{contactCard.timings}</div>
+            <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${contactCard.phone}`} className="hover:underline">{contactCard.phone}</a></div>
+            <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary shrink-0" /><a href={`mailto:${contactCard.email}`} className="hover:underline">{contactCard.email}</a></div>
           </div>
-          <ul className="space-y-2 text-xs md:text-sm text-slate-700">
-            {aboutIR.mission.map((m, i) => (
-              <li key={i} className="flex gap-2">
-                <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <span>{m}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+          <IROLeadership />
+          <div className="flex flex-wrap gap-2 pt-1">
+            <a href={`mailto:${contactCard.email}`}><Button size="sm" className="gap-1.5"><Mail className="w-3.5 h-3.5" />Email</Button></a>
+            <a href={contactCard.mapsUrl} target="_blank" rel="noopener noreferrer"><Button size="sm" variant="outline" className="gap-1.5"><MapPin className="w-3.5 h-3.5" />Directions</Button></a>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+
+    {/* Partner logo marquee — fills otherwise-empty space with real MoU partner crests */}
+    <div className="relative overflow-hidden rounded-5xl border border-border bg-white py-5">
+      <p className="text-center text-[14px] font-bold uppercase tracking-widest text-muted-foreground mb-5">
+        In Partnership With Universities Worldwide
+      </p>
+      <div className="recruiter-marquee-track">
+        {[...partners, ...partners].map((p, i) => {
+          const BASE = import.meta.env.BASE_URL;
+          const local = localLogos[p.name];
+          return (
+            <div key={`${p.name}-${i}`} className="recruiter-logo-card" aria-hidden={i >= partners.length}>
+              {local ? (
+                <img src={`${BASE}${local}`} alt={p.name} className="h-16 w-auto object-contain" loading="lazy" />
+              ) : (
+                <span className="text-sm font-bold text-secondary text-center px-2">{p.name}</span>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
 
     {/* Functions of IRO & Central Hub */}
     <div className="bg-gradient-to-br from-slate-900 to-[#0f2a44] text-white p-8 md:p-10 rounded-3xl shadow-xl space-y-6 relative overflow-hidden">
       <div className="relative z-10">
-        <span className="text-xs font-bold uppercase tracking-widest text-[#caa74d] bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
+        <span className="text-sm font-bold uppercase tracking-widest text-[#caa74d] bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
           Multicultural Ecosystem
         </span>
         <h3 className="text-2xl md:text-3xl font-bold mt-4 mb-3 text-white" style={{ fontFamily: "var(--font-display)" }}>
@@ -330,14 +438,14 @@ const AboutSection = () => (
         </p>
 
         <div className="mt-8 border-t border-white/10 pt-6">
-          <h4 className="text-base font-bold text-[#caa74d] mb-4 uppercase tracking-wider text-xs">
+          <h4 className="text-base font-bold text-[#caa74d] mb-4 uppercase tracking-wider text-sm">
             Central Hub for Global Engagement Objectives
           </h4>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="space-y-3">
             {aboutIR.centralHubObjectives.map((obj, i) => (
-              <div key={i} className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+              <div key={i} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 transition-all hover:bg-white/10">
                 <CheckCircle2 className="w-4 h-4 text-[#caa74d] shrink-0" />
-                <span className="text-xs md:text-sm text-white/90 font-medium">{obj}</span>
+                <span className="text-sm text-white/90 font-medium">{obj}</span>
               </div>
             ))}
           </div>
@@ -355,22 +463,27 @@ const AboutSection = () => (
           <h3 className="font-bold text-secondary text-xl" style={{ fontFamily: "var(--font-display)" }}>
             Key Benefits for Students
           </h3>
-          <p className="text-xs text-muted-foreground">Transformative opportunities gained through MITS International Exposure</p>
+          <p className="text-sm text-muted-foreground">Transformative opportunities gained through MITS International Exposure</p>
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="flex flex-col gap-3">
         {aboutIR.studentBenefits.map((b, i) => (
-          <div key={i} className="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-[#caa74d] hover:shadow-md transition-all group flex flex-col justify-between">
-            <div className="flex items-start gap-2.5">
-              <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                ✓
-              </span>
-              <p className="text-xs md:text-sm text-slate-700 font-medium leading-relaxed group-hover:text-secondary">
-                {b}
-              </p>
-            </div>
-          </div>
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.35, delay: i * 0.07 }}
+            className="flex items-start gap-3 p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-[#caa74d] hover:shadow-md transition-all group"
+          >
+            <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
+              ✓
+            </span>
+            <p className="text-sm text-slate-700 font-medium leading-relaxed group-hover:text-secondary">
+              {b}
+            </p>
+          </motion.div>
         ))}
       </div>
     </div>
@@ -380,7 +493,7 @@ const AboutSection = () => (
       {/* Journey Milestone */}
       <div className="rounded-3xl border border-border bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-white p-8 shadow-sm space-y-4 flex flex-col justify-between">
         <div>
-          <div className="flex items-center gap-2 text-amber-700 font-bold text-xs uppercase tracking-widest mb-2">
+          <div className="flex items-center gap-2 text-amber-700 font-bold text-sm uppercase tracking-widest mb-2">
             <Star className="w-4 h-4 text-amber-600" /> Milestone Achievement
           </div>
           <h3 className="font-bold text-secondary text-2xl mb-3" style={{ fontFamily: "var(--font-display)" }}>
@@ -390,7 +503,7 @@ const AboutSection = () => (
             {aboutIR.journey.text}
           </p>
         </div>
-        <div className="p-4 rounded-2xl bg-white border border-amber-200 text-xs text-amber-900 font-semibold flex items-center gap-3">
+        <div className="p-4 rounded-2xl bg-white border border-amber-200 text-sm text-amber-900 font-semibold flex items-center gap-3">
           <Award className="w-5 h-5 text-amber-600 shrink-0" />
           <span>60 MITS Students Trained at Stanford d.school in Innovation, Design Thinking &amp; Leadership</span>
         </div>
@@ -401,10 +514,10 @@ const AboutSection = () => (
         <h3 className="font-bold text-secondary text-2xl mb-2" style={{ fontFamily: "var(--font-display)" }}>
           Long-Term Strategic Objectives
         </h3>
-        <p className="text-xs text-muted-foreground mb-4">Expanding MITS global footprint through bilateral research and pathways</p>
+        <p className="text-sm text-muted-foreground mb-4">Expanding MITS global footprint through bilateral research and pathways</p>
         <ul className="space-y-3">
           {aboutIR.longTermObjectives.map((obj, i) => (
-            <li key={i} className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 text-xs md:text-sm text-slate-700 font-medium">
+            <li key={i} className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 text-sm md:text-sm text-slate-700 font-medium">
               <ArrowRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
               <span>{obj}</span>
             </li>
@@ -416,7 +529,7 @@ const AboutSection = () => (
     {/* IRO Leadership & Contact */}
     <div className="rounded-3xl border border-border bg-gradient-to-r from-[#0f2a44] to-[#152f4f] text-white p-6 md:p-8 shadow-lg space-y-6">
       <div>
-        <div className="flex items-center gap-2 text-[#caa74d] font-bold mb-3 uppercase text-xs tracking-widest">
+        <div className="flex items-center gap-2 text-[#caa74d] font-bold mb-3 uppercase text-sm tracking-widest">
           <Users className="w-4 h-4" /> International Relations Office (IRO) Leadership
         </div>
         <p className="text-sm md:text-base leading-relaxed text-white/90">{aboutIR.office}</p>
@@ -582,7 +695,7 @@ export const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
           )}
 
           {p.ranking && (
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-900 border border-amber-200 shrink-0 shadow-sm">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-bold bg-amber-50 text-amber-900 border border-amber-200 shrink-0 shadow-sm">
               <Award className="w-3.5 h-3.5 text-amber-600" />
               {p.ranking}
             </span>
@@ -597,7 +710,7 @@ export const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
           >
             {p.name}
           </h4>
-          <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1 font-semibold">
+          <p className="text-sm text-muted-foreground mt-1 flex items-center gap-1 font-semibold">
             <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
             {p.country}
           </p>
@@ -605,7 +718,7 @@ export const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
 
         {/* Full Detailed Description from Document */}
         {p.description && (
-          <p className="text-xs md:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+          <p className="text-sm md:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
             {p.description}
           </p>
         )}
@@ -628,7 +741,7 @@ export const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
       {/* Footer Highlight & Website Hyperlink Button */}
       <div className="mt-6 pt-4 border-t border-border space-y-3">
         {p.highlight && (
-          <p className="text-xs text-secondary/80 font-medium leading-relaxed bg-amber-50/50 p-2.5 rounded-lg border border-amber-100/80">
+          <p className="text-sm text-secondary/80 font-medium leading-relaxed bg-amber-50/50 p-2.5 rounded-lg border border-amber-100/80">
             ✨ {p.highlight}
           </p>
         )}
@@ -637,7 +750,7 @@ export const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
           href={p.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-50 hover:bg-[#0f2a44] text-slate-800 hover:text-white border border-slate-200 hover:border-[#0f2a44] text-xs font-bold transition-all duration-200 group/btn shadow-sm"
+          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-50 hover:bg-[#0f2a44] text-slate-800 hover:text-white border border-slate-200 hover:border-[#0f2a44] text-sm font-bold transition-all duration-200 group/btn shadow-sm"
         >
           <span>Web Link: {p.name}</span>
           <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
@@ -647,6 +760,7 @@ export const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
   );
 };
 
+/** Single logo tile — no redirect, pure image only */
 const PartnerLogoTile = ({ p }: { p: (typeof partners)[0] }) => {
   const [imgFailed, setImgFailed] = useState(false);
   const BASE = import.meta.env.BASE_URL;
@@ -654,10 +768,7 @@ const PartnerLogoTile = ({ p }: { p: (typeof partners)[0] }) => {
   const logoUrl = localLogo ? `${BASE}${localLogo}` : null;
 
   return (
-    <Link
-      to={`/international-relations/mou/${slugify(p.name)}`}
-      className="group relative flex flex-col items-center justify-center gap-3 aspect-square rounded-2xl border border-border bg-white p-5 hover:shadow-xl hover:-translate-y-1 hover:border-[#caa74d]/60 transition-all overflow-hidden"
-    >
+    <div className="group relative flex flex-col items-center justify-center aspect-[4/3] rounded-2xl border border-slate-200/80 bg-white p-5 overflow-hidden hover:shadow-md hover:border-[#caa74d]/40 transition-all">
       {!imgFailed && logoUrl ? (
         <img
           src={logoUrl}
@@ -668,17 +779,29 @@ const PartnerLogoTile = ({ p }: { p: (typeof partners)[0] }) => {
       ) : (
         <FallbackCrest name={p.name} />
       )}
-
-      {/* Name only appears on hover / focus — the wall itself stays pure logos */}
-      <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 group-focus-visible:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-[#0f2a44] to-[#0f2a44]/90 text-white px-3 py-2.5 text-center">
-        <div className="text-[11px] font-bold leading-tight line-clamp-2">{p.name}</div>
-        <div className="text-[10px] text-white/70 mt-0.5">{p.country}</div>
+      {/* Hover tooltip */}
+      <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-[#0f2a44] to-[#0f2a44]/90 text-white px-3 py-2 text-center">
+        <div className="text-[10px] font-bold leading-tight line-clamp-2">{p.name}</div>
+        <div className="text-[9px] text-white/70 mt-0.5">{p.country}</div>
       </div>
-
-      <ExternalLink className="absolute top-3 right-3 w-3.5 h-3.5 text-muted-foreground/40 group-hover:text-[#caa74d] transition-colors" />
-    </Link>
+    </div>
   );
 };
+
+/** Horizontal oval pill — university name + Read more, clicks to partner page */
+const MouPartnerOval = ({ p }: { p: (typeof partners)[0] }) => (
+  <Link
+    to={`/international-relations/mou/${slugify(p.name)}`}
+    className="ir-lift-card group flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white/90 px-5 py-4 h-full min-h-[72px] hover:border-[#caa74d] hover:bg-[#0f2a44] hover:text-white transition-all shadow-sm backdrop-blur-sm"
+  >
+    <span className="text-sm font-bold text-[#0f2a44] group-hover:text-white leading-snug flex-1" style={{ fontFamily: "var(--font-display)" }}>
+      {p.name}
+    </span>
+    <span className="shrink-0 inline-flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-primary group-hover:text-[#caa74d] whitespace-nowrap">
+      Read more <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" />
+    </span>
+  </Link>
+);
 
 const MoUSection = () => {
   const [regionFilter, setRegionFilter] = useState<string>("All");
@@ -702,16 +825,20 @@ const MoUSection = () => {
     });
   }, [regionFilter, query]);
 
-  const grouped = filtered.reduce((acc, p) => {
-    (acc[p.region] ||= []).push(p);
-    return acc;
-  }, {} as Record<string, typeof partners>);
-
   const regionLabel = (region: string) =>
     region === "US" ? "United States" : region === "Europe" ? "Europe" : region;
 
+  /* Country-led reading order: USA, Europe, then Asia. Individual countries are kept on every partner tile. */
+  // Ordered: USA → Europe → Asia
+  const regionOrder = ["US", "Europe"];
+  const sortedFiltered = useMemo(() => [
+    ...filtered.filter((p) => p.region === "US"),
+    ...filtered.filter((p) => p.region === "Europe"),
+    ...filtered.filter((p) => !regionOrder.includes(p.region)),
+  ], [filtered]);
+
   return (
-    <div className="space-y-10">
+    <div className="space-y-12">
       <SectionTitle
         title="MoUs with QS Ranking Partner Universities"
         subtitle="MITS – Deemed to be University has active MoUs and global partnerships with leading QS-ranked institutions worldwide."
@@ -719,7 +846,7 @@ const MoUSection = () => {
       <ImageCarousel images={partnerImages} />
 
       {/* Filter & search bar */}
-      <div className="rounded-2xl border border-border bg-white p-4 md:p-5 shadow-sm space-y-4">
+      <div className="ir-lift-card rounded-[1.5rem] border border-white/70 bg-white/75 p-4 md:p-5 shadow-sm backdrop-blur-xl space-y-4">
         <div className="flex flex-col md:flex-row md:items-center gap-3">
           <div className="relative flex-1">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -738,7 +865,7 @@ const MoUSection = () => {
               </button>
             )}
           </div>
-          <span className="text-xs font-semibold text-muted-foreground shrink-0">
+          <span className="text-sm font-semibold text-muted-foreground shrink-0">
             {filtered.length} of {partners.length} partner{partners.length === 1 ? "" : "s"}
           </span>
         </div>
@@ -746,7 +873,7 @@ const MoUSection = () => {
           <button
             onClick={() => setRegionFilter("All")}
             className={cn(
-              "px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all",
+              "px-3.5 py-1.5 rounded-full text-sm font-bold border transition-all",
               regionFilter === "All"
                 ? "bg-secondary text-white border-secondary"
                 : "bg-white text-secondary border-border hover:border-secondary"
@@ -759,7 +886,7 @@ const MoUSection = () => {
               key={region}
               onClick={() => setRegionFilter(region)}
               className={cn(
-                "px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all",
+                "px-3.5 py-1.5 rounded-full text-sm font-bold border transition-all",
                 regionFilter === region
                   ? cn(regionColors[region], "border-transparent shadow-sm")
                   : "bg-white text-secondary border-border hover:border-primary"
@@ -771,46 +898,51 @@ const MoUSection = () => {
         </div>
       </div>
 
-      {Object.keys(grouped).length === 0 && (
+      {sortedFiltered.length === 0 && (
         <div className="text-center py-16 rounded-2xl border border-dashed border-border bg-slate-50/60">
           <p className="text-sm text-muted-foreground">No partner universities match your search.</p>
         </div>
       )}
 
-      {Object.entries(grouped).map(([region, list]) => (
-        <div key={region} className="mb-10 last:mb-0 space-y-4">
-          <div className="flex items-center justify-between border-b border-border pb-3">
-            <div className="flex items-center gap-3">
-              <span className={cn("px-3.5 py-1 rounded-full text-xs font-bold shadow-sm", regionColors[region])}>
-                {region === "US" ? "US Universities" : region === "Europe" ? "European Universities" : `${region} Universities`}
-              </span>
-              <h3 className="font-bold text-secondary text-lg" style={{ fontFamily: "var(--font-display)" }}>
-                {regionLabel(region)}
-              </h3>
-            </div>
-            <span className="text-xs font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
-              {list.length} Institutional MoUs
-            </span>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-            {list.map((p, i) => (
+      {sortedFiltered.length > 0 && (
+        <section className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/55 p-4 md:p-7 xl:p-9 shadow-[0_24px_60px_-48px_rgba(15,42,68,0.7)]">
+          <div className="absolute inset-0 ir-grid-surface opacity-60 pointer-events-none" />
+
+          {/* Single unified collage — all logos side by side, ordered USA → Europe → Asia */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-4">
+            {sortedFiltered.map((p, i) => (
               <motion.div
                 key={p.name}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.4, delay: (i % 4) * 0.06 }}
+                transition={{ duration: 0.4, delay: (i % 6) * 0.05 }}
               >
                 <PartnerLogoTile p={p} />
               </motion.div>
             ))}
           </div>
-        </div>
-      ))}
 
-      <p className="text-center text-xs text-muted-foreground pt-2">
-        Tap a university crest to view MoU photos, an institutional profile, and its official website.
-      </p>
+          {/* Oval pills — 3 per row, all partners in same continent order */}
+          <div className="relative mt-8 border-t border-slate-200/80 pt-6">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground mb-4">Click a university to view its full profile</p>
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
+              {sortedFiltered.map((p) => (
+                <motion.div
+                  key={p.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-20px" }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full"
+                >
+                  <MouPartnerOval p={p} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 };
@@ -859,7 +991,7 @@ const ParticipantsModal = ({
           </div>
           <div className="overflow-y-auto p-5">
             <table className="w-full text-sm">
-              <thead className="text-xs uppercase text-muted-foreground border-b border-border">
+              <thead className="text-sm uppercase text-muted-foreground border-b border-border">
                 <tr>
                   <th className="text-left py-2 pr-4">#</th>
                   <th className="text-left py-2 pr-4">Name</th>
@@ -917,14 +1049,15 @@ const InternshipProgramCard = ({
   const website = findPartnerWebsite(p.partner);
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden hover:shadow-lg transition-all">
-      <div className="p-5 md:p-6 bg-gradient-to-r from-primary/5 to-transparent border-b border-border">
+    <div className="ir-lift-card relative overflow-hidden rounded-[1.6rem] border border-white/80 bg-white">
+      <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-teal-400 via-sky-500 to-[#0f2a44]" />
+      <div className="p-5 md:p-6 bg-[linear-gradient(115deg,rgba(240,253,250,.95),rgba(255,255,255,.95)_52%,rgba(240,249,255,.9))] border-b border-slate-200/80">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <h3 className="text-lg font-bold text-secondary leading-snug" style={{ fontFamily: "var(--font-display)" }}>
               {p.title}
             </h3>
-            <div className="flex flex-wrap items-center gap-3 mt-2 text-xs text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-3 mt-2 text-sm text-muted-foreground">
               {p.country && (
                 <span className="inline-flex items-center gap-1">
                   <Globe className="w-3 h-3" />
@@ -993,7 +1126,7 @@ const InternshipProgramCard = ({
             <Users className="w-4 h-4 text-primary" />
             {p.participants.length} Participant{p.participants.length === 1 ? "" : "s"}
           </span>
-          <span className="text-xs font-bold text-primary inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+          <span className="text-sm font-bold text-primary inline-flex items-center gap-1 group-hover:gap-2 transition-all">
             View List <ArrowRight className="w-3.5 h-3.5" />
           </span>
         </button>
@@ -1033,7 +1166,7 @@ const InternshipsSection = () => {
       />
       <ImageCarousel images={internshipGallery} />
 
-      <div className="flex items-center justify-center gap-1 bg-slate-100 rounded-full p-1 w-fit mx-auto">
+      <div className="flex items-center justify-center gap-1 rounded-full border border-white/70 bg-white/75 p-1.5 w-fit mx-auto shadow-lg backdrop-blur-xl">
         <button
           onClick={() => setGroupBy("year")}
           className={cn(
@@ -1077,7 +1210,7 @@ const InternshipsSection = () => {
                   )}
                   {g.label}
                 </h3>
-                <span className="text-xs font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
+                <span className="text-sm font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
                   {g.list.length} Programme{g.list.length === 1 ? "" : "s"}
                 </span>
               </div>
@@ -1091,7 +1224,7 @@ const InternshipsSection = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="rounded-2xl border border-border bg-muted/30 p-6">
+      <div className="ir-lift-card rounded-[1.6rem] border border-white/70 bg-white/75 p-6 backdrop-blur-xl">
         <h3 className="font-bold text-secondary mb-3" style={{ fontFamily: "var(--font-display)" }}>
           Internship Archives
         </h3>
@@ -1117,31 +1250,42 @@ const InternshipsSection = () => {
 };
 
 const FellowshipsSection = () => (
-  <div className="space-y-8">
+  <div className="space-y-10">
     <SectionTitle title="Fellowships & Scholarships" subtitle="Prestigious global programmes MITS students are encouraged to compete for." />
     <ImageCarousel images={fellowshipGallery} />
-    <div className="grid md:grid-cols-2 gap-5">
-      {fellowships.map((f) => (
-        <div key={f.title} className="rounded-2xl border border-border bg-white p-6 hover:shadow-lg transition-all">
-          <div className="flex items-start gap-3 mb-3">
-            <div className="p-2 rounded-lg bg-accent/15 text-accent-foreground"><Award className="w-5 h-5" /></div>
+    <div className="relative grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="absolute -inset-5 -z-10 rounded-[3rem] bg-[radial-gradient(circle_at_15%_20%,rgba(202,167,77,.17),transparent_30%),radial-gradient(circle_at_85%_70%,rgba(14,165,233,.13),transparent_32%)]" />
+      {fellowships.map((f, index) => (
+        <motion.div
+          key={f.title}
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-70px" }}
+          transition={{ delay: (index % 3) * 0.06 }}
+          whileHover={{ y: -7, rotateX: 2, rotateY: index % 2 ? -1 : 1 }}
+          style={{ transformStyle: "preserve-3d" }}
+          className="group relative overflow-hidden rounded-[1.65rem] border border-white/80 bg-white p-6 shadow-[0_22px_48px_-36px_rgba(15,42,68,.56)]"
+        >
+          <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-gradient-to-br from-[#caa74d]/25 to-sky-300/10 blur-sm transition-transform duration-500 group-hover:scale-125" />
+          <div className="relative flex items-start gap-3 mb-4">
+            <div className="p-2.5 rounded-xl bg-[#0f2a44] text-[#e8c97a] shadow-lg shadow-[#0f2a44]/20"><Award className="w-5 h-5" /></div>
             <div className="flex-1">
               <h3 className="font-bold text-secondary text-lg" style={{ fontFamily: "var(--font-display)" }}>{f.title}</h3>
-              <div className="flex flex-wrap gap-2 mt-1 text-xs text-muted-foreground">
+              <div className="flex flex-wrap gap-2 mt-1 text-sm text-muted-foreground">
                 {f.country && <span className="inline-flex items-center gap-1"><Globe className="w-3 h-3" />{f.country}</span>}
                 {f.partner && <span className="inline-flex items-center gap-1"><Building2 className="w-3 h-3" />{f.partner}</span>}
                 {f.period && <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />{f.period}</span>}
               </div>
             </div>
           </div>
-          {f.description && <p className="text-sm text-secondary/80 leading-relaxed">{f.description}</p>}
+          {f.description && <p className="relative text-sm text-secondary/80 leading-relaxed">{f.description}</p>}
           {f.reportUrl && (
             <a href={f.reportUrl} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-primary hover:underline">
+              className="relative inline-flex items-center gap-2 mt-5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-sm font-bold uppercase tracking-wide text-primary hover:bg-primary hover:text-white transition-colors">
               <FileText className="w-4 h-4" />View Report
             </a>
           )}
-        </div>
+        </motion.div>
       ))}
     </div>
   </div>
@@ -1155,20 +1299,30 @@ const GlobalSection = () => {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       <SectionTitle title="Global Immersion, Summer & Winter Programs" subtitle="Short-term intensive academic and cultural immersion experiences with partner universities." />
       <ImageCarousel images={globalGallery} />
       <div className="space-y-6">
-        {globalPrograms.map((g) => (
-          <div key={g.title} className="rounded-2xl border border-border bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
-            <div className="p-6 border-b border-border bg-gradient-to-r from-primary/5 to-transparent">
+        {globalPrograms.map((g, index) => (
+          <motion.article
+            key={g.title}
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ delay: (index % 3) * 0.05 }}
+            whileHover={{ y: -5, rotateX: 1 }}
+            style={{ transformStyle: "preserve-3d" }}
+            className="relative overflow-hidden rounded-[1.8rem] border border-white/80 bg-white shadow-[0_22px_50px_-40px_rgba(15,42,68,.58)]"
+          >
+            <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-sky-400 via-[#caa74d] to-[#0f2a44]" />
+            <div className="p-6 md:p-7 border-b border-slate-200/80 bg-[linear-gradient(115deg,rgba(240,249,255,.95),rgba(255,255,255,.95)_42%,rgba(255,248,235,.9))]">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <div className="flex items-center gap-2 text-xs text-primary font-bold mb-1.5 uppercase tracking-wide">
+                  <div className="flex items-center gap-2 text-sm text-primary font-bold mb-1.5 uppercase tracking-wide">
                     <Sparkles className="w-3.5 h-3.5" />{g.country}
                   </div>
                   <h3 className="text-xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>{g.title}</h3>
-                  <div className="flex flex-wrap items-center gap-3 mt-2 text-xs text-muted-foreground">
+                  <div className="flex flex-wrap items-center gap-3 mt-2 text-sm text-muted-foreground">
                     {g.partner && <span className="inline-flex items-center gap-1"><Building2 className="w-3 h-3" />{g.partner}</span>}
                     {g.period && <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />{g.period}</span>}
                   </div>
@@ -1190,9 +1344,9 @@ const GlobalSection = () => {
 
             {/* Collapsible Student Table */}
             {g.participants && g.participants.length > 0 && expanded[g.title] && (
-              <div className="p-6 border-t border-border overflow-x-auto bg-muted/10">
+              <div className="p-6 md:p-7 border-t border-border overflow-x-auto bg-slate-50/60">
                 <table className="w-full text-sm">
-                  <thead className="text-xs uppercase text-muted-foreground border-b border-border">
+                  <thead className="text-sm uppercase text-muted-foreground border-b border-border">
                     <tr>
                       <th className="text-left py-2 pr-4">#</th>
                       <th className="text-left py-2 pr-4">Name</th>
@@ -1215,7 +1369,7 @@ const GlobalSection = () => {
                 </table>
               </div>
             )}
-          </div>
+          </motion.article>
         ))}
       </div>
     </div>
@@ -1268,7 +1422,7 @@ const EventCard = ({ e }: { e: { date: string; title: string; description: strin
         </div>
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2 mb-1">
-            <span className="text-xs font-bold text-primary uppercase tracking-wide">{e.date}</span>
+            <span className="text-sm font-bold text-primary uppercase tracking-wide">{e.date}</span>
             <span className={cn("text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border", kind.classes)}>
               {kind.label}
             </span>
@@ -1283,7 +1437,7 @@ const EventCard = ({ e }: { e: { date: string; title: string; description: strin
         {needsTruncation && (
           <button
             onClick={() => setShowFull(!showFull)}
-            className="text-primary font-semibold ml-2 hover:underline focus:outline-none inline-flex items-center gap-0.5 text-xs"
+            className="text-primary font-semibold ml-2 hover:underline focus:outline-none inline-flex items-center gap-0.5 text-sm"
           >
             {showFull ? "Read Less" : "Read More"}
           </button>
@@ -1291,7 +1445,7 @@ const EventCard = ({ e }: { e: { date: string; title: string; description: strin
       </p>
       {e.reportUrl && (
         <a href={e.reportUrl} target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 mt-4 text-xs font-bold uppercase tracking-wider text-primary hover:text-primary/80 transition-colors bg-primary/5 hover:bg-primary/10 px-3 py-2 rounded-lg border border-primary/20">
+          className="inline-flex items-center gap-1.5 mt-4 text-sm font-bold uppercase tracking-wider text-primary hover:text-primary/80 transition-colors bg-primary/5 hover:bg-primary/10 px-3 py-2 rounded-lg border border-primary/20">
           <Download className="w-3.5 h-3.5" />Event Report (PDF)
         </a>
       )}
@@ -1301,16 +1455,23 @@ const EventCard = ({ e }: { e: { date: string; title: string; description: strin
 
 const EventsSection = () => {
   const [typeFilter, setTypeFilter] = useState<string>("All");
+  const [yearFilter, setYearFilter] = useState<string>("All");
 
   const eventTypes = useMemo(
     () => Array.from(new Set(events.map((e) => classifyEvent(e.title).label))),
     []
   );
 
-  const filtered = useMemo(
-    () => (typeFilter === "All" ? events : events.filter((e) => classifyEvent(e.title).label === typeFilter)),
-    [typeFilter]
+  const eventYears = useMemo(
+    () => Array.from(new Set(events.map((e) => getEventYear(e.date)))).sort((a, b) => b.localeCompare(a)),
+    []
   );
+
+  const filtered = useMemo(() => events.filter((e) => {
+    const matchesType = typeFilter === "All" || classifyEvent(e.title).label === typeFilter;
+    const matchesYear = yearFilter === "All" || getEventYear(e.date) === yearFilter;
+    return matchesType && matchesYear;
+  }), [typeFilter, yearFilter]);
 
   const grouped = filtered.reduce((acc, e) => {
     const y = getEventYear(e.date);
@@ -1327,12 +1488,32 @@ const EventsSection = () => {
       />
       <ImageCarousel images={eventGallery} />
 
-      {/* Type filter */}
-      <div className="flex flex-wrap justify-center gap-2">
+      {/* Year-first event toggle, followed by event type. */}
+      <div className="ir-lift-card rounded-[1.5rem] border border-white/70 bg-white/75 p-4 md:p-5 backdrop-blur-xl space-y-4">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <span className="mr-1 inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#0f2a44]/60"><Calendar className="h-3.5 w-3.5" /> Year</span>
+          <button
+            onClick={() => setYearFilter("All")}
+            className={cn("rounded-full border px-3.5 py-1.5 text-sm font-bold transition-all", yearFilter === "All" ? "bg-[#0f2a44] text-white border-[#0f2a44] shadow-md" : "bg-white text-secondary border-border hover:border-secondary")}
+          >
+            All years
+          </button>
+          {eventYears.map((year) => (
+            <button
+              key={year}
+              onClick={() => setYearFilter(year)}
+              className={cn("rounded-full border px-3.5 py-1.5 text-sm font-bold transition-all", yearFilter === year ? "bg-[#caa74d] text-[#0f2a44] border-[#caa74d] shadow-md" : "bg-white text-secondary border-border hover:border-[#caa74d]")}
+            >
+              {year}
+            </button>
+          ))}
+        </div>
+        <div className="h-px bg-slate-200/80" />
+        <div className="flex flex-wrap justify-center gap-2">
         <button
           onClick={() => setTypeFilter("All")}
           className={cn(
-            "px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all",
+            "px-3.5 py-1.5 rounded-full text-sm font-bold border transition-all",
             typeFilter === "All"
               ? "bg-secondary text-white border-secondary"
               : "bg-white text-secondary border-border hover:border-secondary"
@@ -1348,7 +1529,7 @@ const EventsSection = () => {
               key={label}
               onClick={() => setTypeFilter(label)}
               className={cn(
-                "px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all",
+                "px-3.5 py-1.5 rounded-full text-sm font-bold border transition-all",
                 typeFilter === label ? cn(sample.classes, "border-transparent shadow-sm") : "bg-white text-secondary border-border hover:border-primary"
               )}
             >
@@ -1356,11 +1537,12 @@ const EventsSection = () => {
             </button>
           );
         })}
+        </div>
       </div>
 
       <AnimatePresence mode="wait">
         <motion.div
-          key={typeFilter}
+          key={`${typeFilter}-${yearFilter}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -1377,7 +1559,7 @@ const EventsSection = () => {
                   <span className="text-xl md:text-2xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
                     {year}
                   </span>
-                  <span className="text-xs font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
+                  <span className="text-sm font-bold text-muted-foreground bg-slate-100 px-2.5 py-1 rounded-full">
                     {grouped[year].length} Event{grouped[year].length === 1 ? "" : "s"}
                   </span>
                 </div>
@@ -1416,16 +1598,26 @@ const WorkshopsSection = () => (
   <div className="space-y-10">
     <SectionTitle title="Workshops" subtitle="Skill-building sessions and awareness workshops facilitated by the IRO." />
     <ImageCarousel images={workshopGallery} />
-    <div className="space-y-8">
+    <div className="grid gap-6 xl:grid-cols-2">
       {workshops.map((w, i) => (
-        <div key={i} className="rounded-2xl border border-border bg-white p-6 md:p-8 hover:shadow-xl transition-all">
-          <div className="flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider mb-3">
+        <motion.article
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ delay: i * 0.08 }}
+          whileHover={{ y: -6, rotateX: 1 }}
+          style={{ transformStyle: "preserve-3d" }}
+          className="relative overflow-hidden rounded-[1.8rem] border border-white/80 bg-white p-6 md:p-8 shadow-[0_25px_52px_-40px_rgba(15,42,68,.6)]"
+        >
+          <div className="absolute right-0 top-0 h-32 w-32 rounded-bl-[4rem] bg-gradient-to-bl from-emerald-200/60 to-transparent" />
+          <div className="relative flex items-center gap-2 text-sm font-bold text-primary uppercase tracking-wider mb-3">
             <Calendar className="w-4 h-4" />{w.date}
           </div>
-          <h3 className="font-bold text-secondary text-xl md:text-2xl mb-4" style={{ fontFamily: "var(--font-display)" }}>
+          <h3 className="relative font-bold text-secondary text-xl md:text-2xl mb-4" style={{ fontFamily: "var(--font-display)" }}>
             {w.title}
           </h3>
-          <p className="text-sm md:text-base text-secondary/80 leading-relaxed mb-6">
+          <p className="relative text-sm md:text-base text-secondary/80 leading-relaxed mb-6">
             {w.description}
           </p>
 
@@ -1462,14 +1654,14 @@ const WorkshopsSection = () => (
           )}
 
           {w.reportUrl && (
-            <div className="pt-4 border-t border-border/60">
+            <div className="relative pt-4 border-t border-border/60">
               <a href={w.reportUrl} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-bold text-sm text-primary hover:text-primary/80 transition-colors">
                 <FileText className="w-4 h-4" /> Download Official Workshop Report (PDF)
               </a>
             </div>
           )}
-        </div>
+        </motion.article>
       ))}
     </div>
   </div>
@@ -1479,19 +1671,21 @@ const StanfordTeaser = () => (
   <div className="space-y-6">
     <SectionTitle title="Stanford d.school Initiative" subtitle="MITS – University Innovation Fellows (UIF) programme, in association with Stanford University's Hasso Plattner Institute of Design." />
     <ImageCarousel images={stanfordGallery} />
-    <div className="rounded-2xl overflow-hidden border border-border bg-gradient-to-br from-secondary via-secondary to-primary text-white p-8 md:p-12">
-      <div className="flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-widest mb-4">
+    <div className="ir-media-deck relative overflow-hidden rounded-[2rem] border border-white/20 bg-gradient-to-br from-[#25070b] via-[#8C1515] to-[#0f2a44] text-white p-8 md:p-12">
+      <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full border border-white/15 bg-white/5" />
+      <div className="absolute bottom-0 right-12 h-48 w-48 rounded-full border border-[#e8c97a]/40" />
+      <div className="relative flex items-center gap-2 text-[#e8c97a] font-bold text-sm uppercase tracking-widest mb-4">
         <Star className="w-4 h-4" />Global Student Leadership
       </div>
-      <h3 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
+      <h3 className="relative text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
         11 Batches of Fellows since 2016
       </h3>
-      <p className="text-white/90 max-w-3xl mb-6">
+      <p className="relative text-white/90 max-w-3xl mb-6">
         MITS has consistently produced batches of University Innovation Fellows, empowering student leaders to become
         agents of change on campus through Stanford d.school's global network.
       </p>
-      <Link to="/international-relations/stanford-initiative">
-        <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold">
+      <Link to="/international-relations/stanford-initiative" className="relative">
+        <Button size="lg" className="bg-[#e8c97a] text-[#3d0a0e] hover:bg-[#f0d994] font-bold shadow-xl">
           Explore the Stanford Initiative <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
       </Link>
@@ -1510,7 +1704,7 @@ const GlobalFootprintStrip = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 mt-6 md:mt-8">
       <div className="rounded-2xl border border-border bg-white/70 backdrop-blur-sm px-5 py-4 md:px-8 md:py-5 flex flex-wrap items-center gap-3 md:gap-4 shadow-sm">
-        <span className="text-[11px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground shrink-0 flex items-center gap-2">
+        <span className="text-[11px] md:text-sm font-bold uppercase tracking-widest text-muted-foreground shrink-0 flex items-center gap-2">
           <Globe className="w-3.5 h-3.5 text-primary" /> Our Global Footprint
         </span>
         <div className="h-4 w-px bg-border hidden md:block" />
@@ -1519,7 +1713,7 @@ const GlobalFootprintStrip = () => {
             <span
               key={country}
               className={cn(
-                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] md:text-xs font-semibold border border-transparent",
+                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] md:text-sm font-semibold border border-transparent",
                 regionColors[region] || regionColors.Other
               )}
             >
@@ -1556,12 +1750,12 @@ const InternationalRelations = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="ir-canvas min-h-screen" style={{ perspective: "1400px" }}>
       <Header />
       <div className="h-16 md:h-[100px] xl:h-[116px] shrink-0" />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#143557] to-[#0a1f33] text-white py-16 md:py-24">
+      {/* Hero — full-bleed */}
+      <section className="relative min-h-[560px] overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#143557] to-[#0a1f33] text-white py-16 md:py-24 flex items-center">
         <HeroBackdrop images={heroBanners} />
         <div className="absolute inset-0 bg-gradient-to-br from-[#0f2a44]/95 via-[#0f2a44]/80 to-[#0a1f33]/95" />
         <div
@@ -1572,8 +1766,11 @@ const InternationalRelations = () => {
           }}
         />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22><path d=%22M0 0h60v60H0z%22 fill=%22none%22/><path d=%22M30 0v60M0 30h60%22 stroke=%22%23ffffff%22 stroke-opacity=%220.04%22/></svg>')]" />
-        
-        <div className="container relative mx-auto px-4 md:px-6">
+        <div className="absolute -right-32 -bottom-40 h-[32rem] w-[32rem] rounded-full border border-white/10 bg-white/5" />
+        <div className="ir-orbit-float absolute right-[13%] top-[20%] h-24 w-24 rounded-3xl border border-[#e8c97a]/35 bg-[#caa74d]/10 backdrop-blur-sm hidden lg:block" />
+        <div className="ir-orbit-float-delayed absolute right-[29%] bottom-[18%] h-14 w-14 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm hidden lg:block" />
+
+        <div className={cn(WIDE, "relative")}>
           <nav className="flex items-center gap-2 text-sm text-white/70 mb-6 font-body">
             <Link to="/" className="hover:text-[#caa74d] transition-colors inline-flex items-center gap-1">
               <Home className="w-3 h-3" />Home
@@ -1583,7 +1780,7 @@ const InternationalRelations = () => {
           </nav>
           
           <div className="max-w-4xl">
-            <p className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#caa74d] text-xs font-semibold uppercase tracking-[0.2em] mb-5">
+            <p className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#caa74d] text-sm font-semibold uppercase tracking-[0.2em] mb-5">
               <Globe className="w-3.5 h-3.5" /> Global Engagement
             </p>
             <motion.h1
@@ -1608,9 +1805,9 @@ const InternationalRelations = () => {
         </div>
       </section>
 
-      {/* Stats strip */}
-      <div className="max-w-7xl mx-auto px-4 md:px-6 -mt-10 md:-mt-14 relative z-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 bg-white rounded-2xl shadow-xl border border-border p-4 md:p-6">
+      {/* Glass stat strip — floats on the seam between hero and page */}
+      <div className={cn(WIDE, "-mt-10 md:-mt-14 relative z-20")}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 bg-white/70 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/60 p-4 md:p-6">
           {heroStats.map((s) => (
             <AnimatedStat key={s.label} value={s.value} label={s.label} />
           ))}
@@ -1620,95 +1817,82 @@ const InternationalRelations = () => {
       {/* Global Footprint strip — countries derived directly from the MoU partner records */}
       <GlobalFootprintStrip />
 
-      {/* Tabs + Content */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <div className="grid lg:grid-cols-[260px_1fr] gap-8">
-          {/* Sticky sidebar (desktop) / horizontal (mobile) */}
-          <aside className="lg:sticky lg:top-28 lg:self-start">
-            <div className="lg:block flex overflow-x-auto gap-2 lg:gap-1 pb-2 lg:pb-0 lg:flex-col">
-              {NAV.map((n) => {
-                const Icon = n.icon;
-                const isActive = active === n.id;
-                return (
-                  <button
-                    key={n.id}
-                    onClick={() => handleNav(n.id)}
-                    className={cn(
-                      "relative shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors whitespace-nowrap lg:w-full lg:justify-start overflow-hidden",
-                      isActive
-                        ? "text-primary-foreground shadow-md"
-                        : "bg-white border border-border text-secondary hover:border-primary hover:text-primary"
-                    )}
-                  >
-                    {isActive && (
-                      <motion.span
-                        layoutId="ir-nav-active"
-                        className="absolute inset-0 bg-primary"
-                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                      />
-                    )}
-                    <Icon className="w-4 h-4 relative z-10" />
-                    <span className="relative z-10">{n.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </aside>
-
-          <div className="min-w-0">
-            <AnimatePresence mode="wait">
-              <motion.div key={active}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.25 }}
+      {/* 3D horizontal tab bar */}
+      <div className={cn(WIDE, "mt-10")}>
+        <div
+          className="sticky top-16 md:top-[100px] xl:top-[116px] z-30 flex flex-wrap justify-center gap-2 md:gap-2.5 p-2.5 rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-xl"
+          style={{ transformStyle: "preserve-3d" }}
+        >
+          {NAV.map((n) => {
+            const Icon = n.icon;
+            const isActive = active === n.id;
+            const theme = TAB_THEME[n.id];
+            return (
+              <motion.button
+                key={n.id}
+                onClick={() => handleNav(n.id)}
+                whileHover={isActive ? {} : { y: -3, rotateX: 6 }}
+                whileTap={{ scale: 0.96 }}
+                style={{ transformStyle: "preserve-3d" }}
+                className={cn(
+                  "relative flex items-center gap-2 px-3.5 md:px-4 py-2.5 rounded-xl text-sm md:text-sm font-bold whitespace-nowrap transition-colors overflow-hidden",
+                  isActive ? cn(theme.solid, "text-white", theme.glow) : "bg-white/70 text-secondary border border-white/80 hover:text-secondary"
+                )}
               >
-                {active === "about" && <AboutSection />}
-                {active === "mou" && <MoUSection />}
-                {active === "internships" && <InternshipsSection />}
-                {active === "fellowships" && <FellowshipsSection />}
-                {active === "global" && <GlobalSection />}
-                {active === "events" && <EventsSection />}
-                {active === "workshops" && <WorkshopsSection />}
-                {active === "stanford" && <StanfordTeaser />}
-              </motion.div>
-            </AnimatePresence>
+                <Icon className="w-4 h-4 relative z-10" />
+                <span className="relative z-10 hidden sm:inline">{n.label}</span>
+              </motion.button>
+            );
+          })}
+        </div>
+      </div>
 
-            {/* Contact card - always visible below content */}
-            <div className="mt-14 rounded-2xl border border-border bg-gradient-to-br from-secondary to-secondary/90 text-white p-6 md:p-8">
-              <div className="flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-widest mb-4">
-                <Phone className="w-4 h-4" />Contact IRO
-              </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-xl font-bold mb-1 text-white" style={{ fontFamily: "var(--font-display)" }}>{contactCard.office}</h3>
-                  <p className="text-sm text-white/90 mb-4">{contactCard.institute}</p>
-                  <div className="space-y-2 text-sm text-white/95">
-                    <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent shrink-0" />{contactCard.address}</div>
-                    <div className="flex items-center gap-2"><Calendar className="w-4 h-4 text-accent" />{contactCard.timings}</div>
-                    <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /><a href={`tel:${contactCard.phone}`} className="hover:underline text-white">{contactCard.phone}</a></div>
-                    <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-accent" /><a href={`mailto:${contactCard.email}`} className="hover:underline text-white">{contactCard.email}</a></div>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mt-5">
-                    <a href={`mailto:${contactCard.email}`}><Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2"><Mail className="w-4 h-4" />Email</Button></a>
-                    <a href={`tel:${contactCard.phone}`}><Button size="sm" variant="outline" className="border-white/40 text-white bg-transparent hover:bg-white/10 hover:text-white gap-2"><Phone className="w-4 h-4" />Call</Button></a>
-                    <a href={contactCard.mapsUrl} target="_blank" rel="noopener noreferrer"><Button size="sm" variant="outline" className="border-white/40 text-white bg-transparent hover:bg-white/10 hover:text-white gap-2"><MapPin className="w-4 h-4" />Directions</Button></a>
-                  </div>
+      {/* Tab content — full width */}
+      <section className={cn(WIDE, "py-10 md:py-16")}>
+        <AnimatePresence mode="wait">
+          <motion.div key={active}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+          >
+            {active === "about" && <AboutSection />}
+            {active === "mou" && <MoUSection />}
+            {active === "internships" && <InternshipsSection />}
+            {active === "fellowships" && <FellowshipsSection />}
+            {active === "global" && <GlobalSection />}
+            {active === "events" && <EventsSection />}
+            {active === "workshops" && <WorkshopsSection />}
+            {active === "stanford" && <StanfordTeaser />}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Contact card — bottom placement for every tab except About (About shows it up top instead) */}
+        {active !== "about" && (
+          <div className="ir-media-deck mt-14 rounded-[2rem] border border-white/15 bg-gradient-to-br from-[#0a1f33] via-[#0f2a44] to-[#183f61] text-white p-6 md:p-8">
+            <div className="flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-widest mb-4">
+              <Phone className="w-4 h-4" />Contact the IRO
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-xl font-bold mb-1 text-white" style={{ fontFamily: "var(--font-display)" }}>{contactCard.office}</h3>
+                <p className="text-sm text-white/90 mb-4">{contactCard.institute}</p>
+                <div className="space-y-2 text-sm text-white/95">
+                  <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent shrink-0" />{contactCard.address}</div>
+                  <div className="flex items-center gap-2"><Calendar className="w-4 h-4 text-accent" />{contactCard.timings}</div>
+                  <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /><a href={`tel:${contactCard.phone}`} className="hover:underline text-white">{contactCard.phone}</a></div>
+                  <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-accent" /><a href={`mailto:${contactCard.email}`} className="hover:underline text-white">{contactCard.email}</a></div>
                 </div>
-                <div className="space-y-3">
-                  <h4 className="text-sm font-bold text-accent uppercase tracking-wide">IRO Team</h4>
-                  {contactCard.team.map((t) => (
-                    <div key={t.name} className="rounded-lg bg-white/5 border border-white/10 p-3">
-                      <div className="font-semibold text-sm text-white">{t.name}</div>
-                      <div className="text-xs text-white/80">{t.designation}</div>
-                      {t.email && <a href={`mailto:${t.email}`} className="text-xs text-accent hover:underline mt-1 inline-flex items-center gap-1"><Mail className="w-3 h-3" />{t.email}</a>}
-                    </div>
-                  ))}
+                <div className="flex flex-wrap gap-2 mt-5">
+                  <a href={`mailto:${contactCard.email}`}><Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2"><Mail className="w-4 h-4" />Email</Button></a>
+                  <a href={`tel:${contactCard.phone}`}><Button size="sm" variant="outline" className="border-white/40 text-white bg-transparent hover:bg-white/10 hover:text-white gap-2"><Phone className="w-4 h-4" />Call</Button></a>
+                  <a href={contactCard.mapsUrl} target="_blank" rel="noopener noreferrer"><Button size="sm" variant="outline" className="border-white/40 text-white bg-transparent hover:bg-white/10 hover:text-white gap-2"><MapPin className="w-4 h-4" />Directions</Button></a>
                 </div>
               </div>
+              <IROLeadership tone="dark" />
             </div>
           </div>
-        </div>
+        )}
       </section>
 
       <Footer />

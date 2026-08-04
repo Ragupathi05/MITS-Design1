@@ -53,12 +53,12 @@ const eligibility = [
 ];
 
 /* Shared table styling classes - sans-serif and comfortable dimensions */
-const TH = "py-3 px-4 text-center font-extrabold text-xs md:text-sm uppercase tracking-wider border border-slate-200 bg-[#0f2a44] text-white font-sans";
-const TD = "py-3.5 px-4 text-center text-xs md:text-sm border border-slate-200 align-middle text-slate-700 font-semibold leading-relaxed font-sans";
-const SCHOOL_TD = "py-3.5 px-4 text-left text-xs md:text-sm font-extrabold border border-slate-200 align-middle bg-[#f8fafc] text-[#0f2a44] leading-relaxed font-sans";
-const PROG_TD = "py-3.5 px-4 text-left text-xs md:text-sm font-bold border border-slate-200 align-middle text-slate-800 leading-relaxed font-sans";
-const BASE_TD = "py-3.5 px-4 text-center text-xs md:text-sm font-extrabold border border-slate-200 align-middle bg-slate-50 text-slate-900 leading-relaxed font-sans";
-const FINAL_TD = "py-3.5 px-4 text-center text-xs md:text-sm font-extrabold border border-slate-200 align-middle text-[#b31317] bg-red-50/40 leading-relaxed font-sans";
+const TH = "py-3 px-4 text-center font-extrabold text-sm md:text-sm uppercase tracking-wider border border-slate-200 bg-[#0f2a44] text-white font-sans";
+const TD = "py-3.5 px-4 text-center text-sm md:text-sm border border-slate-200 align-middle text-slate-700 font-semibold leading-relaxed font-sans";
+const SCHOOL_TD = "py-3.5 px-4 text-left text-sm md:text-sm font-extrabold border border-slate-200 align-middle bg-[#f8fafc] text-[#0f2a44] leading-relaxed font-sans";
+const PROG_TD = "py-3.5 px-4 text-left text-sm md:text-sm font-bold border border-slate-200 align-middle text-slate-800 leading-relaxed font-sans";
+const BASE_TD = "py-3.5 px-4 text-center text-sm md:text-sm font-extrabold border border-slate-200 align-middle bg-slate-50 text-slate-900 leading-relaxed font-sans";
+const FINAL_TD = "py-3.5 px-4 text-center text-sm md:text-sm font-extrabold border border-slate-200 align-middle text-[#b31317] bg-red-50/40 leading-relaxed font-sans";
 
 const EligibilityAndFees = () => (
   <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
@@ -80,7 +80,7 @@ const EligibilityAndFees = () => (
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 md:px-8 text-center space-y-4">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm">
             AY 2026-27 Admissions
           </p>
           <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
@@ -117,9 +117,9 @@ const EligibilityAndFees = () => (
         <div className="container mx-auto px-4 md:px-8 space-y-8">
           <ScrollReveal>
             <div className="text-center space-y-2">
-              <p className="text-[#b31317] font-bold tracking-widest uppercase text-xs md:text-sm">Qualifications</p>
+              <p className="text-[#b31317] font-bold tracking-widest uppercase text-sm md:text-sm">Qualifications</p>
               <h2 className="font-sans text-xl md:text-3xl font-extrabold text-[#0f2a44]">Eligibility Guidelines</h2>
-              <p className="text-slate-505 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">Ensure you meet the academic requirements before starting the online application.</p>
+              <p className="text-slate-505 max-w-2xl mx-auto text-sm md:text-sm leading-relaxed">Ensure you meet the academic requirements before starting the online application.</p>
             </div>
           </ScrollReveal>
 
@@ -133,7 +133,7 @@ const EligibilityAndFees = () => (
                     </h3>
                     <ul className="space-y-2.5">
                       {item.criteria.map((c, j) => (
-                        <li key={j} className="flex items-start gap-2.5 text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
+                        <li key={j} className="flex items-start gap-2.5 text-sm md:text-sm text-slate-500 leading-relaxed font-sans">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#caa74d] mt-1.5 shrink-0" />
                           <span>{c}</span>
                         </li>
@@ -152,9 +152,9 @@ const EligibilityAndFees = () => (
         <div className="container mx-auto px-4 md:px-8 space-y-16">
           <ScrollReveal>
             <div className="text-center space-y-2">
-              <p className="text-[#b31317] font-bold tracking-widest uppercase text-xs md:text-sm">Concessions &amp; Fees</p>
+              <p className="text-[#b31317] font-bold tracking-widest uppercase text-sm md:text-sm">Concessions &amp; Fees</p>
               <h2 className="font-sans text-xl md:text-3xl font-extrabold text-[#0f2a44]">Fee &amp; Scholarship Matrix</h2>
-              <p className="text-slate-505 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">Official fee lists and merit-based concessions applicable for domestic and international admissions.</p>
+              <p className="text-slate-505 max-w-2xl mx-auto text-sm md:text-sm leading-relaxed">Official fee lists and merit-based concessions applicable for domestic and international admissions.</p>
             </div>
           </ScrollReveal>
 
@@ -165,7 +165,7 @@ const EligibilityAndFees = () => (
                 <Layers className="w-5 h-5 text-[#caa74d]" /> 1. B.Tech. Regular Fee (Engineering Group 1 &amp; Core Group)
               </h3>
               <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                <table className="w-full border-collapse text-xs md:text-sm">
+                <table className="w-full border-collapse text-sm md:text-sm">
                   <thead>
                     <tr>
                       <th className={TH} rowSpan={2}>Program Group</th>
@@ -265,7 +265,7 @@ const EligibilityAndFees = () => (
                 <Layers className="w-5 h-5 text-[#caa74d]" /> 2. B.Tech. Regular Fee (Computing Group 2)
               </h3>
               <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                <table className="w-full border-collapse text-xs md:text-sm">
+                <table className="w-full border-collapse text-sm md:text-sm">
                   <thead>
                     <tr>
                       <th className={TH} rowSpan={2}>Program Name</th>
@@ -332,7 +332,7 @@ const EligibilityAndFees = () => (
                 <Layers className="w-5 h-5 text-[#caa74d]" /> 3. School of Business &amp; School of Sciences (UG Programs)
               </h3>
               <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                <table className="w-full border-collapse text-xs md:text-sm">
+                <table className="w-full border-collapse text-sm md:text-sm">
                   <thead>
                     <tr>
                       <th className={TH}>Program Name</th>
@@ -368,7 +368,7 @@ const EligibilityAndFees = () => (
                 <Star className="w-5 h-5 text-[#caa74d]" /> 4. MITSUCET Merit Fee Waiver (B.Tech. Regular)
               </h3>
               <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                <table className="w-full border-collapse text-xs md:text-sm">
+                <table className="w-full border-collapse text-sm md:text-sm">
                   <thead>
                     <tr>
                       <th className={TH} rowSpan={2}>Rank in MITSUCET</th>
@@ -423,7 +423,7 @@ const EligibilityAndFees = () => (
                 <Layers className="w-5 h-5 text-[#caa74d]" /> 5. Post Graduate (PG) Program Fees
               </h3>
               <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                <table className="w-full border-collapse text-xs md:text-sm">
+                <table className="w-full border-collapse text-sm md:text-sm">
                   <thead>
                     <tr>
                       <th className={TH}>Program Name</th>
@@ -443,7 +443,7 @@ const EligibilityAndFees = () => (
                         6. M.Tech. CSE (AI &amp; ML)
                       </td>
                       <td className={BASE_TD} rowSpan={4}>₹ 35,000</td>
-                      <td className="py-3 px-4 border border-slate-200 font-extrabold bg-[#f8fafc] text-center text-xs md:text-sm text-[#0f2a44] font-sans" colSpan={3}>
+                      <td className="py-3 px-4 border border-slate-200 font-extrabold bg-[#f8fafc] text-center text-sm md:text-sm text-[#0f2a44] font-sans" colSpan={3}>
                         Qualifying Exams: UG CGPA / PGECET Rank / GATE Score
                       </td>
                       <td className={FINAL_TD} rowSpan={1}>—</td>
@@ -510,7 +510,7 @@ const EligibilityAndFees = () => (
               
               <div className="grid lg:grid-cols-[1.2fr_1fr] gap-6">
                 <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                  <table className="w-full border-collapse text-xs md:text-sm">
+                  <table className="w-full border-collapse text-sm md:text-sm">
                     <thead>
                       <tr>
                         <th className={TH}>Program Name</th>
@@ -546,7 +546,7 @@ const EligibilityAndFees = () => (
 
                 {/* Lateral Entry Scholarships */}
                 <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-col justify-between">
-                  <table className="w-full border-collapse text-xs md:text-sm">
+                  <table className="w-full border-collapse text-sm md:text-sm">
                     <thead>
                       <tr>
                         <th className="py-3 px-4 font-bold bg-[#caa74d] text-[#0f2a44] text-center border-b border-slate-200 font-sans" colSpan={3}>
@@ -579,7 +579,7 @@ const EligibilityAndFees = () => (
                       </tr>
                     </tbody>
                   </table>
-                  <div className="p-4 bg-slate-50 text-slate-550 text-xs md:text-sm leading-relaxed font-semibold border-t border-slate-100 font-sans">
+                  <div className="p-4 bg-slate-50 text-slate-550 text-sm md:text-sm leading-relaxed font-semibold border-t border-slate-100 font-sans">
                     <span className="text-[#b31317] font-bold">Note:</span> 100% Scholarship offered to the topper of each Diploma College. Regular fee applies if candidates do not qualify any waiver bracket.
                   </div>
                 </div>
@@ -597,7 +597,7 @@ const EligibilityAndFees = () => (
               <div className="space-y-6">
                 {/* UG */}
                 <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                  <table className="w-full border-collapse text-xs md:text-sm">
+                  <table className="w-full border-collapse text-sm md:text-sm">
                     <thead>
                       <tr>
                         <th className="py-3 px-4 font-bold bg-[#0f2a44] text-white text-left font-sans" colSpan={7}>UG programs (SAARC)</th>
@@ -671,7 +671,7 @@ const EligibilityAndFees = () => (
 
                 {/* PG */}
                 <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                  <table className="w-full border-collapse text-xs md:text-sm">
+                  <table className="w-full border-collapse text-sm md:text-sm">
                     <thead>
                       <tr>
                         <th className="py-3 px-4 font-bold bg-[#0f2a44] text-white text-left font-sans" colSpan={5}>PG programs (SAARC)</th>
@@ -720,12 +720,12 @@ const EligibilityAndFees = () => (
         <div className="container mx-auto px-4 md:px-8 text-center space-y-4">
           <ScrollReveal>
             <h2 className="font-sans text-xl md:text-3xl font-extrabold text-[#0f2a44] mb-2">Ready to Apply?</h2>
-            <p className="text-slate-550 max-w-xl mx-auto mb-6 text-xs md:text-sm leading-relaxed font-sans">
+            <p className="text-slate-550 max-w-xl mx-auto mb-6 text-sm md:text-sm leading-relaxed font-sans">
               For detailed eligibility, scholarship clearances, or admissions guidance, contact our counselors or apply online.
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-6">
               <a href="https://admission.mits.ac.in/" target="_blank" rel="noopener noreferrer">
-                <button className="bg-[#b31317] hover:bg-[#990000] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-transform hover:scale-[1.02] text-xs md:text-sm font-sans">
+                <button className="bg-[#b31317] hover:bg-[#990000] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-transform hover:scale-[1.02] text-sm md:text-sm font-sans">
                   Start Application Portal
                 </button>
               </a>

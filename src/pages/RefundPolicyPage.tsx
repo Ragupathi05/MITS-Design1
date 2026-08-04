@@ -37,7 +37,7 @@ export default function RefundPolicyPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4 flex items-center justify-center gap-2">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4 flex items-center justify-center gap-2">
             <CreditCard className="w-4 h-4" /> Financial Policy
           </p>
           <h1
@@ -71,7 +71,7 @@ export default function RefundPolicyPage() {
           
           {/* UGC Reference Box */}
           <div className="bg-gradient-to-br from-[#faf7f2] to-white rounded-2xl p-6 md:p-8 border border-[#caa74d]/40 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#b31317]/10 text-[#b31317] text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#b31317]/10 text-[#b31317] text-sm font-bold uppercase tracking-wider">
               <FileText className="w-4 h-4" /> UGC Circular Reference
             </div>
             <p className="text-slate-700 text-sm md:text-base leading-relaxed">
@@ -156,7 +156,7 @@ export default function RefundPolicyPage() {
 
           {/* Duration Note */}
           <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-xl p-6">
-            <p className="text-[#caa74d] text-xs font-semibold uppercase tracking-wider mb-1">Duration &amp; Validity</p>
+            <p className="text-[#caa74d] text-sm font-semibold uppercase tracking-wider mb-1">Duration &amp; Validity</p>
             <p className="text-white/90 text-sm md:text-base leading-relaxed">
               Note: This Policy will remain in force for subsequent academic sessions until the issuance of revised policy by the UGC.
             </p>

@@ -192,7 +192,7 @@ const MitsRadio = () => {
             <motion.nav
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex items-center gap-1.5 text-xs md:text-sm text-white/75 mb-6"
+              className="flex items-center gap-1.5 text-sm md:text-sm text-white/75 mb-6"
             >
               <Link to="/" className="hover:text-[#caa74d] transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5 text-white/50" />
@@ -203,7 +203,7 @@ const MitsRadio = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.05 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#e8c96a] text-xs font-semibold tracking-wider uppercase mb-5"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#e8c96a] text-sm font-semibold tracking-wider uppercase mb-5"
             >
               <Radio className="w-3.5 h-3.5 animate-pulse text-[#caa74d]" />
               90.8 MHz CRS · Voice of the Community
@@ -247,7 +247,7 @@ const MitsRadio = () => {
                         setActiveTab(tab.key);
                         setEventPage(1); // Reset event pagination on tab switch
                       }}
-                      className={`w-full text-left px-3 py-3 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 flex items-center justify-between group ${
+                      className={`w-full text-left px-3 py-3 rounded-xl text-sm md:text-sm font-semibold transition-all duration-200 flex items-center justify-between group ${
                         activeTab === tab.key
                           ? "bg-[#0f2a44] text-white shadow-md shadow-[#0f2a44]/10"
                           : "text-secondary hover:bg-[#0f2a44]/5 hover:text-[#0f2a44]"
@@ -328,7 +328,7 @@ const MitsRadio = () => {
                               {isPlaying ? <Pause className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5 fill-current ml-0.5" />}
                             </button>
                             <div className="flex-1 min-w-0">
-                              <p className="text-xs font-semibold text-white truncate">
+                              <p className="text-sm font-semibold text-white truncate">
                                 {isPlaying ? "Broadcasting Live Content..." : "Stream Paused"}
                               </p>
                               <p className="text-[10px] text-white/70">
@@ -456,7 +456,7 @@ const MitsRadio = () => {
                           <div className="text-center mt-6">
                             <button
                               onClick={() => setGalleryLimit(prev => Math.min(prev + 8, radioGallery.length))}
-                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#0f2a44]/20 hover:border-[#caa74d] hover:bg-[#0f2a44]/5 text-secondary hover:text-[#0f2a44] text-xs font-semibold tracking-wider transition-all shadow-sm"
+                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#0f2a44]/20 hover:border-[#caa74d] hover:bg-[#0f2a44]/5 text-secondary hover:text-[#0f2a44] text-sm font-semibold tracking-wider transition-all shadow-sm"
                             >
                               <ImageIcon className="w-4 h-4" /> Load More Images
                             </button>
@@ -497,7 +497,7 @@ const MitsRadio = () => {
                           <h4 className="font-display font-bold text-lg leading-tight mb-4 text-white">
                             {radioCoordinator.name}
                           </h4>
-                          <div className="space-y-4 text-xs">
+                          <div className="space-y-4 text-sm">
                             <div className="flex gap-2">
                               <MapPin className="w-4 h-4 text-[#caa74d] shrink-0 mt-0.5" />
                               <p className="text-white/80 leading-relaxed whitespace-pre-line">
@@ -538,11 +538,11 @@ const MitsRadio = () => {
                                   <h4 className="font-display font-bold text-sm md:text-base text-[#0f2a44] mb-0.5">
                                     {member.name}
                                   </h4>
-                                  <p className="text-xs text-[#caa74d] font-semibold mb-2">
+                                  <p className="text-sm text-[#caa74d] font-semibold mb-2">
                                     {member.designation}
                                   </p>
                                 </div>
-                                <p className="text-xs text-secondary/90 leading-relaxed border-t border-border/50 pt-2 text-left">
+                                <p className="text-sm text-secondary/90 leading-relaxed border-t border-border/50 pt-2 text-left">
                                   {member.role}
                                 </p>
                               </div>
@@ -579,7 +579,7 @@ const MitsRadio = () => {
                           {thematicFocusAreas.map((area, idx) => (
                             <span
                               key={idx}
-                              className="px-3.5 py-1.5 rounded-full bg-[#0f2a44]/5 border border-[#0f2a44]/10 text-secondary text-xs font-semibold"
+                              className="px-3.5 py-1.5 rounded-full bg-[#0f2a44]/5 border border-[#0f2a44]/10 text-secondary text-sm font-semibold"
                             >
                               {area}
                             </span>
@@ -598,14 +598,14 @@ const MitsRadio = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           {radioSdgs.map((sdg) => (
                             <div key={sdg.number} className="bg-white rounded-xl border border-border p-4 hover:border-[#caa74d] transition-colors flex gap-3">
-                              <div className="shrink-0 px-2.5 h-10 rounded-lg bg-[#b31317] text-white flex items-center justify-center font-display font-bold text-xs whitespace-nowrap">
+                              <div className="shrink-0 px-2.5 h-10 rounded-lg bg-[#b31317] text-white flex items-center justify-center font-display font-bold text-sm whitespace-nowrap">
                                 SDG {sdg.number}
                               </div>
                               <div>
-                                <h4 className="font-bold text-xs md:text-sm text-[#0f2a44] mb-1">
+                                <h4 className="font-bold text-sm md:text-sm text-[#0f2a44] mb-1">
                                   {sdg.title}
                                 </h4>
-                                <p className="text-[11px] md:text-xs text-secondary/90 leading-relaxed text-left">
+                                <p className="text-[11px] md:text-sm text-secondary/90 leading-relaxed text-left">
                                   {sdg.description}
                                 </p>
                               </div>
@@ -629,7 +629,7 @@ const MitsRadio = () => {
                                 <h4 className="font-display font-bold text-[#0f2a44] text-sm md:text-base mb-1">
                                   {prog.title}
                                 </h4>
-                                <p className="text-xs md:text-sm text-secondary/95 leading-relaxed text-left">
+                                <p className="text-sm md:text-sm text-secondary/95 leading-relaxed text-left">
                                   {prog.description}
                                 </p>
                               </div>
@@ -662,7 +662,7 @@ const MitsRadio = () => {
                               href="https://mits.ac.in/assets/radio/LIST OF PROGRAMMES- Q–Sheet-compressed.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs text-[#b31317] hover:underline font-semibold"
+                              className="inline-flex items-center gap-1 text-sm text-[#b31317] hover:underline font-semibold"
                             >
                               <Download className="w-4.5 h-4.5" /> Download PDF
                             </a>
@@ -687,7 +687,7 @@ const MitsRadio = () => {
                               href="https://mits.ac.in/assets/radio/PROGRAMME SCHEDULE – FIXED POINT CHART (FPC) 1-compressed.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs text-[#b31317] hover:underline font-semibold"
+                              className="inline-flex items-center gap-1 text-sm text-[#b31317] hover:underline font-semibold"
                             >
                               <Download className="w-4.5 h-4.5" /> Download PDF
                             </a>
@@ -737,14 +737,14 @@ const MitsRadio = () => {
                             />
                           </div>
                           <div className="flex justify-between items-center flex-wrap gap-2 pt-3 border-t border-border/50">
-                            <span className="text-xs text-secondary/60 flex items-center gap-1">
+                            <span className="text-sm text-secondary/60 flex items-center gap-1">
                               <Calendar className="w-3.5 h-3.5" /> 24th June 2023
                             </span>
                             <a
                               href="https://mits.ac.in/assets/radio/radio%20inaguaration.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#b31317] hover:underline"
+                              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#b31317] hover:underline"
                             >
                               <Download className="w-4 h-4" /> Download Inauguration PDF Report
                             </a>
@@ -768,14 +768,14 @@ const MitsRadio = () => {
                             />
                           </div>
                           <div className="flex justify-between items-center flex-wrap gap-2 pt-3 border-t border-border/50">
-                            <span className="text-xs text-secondary/60 flex items-center gap-1">
+                            <span className="text-sm text-secondary/60 flex items-center gap-1">
                               <Calendar className="w-3.5 h-3.5" /> 30th April 2023
                             </span>
                             <a
                               href="https://mits.ac.in/assets/radio/MANN%20KI%20BAAT.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#b31317] hover:underline"
+                              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#b31317] hover:underline"
                             >
                               <Download className="w-4 h-4" /> Download Mann Ki Baat PDF Report
                             </a>
@@ -805,7 +805,7 @@ const MitsRadio = () => {
                             href="https://mits.ac.in/assets/pdf/radio/MITS%20RADIO%2090.8%20CR_STATION%20FACILITIES.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-xs text-[#b31317] hover:underline font-semibold"
+                            className="inline-flex items-center gap-1 text-sm text-[#b31317] hover:underline font-semibold"
                           >
                             <Download className="w-4.5 h-4.5" /> Download PDF
                           </a>
@@ -844,7 +844,7 @@ const MitsRadio = () => {
                               <div className="w-10 h-10 shrink-0 bg-[#0f2a44]/5 text-[#0f2a44] rounded-lg flex items-center justify-center">
                                 <FileText className="w-5 h-5" />
                               </div>
-                              <span className="font-body font-semibold text-secondary group-hover:text-[#0f2a44] text-xs md:text-sm line-clamp-2 leading-snug">
+                              <span className="font-body font-semibold text-secondary group-hover:text-[#0f2a44] text-sm md:text-sm line-clamp-2 leading-snug">
                                 {comm.label}
                               </span>
                             </div>
@@ -863,7 +863,7 @@ const MitsRadio = () => {
                           <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0f2a44]">
                             Activities & Events Timeline
                           </h2>
-                          <p className="text-secondary text-xs md:text-sm mt-1">
+                          <p className="text-secondary text-sm md:text-sm mt-1">
                             Search and view MITS Community Radio broadcast events, guest talks, and reports.
                           </p>
                         </div>
@@ -879,7 +879,7 @@ const MitsRadio = () => {
                               setEventQuery(e.target.value);
                               setEventPage(1); // Reset page to 1
                             }}
-                            className="w-full pl-9 pr-4 py-2 border border-border/80 focus:border-[#caa74d] focus:ring-1 focus:ring-[#caa74d]/20 rounded-xl text-xs md:text-sm transition-all focus:outline-none"
+                            className="w-full pl-9 pr-4 py-2 border border-border/80 focus:border-[#caa74d] focus:ring-1 focus:ring-[#caa74d]/20 rounded-xl text-sm md:text-sm transition-all focus:outline-none"
                           />
                         </div>
                       </div>
@@ -899,15 +899,15 @@ const MitsRadio = () => {
                               className="flex items-center justify-between p-4 border border-border/70 hover:border-[#caa74d] rounded-xl hover:shadow-sm transition-all group bg-[#fcfbf9]/40"
                             >
                               <div className="min-w-0 pr-4">
-                                <h4 className="font-semibold text-secondary group-hover:text-[#0f2a44] text-xs md:text-sm leading-snug line-clamp-2">
+                                <h4 className="font-semibold text-secondary group-hover:text-[#0f2a44] text-sm md:text-sm leading-snug line-clamp-2">
                                   {evt.title}
                                 </h4>
-                                <span className="text-[10px] md:text-xs text-secondary/50 flex items-center gap-1.5 mt-1.5">
+                                <span className="text-[10px] md:text-sm text-secondary/50 flex items-center gap-1.5 mt-1.5">
                                   <Calendar className="w-3.5 h-3.5 shrink-0" />
                                   {evt.date}
                                 </span>
                               </div>
-                              <span className="shrink-0 inline-flex items-center gap-1 text-[10px] md:text-xs text-[#b31317] font-semibold border border-[#b31317]/15 px-3 py-1 rounded-full bg-[#b31317]/5 group-hover:bg-[#b31317] group-hover:text-white transition-colors">
+                              <span className="shrink-0 inline-flex items-center gap-1 text-[10px] md:text-sm text-[#b31317] font-semibold border border-[#b31317]/15 px-3 py-1 rounded-full bg-[#b31317]/5 group-hover:bg-[#b31317] group-hover:text-white transition-colors">
                                 View Report <ExternalLink className="w-3 h-3" />
                               </span>
                             </a>
@@ -919,17 +919,17 @@ const MitsRadio = () => {
                               <button
                                 onClick={() => setEventPage(p => Math.max(p - 1, 1))}
                                 disabled={eventPage === 1}
-                                className="px-3.5 py-1.5 border border-border rounded-lg text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-muted"
+                                className="px-3.5 py-1.5 border border-border rounded-lg text-sm font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-muted"
                               >
                                 Prev
                               </button>
-                              <span className="text-xs text-secondary font-semibold">
+                              <span className="text-sm text-secondary font-semibold">
                                 Page {eventPage} of {totalEventPages}
                               </span>
                               <button
                                 onClick={() => setEventPage(p => Math.min(p + 1, totalEventPages))}
                                 disabled={eventPage === totalEventPages}
-                                className="px-3.5 py-1.5 border border-border rounded-lg text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-muted"
+                                className="px-3.5 py-1.5 border border-border rounded-lg text-sm font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-muted"
                               >
                                 Next
                               </button>
@@ -956,7 +956,7 @@ const MitsRadio = () => {
                             </h3>
                             <div className="space-y-4">
                               {radioContacts.map((contact, idx) => (
-                                <div key={idx} className="flex justify-between items-start gap-4 text-xs md:text-sm">
+                                <div key={idx} className="flex justify-between items-start gap-4 text-sm md:text-sm">
                                   <div>
                                     <h4 className="font-bold text-secondary">{contact.name}</h4>
                                     <p className="text-[11px] text-secondary/60">{contact.role}</p>
@@ -966,7 +966,7 @@ const MitsRadio = () => {
                             </div>
                           </div>
 
-                          <div className="bg-[#0f2a44]/5 rounded-xl p-5 border border-[#0f2a44]/10 space-y-4 text-xs md:text-sm text-secondary">
+                          <div className="bg-[#0f2a44]/5 rounded-xl p-5 border border-[#0f2a44]/10 space-y-4 text-sm md:text-sm text-secondary">
                             <div className="flex gap-2">
                               <MapPin className="w-5 h-5 text-[#b31317] shrink-0 mt-0.5" />
                               <p className="leading-relaxed">
@@ -1066,7 +1066,7 @@ const MitsRadio = () => {
                               <div className="w-10 h-10 shrink-0 bg-[#b31317]/5 text-[#b31317] rounded-lg flex items-center justify-center">
                                 <FileText className="w-5 h-5" />
                               </div>
-                              <span className="font-body font-semibold text-secondary group-hover:text-[#0f2a44] text-xs md:text-sm line-clamp-2 leading-snug">
+                              <span className="font-body font-semibold text-secondary group-hover:text-[#0f2a44] text-sm md:text-sm line-clamp-2 leading-snug">
                                 {doc.label}
                               </span>
                             </div>

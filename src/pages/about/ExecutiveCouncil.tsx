@@ -64,7 +64,7 @@ const ExecutiveCouncil = () => {
                       <h4 className="font-semibold text-secondary text-sm sm:text-base">
                         {meeting.title}
                       </h4>
-                      <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+                      <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
                         <Calendar className="w-3.5 h-3.5" />
                         Meeting Date: {meeting.date}
                       </p>

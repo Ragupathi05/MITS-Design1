@@ -31,7 +31,7 @@ const NewsletterPage: React.FC = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
             Institutional Publications
           </p>
           <h1
@@ -73,7 +73,7 @@ const NewsletterPage: React.FC = () => {
             </div>
             <div>
               <h2 className="font-display font-bold text-lg text-[#0f2a44]">Published Issues</h2>
-              <p className="text-xs text-slate-500 font-medium">
+              <p className="text-sm text-slate-500 font-medium">
                 {filteredNewsletters.length} Newsletter {filteredNewsletters.length === 1 ? "Issue" : "Issues"} Available
               </p>
             </div>
@@ -86,7 +86,7 @@ const NewsletterPage: React.FC = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search newsletter or year..."
-              className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 text-xs md:text-sm focus:outline-hidden focus:border-[#b31317] focus:ring-1 focus:ring-[#b31317] bg-slate-50/50"
+              className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 text-sm md:text-sm focus:outline-hidden focus:border-[#b31317] focus:ring-1 focus:ring-[#b31317] bg-slate-50/50"
             />
           </div>
         </div>
@@ -97,16 +97,16 @@ const NewsletterPage: React.FC = () => {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-[#b31317] text-white">
-                  <th className="py-4 px-6 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white w-20 text-center">
+                  <th className="py-4 px-6 font-display font-bold text-sm md:text-sm uppercase tracking-wider text-white w-20 text-center">
                     S.No
                   </th>
-                  <th className="py-4 px-6 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white">
+                  <th className="py-4 px-6 font-display font-bold text-sm md:text-sm uppercase tracking-wider text-white">
                     Newsletter Title
                   </th>
-                  <th className="py-4 px-6 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white w-44">
+                  <th className="py-4 px-6 font-display font-bold text-sm md:text-sm uppercase tracking-wider text-white w-44">
                     Academic Year
                   </th>
-                  <th className="py-4 px-6 font-display font-bold text-xs md:text-sm uppercase tracking-wider text-white w-40 text-center">
+                  <th className="py-4 px-6 font-display font-bold text-sm md:text-sm uppercase tracking-wider text-white w-40 text-center">
                     Action
                   </th>
                 </tr>
@@ -139,7 +139,7 @@ const NewsletterPage: React.FC = () => {
                         </div>
                       </td>
                       <td className="py-4 px-6">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold">
                           <Calendar className="w-3.5 h-3.5 text-[#caa74d]" />
                           AY {item.academicYear}
                         </span>
@@ -149,7 +149,7 @@ const NewsletterPage: React.FC = () => {
                           href={item.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#b31317] hover:bg-[#8a0e12] text-white text-xs font-bold transition-all shadow-2xs hover:shadow-md"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#b31317] hover:bg-[#8a0e12] text-white text-sm font-bold transition-all shadow-2xs hover:shadow-md"
                         >
                           <Download className="w-3.5 h-3.5" /> View PDF
                         </a>

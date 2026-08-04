@@ -1,4 +1,4 @@
-ï»¿import { useState } from "react";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -231,8 +231,8 @@ const CalendarCard = ({ calendar, index }: { calendar: typeof ugCalendars[0]; in
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">{calendar.program}</span>
-                <span className="text-xs text-slate-500 font-medium">{calendar.year}</span>
+                <span className="text-sm font-bold text-slate-400 uppercase tracking-wider block">{calendar.program}</span>
+                <span className="text-sm text-slate-500 font-medium">{calendar.year}</span>
               </div>
             </div>
           </div>
@@ -250,7 +250,7 @@ const CalendarCard = ({ calendar, index }: { calendar: typeof ugCalendars[0]; in
             {calendar.highlights.map((highlight, i) => (
               <span 
                 key={i} 
-                className={`px-2 py-1 text-xs font-medium rounded-md ${
+                className={`px-2 py-1 text-sm font-medium rounded-md ${
                   i === 0 
                     ? "bg-emerald-50 text-emerald-700 border border-emerald-200" 
                     : i === 1 
@@ -268,13 +268,13 @@ const CalendarCard = ({ calendar, index }: { calendar: typeof ugCalendars[0]; in
           {/* Buttons */}
           <div className="flex gap-2">
             <a href={calendar.pdfUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-              <Button size="sm" className="w-full bg-primary hover:bg-red-700 text-xs py-1.5">
+              <Button size="sm" className="w-full bg-primary hover:bg-red-700 text-sm py-1.5">
                 <Eye className="w-3.5 h-3.5 mr-1.5" />
                 View
               </Button>
             </a>
             <a href={calendar.pdfUrl} download className="flex-1">
-              <Button size="sm" variant="outline" className="w-full border-slate-300 hover:border-primary hover:bg-primary/5 text-xs py-1.5">
+              <Button size="sm" variant="outline" className="w-full border-slate-300 hover:border-primary hover:bg-primary/5 text-sm py-1.5">
                 <Download className="w-3.5 h-3.5 mr-1.5" />
                 Download
               </Button>
@@ -321,9 +321,9 @@ const TimelineView = () => {
             <div className={`flex items-center mb-6 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
               <div className={`ml-10 md:ml-0 md:w-[45%] ${isLeft ? 'md:pr-10 md:text-right' : 'md:pl-10 md:text-left'}`}>
                 <div className={`bg-gradient-to-br ${styles.border} border rounded-xl p-4 hover:shadow-lg hover:scale-[1.01] transition-all duration-300`}>
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1 block">{event.month}</span>
+                  <span className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-1 block">{event.month}</span>
                   <h4 className="font-bold text-slate-800">{event.event}</h4>
-                  <p className="text-xs text-slate-500 mt-1">{event.description}</p>
+                  <p className="text-sm text-slate-500 mt-1">{event.description}</p>
                 </div>
               </div>
 
@@ -392,13 +392,13 @@ const AcademicCalendar = () => {
             </div>
           </div>
 
-          {/* Breadcrumb â€” absolute positioned bottom-left */}
+          {/* Breadcrumb — absolute positioned bottom-left */}
           <div className="absolute bottom-6 left-6 z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-300">
               <a href="/" className="hover:text-white transition-colors">Home</a>
-              <span className="text-white/50">â€º</span>
+              <span className="text-white/50">›</span>
               <a href="/academics" className="hover:text-white transition-colors">Academics</a>
-              <span className="text-white/50">â€º</span>
+              <span className="text-white/50">›</span>
               <span className="text-white font-medium">Academic Calendar</span>
             </nav>
           </div>
@@ -473,7 +473,7 @@ const AcademicCalendar = () => {
             <ScrollReveal>
               <div className="text-center mb-10">
                 <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-bold rounded-full mb-3 border border-primary/20">
-                  ðŸ“š Academic Information
+                  ?? Academic Information
                 </span>
                 <h2 className="font-bold text-2xl md:text-3xl text-slate-800 mb-2">Plan Your Academic Year</h2>
                 <p className="text-slate-500">Key information about MITS academic programs</p>

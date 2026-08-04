@@ -169,7 +169,7 @@ const Gallery = () => {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
-            <span className="inline-block px-4 py-1 bg-accent/20 border border-accent/30 text-accent rounded-full text-xs font-bold tracking-widest uppercase mb-4">
+            <span className="inline-block px-4 py-1 bg-accent/20 border border-accent/30 text-accent rounded-full text-sm font-bold tracking-widest uppercase mb-4">
               MITS Media Portal
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-white mb-2 tracking-tight">

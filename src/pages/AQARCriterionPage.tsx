@@ -34,7 +34,7 @@ export const AQARCriterionPage = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
             NAAC &amp; IQAC Quality Reports
           </p>
           <h1
@@ -74,7 +74,7 @@ export const AQARCriterionPage = () => {
           
           {/* Left Sidebar Sub-Navigation */}
           <aside className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm h-fit">
-            <p className="font-display font-extrabold text-xs uppercase tracking-wider text-[#b31317] mb-3 px-2">
+            <p className="font-display font-extrabold text-sm uppercase tracking-wider text-[#b31317] mb-3 px-2">
               AQAR CRITERIA
             </p>
             <nav className="space-y-1">
@@ -84,7 +84,7 @@ export const AQARCriterionPage = () => {
                   <button
                     key={c.id}
                     onClick={() => setActiveCriterionId(c.id)}
-                    className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-xs md:text-sm font-semibold text-left transition-all cursor-pointer ${
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm md:text-sm font-semibold text-left transition-all cursor-pointer ${
                       isActive
                         ? "bg-[#b31317] text-white shadow-md font-bold"
                         : "text-slate-700 hover:bg-slate-100 hover:text-slate-900 border border-transparent"
@@ -106,7 +106,7 @@ export const AQARCriterionPage = () => {
               <h2 className="font-display text-2xl md:text-3xl font-extrabold text-[#0f2a44]">
                 {currentCriterion.title}
               </h2>
-              <p className="text-xs md:text-sm text-slate-500 mt-1">
+              <p className="text-sm md:text-sm text-slate-500 mt-1">
                 Metric ID details, key indicator documentation, and direct PDF view links.
               </p>
             </div>
@@ -120,14 +120,14 @@ export const AQARCriterionPage = () => {
                     <h3 className="font-display font-bold text-sm md:text-base tracking-wide text-white">
                       {ind.keyIndicator}
                     </h3>
-                    <span className="text-xs bg-white/20 text-white px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+                    <span className="text-sm bg-white/20 text-white px-3 py-1 rounded-full font-bold uppercase tracking-wider">
                       View
                     </span>
                   </div>
 
                   {/* Table */}
                   <div className="overflow-x-auto">
-                    <table className="w-full text-left text-xs md:text-sm border-collapse">
+                    <table className="w-full text-left text-sm md:text-sm border-collapse">
                       <thead>
                         <tr className="bg-slate-100 border-b border-slate-200 text-slate-700 font-bold uppercase tracking-wider">
                           <th className="py-3.5 px-4 w-28 text-slate-800">Metric ID</th>
@@ -141,7 +141,7 @@ export const AQARCriterionPage = () => {
                             <td className="py-4 px-4 font-bold text-[#b31317] align-top text-sm">
                               {m.id}
                             </td>
-                            <td className="py-4 px-4 text-slate-800 leading-relaxed align-top font-medium text-xs md:text-sm">
+                            <td className="py-4 px-4 text-slate-800 leading-relaxed align-top font-medium text-sm md:text-sm">
                               {m.description}
                             </td>
                             <td className="py-4 px-4 align-top text-center">
@@ -150,12 +150,12 @@ export const AQARCriterionPage = () => {
                                   href={m.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#b31317] hover:bg-[#8a0e12] text-white text-xs font-bold transition-colors shadow-2xs"
+                                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#b31317] hover:bg-[#8a0e12] text-white text-sm font-bold transition-colors shadow-2xs"
                                 >
                                   <FileText className="w-3.5 h-3.5" /> View
                                 </a>
                               ) : (
-                                <span className="text-xs text-slate-400 font-medium italic">N/A</span>
+                                <span className="text-sm text-slate-400 font-medium italic">N/A</span>
                               )}
                             </td>
                           </tr>

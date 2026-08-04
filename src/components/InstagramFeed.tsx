@@ -132,13 +132,13 @@ const InstagramFeed = () => {
             href={PROFILE_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-xs font-semibold text-[#0f172a] shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm font-semibold text-[#0f172a] shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
           >
             <Instagram className="w-4 h-4 text-[#dd2a7b]" /> @{USERNAME}
           </a>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
           {visibleItems.length > 0 && (
             <button
               type="button"
@@ -153,7 +153,7 @@ const InstagramFeed = () => {
       </div>
 
       <div className="hidden sm:flex items-center justify-between mb-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b30000]">Latest campus highlights</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b30000]">Latest campus highlights</p>
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -229,7 +229,7 @@ const InstagramFeed = () => {
               </div>
               <div className="px-3.5 py-3 bg-white flex-1 flex flex-col gap-2">
                 <p className="text-[11px] text-muted-foreground">{p.isReel ? "Reel" : "Post"}</p>
-                <p className="text-xs leading-relaxed text-foreground/85 line-clamp-3">{p.caption || "View on Instagram"}</p>
+                <p className="text-sm leading-relaxed text-foreground/85 line-clamp-3">{p.caption || "View on Instagram"}</p>
               </div>
             </a>
           ))}

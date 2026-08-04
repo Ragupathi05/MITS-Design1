@@ -60,8 +60,8 @@ function ModalContent({ mou, onClose }: Props) {
             <p className="text-sky-100 text-sm mt-1">{mou.title}</p>
           )}
           <div className="flex flex-wrap gap-2 mt-3">
-            {mou.status && <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${statusColor(mou.status)}`}>{mou.status}</span>}
-            {mou.year && <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white">{mou.year}</span>}
+            {mou.status && <span className={`text-sm font-semibold px-2.5 py-0.5 rounded-full ${statusColor(mou.status)}`}>{mou.status}</span>}
+            {mou.year && <span className="text-sm font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white">{mou.year}</span>}
           </div>
         </div>
 
@@ -91,7 +91,7 @@ function ModalContent({ mou, onClose }: Props) {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {mou.collabAreas.map((area, i) => (
-                  <span key={i} className="text-xs bg-primary/5 text-primary border border-primary/15 px-3 py-1 rounded-full font-medium">{area}</span>
+                  <span key={i} className="text-sm bg-primary/5 text-primary border border-primary/15 px-3 py-1 rounded-full font-medium">{area}</span>
                 ))}
               </div>
             </div>

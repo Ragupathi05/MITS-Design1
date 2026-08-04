@@ -56,7 +56,7 @@ function ModalContent({ achievement: a, onClose }: Props) {
           <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-4">
             <Award className="w-7 h-7 text-white" />
           </div>
-          <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${typeBg} mb-2 inline-block`}>{a.type}</span>
+          <span className={`text-sm font-bold px-2.5 py-0.5 rounded-full ${typeBg} mb-2 inline-block`}>{a.type}</span>
           <h2 className="text-xl font-bold leading-snug mt-1">{a.title}</h2>
           {a.name && <p className="text-white/80 text-sm mt-1">{a.name}</p>}
         </div>

@@ -105,7 +105,7 @@ const NotificationList = ({ items, query, emptyMessage = "No items are available
                 <p className="text-sm md:text-base font-medium text-foreground group-hover:text-primary transition-colors leading-snug">
                   {it.title}
                 </p>
-                <p className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">
+                <p className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">
                   {it.kind === "link" ? "External link" : `${(it.kind || "pdf").toUpperCase()} document`}
                 </p>
               </div>
@@ -191,7 +191,7 @@ const Examinations = () => {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4 inline-flex items-center gap-2"
+              className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4 inline-flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-[#ffb300]" /> MITS Deemed to be University
             </motion.p>
@@ -530,7 +530,7 @@ const Overview = () => (
     <ul className="grid md:grid-cols-2 gap-3">
       {coeResponsibilities.map((r, i) => (
         <li key={i} className="flex gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/40 transition-colors">
-          <span className="shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+          <span className="shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
           <p className="text-sm text-foreground leading-relaxed">{r}</p>
         </li>
       ))}

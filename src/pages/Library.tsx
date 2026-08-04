@@ -325,7 +325,7 @@ const Library = () => {
                         <BookOpen className="w-5 h-5" />
                       </div>
                       <div>
-                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Collections</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">Collections</p>
                         <h3 className="font-display text-xl font-bold text-foreground">Print and digital stock</h3>
                       </div>
                     </div>
@@ -339,7 +339,7 @@ const Library = () => {
                             key={collection.title}
                             className="rounded-xl border border-border bg-muted/30 px-4 py-3"
                           >
-                            <div className="text-xs uppercase tracking-[0.18em] text-primary font-semibold">
+                            <div className="text-sm uppercase tracking-[0.18em] text-primary font-semibold">
                               {collection.title}
                             </div>
                             <div className="mt-1 text-lg font-bold text-foreground">{collection.value}</div>
@@ -362,7 +362,7 @@ const Library = () => {
                         <Database className="w-5 h-5" />
                       </div>
                       <div>
-                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Access</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">Access</p>
                         <h3 className="font-display text-xl font-bold text-foreground">Research resources and portals</h3>
                       </div>
                     </div>
@@ -419,7 +419,7 @@ const Library = () => {
                               className="rounded-xl border border-border bg-muted/25 p-4 hover:border-primary/40 hover:shadow-sm transition-all"
                             >
                               <div className="text-sm font-bold text-foreground">{resource.name}</div>
-                              <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{resource.desc}</p>
+                              <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{resource.desc}</p>
                             </a>
                           ))}
                       </div>
@@ -433,7 +433,7 @@ const Library = () => {
                         {memberships.map((membership) => (
                           <span
                             key={membership.title}
-                            className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/5 px-3 py-1.5 text-xs font-semibold text-secondary"
+                            className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/5 px-3 py-1.5 text-sm font-semibold text-secondary"
                           >
                             {membership.title}
                             <span className="rounded-full bg-white/70 px-2 py-0.5 text-[10px] font-bold text-primary">
@@ -455,7 +455,7 @@ const Library = () => {
                             href={item.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full bg-primary/5 px-3 py-2 text-xs font-semibold text-secondary hover:bg-primary hover:text-white transition-colors"
+                            className="inline-flex items-center gap-2 rounded-full bg-primary/5 px-3 py-2 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors"
                           >
                             {item.title}
                             <ExternalLink className="w-3.5 h-3.5" />
@@ -524,7 +524,7 @@ const Library = () => {
                   <Card className="mt-6 p-6 md:p-8 border-border shadow-sm">
                     <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-6 items-start">
                       <div>
-                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-2">{audience.label}</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-2">{audience.label}</p>
                         <h3 className="font-display text-2xl font-bold text-foreground mb-3">
                           Tailored support for {audience.label.toLowerCase()}
                         </h3>
@@ -661,7 +661,7 @@ const StatCard = ({ stat, icon: Icon, index }: { stat: typeof libraryStats[numbe
           {stat.suffix || (stat.value >= 1000 ? "+" : "")}
         </div>
         <div className="text-sm font-semibold text-foreground/80 mt-1">{stat.label}</div>
-        {stat.note && <div className="text-xs text-muted-foreground mt-1.5 leading-relaxed">{stat.note}</div>}
+        {stat.note && <div className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{stat.note}</div>}
       </div>
     </motion.div>
   );

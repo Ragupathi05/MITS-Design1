@@ -1,4 +1,4 @@
-﻿import { Target, Eye, Award, ChevronLeft, ChevronRight } from "lucide-react";
+import { Target, Eye, Award, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useCallback, useRef } from "react";
@@ -74,7 +74,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left">
-            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-xs md:text-sm mb-3">About Us</p>
+            <p className="text-[#b30000] font-body font-semibold tracking-[0.18em] uppercase text-sm md:text-sm mb-3">About Us</p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6 leading-tight">
               Shaping Futures Since 1998
             </h2>
@@ -122,14 +122,14 @@ const AboutSection = () => {
             </div>
           </ScrollReveal>
 
-          {/* ── RIGHT SIDE: 3D CAROUSEL ── */}
+          {/* -- RIGHT SIDE: 3D CAROUSEL -- */}
           <ScrollReveal direction="right" delay={0.2}>
             <div
               className="relative pt-6 pl-6"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
-              {/* 27+ badge – pinned top-left, always on top */}
+              {/* 27+ badge � pinned top-left, always on top */}
               <div className="absolute top-0 left-0 bg-primary rounded-md px-5 py-4 shadow-xl hidden md:block z-10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent group/badge">
                 <p className="text-accent font-display text-3xl font-bold leading-none group-hover/badge:text-accent-foreground">27+</p>
                 <p className="text-primary-foreground/80 text-sm mt-1 group-hover/badge:text-accent-foreground/80">Years of Excellence</p>
@@ -168,7 +168,7 @@ const AboutSection = () => {
                   </motion.div>
                 </AnimatePresence>
 
-                {/* Left arrow – desktop only */}
+                {/* Left arrow � desktop only */}
                 <button
                   type="button"
                   aria-label="Previous image"
@@ -178,7 +178,7 @@ const AboutSection = () => {
                   <ChevronLeft className="w-5 h-5" />
                 </button>
 
-                {/* Right arrow – desktop only */}
+                {/* Right arrow � desktop only */}
                 <button
                   type="button"
                   aria-label="Next image"

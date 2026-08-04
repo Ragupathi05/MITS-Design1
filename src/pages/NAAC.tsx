@@ -94,7 +94,7 @@ const DocCard = ({ doc, highlight }: { doc: DocLink; highlight?: boolean }) => {
         <p className="font-body font-semibold text-[#0f2a44] text-sm md:text-base leading-snug">
           {doc.title}
         </p>
-        <p className="font-body text-xs text-[#0f2a44]/60 mt-1 uppercase tracking-wider">
+        <p className="font-body text-sm text-[#0f2a44]/60 mt-1 uppercase tracking-wider">
           {isVideo ? "Video" : isLink ? "External Link" : "PDF Document"}
         </p>
       </div>
@@ -108,7 +108,7 @@ const DocCard = ({ doc, highlight }: { doc: DocLink; highlight?: boolean }) => {
 
 const SectionHeader = ({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) => (
   <div className="mb-8">
-    <p className="font-body text-xs uppercase tracking-[0.2em] text-[#caa74d] font-semibold mb-2">{eyebrow}</p>
+    <p className="font-body text-sm uppercase tracking-[0.2em] text-[#caa74d] font-semibold mb-2">{eyebrow}</p>
     <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0f2a44]">{title}</h2>
     {description && (
       <p className="font-body text-[#0f2a44]/70 mt-3 max-w-3xl leading-relaxed">{description}</p>
@@ -158,7 +158,7 @@ const NAAC = () => {
             <span className="text-[#caa74d]">NAAC Accreditation</span>
           </nav>
           <div className="max-w-4xl">
-            <p className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#caa74d] text-xs font-semibold uppercase tracking-[0.2em] mb-5">
+            <p className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#caa74d] text-sm font-semibold uppercase tracking-[0.2em] mb-5">
               <Award className="w-3.5 h-3.5" /> NAAC Accredited · Grade {NAAC_GRADE}
             </p>
             <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight text-white">
@@ -224,9 +224,9 @@ const NAAC = () => {
               </div>
 
               <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-xl p-5">
-                <p className="font-body text-xs uppercase tracking-[0.2em] text-[#caa74d] mb-2">Status</p>
+                <p className="font-body text-sm uppercase tracking-[0.2em] text-[#caa74d] mb-2">Status</p>
                 <p className="font-display text-2xl font-bold text-white">Grade {NAAC_GRADE}</p>
-                <p className="font-body text-white/70 text-xs mt-1">{NAAC_CYCLE}</p>
+                <p className="font-body text-white/70 text-sm mt-1">{NAAC_CYCLE}</p>
               </div>
             </div>
           </aside>
@@ -261,7 +261,7 @@ const NAAC = () => {
                             setActive(s.key);
                             setMobileNavOpen(false);
                           }}
-                          className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-xs font-body font-medium text-left ${
+                          className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-body font-medium text-left ${
                             active === s.key
                               ? "bg-[#0f2a44] text-[#caa74d]"
                               : "text-[#0f2a44]/75 hover:bg-[#0f2a44]/5"
@@ -354,7 +354,7 @@ const NAAC = () => {
                           className="relative overflow-hidden rounded-2xl bg-white border border-[#0f2a44]/10 p-6 shadow-sm"
                         >
                           <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-[#caa74d]/30 to-transparent" />
-                          <p className="font-body text-xs uppercase tracking-[0.18em] text-primary/60">
+                          <p className="font-body text-sm uppercase tracking-[0.18em] text-primary/60">
                             {h.label}
                           </p>
                           <p className="font-display text-4xl font-bold text-[#0f2a44] mt-2">{h.value}</p>
@@ -417,7 +417,7 @@ const NAAC = () => {
                               {c.number}
                             </div>
                             <div className="flex-1">
-                              <p className="font-body text-xs uppercase tracking-wider text-[#caa74d] font-semibold mb-1">
+                              <p className="font-body text-sm uppercase tracking-wider text-[#caa74d] font-semibold mb-1">
                                 Criterion {c.number}
                               </p>
                               <h3 className="font-display text-lg font-bold text-[#0f2a44] leading-snug">

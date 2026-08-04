@@ -275,11 +275,11 @@ const DepartmentPage = () => {
                           {dept.hod.image ? <img src={dept.hod.image} alt={dept.hod.name} className="w-full h-full object-cover" /> : <Users className="w-8 h-8 text-primary-foreground" />}
                         </div>
                         <h4 className="text-primary-foreground font-bold text-sm">{dept.hod.name}</h4>
-                        <p className="text-primary-foreground/80 text-xs">{dept.hod.designation}</p>
-                        <p className="text-primary-foreground/60 text-xs mt-0.5">{dept.hod.qualification}</p>
+                        <p className="text-primary-foreground/80 text-sm">{dept.hod.designation}</p>
+                        <p className="text-primary-foreground/60 text-sm mt-0.5">{dept.hod.qualification}</p>
                       </div>
                       <CardContent className="p-3 text-center">
-                        <span className="text-xs font-semibold text-accent-foreground bg-accent/20 px-2 py-1 rounded-full">Head of Department</span>
+                        <span className="text-sm font-semibold text-accent-foreground bg-accent/20 px-2 py-1 rounded-full">Head of Department</span>
                       </CardContent>
                     </Card>
                   </div>
@@ -326,7 +326,7 @@ const DepartmentPage = () => {
                         <CardContent className="p-4">
                           <stat.icon className="w-8 h-8 mx-auto text-primary mb-2" />
                           <p className="text-xl md:text-2xl font-bold text-secondary">{stat.value}</p>
-                          <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
+                          <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
                         </CardContent>
                       </Card>
                     ))}
@@ -500,11 +500,11 @@ const DepartmentPage = () => {
                               }`}>
                               <CardContent className="p-4">
                                 <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
-                                {a.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{a.description}</p>}
-                                {'name' in a && a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
-                                {isCMS && <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                                {a.description && <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{a.description}</p>}
+                                {'name' in a && a.name && <p className="text-sm text-primary font-medium mt-1">{a.name}</p>}
+                                {isCMS && <p className="text-sm text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
                                 {'external_link' in a && a.external_link && !isCMS && (
-                                  <a href={a.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                  <a href={a.external_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-1">
                                     <ExternalLink className="w-3 h-3" />View
                                   </a>
                                 )}
@@ -524,9 +524,9 @@ const DepartmentPage = () => {
                               }`}>
                               <CardContent className="p-4">
                                 <h4 className="font-semibold text-sm text-secondary">{a.title}</h4>
-                                {a.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{a.description}</p>}
-                                {'name' in a && a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
-                                {isCMS && <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                                {a.description && <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{a.description}</p>}
+                                {'name' in a && a.name && <p className="text-sm text-primary font-medium mt-1">{a.name}</p>}
+                                {isCMS && <p className="text-sm text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
                               </CardContent>
                             </Card>
                           );
@@ -556,10 +556,10 @@ const DepartmentPage = () => {
                         <p className="text-sm text-muted-foreground mb-3">{f.description}</p>
                         {f.equipment && f.equipment.length > 0 && (
                           <div>
-                            <p className="text-xs font-semibold text-secondary mb-1">Key Equipment:</p>
+                            <p className="text-sm font-semibold text-secondary mb-1">Key Equipment:</p>
                             <div className="flex flex-wrap gap-1.5">
                               {f.equipment.map((e, j) => (
-                                <span key={j} className="text-xs bg-muted px-2 py-0.5 rounded-full text-muted-foreground">{e}</span>
+                                <span key={j} className="text-sm bg-muted px-2 py-0.5 rounded-full text-muted-foreground">{e}</span>
                               ))}
                             </div>
                           </div>
@@ -596,16 +596,16 @@ const DepartmentPage = () => {
                                     <CardContent className="p-3 flex items-center justify-between">
                                       <div className="flex-1 min-w-0 pr-3">
                                         <p className="text-sm font-medium text-secondary">{p.title}</p>
-                                        {'inventors' in p && (p as Record<string, unknown>).inventors && <p className="text-xs text-muted-foreground mt-0.5">Inventors: {String((p as Record<string, unknown>).inventors)}</p>}
-                                        {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
-                                        {isCMS && <p className="text-xs text-primary font-medium mt-1 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                                        {'inventors' in p && (p as Record<string, unknown>).inventors && <p className="text-sm text-muted-foreground mt-0.5">Inventors: {String((p as Record<string, unknown>).inventors)}</p>}
+                                        {p.year && <p className="text-sm text-muted-foreground">Year: {p.year}</p>}
+                                        {isCMS && <p className="text-sm text-primary font-medium mt-1 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
                                         {'external_link' in p && (p as Record<string, unknown>).external_link && !isCMS && (
-                                          <a href={String((p as Record<string, unknown>).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                                          <a href={String((p as Record<string, unknown>).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-1">
                                             <ExternalLink className="w-3 h-3" />View
                                           </a>
                                         )}
                                       </div>
-                                      <span className={`shrink-0 text-xs px-2 py-1 rounded-full font-medium ${status === "Granted" ? "bg-green-100 text-green-700" : status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>{status}</span>
+                                      <span className={`shrink-0 text-sm px-2 py-1 rounded-full font-medium ${status === "Granted" ? "bg-green-100 text-green-700" : status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>{status}</span>
                                     </CardContent>
                                   </Card>
                                 );
@@ -652,13 +652,13 @@ const DepartmentPage = () => {
                               <CardContent className="p-3">
                                 <p className="text-sm font-medium text-secondary">{p.title}</p>
                                 <div className="flex flex-wrap items-center gap-3 mt-1">
-                                  {p.authors && <span className="text-xs text-muted-foreground">{p.authors}</span>}
-                                  {p.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>}
-                                  {('venue' in p) && (p as Record<string, unknown>).venue && <span className="text-xs text-muted-foreground italic">{String((p as Record<string, unknown>).venue)}</span>}
-                                  {('indexing' in p) && (p as Record<string, unknown>).indexing && <span className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{String((p as Record<string, unknown>).indexing)}</span>}
-                                  {isCMS && <span className="text-xs text-primary font-medium flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</span>}
-                                  {!isCMS && ('doi' in p) && (p as Record<string, unknown>).doi && <a href={`https://doi.org/${(p as Record<string, unknown>).doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
-                                  {!isCMS && ('external_link' in p) && (p as Record<string, unknown>).external_link && <a href={String((p as Record<string, unknown>).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />Link</a>}
+                                  {p.authors && <span className="text-sm text-muted-foreground">{p.authors}</span>}
+                                  {p.year && <span className="text-sm bg-muted px-2 py-0.5 rounded-full">{p.year}</span>}
+                                  {('venue' in p) && (p as Record<string, unknown>).venue && <span className="text-sm text-muted-foreground italic">{String((p as Record<string, unknown>).venue)}</span>}
+                                  {('indexing' in p) && (p as Record<string, unknown>).indexing && <span className="text-sm bg-primary/5 text-primary px-2 py-0.5 rounded-full">{String((p as Record<string, unknown>).indexing)}</span>}
+                                  {isCMS && <span className="text-sm text-primary font-medium flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</span>}
+                                  {!isCMS && ('doi' in p) && (p as Record<string, unknown>).doi && <a href={`https://doi.org/${(p as Record<string, unknown>).doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                                  {!isCMS && ('external_link' in p) && (p as Record<string, unknown>).external_link && <a href={String((p as Record<string, unknown>).external_link)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-primary hover:underline"><ExternalLink className="w-3 h-3" />Link</a>}
                                 </div>
                               </CardContent>
                             </Card>
@@ -684,7 +684,7 @@ const DepartmentPage = () => {
                       <CardContent className="p-4 flex items-center justify-between">
                         <div>
                           <p className="font-semibold text-sm text-secondary">{c.title}</p>
-                          <p className="text-xs text-muted-foreground">Agency: {c.agency}</p>
+                          <p className="text-sm text-muted-foreground">Agency: {c.agency}</p>
                         </div>
                         {c.amount && <span className="text-sm font-bold text-primary">{c.amount}</span>}
                       </CardContent>
@@ -722,17 +722,17 @@ const DepartmentPage = () => {
                           )}
                           <CardContent className="p-4">
                             <div className="flex items-center justify-between mb-2">
-                              <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                              <span className="flex items-center gap-1 text-sm text-muted-foreground">
                                 <Calendar className="w-3.5 h-3.5 text-primary" />
                                 {('date' in e ? e.date : '') || ('from_date' in e ? e.from_date : '')}
                               </span>
-                              {e.type && <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{e.type}</span>}
+                              {e.type && <span className="text-sm bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{e.type}</span>}
                             </div>
                             <h4 className="font-semibold text-sm text-secondary">{e.title}</h4>
-                            {e.description && <p className="text-xs text-muted-foreground mt-1 line-clamp-2" dangerouslySetInnerHTML={{ __html: e.description }} />}
-                            {'venue' in e && e.venue && <p className="text-xs text-muted-foreground mt-1">📍 {e.venue}</p>}
+                            {e.description && <p className="text-sm text-muted-foreground mt-1 line-clamp-2" dangerouslySetInnerHTML={{ __html: e.description }} />}
+                            {'venue' in e && e.venue && <p className="text-sm text-muted-foreground mt-1">📍 {e.venue}</p>}
                             {isCMS && (
-                              <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1">
+                              <p className="text-sm text-primary font-medium mt-2 flex items-center gap-1">
                                 <ChevronRight className="w-3 h-3" /> View Details
                               </p>
                             )}
@@ -763,19 +763,19 @@ const DepartmentPage = () => {
                                 {'organization' in m ? m.organization : ('name' in m ? m.name : '')}
                               </h4>
                               {'status' in m && m.status && (
-                                <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full font-medium ${ m.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'}`}>{m.status}</span>
+                                <span className={`shrink-0 text-sm px-2 py-0.5 rounded-full font-medium ${ m.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'}`}>{m.status}</span>
                               )}
                             </div>
-                            {'title' in m && m.title && <p className="text-xs font-medium text-primary mt-1">{m.title}</p>}
-                            <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{m.purpose}</p>
-                            {'country' in m && m.country && <p className="text-xs text-muted-foreground mt-0.5">🌍 {m.country}</p>}
+                            {'title' in m && m.title && <p className="text-sm font-medium text-primary mt-1">{m.title}</p>}
+                            <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{m.purpose}</p>
+                            {'country' in m && m.country && <p className="text-sm text-muted-foreground mt-0.5">🌍 {m.country}</p>}
                             <div className="flex flex-wrap gap-2 mt-2">
-                              {m.year && <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{m.year}</span>}
+                              {m.year && <span className="text-sm bg-muted px-2 py-0.5 rounded-full">{m.year}</span>}
                               {'collabAreas' in m && (m.collabAreas ?? []).slice(0, 3).map((area: string, j: number) => (
-                                <span key={j} className="text-xs bg-primary/5 text-primary px-2 py-0.5 rounded-full">{area}</span>
+                                <span key={j} className="text-sm bg-primary/5 text-primary px-2 py-0.5 rounded-full">{area}</span>
                               ))}
                             </div>
-                            {isCMS && <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                            {isCMS && <p className="text-sm text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
                           </CardContent>
                         </Card>
                       );
@@ -793,19 +793,19 @@ const DepartmentPage = () => {
                   <Card className="text-center bg-gradient-to-br from-primary/5 to-primary/10">
                     <CardContent className="p-4">
                       <p className="text-2xl font-bold text-primary">{dept.placement.percentage}</p>
-                      <p className="text-xs text-muted-foreground">Placed</p>
+                      <p className="text-sm text-muted-foreground">Placed</p>
                     </CardContent>
                   </Card>
                   <Card className="text-center bg-gradient-to-br from-accent/10 to-accent/20">
                     <CardContent className="p-4">
                       <p className="text-2xl font-bold text-accent-foreground">{dept.placement.avgPackage}</p>
-                      <p className="text-xs text-muted-foreground">Avg Package</p>
+                      <p className="text-sm text-muted-foreground">Avg Package</p>
                     </CardContent>
                   </Card>
                   <Card className="text-center bg-gradient-to-br from-muted to-muted/50">
                     <CardContent className="p-4">
                       <p className="text-2xl font-bold text-secondary">{dept.placement.highestPackage}</p>
-                      <p className="text-xs text-muted-foreground">Highest</p>
+                      <p className="text-sm text-muted-foreground">Highest</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -829,27 +829,27 @@ const DepartmentPage = () => {
                                 {p.subtype === 'Training' ? (
                                   <>
                                     <p className="font-semibold text-sm text-secondary">{p.programTitle}</p>
-                                    <p className="text-xs text-muted-foreground mt-0.5">By: {p.conductedBy}</p>
-                                    {p.numberOfStudents ? <p className="text-xs text-muted-foreground">{p.numberOfStudents} students</p> : null}
+                                    <p className="text-sm text-muted-foreground mt-0.5">By: {p.conductedBy}</p>
+                                    {p.numberOfStudents ? <p className="text-sm text-muted-foreground">{p.numberOfStudents} students</p> : null}
                                   </>
                                 ) : (
                                   <>
                                     <p className="font-semibold text-sm text-secondary">{p.studentName}</p>
-                                    <p className="text-xs text-primary font-medium">{p.companyName}</p>
-                                    {p.role && <p className="text-xs text-muted-foreground">{p.role}</p>}
-                                    {p.package && <p className="text-xs font-semibold text-green-700">{p.package}</p>}
+                                    <p className="text-sm text-primary font-medium">{p.companyName}</p>
+                                    {p.role && <p className="text-sm text-muted-foreground">{p.role}</p>}
+                                    {p.package && <p className="text-sm font-semibold text-green-700">{p.package}</p>}
                                   </>
                                 )}
                               </div>
                               <div className="text-right shrink-0">
-                                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                                <span className={`text-sm px-2 py-0.5 rounded-full font-medium ${
                                   p.subtype === 'Placement' ? 'bg-green-100 text-green-700' :
                                   p.subtype === 'Internship' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'
                                 }`}>{p.subtype}</span>
-                                {p.year && <p className="text-xs text-muted-foreground mt-1">{p.year}</p>}
+                                {p.year && <p className="text-sm text-muted-foreground mt-1">{p.year}</p>}
                               </div>
                             </div>
-                            <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>
+                            <p className="text-sm text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>
                           </CardContent>
                         </Card>
                       ))}
@@ -873,16 +873,16 @@ const DepartmentPage = () => {
                           }`}>
                           <CardContent className="p-4">
                             <h4 className="font-semibold text-sm text-secondary">{p.title}</h4>
-                            <p className="text-xs text-muted-foreground mt-1">{p.students}</p>
-                            {'guide' in p && p.guide && <p className="text-xs text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
-                            {'stack' in p && p.stack && <p className="text-xs text-muted-foreground mt-0.5">Stack: {p.stack}</p>}
-                            {p.description && <p className="text-xs text-muted-foreground mt-2 line-clamp-2">{p.description}</p>}
-                            {'academicYear' in p && p.academicYear && <span className="text-xs bg-muted px-2 py-0.5 rounded-full mt-2 inline-block">{p.academicYear}</span>}
-                            {isCMS && <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
+                            <p className="text-sm text-muted-foreground mt-1">{p.students}</p>
+                            {'guide' in p && p.guide && <p className="text-sm text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
+                            {'stack' in p && p.stack && <p className="text-sm text-muted-foreground mt-0.5">Stack: {p.stack}</p>}
+                            {p.description && <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{p.description}</p>}
+                            {'academicYear' in p && p.academicYear && <span className="text-sm bg-muted px-2 py-0.5 rounded-full mt-2 inline-block">{p.academicYear}</span>}
+                            {isCMS && <p className="text-sm text-primary font-medium mt-2 flex items-center gap-1"><ChevronRight className="w-3 h-3" />View Details</p>}
                             {!isCMS && (
                               <div className="flex gap-2 mt-2">
-                                {'github' in p && p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">GitHub</a>}
-                                {'demo' in p && p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">Demo</a>}
+                                {'github' in p && p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">GitHub</a>}
+                                {'demo' in p && p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">Demo</a>}
                               </div>
                             )}
                           </CardContent>
@@ -915,10 +915,10 @@ const DepartmentPage = () => {
                             <CardContent className="p-4">
                               <div className="flex items-start justify-between gap-2 mb-2">
                                 <h4 className="font-semibold text-sm text-secondary flex-1">{s.name}</h4>
-                                <span className="shrink-0 text-xs font-bold text-muted-foreground bg-muted px-2 py-0.5 rounded-full">Sem {s.semester}</span>
+                                <span className="shrink-0 text-sm font-bold text-muted-foreground bg-muted px-2 py-0.5 rounded-full">Sem {s.semester}</span>
                               </div>
-                              {(s as Record<string, unknown>).code && <p className="text-xs text-muted-foreground">Code: {String((s as Record<string, unknown>).code)}</p>}
-                              {(s as Record<string, unknown>).credits && <p className="text-xs text-primary font-medium">Credits: {String((s as Record<string, unknown>).credits)}</p>}
+                              {(s as Record<string, unknown>).code && <p className="text-sm text-muted-foreground">Code: {String((s as Record<string, unknown>).code)}</p>}
+                              {(s as Record<string, unknown>).credits && <p className="text-sm text-primary font-medium">Credits: {String((s as Record<string, unknown>).credits)}</p>}
                             </CardContent>
                           </Card>
                         ))}

@@ -55,7 +55,7 @@ const MandatoryDisclosures = () => {
                   <p className="text-base font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
                     {cat.category}
                   </p>
-                  <p className="text-xs text-secondary/60 mt-0.5">
+                  <p className="text-sm text-secondary/60 mt-0.5">
                     {cat.items.length} document{cat.items.length === 1 ? "" : "s"}
                   </p>
                 </div>

@@ -299,7 +299,7 @@ className="w-full h-full object-cover"
               <motion.p
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="font-body font-semibold text-[#caa74d] tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-3"
+                className="font-body font-semibold text-[#caa74d] tracking-[0.18em] uppercase text-[10px] sm:text-sm md:text-sm mb-2 sm:mb-3"
               >
                 Life at MITS
               </motion.p>
@@ -352,7 +352,7 @@ className="w-full h-full object-cover"
                 }`}
               >
                 <motion.p variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
-                  className="font-body font-semibold text-[#caa74d] tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-3 md:mb-4">
+                  className="font-body font-semibold text-[#caa74d] tracking-[0.18em] uppercase text-[10px] sm:text-sm md:text-sm mb-2 sm:mb-3 md:mb-4">
                   {slide.eyebrow}
                 </motion.p>
                 <motion.h1 variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
@@ -372,7 +372,7 @@ className="w-full h-full object-cover"
                 )}
                 {"subHighlight" in slide && slide.subHighlight && (
                   <motion.p variants={textVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 0.3 }}
-                    className="font-body text-white/80 text-xs sm:text-sm md:text-base font-medium tracking-wider mt-2 mb-3 sm:mb-4 text-center">
+                    className="font-body text-white/80 text-sm sm:text-sm md:text-base font-medium tracking-wider mt-2 mb-3 sm:mb-4 text-center">
                     {slide.subHighlight}
                   </motion.p>
                 )}
@@ -388,7 +388,7 @@ className="w-full h-full object-cover"
                         : "bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 hover:border-white backdrop-blur-sm";
                       const inner = (
                         <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                          className={`${cls} font-body font-bold px-3 sm:px-4 md:px-6 lg:px-8 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-full text-[10px] sm:text-xs md:text-sm lg:text-base transition-all duration-250`}>
+                          className={`${cls} font-body font-bold px-3 sm:px-4 md:px-6 lg:px-8 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-full text-[10px] sm:text-sm md:text-sm lg:text-base transition-all duration-250`}>
                           {btn.label}
                         </motion.button>
                       );
@@ -419,7 +419,7 @@ className="w-full h-full object-cover"
                 style={{ background: "rgba(7,21,37,0.65)", backdropFilter: "blur(14px)" }}>
                 {credentials.map((c, i) => (
                   <div key={c.label} className="flex items-center gap-1.5 sm:gap-3 shrink-0">
-                    <span className={`font-body font-bold text-[9px] sm:text-xs md:text-sm whitespace-nowrap ${c.gold ? "text-[#caa74d]" : "text-white"}`}>
+                    <span className={`font-body font-bold text-[9px] sm:text-sm md:text-sm whitespace-nowrap ${c.gold ? "text-[#caa74d]" : "text-white"}`}>
                       {c.label}
                     </span>
                     {i < credentials.length - 1 && <span className="w-px h-3 bg-white/20 shrink-0" />}

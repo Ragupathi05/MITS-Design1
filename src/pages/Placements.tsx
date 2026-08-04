@@ -1037,7 +1037,7 @@ const Placements = () => {
                         <div>
                           <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white/85 px-4 py-2 text-amber-700 shadow-sm backdrop-blur-sm">
                             <Sparkles className="h-4 w-4" />
-                            <span className="text-xs font-semibold uppercase tracking-[0.22em]">People behind placements</span>
+                            <span className="text-sm font-semibold uppercase tracking-[0.22em]">People behind placements</span>
                           </div>
                           <h2 className="mt-4 font-display text-3xl font-bold text-slate-800 md:text-4xl">Placement &amp; Training Team</h2>
                           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600 md:text-base">
@@ -1136,7 +1136,7 @@ const Placements = () => {
                         <div>
                           <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-amber-700 shadow-sm ring-1 ring-amber-200 backdrop-blur">
                             <Mail className="h-4 w-4" />
-                            <span className="text-xs font-semibold uppercase tracking-[0.22em]">Contact</span>
+                            <span className="text-sm font-semibold uppercase tracking-[0.22em]">Contact</span>
                           </div>
                           <h2 className="mt-4 font-display text-3xl font-bold text-slate-800 md:text-4xl">Contact Placement Cell</h2>
                           <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600 md:text-base">
@@ -1144,7 +1144,7 @@ const Placements = () => {
                           </p>
                         </div>
                         <div className="rounded-2xl bg-slate-900 px-5 py-4 text-white shadow-lg">
-                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">Quick connect</p>
+                          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Quick connect</p>
                           <p className="mt-1 text-sm text-slate-300">placements@mits.ac.in</p>
                         </div>
                       </div>

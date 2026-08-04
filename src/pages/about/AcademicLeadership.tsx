@@ -57,9 +57,9 @@ const AcademicLeadership = () => {
                   {p.name}
                 </h3>
                 {p.qualification && (
-                  <p className="text-xs text-secondary/60 mt-1">{p.qualification}</p>
+                  <p className="text-sm text-secondary/60 mt-1">{p.qualification}</p>
                 )}
-                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-primary">
+                <span className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-primary">
                   View profile <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>

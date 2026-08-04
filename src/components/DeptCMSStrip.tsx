@@ -29,7 +29,7 @@ const SectionTitle = ({ icon: Icon, title, count, color }: { icon: React.Element
       </div>
       <h3 className="font-bold text-base text-slate-800" style={{ fontFamily: "var(--font-display)" }}>{title}</h3>
     </div>
-    <span className="text-xs bg-slate-100 text-slate-500 px-2.5 py-0.5 rounded-full font-medium">{count} items</span>
+    <span className="text-sm bg-slate-100 text-slate-500 px-2.5 py-0.5 rounded-full font-medium">{count} items</span>
   </div>
 );
 
@@ -70,10 +70,10 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
           <h2 className="text-xl font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
             Department Updates
           </h2>
-          <p className="text-xs text-muted-foreground mt-0.5">Live content from MITS CMS</p>
+          <p className="text-sm text-muted-foreground mt-0.5">Live content from MITS CMS</p>
         </div>
         <a href="https://mits-cms.freedev.app/backend" target="_blank" rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-xs text-primary font-medium hover:underline">
+          className="flex items-center gap-1.5 text-sm text-primary font-medium hover:underline">
           <ExternalLink className="w-3.5 h-3.5" />CMS Portal
         </a>
       </div>
@@ -90,17 +90,17 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
                   <div className="flex items-start justify-between gap-2">
                     <h4 className="font-semibold text-sm text-slate-800 leading-snug flex-1">{ev.title}</h4>
                     {ev.type && (
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${typeColors[ev.type] ?? "bg-slate-100 text-slate-600"}`}>
+                      <span className={`text-sm px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${typeColors[ev.type] ?? "bg-slate-100 text-slate-600"}`}>
                         {ev.type}
                       </span>
                     )}
                   </div>
-                  {ev.description && <p className="text-xs text-slate-500 leading-relaxed">{ev.description}</p>}
+                  {ev.description && <p className="text-sm text-slate-500 leading-relaxed">{ev.description}</p>}
                   <div className="flex flex-wrap items-center gap-3 mt-auto pt-1">
-                    <span className="flex items-center gap-1 text-xs text-primary font-medium">
+                    <span className="flex items-center gap-1 text-sm text-primary font-medium">
                       <Calendar className="w-3 h-3" />{ev.from_date || ev.date}
                     </span>
-                    {ev.venue && <span className="flex items-center gap-1 text-xs text-slate-400"><MapPin className="w-3 h-3" />{ev.venue}</span>}
+                    {ev.venue && <span className="flex items-center gap-1 text-sm text-slate-400"><MapPin className="w-3 h-3" />{ev.venue}</span>}
                   </div>
                 </motion.div>
               ))}
@@ -118,15 +118,15 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
                   className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <div className="flex items-start justify-between gap-2">
                     <h4 className="font-semibold text-sm text-slate-800 flex-1">{a.title}</h4>
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${a.type === "faculty" ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}>
+                    <span className={`text-sm px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${a.type === "faculty" ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}>
                       {a.type}
                     </span>
                   </div>
-                  {a.name && <p className="text-xs text-primary font-medium mt-1">{a.name}</p>}
-                  {a.description && <p className="text-xs text-slate-500 mt-1">{a.description}</p>}
+                  {a.name && <p className="text-sm text-primary font-medium mt-1">{a.name}</p>}
+                  {a.description && <p className="text-sm text-slate-500 mt-1">{a.description}</p>}
                   {a.external_link && (
                     <a href={a.external_link} target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-1">
                       <ExternalLink className="w-3 h-3" />View
                     </a>
                   )}
@@ -150,12 +150,12 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="font-bold text-sm text-slate-800 group-hover:text-primary transition-colors">{m.organization}</h4>
-                      {m.title && <p className="text-xs text-primary font-medium mt-0.5">{m.title}</p>}
-                      {m.purpose && <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{m.purpose}</p>}
+                      {m.title && <p className="text-sm text-primary font-medium mt-0.5">{m.title}</p>}
+                      {m.purpose && <p className="text-sm text-slate-500 mt-0.5 leading-relaxed">{m.purpose}</p>}
                       <div className="flex flex-wrap items-center gap-3 mt-2">
-                        {m.year && <span className="flex items-center gap-1 text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full"><Tag className="w-3 h-3" />{m.year}</span>}
-                        {m.country && <span className="flex items-center gap-1 text-xs text-slate-400"><Globe className="w-3 h-3" />{m.country}</span>}
-                        {m.status && <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${m.status === "Active" ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-600"}`}>{m.status}</span>}
+                        {m.year && <span className="flex items-center gap-1 text-sm bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full"><Tag className="w-3 h-3" />{m.year}</span>}
+                        {m.country && <span className="flex items-center gap-1 text-sm text-slate-400"><Globe className="w-3 h-3" />{m.country}</span>}
+                        {m.status && <span className={`text-sm px-2 py-0.5 rounded-full font-medium ${m.status === "Active" ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-600"}`}>{m.status}</span>}
                       </div>
                     </div>
                   </div>
@@ -175,15 +175,15 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
                   className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <div className="flex items-start justify-between gap-2">
                     <h4 className="font-semibold text-sm text-slate-800 flex-1">{p.title}</h4>
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${p.status === "Granted" ? "bg-green-100 text-green-700" : p.status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>
+                    <span className={`text-sm px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${p.status === "Granted" ? "bg-green-100 text-green-700" : p.status === "Published" ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}`}>
                       {p.status}
                     </span>
                   </div>
-                  {p.inventors && <p className="text-xs text-slate-500 mt-1">Inventors: {p.inventors}</p>}
-                  {p.year && <p className="text-xs text-muted-foreground">Year: {p.year}</p>}
+                  {p.inventors && <p className="text-sm text-slate-500 mt-1">Inventors: {p.inventors}</p>}
+                  {p.year && <p className="text-sm text-muted-foreground">Year: {p.year}</p>}
                   {p.external_link && (
                     <a href={p.external_link} target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1">
+                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-1">
                       <ExternalLink className="w-3 h-3" />View
                     </a>
                   )}
@@ -203,13 +203,13 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
                   className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <div className="flex items-start justify-between gap-2">
                     <p className="text-sm font-medium text-slate-800 flex-1">{p.title}</p>
-                    <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-slate-100 text-slate-600 whitespace-nowrap">{p.type}</span>
+                    <span className="text-sm px-2 py-0.5 rounded-full font-medium bg-slate-100 text-slate-600 whitespace-nowrap">{p.type}</span>
                   </div>
                   <div className="flex flex-wrap items-center gap-3 mt-1">
-                    {p.authors && <span className="text-xs text-slate-500">{p.authors}</span>}
-                    <span className="text-xs bg-muted px-2 py-0.5 rounded-full">{p.year}</span>
-                    {p.venue && <span className="text-xs text-slate-400 italic">{p.venue}</span>}
-                    {p.doi && <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
+                    {p.authors && <span className="text-sm text-slate-500">{p.authors}</span>}
+                    <span className="text-sm bg-muted px-2 py-0.5 rounded-full">{p.year}</span>
+                    {p.venue && <span className="text-sm text-slate-400 italic">{p.venue}</span>}
+                    {p.doi && <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-primary hover:underline"><ExternalLink className="w-3 h-3" />DOI</a>}
                   </div>
                 </motion.div>
               ))}
@@ -230,23 +230,23 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
                       {p.subtype === "Training" ? (
                         <>
                           <p className="font-semibold text-sm text-slate-800">{p.programTitle}</p>
-                          <p className="text-xs text-slate-500 mt-0.5">By: {p.conductedBy}</p>
-                          {p.numberOfStudents ? <p className="text-xs text-slate-500">{p.numberOfStudents} students</p> : null}
+                          <p className="text-sm text-slate-500 mt-0.5">By: {p.conductedBy}</p>
+                          {p.numberOfStudents ? <p className="text-sm text-slate-500">{p.numberOfStudents} students</p> : null}
                         </>
                       ) : (
                         <>
                           <p className="font-semibold text-sm text-slate-800">{p.studentName}</p>
-                          <p className="text-xs text-primary font-medium">{p.companyName}</p>
-                          {p.role && <p className="text-xs text-slate-500">{p.role}</p>}
-                          {p.package && <p className="text-xs font-semibold text-green-700">{p.package}</p>}
+                          <p className="text-sm text-primary font-medium">{p.companyName}</p>
+                          {p.role && <p className="text-sm text-slate-500">{p.role}</p>}
+                          {p.package && <p className="text-sm font-semibold text-green-700">{p.package}</p>}
                         </>
                       )}
                     </div>
                     <div className="text-right shrink-0">
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${p.subtype === "Placement" ? "bg-green-100 text-green-700" : p.subtype === "Internship" ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"}`}>
+                      <span className={`text-sm px-2 py-0.5 rounded-full font-medium ${p.subtype === "Placement" ? "bg-green-100 text-green-700" : p.subtype === "Internship" ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"}`}>
                         {p.subtype}
                       </span>
-                      {p.year && <p className="text-xs text-slate-400 mt-1">{p.year}</p>}
+                      {p.year && <p className="text-sm text-slate-400 mt-1">{p.year}</p>}
                     </div>
                   </div>
                 </motion.div>
@@ -264,13 +264,13 @@ const DeptCMSStrip = ({ deptKey }: Props) => {
                   onClick={() => setSelectedProject(p)}
                   className="bg-white rounded-xl border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer">
                   <h4 className="font-semibold text-sm text-slate-800">{p.title}</h4>
-                  {p.students && <p className="text-xs text-slate-500 mt-0.5">{p.students}</p>}
-                  {p.guide && <p className="text-xs text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
-                  {p.stack && <p className="text-xs text-slate-400 mt-0.5">Stack: {p.stack}</p>}
-                  {p.description && <p className="text-xs text-slate-500 mt-1">{p.description}</p>}
+                  {p.students && <p className="text-sm text-slate-500 mt-0.5">{p.students}</p>}
+                  {p.guide && <p className="text-sm text-primary font-medium mt-0.5">Guide: {p.guide}</p>}
+                  {p.stack && <p className="text-sm text-slate-400 mt-0.5">Stack: {p.stack}</p>}
+                  {p.description && <p className="text-sm text-slate-500 mt-1">{p.description}</p>}
                   <div className="flex gap-2 mt-2">
-                    {p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">GitHub</a>}
-                    {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">Demo</a>}
+                    {p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">GitHub</a>}
+                    {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">Demo</a>}
                   </div>
                 </motion.div>
               ))}

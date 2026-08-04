@@ -53,7 +53,7 @@ export default function CellDetail() {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-4">
+          <p className="text-[#ffb300] font-bold tracking-[0.25em] uppercase text-sm sm:text-sm mb-4">
             {categoryTitle}
           </p>
           <h1 className="font-display text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white leading-tight max-w-4xl mx-auto">
@@ -113,7 +113,7 @@ export default function CellDetail() {
                     {isStatsTable ? (
                       <table className="w-full text-sm border-collapse">
                         <thead>
-                          <tr className="bg-[#0f2a44] text-white text-xs uppercase tracking-wider">
+                          <tr className="bg-[#0f2a44] text-white text-sm uppercase tracking-wider">
                             <th className="py-3 px-5 text-left">Year</th>
                             <th className="py-3 px-5 text-left">No. of Scholarships</th>
                             <th className="py-3 px-5 text-left">No. of Student Beneficiaries</th>
@@ -132,7 +132,7 @@ export default function CellDetail() {
                     ) : (
                       <table className="w-full text-sm border-collapse">
                         <thead>
-                          <tr className="bg-[#0f2a44] text-white text-xs uppercase tracking-wider">
+                          <tr className="bg-[#0f2a44] text-white text-sm uppercase tracking-wider">
                             <th className="py-3 px-4 text-center w-12">S.No</th>
                             <th className="py-3 px-4 text-left">Name</th>
                             <th className="py-3 px-4 text-left hidden sm:table-cell">Designation</th>
@@ -147,11 +147,11 @@ export default function CellDetail() {
                               <td className="py-3 px-4 font-semibold text-[#0f2a44]">{m.name}</td>
                               <td className="py-3 px-4 text-[#0f2a44]/70 hidden sm:table-cell">{m.designation}</td>
                               <td className="py-3 px-4 hidden md:table-cell">
-                                <span className="text-xs bg-[#fff8e6] border border-[#ffd15c]/30 text-[#b31317] px-2 py-0.5 rounded font-semibold">
+                                <span className="text-sm bg-[#fff8e6] border border-[#ffd15c]/30 text-[#b31317] px-2 py-0.5 rounded font-semibold">
                                   {m.position}
                                 </span>
                               </td>
-                              <td className="py-3 px-4 text-[#0f2a44]/60 text-xs hidden lg:table-cell">{m.email}</td>
+                              <td className="py-3 px-4 text-[#0f2a44]/60 text-sm hidden lg:table-cell">{m.email}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -216,20 +216,20 @@ export default function CellDetail() {
                     {cell.contacts.map((c, i) => (
                       <div key={i} className="space-y-1.5">
                         {c.name && <p className="font-semibold text-[#0f2a44] text-sm">{c.name}</p>}
-                        {c.designation && <p className="text-xs text-[#b31317] font-medium">{c.designation}</p>}
+                        {c.designation && <p className="text-sm text-[#b31317] font-medium">{c.designation}</p>}
                         {c.address && (
-                          <p className="text-xs text-[#0f2a44]/60 flex items-start gap-1.5">
+                          <p className="text-sm text-[#0f2a44]/60 flex items-start gap-1.5">
                             <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5" />{c.address}
                           </p>
                         )}
                         {c.phone && c.phone.trim() && (
-                          <p className="text-xs text-[#0f2a44]/70 flex items-start gap-1.5 whitespace-pre-line">
+                          <p className="text-sm text-[#0f2a44]/70 flex items-start gap-1.5 whitespace-pre-line">
                             <Phone className="w-3.5 h-3.5 shrink-0 mt-0.5" />
                             {c.phone.replace("Phone :", "").trim()}
                           </p>
                         )}
                         {c.email && c.email.trim() && (
-                          <p className="text-xs text-[#0f2a44]/70 flex items-center gap-1.5">
+                          <p className="text-sm text-[#0f2a44]/70 flex items-center gap-1.5">
                             <Mail className="w-3.5 h-3.5 shrink-0" />{c.email}
                           </p>
                         )}
@@ -250,9 +250,9 @@ export default function CellDetail() {
                   className="flex items-center justify-between gap-3 bg-gradient-to-br from-[#0f2a44] to-[#11355a] text-white rounded-2xl p-5 hover:shadow-lg transition-all group"
                 >
                   <div>
-                    <p className="text-xs text-[#caa74d] font-semibold uppercase tracking-wider mb-1">Official</p>
+                    <p className="text-sm text-[#caa74d] font-semibold uppercase tracking-wider mb-1">Official</p>
                     <p className="font-display font-bold text-base">Download Brochure</p>
-                    <p className="text-white/60 text-xs mt-0.5">MITS Deemed to be University 2026</p>
+                    <p className="text-white/60 text-sm mt-0.5">MITS Deemed to be University 2026</p>
                   </div>
                   <Download className="w-6 h-6 text-[#caa74d] group-hover:scale-110 transition-transform shrink-0" />
                 </a>
@@ -289,7 +289,7 @@ export default function CellDetail() {
                 href={cell.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between gap-2 text-xs text-[#0f2a44]/50 hover:text-[#b31317] transition-colors px-1"
+                className="flex items-center justify-between gap-2 text-sm text-[#0f2a44]/50 hover:text-[#b31317] transition-colors px-1"
               >
                 <span>View original source page</span>
                 <ExternalLink className="w-3.5 h-3.5 shrink-0" />

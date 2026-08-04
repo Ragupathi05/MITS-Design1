@@ -30,7 +30,7 @@ const InternationalAdmissionsProcedure = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
         <div className="relative z-10 container mx-auto px-4 md:px-8 text-center space-y-4">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm">
+          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm">
             Academic Year 2026-27
           </p>
           <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
@@ -72,7 +72,7 @@ const InternationalAdmissionsProcedure = () => {
             <h2 className="text-[#0f2a44] font-bold text-base md:text-lg mb-2 flex items-center gap-2">
               <Landmark className="w-5 h-5 text-[#caa74d]" /> Preamble &amp; Regulatory Compliance
             </h2>
-            <p className="text-slate-700 leading-relaxed text-xs md:text-sm font-sans">
+            <p className="text-slate-700 leading-relaxed text-sm md:text-sm font-sans">
               This Admission Policy of Madanapalle Institute of Technology &amp; Science (MITS) Deemed to be University, Madanapalle covers admissions into regular programs for International Students, including Lateral Entry Admissions into the 2nd year of the B.Tech program. This framework governs the admission of international applicants to ensure a transparent, merit-based, and equitable process.
             </p>
           </Card>
@@ -91,10 +91,10 @@ const InternationalAdmissionsProcedure = () => {
                 <h3 className="text-base md:text-lg font-bold text-[#0f2a44] flex items-center gap-2 border-b border-slate-100 pb-2">
                   <ShieldCheck className="w-5 h-5 text-[#caa74d]" /> Who Can Apply
                 </h3>
-                <p className="text-slate-655 text-xs md:text-sm leading-relaxed font-sans">
+                <p className="text-slate-655 text-sm md:text-sm leading-relaxed font-sans">
                   MITS admits candidates under the Foreign / NRI category (International) strictly on fulfilling the designated eligibility requirements. Seats are exclusively available for:
                 </p>
-                <div className="space-y-2 pt-2 text-xs md:text-sm font-bold text-[#0f2a44] font-sans">
+                <div className="space-y-2 pt-2 text-sm md:text-sm font-bold text-[#0f2a44] font-sans">
                   {["Foreign Nationals", "Candidates with NRI status", "Candidates sponsored by relatives with NRI status", "Overseas Citizen of India (OCI)", "Persons of Indian Origin (PIO)"].map((cat, idx) => (
                     <div key={idx} className="flex items-center gap-2.5 bg-slate-50 p-3 rounded-lg border border-slate-200 hover:border-[#caa74d] transition-all duration-200">
                       <span className="w-2 h-2 rounded-full bg-[#caa74d] shrink-0" />
@@ -110,7 +110,7 @@ const InternationalAdmissionsProcedure = () => {
                   <h3 className="text-base md:text-lg font-bold text-[#0f2a44] flex items-center gap-2 border-b border-slate-100 pb-2 mb-2">
                     <Globe className="w-5 h-5 text-[#caa74d]" /> Allocation &amp; Process
                   </h3>
-                  <ul className="space-y-3 pl-1 text-slate-500 text-xs md:text-sm leading-relaxed font-sans">
+                  <ul className="space-y-3 pl-1 text-slate-500 text-sm md:text-sm leading-relaxed font-sans">
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#caa74d] mt-1.5 shrink-0" />
                       <span><strong className="text-slate-700 font-bold">Seat Quota:</strong> MITS allocates 15% of seats under the Foreign / NRI category.</span>
@@ -130,7 +130,7 @@ const InternationalAdmissionsProcedure = () => {
                   </ul>
                 </div>
 
-                <div className="bg-red-50 border border-red-150 rounded-xl p-4 text-xs md:text-sm text-red-800 leading-relaxed font-bold mt-3 shadow-sm font-sans">
+                <div className="bg-red-50 border border-red-150 rounded-xl p-4 text-sm md:text-sm text-red-800 leading-relaxed font-bold mt-3 shadow-sm font-sans">
                   Exclusivity Rule: Candidates confirming admission here by paying the first-year fee cannot simultaneously hold an admission under the General Merit category.
                 </div>
               </div>
@@ -149,10 +149,10 @@ const InternationalAdmissionsProcedure = () => {
               <h3 className="text-base md:text-lg font-bold text-[#0f2a44] flex items-center gap-2 border-b border-slate-100 pb-2">
                 <Info className="w-5 h-5 text-[#caa74d]" /> General Qualifications &amp; Equivalence
               </h3>
-              <p className="text-slate-700 text-xs md:text-sm leading-relaxed font-sans">
+              <p className="text-slate-700 text-sm md:text-sm leading-relaxed font-sans">
                 Applicants seeking admission to UG or PG programs must have obtained their qualifications from a recognized Board or University. For PG programs (MBA, MCA, M.Tech), candidates <strong className="text-[#0f2a44] font-bold">MUST</strong> possess a Bachelor's degree of a minimum 3 years' duration from a recognized University.
               </p>
-              <div className="bg-[#fffcf3] border border-amber-200 rounded-xl p-4 text-xs md:text-sm text-[#785310] leading-relaxed font-bold shadow-sm font-sans">
+              <div className="bg-[#fffcf3] border border-amber-200 rounded-xl p-4 text-sm md:text-sm text-[#785310] leading-relaxed font-bold shadow-sm font-sans">
                 Equivalency Mandate: Candidates with foreign qualifications must submit an equivalency certificate from the Association of Indian Universities (AIU), New Delhi.
               </div>
             </div>
@@ -160,7 +160,7 @@ const InternationalAdmissionsProcedure = () => {
             {/* UG Qualifications */}
             <div className="bg-white rounded-2xl border border-slate-200 shadow-md p-6 md:p-8 space-y-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-base md:text-lg font-bold text-[#0f2a44] border-b border-slate-100 pb-2">Undergraduate (UG) Admission Qualifications</h3>
-              <p className="text-slate-655 text-xs md:text-sm leading-relaxed font-sans">
+              <p className="text-slate-655 text-sm md:text-sm leading-relaxed font-sans">
                 The following Boards/Qualifications are officially recognized:
               </p>
 
@@ -174,7 +174,7 @@ const InternationalAdmissionsProcedure = () => {
                 ].map((qual, idx) => (
                   <div key={idx} className="border border-slate-200 p-4 bg-slate-50/50 rounded-xl flex items-start gap-3 hover:border-[#caa74d] transition-colors duration-200">
                     <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
-                    <span className="text-xs md:text-sm text-slate-700 leading-relaxed font-bold font-sans">{qual}</span>
+                    <span className="text-sm md:text-sm text-slate-700 leading-relaxed font-bold font-sans">{qual}</span>
                   </div>
                 ))}
               </div>
@@ -185,7 +185,7 @@ const InternationalAdmissionsProcedure = () => {
                   <h4 className="font-bold text-[#0f2a44] text-sm md:text-base flex items-center gap-2">
                     <Award className="w-5 h-5 text-[#caa74d]" /> British &amp; Cambridge GCE 'A' Levels
                   </h4>
-                  <div className="border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-xs md:text-sm font-bold text-slate-700 shadow-inner font-sans">
+                  <div className="border border-slate-200 rounded-xl p-4 bg-slate-50 space-y-2 text-sm md:text-sm font-bold text-slate-700 shadow-inner font-sans">
                     <div className="flex justify-between py-1.5 border-b border-slate-200">
                       <span>IGCSE / GCSE / GCE 'O' Levels</span>
                       <span className="text-[#0f2a44]">↓ 10th Grade Equivalent</span>
@@ -199,7 +199,7 @@ const InternationalAdmissionsProcedure = () => {
                       <span className="text-[#0f2a44]">↓ 12th Grade Equivalent</span>
                     </div>
                   </div>
-                  <p className="text-xs md:text-sm text-slate-550 leading-relaxed pl-1 font-sans">
+                  <p className="text-sm md:text-sm text-slate-550 leading-relaxed pl-1 font-sans">
                     <strong>Requirements:</strong> Candidates must have a minimum of 5 passes at IGCSE / GCSE / GCE 'O' Levels (including English), plus a minimum of 2–3 subjects at the GCE Advanced Level, depending on specific program prerequisites (e.g., 3 subjects including Physics and Math for B.Tech).
                   </p>
                 </div>
@@ -208,16 +208,16 @@ const InternationalAdmissionsProcedure = () => {
                   <h4 className="font-bold text-[#0f2a44] text-sm md:text-base flex items-center gap-2">
                     <Award className="w-5 h-5 text-[#caa74d]" /> International Baccalaureate (IB)
                   </h4>
-                  <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-bold font-sans">
+                  <p className="text-sm md:text-sm text-slate-600 leading-relaxed font-bold font-sans">
                     Candidates must take a minimum of 3 subjects at the Higher Level (HL) and 3 subjects at the Standard Level (SL).
                   </p>
-                  <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-xs md:text-sm text-slate-700 leading-relaxed space-y-2 shadow-inner font-bold font-sans">
+                  <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-sm md:text-sm text-slate-700 leading-relaxed space-y-2 shadow-inner font-bold font-sans">
                     <p className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#caa74d]" /> Must secure an overall minimum of <span className="text-[#0f2a44]">24 points</span></p>
                     <p className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#caa74d]" /> Minimum <span className="text-[#0f2a44]">12 points in HL</span></p>
                     <p className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#caa74d]" /> Minimum <span className="text-[#0f2a44]">12 points in SL</span> for Diploma holders</p>
                     <p className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#caa74d]" /> Minimum <span className="text-[#0f2a44]">3 points in each subject</span></p>
                   </div>
-                  <p className="text-xs md:text-sm text-slate-550 leading-relaxed pl-1 font-sans">
+                  <p className="text-sm md:text-sm text-slate-550 leading-relaxed pl-1 font-sans">
                     Note: Candidates must meet all program eligibility requirements laid down by statutory bodies.
                   </p>
                 </div>
@@ -247,13 +247,13 @@ const InternationalAdmissionsProcedure = () => {
                     </div>
                     <div className="space-y-1">
                       <h4 className="font-bold text-[#0f2a44] text-sm md:text-base leading-tight">{law.title}</h4>
-                      <p className="text-xs md:text-sm text-slate-500 leading-relaxed mt-1">{law.desc}</p>
+                      <p className="text-sm md:text-sm text-slate-500 leading-relaxed mt-1">{law.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-red-50 border border-red-150 rounded-xl p-4 text-xs md:text-sm text-red-800 leading-relaxed font-bold shadow-sm font-sans">
+              <div className="bg-red-50 border border-red-150 rounded-xl p-4 text-sm md:text-sm text-red-800 leading-relaxed font-bold shadow-sm font-sans">
                 <span className="font-bold flex items-center gap-1.5 mb-1.5 text-[#b31317]"><Scale className="w-4 h-4" /> Legal Adherence Reminder</span>
                 Students must obey the law of the land. If a passport is lost, a complaint must be registered immediately at the concerned police station. Overstaying beyond the permissible visa limit is strictly prohibited and subject to legal penalties under Indian immigration laws.
               </div>

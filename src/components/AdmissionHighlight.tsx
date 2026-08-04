@@ -1,4 +1,4 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, CalendarDays, ClipboardCheck, ShieldCheck, UserRoundPlus } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -30,11 +30,11 @@ const AdmissionHighlight = () => (
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
               <div>
-                <p className="inline-flex rounded-full border border-white/25 bg-[#2a4a6b] px-4 py-1 text-xs md:text-sm font-semibold tracking-wide text-white mb-3">
+                <p className="inline-flex rounded-full border border-white/25 bg-[#2a4a6b] px-4 py-1 text-sm md:text-sm font-semibold tracking-wide text-white mb-3">
                   Register for Admissions 2026
                 </p>
                 <h2 className="font-display text-2xl md:text-4xl font-bold text-white leading-tight">
-                  Admissions 2026 — MITS Deemed to be University
+                  Admissions 2026 � MITS Deemed to be University
                 </h2>
                 <p className="mt-2 text-sm md:text-base text-white/90 leading-relaxed max-w-3xl">
                   Join MITS through the official admission portal. Explore industry-aligned programs and complete your admission process for AY 2026-27.
@@ -48,7 +48,7 @@ const AdmissionHighlight = () => (
             </div>
 
             {/* Badges */}
-            <div className="flex flex-wrap gap-2 text-xs md:text-sm mb-8">
+            <div className="flex flex-wrap gap-2 text-sm md:text-sm mb-8">
               {["27+ Years of Legacy", "100% Placement Support", "50+ LPA Highest Package", "15+ Global Partners", "NAAC A+ Accredited", "UGC Recognized"].map(b => (
                 <span key={b} className="rounded-full border border-white/20 bg-[#2a4a6b] px-3 py-1 text-white">{b}</span>
               ))}
@@ -69,7 +69,7 @@ const AdmissionHighlight = () => (
                         <p className="text-[11px] font-semibold uppercase tracking-wide text-[#b30000]">Step {index + 1}</p>
                       </div>
                       <p className="text-sm font-semibold text-[#0f2a44]">{step.title}</p>
-                      <p className="text-xs text-slate-600 mt-1">{step.description}</p>
+                      <p className="text-sm text-slate-600 mt-1">{step.description}</p>
                     </div>
                   );
                 })}
