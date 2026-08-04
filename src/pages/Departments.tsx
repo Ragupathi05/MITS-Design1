@@ -352,42 +352,39 @@ const Departments = () => {
     return (
       <ScrollReveal delay={index * 0.05}>
         <div 
-          className="group relative h-[220px] md:h-[250px] rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-          style={{ boxShadow: '0 0 0 0 transparent' }}
+          className="group relative h-[220px] md:h-[250px] rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-[#0f2a44]"
         >
           {/* Background Image */}
           <img 
             src={imageUrl} 
             alt={dept.name}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 opacity-75 group-hover:opacity-40"
           />
           
-          {/* Dynamic Overlay with school color */}
-          <div className={`absolute inset-0 bg-gradient-to-t bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)] group-hover:opacity-90 transition-opacity duration-300`} />
+          {/* Dark Overlay for high contrast */}
+          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/80 transition-colors duration-300" />
 
-          {/* School color accent border on hover */}
-          <div className={`absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-transparent transition-all duration-300 bg-gradient-to-r ${schoolAccent} opacity-0 group-hover:opacity-100`} style={{ padding: '2px' }}>
-            <div className="w-full h-full rounded-xl bg-black/80" />
-          </div>
+          {/* Accent border on hover */}
+          <div className={`absolute inset-0 rounded-xl border-2 border-transparent transition-all duration-300 bg-gradient-to-r ${schoolAccent} opacity-0 group-hover:opacity-100 pointer-events-none`} />
 
-          {/* Department Name - Centered (default) */}
-          <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
-            <h3 className="font-display text-lg md:text-xl font-bold text-white text-center px-3 drop-shadow-lg">
+          {/* Department Name - Centered (default state) */}
+          <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300 p-4">
+            <h3 className="font-display text-lg md:text-xl font-bold text-white text-center drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
               {dept.name}
             </h3>
           </div>
 
-          {/* Hover Content - Shows on hover with school color */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-lg">
+          {/* Hover Content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-md">
               {dept.name}
             </h3>
-            <p className="text-white/80 text-sm text-center mb-3 line-clamp-2">
+            <p className="text-white/90 text-xs md:text-sm text-center mb-4 line-clamp-3">
               {dept.description}
             </p>
-            <Link to={`/department/${dept.key}`} className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity`}>
-                Explore Department
-              </Link>
+            <Link to={`/department/${dept.key}`} className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:opacity-90 transition-opacity shadow-md`}>
+              Explore Department
+            </Link>
           </div>
         </div>
       </ScrollReveal>
@@ -406,7 +403,7 @@ const Departments = () => {
               alt="MITS Departments & Schools" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
+            <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">
@@ -421,18 +418,18 @@ const Departments = () => {
             </div>
           </div>
 
-          {/* Breadcrumb — bottom-left */}
+          {/* Breadcrumb ï¿½ bottom-left */}
           <div className="absolute bottom-4 left-6">
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center gap-1.5 text-sm">
                 <li>
                   <Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
                 </li>
-                <li className="text-white/50">›</li>
+                <li className="text-white/50">ï¿½</li>
                 <li>
                   <Link to="/academics" className="text-white/70 hover:text-white transition-colors">Academics</Link>
                 </li>
-                <li className="text-white/50">›</li>
+                <li className="text-white/50">ï¿½</li>
                 <li className="text-white font-semibold">Departments</li>
               </ol>
             </nav>

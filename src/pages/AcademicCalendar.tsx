@@ -355,7 +355,7 @@ const AcademicCalendar = () => {
               alt="Academic Calendar"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0.4)_100%)]" />
+            <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
             <div className="absolute inset-0 opacity-20">
               <div className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-pulse" />
               <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
@@ -392,13 +392,13 @@ const AcademicCalendar = () => {
             </div>
           </div>
 
-          {/* Breadcrumb — absolute positioned bottom-left */}
+          {/* Breadcrumb ï¿½ absolute positioned bottom-left */}
           <div className="absolute bottom-6 left-6 z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-300">
               <a href="/" className="hover:text-white transition-colors">Home</a>
-              <span className="text-white/50">›</span>
+              <span className="text-white/50">ï¿½</span>
               <a href="/academics" className="hover:text-white transition-colors">Academics</a>
-              <span className="text-white/50">›</span>
+              <span className="text-white/50">ï¿½</span>
               <span className="text-white font-medium">Academic Calendar</span>
             </nav>
           </div>
