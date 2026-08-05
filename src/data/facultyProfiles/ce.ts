@@ -722,50 +722,6 @@ export const ceProfiles: Record<string, FacultyProfile> = {
                 }
             ]
     },
-
-    "Dr. Swapneel S. Jaiswal": {
-      name: "Dr. Swapneel S. Jaiswal",
-      designation: "Sr. Asst. Professor",
-      email: "jaiswalss@mits.ac.in",
-      officeAddress: "NPN204",
-      image: "https://mits.ac.in/public/uploads/faculty/f8dd76e2193a70ab509f589ac9f34df6.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            {"S.No": "1", "Course": "Ph.D.", "Specialization": "Urban and Rural Transportation", "Branch": "Civil", "College Name/University": "Indian Institute of Technology, Roorkee", "Year of Passing": "2020"},
-            {"S.No": "2", "Course": "M.Plan.", "Specialization": "Transportation Planning", "Branch": "Civil", "College Name/University": "School of Planning & Architecture (SPA), New Delhi", "Year of Passing": "2009"},
-            {"S.No": "3", "Course": "B.E.", "Specialization": "Civil Engineering", "Branch": "Civil", "College Name/University": "Dr. Babasaheb Ambedkar Marathwara University, Aurangabad", "Year of Passing": "2005"}
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Urban and Rural Mobility, Transportation planning and Engineering, Accessibility, Persons with Disability and Elderlies"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            {"Identifier": "Scopus", "Link": "https://www.scopus.com/authid/detail.uri?authorId=56201871600"},
-            {"Identifier": "Vidwan", "Link": ""},
-            {"Identifier": "Google scholar", "Link": ""},
-            {"Identifier": "h-Index (As per Scopus Data)", "Link": "1"}
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            {"S.No": "1", "Publication Affiliation": "Others", "Academic Year": "2014-15", "Author Position": "", "Details of Research Publication": "Universal Design for Indian Public Transportation Systems", "Indexing": "SCI", "Publication": "Conference Proceedings", "Journal Quartile": "Q3"}
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            {"S.No": "1", "Affiliation": "MITS", "Academic Year": "2023-24", "Client/Organization": "VERCOS, Lucknow", "Project": "Geo-Tech survey for Anantapur Multi-Modal Logistic Project at Anantapur, Andhra Pradesh", "Amount": "8,39,000"}
-          ]
-        }
-      ]
-    },
-
     "Dr. Vijayakumar Natesan": {
         "name": "Dr. Vijayakumar Natesan",
         "email": "drvijayakumarn@mits.ac.in",
@@ -1138,171 +1094,6 @@ export const ceProfiles: Record<string, FacultyProfile> = {
                 }
             ]
     },
-
-    "Dr. Nakkeeran G": {
-      name: "Dr. Nakkeeran G",
-      designation: "Asst. Professor",
-      email: "drnakkeerang@mits.ac.in",
-      officeAddress: "NPN204",
-      image: "https://mits.ac.in/public/uploads/faculty/Dr. Nakkeeran G.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            {"S.No": "1", "Course": "Ph.D.", "Specialization": "Construction Engineering and Management", "Branch": "Civil Engineering", "College Name/University": "SRM Institute of Science and Technology", "Year of Passing": "2024"},
-            {"S.No": "2", "Course": "M.E.", "Specialization": "Quality Engineering and Management", "Branch": "Civil Engineering", "College Name/University": "College of Engineering, Anna University", "Year of Passing": "2018"},
-            {"S.No": "3", "Course": "B.E.", "Specialization": "Civil Engineering", "Branch": "Civil Engineering", "College Name/University": "GKM College Of Engineering and Technology", "Year of Passing": "2015"}
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Product development, Carbon sequestration, Carbon Capture, 3D concretes, characterization studies, Building Physics, Optimization and prediction techniques, Machine Learning, Building Energy Analysis, Building Materials"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            {"Identifier": "Scopus", "Link": "https://www.scopus.com/authid/detail.uri?authorId=57392076900"},
-            {"Identifier": "Vidwan", "Link": ""},
-            {"Identifier": "Google scholar", "Link": "https://scholar.google.com/citations?hl=en&user=nXl3l3AAAAAJ&view_op=list_works&sortby=pubdate"},
-            {"Identifier": "h-Index (As per Scopus Data)", "Link": "13"}
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            {"S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Evaluation of net-zero materials in mortar bricks with predictive modelling using random forest and gradient boosting techniques", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "2", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Impact of biochar on strength, durability, and carbon sequestration in cement based materials", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "3", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Mechanical properties and machine learning analysis of concrete incorporating waste glass as coarse aggregate.", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "4", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Mechanical and thermal performance of bio-brick masonry with hydrated lime mortar at high temperature", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "5", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Adaptive neuro-fuzzy inference system optimization of natural rubber latex modified concrete’s mechanical Properties.", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "6", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "ANFIS modelling of the strength properties of natural rubber latex modified concrete.", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "7", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Artificial neural network modeling to predict compressive strength and static modulus for self-compacting concrete using different percentage of recycled concrete aggregate", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "8", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Experimental and ANN Analysis of Cold-Formed Steel Build-Up Columns with and without Intermediate Web Stiffeners under Axial Compression.", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "None"},
-            {"S.No": "9", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Mechanical and sustainability performance of concrete incorporated limestone powder, recycled ceramic aggregates, and coconut fibers.", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "10", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "Exploring the Application of Lean Tools for Sustainable Construction: A Strategy Based on Analytic Hierarchy Process Model.", "Indexing": "Scopus", "Publication": "Book Chapter", "Journal Quartile": "None"},
-            {"S.No": "11", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Machine learning-based destructive and non-destructive testing of paver block using fly ash and polyvinyl chloride into sustainable pedestrians.", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "12", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Optimization of waste plastic fiber concrete with recycled coarse aggregate using RSM and ANN.", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "13", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "2", "Details of Research Publication": "Evaluation of SCBA-replaced cement for carbon credits and reduction in CO2 emissions", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "14", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Thermal distribution of paver block with machine learning optimized design with alternative eco-friendly materials.", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "15", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Enhancing the mechanical properties’ performances coconut fiber and CDW composite in paver block: multiple AI techniques with a Performance analysis", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "16", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Evaluating the use of recycled fine aggregates in 3D printing: a systematic review.", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "17", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Innovative approaches to sustainable construction: a detailed study of rice husk ash as an eco-friendly substitute in cement production.", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "18", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Recycling glass waste in mortar: a sustainable approach to enhancing strength and density.", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "None"},
-            {"S.No": "19", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Optimization and prediction of paver block properties with ceramic waste as fine aggregate using response surface methodology.", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "20", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Recycling glass waste into concrete aggregates: enhancing mechanical properties and sustainability", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "None"},
-            {"S.No": "21", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Mechanical properties optimization and cost analysis of agricultural waste as an alternative in brick production.", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "22", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "2", "Details of Research Publication": "Investigating the potential of waste glass in paver block production using RSM", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "None"},
-            {"S.No": "23", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "3", "Details of Research Publication": "Soft computing techniques for predicting the compressive strength properties of fly ash geopolymer concrete using regression-based machine learning approaches.", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "None"},
-            {"S.No": "24", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "5", "Details of Research Publication": "Optimization of cassava peel ash concrete using central composite design method", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "25", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Modeling the influence of bacteria concentration on the mechanical properties of self-healing concrete (SHC) for sustainable bio-concrete structures.", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "26", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "7", "Details of Research Publication": "Prediction of steel plate-based damper for improving the behavior of concentrically braced frames based on RSM and ML approaches for sustainable structures", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "27", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Machine learning optimization of bio-sandcrete brick modelling using response surface methodology", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "28", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "4", "Details of Research Publication": "Review on electronic waste used as construction materials-a scientometric analysis", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q3"},
-            {"S.No": "29", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Soft Computing Techniques for Predicting the Properties of Raw Rice Husk Concrete Bricks Using Regression-Based Machine Learning Approaches", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "30", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "4", "Details of Research Publication": "Numerical Analysis and Parametric Study on Multiple Degrees-of-Freedom Frames", "Indexing": "ESCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "31", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "7", "Details of Research Publication": "Machine learning optimization and prediction of waste glass used as partial replacement of coarse aggregate in concrete.    Scopus    Article    Q3", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q3"},
-            {"S.No": "32", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Comparative Study on Net-zero Masonry Walls Made of Clay and Fly Ash Bricks and Grouts/Mortars/Stuccos with The Effect of Super Fine Fly Ash Blended Cement – Low Carbon Cement", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "33", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Predicting an Energy Use Intensity and Cost of Residential Energy Efficient Buildings Using Various Parameters: ANN Analysis", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q3"},
-            {"S.No": "34", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "2", "Details of Research Publication": "Synergistic effect of Alliance Contract and Lean Methodology on project performance measures in the construction industry: SEM Analysis.", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "35", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Machine learning application to predict the Mechanical properties of Glass Fiber mortar.", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "36", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Experimental Investigation And Optimization Of Lightweight Bricks Developed With Vermiculite.", "Indexing": "SCI", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "37", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Developing lightweight concrete bricks by replacing fine aggregate with vermiculite: a regression analysis prediction approach", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q3"},
-            {"S.No": "38", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "Prediction of cement mortar strength by replacement of hydrated lime using RSM and ANN", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q3"},
-            {"S.No": "39", "Publication Affiliation": "Others", "Academic Year": "2023", "Author Position": "1", "Details of Research Publication": "A Scientometric Analysis Review on Agricultural Wastes Used as Building Materials", "Indexing": "SCIE", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "40", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "2", "Details of Research Publication": "Evaluation and optimization of lean waste in construction industries", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q3"},
-            {"S.No": "41", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "1", "Details of Research Publication": "Optimization and Performance Analysis of Residential Building for Sustainable Energy Design Through BIM", "Indexing": "SCIE", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "42", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "3", "Details of Research Publication": "Evaluation of Failure Mode Analysis and Strength Behavior of Fly Ash Brick Masonry Prisms", "Indexing": "Scopus", "Publication": "Conference Proceedings", "Journal Quartile": "Q3"},
-            {"S.No": "43", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Scientometric Analysis of Building Energy Analysis in the Construction During 2005–2022Q3", "Indexing": "Scopus", "Publication": "Conference Proceedings", "Journal Quartile": "Q3"},
-            {"S.No": "44", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "An Ergonomic Risk Evaluation of the Construction Industry Based on Specific Factors", "Indexing": "Scopus", "Publication": "Conference Proceedings", "Journal Quartile": "Q3"},
-            {"S.No": "45", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Prediction Of Mechanical Properties of the Cement Brick with Bio-Aggregate.", "Indexing": "Scopus", "Publication": "Conference Proceedings", "Journal Quartile": "Q3"},
-            {"S.No": "46", "Publication Affiliation": "Others", "Academic Year": "2024", "Author Position": "1", "Details of Research Publication": "Identification Of the Lean Tools Used in The Tamil Nadu Construction Industry.", "Indexing": "Scopus", "Publication": "Conference Proceedings", "Journal Quartile": "Q3"}
-          ]
-        },
-        {
-          title: "Patents",
-          content: [
-            {"S.No": "1", "Affiliation": "Others", "Academic Year": "2023-24", "Application ID": "202441052543 A", "Title of the Patent": "Brick Composition and A Process for Its Preparation", "Status": "Published & Under Examination"},
-            {"S.No": "2", "Affiliation": "Others", "Academic Year": "2021-22", "Application ID": "202241057183 A", "Title of the Patent": "Machine Learning Techniques Integrated with Concrete for Analyzing and Predicting the Properties", "Status": "Published"},
-            {"S.No": "3", "Affiliation": "Others", "Academic Year": "2021-22", "Application ID": "202241070564 A", "Title of the Patent": "Development of Bio Bricks Using Agricultural Waste (Raw Groundnut Shell)", "Status": "Published"},
-            {"S.No": "4", "Affiliation": "Others", "Academic Year": "2022-23", "Application ID": "202341000247 A", "Title of the Patent": "Usage of Waste Printed Circuit Board (WPCB) As Fiber in Paver Block", "Status": "Published"},
-            {"S.No": "5", "Affiliation": "MITS", "Academic Year": "2024-25", "Application ID": "437599-001 Design Patent", "Title of the Patent": "ZIP LOCK INTERLOCKING BRICK", "Status": "Granted"},
-            {"S.No": "6", "Affiliation": "MITS", "Academic Year": "2024-25", "Application ID": "428578-001  Design Patent", "Title of the Patent": "INTERLOCKED HEXAGONAL HOLLOW BLOCK", "Status": "Granted"},
-            {"S.No": "7", "Affiliation": "MITS", "Academic Year": "2024-25", "Application ID": "428580-001 Design Patent", "Title of the Patent": "GRIP-TITE INTERLOCKING BRICKS", "Status": "Granted"},
-            {"S.No": "8", "Affiliation": "MITS", "Academic Year": "2023-24", "Application ID": "427507-001 Design Patent", "Title of the Patent": "C-SHAPE INTERLOCKING PAVER BLOCK", "Status": "Granted"},
-            {"S.No": "9", "Affiliation": "MITS", "Academic Year": "2023-24", "Application ID": "429097-001 Design Patent", "Title of the Patent": "H-SHAPED INTERLOCKING PAVER BLOCK", "Status": "Granted"},
-            {"S.No": "10", "Affiliation": "MITS", "Academic Year": "2023-24", "Application ID": "427544-001 Design Patent", "Title of the Patent": "HEAD-FOOT INTERLOCKING PAVER BLOCK", "Status": "Granted"},
-            {"S.No": "11", "Affiliation": "Others", "Academic Year": "2021-22", "Application ID": "379138-001 Design Patent", "Title of the Patent": "MULTIPURPOSE CONCRETE BLOCK", "Status": "Granted"},
-            {"S.No": "12", "Affiliation": "Others", "Academic Year": "2021-22", "Application ID": "378580-001 Design Patent", "Title of the Patent": "HEXAGONAL HOLLOW BRICKS", "Status": "Granted"}
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            {"S.No": "1", "Affiliation": "MITS", "Academic Year": "2024-25", "Client/Organization": "Irrigation Department", "Project": "Mix Design and Concrete Testing", "Amount": "50,000"}
-          ]
-        },
-        {
-          title: "Mentor and Director",
-          content: [
-            "1.GEIA ENTERPRISES PRIVATE LIMITED,AP,India",
-            "2.EZZO MANUFACTURER PRIVATE LIMITED,AP,India",
-            "3.GUIDEMENEXT PRIVATE LIMITED,AP,India"
-          ]
-        }
-      ]
-    },
-
-    "Dr. Nunna Tagore Sai Priya": {
-      name: "Dr. Nunna Tagore Sai Priya",
-      designation: "Asst. Professor",
-      email: "drsaipriyan@mits.ac.in",
-      officeAddress: "NPN204",
-      image: "https://mits.ac.in/public/uploads/faculty/nunnapriya.png",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            {"S.No": "1", "Course": "Ph.D.", "Specialization": "Community and Regional Planning", "Branch": "Infrastructure Design and Management", "College Name/University": "IIT Kharagpur", "Year of Passing": "2024"},
-            {"S.No": "2", "Course": "MPlan", "Specialization": "Urban Planning", "Branch": "Architecture and Planning", "College Name/University": "NIT Calicut", "Year of Passing": "2017"},
-            {"S.No": "3", "Course": "B.Tech.", "Specialization": "Civil Engineering", "Branch": "Civil Engineering", "College Name/University": "Bapatla Engineering College, Acharya Nagarjuna University", "Year of Passing": "2015"}
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Land Use Dynamics, Spatial Planning, Sustainable Built-environment"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            {"Identifier": "Scopus", "Link": "https://www.scopus.com/authid/detail.uri?authorId=57209978292"},
-            {"Identifier": "Vidwan", "Link": "https://vidwan.inflibnet.ac.in/profile/623119/NjIzMTE5"},
-            {"Identifier": "Google scholar", "Link": "https://scholar.google.com/citations?user=hOAk1-kAAAAJ&hl=en"},
-            {"Identifier": "h-Index (As per Scopus Data)", "Link": "2"}
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            {"S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2025", "Author Position": "3", "Details of Research Publication": "A Scalable Machine Learning Framework for Hydrological Water Quality Monitoring Using Physicochemical and Microbial Parameters", "Indexing": "SCIE, SCOPUS", "Publication": "Article", "Journal Quartile": "Q1"},
-            {"S.No": "2", "Publication Affiliation": "Others", "Academic Year": "2025", "Author Position": "1", "Details of Research Publication": "Urban Growth Patterns and Spatial Sustainability in Coastal Cities: The Case of Visakhapatnam in India", "Indexing": "SCOPUS", "Publication": "Book Chapter", "Journal Quartile": ""},
-            {"S.No": "3", "Publication Affiliation": "Others", "Academic Year": "2022", "Author Position": "1", "Details of Research Publication": "Understanding the impact of tourism on spatial growth for sustainable development of tourist destinations through the measure of land use efficiency", "Indexing": "ESCI, SCOPUS", "Publication": "Article", "Journal Quartile": "Q2"},
-            {"S.No": "4", "Publication Affiliation": "Others", "Academic Year": "2019", "Author Position": "1", "Details of Research Publication": "Impact of tourism on spatial growth of the destination", "Indexing": "SCOPUS", "Publication": "Conference Proceedings", "Journal Quartile": ""}
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Associate member of the Indian Institute of Town Planners (ITPI) since 2021.",
-            "Scientist member in the Global Land Programme since 2024",
-            "Received Institute Travel grants to present research work at two international conferences in 2019, 2022",
-            "Received Student Travel grant at AGU Fall meeting 2022, held in Chicago",
-            "Received MHRD Fellowship during M.Plan (2015 – 2017) and Ph.D (2017 – 2023)",
-            "Qualified in GATE in 2015 with AIR 6262"
-          ]
-        }
-      ]
-    },
-
     "Dr. Imran Kuttagola": {
         "name": "Dr. Imran Kuttagola",
         "email": "imrankuttagola@mits.ac.in",
@@ -1590,63 +1381,6 @@ export const ceProfiles: Record<string, FacultyProfile> = {
                 }
             ]
     },
-
-    "Mr. B. Veeresh": {
-      name: "Mr. B. Veeresh",
-      designation: "Asst. Professor",
-      email: "veereshb@mits.ac.in",
-      officeAddress: "NPN204",
-      image: "https://mits.ac.in/public/uploads/faculty/Mr.B. Veeresh.jpg",
-      sections: [
-        {
-          title: "Details of Educational Qualification",
-          content: [
-            {"S.No": "1", "Course": "Ph.D.", "Specialization": "Environmental Engineering", "Branch": "Civil Engineering", "College Name/University": "JNTUA, University", "Year of Passing": "Pursuing"},
-            {"S.No": "2", "Course": "M.Tech.", "Specialization": "Environmental Engineering", "Branch": "Civil Engineering", "College Name/University": "JNTUA, University", "Year of Passing": "2022"},
-            {"S.No": "3", "Course": "B.Tech.", "Specialization": "Civil Engineering", "Branch": "Civil Engineering", "College Name/University": "N.B.K.R Institute of Science and Technology, JNTUA, Anantapuramu", "Year of Passing": "2018"}
-          ]
-        },
-        {
-          title: "Research Areas",
-          content: "Water Quality, Water & Wastewater Treatment, Solid Waste Management and GeoEnvironment"
-        },
-        {
-          title: "Research Identifiers",
-          content: [
-            {"Identifier": "Scopus", "Link": "https://www.scopus.com/authid/detail.uri?authorId=59561286000"},
-            {"Identifier": "Vidwan", "Link": "https://mits.irins.org/profile/460383"},
-            {"Identifier": "Google scholar", "Link": ""},
-            {"Identifier": "h-Index (As per Scopus Data)", "Link": "1"}
-          ]
-        },
-        {
-          title: "Publication Details",
-          content: [
-            {"S.No": "1", "Publication Affiliation": "MITS", "Academic Year": "2024", "Author Position": "4", "Details of Research Publication": "Optimizing Agricultural Waste By-Products: A Machine Learning Approach for Sustainable Construction Practices", "Indexing": "Scopus", "Publication": "Article", "Journal Quartile": "Q1"}
-          ]
-        },
-        {
-          title: "Patents",
-          content: [
-            {"S.No": "1", "Affiliation": "MITS", "Academic Year": "2024", "Application ID": "431535-001", "Title of the Patent": "Soil Core Sample Collector", "Status": "Published"}
-          ]
-        },
-        {
-          title: "Consultancy",
-          content: [
-            {"S.No": "1", "Affiliation": "MITS", "Academic Year": "2023", "Client/Organization": "Private Organisation", "Project": "", "Amount": "10,000"},
-            {"S.No": "2", "Affiliation": "Mix MITS", "Academic Year": "2024", "Client/Organization": "Private Organisation", "Project": "", "Amount": "10,000"}
-          ]
-        },
-        {
-          title: "Awards/Achievements",
-          content: [
-            "Received a Silver Medal for being a topper in Geotechnical Engineering Laboratory (NPTEL), during July 1–Aug. 1, 2024."
-          ]
-        }
-      ]
-    },
-
     "Mr. P. Sabarishkumar": {
         "name": "Mr. P. Sabarishkumar",
         "designation": "Asst. Professor",
@@ -1722,5 +1456,52 @@ export const ceProfiles: Record<string, FacultyProfile> = {
                     ]
                 }
             ]
+    },
+    "Dr. Ashok Julaganti": {
+        "name": "Dr. Ashok Julaganti",
+        "email": "drashokj@mits.ac.in",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Ashok.JPG",
+        "designation": "Sr. Asst. Professor",
+        "sections": [
+            {
+                "title": "Details of Educational Qualification",
+                "content": [
+                    {
+                        "Course": "Ph.D.",
+                        "Specialization": "Transportation Systems Engineering",
+                        "Branch": "Civil Engineering",
+                        "College Name/University": "Indian Institute of Technology, Guwahati",
+                        "Year of Passing": "2017"
+                    },
+                    {
+                        "Course": "M.Tech.",
+                        "Specialization": "Transportation Systems Engineering",
+                        "Branch": "Civil Engineering",
+                        "College Name/University": "Indian Institute of Technology, Guwahati",
+                        "Year of Passing": "2011"
+                    },
+                    {
+                        "Course": "B.Tech.",
+                        "Specialization": "Civil Engineering",
+                        "Branch": "Civil Engineering",
+                        "College Name/University": "Bapatla Engineering College, Bapatla",
+                        "Year of Passing": "2009"
+                    }
+                ]
+            },
+            {
+                "title": "Research Areas",
+                "content": "Transportation Systems Engineering"
+            },
+            {
+                "title": "Research Identifiers",
+                "content": [
+                    "Scopus : https://www.scopus.com/authid/detail.uri?authorId=57194767854",
+                    "Google scholar : https://scholar.google.com/citations?user=XVsCt1kAAAAJ&hl=en",
+                    "h-Index (As per Scopus Data) : 5"
+                ]
+            }
+        ]
     }
+
 };

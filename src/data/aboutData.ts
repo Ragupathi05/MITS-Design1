@@ -878,16 +878,7 @@ export interface DeanEntry {
 }
 
 export const deansList: DeanEntry[] = [
-  {
-    name: "Dr. Rama S Komaragiri",
-    designation: "Professor & Dean",
-    school: "Academics",
-    qualification: "Ph.D. (Technical University of Darmstadt, Germany)",
-    image: "public/uploads/faculty/rama.jpg",
-    deptKey: "ece",
-    facultyName: "Dr. Rama S Komaragiri",
-    externalProfile: "https://mits.ac.in/facultyprofile/735",
-  },
+  
   {
     name: "Dr. Dipankar Roy",
     designation: "Professor & Dean",
