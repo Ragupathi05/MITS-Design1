@@ -792,14 +792,13 @@ const PartnerLogoTile = ({ p }: { p: (typeof partners)[0] }) => {
 const MouPartnerOval = ({ p }: { p: (typeof partners)[0] }) => (
   <Link
     to={`/international-relations/mou/${slugify(p.name)}`}
-    className="ir-lift-card group flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white/90 px-5 py-4 h-full min-h-[72px] hover:border-[#caa74d] hover:bg-[#0f2a44] hover:text-white transition-all shadow-sm backdrop-blur-sm"
+    style={{ borderRadius: '50% / 50%', padding: '22px 48px', border: '2.5px solid rgba(202,167,77,0.65)' }}
+    className="ir-lift-card group w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#fdf6e3] via-[#fef9ee] to-[#fdf0c8] hover:from-[#0f2a44] hover:via-[#0f2a44] hover:to-[#143557] transition-all duration-300 shadow-md hover:shadow-xl text-center"
   >
-    <span className="text-sm font-bold text-[#0f2a44] group-hover:text-white leading-snug flex-1" style={{ fontFamily: "var(--font-display)" }}>
+    <span className="text-sm font-bold text-[#5a3e00] group-hover:text-white leading-snug text-center" style={{ fontFamily: 'var(--font-display)' }}>
       {p.name}
     </span>
-    <span className="shrink-0 inline-flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-primary group-hover:text-[#caa74d] whitespace-nowrap">
-      Read more <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" />
-    </span>
+    <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[#8a6d1f] group-hover:text-[#caa74d] transition-transform duration-300 group-hover:translate-x-0.5" />
   </Link>
 );
 
@@ -926,7 +925,7 @@ const MoUSection = () => {
           {/* Oval pills — 3 per row, all partners in same continent order */}
           <div className="relative mt-8 border-t border-slate-200/80 pt-6">
             <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground mb-4">Click a university to view its full profile</p>
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {sortedFiltered.map((p) => (
                 <motion.div
                   key={p.name}
@@ -934,7 +933,7 @@ const MoUSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-20px" }}
                   transition={{ duration: 0.3 }}
-                  className="h-full"
+                  className="flex"
                 >
                   <MouPartnerOval p={p} />
                 </motion.div>

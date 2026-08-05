@@ -286,16 +286,14 @@ const InternationalRelationsPartner = () => {
               )}
 
               {partner.strengths && partner.strengths.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-2 mt-6">
+                <ul className="mt-6 text-left space-y-2">
                   {partner.strengths.map((s) => (
-                    <span
-                      key={s}
-                      className="px-3 py-1.5 rounded-full text-sm font-semibold bg-slate-50 border border-border text-secondary"
-                    >
+                    <li key={s} className="flex items-start gap-2.5 text-sm text-secondary/90">
+                      <span className="mt-1.5 h-2 w-2 rounded-full bg-[#caa74d] shrink-0" />
                       {s}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               )}
 
               {bodyHighlight && (
