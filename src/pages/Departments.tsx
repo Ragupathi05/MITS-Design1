@@ -246,7 +246,7 @@ const schools = [
     departments: [
       {
         key: "aiml",
-        name: "Artificial Intelligence and Machine Learning",
+        name: "Artificial Intelligence and\nMachine Learning",
         shortName: "AI and ML",
         established: "2020",
         description: "Cutting-edge curriculum in deep learning, NLP, and computer vision",
