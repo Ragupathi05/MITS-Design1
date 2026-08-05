@@ -367,7 +367,7 @@ const Departments = () => {
             />
             
             {/* Dark Overlay for high contrast */}
-            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/80 transition-colors duration-300" />
+            <div className="absolute inset-0 bg-black/25 group-hover:bg-black/40 transition-colors duration-300" />
 
             {/* Department Name - Centered (default state) */}
             <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300 p-4">
@@ -406,7 +406,7 @@ const Departments = () => {
               alt="MITS Departments & Schools" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
+            <div className="absolute inset-0 bg-black/25 bg-gradient-to-b from-black/15 via-black/10 to-black/30" />
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">

@@ -355,7 +355,7 @@ const AcademicCalendar = () => {
               alt="Academic Calendar"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
+            <div className="absolute inset-0 bg-black/25 bg-gradient-to-b from-black/15 via-black/10 to-black/30" />
             <div className="absolute inset-0 opacity-20">
               <div className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-pulse" />
               <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />

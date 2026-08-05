@@ -57,7 +57,7 @@ const Academics = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
+          <div className="absolute inset-0 bg-black/25 bg-gradient-to-b from-black/15 via-black/10 to-black/30" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Academics</p>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">

@@ -228,7 +228,7 @@ const CinematicHero = () => {
       />
 
       {/* Lightened Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
+      <div className="absolute inset-0 bg-black/25 bg-gradient-to-b from-black/15 via-black/10 to-black/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20" />
 
       {/* Animated Particles/Shimmer Effect */}
