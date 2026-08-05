@@ -4290,7 +4290,7 @@ export const meProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "drarunkumard@mits.ac.in",
       officeAddress: "East Block",
-      image: "https://mits.ac.in/public/uploads/faculty/Thota S S Bhaskara Rao.JPG",
+      image: "https://mits.ac.in/public/uploads/faculty/Dr. G. Arun Kumar.JPG",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -6610,7 +6610,7 @@ export const meProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "manojkumars@mits.ac.in",
       officeAddress: "East Block",
-      image: "https://mits.ac.in/public/uploads/faculty/Manoj Kumar.JPG",
+      image: "https://mits.ac.in/public/uploads/faculty/Mr. Manoj Kumar K.JPG",
       sections: [
         {
           title: "Details of Educational Qualification",

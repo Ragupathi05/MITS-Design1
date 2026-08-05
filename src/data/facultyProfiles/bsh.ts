@@ -38,7 +38,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
         "designation": "Assoc. Professor &amp; Head (I/c)",
         "email": "drsudhakarb@mits.ac.in",
         "officeAddress": "BSH Block",
-        "image": "../public/uploads/faculty/Dr. Sudhakar Beedam.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Sudhakar Beedam.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -125,7 +125,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. S. Shanmuga Priya": {
         "name": "Dr. S. Shanmuga Priya",
         "email": "shanmugapriyas@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. S. Shanmuga Priya.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. S. Shanmuga Priya.JPG",
         "designation": "Assoc. Professor",
         "sections": [
                 {
@@ -524,7 +524,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
         "designation": "Assoc. Professor",
         "email": "drbishnupm@mits.ac.in",
         "officeAddress": "BSH Block",
-        "image": "../public/uploads/faculty/Dr. Bishnu Paramguru Mahapatra.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Bishnu Paramguru Mahapatra.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -953,7 +953,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. B. Anitha": {
         "name": "Dr. B. Anitha",
         "email": "dranithab@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. B. Anitha.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. B. Anitha.JPG",
         "designation": "Sr. Asst. Professor",
         "sections": [
                 {
@@ -1292,7 +1292,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. K. Lakshmi Devi": {
         "name": "Dr. K. Lakshmi Devi",
         "email": "drlakshmidevik@mits.ac.in",
-        "image": "../public/uploads/faculty/lakshmidevi.png",
+        "image": "https://mits.ac.in/public/uploads/faculty/lakshmidevi.png",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -1425,7 +1425,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "drhemalathag@mits.ac.in",
       officeAddress: "BSH Block",
-      image: "https://mits.ac.in/public/uploads/faculty/DSC_7346.JPG",
+      image: "https://mits.ac.in/public/uploads/faculty/Hemalatha.JPG",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -1523,7 +1523,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "sriganeshr@mits.ac.in",
         "officeAddress": "BSH Block",
-        "image": "../public/uploads/faculty/Dr. R. Sriganesh.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. R. Sriganesh.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -1728,7 +1728,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. M. Parvathi": {
         "name": "Dr. M. Parvathi",
         "email": "parvathim@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. M. Parvathi.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. M. Parvathi.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -2215,7 +2215,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. R. Saravana": {
         "name": "Dr. R. Saravana",
         "email": "drsaravanar@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. R. Saravana.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. R. Saravana.JPG",
         "designation": "Assoc. Professor",
         "sections": [
                 {
@@ -2713,7 +2713,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
         "designation": "Assoc. Professor",
         "email": "drsudhakarreddym@mits.ac.in",
         "officeAddress": "BSH Block",
-        "image": "../public/uploads/faculty/sudhakar.jpg",
+        "image": "https://mits.ac.in/public/uploads/faculty/sudhakar.jpg",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -2817,7 +2817,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. T. Chalapathi": {
         "name": "Dr. T. Chalapathi",
         "email": "drchalapathit@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. T. Chalapathi.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. T. Chalapathi.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -3040,7 +3040,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. A. Subba Rao": {
         "name": "Dr. A. Subba Rao",
         "email": "subbaraoa@mits.ac.in",
-        "image": "../public/uploads/faculty/6d4daba8d4b2624f111fde2850c07c8f.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/6d4daba8d4b2624f111fde2850c07c8f.JPG",
         "designation": "Asst. Professor &amp; Assistant Dean",
         "sections": [
                 {
@@ -3560,7 +3560,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Kata Sreelakshmi": {
         "name": "Dr. Kata Sreelakshmi",
         "email": "drsreelakshmik@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. Kata Sreelakshmi.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Kata Sreelakshmi.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -3982,7 +3982,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Bibin Mathew": {
         "name": "Dr. Bibin Mathew",
         "email": "drbibinmathew@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. Bibin Mathew.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Bibin Mathew.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -4332,7 +4332,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "drbhanupriyack@mits.ac.in",
         "officeAddress": "BSH Block",
-        "image": "../public/uploads/faculty/Dr. Bhanupriya C. K.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Bhanupriya C. K.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -4462,7 +4462,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "drsangeetad@mits.ac.in",
         "officeAddress": "BSH Block",
-        "image": "../public/uploads/faculty/Dr. Sangeeta Dhawan.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Sangeeta Dhawan.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -4647,7 +4647,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. M. Chandra Sekhar": {
         "name": "Dr. M. Chandra Sekhar",
         "email": "drchandrasekharm@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. M. Chandra Sekhar.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. M. Chandra Sekhar.JPG",
         "designation": "Assoc. Professor &amp; Head",
         "sections": [
                 {
@@ -5310,7 +5310,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. N. Nanda Kumar Reddy": {
         "name": "Dr. N. Nanda Kumar Reddy",
         "email": "nandakumarreddy@mits.ac.in",
-        "image": "../public/uploads/faculty/nanda.jpg",
+        "image": "https://mits.ac.in/public/uploads/faculty/nanda.jpg",
         "designation": "Assoc. Professor &amp; Associate Dean",
         "sections": [
                 {
@@ -6064,7 +6064,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Sanjaya Brahma": {
         "name": "Dr. Sanjaya Brahma",
         "email": "drsanjayabrahma@mits.ac.in",
-        "image": "../public/uploads/faculty/Sanjaya-Brahma.jpg",
+        "image": "https://mits.ac.in/public/uploads/faculty/Sanjaya-Brahma.jpg",
         "designation": "Research Asst. Professor",
         "sections": [
                 {
@@ -7075,7 +7075,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. N. Reddeppa": {
         "name": "Dr. N. Reddeppa",
         "email": "drreddeppan@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. N. Reddeppa.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. N. Reddeppa.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -7483,7 +7483,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Jagadeesh Babu Bellam": {
         "name": "Dr. Jagadeesh Babu Bellam",
         "email": "jagadeeshbabub@mits.ac.in",
-        "image": "../public/uploads/faculty/fbbd46bc1db8ec973c35f6bca55a3663.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/fbbd46bc1db8ec973c35f6bca55a3663.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -7843,7 +7843,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Sunku Sreedhar": {
         "name": "Dr. Sunku Sreedhar",
         "email": "drsreedhars@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. Sunku Sreedhar.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Sunku Sreedhar.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -8268,7 +8268,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Rajesh Dagupati": {
         "name": "Dr. Rajesh Dagupati",
         "email": "drrajeshd@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. Rajesh Dagupati.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Rajesh Dagupati.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -8976,7 +8976,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Charan Kuchi": {
         "name": "Dr. Charan Kuchi",
         "email": "drcharank@mits.ac.in",
-        "image": "../public/uploads/faculty/Charan Kuchi.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Charan Kuchi.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -9325,7 +9325,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. K. Chandrakanta": {
         "name": "Dr. K. Chandrakanta",
         "email": "chandrakantak@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. K. Chandrakanta.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. K. Chandrakanta.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -9744,7 +9744,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Alok Barik": {
         "name": "Dr. Alok Barik",
         "email": "dralokbarik@mits.ac.in",
-        "image": "../public/uploads/faculty/Dr. Alok Barik.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Alok Barik.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -10410,7 +10410,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. P. Amaladass": {
         "name": "Dr. P. Amaladass",
         "email": "amaladass@mits.ac.in",
-        "image": "../public/uploads/faculty/Amaladass.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Amaladass.JPG",
         "designation": "Professor",
         "sections": [
                 {
@@ -10917,7 +10917,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Renjith Bhaskaran": {
         "name": "Dr. Renjith Bhaskaran",
         "email": "drrenjithb@mits.ac.in",
-        "image": "../public/uploads/faculty/renjithbhaskar.png",
+        "image": "https://mits.ac.in/public/uploads/faculty/renjithbhaskar.png",
         "designation": "Asst. Professor &amp; Head",
         "sections": [
                 {
@@ -11194,7 +11194,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "drbalajim@mits.ac.in",
       officeAddress: "BSH Block",
-      image: "https://mits.ac.in/public/uploads/faculty/1c33f336b2573fe1357aa193e4999386.JPG",
+      image: "https://mits.ac.in/public/uploads/faculty/Mr. T. Balaji.JPG",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -11240,7 +11240,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. K. V. Vivekananda": {
         "name": "Dr. K. V. Vivekananda",
         "email": "drvivekanandakv@mits.ac.in",
-        "image": "../public/uploads/faculty/90949dbc63eb24468711fe5cf72dadcb.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/90949dbc63eb24468711fe5cf72dadcb.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -11468,7 +11468,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Rajaram. R": {
         "name": "Dr. Rajaram. R",
         "email": "drrajaramr@mits.ac.in",
-        "image": "../public/uploads/faculty/Rajaram.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Rajaram.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -12026,7 +12026,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. K. Imran": {
         "name": "Dr. K. Imran",
         "email": "imrank@mits.ac.in",
-        "image": "../public/uploads/faculty/Imran.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Imran.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -12215,7 +12215,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. C. Venkateswara Raju": {
         "name": "Dr. C. Venkateswara Raju",
         "email": "drvenkateswararajuc@mits.ac.in",
-        "image": "../public/uploads/faculty/raju.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/raju.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -12693,7 +12693,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. Ugrabadi Sahoo": {
         "name": "Dr. Ugrabadi Sahoo",
         "email": "ugrabadisahoo@mits.ac.in",
-        "image": "../public/uploads/faculty/Ugrabadi Sahoo.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Ugrabadi Sahoo.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -13062,7 +13062,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. N. Venkata Ramana": {
         "name": "Dr. N. Venkata Ramana",
         "email": "drvenkataramanan@mits.ac.in",
-        "image": "../public/uploads/faculty/Humanities.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Humanities.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -13260,7 +13260,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Mr. T. Gangadharam": {
         "name": "Mr. T. Gangadharam",
         "email": "gangadharamt@mits.ac.in",
-        "image": "../public/uploads/faculty/Mr. T. Gangadharam.png",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mr. T. Gangadharam.png",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -13549,7 +13549,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
     "Dr. C. Damodharan": {
         "name": "Dr. C. Damodharan",
         "email": "drdamodharanc@mits.ac.in",
-        "image": "../public/uploads/faculty/damodaran.jpeg",
+        "image": "https://mits.ac.in/public/uploads/faculty/damodaran.jpeg",
         "designation": "Physical Director",
         "sections": [
                 {

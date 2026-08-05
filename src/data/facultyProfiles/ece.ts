@@ -186,7 +186,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. P. Ramanathan": {
         "name": "Dr. P. Ramanathan",
         "email": "drramanathanp@mits.ac.in",
-        "image": "public/uploads/faculty/a744ebed6a293a48de32e80ba66680c8.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/a744ebed6a293a48de32e80ba66680c8.JPG",
         "designation": "Professor &amp; Principal",
         "sections": [
                 {
@@ -485,7 +485,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. Sanjay Kumar C. Gowre": {
         "name": "Dr. Sanjay Kumar C. Gowre",
         "email": "drsanjaykumarcg@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. Sanjay Kumar C. Gowre.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Sanjay Kumar C. Gowre.JPG",
         "designation": "Professor",
         "sections": [
                 {
@@ -1194,7 +1194,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Assoc. Professor",
         "email": "drmurlimanohar@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "public/uploads/faculty/Dr. Murali Manohar.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Murali Manohar.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -1386,7 +1386,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. V. Jayaprakasan": {
         "name": "Dr. V. Jayaprakasan",
         "email": "drjayaprakasanv@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. Jayaprakasan.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Jayaprakasan.JPG",
         "designation": "Assoc. Professor",
         "sections": [
                 {
@@ -1587,7 +1587,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. K. Sathesh": {
         "name": "Dr. K. Sathesh",
         "email": "drsatheshk@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. K. Sathesh.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. K. Sathesh.JPG",
         "designation": "Assoc. Professor",
         "sections": [
                 {
@@ -1852,7 +1852,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. Maneesh Kumar Singh": {
         "name": "Dr. Maneesh Kumar Singh",
         "email": "drmaneeshs@mits.ac.in",
-        "image": "public/uploads/faculty/Dr_Maneesh_Kumar_Singh.png",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr_Maneesh_Kumar_Singh.png",
         "designation": "Assoc. Professor &amp; Assistant Dean",
         "sections": [
                 {
@@ -2253,7 +2253,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. R. Ravindraiah": {
         "name": "Dr. R. Ravindraiah",
         "email": "drravindraiahr@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. R. Ravindraiah.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. R. Ravindraiah.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -2568,7 +2568,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. G. Reddy Hemantha": {
         "name": "Dr. G. Reddy Hemantha",
         "email": "drhemanthagr@mits.ac.in",
-        "image": "public/uploads/faculty/Reddy Hemantha(1).JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Reddy Hemantha(1).JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -2847,7 +2847,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. Janmoni Borah": {
         "name": "Dr. Janmoni Borah",
         "email": "drjanmonib@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. Janmoni Borah.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Janmoni Borah.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -3301,7 +3301,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "drnurulislamsk@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "public/uploads/faculty/Dr. Nurul Islam.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Nurul Islam.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -3786,7 +3786,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. Smriti Baruah": {
         "name": "Dr. Smriti Baruah",
         "email": "smritib@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. Smriti Baruah.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Smriti Baruah.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -4209,7 +4209,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "saikumarv@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "public/uploads/faculty/Sai%20Sir.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Sai Sir.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -4426,7 +4426,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "nagaswethag@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "public/uploads/faculty/nagaswetha.png",
+        "image": "https://mits.ac.in/public/uploads/faculty/nagaswetha.png",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -4592,7 +4592,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. Simadri Badatya": {
         "name": "Dr. Simadri Badatya",
         "email": "drsimadrib@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. Simadri Badatya.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Simadri Badatya.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -4825,7 +4825,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. Anurag Kumar Pandey": {
         "name": "Dr. Anurag Kumar Pandey",
         "email": "dranuragkumarp@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. Anurag Kumar Pandey.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Anurag Kumar Pandey.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -5203,7 +5203,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. G. Subbarao": {
         "name": "Dr. G. Subbarao",
         "email": "subbaraog@mits.ac.in",
-        "image": "public/uploads/faculty/Dr. Subbarao.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Subbarao.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -5434,7 +5434,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Mr. T. Manivannan": {
         "name": "Mr. T. Manivannan",
         "email": "manivannant@mits.ac.in",
-        "image": "public/uploads/faculty/Mr. T. Manivannan.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mr. T. Manivannan.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -5588,7 +5588,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Mr. Asif Moiz": {
         "name": "Mr. Asif Moiz",
         "email": "asifmoiz@mits.ac.in",
-        "image": "public/uploads/faculty/Mr. Asif Moiz.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mr. Asif Moiz.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -5709,7 +5709,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "mustafav@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "public/uploads/faculty/V. Mustafa.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/V. Mustafa.JPG",
         "sections": [
                 {
                     "title": "My Publications",
@@ -5759,7 +5759,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "charang@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "public/uploads/faculty/Mr. G. Charan Kumar.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mr. G. Charan Kumar.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -6063,7 +6063,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Mrs. Kowsalya P": {
         "name": "Mrs. Kowsalya P",
         "email": "kowsalyap@mits.ac.in",
-        "image": "public/uploads/faculty/Mrs. Kowsalya P.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mrs. Kowsalya P.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -6206,7 +6206,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "susmithap@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "public/uploads/faculty/Mrs. P. Susmitha.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mrs. P. Susmitha.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -6266,7 +6266,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Mr. Shaik Tipu Rahaman": {
         "name": "Mr. Shaik Tipu Rahaman",
         "email": "tipurahamans@mits.ac.in",
-        "image": "public/uploads/faculty/Mr. Shaik Tipu Rahaman.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mr. Shaik Tipu Rahaman.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -6379,7 +6379,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Mr. B. Subbarayudu": {
         "name": "Mr. B. Subbarayudu",
         "email": "subbarayudub@mits.ac.in",
-        "image": "public/uploads/faculty/Mr.%20B.%20Subbarayudu%20-%20ECE.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mr. B. Subbarayudu - ECE.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
@@ -6484,7 +6484,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Mrs. V. Sai Anusha": {
         "name": "Mrs. V. Sai Anusha",
         "email": "saianushav@mits.ac.in",
-        "image": "public/uploads/faculty/V. Sai Anusha.JPG",
+        "image": "https://mits.ac.in/public/uploads/faculty/V. Sai Anusha.JPG",
         "designation": "Asst. Professor",
         "sections": [
                 {
