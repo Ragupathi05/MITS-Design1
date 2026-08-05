@@ -185,7 +185,7 @@ const DepartmentPage = () => {
 
       <div className="relative h-[240px] sm:h-[300px] md:h-[380px] overflow-hidden">
         <img src={dept.bannerImage} alt={dept.name} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/25 bg-gradient-to-b from-black/15 via-black/10 to-black/30" />
+        <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
         <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">
           <div>
             <motion.h1

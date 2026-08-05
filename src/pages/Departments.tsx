@@ -367,7 +367,7 @@ const Departments = () => {
             />
             
             {/* Dark Overlay for high contrast */}
-            <div className="absolute inset-0 bg-black/25 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute inset-0 bg-black/15 group-hover:bg-black/30 transition-colors duration-300" />
 
             {/* Department Name - Centered (default state) */}
             <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300 p-4">
@@ -378,10 +378,10 @@ const Departments = () => {
 
             {/* Hover Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-md whitespace-pre-line">
+              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-md whitespace-pre-line w-full">
                 {dept.name}
               </h3>
-              <p className="text-white/90 text-xs md:text-sm text-center mb-4 line-clamp-3 mx-auto">
+              <p className="text-white/90 text-xs md:text-sm text-center mb-4 line-clamp-3 mx-auto w-full">
                 {dept.description}
               </p>
               <Link to={`/department/${dept.key}`} className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:opacity-90 transition-opacity shadow-md`}>
@@ -406,7 +406,7 @@ const Departments = () => {
               alt="MITS Departments & Schools" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/25 bg-gradient-to-b from-black/15 via-black/10 to-black/30" />
+            <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">

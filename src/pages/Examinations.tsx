@@ -186,7 +186,7 @@ const Examinations = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/25 bg-gradient-to-b from-black/15 via-black/10 to-black/30" />
+          <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.p
               initial={{ opacity: 0, y: 10 }}

@@ -35,7 +35,7 @@ export default function RefundPolicyPage() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/25 bg-gradient-to-b from-black/15 via-black/10 to-black/30" />
+        <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4 flex items-center justify-center gap-2">
             <CreditCard className="w-4 h-4" /> Financial Policy
