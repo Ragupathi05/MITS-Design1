@@ -140,10 +140,13 @@ html, body, #root {
 
   /* Preserve center/left alignment where explicitly set */
   .text-center p,
-  p.text-center,
+  p.text-center {
+    text-align: center;
+    hyphens: none;
+  }
   .text-left p,
   p.text-left {
-    text-align: inherit;
+    text-align: left;
     hyphens: none;
   }
 
