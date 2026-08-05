@@ -1,8 +1,8 @@
-﻿import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
-import { BookOpen, Building2, FlaskConical, GraduationCap, Microscope, Users, Calendar, Monitor } from "lucide-react";
+import { BookOpen, Brain, Building2, FlaskConical, GraduationCap, Microscope, Users, Calendar, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -10,25 +10,26 @@ const BASE = import.meta.env.BASE_URL;
 
 const schools = [
   {
-    name: "School of Engineering",
-    depts: ["Civil Engineering", "Mechanical Engineering", "Electronics & Communication Engineering", "Electrical & Electronics Engineering", "Bioinformatics"],
-    icon: Building2,
+    name: "School of AI & ML",
+    depts: ["Artificial Intelligence", "AI and Machine Learning", "CSE (AI and Data Science)", "CSE (AI and Robotics)"],
+    icon: Brain,
   },
   {
     name: "School of Computing",
-    depts: ["Computer Science and Engineering", "CSE (AI and Data Science)", "CSE (AI and ML)", "CSE (AI and Robotics)", "CSE (Cyber Security)"],
+    depts: ["Computer Science and Engineering", "CSE (Cyber Security)", "BCA", "MCA"],
     icon: Monitor,
   },
   {
-    name: "School of Management",
-    depts: ["MBA", "BBA"],
-    icon: Users,
+    name: "School of Engineering",
+    depts: ["Civil Engineering", "Electrical & Electronics Engineering", "Mechanical Engineering", "Electronics & Communication Engineering", "Bioinformatics"],
+    icon: Building2,
   },
   {
-    name: "School of Science",
-    depts: ["Physics", "Chemistry", "Mathematics", "English", "MCA", "BCA"],
-    icon: FlaskConical,
-  },
+    name: "School of Management",
+    depts: ["BBA", "MBA"],
+    icon: Users,
+  }
+  
 ];
 
 const features = [

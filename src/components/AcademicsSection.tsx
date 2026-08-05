@@ -61,10 +61,10 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
     {
       school: "School of Engineering",
       courses: [
-        { name: "B.Tech in Electronics & Communication Engineering", icon: CircuitBoard, link: "/department/ece" },
         { name: "B.Tech in Civil Engineering", icon: HardHat, link: "/department/ce" },
-        { name: "B.Tech in Mechanical Engineering", icon: Cog, link: "/department/me" },
         { name: "B.Tech in Electrical & Electronics Engineering", icon: Zap, link: "/department/eee" },
+        { name: "B.Tech in Mechanical Engineering", icon: Cog, link: "/department/me" },
+        { name: "B.Tech in Electronics & Communication Engineering", icon: CircuitBoard, link: "/department/ece" },
         { name: "B.Tech in Bioinformatics", icon: Dna, link: "/department/bioinfo" },
       ],
     },
@@ -72,19 +72,21 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
       school: "School of Computing",
       courses: [
         { name: "B.Tech Computer Science and Engineering", icon: Cpu, link: "/department/cse" },
-        { name: "B.Tech CSE (AI and Data Science)", icon: ChartNoAxesCombined, link: "/department/cseds" },
-        { name: "B.Tech CSE (AI and ML)", icon: BrainCircuit, link: "/department/aiml" },
-        { name: "B.Tech CSE (AI and Robotics)", icon: Bot, link: "/department/ai" },
         { name: "B.Tech CSE (Cyber Security)", icon: ShieldCheck, link: "/department/csecs" },
+        { name: "BCA - Bachelor of Computer Applications", icon: Monitor, link: "/department/mca" },
+      ],
+    },
+    {
+      school: "School of AI & ML",
+      courses: [
+        { name: "B.Tech CSE (AI and ML)", icon: BrainCircuit, link: "/department/aiml" },
+        { name: "B.Tech CSE (AI and Data Science)", icon: ChartNoAxesCombined, link: "/department/cseds" },
+        { name: "B.Tech CSE (AI and Robotics)", icon: Bot, link: "/department/ai" },
       ],
     },
     {
       school: "School of Management",
       courses: [{ name: "BBA - Bachelor of Business Administration", icon: BriefcaseBusiness, link: "/department/mba" }],
-    },
-    {
-      school: "School of Science",
-      courses: [{ name: "BCA - Bachelor of Computer Applications", icon: Monitor, link: "/department/mca" }],
     },
   ],
   pg: [
@@ -101,16 +103,18 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
       school: "School of Computing",
       courses: [
         { name: "M.Tech Computer Science and Engineering", icon: Network },
+        { name: "MCA - Master of Computer Applications", icon: Code2, link: "/department/mca" },
+      ],
+    },
+    {
+      school: "School of AI & ML",
+      courses: [
         { name: "M.Tech CSE (AI and ML)", icon: Sparkles },
       ],
     },
     {
       school: "School of Management",
       courses: [{ name: "MBA - Master of Business Administration", icon: Landmark, link: "/department/mba" }],
-    },
-    {
-      school: "School of Science",
-      courses: [{ name: "MCA - Master of Computer Applications", icon: Code2, link: "/department/mca" }],
     },
   ],
   phd: [
