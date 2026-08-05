@@ -246,7 +246,7 @@ const schools = [
     departments: [
       {
         key: "aiml",
-        name: "Artificial Intelligence\nand Machine Learning",
+        name: "Artificial Intelligence and Machine Learning",
         shortName: "AI and ML",
         established: "2020",
         description: "Cutting-edge curriculum in deep learning, NLP, and computer vision",
@@ -371,7 +371,7 @@ const Departments = () => {
 
             {/* Department Name - Centered (default state) */}
             <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300 p-4">
-              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
+              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] whitespace-pre-line">
                 {dept.name}
               </h3>
             </div>
@@ -381,7 +381,7 @@ const Departments = () => {
               <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-md">
                 {dept.name}
               </h3>
-              <p className="text-white/90 text-xs md:text-sm text-center mb-4 line-clamp-3">
+              <p className="text-white/90 text-xs md:text-sm text-center mb-4 line-clamp-3 mx-auto">
                 {dept.description}
               </p>
               <Link to={`/department/${dept.key}`} className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:opacity-90 transition-opacity shadow-md`}>
