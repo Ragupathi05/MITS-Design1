@@ -358,32 +358,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                         "Research with ICHR fellowship during PHD",
                         "Received Best Woman Academician awards in 2021 and 2022 from UK based NGO"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -666,32 +640,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                         "Written a book for Ist Semester MBA (Mysore University) &ndash; Management Information System &ndash; AMP Publishers at Bangalore",
                         "Written a Book for Ist Semester MBA (Mysore University)- Managerial Economics- AMP Publishers, Bangalore."
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -832,32 +780,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Management Studies",
-                            "Group": "Management Studies",
-                            "College Name/University": "SKIM, S. K. University, Ananthapur, AP.",
-                            "Year of Passing": "2004"
-                        },
-                        {
-                            "Course": "M.B.A.",
-                            "Specialization": "HR, Marketing",
-                            "Group": "M.B.A",
-                            "College Name/University": "S. K. University, Ananthapur, AP.",
-                            "Year of Passing": "1988"
-                        },
-                        {
-                            "Course": "B.Sc.",
-                            "Specialization": "MPC",
-                            "Group": "B.Sc. (MPC)",
-                            "College Name/University": "Govt Arts College for Men, Kadapa, AP.",
-                            "Year of Passing": "1986"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -913,32 +835,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                         "A Study on Housing Insurance in Indian Scenario, Presented at St.Gaits Institution of Technology and Management, Kathari Kerala, Sep 3rd, 4th, 5th 2010.",
                         "A Study on Housing Index, presented at Symbyosis, A Summit",
                         "\u201cA Study on Banking Operational Efficiency\u201d presented at SRNIT Bengaluru."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1048,32 +944,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1200,32 +1070,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Conferences & Workshops attended",
                     "content": "Participated in Five-day Train the Trainers Programme (PDP) on &quot;Entrepreneurship and venture creation&quot; was organized by JNTUA in association with Wadhwani Foundation from 10.03.2025 to 14.03.2025 at JNTU College of Engineering, Anantapuram."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -1361,32 +1205,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                             "Amount in Rs. /-": "1,15,000"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -1504,32 +1322,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Awards/Achievements",
                     "content": "Ratified as Assistant Professor by JNTUA, Ananthapuramu."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -1638,32 +1430,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                         "Received Best Faculty Award from the MBA Department, Gokul Institute of Technology and Sciences, for the academic year 2012&ndash;2013.",
                         "Published a book AI & ML in Business and Human Resource Management, Amaravathi Publishing House.",
                         "Published a book Human Resource Management, Blue International Publishers."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1781,32 +1547,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                             "Full Journal Name / Conference Name, Volume number, page number, Date": "National Conference on Management and Business Opportunities in the Present Competitive Scenario, 3rd December 2016, VIT, Vellore, India."
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -1892,32 +1632,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                         "Guest Lecture on Entrepreneurship Awareness Program from Dec. 13, 2025 to Dec. 13, 2025",
                         "Research Excellence Award from Nov. 22, 2025 to Nov. 22, 2025"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -1997,32 +1711,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -2129,32 +1817,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -2341,32 +2003,6 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                             "Title of the Project/Event": "HR Consultancy",
                             "Amount in Rs. /-": "8,00,000"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]

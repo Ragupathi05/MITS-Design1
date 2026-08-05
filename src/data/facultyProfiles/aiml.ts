@@ -48,32 +48,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Skill Areas",
                     "content": "Machine Learning, Natura Language Processing, Artificial Intelligence, Text Mining, Business Analytics & Strategy, CRM & Marketing Startegy, Customer Experience, Digital Analytics, Fraud Analytics, Python/SAS/SQL, Adobe Marketing Cloud"
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -123,32 +97,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Distributed Machine Learning",
                         "MLOps and Multimodal Learning"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -190,32 +138,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "College Name/University": "Institution of Engineers (IEI)",
                             "Year of Passing": "1999"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -729,32 +651,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Received Gold Coin for producing 100% results in Nandha Engineering College, Erode",
                         "Received certificate of appreciation for producing 100% results in various subjects in Angel College of Engineer"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -997,32 +893,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Life time Member in Member of the Institution of Engineers (MIE).Membership No: 1622077.",
                         "Life time Member in Computer Society of India (MCSI),Membership No: I1501028.",
                         "Member in Association for Computing Machinery (ACM),Membership No: 8262975."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1569,161 +1439,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "My Publications",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Title of the Paper": "Analysis and Optimization of Metal Injection Molding Feedstock SS 316L for Rheological Properties",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of The Institution of Engineers (India): Series D, pp.1-8, 2018."
-                        },
-                        {
-                            "S.No": "2",
-                            "Title of the Paper": "Investigation of Mechanical Properties of a Composite Tubular Electrode Based Hard coating on Mild Steel Substrate",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Research Foundation, Volume 4, Issue 3, March 2017"
-                        },
-                        {
-                            "S.No": "3",
-                            "Title of the Paper": "Metal Injection Molding \u2013 A Review",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Manufacturing Technology Today Journal, Vol. 15, Issue No. 12,2017"
-                        },
-                        {
-                            "S.No": "4",
-                            "Title of the Paper": "Structural Analysis and Fabrication of femoral component of Cemented Hip implant through Fused Deposition Modeling.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Sciences and Research Technology, 72-80, 2016."
-                        },
-                        {
-                            "S.No": "5",
-                            "Title of the Paper": "Application of Taguchi Method for Optimizing the Parameters of Thermal Properties of Al/SiC-Gr Hybrid Composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Bonfring International Journal of Advances in Image Processing, Vol. 6, No. 4, 2016."
-                        },
-                        {
-                            "S.No": "6",
-                            "Title of the Paper": "Fabrication of cast aluminium-silicon (Al-Si) and aluminium -Magnesium (Al-Mg) alloys and their properties",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Acta Metallurgica Slovaca, Vol 22, No.4, pp. 212-221, 2016."
-                        },
-                        {
-                            "S.No": "7",
-                            "Title of the Paper": "Design, Analysis, Fabrication and Testing of CFRP with CNF Composite Cylinder for Space Applications",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Composite Materials, Vol.5, No.5, pp.102-128, 2015."
-                        },
-                        {
-                            "S.No": "8",
-                            "Title of the Paper": "Experimental Characterization of Carbon Fibre T700 / Epoxy towpreg for Space Applications",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Research and Applications, Vol.5, No.12, pp.1-14, 2015."
-                        },
-                        {
-                            "S.No": "9",
-                            "Title of the Paper": "Optimisation Of Welding Process Of Composite Chromium-Carbide Based Tubular Electrode For Hardfacing",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical and Production Engineering Research and Development, Vol.4, No.1, pp. 39-46, 2014."
-                        },
-                        {
-                            "S.No": "10",
-                            "Title of the Paper": "Effect of Nickel Content on Microstructure of Modified Zinc aluminium Cast Alloys",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Technical Research and Applications, Vol.2, No.4, pp.81-83, 2014."
-                        },
-                        {
-                            "S.No": "11",
-                            "Title of the Paper": "Design and analysis of a single seater race car chassis frame",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Research Aeronautical and Mechanical Engineering, Vol.2, No.8, pp.12-23, 2014."
-                        },
-                        {
-                            "S.No": "12",
-                            "Title of the Paper": "Evaluation of Mechanical Properties of Al/SiC-Graphite Hybrid Metal Matrix Composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Trends in Computer Science and Engineering, Vol.2, No.6, pp. 286-289, 2013."
-                        },
-                        {
-                            "S.No": "13",
-                            "Title of the Paper": "Microstructural and Mechanical Behaviour of Zinc-Aluminium Cast Alloys",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical Engineering and Technology (IJMET), Vol.4, No.4, pp. 243 \u2013 248, 2013."
-                        },
-                        {
-                            "S.No": "14",
-                            "Title of the Paper": "Characterization of Machinability Behaviour of Al/Al2O3 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Engineering Research and Studies, Vol.1, No.2, pp. 114-117, 2012."
-                        },
-                        {
-                            "S.No": "15",
-                            "Title of the Paper": "Neural network for prediction of EDM of Al/SiC-graphite particulate reinforced hybrid composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Int J Emerg Technol Adv Eng, Vol.2, No.12, pp. 730-739, 2012."
-                        },
-                        {
-                            "S.No": "16",
-                            "Title of the Paper": "Effect of Thermal Fatigue Behaviour on Bending Strength of Al/Al 2 O 3 MMCs.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                        },
-                        {
-                            "S.No": "17",
-                            "Title of the Paper": "Effect of Drilling Parameters on Drillability Behaviour of Al/Al 2 O 3 MMCs.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                        },
-                        {
-                            "S.No": "18",
-                            "Title of the Paper": "Study on Transition Behaviour of Al/Al2O3 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "World Journal of Engineering, Vol.5, No.4, pp. 543-544, 2008."
-                        },
-                        {
-                            "S.No": "19",
-                            "Title of the Paper": "Optimization of machinability parameters of aluminium/alumina metal matrix composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.3, No.9, pp.1197-1204, 2008."
-                        },
-                        {
-                            "S.No": "20",
-                            "Title of the Paper": "A study of transition wear behaviour of alumina particle reinforced Al-6061 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Reinforced Plastics and Composites, Vol.28, No.23, pp. 2903-2909, 2009."
-                        }
-                    ]
-                },
-                {
-                    "title": "Conferences & Workshops attended",
-                    "content": [
-                        "Participated in \u201cAcademia Day-Part of \u201c3Dverve 2019\u201d- An Annual Technical Conference of Dassault Systemes Foundation and Dassault Systemes\u201d at Dassault Systemes, India R&D (Auditorium), Hinjewadi Phase 1, Pune on 21 February 2019.",
-                        "One Day workshop on Creating Roadmap for Innovation and Incubation Centres in AP Educational Institutions, organized by ITE&C department on 19-10-2016 at Gateway Hotel in Vijayawada.",
-                        "A workshop on \u201cQuality Initiatives in Technical & Higher Educational Institutions (in compliance with NBA & NAAC Accreditation)\u201d organized by Engineering Staff College of India (ESCI), Hyderabad, from 07-09-16 to 9-09-16.",
-                        "3rd International Conference in Transformations in Engineering Education (ICTIEE 2016) was organized by IUCEE (Indo-US Collaboration for Engineering Education) and College of Engineering, Pune (COEP) during 08-12 January 2016.",
-                        "An Orientation Session on \u201cSiemens Centres of Excellence (COE) Clusters in AP\u201d organized by Andhra Pradesh State Skill Development Corporation at the Sri City Business Centre, Sri City on 27th August 2015.",
-                        "A one-day workshop on \u201cAwareness on Various programs for Foreign University Collaborations\u201d was Organized at JNTUA, Ananthapuramu on 16th May 2015.",
-                        "A meet in Chennai conducted by Higher Education Forum, South Zone to receive Campus Preparedness Award 2015 on 26th March 2015.",
-                        "International conference in Transformations in Engineering Education (ICTIEE 2015). It is a four day International conference, among these first two days were pre-conference workshops conducted by the BMS College of Engineering, Bangalore and collaborating with Indo-US collaboration for Engineering Education (IUCEE) during 5-8 January 2015.",
-                        "A workshop on TEQIP-II : Good Governance, Leadership and Management on 14th - 15th October 2014 at Metropolitan Hotel, Near Bangla Sahib Gurudwara Road, New Delhi.",
-                        "Represented the college for the workshop on Procurement Practices attended on 22.08.2014, at PSG Institute of Technology, organized by PSG, SPFU-TN and NPIU at Coimbatore.",
-                        "A National Conference on \u201cLeadership in Higher Education\u201d held on July 4, 2014 at Engineering staff college of India (ESCI), Hyderabad.",
-                        "A one day workshop on \u201cAcademia Industry Management For creating Sustainable Employability\u201d held on 06-04-2014 Organized by GP Birla Institute of Human Excellence, Birla Center, Hyderabad.",
-                        "Participated in a Seminar on \u201cInnovative Teaching, Research Learning & Accreditation Practices\u201d (IE-ITR SESSION) organized by ESCI as the constituent part of IE(I) Congress-2013 on 21 December, 2013 at Hotel Leela Palace, Chennai.",
-                        "Appointed as the co ordinator of the program by AICTE and received a grant from AICTE to conduct 2 Weeks FDP On Fatigue & Fracture Mechanics In FE Analysis.",
-                        "A Two Day Workshop on \u201cRecent Trends In Manufacturing \u201c Under TEQIP-II Organised by the Department of Mechanical Engineering, Chaitanya Bharathi Institute of Technology, Gandipet, Hyderabad on 29-30 July 2013.",
-                        "A Two Day Workshop on \u201cProcurement Guidelines & PMSS Training\" under TEQIP-II conducted by NPIU - New Delhi and SPFU Andhra Pradesh at University College of engineering, Osmania University, Hyderabad on 16-17 May 2013.",
-                        "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
-                        "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
-                        "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "CSE",
-                            "Group": "CSE",
-                            "College Name/University": "SRM Institute of Science and Technology, KTR Campus, Chennai",
-                            "Year of Passing": "2023"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "CSE",
-                            "Group": "CSE",
-                            "College Name/University": "SRM University, Chennai",
-                            "Year of Passing": "2010"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "IT",
-                            "Group": "IT",
-                            "College Name/University": "Sree Vidyanikethan Engineering College, Tirupati",
-                            "Year of Passing": "2007"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -1871,32 +1586,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Book Publication",
                     "content": "Ms. E.Sandhya, Dr. Gowtham Mamidisetti, Dr. GnanaprakasamThangavel, \u201cInternet of Things\u201d, Publisher : Book Rivers, ISBN-10 : 9355157487, ISBN-13 : 978-9355157485, January 2023"
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -1944,32 +1633,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Vidwan : https://vidwan.inflibnet.ac.in//profile/373118",
                         "Google scholar : https://scholar.google.com/citations?hl=en&user=6yl8tHEAAAAJ",
                         "h-Index (As per Scopus Data) : 3"
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -2075,32 +1738,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Computer Science & Engineering",
-                            "Group": "Computer Science & Engineering",
-                            "College Name/University": "National Institute of Technology, Durgapur",
-                            "Year of Passing": "2024"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Computer Networks & Information Security",
-                            "Group": "Computer Science & Engineering",
-                            "College Name/University": "Sree Vidyanikethan Engineering College",
-                            "Year of Passing": "2013"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Computer Science & Engineering",
-                            "Group": "Computer Science & Engineering",
-                            "College Name/University": "Priyadarshini College of Engineering, JNTUA",
-                            "Year of Passing": "2011"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -2163,32 +1800,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "S. Goundar, N. Prasad, D. Chetty, R. Prasad, and P. K. Rayani, \u201cUsage and Ben- efits of Banner ERP System at a University\u201d. pp. 291-304, ISBN: 9781648023439, Information Age Publishing, 2021.",
                         "R. K. Poluru, S. B. Bhushan, B. S. Muzamil, P. K. Rayani and P. K. Reddy, \u201cApplications of Domain-Specific Predictive Analytics Applied to Big Data\u201d. pp. 289-306, ISBN: 978-15-225-4999-4, IGI Global, August 2018."
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -2223,32 +1834,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "College Name/University": "Government Engineering College, University of Calicut",
                             "Year of Passing": "2006"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -2338,161 +1923,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "Awarded for top performing mentor for NPTEL course Understanding Incubation and Entrepreneurship during Jan-Apr 2025",
                         "Certificate of appreciation in recognition role as mentor for NPTEL course German-1during Jul-Dec 2024."
-                    ]
-                },
-                {
-                    "title": "My Publications",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Title of the Paper": "Analysis and Optimization of Metal Injection Molding Feedstock SS 316L for Rheological Properties",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of The Institution of Engineers (India): Series D, pp.1-8, 2018."
-                        },
-                        {
-                            "S.No": "2",
-                            "Title of the Paper": "Investigation of Mechanical Properties of a Composite Tubular Electrode Based Hard coating on Mild Steel Substrate",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Research Foundation, Volume 4, Issue 3, March 2017"
-                        },
-                        {
-                            "S.No": "3",
-                            "Title of the Paper": "Metal Injection Molding \u2013 A Review",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Manufacturing Technology Today Journal, Vol. 15, Issue No. 12,2017"
-                        },
-                        {
-                            "S.No": "4",
-                            "Title of the Paper": "Structural Analysis and Fabrication of femoral component of Cemented Hip implant through Fused Deposition Modeling.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Sciences and Research Technology, 72-80, 2016."
-                        },
-                        {
-                            "S.No": "5",
-                            "Title of the Paper": "Application of Taguchi Method for Optimizing the Parameters of Thermal Properties of Al/SiC-Gr Hybrid Composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Bonfring International Journal of Advances in Image Processing, Vol. 6, No. 4, 2016."
-                        },
-                        {
-                            "S.No": "6",
-                            "Title of the Paper": "Fabrication of cast aluminium-silicon (Al-Si) and aluminium -Magnesium (Al-Mg) alloys and their properties",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Acta Metallurgica Slovaca, Vol 22, No.4, pp. 212-221, 2016."
-                        },
-                        {
-                            "S.No": "7",
-                            "Title of the Paper": "Design, Analysis, Fabrication and Testing of CFRP with CNF Composite Cylinder for Space Applications",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Composite Materials, Vol.5, No.5, pp.102-128, 2015."
-                        },
-                        {
-                            "S.No": "8",
-                            "Title of the Paper": "Experimental Characterization of Carbon Fibre T700 / Epoxy towpreg for Space Applications",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Research and Applications, Vol.5, No.12, pp.1-14, 2015."
-                        },
-                        {
-                            "S.No": "9",
-                            "Title of the Paper": "Optimisation Of Welding Process Of Composite Chromium-Carbide Based Tubular Electrode For Hardfacing",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical and Production Engineering Research and Development, Vol.4, No.1, pp. 39-46, 2014."
-                        },
-                        {
-                            "S.No": "10",
-                            "Title of the Paper": "Effect of Nickel Content on Microstructure of Modified Zinc aluminium Cast Alloys",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Technical Research and Applications, Vol.2, No.4, pp.81-83, 2014."
-                        },
-                        {
-                            "S.No": "11",
-                            "Title of the Paper": "Design and analysis of a single seater race car chassis frame",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Research Aeronautical and Mechanical Engineering, Vol.2, No.8, pp.12-23, 2014."
-                        },
-                        {
-                            "S.No": "12",
-                            "Title of the Paper": "Evaluation of Mechanical Properties of Al/SiC-Graphite Hybrid Metal Matrix Composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Trends in Computer Science and Engineering, Vol.2, No.6, pp. 286-289, 2013."
-                        },
-                        {
-                            "S.No": "13",
-                            "Title of the Paper": "Microstructural and Mechanical Behaviour of Zinc-Aluminium Cast Alloys",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical Engineering and Technology (IJMET), Vol.4, No.4, pp. 243 \u2013 248, 2013."
-                        },
-                        {
-                            "S.No": "14",
-                            "Title of the Paper": "Characterization of Machinability Behaviour of Al/Al2O3 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Engineering Research and Studies, Vol.1, No.2, pp. 114-117, 2012."
-                        },
-                        {
-                            "S.No": "15",
-                            "Title of the Paper": "Neural network for prediction of EDM of Al/SiC-graphite particulate reinforced hybrid composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Int J Emerg Technol Adv Eng, Vol.2, No.12, pp. 730-739, 2012."
-                        },
-                        {
-                            "S.No": "16",
-                            "Title of the Paper": "Effect of Thermal Fatigue Behaviour on Bending Strength of Al/Al 2 O 3 MMCs.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                        },
-                        {
-                            "S.No": "17",
-                            "Title of the Paper": "Effect of Drilling Parameters on Drillability Behaviour of Al/Al 2 O 3 MMCs.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                        },
-                        {
-                            "S.No": "18",
-                            "Title of the Paper": "Study on Transition Behaviour of Al/Al2O3 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "World Journal of Engineering, Vol.5, No.4, pp. 543-544, 2008."
-                        },
-                        {
-                            "S.No": "19",
-                            "Title of the Paper": "Optimization of machinability parameters of aluminium/alumina metal matrix composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.3, No.9, pp.1197-1204, 2008."
-                        },
-                        {
-                            "S.No": "20",
-                            "Title of the Paper": "A study of transition wear behaviour of alumina particle reinforced Al-6061 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Reinforced Plastics and Composites, Vol.28, No.23, pp. 2903-2909, 2009."
-                        }
-                    ]
-                },
-                {
-                    "title": "Conferences & Workshops attended",
-                    "content": [
-                        "Participated in \u201cAcademia Day-Part of \u201c3Dverve 2019\u201d- An Annual Technical Conference of Dassault Systemes Foundation and Dassault Systemes\u201d at Dassault Systemes, India R&D (Auditorium), Hinjewadi Phase 1, Pune on 21 February 2019.",
-                        "One Day workshop on Creating Roadmap for Innovation and Incubation Centres in AP Educational Institutions, organized by ITE&C department on 19-10-2016 at Gateway Hotel in Vijayawada.",
-                        "A workshop on \u201cQuality Initiatives in Technical & Higher Educational Institutions (in compliance with NBA & NAAC Accreditation)\u201d organized by Engineering Staff College of India (ESCI), Hyderabad, from 07-09-16 to 9-09-16.",
-                        "3rd International Conference in Transformations in Engineering Education (ICTIEE 2016) was organized by IUCEE (Indo-US Collaboration for Engineering Education) and College of Engineering, Pune (COEP) during 08-12 January 2016.",
-                        "An Orientation Session on \u201cSiemens Centres of Excellence (COE) Clusters in AP\u201d organized by Andhra Pradesh State Skill Development Corporation at the Sri City Business Centre, Sri City on 27th August 2015.",
-                        "A one-day workshop on \u201cAwareness on Various programs for Foreign University Collaborations\u201d was Organized at JNTUA, Ananthapuramu on 16th May 2015.",
-                        "A meet in Chennai conducted by Higher Education Forum, South Zone to receive Campus Preparedness Award 2015 on 26th March 2015.",
-                        "International conference in Transformations in Engineering Education (ICTIEE 2015). It is a four day International conference, among these first two days were pre-conference workshops conducted by the BMS College of Engineering, Bangalore and collaborating with Indo-US collaboration for Engineering Education (IUCEE) during 5-8 January 2015.",
-                        "A workshop on TEQIP-II : Good Governance, Leadership and Management on 14th - 15th October 2014 at Metropolitan Hotel, Near Bangla Sahib Gurudwara Road, New Delhi.",
-                        "Represented the college for the workshop on Procurement Practices attended on 22.08.2014, at PSG Institute of Technology, organized by PSG, SPFU-TN and NPIU at Coimbatore.",
-                        "A National Conference on \u201cLeadership in Higher Education\u201d held on July 4, 2014 at Engineering staff college of India (ESCI), Hyderabad.",
-                        "A one day workshop on \u201cAcademia Industry Management For creating Sustainable Employability\u201d held on 06-04-2014 Organized by GP Birla Institute of Human Excellence, Birla Center, Hyderabad.",
-                        "Participated in a Seminar on \u201cInnovative Teaching, Research Learning & Accreditation Practices\u201d (IE-ITR SESSION) organized by ESCI as the constituent part of IE(I) Congress-2013 on 21 December, 2013 at Hotel Leela Palace, Chennai.",
-                        "Appointed as the co ordinator of the program by AICTE and received a grant from AICTE to conduct 2 Weeks FDP On Fatigue & Fracture Mechanics In FE Analysis.",
-                        "A Two Day Workshop on \u201cRecent Trends In Manufacturing \u201c Under TEQIP-II Organised by the Department of Mechanical Engineering, Chaitanya Bharathi Institute of Technology, Gandipet, Hyderabad on 29-30 July 2013.",
-                        "A Two Day Workshop on \u201cProcurement Guidelines & PMSS Training\" under TEQIP-II conducted by NPIU - New Delhi and SPFU Andhra Pradesh at University College of engineering, Osmania University, Hyderabad on 16-17 May 2013.",
-                        "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
-                        "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
-                        "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -2605,161 +2035,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "My Publications",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Title of the Paper": "Analysis and Optimization of Metal Injection Molding Feedstock SS 316L for Rheological Properties",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of The Institution of Engineers (India): Series D, pp.1-8, 2018."
-                        },
-                        {
-                            "S.No": "2",
-                            "Title of the Paper": "Investigation of Mechanical Properties of a Composite Tubular Electrode Based Hard coating on Mild Steel Substrate",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Research Foundation, Volume 4, Issue 3, March 2017"
-                        },
-                        {
-                            "S.No": "3",
-                            "Title of the Paper": "Metal Injection Molding \u2013 A Review",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Manufacturing Technology Today Journal, Vol. 15, Issue No. 12,2017"
-                        },
-                        {
-                            "S.No": "4",
-                            "Title of the Paper": "Structural Analysis and Fabrication of femoral component of Cemented Hip implant through Fused Deposition Modeling.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Sciences and Research Technology, 72-80, 2016."
-                        },
-                        {
-                            "S.No": "5",
-                            "Title of the Paper": "Application of Taguchi Method for Optimizing the Parameters of Thermal Properties of Al/SiC-Gr Hybrid Composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Bonfring International Journal of Advances in Image Processing, Vol. 6, No. 4, 2016."
-                        },
-                        {
-                            "S.No": "6",
-                            "Title of the Paper": "Fabrication of cast aluminium-silicon (Al-Si) and aluminium -Magnesium (Al-Mg) alloys and their properties",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Acta Metallurgica Slovaca, Vol 22, No.4, pp. 212-221, 2016."
-                        },
-                        {
-                            "S.No": "7",
-                            "Title of the Paper": "Design, Analysis, Fabrication and Testing of CFRP with CNF Composite Cylinder for Space Applications",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Composite Materials, Vol.5, No.5, pp.102-128, 2015."
-                        },
-                        {
-                            "S.No": "8",
-                            "Title of the Paper": "Experimental Characterization of Carbon Fibre T700 / Epoxy towpreg for Space Applications",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Research and Applications, Vol.5, No.12, pp.1-14, 2015."
-                        },
-                        {
-                            "S.No": "9",
-                            "Title of the Paper": "Optimisation Of Welding Process Of Composite Chromium-Carbide Based Tubular Electrode For Hardfacing",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical and Production Engineering Research and Development, Vol.4, No.1, pp. 39-46, 2014."
-                        },
-                        {
-                            "S.No": "10",
-                            "Title of the Paper": "Effect of Nickel Content on Microstructure of Modified Zinc aluminium Cast Alloys",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Technical Research and Applications, Vol.2, No.4, pp.81-83, 2014."
-                        },
-                        {
-                            "S.No": "11",
-                            "Title of the Paper": "Design and analysis of a single seater race car chassis frame",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Research Aeronautical and Mechanical Engineering, Vol.2, No.8, pp.12-23, 2014."
-                        },
-                        {
-                            "S.No": "12",
-                            "Title of the Paper": "Evaluation of Mechanical Properties of Al/SiC-Graphite Hybrid Metal Matrix Composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Trends in Computer Science and Engineering, Vol.2, No.6, pp. 286-289, 2013."
-                        },
-                        {
-                            "S.No": "13",
-                            "Title of the Paper": "Microstructural and Mechanical Behaviour of Zinc-Aluminium Cast Alloys",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical Engineering and Technology (IJMET), Vol.4, No.4, pp. 243 \u2013 248, 2013."
-                        },
-                        {
-                            "S.No": "14",
-                            "Title of the Paper": "Characterization of Machinability Behaviour of Al/Al2O3 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Engineering Research and Studies, Vol.1, No.2, pp. 114-117, 2012."
-                        },
-                        {
-                            "S.No": "15",
-                            "Title of the Paper": "Neural network for prediction of EDM of Al/SiC-graphite particulate reinforced hybrid composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Int J Emerg Technol Adv Eng, Vol.2, No.12, pp. 730-739, 2012."
-                        },
-                        {
-                            "S.No": "16",
-                            "Title of the Paper": "Effect of Thermal Fatigue Behaviour on Bending Strength of Al/Al 2 O 3 MMCs.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                        },
-                        {
-                            "S.No": "17",
-                            "Title of the Paper": "Effect of Drilling Parameters on Drillability Behaviour of Al/Al 2 O 3 MMCs.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                        },
-                        {
-                            "S.No": "18",
-                            "Title of the Paper": "Study on Transition Behaviour of Al/Al2O3 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "World Journal of Engineering, Vol.5, No.4, pp. 543-544, 2008."
-                        },
-                        {
-                            "S.No": "19",
-                            "Title of the Paper": "Optimization of machinability parameters of aluminium/alumina metal matrix composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.3, No.9, pp.1197-1204, 2008."
-                        },
-                        {
-                            "S.No": "20",
-                            "Title of the Paper": "A study of transition wear behaviour of alumina particle reinforced Al-6061 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Reinforced Plastics and Composites, Vol.28, No.23, pp. 2903-2909, 2009."
-                        }
-                    ]
-                },
-                {
-                    "title": "Conferences & Workshops attended",
-                    "content": [
-                        "Participated in \u201cAcademia Day-Part of \u201c3Dverve 2019\u201d- An Annual Technical Conference of Dassault Systemes Foundation and Dassault Systemes\u201d at Dassault Systemes, India R&D (Auditorium), Hinjewadi Phase 1, Pune on 21 February 2019.",
-                        "One Day workshop on Creating Roadmap for Innovation and Incubation Centres in AP Educational Institutions, organized by ITE&C department on 19-10-2016 at Gateway Hotel in Vijayawada.",
-                        "A workshop on \u201cQuality Initiatives in Technical & Higher Educational Institutions (in compliance with NBA & NAAC Accreditation)\u201d organized by Engineering Staff College of India (ESCI), Hyderabad, from 07-09-16 to 9-09-16.",
-                        "3rd International Conference in Transformations in Engineering Education (ICTIEE 2016) was organized by IUCEE (Indo-US Collaboration for Engineering Education) and College of Engineering, Pune (COEP) during 08-12 January 2016.",
-                        "An Orientation Session on \u201cSiemens Centres of Excellence (COE) Clusters in AP\u201d organized by Andhra Pradesh State Skill Development Corporation at the Sri City Business Centre, Sri City on 27th August 2015.",
-                        "A one-day workshop on \u201cAwareness on Various programs for Foreign University Collaborations\u201d was Organized at JNTUA, Ananthapuramu on 16th May 2015.",
-                        "A meet in Chennai conducted by Higher Education Forum, South Zone to receive Campus Preparedness Award 2015 on 26th March 2015.",
-                        "International conference in Transformations in Engineering Education (ICTIEE 2015). It is a four day International conference, among these first two days were pre-conference workshops conducted by the BMS College of Engineering, Bangalore and collaborating with Indo-US collaboration for Engineering Education (IUCEE) during 5-8 January 2015.",
-                        "A workshop on TEQIP-II : Good Governance, Leadership and Management on 14th - 15th October 2014 at Metropolitan Hotel, Near Bangla Sahib Gurudwara Road, New Delhi.",
-                        "Represented the college for the workshop on Procurement Practices attended on 22.08.2014, at PSG Institute of Technology, organized by PSG, SPFU-TN and NPIU at Coimbatore.",
-                        "A National Conference on \u201cLeadership in Higher Education\u201d held on July 4, 2014 at Engineering staff college of India (ESCI), Hyderabad.",
-                        "A one day workshop on \u201cAcademia Industry Management For creating Sustainable Employability\u201d held on 06-04-2014 Organized by GP Birla Institute of Human Excellence, Birla Center, Hyderabad.",
-                        "Participated in a Seminar on \u201cInnovative Teaching, Research Learning & Accreditation Practices\u201d (IE-ITR SESSION) organized by ESCI as the constituent part of IE(I) Congress-2013 on 21 December, 2013 at Hotel Leela Palace, Chennai.",
-                        "Appointed as the co ordinator of the program by AICTE and received a grant from AICTE to conduct 2 Weeks FDP On Fatigue & Fracture Mechanics In FE Analysis.",
-                        "A Two Day Workshop on \u201cRecent Trends In Manufacturing \u201c Under TEQIP-II Organised by the Department of Mechanical Engineering, Chaitanya Bharathi Institute of Technology, Gandipet, Hyderabad on 29-30 July 2013.",
-                        "A Two Day Workshop on \u201cProcurement Guidelines & PMSS Training\" under TEQIP-II conducted by NPIU - New Delhi and SPFU Andhra Pradesh at University College of engineering, Osmania University, Hyderabad on 16-17 May 2013.",
-                        "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
-                        "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
-                        "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Computer Science & Engineering",
-                            "Group": "Computer Science & Engineering",
-                            "College Name/University": "Vellore Institute of Technology, Vellore",
-                            "Year of Passing": "Pursuing"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Specialization": "Computer Science & Engineering",
-                            "Group": "Computer Science & Engineering",
-                            "College Name/University": "Anna University",
-                            "Year of Passing": "2010"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Specialization": "Computer Science & Engineering",
-                            "Group": "Computer Science & Engineering",
-                            "College Name/University": "Anna University",
-                            "Year of Passing": "2006"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -2802,32 +2077,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Conferences & Workshops attended",
                     "content": "Participated in \u201cICT Academy BRIDGE\u201925 \u2013 High Impact Industry \u2013 Institute Interaction Event & AI Learnathon 2025 Achievement\u201d was organized by ICT Academy in association with the Information Technology and Digital Services Department, Government of Tamil Nadu on 30th December 2025."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -2862,32 +2111,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "College Name/University": "PARK College of Engineering Technology, CBE /Anna University",
                             "Year of Passing": "2008"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -3060,32 +2283,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Organized a Faculty Development Program on &quot;Microsoft Azure AI Engineer Associate&quot; was organized by Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning) in association with ICT ACADEMY 07th to 11th April 2025.",
                         "Organized a National Level Technical Symposium &quot;AIMEX 2k25&quot; was organized by Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning) on 23rd April 2025.",
                         "Organized a Two-Day Career Guidance Programme on &ldquo;Engineering Elevates and Enlightens&rdquo; was organized by Department of Computer Science and Engineering (AI and ML) on 9th and 10th September 2025."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -3355,32 +2552,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Recognized as NPTEL Discipline Star July &ndash; Dec 2025",
                         "Recognized as NPTEL Discipline Star July &ndash; Dec 2023"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -3424,32 +2595,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Vidwan :",
                         "Google scholar : https://scholar.google.com/citations?user=ce6q-tUAAAAJ&hl=en&oi=ao",
                         "h-Index (As per Scopus Data) : 4"
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -3499,32 +2644,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Google scholar : https://scholar.google.co.in/citations?user=FoxUuv4AAAAJ&hl=en&oi=sra",
                         "h-Index (As per Scopus Data) : 9"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -3559,32 +2678,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "College Name/University": "Thejus Engineering College, Calicut University",
                             "Year of Passing": "2013"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -3644,58 +2737,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Conference Proceedings",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
                         }
-                    ]
-                },
-                {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "CSE",
-                            "Group": "CSE",
-                            "College Name/University": "IIT, Tirupati",
-                            "Year of Passing": "Pursuing"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "CSE",
-                            "Group": "CSE",
-                            "College Name/University": "Sri Venkateswara Univ. College of Engineering",
-                            "Year of Passing": "2017"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "CSC",
-                            "Group": "CSC",
-                            "College Name/University": "Madanapalle Institute of Technology & Science, JNTUA",
-                            "Year of Passing": "2011"
-                        }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -3760,32 +2801,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -3821,32 +2836,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Year of Passing": "2009"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -3879,32 +2868,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Research Areas",
                     "content": "Artificial Intelligence, Machine Learning, Data Science, and Genomics"
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -3935,32 +2898,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Google scholar : https://scholar.google.com/citations?hl=en&user=AlwJ-dUAAAAJ",
                         "h-Index (As per Scopus Data) :"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -3989,32 +2926,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Year of Passing": "2016"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -4042,32 +2953,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "College Name/University": "Engineering College, Bikaner",
                             "Year of Passing": "2022"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]

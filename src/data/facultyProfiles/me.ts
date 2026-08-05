@@ -456,32 +456,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
                     "title": "Research Projects",
                     "content": [
                         {
@@ -683,32 +657,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                             "Status": "filed and published",
                             "MITS Affiliated": "yes"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -962,32 +910,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                             "Amount in Rs. /-": "12,000"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -1038,32 +960,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                         "&ldquo;CII&rsquo;s higher education conclave&rdquo; organized by The Confederation of Indian Industry (CII) held at Hotel Le Meridien, Coimbatore on Nov. 29, 30, 2013. The theme of the conclave is Transformational Change in Higher Education: Global Excellence through Governance, Research and Innovation.",
                         "A One Day National Workshop on &ldquo;Advanced Trends in IC Engines and Combustion&rdquo; hosted by Department of Mechanical Engineering, JNTUH College of Engineering, Hyderabad on 28th February 2013 to mark the retirement of Prof. K. Rajagopal, Former Vice- Chancellor of JNTU.",
                         "The meeting on National Knowledge Functional Hub organized by FICCI on 23rd May, 2013 at GW Precision Tools India Pvt. Ltd. Bangalore."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1470,32 +1366,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Tribology",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "National Institute of Technology, Tiruchirappalli.",
-                            "Year of Passing": "2015"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Specialization": "Manufacturing",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Jayaram College of Engineering and Technology, Tiruchirappalli.",
-                            "Year of Passing": "2007"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Jayaram College of Engineering and Technology, Tiruchirappalli.",
-                            "Year of Passing": "2004"
-                        }
-                    ]
-                },
-                {
                     "title": "Conferences & Workshops attended",
                     "content": [
                         "Attended Industrial Training in \u201cAcoustic Enclosure Modules\u201d at ACE Engineering Solutions Pvt. Ltd, Pune from 28.07.2025 to 02.08.2025.",
@@ -1503,32 +1373,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                         "Participated in \"AICTE IDEA Lab FEST 2025\" held at AICTE Headquarters, New Delhi on 07th March 2025.",
                         "Participated in Two Days Researchers Conclave on \u201cAdditive Manufacturing\u201d on 18th and 19th September 2024, at Central Manufacturing Technology Institute (CMTI), Bengaluru.",
                         "One Week Workshop on Advanced Materials & Manufacturing Methods Conducted by Department of MME, NIT, Trichy, Tamilnadu on 6 - 10 June 2016."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1695,32 +1539,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "NITK, Surathkal, Karnataka",
-                            "Year of Passing": "2017"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Computer Integrated Manufacturing",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "R.V. College of Engineering, Bangalore, Visvesvaraya Technological University",
-                            "Year of Passing": "2010"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Ghousia College of Engineering, Bangalore, Visvesvaraya Technological University",
-                            "Year of Passing": "2008"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -1830,32 +1648,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                         "An industrial visit to Rayalaseema Thermal Power Project on 3rd November 2018.",
                         "Industrial Visit to Central Manufacturing Technology Institute (CMTI), Bangalore 2018.",
                         "Industrial Visit to Satish Dhawan Space Centre (SDSC) SHAR, Sriharikota, Andhra Pradesh."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -2106,32 +1898,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                         "Attended workshop on \u201cLaser Processing of Materials\u201d March 09-12th, 2017 at NIT Karnataka.",
                         "Attended workshop on \u201cAdvanced Engineering Optimization Through Intelligent Techniques\u201d, December 1-5th, 2004 at NIT Surat.",
                         "Attended workshop on \u201cArtificial Neural Network and its Applications\u201d, 28th April 2016 at Beary\u2019s Institute of Technology, Mangalore."
-                    ]
-                },
-                {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Manufacturing",
-                            "Branch": "Mechanical Engineering",
-                            "College Name/University": "National Institute of Technology, Karnataka",
-                            "Year of Passing": "2017"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Production Engineering",
-                            "Branch": "Mechanical Engineering",
-                            "College Name/University": "Sri Venkateswara University, Tirupathi",
-                            "Year of Passing": "2011"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Branch": "Mechanical Engineering",
-                            "College Name/University": "Annamacharya Institute of Technology and Science, Rajampeta",
-                            "Year of Passing": "2008"
-                        }
                     ]
                 },
                 {
@@ -2675,32 +2441,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "Stanford University recognized him as one of the Top 2% Scientists for the years 2021, 2023, 2024, and 2025.",
                         "Received the &ldquo;Best Researcher Award&rdquo; for the academic years 2018-19, 2019-20, and 2022-23 at MITS College."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -3252,32 +2992,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Anna University, Chennai",
-                            "Year of Passing": "2017"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Specialization": "Manufacturing Engineering",
-                            "Group": "Manufacturing Engineering",
-                            "College Name/University": "Alagappa Chettiyar College of Engineering & Technology, (Govt, Autonoums Institution) Karaikudi.",
-                            "Year of Passing": "2012"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Annamalai University, Chidambaram.",
-                            "Year of Passing": "2008"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -3427,39 +3141,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                         "Participated in \"NPTEL SPOC Felicitation and awareness workshop\" held at Terrace Hall, IIT Madras on 05.07.2025.",
                         "Participated in NPTEL SPOC Workshop & Felicitation Programme at IIT Madras, IC & SR Auditorium on 22nd June, 2024.",
                         "Industrial Visit to Bangalore Integrated System Solutions (BISS) & Central Manufacturing Technology Institute (CMTI), Bangalore on 15th November 2018."
-                    ]
-                },
-                {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Post Doctoral Fellow",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "IIT, Guwahati",
-                            "Year of Passing": "Aug 2018 - Aug 2019"
-                        },
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "NIT, Manipur",
-                            "Year of Passing": "2018"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Specialization": "Tribology and Maintenance Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Shri.G.S.I.T.S, Indore (MP)",
-                            "Year of Passing": "2013"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "KLCE, Guntur",
-                            "Year of Passing": "2009"
-                        }
                     ]
                 },
                 {
@@ -3687,32 +3368,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "FDP/Conferences/Workshops/Awareness Programmes attended",
                     "content": "Participated in Mandatory campus visit of AICTE-QIP-PG Certificate Programme in CPS at IIIT Dharwad on \u201cCyber-Physical Systems (CPS)\u201d Sponsored by All India Council for Technical Education (AICTE) from 8th December 2025 to 19th December 2025."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -4024,32 +3679,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Smart Materials",
-                            "Group": "Smart Materials",
-                            "College Name/University": "NIT-Karnataka",
-                            "Year of Passing": "2020"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Machine Design",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Madanapalle Institute of Technology & Science",
-                            "Year of Passing": "2013"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "C.R.E.C., Tirupati",
-                            "Year of Passing": "2010"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -4117,32 +3746,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                             "Title of the Paper": "Prediction of wear behaviour of almg1sicu hybrid MMC using taguchi with grey rational analysis",
                             "Full Journal Name / Conference Name, Volume number, page number, Date": "Procedia Engineering, 97 (2014),555-562. (Scopus) https://doi.org/10.1016/j.proeng.2014.12.283"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -4451,32 +4054,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "SVNIT, Surat",
-                            "Year of Passing": "2021"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Hydro Power Engineering",
-                            "Group": "Hydro Power Engineering",
-                            "College Name/University": "MANIT, Bhopal",
-                            "Year of Passing": "2014"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Government Engineering College, Bikaner",
-                            "Year of Passing": "2011"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -4529,32 +4106,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                             "Title of the Paper": "Numerical simulation for effect of splitters on performance of elbow draft tube\u201d",
                             "Full Journal Name / Conference Name, Volume number, page number, Date": "In proceedings of the International Conference on Hydro power for Sustainable Developmen, February 05-07, 2015 Dehradun."
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -4787,32 +4338,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Mechanical",
-                            "Group": "Mechanical",
-                            "College Name/University": "National Institute of Technology (NIT), Rourkela",
-                            "Year of Passing": "2021"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Production Engineering",
-                            "Group": "Production Engineering",
-                            "College Name/University": "National Institute of Technology (NIT), Rourkela",
-                            "Year of Passing": "2017"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical",
-                            "Group": "Mechanical",
-                            "College Name/University": "RVR & JC College of Engineering, ANU",
-                            "Year of Passing": "2013"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -4945,32 +4470,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Book Chapters",
                     "content": "Thrinadh Jadam, Deepankar Panda, Suman Chatterjee, Saurav Datta, Santosh Kumar Sahoo, Subash Chandra Mishra, Performance of Microwave Irradiated WC-Co Insert during Dry Machining of Inconel 718 Superalloys, Book Chapter in: Sustainable Manufacturing and Design, (pp. 103-132). Woodhead Publishing."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -5223,32 +4722,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     "content": "Best paper award for the paper titled &ldquo;Bird Species Classification Using Convolutional Neural Networks and Data Augmentation&rdquo; in the International conference on Interactive Design And Digital Manufacturing (ICIDDM 2K25)."
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Thermal Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "National Institute of Technology, Rourkela",
-                            "Year of Passing": "2023"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Thermal Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Gokul Group of Institutions, JNTU Kakinada",
-                            "Year of Passing": "2015"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Kakinada Institute of Technology and Sciences, JNTU Kakinada",
-                            "Year of Passing": "2013"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -5320,32 +4793,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Conferences, Seminars & Workshops attended",
                     "content": "Participated AICTE Sponsored ATAL FDP on \"AI & ML Empowerment in Energy Storage and Advanced Robotics\u201d was organized by Department of Mechanical Engineering held at Aditya University from 09.12.2024 to 14.12.2024."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -5545,32 +4992,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     "content": "Secured All India Rank 677 with a GATE score of 635 and an estimated 99.17 percentile among 81,175 candidates in the GATE 2011 examination, scoring 60.67 marks out of 100."
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Industrial Design Engineering",
-                            "Group": "Industrial Design Engineering",
-                            "College Name/University": "National Institute of Technology, Rourkela",
-                            "Year of Passing": "2023"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Indian Institute of Technology, Roorkee",
-                            "Year of Passing": "2013"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Pragati Engineering College, Surampalem",
-                            "Year of Passing": "2011"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -5620,32 +5041,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "Participated in Faculty Research Program on \"Automation and Robotics for Adaptive Industrial Systems\" \u200bat Department of Mechanical Engineering, NIT Patna from 07.08.2025 to 09.08.2025.",
                         "Participated in Faculty Development Program on \"Cognitive Engineering and Human Factors\" at NIT Rourkela from 04.08.2025 to 06.08.2025"
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -5989,32 +5384,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Smart Materials",
-                            "Group": "Smart Materials",
-                            "College Name/University": "NIT-Karnataka",
-                            "Year of Passing": "2020"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Machine Design",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Madanapalle Institute of Technology & Science",
-                            "Year of Passing": "2013"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "C.R.E.C., Tirupati",
-                            "Year of Passing": "2010"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -6085,160 +5454,8 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Design",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "National Institute of Technology, Rourkela",
-                            "Year of Passing": "2024"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "National Institute of Technology, Rourkela",
-                            "Year of Passing": "2018"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Bhabha Engg. Research Inst., R.G.P.V, Bhopal",
-                            "Year of Passing": "2010"
-                        }
-                    ]
-                },
-                {
-                    "title": "List of Publications",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Title of the Paper": "Evaluation of dry sliding wear behavior of abaca/glass fiber hybrid composite for tribological applications.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials: Design and Applications. 2023 Mar;237(3):714-23."
-                        },
-                        {
-                            "S.No": "2",
-                            "Title of the Paper": "Effect of Drying Route and Sintering Temperature on Zirconia Nanoparticle Synthesis for Filler Application in Polymer Composites.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Transactions of the Indian Institute of Metals. 2023 Jan 18:1-2."
-                        },
-                        {
-                            "S.No": "3",
-                            "Title of the Paper": "Tribological behavior of Syngonanthus nitens natural fiber reinforced epoxy composite.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Transactions of the Indian Institute of Metals. 2021 Jul;74(7):1741-50."
-                        },
-                        {
-                            "S.No": "4",
-                            "Title of the Paper": "Influence of Chemical Modification on Structural, Morphological, Thermal, and Weathering Behavior of Eulaliopsis Binata Fiber and Its Composites.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "J Nat Fibers. 2022;1\u201315."
-                        },
-                        {
-                            "S.No": "5",
-                            "Title of the Paper": "Bio waste (Pistacia vera nut shell) filled polymer composites for tribological applications.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Proc Inst Mech Eng Part L J Mater Des Appl. 2022;236(2):334\u201344."
-                        },
-                        {
-                            "S.No": "6",
-                            "Title of the Paper": "Dry Sliding Wear Behaviour of Epoxy/Biochar Composites.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Trans Indian Inst Met. 2022;1\u201311."
-                        },
-                        {
-                            "S.No": "7",
-                            "Title of the Paper": "Effect of weathering on physical and mechanical characteristics of eulaliopsis binata fiber/epoxy composites.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Trans Indian Inst Met. 2022;75(2):337\u201349."
-                        },
-                        {
-                            "S.No": "8",
-                            "Title of the Paper": "Erosion wear behaviour of A357/fly ash composites. Proceedings of the Institution of Mechanical Engineers",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Part J: Journal of Engineering Tribology. 2022 Feb;236(2):284-91."
-                        },
-                        {
-                            "S.No": "9",
-                            "Title of the Paper": "Effect of Heat Treatment on Wear Behavior of A357/Cenosphere Composites.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Transactions of the Indian Institute of Metals. 2020 Dec;73:2985-94."
-                        },
-                        {
-                            "S.No": "10",
-                            "Title of the Paper": "Influence of alkali treatment on the interfacial shear strength of Agave lechuguilla fiber and its significance as a reinforcing material in polymer composites for mechanical applications.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Polymer Composites. 2023 Jun;44(6):3487-99."
-                        },
-                        {
-                            "S.No": "11",
-                            "Title of the Paper": "Mechanical, morphological, and tribological behavior of Eulaliopsis binata fiber epoxy composites.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "J Appl Polym Sci. 2021;138(12):1\u201310."
-                        },
-                        {
-                            "S.No": "12",
-                            "Title of the Paper": "Moisture absorption and thickness swelling behaviour of luffa fibre/epoxy composite.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "J Reinf Plast Compos. 2019;38(19\u201320):923\u201337."
-                        },
-                        {
-                            "S.No": "13",
-                            "Title of the Paper": "The Role of Impingement Angle and Velocity on the Solid Particle Erosion Behavior of Agave Lechuguilla Fiber-Reinforced Polymer Composite.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Transactions of the Indian Institute of Metals. 2023 Jun 9:1-8."
-                        },
-                        {
-                            "S.No": "14",
-                            "Title of the Paper": "Potential of Syngonanthus nitens fiber as a reinforcement in epoxy composite and its mechanical characterization.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of the Indian Academy of Wood Science. 2020 Jun;17:73."
-                        },
-                        {
-                            "S.No": "15",
-                            "Title of the Paper": "Modelling and parametric analysis of erosion wear response of Eulaliopsis Binata fiber polymer composites using response surface methodology.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal Tribologi. 2020 Oct;27(October)."
-                        },
-                        {
-                            "S.No": "16",
-                            "Title of the Paper": "Effect of stacking sequence on abrasive wear behavior of abaca natural fiber reinforced polymer composites hybridized with glass fiber.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Materials Today: Proceedings. 2023 Mar 8."
-                        },
-                        {
-                            "S.No": "17",
-                            "Title of the Paper": "Mechanical and erosive wear behavior of rubber wood particulate reinforced epoxy composite.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Materials Today: Proceedings. 2019 Jan 1;19:223-7."
-                        },
-                        {
-                            "S.No": "18",
-                            "Title of the Paper": "Influence of fiber surface modification on impact strength behaviour of Agave Lechuguilla fiber reinforced polymer composites.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Materials Today: Proceedings. 2023 Mar 9."
-                        },
-                        {
-                            "S.No": "19",
-                            "Title of the Paper": "Effect of stacking sequence on the tribological behaviour of jute-glass hybrid epoxy composite.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Materials Today: Proceedings. 2020 Jan 1;28:936-9."
-                        }
-                    ]
-                },
-                {
                     "title": "Book Chapters",
                     "content": "Bera T, Mohapatra L, Prakash V, Acharya SK. Abrasive Wear Behavior of Bio-Fiber-Reinforced Epoxy Composite with Taguchi Approach. In Recent Trends in Design, Materials and Manufacturing: Selected Proceedings of ICRADMM 2020 2022 Apr 29 (pp. 545-554). Singapore: Springer Nature Singapore."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -6462,32 +5679,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "National Institute of Technology, Durgapur",
-                            "Year of Passing": "2025"
-                        },
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Refrigeration & Air Conditioning",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "JNTU Anantapuramu",
-                            "Year of Passing": "2014"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechatronics",
-                            "Group": "Mechatronics",
-                            "College Name/University": "SASTRA University, Thanjavur",
-                            "Year of Passing": "2011"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -6517,32 +5708,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "Deep, A.P., Jena, A. and Karmakar, S., 2019. Thermodynamic Analysis of an Integrated Gasification Fuel Cell- Combined Cycle Power Plant Using Indian Coal. In Advances in Fluid and Thermal Engineering (pp. 781-792). Springer, Singapore.",
                         "More, A., Pruthvi Deep, A. and Karmakar, S., 2021. Thermodynamic Analysis of a 500 MW e Coal-Fired Supercritical Thermal Power Plant Integrated with Molten Carbonate Fuel Cell (MCFC) at Flue Gas Stream. In Proceedings of the 7th international conference on advances in energy research (pp. 645-654). Springer, Singapore."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -6702,32 +5867,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Awards/Achievements",
                     "content": "Best NSS Programme Officer by JNTU Anantapur"
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -6846,25 +5985,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "M.Tech.",
-                            "Specialization": "Advanced Manufacturing Systems",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Madanapalle Institute of Technology and Science, JNTUA",
-                            "Year of Passing": "2015"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Fathima Institute of Technology and Management, JNTUA",
-                            "Year of Passing": "2013"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -6909,32 +6029,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "Participated in six-day \"Drone Pilot training\" at Dhanwantari Drone Pilot Academy (DDPA), Bengaluru from 21.07.2025 to 26.07.2025.",
                         "Participated in \u201cAmaravati Drone Summit 2024\u201d at CK Conventions, Vijayawada on 22nd & 23rd October 2024."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]

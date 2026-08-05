@@ -92,32 +92,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Google scholar : https://scholar.google.com/citations?view_op=list_works&hl=en&user=LWnH30wAAAAJ",
                         "h-Index (As per Scopus Data) :"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -224,32 +198,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Honoured with the S.P. Lingamurthy Gold Medal for securing First Rank in the M.A. English University Examinations, presented by the then Governor of Andhra Pradesh, Dr. Sushil Kumar Shinde, in 2005.",
                         "Won the Maddi Sudarsan Rao Endowment Prize for obtaining the highest marks in the S.V. University examinations (1999&ndash;2000).",
                         "Guided one Ph.D. scholar and has authored two books and four book chapters to date."
-                    ]
-                },
-                {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Common Wealth Literature",
-                            "Group": "Common Wealth Literature",
-                            "College Name/University": "Sri Padmavathi Mahila Visva Vidyalayam (Women\u2019s University), Tirupati, A.P.",
-                            "Year of Passing": "2013"
-                        },
-                        {
-                            "Course": "M.A.",
-                            "Specialization": "English Language & Literature",
-                            "Group": "M.A. University First Received Gold Medal",
-                            "College Name/University": "Sri Padmavathi Mahila Visvavidyalayam, Tirupati, A.P",
-                            "Year of Passing": "2004"
-                        },
-                        {
-                            "Course": "B.Sc.",
-                            "Specialization": "Zoology, Physics, Chemistry",
-                            "Group": "B.Sc.(Physics) Received Endowment Prize",
-                            "College Name/University": "Sri Padmavathi Women\u2019s Degree College, Tirupati, Sri Venkateswara University, A.P.",
-                            "Year of Passing": "2001"
-                        }
                     ]
                 },
                 {
@@ -403,10 +351,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Patents",
-                    "content": "An analysis of the role of English Teachers in Engineering Colleges, Application No.202541032233 A, Date of filing of Application: 01/04/2025, (Patent Application Publication-India), The Patent Office Journal No. 15/2025 Published Dated 11/04/2025."
-                },
-                {
                     "title": "Book Publications",
                     "content": [
                         "\"Socio-political Realities of India in Select Novels of Manohar Malgonkar, Khushwant Singh and Rohinton Mistry: A Study\" published by GRIN Verlag: Germany, ISSN: 9783346290373 in November 2020.",
@@ -488,32 +432,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "One Day Workshop: Engineering Inner Excellence, JNTUCE, Anantapuramu, 5 July 2014.",
                         "Two Day Workshop: Activating the ESL Classroom by US English Language Fellow Joseph Dwailbee, Sri Padmavati Women\u2019s University, Tirupati, 23-24 May 2012.",
                         "Attended FUSION: A Three-Day National Workshop on Soft Skills conducted by the Department of Training & Placements & Industry Relations of Sir C.R.Reddy College of Engineering, Eluru during 15-17 Nov 2007."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -622,32 +540,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "English",
-                            "Group": "English",
-                            "College Name/University": "Berhampur University",
-                            "Year of Passing": "2015"
-                        },
-                        {
-                            "Course": "M.A.",
-                            "Specialization": "English",
-                            "Group": "M.A.",
-                            "College Name/University": "Khallikote College (Autonomous), Berhampur University",
-                            "Year of Passing": "1999"
-                        },
-                        {
-                            "Course": "B.A.",
-                            "Specialization": "English Honours",
-                            "Group": "B.A.",
-                            "College Name/University": "Berhampur University",
-                            "Year of Passing": "1997"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -733,32 +625,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Sw Skills: Problems and Challenges in South Odisha. Authors Press Advertisers, New Delhi. Page-No.-01-To-234, ISBN- 9388859391.",
                         "Continuous Professional Development as a Means of Teachers Getting a Grip on Marginalized Students Learning in Multilingual Matters, St Nicholas House, 31-34 High Street, Bristol, BS1 2AW, UK (Accepted)",
                         "IoT Powered Training for Employee Potential through Smart Embedded Tools and Technologies. Chapter 11 in the book Embedded Devices and Internet of Things, Technologies, and Applications.ISBN-9781032606002.Routledge, Taylor & Francis Group"
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -919,32 +785,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Received Best Teacher Award in the year 2008 for adopting good techniques and best practices in teaching.",
                         "Awarded a cash incentive in the year 2016 for successfully accommodating bulk scholarships for students in need.",
                         "Received Certificate of appreciation for presenting the topic entitled Student Welfare Activities during the Induction program held at Madanapalle Institute of Technology and Science during 29/09/2022 for I B. Tech students."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1126,60 +966,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "TEFL/TESOL",
-                            "Specialization": "English",
-                            "Group": "English",
-                            "College Name/University": "London College of Teachers",
-                            "Year of Passing": "2020"
-                        },
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "English",
-                            "Group": "English",
-                            "College Name/University": "Sri Venkateswara University",
-                            "Year of Passing": "2017"
-                        },
-                        {
-                            "Course": "MBA",
-                            "Specialization": "Management Studies",
-                            "Group": "MBA",
-                            "College Name/University": "Sri Venkateswara University",
-                            "Year of Passing": "2012"
-                        },
-                        {
-                            "Course": "PGDTE PGCTE",
-                            "Specialization": "English",
-                            "Group": "English",
-                            "College Name/University": "English and Foreign Languages University",
-                            "Year of Passing": "2010"
-                        },
-                        {
-                            "Course": "M.A.",
-                            "Specialization": "English Literature",
-                            "Group": "M.A.",
-                            "College Name/University": "Sri Venkateswara University",
-                            "Year of Passing": "2006"
-                        },
-                        {
-                            "Course": "M.Com.",
-                            "Specialization": "Commerce",
-                            "Group": "M.Com.",
-                            "College Name/University": "Sri Venkateswara University",
-                            "Year of Passing": "2003"
-                        },
-                        {
-                            "Course": "B.Com.",
-                            "Specialization": "Commerce",
-                            "Group": "B.Com.",
-                            "College Name/University": "Indirapriyadarshini Degree College for Women, Osmania University",
-                            "Year of Passing": "1992"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -1240,50 +1026,10 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Patents",
-                    "content": [
-                        "Dr. Ram Chandra Kalluri, Dr. J. Amutha Monica, Dr. Bellamkonda Krishna Chandra Keerthi, Dr. Anitha Bolimela, Dr. Jyoti Sharma, Dr. Koteshwar Ramesh Rakesh, Dr. G. Chandra Sekhar, Alisha. O, Mr. Christian Rafael Quevedo Lezama, Mr. Sanjay Popat Shinde. \u201cA Comprehensive Language Learning System: Harnessing Contextual Feedback for Improved Proficiency\u201d. Application No.202441068918 A - Publication Date: 20/09/2024",
-                        "Dr. M. Jayaranjan, Dr. D. Abinaya, Dr. S. A.Palanisamy, Dr. Anitha Bolimela, Dr. Premkishor S K, Dr. R. Akila, Leeshma K, Dr. Rayerath Hemalatha, Mrs. Syed. Nafisa Parveen, Dr. Shalini Infanta. L, M. Narmadha. \u201cAutomated System for Grammar and Syntax Correction in English Texts\u201d. Application No.202441077490 A - Publication Date: 25/10/2024",
-                        "Dr. Anitha Bolimela, Prof. L. D. Thomas, Dr. Sumita Mandal, Dr. Sanjay Kumar Singh, Dr. Rajani T. Kalluri, Mr. Jyotipal Borah, Mrs. B. Nandhini, Dr. Bhupendra Nandlal Kesur, Ms. V. K. Vasanthi, Dr. S. Geetha, Ms. R. Van. \u201cNatural Language Processing Method for Contextual Understanding of English Idioms and Phrases\u201d. Application No.202441088836 A - Publication Date: 22/11/2024 (54)",
-                        "Dr. Ameer Asra Ahmed, Dr. Abhijit Pandit, Dr. Anitha Bolimela, Jyotipal Borah, Dr.K.Martina Rani, Mr. Gangadhar Hugar, Dr. Arti Badgel, Dr. Soumya R, Dr. Bhavesh M.Jasani, Mr. Ajmeera Ramesh. \u201cUnique Method and strategy for cross cultural management to aid international Businesses\u201d. Application No.202541009608 A (19) Publication Date: 14/02/2025",
-                        "Dr. G.Hemalatha, Dr.B.Chandana, Dr. Anitha Bolimela, Dr. Madhavi Latha.A, Mrs. Shaik Rafiya Begum, Mrs. V. Vijayavadivu, Dr. Choure Atul Narayan, Dr. Nandigama Madhu, Dr. Nirmala Devi M. \u201cPersonalized Learning in Literature and Language: The AI Revolution\u201d. Application No.202541040319 A - Publication Date: 16/05/2025 (54)",
-                        "I. V. Sona Lakshmi, Dr. Anitha Bolimela, Dr. Sanjay Kumar Singh, Dr. Shravan Rajeramji Banasure, Dr. Swapnil B. Managhe, Rituparna Acharyya, Dr. R. Arun. \u201cEnglish Language Translation Device\u201d. Application No.435826-00113 \u2013 Publication Date: 13/12/2024 (Design)",
-                        "R. Subhan Tilak Basha, Dr. B. P. Santosh Kumar, Dr. B. Anitha. \u201cAi-Powered System And Method For Early Detection And Classification of Brain Tumors Using Medical Imaging\u201d. Application No.202541033594 A (Publication Date : 25/04/2025 (54)",
-                        "R. Subhan Tilak Basha, Dr. B. P. Santosh Kumar, Dr. B. Anitha. \u201cMachine Learning-Based System And Method For Predicting Brain Tumor Progression Using Multimodal Data Fusion. Application No.202541033973 A Publication Date : 02/05/2025 (54)",
-                        "R. Suhan Tilak Basha, Dr. B. P. Santosh Kumar, Dr. B. Anitha. \u201cA System And Method For Personalized Treatment Planning Of Brain Tumors Using Integrated Genomic And Imaging DATA\u201d. Application No.202541033592 A (19) Publication Date : 02/05/2025 (54)"
-                    ]
-                },
-                {
                     "title": "Books Published",
                     "content": [
                         "Mastering Business Communication Skills Tools for Success, Scicrafthub Publication, Thane 2025, ISBN: 978-81-985542-6-0 (2nd Author)",
                         "English Communication Skills for Engineers, Indo-Continental Academic Publishers ISBN No. 978-93-48684-81-3 (1st Author) DOI: 10.5281/zenodo.14994753"
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1389,32 +1135,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Title of the Patent": "Artificial Intelligence Based Detection and Prevention Of Thyroid Disease On Hormone Level For All Ages Of People Using IOT and Machine Learning For Smart Health Care Management System",
                             "Status": "Published"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1590,32 +1310,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "ELT / Biolinguistics",
-                            "Group": "English",
-                            "College Name/University": "National Institute of Technology, Tiruchirappalli",
-                            "Year of Passing": "2022"
-                        },
-                        {
-                            "Course": "M.A.",
-                            "Specialization": "English Language and Linguistics",
-                            "Group": "M.A.",
-                            "College Name/University": "Madurai Kamaraj University, Madurai",
-                            "Year of Passing": "2016"
-                        },
-                        {
-                            "Course": "B.Tech.",
-                            "Specialization": "Mechanical Engineering",
-                            "Group": "Mechanical Engineering",
-                            "College Name/University": "Amrita Vishwa Vidyapeetham, Coimbatore",
-                            "Year of Passing": "2007"
-                        }
-                    ]
-                },
-                {
                     "title": "List of Publications",
                     "content": [
                         {
@@ -1638,32 +1332,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Title of the Paper": "An A to Z of second language assessment: How language teachers understand assessment concepts.",
                             "Full Journal Name / Conference Name, Volume number, page number, Date": "London, UK: British Council, 46."
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -1847,32 +1515,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Certificate of Appreciation from NPTEL in recognition of a Mentor for the Effective Writing course - Jan-Apr 2025",
                         "Certificate of Appreciation from NPTEL in recognition of a Mentor for the Employment Communication A Lab Based Course - Jan-Apr 2025",
                         "Certificate of Appreciation from NPTEL in recognition of a Mentor for the Soft Skills Course - July-Dec 2021"
-                    ]
-                },
-                {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Indo-American Literature (Comparitive)",
-                            "Group": "Indo-American Literature",
-                            "College Name/University": "S. V. University, Tirupati",
-                            "Year of Passing": "2024"
-                        },
-                        {
-                            "Course": "M.A.",
-                            "Specialization": "American Literature",
-                            "Group": "M.A., (Litt.)",
-                            "College Name/University": "S. V. University, Tirupati",
-                            "Year of Passing": "1992"
-                        },
-                        {
-                            "Course": "B.A.",
-                            "Specialization": "Advanced English (HEE)",
-                            "Group": "B.A., (Litt.)",
-                            "College Name/University": "S. P. W. College, Tirupati",
-                            "Year of Passing": "1990"
-                        }
                     ]
                 },
                 {
@@ -2117,32 +1759,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "A Two-day National Level Faculty Development Programme on \"Techniques in Teaching English\" organised by Sri Vidyanikethan Engineering College, Tirupati, on 8 & 9 March 2013.",
                         "A one-day National Level Workshop on Technical English for engineering students in March 2011 under PHOTON-11 at Madanapalle Institute of Technology & Science, Madanapalle, Andhra Pradesh.",
                         "A One Week JKC Training Programme on Communication & Soft Skills organized by the JKC the Government of Andhra Pradesh, March 2006."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -2615,32 +2231,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Qualified APSET 2021.",
                         "NPTEL Discipline Star Award January-April 2024"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -2784,32 +2374,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Book Publication",
                     "content": "Peristaltic Transport Problems. Lambert Academic Publishing, Germany, (2012) (108 pages), ISSN-13: 978-3-8454-3068-3 ISBN-10: 3845430683"
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -3006,32 +2570,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "Qualified CSIR-UGC National Eligibility Test (NET) &ndash; 10 August 2018: Demonstrated advanced research aptitude and subject expertise, earning eligibility for Junior Research Fellowship (JRF) and Lectureship at the national level through the prestigious CSIR-UGC examination.",
                         "Qualified State Level Eligibility Test (SLET) &ndash; 10 December 2016: Secured eligibility for Assistant Professorship by successfully clearing the SLET examination, reflecting strong conceptual understanding and teaching competence at the state level."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -3463,32 +3001,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Title of the Patent": "Influence of Thermophoresis and Brownian Motion of Nanoparticles on Radiative Chemically-Reacting MHD Hiemenz Flow Over a Nonlinear Stretching Sheet with Heat Generation.",
                             "Status": "Published"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -3949,32 +3461,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -4104,32 +3590,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -4427,32 +3887,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Journal Quartile (Q1/Q2/Q3/Q4)": ""
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -4613,32 +4047,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -5276,32 +4684,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "Achieved the top rank in M.Sc. Physics at SVU PG Centre, Kavali.",
                         "Ratified as Associate Professor JNTUA, Ananthapuramu."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -6031,32 +5413,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Awards/Achievements",
                     "content": "Early Career Research Awardee 2018, Department of Science and Technology-SERB, Govt. of India."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -7042,32 +6398,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Graduate Aptitude Test in Engineering (GATE-PHYSICS, 2002), India: 97.59 percentile score & all India rank 50.",
                         "Reviewer of reputed National/International journals"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -7450,32 +6780,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                 {
                     "title": "Awards/Achievements",
                     "content": "Published Book on Advanced Lithium Ion batteries, (synthesis of anode and cathode materials)."
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -7809,32 +7113,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Best oral presentation in symposium S9 of XIX IMRC 2010, Cancun, M&eacute;xico.",
                         "Best poster award in symposium S9-P9 of XIX IMRC 2010, Cancun, M&eacute;xico.",
                         "Achievement of Gold Medal at VIT, Vellore, T.N, India, 2006."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -8235,32 +7513,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Funding Agency": "Department of Physics, MITS sponsored"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -8346,581 +7598,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Publication Details",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2025-26",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Nd3+ -doped oxyfluoride silicate glasses and glass-ceramics with emphasis on sodium yttrium fluoride crystal structure, thermal, and near-infrared luminescence properties, Optical Materials, 171 (2026) DOI: 10.1016/j.optmat.2025.117792",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "2",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2025-26",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Optical and structural properties of phosphotellurite glasses containing ZnTe and Te quantum dots, Ceramics International, 30 (2025) 64318-64325. DOI: 0.1016/j.ceramint.2025.11.169",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "3",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2025-26",
-                            "Author Position": "7",
-                            "Details of Research Publication": "Optimization of Europium-Doped Lanthanum Tungstate Nanophosphors via Surface Modification for Superior Red Luminescence and Photonic ApplicationsInternational Journal of Minerals, Metallurgy and Materials, 32 (2025) 2579-2591. DOI: 10.1007/s12613-025-3212-9.",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "4",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2024-25",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Growth of epitaxial 2D Zn NDs and transform to 3D ZnO nanostructures for UV photodetector Inorganic Chemistry Communications 180 (2025) 114928. DOI: 10.1016/j.inoche.2025.114928",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "5",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2024-25",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Sodium&ndash;Zinc&ndash;Aluminium&ndash;Phosphate (NZAP) glasses doped with Ho3+ ions: a study of structural and spectroscopic properties for emission Applications Indian J Phys, (2025). DOI: 10.1007/s12648-025-03632-x",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                        },
-                        {
-                            "S.No": "6",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2024-25",
-                            "Author Position": "5",
-                            "Details of Research Publication": "Reddish-Orange Light Emission in Eu3+ Doped and Dy3+/Eu3+ Co-doped lithium Tetraborate Glasses for Solid-State Lighting Devices.Luminescence, 40 (2025), 70191.DOI: 10.1002/bio.70191",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "7",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2024-25",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Stokes and anti-Stokes emission and biological window III (1.53 &micro;m) luminescence thermometry analysis from Stark sublevels in Er3+, Yb3+ -doped fluorophosphate glasses. Open Ceramics, 22 (2025) 100762. DOI: 10.1016/j.oceram.2025.100762",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "8",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2023-24",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Effect of B2O3 on optical properties of Dy3+ ion doped Zinc-Aluminium-Sodium-Phosphate Glasses Journal of Applied Spectroscopy, 91 (2024) 384.DOI: 10.1007/s10812-024-01731-x",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                        },
-                        {
-                            "S.No": "9",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2023-24",
-                            "Author Position": "6",
-                            "Details of Research Publication": "Nesting BiVO4 nanoislands in ZnO nanodendrites by two-step electrodeposition for efficient solar water splitting J. Phys. D: Appl. Phys. 57 (2024) 355110. DOI: 10.1088/1361-6463/ad5212",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "10",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2023-24",
-                            "Author Position": "1",
-                            "Details of Research Publication": "The influence of Al2O3 concentration on the NaYF4 crystallization in oxyfluoride glass&ndash;ceramics. International Journal of Applied Glass Science, 15 (2024) 44-56. DOI: 10.1111/ijag.16642",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "11",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Down-/Up-conversion luminescence behaviors and energy transfer analysis in Tm3+ and Tm3+/Yb3+ co-doped tellurite glasses, Inorganic Chemistry Communications, 158 (2023) 111395. DOI: 10.1016/j.inoche.2023.111395",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "12",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Impact of AgNO3 Addition on Luminescence of Er3+ Ion Doped Zinc&ndash;Aluminum&ndash;Sodium&ndash;Fluorophosphate (ZANP) Glasses. Bulletin of the Russian Academy of Sciences: Physics, 87 (2023) 1732. DOI: 10.3103/S1062873823703987.",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                        },
-                        {
-                            "S.No": "13",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "4",
-                            "Details of Research Publication": "Down conversion and efficient NIR to visible up-conversion emission analysis in Ho3+/Yb3+ co-doped tellurite glasses. Bolet&iacute;n de la Sociedad Espa&ntilde;ola de Cer&aacute;mica y Vidrio, 62 (2023) 379. DOI: 10.1016/j.bsecv.2023.01.002",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "14",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Bright red luminescence from Eu3+ activated noncytotoxic SnO2 quantum dots for latent fingerprint detection. Ceramics International, 48 (2022) 17738-17748. DOI: 10.1016/j.ceramint.2022.03. 044",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "15",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2020-21",
-                            "Author Position": "1",
-                            "Details of Research Publication": "The structure of barium phosphate glasses and its influence on their thermodynamic stability and viscous flow. Materials chemistry and Physics, 258 (2021) 123941.DOI:10.1016/j.matchemphys.2020. 123941",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "16",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2020-21",
-                            "Author Position": "1",
-                            "Details of Research Publication": "In Situ Synthesis of &beta;-Na1.5Y1.5F6: Er3+ Crystals in Oxyfluoride Silicate Glass for Temperature Sensors and Their Spectral Conversion and Optical Thermometry Analysis Molecules 26(22) (2021) 6901. DOI:10.3390/molecules26226901",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "17",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2020-21",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Ionic conductivity of Li2O&ndash;P2O5 glasses from thermodynamic modeling of their chemical structure J. American Ceramic Society, 104(11) (2021) 5625-5635. DOI: 10.1111/jace.17962",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "18",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2020-21",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Er3+/Yb3+ co-doped oxyfluoro tellurite glasses: Analysis of optical temperature sensing based on up-conversion luminescence. International Journal of Applied Glass Science, 12(4) (2021) 462-471. DOI: 10.1111/ijag.16011",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "19",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2019-20",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Thermodynamic model and Raman spectra of MgO&ndash;P2O5 glasses J. Thermal Analysis and Calorimetry. 142(5) (2020) 2025&ndash;2031. DOI:10.1007/s10973-020-10033-1",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "20",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2019-20",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Structure and Raman spectra of binary barium phosphate glasses J. Thermal Analysis and Calorimetry, 142(2) (2020) 937&ndash;942. DOI:10.1007/ s10973-020-09328-0",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "21",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2018-19",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Nd3+ doped new oxyfluoro tellurite glasses and glass-ceramics containing NaYF4 nano crystals &minus; 1.06 &mu;m emission analysis.J. Lumin., 207 (2019) 469-476, DOI: 10.1016/j.jlumin.2018.11.058",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "22",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2017-18",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Pr3+ doped new TZYN glasses and glass-ceramics containing NaYF4 nanocrystals: Luminescence analysis for visible and NIR applications Opt. mat., 86 (2018) 178-184, DOI: 0.1016/j.optmat.2018.10.004",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "23",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2016-17",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Enhancement of down- and upconversion intensities in Er3+/Yb3+ co-doped oxyfluoro tellurite glasses induced by Ag species and nanoparticles J. Lumin., 192 (2017) 250-255; DOI: 10.1016/j.jlumin.2017.06.059",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "24",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2016-17",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Enhanced VIS and NIR emissions of Pr3+ ions in TZYN glasses containing silver ions and nanoparticles. J. Alloys and Compounds, 695 (2017) 607-612; DOI: 10.1016/j.jallcom.2016.11. 058",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "25",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2015-16",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Quantum cutting and up-conversion investigations in Pr3+/Yb3+ co-doped oxyfluoro- tellurite glasses. J. Non-Cryst. Solids, 450 (2016) 149&ndash;155; DOI: 10.1016/j.jnoncrysol.2016.08. 009",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "26",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2014-15",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Energy transfer-based emission analysis of Dy3+/Eu3+ co-doped ZANP glasses for white LED applications J. Alloy.Comp., 646 (2015) 1096-1103; DOI:10.1016/j.jallcom.2015.05.138",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "27",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2014-15",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Effect of ZnO on spectroscopic properties of Sm3+ doped zinc phosphate glasses Physica B, 459 (2015) 79-87; DOI: 10.1016/j.physb.2014.11.016",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "28",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2014-15",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Luminescence properties of Dy3+ doped different fluoro-phosphate glasses for solid state lighting applications J. Mol. Struct., 1080 (2015) 153-161; DOI:10.1016/j.molstruc.2014.09.080",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "29",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2014-15",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Luminescence properties of Dy3+ -doped zinc-aluminium-sodium-phosphate (ZANP) glasses for yellowish white light applications Optik, 126 (2015) 4050&ndash;4055; DOI: 10.1016/j.ijleo.2015.08.001",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "30",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2014-15",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Optical investigations of Sm3+ doped lead-free zinc phosphate glasses Physics and Chemistry of Glasses: European Journal of Glass Science and Technology, 56 (2015) 159-168; DOI: 10.13036/17533562. 56.4.159.",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                        },
-                        {
-                            "S.No": "31",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2014-15",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Radiative properties and Luminescence spectra of Sm3+ ion in zinc-alumino-sodium-phosphate (ZANP) glasses J. Lumin., 161 (2015) 202&ndash;208; DOI: 10.1016/j.jlumin.2015.01.016",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "32",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2014-15",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Variation of photoluminescence features in Pr3+ doped lithium-fluoro-borate glass by changing different modifier oxides (MgO, CaO, CdO and PbO)-Judd-Ofelt theory application AIP Conf. Proc. 1665, (2015) 070005. DOI: 10.1063/1.4917869.",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference Proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
-                        },
-                        {
-                            "S.No": "33",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2014-15",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Structural and luminescence studies of Ho3+-doped zinc-aluminium-sodium-phosphate (ZANP) glassesAIP Conf. Proc. 1665, (2015) 070009. DOI: 10.1063/1.4917873.",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference Proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
-                        },
-                        {
-                            "S.No": "34",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "1",
-                            "Details of Research Publication": "PbMoO4:Eu3+ red phosphor material for potential applications in white LEDs.Indian Journal of Physics, 88 (12) (2014) 1291-1297; DOI:10.1007/s12648-014-0578-3.",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                        },
-                        {
-                            "S.No": "35",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Kinetics of Fluorescence Properties of Eu3+ ion in strontium-aluminium-bismuth-borate glasses. J. Rare Earths, 32 (2014) 1141-1148; DOI: 10.1016/S1002-0721(14) 60195-2",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "36",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Ho3+-doped strontium&ndash;aluminium&ndash;bismuth&ndash;borate glasses for green light emission. Luminescence, 29(7) (2014) 854-860. DOI: 10.1002/bio.2632",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "37",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Spectroscopic analysis of Ho3+ transitions in different modifier oxide-based lithium&ndash;fluoro-borate glasses Physica B: Condensed Matter, 450 (2014) 58-66.",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "38",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Investigations on spectrosc-opic properties of Pr3+ and Nd3+ doped zinc-alumino-sodium-phosphate (ZANP) glasses.Mol. Struct., 1064 (2014) 6-14; DOI:10.1016/j.molstruc.2014.01.056.",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "39",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Investigations on luminescence performance of Sm3+ ions activated in multi-component fluoro-phosphate glasses Spectrochimica acta part A, 122 (2014) 369-348; DOI: 10.1016/j.saa.2013.11.102",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "40",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Dy3+ doped oxy-fluoride phosphate glasses for laser materials: A photoluminescence study International Journal of Chem Tech Research, 6 (3) (2014) 3726-3729, ISSN: 09744290",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference Proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
-                        },
-                        {
-                            "S.No": "41",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Synthesis and Photoluminescence properties of NaPbB5O9:Dy3+ phosphor material for white light applications J. Physics and Chemistry of Solids, 75 (2014) 1210-1216; DOI: 10.1016/j.jpcs.2014.05.006.",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "42",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Photoluminescence properties of Ho3+ ion in lithium-fluoroborate glass containing different modifier oxides AIP Conference Proceedings, 1591 (2014) 714-716; DOI: 10.1063/1.4872729",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference Proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
-                        },
-                        {
-                            "S.No": "43",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Photoluminescence properties of NaPbB5O9:Dy3+ new material for white light applications.AIP Conference Proceedings, 1591 (2014) 1672-1673, DOI: 10.1063/1.4873072",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference Proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
-                        },
-                        {
-                            "S.No": "44",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2013-14",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Radiative properties and energy transfer mechanism of Sm3+ ion in zinc-alumino-sodium-phosphate (ZANP) glasses International Journal of ChemTech Research, 6 (3) (2014) 1705-1707, ISSN: 09744290",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference Proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
-                        },
-                        {
-                            "S.No": "45",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2012-13",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Influence of modifier oxides on optical properties of Er3+ doped lithium fluoroborate Glass Physics and Chemistry of Glasses: European Journal of Glass Science and Technology, 54(5) (2013) 216-222, ISSN:00319090",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                        },
-                        {
-                            "S.No": "46",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2012-13",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Structural and optical properties of Nd3+ in lithium fluoro-borate glass with relevant modifier oxides.Opt. Mater., 35 (2013) 2670-2676, DOI: 10.1016/j.optmat.2013.08.004",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "47",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2012-13",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Er3+-doped strontium lithium bismuth borate glasses for broadband 1.5 &mu;m emission-structural and optical properties J Alloy. Comp., 563 (2013) 22-27, DOI: 10.1016/j.jallcom.2013.02.055",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "48",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2012-13",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Optical absorption and photoluminescence properties of Dy3+ doped heavy metal borate glasses effect of modifier oxides.J. Mole. Struc., 1041 (2013) 100-105",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "49",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2012-13",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Thermal and Optical properties of Nd3+ doped lead zinc borate glasses&ndash;influence of alkali metal ions.Physica B, 415 (2013) 67-71 DOI: 10.1016/j.physb.2013.02.004",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "50",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2012-13",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Er3+-doped strontium-lithium-bismuth-borate glasses for broad band 1.5 &mu;m emission-optical properties AIP Conference Proceedings, 1512 (2013) 550, DOI: 10.1063/1.4791155",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference Proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
-                        },
-                        {
-                            "S.No": "51",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2011-12",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Luminescence properties of Sm3+ impurities in strontium lithium bismuth borate glasses.AIP Conference Proceedings, 1447 (2012) 581-582. DOI:10.1063/1.4710137",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference Proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "-"
-                        },
-                        {
-                            "S.No": "52",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2011-12",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Influence of modifier oxides on spectroscopic properties of Sm3+ doped lithium fluoborate glasses.J. Molec. Stru., 1028 (2012) 141-147, DOI: 10.1016/j.molstruc.2012.05.071",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "53",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2011-12",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Effect of modifier oxides on absorption and emission properties of Eu3+ doped different lithium fluoroborate glass matrices.Physica B: Condensed Matter, 407(21) (2012) 4303 &ndash; 4307. DOI: 10.1016/j.physb.2012.07.022",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "54",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2011-12",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Spectroscopic investigations on Pr3+ and Nd3+ doped strontium lithium bismuth borate glasses Spectrochimica acta part A, 97 (2012) 963-974, DOI: 10.1016/j.saa.2012.07.100",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "55",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2011-12",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Structural and luminescence properties of Dy3+ ion in strontium lithium bismuth borate glasses J. Lumin., 132 (2012) 841-849, DOI: 10.1016/j.jlumin.2011.08.050",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "56",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2011-12",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Luminescence structural and dielectric properties of Sm3+ impurities in strontium lithium bismuth borate glasses.Opt. Mater., 35 (2) (2012) 108-116. DOI: 10.1016/j.optmat.2012.07.011",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "57",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2011-12",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Structural and Photoluminescence properties of Dy3+ doped different modifier oxide-based lithium borate glasses.J. Lumin., 132 (11) (2012) 2984-2991, DOI: 10.1016/j.jlumin.2012.06.014",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        }
-                    ]
-                },
-                {
                     "title": "Research Projects & Events",
                     "content": [
                         {
@@ -8942,32 +7619,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Senior Research Fellowship, Council of Scientific and Industrial Research (CSIR-SRF).",
                         "Research Fellowships in Science for Meritorious Students, University Grants Commission (UGC-BSR).",
                         "Received a gold medal award for graduating from college in 2002 as the topper in the physics subject."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -9252,32 +7903,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -9368,341 +7993,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Publication Details",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Publication Affiliation": "MITS",
-                            "Academic Year": "2024-25",
-                            "Author Position": "4",
-                            "Details of Research Publication": "A cost-effective approach to fabricate (1-x) KBiFe2O5-(x) CoFe2O4 multiferroic composites prepared via citric-assisted sol-gel method Materials Research Bulletin 190, 113495, 2025",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "2",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2024-25",
-                            "Author Position": "7",
-                            "Details of Research Publication": "Influence of Surface Roughness, Electrical, and Structural Properties on the Catalytic Sulfurization of Glutamic Acid for S-Glutamate Production: Enhancement in Rate and Selectivity under the Catalyst of Lycopene Iranian Journal of Catalysis, Vol. 15 No. 1 (March 2025)",
-                            "Indexing": "ESCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "3",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2023-24",
-                            "Author Position": "4",
-                            "Details of Research Publication": "A study on the tunable magnetic and magnetodielectric properties of KBFO-CFO composite Journal of Materials Science: Materials in Electronics, 35, 12, Pages 820",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "4",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2023-24",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Magnetic and dielectric study of KBiFe2O5/CoFe2O4 composite AIP Conference Proceedings 2995 (1), 020155",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "5",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2023-24",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Dielectric relaxation and magnetodielectric responses in Bi5Ti3FeO15/Bi2Fe4O9 composites AIP Conference Proceedings 2995 (1), 020105",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "6",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2023-24",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Enhanced magnetic, magnetodielectric, and field-dependent magnetoimpedance correlation in the Bi5Ti3FeO15/Bi2Fe4O9 composites Journal of Magnetism and Magnetic Materials 580, 170910",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "7",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "6",
-                            "Details of Research Publication": "Substantial enhancement in magnetic and magnetodielectric properties of 0.7 (Bi2Fe4O9)-0.3 (La0. 67Sr0. 33MnO3) composite Journal of Magnetism and Magnetic Materials 578, 170813",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "8",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Temperature and magnetic field controlled dielectric relaxation and magnetodielectric response in KBiFe1. 9Co0. 1O5 polycrystalline International Journal of Materials Research 114 (4-5), 251-257",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                        },
-                        {
-                            "S.No": "9",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Investigation of dielectric, impedance, and magnetodielectric behavior in Bi5Ti3FeO15&ndash;Bi2Fe4O9 composites prepared by sol&ndash;gel modified method International Journal of Materials Research 114 (4-5), 320-328",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                        },
-                        {
-                            "S.No": "10",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Magnetic, magnetodielectric, and magnetoimpedance correlations in co-substituted (Co, Ho) KBiFe2O5 at room temperature Journal of Alloys and Compounds 938, 168432",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "11",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Signature of magnetodielectric coupling in (0.8)Bi5Ti3FeO15- (0.2)La0.67Sr0.33MnO3 composites AIP Conference Proceedings 2740 (1), 050001",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "12",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Influence of ho substitution on structure, dielectric, and magnetodielectric properties of KBiFe2O5 brownmillerite AIP Conference Proceedings 2740 (1), 050002",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "13",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2022-23",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Investigations of room temperature multiferroic and magneto-electric properties of (1-&Phi;) PZTFT-&Phi; CZFMO particulate composites Journal of Applied Physics 133 (2)",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "14",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Enhanced magnetic and magnetodielectric behavior in morphologically distinct BTFO and LSMO composites Journal of Magnetism and Magnetic Materials 562, 169821",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "15",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Effect of Holmium substitution on magnetic, dielectric, and magnetodielectric properties of polycrystalline KBiFe2O5 Materials Research Bulletin 155, 111947",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "16",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Role of manganite in enhancing dielectric cum magnetic properties of BTFO-LSMO composites Applied Physics A 128 (9), 753",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "17",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Structural, Magnetic, and Magnetodielectric Properties of Bi-Based Modified Ceramic Composites Smart and Advanced Ceramic Materials and Applications",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Book Chapter",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "18",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "4",
-                            "Details of Research Publication": "Evidence of room temperature magnetodielectric and cluster glass behavior of Sr substituted Y-type Ba2Mg2Fe11. 48Mn0. 52O22 hexaferrite Journal of Magnetism and Magnetic Materials 552, 169191",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "19",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Temperature-dependent magnetodielectric, magnetoimpedance, and magnetic field controlled dielectric relaxation response in KBiFe2O5 Journal of Magnetism and Magnetic Materials 549, 169047",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "20",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Observation of magnetodielectric properties in BTFO-LSMO composites synthesized via sol-gel precursor hybrid technique Materials Today: Proceedings 50, 837-841",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "21",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Study of variation in physical properties of KBiFe2O5 prepared by different synthesis routes and heat treatments Materials Today: Proceedings 50, 812-815",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "22",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2021-22",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Enhanced magnetic and magnetodielectric properties of Co-doped brownmillerite KBiFe2O5 at room temperature Journal of Alloys and Compounds 886, 161294",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "23",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2020-21",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Effect of Co substitution on the structural, dielectric and optical properties of KBiFe2O5 International Journal of Minerals, Metallurgy and Materials 28 (11), 1861-1867",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "24",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2020-21",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Structural, magnetic, and magnetodielectric correlations in multiferroic Bi5Ti3FeO15 Journal of Materials Science: Materials in Electronics 32 (16), 21379-21394",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "25",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2020-21",
-                            "Author Position": "2",
-                            "Details of Research Publication": "Dielectric relaxation and conduction mechanism in Aurivillius ceramic Bi5Ti3FeO15 International Journal of Minerals, Metallurgy and Materials 28 (6), 1063-1071",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                        },
-                        {
-                            "S.No": "26",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2020-21",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Evidence of room-temperature magnetodielectric effect in brownmillerite KBiFe2O5 through magnetic, complex dielectric, and impedance study Journal of Materials Science: Materials in Electronics 31 (18), 15875-15884",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "27",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2019-20",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Enhanced magnetic and room temperature intrinsic magnetodielectric effect in Mn modified Ba2Mg2Fe12O22 Y-type hexaferrite Journal of Physics: Condensed Matter 32 (13), 135701",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "28",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2019-20",
-                            "Author Position": "4",
-                            "Details of Research Publication": "Study of dielectric and magnetodielectric properties of Y-type Ba2Mg1.5Ni0.5Fe12O22 hexaferrite AIP Conference Proceedings 2162 (1), 020158",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "29",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2019-20",
-                            "Author Position": "5",
-                            "Details of Research Publication": "The study of magnetic and room temperature magnetoelectric properties of Fe2Te0.95Ta0.05O6 AIP Conference Proceedings 2162 (1), 020065",
-                            "Indexing": "Scopus",
-                            "Article/ Conference/ Book/ Book Chapter": "Conference proceedings",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "30",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2019-20",
-                            "Author Position": "3",
-                            "Details of Research Publication": "Magnetic and anomalous dielectric behavior of Mn modified Ba2Mg2Fe12O22 hexaferrite Physica B: Condensed Matter 568, 70-75",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "31",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2019-20",
-                            "Author Position": "5",
-                            "Details of Research Publication": "Doping induced modification in magnetism and magnetoelectric coupling at room temperature in Fe2Te (1-x) NbxO6 Physica B: Condensed Matter 571, 193-198",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        },
-                        {
-                            "S.No": "32",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2018-19",
-                            "Author Position": "1",
-                            "Details of Research Publication": "Evidence of magneto-dielectric coupling at room temperature in polycrystalline KBiFe2O5 AIP Conference Proceedings 2115 (1), 030501 SCI Article None",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                        },
-                        {
-                            "S.No": "33",
-                            "Publication Affiliation": "Others",
-                            "Academic Year": "2018-19",
-                            "Author Position": "5",
-                            "Details of Research Publication": "Dielectric anomalies and robust magnetodielectricity in Y-type Ba2Mg2Fe12O22 hexaferrite Materials Research Express 5 (11), 116101 SCI Article Q2",
-                            "Indexing": "SCI",
-                            "Article/ Conference/ Book/ Book Chapter": "Article",
-                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                        }
-                    ]
-                },
-                {
                     "title": "Awards/Achievements",
                     "content": [
                         "2025 Young scientist International Traveler Grant Award by ANRF for ITG",
@@ -9710,32 +8000,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "2024 Convenor of ICRTEH-2024 International Conference",
                         "2022 Best Oral Award at International conference KIIT Deemed University",
                         "24,23,25 Best Students Feedback Appreciations from MITS"
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -10127,32 +8391,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -10310,32 +8548,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "Sri Madhavapeddi Koteswara Rao Endowment Scholarship for highest marks in Organic Chemistry of B.Sc., SRR & CVR Govt. Degree college, Vijayawada.",
                         "Smt. V. Anasuyamma memorial prize for highest marks in Botany of B.Sc., SRR & CVR Govt. Degree College, Vijayawada."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -10884,32 +9096,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Status": "Filed"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -11158,32 +9344,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                     "content": [
                         "International Travel Support (ITS) received from DST, India on 01/09/2013 to participate in &ldquo;European Summer School in Quantum Chemistry&rdquo; held at Italy",
                         "Graduate Aptitude Test in Engineering (GATE) fellowship received from MHRD, India on 15/03/2009 for pursuing PhD program in Chemistry"
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -11434,32 +9594,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Got the 1st prize in Chemistry interviews conducted at Coastal Andhra Zonal Level during Brain Share Events at graduation level, 2004.",
                         "Got the 1st prize in Chemistry Seminars conducted at Coastal Andhra Zonal Level during Brain Share Events at graduation level, 2004.",
                         "ot the First prize in District Level in Maths, Physics and Chemistry Talent tests conducted by District Science Association at graduation level, 2004."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -11804,32 +9938,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Status": "Granted"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -11993,32 +10101,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -12181,32 +10263,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -12508,32 +10564,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -12659,32 +10689,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Title of the Patent": "A Raman Signal Enhancing Substrates (Sensor) for Trace Level detection and Method of Fabrication thereof",
                             "Status": "Published"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -12928,32 +10932,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -13227,32 +11205,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Status": "Published"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -13322,32 +11274,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Publication": "Conference Proceedings",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
@@ -13516,32 +11442,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
                         }
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -13641,32 +11541,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                         "Secured 3rd Prize (Bronze Medal) in the Research Paper Presentation (Physical Education &ndash; Offline Mode) in Paper titled: &ldquo;Role of Physical Education and Sports Sciences in Promoting Physical Fitness, Health, Wellness and Lifelong Active Lifestyles.&rdquo; at the 3rd International Conference on Advanced Sports Science and Intelligence Performance Technologies (IC-ASSIPT) &ndash; SPORTINTEL 2026, held at SRM University, Chennai in March 2026.",
                         "Topper And Gold Medal in NIS Coaching organzied by Nethaji Subhas Chandra Bose National Institute of Sports Held at SRM University (6 Weeks Training)"
                     ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
-                    ]
                 }
             ]
     },
@@ -13709,32 +11583,6 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                             "College Name/University": "Sri Venkateswara Degree college, Sri krishnadevaraya university",
                             "Year of Passing": "2016"
                         }
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
