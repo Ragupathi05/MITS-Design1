@@ -1,3 +1,31 @@
+/**
+ * Madanapalle Institute of Technology & Science (MITS) - Department & Faculty Data
+ * 
+ * ============================================================================
+ * HOW TO MODIFY DEPARTMENT ROSTERS & FACULTY DISPLAY POSITIONS
+ * ============================================================================
+ * 
+ * 1. HOW TO CHANGE DISPLAY POSITION (REORDER):
+ *    - Each department has a list of faculty members in the `departmentsData` object,
+ *      under the key `faculty`.
+ *    - The order of the faculty items inside the `faculty` array determines their display
+ *      order on the department page faculty tab. Reorder the array elements to change positions.
+ * 
+ * 2. HOW TO ADD A NEW FACULTY MEMBER:
+ *    - Add a new object inside the department's `faculty` array:
+ *      {
+ *         name: "Dr. Name",
+ *         designation: "Associate Professor",
+ *         qualification: "Ph.D.",
+ *         email: "name@mits.ac.in",
+ *         image: "https://mits.ac.in/public/uploads/faculty/Dr. Name.JPG",
+ *         profileUrl: "https://mits.ac.in/facultyprofile/ID"
+ *      }
+ * 
+ * 3. HOW TO EDIT DETAILS:
+ *    - Search for the department name (e.g. "Computer Science & Engineering") and edit
+ *      the corresponding faculty array item directly.
+ */
 // Comprehensive department data extracted from official MITS website (mits.ac.in)
 const BASE = import.meta.env.BASE_URL;
 

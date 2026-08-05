@@ -1,3 +1,21 @@
+/**
+ * Faculty Profiles Data Schema
+ * 
+ * ============================================================================
+ * HOW TO EDIT FACULTY PROFILE DATA (PUBLICATIONS, PATENTS, PROJECTS, ETC.)
+ * ============================================================================
+ * 
+ * 1. HOW TO EDIT A SPECIFIC SECTION (e.g., Publication Details):
+ *    - Each faculty member's profile is a dictionary entry. Under the `sections` array,
+ *      each section has a `title` and a `content` array of objects (representing tables)
+ *      or string/array of strings (representing bullet lists).
+ *    - To add a publication or patent, locate the correct object under `content` and append
+ *      or edit a row object matching the table column keys.
+ * 
+ * 2. HOW TO REORDER SECTIONS:
+ *    - Rearrange the objects inside the `sections` array to change which tabs/sections
+ *      display first on the faculty details page.
+ */
 import { aimlProfiles } from './aiml';
 import { ceProfiles } from './ce';
 import { eceProfiles } from './ece';

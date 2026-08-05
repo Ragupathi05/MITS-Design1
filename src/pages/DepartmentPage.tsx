@@ -1,3 +1,30 @@
+/**
+ * Madanapalle Institute of Technology & Science (MITS) - Department Details Rendering Page
+ * 
+ * ============================================================================
+ * HOW FACULTY DETAILS ARE FETCHED AND DISPLAYED / HOW TO CHANGE LAYOUT
+ * ============================================================================
+ * 
+ * 1. HOW FACULTY ARE RENDERED:
+ *    - The page renders the department layout with multiple tabs (About, Faculty, Labs, etc.).
+ *    - Under the "Faculty" tab, the code iterates over the `department.faculty` array sourced
+ *      from `src/data/departmentData.ts`.
+ *    - The faculty list displays the members in the EXACT index order specified in the data file.
+ * 
+ * 2. HOW TO MODIFY CARD LAYOUT:
+ *    - Search for the grid mapping that renders the faculty cards (look for `department.faculty.map`).
+ *    - To change card size or column count, modify the tailwind grid classes on the container
+ *      (e.g., `grid-cols-1 md:grid-cols-2 lg:grid-cols-3` or `lg:grid-cols-4`).
+ *    - To change border colors, background colors, card paddings, or font sizes, edit the tailwind
+ *      classes of the card wrapper div.
+ * 
+ * 3. HOW TO MODIFY FILTERING / SORTING:
+ *    - By default, the faculty members are displayed in the exact order they are listed in the database.
+ *    - To sort them alphabetically, sort the list before mapping:
+ *      `[...department.faculty].sort((a, b) => a.name.localeCompare(b.name)).map(...)`
+ *    - To filter them (e.g., show HOD at the top), the data file already places HOD as the first item,
+ *      which is the best practice.
+ */
 import { useState, useEffect } from "react";
 import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";

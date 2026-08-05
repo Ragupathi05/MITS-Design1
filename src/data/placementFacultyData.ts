@@ -1,3 +1,22 @@
+/**
+ * Madanapalle Institute of Technology & Science (MITS) - Training & Placement Cell Profiles
+ * 
+ * ============================================================================
+ * HOW TO MODIFY PLACEMENT & TRAINING TEAM DETAILS / DISPLAY POSITION
+ * ============================================================================
+ * 
+ * 1. HOW TO CHANGE DISPLAY POSITION (REORDER):
+ *    - The list of placement team members is defined in the `placementTeamData` array.
+ *    - Rearrange the objects inside the `placementTeamData` array to change the display
+ *      order on the Placements page.
+ * 
+ * 2. HOW TO ADD A NEW MEMBER:
+ *    - Add a new object inside `placementTeamData` following the `PlacementFacultyProfile` interface.
+ *    - Ensure you specify `team: "placement"` for placement officers, or `team: "training"` for trainers.
+ * 
+ * 3. HOW TO EDIT DETAILS:
+ *    - Locate the member by name and edit the designation, qualification, email, or sections array.
+ */
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export interface PlacementFacultySection {
