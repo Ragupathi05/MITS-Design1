@@ -38,7 +38,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Professor & Dean-Academics",
       email: "deanacademics@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/rama.jpg",
+      image: "public/uploads/faculty/rama.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -186,796 +186,796 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. P. Ramanathan": {
         "name": "Dr. P. Ramanathan",
         "email": "drramanathanp@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/a744ebed6a293a48de32e80ba66680c8.JPG",
+        "image": "public/uploads/faculty/a744ebed6a293a48de32e80ba66680c8.JPG",
         "designation": "Professor &amp; Principal",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Information & Communication Engineering",
-                        "Branch": "Information & Communication Engineering",
-                        "College Name/University": "PSG College of Technology & Anna University, Chennai",
-                        "Year of Passing": "2010"
-                    },
-                    {
-                        "Course": "M.E.",
-                        "Specialization": "VLSI Design",
-                        "Branch": "VLSI Design",
-                        "College Name/University": "PSG College of Technology & Anna University, Chennai",
-                        "Year of Passing": "2006"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Specialization": "Electronics and Instrumentation",
-                        "Branch": "Electronics and Instrumentation",
-                        "College Name/University": "Tamilnadu College of Engineering & Bharathiar University, Coimbatore",
-                        "Year of Passing": "1997"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "VLSI Design & Biomedical Engineering"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=56703722200",
-                    "Vidwan Link: https://mits.irins.org/profile/460984",
-                    "Google scholar Link: https://scholar.google.co.in/citations?user=x&user=2GsJ2UkAAAAJ",
-                    "h-Index (As per Scopus Data) : 07"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "5",
-                        "Details of Research Publication": "Low Power Parallel Prefix Adders Design and Power Estimation - A review https://doi.org/10.1109/AECE67531.2025.11386574",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "5",
-                        "Details of Research Publication": "Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm https://doi.org/10.1109/ICSSEECC61126.2024.10649421",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Multi-Class Skin Disease Classification: A Study of Transfer Learning Strategies for Deep Learning Models https://doi.org/10.1109/IConSCEPT61884.2024.10627847",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Estimating Lithium-Ion Battery State of Health with Least Squares Approach for Accurate Assessment https://doi.org/10.1109/ic-ETITE58242.2024.10493768",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "3",
-                        "Details of Research Publication": "A Compact Sierpinski Gasket Fractal Antenna for S, C, X, and Ku Band Applications http://dx.doi.org/10.2528/PIERC23110704",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "6",
-                        "Details of Research Publication": "Comparative Analysis of Mice Protein Expression Data: Assessing Genotype and Behavioral Treatments Using Machine Learning Algorithms https://doi.org/10.1007/978-3-031-77075-3_21",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Koch Snowflake Fractal Embedded Octagonal Patch Antenna with Hexagonal Split Ring for Ultra-Wide Band and 5G Applications http://dx.doi.org/10.2528/PIERC23050702",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Investigation of Techniques to Recognize Optimal Power Structuring of Vedic Multiplier https://doi.org/10.1007/978-981-15-3992-3_8",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2018-19",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Indoor Channel Characterization with Multiple Hypotheses Testing in Massive Multiple Input Multiple Output https://doi.org/10.1166/jctn.2019.8030",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Innovative Localization Algorithm Using the Line of Intersection Technique in Wireless Sensor Networks https://doi.org/10.3966/160792642020032102011",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2018-19",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Modified Low-Power Built-in Self-test for Image Processing Application https://doi.org/10.1007/978-3-030-04061-1_20",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017-18",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Optimal test suite selection in regression testing with testcase prioritization using modified Ann and Whale optimization algorithm https://doi.org/10.1007/s10586-017-1401-7",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2015-16",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Modified low power Wallace Tree multiplier using higher order compressors https://doi.org/10.1080/21681724.2016.1138509",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2015-16",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Comparative Analysis and Comparison of Various AQM Algorithm for High Speed https://doi.org/10.17485/ijst/2015/v8i35/81476",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2015-16",
-                        "Author Position": "1",
-                        "Details of Research Publication": "High Performance Parallel Prefix Adder for Wider Word Lengths https://www.ripublication.com/Volume/gjpamv11n2.htm",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "16",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014-15",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Effect of BIRADS shape descriptors on breast cancer analysis https://doi.org/10.1504/IJMEI.2015.066244",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "17",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2013-14",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Area Efficient Carry Select Adder Using Negative Edge Triggered D-Flipflop https://doi.org/10.4028/www.scientific.net/AMM.573.187",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "18",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014-15",
-                        "Author Position": "2",
-                        "Details of Research Publication": "A new hybrid multiplier using Dadda and Wallace method https://doi.org/10.1109/ECS.2014.6892623",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "19",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2013-14",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Low Power Parallel Prefix Adder https://doi.org/10.4028/www.scientific.net/AMM.573.194",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "20",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2009-10",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A novel logarithmic prefix adder with minimized power delay product",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "21",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2008-09",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Decomposition algorithm for power delay product optimization in Wallace multiplier https://ieeexplore.ieee.org/abstract/document/5204369",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "22",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2007-08",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Comparative analysis of low power high performance flip&ndash;flops in the 0.13&micro;m technology https://doi.org/10.1109/ADCOM.2007.56",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Information & Communication Engineering",
+                            "Branch": "Information & Communication Engineering",
+                            "College Name/University": "PSG College of Technology & Anna University, Chennai",
+                            "Year of Passing": "2010"
+                        },
+                        {
+                            "Course": "M.E.",
+                            "Specialization": "VLSI Design",
+                            "Branch": "VLSI Design",
+                            "College Name/University": "PSG College of Technology & Anna University, Chennai",
+                            "Year of Passing": "2006"
+                        },
+                        {
+                            "Course": "B.E.",
+                            "Specialization": "Electronics and Instrumentation",
+                            "Branch": "Electronics and Instrumentation",
+                            "College Name/University": "Tamilnadu College of Engineering & Bharathiar University, Coimbatore",
+                            "Year of Passing": "1997"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "VLSI Design & Biomedical Engineering"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=56703722200",
+                        "Vidwan Link: https://mits.irins.org/profile/460984",
+                        "Google scholar Link: https://scholar.google.co.in/citations?user=x&user=2GsJ2UkAAAAJ",
+                        "h-Index (As per Scopus Data) : 07"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "5",
+                            "Details of Research Publication": "Low Power Parallel Prefix Adders Design and Power Estimation - A review https://doi.org/10.1109/AECE67531.2025.11386574",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "5",
+                            "Details of Research Publication": "Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm https://doi.org/10.1109/ICSSEECC61126.2024.10649421",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Multi-Class Skin Disease Classification: A Study of Transfer Learning Strategies for Deep Learning Models https://doi.org/10.1109/IConSCEPT61884.2024.10627847",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Estimating Lithium-Ion Battery State of Health with Least Squares Approach for Accurate Assessment https://doi.org/10.1109/ic-ETITE58242.2024.10493768",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "3",
+                            "Details of Research Publication": "A Compact Sierpinski Gasket Fractal Antenna for S, C, X, and Ku Band Applications http://dx.doi.org/10.2528/PIERC23110704",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "6",
+                            "Details of Research Publication": "Comparative Analysis of Mice Protein Expression Data: Assessing Genotype and Behavioral Treatments Using Machine Learning Algorithms https://doi.org/10.1007/978-3-031-77075-3_21",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Koch Snowflake Fractal Embedded Octagonal Patch Antenna with Hexagonal Split Ring for Ultra-Wide Band and 5G Applications http://dx.doi.org/10.2528/PIERC23050702",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2019-20",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Investigation of Techniques to Recognize Optimal Power Structuring of Vedic Multiplier https://doi.org/10.1007/978-981-15-3992-3_8",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2018-19",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Indoor Channel Characterization with Multiple Hypotheses Testing in Massive Multiple Input Multiple Output https://doi.org/10.1166/jctn.2019.8030",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2019-20",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Innovative Localization Algorithm Using the Line of Intersection Technique in Wireless Sensor Networks https://doi.org/10.3966/160792642020032102011",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2018-19",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Modified Low-Power Built-in Self-test for Image Processing Application https://doi.org/10.1007/978-3-030-04061-1_20",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017-18",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Optimal test suite selection in regression testing with testcase prioritization using modified Ann and Whale optimization algorithm https://doi.org/10.1007/s10586-017-1401-7",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2015-16",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Modified low power Wallace Tree multiplier using higher order compressors https://doi.org/10.1080/21681724.2016.1138509",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2015-16",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Comparative Analysis and Comparison of Various AQM Algorithm for High Speed https://doi.org/10.17485/ijst/2015/v8i35/81476",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "15",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2015-16",
+                            "Author Position": "1",
+                            "Details of Research Publication": "High Performance Parallel Prefix Adder for Wider Word Lengths https://www.ripublication.com/Volume/gjpamv11n2.htm",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "16",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014-15",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Effect of BIRADS shape descriptors on breast cancer analysis https://doi.org/10.1504/IJMEI.2015.066244",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "17",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2013-14",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Area Efficient Carry Select Adder Using Negative Edge Triggered D-Flipflop https://doi.org/10.4028/www.scientific.net/AMM.573.187",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "18",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014-15",
+                            "Author Position": "2",
+                            "Details of Research Publication": "A new hybrid multiplier using Dadda and Wallace method https://doi.org/10.1109/ECS.2014.6892623",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "19",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2013-14",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Low Power Parallel Prefix Adder https://doi.org/10.4028/www.scientific.net/AMM.573.194",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "20",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2009-10",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A novel logarithmic prefix adder with minimized power delay product",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "21",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2008-09",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Decomposition algorithm for power delay product optimization in Wallace multiplier https://ieeexplore.ieee.org/abstract/document/5204369",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "22",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2007-08",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Comparative analysis of low power high performance flip&ndash;flops in the 0.13&micro;m technology https://doi.org/10.1109/ADCOM.2007.56",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. Sanjay Kumar C. Gowre": {
         "name": "Dr. Sanjay Kumar C. Gowre",
         "email": "drsanjaykumarcg@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Sanjay Kumar C. Gowre.JPG",
+        "image": "public/uploads/faculty/Dr. Sanjay Kumar C. Gowre.JPG",
         "designation": "Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Photonics",
-                        "Branch": "ECE",
-                        "College Name/University": "IIT-Kharagpur",
-                        "Year of Passing": "2013"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Fiber Optics",
-                        "Branch": "ECE",
-                        "College Name/University": "IIT-Kharagpur",
-                        "Year of Passing": "2006"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Specialization": "E&CE",
-                        "Branch": "E&CE",
-                        "College Name/University": "Gulbarga University/PDACE, Gulbarga",
-                        "Year of Passing": "1995"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Photonics, Optics, Biosensors"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=16401166700",
-                    "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/244420",
-                    "Google scholar Link: https://scholar.google.co.in/citations?user=x&user=b2Vv3usAAAAJ",
-                    "h-Index (As per Scopus Data) : 10"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Bimetallic-Based SPR Wavelength Interrogating Sensor with High Q-factor for Biochemical Detection",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024-25",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Design of Ultra Compact Optical T Flip Flop in Two Dimensional Photonic Crystals",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024-25",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Wavesteering Effect on Photonic Crystal Based Refractive Index Sensor for Milk Quality Detection",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022&ndash;23",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Gallium Arsenide Composite 2D Photonic Crystal Biosensor for Cancer Cell Detection",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022&ndash;23",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Gallium Arsenide Composite 2D Photonic Crystal Biosensor for Malaria Detection",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022&ndash;23",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Two Dimensional Photonic Crystal Biosensor Based on Gallium Arsenide Composite Semi- Conductive Material for Diabetes Detection",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022&ndash;23",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Photonic Crystal Based Ultrafast and Highly Sensitive Refractive Index Sensor",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022&ndash;23",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Two Dimensional Photonic Crystal Biosensor for Diabetes Detection",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022&ndash;23",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Computational Study of Photonic Crystal Based Biosensor for SARS-COV-2 Detection",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022&ndash;23",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Optimal Image Denoising using Patch-Based CNN Architecture",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022&ndash;23",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Reconfigurable Optical Logic Gates for Integrated Optical Circuits",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "4",
-                        "Details of Research Publication": "FDADE: Flow Direction Algorithm with Differential Evolution for measurement of Intima-Media Thickness of the Carotid Artery in Ultrasound Images",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Photonic Crystal Based Pressure Sensor Using Rhombic Ring Resonator",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Photonic Crystal Based Aslant Cavity with Infiltrated Magnetic Fluid for Sensing Magnetic Field",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of Two Dimensional Photonic Crystal based Ultra Compact Optical RS Flip Flop",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "16",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of Ultra Compact 4:2 Encoder using Two Dimensional Photonic Crystals",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "17",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of Circularly Polarized Compact Size Wearable Antenna for UWB and 5G Application",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "18",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Computation Study of a Compact and High Sensitive Photonic Crystal for Cancer Cells Detection",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "19",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Compact Flexible Monopole Antennas for UWB",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "20",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020&ndash;21",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Tunable Optical Add/Drop Filter using Photonic Crystal Ring Resonator",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "21",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020&ndash;21",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Modeling and Optimization of Optical Half Adder in Photonic Crystals",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "22",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019&ndash;20",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Lossy Image Compression using SVD Algorithm",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "23",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021&ndash;22",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design of circular microstrip textile antenna for UWB application",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "24",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020&ndash;21",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A New DOA Algorithm for Spectral Estimation without Source Numbers Information",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "25",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020&ndash;21",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Photonic nano dielectric crystal cavity with infiltrated biosamples for refractive index sensing application",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "26",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014-15",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Investigation of light behavior of all optical full adders in two dimensional photonic crystals",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "27",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2012-13",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Tunable Optical add/drop filter for CWDM systems using Photonic Crystal Ring Resonator",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "28",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2012-13",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Modeling and Optimization of Optical Half Adder in Two Dimensional Photonic Crystals",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "29",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2008-09",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Blind source parameters for performance evaluation of despeckling filters",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "30",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2005-06",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A modified structure for all-glass photonic bandgap fibers: Dispersion characteristics and confinement loss analysis",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "31",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2004-06",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Dispersion Characteristics of All-Glass Photonic Crystal Fiber",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "32",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2004-05",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Optical Time Domain Reflectometer performance improvement using Complementary Correlated Prometheus Orthonormal Sequence",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    }
-                ]
-            },
-            {
-                "title": "Research Projects & Events",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "Others",
-                        "Academic Year": "2023-25",
-                        "Funded Project /Event": "Funded Research Project",
-                        "Role": "Co-P.I.",
-                        "Title of the Project/Event": "Design & Development of Gap-Coupled Planar Microstrip Antenna for WLAN, WI-MAX & Bluetooth Applications",
-                        "Amount in Rs. /-": "15,00,000",
-                        "Funding Agency": "VGST Bangalore"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "Others",
-                        "Academic Year": "2014-16",
-                        "Funded Project /Event": "Funded Research Project",
-                        "Role": "P.I.",
-                        "Title of the Project/Event": "Design of Photonic Communication System",
-                        "Amount in Rs. /-": "20,00,000",
-                        "Funding Agency": "VGST Bangalore"
-                    },
-                    {
-                        "S.No": "3",
-                        "Affiliation": "Others",
-                        "Academic Year": "2010-13",
-                        "Funded Project /Event": "Funded Research Project",
-                        "Role": "P.I.",
-                        "Title of the Project/Event": "Photonic Devices for Optical Networks",
-                        "Amount in Rs. /-": "10,00,000",
-                        "Funding Agency": "VTU Belagavi"
-                    },
-                    {
-                        "S.No": "4",
-                        "Affiliation": "Others",
-                        "Academic Year": "2010",
-                        "Funded Project /Event": "International Conference",
-                        "Role": "Organizing Secretary",
-                        "Title of the Project/Event": "International Conference on Communication, Computation, Control And Nanotechnology (ICN-2010)",
-                        "Amount in Rs. /-": "1,00,000",
-                        "Funding Agency": "DST New Delhi"
-                    },
-                    {
-                        "S.No": "5",
-                        "Affiliation": "Others",
-                        "Academic Year": "2010",
-                        "Funded Project /Event": "International Conference",
-                        "Role": "Organizing Secretary",
-                        "Title of the Project/Event": "International Conference On Communication, Computation, Control And Nanotechnology (ICN-2010)",
-                        "Amount in Rs. /-": "3,00,000",
-                        "Funding Agency": "MoES New Delhi"
-                    },
-                    {
-                        "S.No": "6",
-                        "Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Funded Project /Event": "Youth Fest",
-                        "Role": "Chief Organizing Secretary",
-                        "Title of the Project/Event": "VTU Youth Fest (2018)",
-                        "Amount in Rs. /-": "4,20,00,000",
-                        "Funding Agency": "VTU Belagavi"
-                    },
-                    {
-                        "S.No": "7",
-                        "Affiliation": "Others",
-                        "Academic Year": "2014",
-                        "Funded Project /Event": "FDP",
-                        "Role": "Organizing Secretary",
-                        "Title of the Project/Event": "Future Recent Trends & Innovations In Information Communication & Technology",
-                        "Amount in Rs. /-": "3,00,000",
-                        "Funding Agency": "VGST Bangalore"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Application ID": "201921033981",
-                        "Title of the Patent": "Design & Development of Miniaturized 2x1 square array of Micro-strip Textile Antenna using jean as dielectric material & operating at 1.9642GHz & 2.45GHz with gain of 10dBi & 8.07dBi used for wireless application&rdquo;",
-                        "Status": "Published"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "Research grant of Rs. 20 lacs from VGST Bengaluru for a period of 2 years on &ldquo;DESIGN OF PHOTONIC COMMUNICATION SYSTEM&rdquo;",
-                    "Research grant of Rs. 10 lacs from VTU Belgaum for a period of 3 years on &ldquo;PHOTONIC DEVICES FOR OPTICAL NETWORKS&rdquo;",
-                    "Award of IEEE ICIIS-2007 grant, Peradeniya University, Kandy, Sri-Lanka with registration grant of USD220.",
-                    "Award of 9500/- per month scholarship for pursuing PhD at IIT Kharagpur."
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Photonics",
+                            "Branch": "ECE",
+                            "College Name/University": "IIT-Kharagpur",
+                            "Year of Passing": "2013"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Fiber Optics",
+                            "Branch": "ECE",
+                            "College Name/University": "IIT-Kharagpur",
+                            "Year of Passing": "2006"
+                        },
+                        {
+                            "Course": "B.E.",
+                            "Specialization": "E&CE",
+                            "Branch": "E&CE",
+                            "College Name/University": "Gulbarga University/PDACE, Gulbarga",
+                            "Year of Passing": "1995"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Photonics, Optics, Biosensors"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=16401166700",
+                        "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/244420",
+                        "Google scholar Link: https://scholar.google.co.in/citations?user=x&user=b2Vv3usAAAAJ",
+                        "h-Index (As per Scopus Data) : 10"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Bimetallic-Based SPR Wavelength Interrogating Sensor with High Q-factor for Biochemical Detection",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024-25",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Design of Ultra Compact Optical T Flip Flop in Two Dimensional Photonic Crystals",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024-25",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Wavesteering Effect on Photonic Crystal Based Refractive Index Sensor for Milk Quality Detection",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022&ndash;23",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Gallium Arsenide Composite 2D Photonic Crystal Biosensor for Cancer Cell Detection",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022&ndash;23",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Gallium Arsenide Composite 2D Photonic Crystal Biosensor for Malaria Detection",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022&ndash;23",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Two Dimensional Photonic Crystal Biosensor Based on Gallium Arsenide Composite Semi- Conductive Material for Diabetes Detection",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022&ndash;23",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Photonic Crystal Based Ultrafast and Highly Sensitive Refractive Index Sensor",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022&ndash;23",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Two Dimensional Photonic Crystal Biosensor for Diabetes Detection",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022&ndash;23",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Computational Study of Photonic Crystal Based Biosensor for SARS-COV-2 Detection",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022&ndash;23",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Optimal Image Denoising using Patch-Based CNN Architecture",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022&ndash;23",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Reconfigurable Optical Logic Gates for Integrated Optical Circuits",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "4",
+                            "Details of Research Publication": "FDADE: Flow Direction Algorithm with Differential Evolution for measurement of Intima-Media Thickness of the Carotid Artery in Ultrasound Images",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Photonic Crystal Based Pressure Sensor Using Rhombic Ring Resonator",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Photonic Crystal Based Aslant Cavity with Infiltrated Magnetic Fluid for Sensing Magnetic Field",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "15",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of Two Dimensional Photonic Crystal based Ultra Compact Optical RS Flip Flop",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "16",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of Ultra Compact 4:2 Encoder using Two Dimensional Photonic Crystals",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "17",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of Circularly Polarized Compact Size Wearable Antenna for UWB and 5G Application",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "18",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Computation Study of a Compact and High Sensitive Photonic Crystal for Cancer Cells Detection",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "19",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Compact Flexible Monopole Antennas for UWB",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "20",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020&ndash;21",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Tunable Optical Add/Drop Filter using Photonic Crystal Ring Resonator",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "21",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020&ndash;21",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Modeling and Optimization of Optical Half Adder in Photonic Crystals",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "22",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019&ndash;20",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Lossy Image Compression using SVD Algorithm",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "23",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021&ndash;22",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design of circular microstrip textile antenna for UWB application",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "24",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020&ndash;21",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A New DOA Algorithm for Spectral Estimation without Source Numbers Information",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "25",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020&ndash;21",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Photonic nano dielectric crystal cavity with infiltrated biosamples for refractive index sensing application",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "26",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014-15",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Investigation of light behavior of all optical full adders in two dimensional photonic crystals",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "27",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2012-13",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Tunable Optical add/drop filter for CWDM systems using Photonic Crystal Ring Resonator",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "28",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2012-13",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Modeling and Optimization of Optical Half Adder in Two Dimensional Photonic Crystals",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "29",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2008-09",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Blind source parameters for performance evaluation of despeckling filters",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "30",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2005-06",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A modified structure for all-glass photonic bandgap fibers: Dispersion characteristics and confinement loss analysis",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "31",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2004-06",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Dispersion Characteristics of All-Glass Photonic Crystal Fiber",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "32",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2004-05",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Optical Time Domain Reflectometer performance improvement using Complementary Correlated Prometheus Orthonormal Sequence",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Projects & Events",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "Others",
+                            "Academic Year": "2023-25",
+                            "Funded Project /Event": "Funded Research Project",
+                            "Role": "Co-P.I.",
+                            "Title of the Project/Event": "Design & Development of Gap-Coupled Planar Microstrip Antenna for WLAN, WI-MAX & Bluetooth Applications",
+                            "Amount in Rs. /-": "15,00,000",
+                            "Funding Agency": "VGST Bangalore"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "Others",
+                            "Academic Year": "2014-16",
+                            "Funded Project /Event": "Funded Research Project",
+                            "Role": "P.I.",
+                            "Title of the Project/Event": "Design of Photonic Communication System",
+                            "Amount in Rs. /-": "20,00,000",
+                            "Funding Agency": "VGST Bangalore"
+                        },
+                        {
+                            "S.No": "3",
+                            "Affiliation": "Others",
+                            "Academic Year": "2010-13",
+                            "Funded Project /Event": "Funded Research Project",
+                            "Role": "P.I.",
+                            "Title of the Project/Event": "Photonic Devices for Optical Networks",
+                            "Amount in Rs. /-": "10,00,000",
+                            "Funding Agency": "VTU Belagavi"
+                        },
+                        {
+                            "S.No": "4",
+                            "Affiliation": "Others",
+                            "Academic Year": "2010",
+                            "Funded Project /Event": "International Conference",
+                            "Role": "Organizing Secretary",
+                            "Title of the Project/Event": "International Conference on Communication, Computation, Control And Nanotechnology (ICN-2010)",
+                            "Amount in Rs. /-": "1,00,000",
+                            "Funding Agency": "DST New Delhi"
+                        },
+                        {
+                            "S.No": "5",
+                            "Affiliation": "Others",
+                            "Academic Year": "2010",
+                            "Funded Project /Event": "International Conference",
+                            "Role": "Organizing Secretary",
+                            "Title of the Project/Event": "International Conference On Communication, Computation, Control And Nanotechnology (ICN-2010)",
+                            "Amount in Rs. /-": "3,00,000",
+                            "Funding Agency": "MoES New Delhi"
+                        },
+                        {
+                            "S.No": "6",
+                            "Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Funded Project /Event": "Youth Fest",
+                            "Role": "Chief Organizing Secretary",
+                            "Title of the Project/Event": "VTU Youth Fest (2018)",
+                            "Amount in Rs. /-": "4,20,00,000",
+                            "Funding Agency": "VTU Belagavi"
+                        },
+                        {
+                            "S.No": "7",
+                            "Affiliation": "Others",
+                            "Academic Year": "2014",
+                            "Funded Project /Event": "FDP",
+                            "Role": "Organizing Secretary",
+                            "Title of the Project/Event": "Future Recent Trends & Innovations In Information Communication & Technology",
+                            "Amount in Rs. /-": "3,00,000",
+                            "Funding Agency": "VGST Bangalore"
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Application ID": "201921033981",
+                            "Title of the Patent": "Design & Development of Miniaturized 2x1 square array of Micro-strip Textile Antenna using jean as dielectric material & operating at 1.9642GHz & 2.45GHz with gain of 10dBi & 8.07dBi used for wireless application&rdquo;",
+                            "Status": "Published"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": [
+                        "Research grant of Rs. 20 lacs from VGST Bengaluru for a period of 2 years on &ldquo;DESIGN OF PHOTONIC COMMUNICATION SYSTEM&rdquo;",
+                        "Research grant of Rs. 10 lacs from VTU Belgaum for a period of 3 years on &ldquo;PHOTONIC DEVICES FOR OPTICAL NETWORKS&rdquo;",
+                        "Award of IEEE ICIIS-2007 grant, Peradeniya University, Kandy, Sri-Lanka with registration grant of USD220.",
+                        "Award of 9500/- per month scholarship for pursuing PhD at IIT Kharagpur."
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. S. Rajasekaran": {
@@ -983,7 +983,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Professor & Head",
       email: "drrajasekarans@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg",
+      image: "public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -1047,7 +1047,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Professor",
       email: "drnehruk@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/Nehru.JPG",
+      image: "public/uploads/faculty/Nehru.JPG",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -1194,856 +1194,856 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Assoc. Professor",
         "email": "drmurlimanohar@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Murali Manohar.JPG",
+        "image": "public/uploads/faculty/Dr. Murali Manohar.JPG",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Microwave and RF Engineering",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "Indian Institute of Technology, Guwahati",
-                        "Year of Passing": "2015"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Electronics System and Communication",
-                        "Branch": "Electrical Engineering",
-                        "College Name/University": "National Institute of Technology, Rourkela",
-                        "Year of Passing": "2010"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Specialization": "Electronics & Communication Engineering",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "Institution of Electronics & Telecommunication Engineers (AMIETE), New Delhi",
-                        "Year of Passing": "2008"
-                    }
-                ]
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus :",
-                    "Vidwan :",
-                    "Google scholar : https://scholar.google.com/citations?user=kkbppg0AAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 8"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&ldquo;A Quadruple Band-Notched SWB MIMO Antenna with Enhanced Isolation Using Wiggly Line,&rdquo; Radioengineering, vol. 33, No. 2, pp. 274-281, June 2024.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;A High selectivity dual band-stop antenna with wide tuning characteristics for UWB applications,&rdquo; Analog Integrated Circuits and Signal Processing (Springer), Vol. 35, Issue 15, pp. 71&ndash;79, 2022.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&ldquo;A Modified SWB Hexagonal Fractal Spatial Diversity Antenna with High Isolation Using Meander Line Approach,&rdquo; IEEE Access, Vol. 10, pp. 10238 - 10250, 2022.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;Wideband Circularly Polarized Triangular Monopole Antenna for High-Speed Internet Access,&rdquo; International Journal of Electromagnetic waves and Applications (Taylor & Francis), Vol. 35, Issue 15, pp. 2102-2113, 2021.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&ldquo;Design and Analysis of a compact wideband Monopole patch antenna for future handheld gadgets,&rdquo; Progress in Electromagnetics Research Journal, Vol. 109, pp. 227-241, 2021.",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Miniaturized Low Profile Super-wideband Koch Snowflake Fractal Monopole Slot Antenna with Improved BW and Stabilised Radiation Pattern,&rdquo; IET Microwaves, Antennas and Propagation, vol. 13, Issue 11, pp. 1948-1954, 2019.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;Low Profile Dual Band-Stop Super Wideband Printed Monopole Antenna with Polarization Diversity,&rdquo; International Journal of Microwave and Wireless Technologies, vol. 11, Issue 7, pp. 694-702, Mar. 2019.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;A Compact Dual Band-notched Circular Ring Printed Monopole Antenna for Super wideband Applications,&rdquo; Radioengineering, vol. 26, No. 1, pp. 64-70, April 2017.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;Superwideband Antenna with Single Band Suppression,&rdquo; International Journal of Microwave and Wireless Technologies, Vol. 9, Issue 1, pp. 143-150, Nov. 2016.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;A compact printed triangular monopole antenna for ultra-wideband application,&rdquo; Microwave and Optical Technology Letters (MOTL), vol. 56, Issue 5, May 2014, pp. 1155-1159",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;Printed monopole antenna with tapered feed line, feed region, and patch for super wideband applications,&rdquo; IET Microwaves, Antennas and Propagation, vol. 8, Issue 1, Jan. 2014, pp. 39-45.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "Gate qualified in 2008 with a 92.05 percentile.",
-                    "Merit scholarship got for M.Tech from July 2008 to June 2010.",
-                    "Merit scholarship got for PhD from July 2010 to July 2014."
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Microwave and RF Engineering",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "Indian Institute of Technology, Guwahati",
+                            "Year of Passing": "2015"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Electronics System and Communication",
+                            "Branch": "Electrical Engineering",
+                            "College Name/University": "National Institute of Technology, Rourkela",
+                            "Year of Passing": "2010"
+                        },
+                        {
+                            "Course": "B.E.",
+                            "Specialization": "Electronics & Communication Engineering",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "Institution of Electronics & Telecommunication Engineers (AMIETE), New Delhi",
+                            "Year of Passing": "2008"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus :",
+                        "Vidwan :",
+                        "Google scholar : https://scholar.google.com/citations?user=kkbppg0AAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 8"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024",
+                            "Author Position": "2",
+                            "Details of Research Publication": "&ldquo;A Quadruple Band-Notched SWB MIMO Antenna with Enhanced Isolation Using Wiggly Line,&rdquo; Radioengineering, vol. 33, No. 2, pp. 274-281, June 2024.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;A High selectivity dual band-stop antenna with wide tuning characteristics for UWB applications,&rdquo; Analog Integrated Circuits and Signal Processing (Springer), Vol. 35, Issue 15, pp. 71&ndash;79, 2022.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Author Position": "2",
+                            "Details of Research Publication": "&ldquo;A Modified SWB Hexagonal Fractal Spatial Diversity Antenna with High Isolation Using Meander Line Approach,&rdquo; IEEE Access, Vol. 10, pp. 10238 - 10250, 2022.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;Wideband Circularly Polarized Triangular Monopole Antenna for High-Speed Internet Access,&rdquo; International Journal of Electromagnetic waves and Applications (Taylor & Francis), Vol. 35, Issue 15, pp. 2102-2113, 2021.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "2",
+                            "Details of Research Publication": "&ldquo;Design and Analysis of a compact wideband Monopole patch antenna for future handheld gadgets,&rdquo; Progress in Electromagnetics Research Journal, Vol. 109, pp. 227-241, 2021.",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Miniaturized Low Profile Super-wideband Koch Snowflake Fractal Monopole Slot Antenna with Improved BW and Stabilised Radiation Pattern,&rdquo; IET Microwaves, Antennas and Propagation, vol. 13, Issue 11, pp. 1948-1954, 2019.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;Low Profile Dual Band-Stop Super Wideband Printed Monopole Antenna with Polarization Diversity,&rdquo; International Journal of Microwave and Wireless Technologies, vol. 11, Issue 7, pp. 694-702, Mar. 2019.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;A Compact Dual Band-notched Circular Ring Printed Monopole Antenna for Super wideband Applications,&rdquo; Radioengineering, vol. 26, No. 1, pp. 64-70, April 2017.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;Superwideband Antenna with Single Band Suppression,&rdquo; International Journal of Microwave and Wireless Technologies, Vol. 9, Issue 1, pp. 143-150, Nov. 2016.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;A compact printed triangular monopole antenna for ultra-wideband application,&rdquo; Microwave and Optical Technology Letters (MOTL), vol. 56, Issue 5, May 2014, pp. 1155-1159",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;Printed monopole antenna with tapered feed line, feed region, and patch for super wideband applications,&rdquo; IET Microwaves, Antennas and Propagation, vol. 8, Issue 1, Jan. 2014, pp. 39-45.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": [
+                        "Gate qualified in 2008 with a 92.05 percentile.",
+                        "Merit scholarship got for M.Tech from July 2008 to June 2010.",
+                        "Merit scholarship got for PhD from July 2010 to July 2014."
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. V. Jayaprakasan": {
         "name": "Dr. V. Jayaprakasan",
         "email": "drjayaprakasanv@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Jayaprakasan.JPG",
+        "image": "public/uploads/faculty/Dr. Jayaprakasan.JPG",
         "designation": "Assoc. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "ECE",
-                        "Group": "ECE",
-                        "College Name/University": "JNTUA, Ananthapuramu",
-                        "Year of Passing": "2016"
-                    },
-                    {
-                        "Course": "M.E.",
-                        "Specialization": "Communication Systems",
-                        "Group": "ECE",
-                        "College Name/University": "B. S. Abdur Rahman Crescent Engineering College, Anna University",
-                        "Year of Passing": "2006"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Specialization": "ECE",
-                        "Group": "ECE",
-                        "College Name/University": "National Institute of Technology, Bharadhidasan University",
-                        "Year of Passing": "1999"
-                    }
-                ]
-            },
-            {
-                "title": "List of Publications",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Title of the Paper": "&ldquo;A hybrid strategy for mitigating unbalance and improving voltage considering higher penetration of electric vehicles and distributed generation&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Sustainable Cities and Society 103489, Elsevier, Vol. 76, pp 1-16, 2021 (SCI Indexed) https://doi.org/10.1016/j.scs.2021.103489"
-                    },
-                    {
-                        "S.No": "2",
-                        "Title of the Paper": "&ldquo;Mitigation of Phase Noise and BER by different CE in the MIMO-OFDM System&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Lecture Notes in Electrical Engineering, Springer Nature Singapore Pvt. Ltd. Vol. 700, pp. 3143-3158, ISSN: 1876-1100 2020 (Scopus Indexed, Web of Science) https://doi.org/10.1007/978-981-15-8221-9_293"
-                    },
-                    {
-                        "S.No": "3",
-                        "Title of the Paper": "&ldquo;FPGA Realization of Multi-stage Decimator for WN Applications&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Lecture Notes in Electrical Engineering, Springer Nature Singapore Pvt. Ltd. Vol. 700, pp. 2335-2348, ISSN: 1876-1100 2020 (Scopus Indexed, Web of Science) https://doi.org/10.1007/978-981-15-8221-9_218"
-                    },
-                    {
-                        "S.No": "4",
-                        "Title of the Paper": "&ldquo;Aerial Combat Drone&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "High Technology Letters, Volume 26, Issue 6, 2020 ISSN No: 1006-6748 (Scopus Indexed)"
-                    },
-                    {
-                        "S.No": "5",
-                        "Title of the Paper": "&ldquo;Semantic Segmentation of Brain Tumor from MRI Images and SVM Classification using GLCM Features&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "The Internationaljournal of analytical and experimental modal analysis, Volume XIII, Issue VI, pp 1115- 1130, ISSN NO:0886-9367, June 2021."
-                    },
-                    {
-                        "S.No": "6",
-                        "Title of the Paper": "&ldquo;Design of CIC based Decimation Filter Structure using FPGA for WiMAX Applications&rdquo;,",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "IEICE Electronics Express, Vol.17 No.6, 2019. (SCI Indexed)"
-                    },
-                    {
-                        "S.No": "7",
-                        "Title of the Paper": "&ldquo;Exhaustive Approach for Multistage Filter Design to Minimize Complexity of FIR Filter for WCDMA Applications,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Recent Technology and Engineering (IJRTE) ISSN: 2277-3878, Volume-7, Issue-6, March 2019 (Scopus Indexed)"
-                    },
-                    {
-                        "S.No": "8",
-                        "Title of the Paper": "&ldquo;A Compact Planar Inverted F Antenna for RF Energy Harvesting,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Advanced Research in Dynamical & Control Systems (JARDCS), Vol. 11, 01-Special Issue, 2019 (Scopus Indexed)"
-                    },
-                    {
-                        "S.No": "9",
-                        "Title of the Paper": "&ldquo; Performance Analysis of Ultra Low Power and PDP Efficient 1- Bit Full Adder Circuit for Arithmetic Blocks,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Scientific Journal of Contemporary Research in Engineering Science and Management (ISJCRESM), ISSN: 2456- 1134 Volume-3, Issue-4, February 2019 (Google Scholar)"
-                    },
-                    {
-                        "S.No": "10",
-                        "Title of the Paper": "&ldquo;Comparative Analysis of Interpolation/Decimation FIR Filter Structures for WLAN-b and WLAN-g Applications,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal for Innovative Research in Science & Technology, Volume 2, Issue 12, ISSN (online): 2349-6010, May 2016."
-                    },
-                    {
-                        "S.No": "11",
-                        "Title of the Paper": "&ldquo;Performance Analysis of Different Decimation Filter Structure Realizations using Multistage Approach for GSM Applications,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Special Issue,Volume 10, No.09 (2015), April 2015 (Scopus Indexed)"
-                    },
-                    {
-                        "S.No": "12",
-                        "Title of the Paper": "&ldquo;FPGA Implementation of FIR basedDecimation Filter Structure for WiMAX Application,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of AdvancedResearch in Computer and Communication Engineering, Volume 2, Issue 7, July 2013."
-                    },
-                    {
-                        "S.No": "13",
-                        "Title of the Paper": "&ldquo;Implementation and Comparison of Different CIC Filter Structure for Decimation,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "ICTACT Journal on Communication Technology, Volume04, Issue: 02, June 2013."
-                    },
-                    {
-                        "S.No": "14",
-                        "Title of the Paper": "&ldquo;Implementation of Efficient Audit Service Outsourcing for Data Integrity by Interfacing the Mobile Device in Clouds,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Applications (0975-8887), Volume 67 &ndash; No.20, April 2013."
-                    },
-                    {
-                        "S.No": "15",
-                        "Title of the Paper": "&ldquo;Design and Implementation of Efficient CIC Filter Structure for Decimation,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Applications (0975-8887), Volume 65 No.14, March 2013."
-                    },
-                    {
-                        "S.No": "16",
-                        "Title of the Paper": "&ldquo;Spectrum Sensing and Security in Cognitive Radio,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Applications (0975-8887), Volume 66&ndash;No.23, March 2013."
-                    },
-                    {
-                        "S.No": "17",
-                        "Title of the Paper": "&ldquo;Power Optimization Technique for Sensor Network,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Applications Technology and Research, Volume 2&ndash; Issue 3, 255&ndash;260, 2013."
-                    },
-                    {
-                        "S.No": "18",
-                        "Title of the Paper": "&ldquo;Improvisation of MAC Protocol for WirelessSensor Network,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Electronics and Communication andComputer Engineering, Volume 4, Issue 3, ISSN (Online): 2249-071X, ISSN (Print):2278-4209, 2013."
-                    },
-                    {
-                        "S.No": "19",
-                        "Title of the Paper": "&ldquo;Performance Analysis for Parallel MRA in Heterogeneous Wireless Networks,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of ComputerApplications Technology andResearch, Volume 2&ndash;Issue 3, 329&ndash;334, 2013."
-                    },
-                    {
-                        "S.No": "20",
-                        "Title of the Paper": "&ldquo;Efficient way of Communication using Fuzzy Theory,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Science and Engineering, Volume 2 (1), 2013, 31-38."
-                    },
-                    {
-                        "S.No": "21",
-                        "Title of the Paper": "&ldquo;Design of Efficient Polyphase Multistage FIR Filter with Memory Saving Structure for Decimation,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "European Journal of Scientific Research, Vol. 93 No 2 December, 2012, pp.289-300 (Scopus Indexed)."
-                    },
-                    {
-                        "S.No": "22",
-                        "Title of the Paper": "&ldquo;Design and Analysis of Low Poser, Area Efficient Skip Logic for CSKA Circuit in Arithmetic Unit,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "IEEE International Conference on Emerging Devices and Smart Systems (IEEE&ndash;ICEDSS&rsquo;2018), March 2nd and 3rd 2018, Namakkal, Tamilnadu, India."
-                    },
-                    {
-                        "S.No": "23",
-                        "Title of the Paper": "&ldquo;Performance Analysis of Different Decimation Filter Structure Realizations using Multistage Approach for GSM Applications,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Conference on Engineering Technology and Science, (ICETS&rsquo;15), March 5th and 6th, 2015, Rasipuram, Tamilnadu, India."
-                    },
-                    {
-                        "S.No": "24",
-                        "Title of the Paper": "&ldquo;Design of Efficient Decimation Filter Structure for WiMAX Applications with Memory Saving Approach,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "IEEE Int. Symposium on Signal Processing and Information Technology, (IEEE-ISSPIT&rsquo;2014), December 15-17, 2014, Noida."
-                    },
-                    {
-                        "S.No": "25",
-                        "Title of the Paper": "&ldquo;Implementation of Two Stage FIR Decimation Filter Structure,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "2nd International Conference on Communications and Signal Processing (ICCSP&rsquo;2013), 1st &ndash; 3rd April, 2013, Ongole, India, pp. 99-10. (Achieved Best Paper Award)"
-                    },
-                    {
-                        "S.No": "26",
-                        "Title of the Paper": "&ldquo;Cascading Sharpened CIC and Polyphase FIR Filter for Decimation Filter,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "2nd International Conference on Advances in Electrical and Electronics Engineering (ICAEEE&rsquo;2013), March 17&ndash;18, 2013, Dubai (UAE), pp.148-154."
-                    },
-                    {
-                        "S.No": "27",
-                        "Title of the Paper": "&ldquo;Evaluation of the Conventional Vs. Ancient Computation methodology for Energy Efficient Arithmetic Architecture,&rdquo;",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "IEEE International Conference on Process Automation, Control and Computing (IEEE-PACC&rsquo;2011), July 20&ndash;22, 2011, Coimbatore,India."
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "ECE",
+                            "Group": "ECE",
+                            "College Name/University": "JNTUA, Ananthapuramu",
+                            "Year of Passing": "2016"
+                        },
+                        {
+                            "Course": "M.E.",
+                            "Specialization": "Communication Systems",
+                            "Group": "ECE",
+                            "College Name/University": "B. S. Abdur Rahman Crescent Engineering College, Anna University",
+                            "Year of Passing": "2006"
+                        },
+                        {
+                            "Course": "B.E.",
+                            "Specialization": "ECE",
+                            "Group": "ECE",
+                            "College Name/University": "National Institute of Technology, Bharadhidasan University",
+                            "Year of Passing": "1999"
+                        }
+                    ]
+                },
+                {
+                    "title": "List of Publications",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Title of the Paper": "&ldquo;A hybrid strategy for mitigating unbalance and improving voltage considering higher penetration of electric vehicles and distributed generation&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Sustainable Cities and Society 103489, Elsevier, Vol. 76, pp 1-16, 2021 (SCI Indexed) https://doi.org/10.1016/j.scs.2021.103489"
+                        },
+                        {
+                            "S.No": "2",
+                            "Title of the Paper": "&ldquo;Mitigation of Phase Noise and BER by different CE in the MIMO-OFDM System&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Lecture Notes in Electrical Engineering, Springer Nature Singapore Pvt. Ltd. Vol. 700, pp. 3143-3158, ISSN: 1876-1100 2020 (Scopus Indexed, Web of Science) https://doi.org/10.1007/978-981-15-8221-9_293"
+                        },
+                        {
+                            "S.No": "3",
+                            "Title of the Paper": "&ldquo;FPGA Realization of Multi-stage Decimator for WN Applications&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Lecture Notes in Electrical Engineering, Springer Nature Singapore Pvt. Ltd. Vol. 700, pp. 2335-2348, ISSN: 1876-1100 2020 (Scopus Indexed, Web of Science) https://doi.org/10.1007/978-981-15-8221-9_218"
+                        },
+                        {
+                            "S.No": "4",
+                            "Title of the Paper": "&ldquo;Aerial Combat Drone&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "High Technology Letters, Volume 26, Issue 6, 2020 ISSN No: 1006-6748 (Scopus Indexed)"
+                        },
+                        {
+                            "S.No": "5",
+                            "Title of the Paper": "&ldquo;Semantic Segmentation of Brain Tumor from MRI Images and SVM Classification using GLCM Features&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "The Internationaljournal of analytical and experimental modal analysis, Volume XIII, Issue VI, pp 1115- 1130, ISSN NO:0886-9367, June 2021."
+                        },
+                        {
+                            "S.No": "6",
+                            "Title of the Paper": "&ldquo;Design of CIC based Decimation Filter Structure using FPGA for WiMAX Applications&rdquo;,",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "IEICE Electronics Express, Vol.17 No.6, 2019. (SCI Indexed)"
+                        },
+                        {
+                            "S.No": "7",
+                            "Title of the Paper": "&ldquo;Exhaustive Approach for Multistage Filter Design to Minimize Complexity of FIR Filter for WCDMA Applications,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Recent Technology and Engineering (IJRTE) ISSN: 2277-3878, Volume-7, Issue-6, March 2019 (Scopus Indexed)"
+                        },
+                        {
+                            "S.No": "8",
+                            "Title of the Paper": "&ldquo;A Compact Planar Inverted F Antenna for RF Energy Harvesting,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Advanced Research in Dynamical & Control Systems (JARDCS), Vol. 11, 01-Special Issue, 2019 (Scopus Indexed)"
+                        },
+                        {
+                            "S.No": "9",
+                            "Title of the Paper": "&ldquo; Performance Analysis of Ultra Low Power and PDP Efficient 1- Bit Full Adder Circuit for Arithmetic Blocks,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Scientific Journal of Contemporary Research in Engineering Science and Management (ISJCRESM), ISSN: 2456- 1134 Volume-3, Issue-4, February 2019 (Google Scholar)"
+                        },
+                        {
+                            "S.No": "10",
+                            "Title of the Paper": "&ldquo;Comparative Analysis of Interpolation/Decimation FIR Filter Structures for WLAN-b and WLAN-g Applications,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal for Innovative Research in Science & Technology, Volume 2, Issue 12, ISSN (online): 2349-6010, May 2016."
+                        },
+                        {
+                            "S.No": "11",
+                            "Title of the Paper": "&ldquo;Performance Analysis of Different Decimation Filter Structure Realizations using Multistage Approach for GSM Applications,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Special Issue,Volume 10, No.09 (2015), April 2015 (Scopus Indexed)"
+                        },
+                        {
+                            "S.No": "12",
+                            "Title of the Paper": "&ldquo;FPGA Implementation of FIR basedDecimation Filter Structure for WiMAX Application,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of AdvancedResearch in Computer and Communication Engineering, Volume 2, Issue 7, July 2013."
+                        },
+                        {
+                            "S.No": "13",
+                            "Title of the Paper": "&ldquo;Implementation and Comparison of Different CIC Filter Structure for Decimation,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "ICTACT Journal on Communication Technology, Volume04, Issue: 02, June 2013."
+                        },
+                        {
+                            "S.No": "14",
+                            "Title of the Paper": "&ldquo;Implementation of Efficient Audit Service Outsourcing for Data Integrity by Interfacing the Mobile Device in Clouds,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Applications (0975-8887), Volume 67 &ndash; No.20, April 2013."
+                        },
+                        {
+                            "S.No": "15",
+                            "Title of the Paper": "&ldquo;Design and Implementation of Efficient CIC Filter Structure for Decimation,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Applications (0975-8887), Volume 65 No.14, March 2013."
+                        },
+                        {
+                            "S.No": "16",
+                            "Title of the Paper": "&ldquo;Spectrum Sensing and Security in Cognitive Radio,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Applications (0975-8887), Volume 66&ndash;No.23, March 2013."
+                        },
+                        {
+                            "S.No": "17",
+                            "Title of the Paper": "&ldquo;Power Optimization Technique for Sensor Network,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Applications Technology and Research, Volume 2&ndash; Issue 3, 255&ndash;260, 2013."
+                        },
+                        {
+                            "S.No": "18",
+                            "Title of the Paper": "&ldquo;Improvisation of MAC Protocol for WirelessSensor Network,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Electronics and Communication andComputer Engineering, Volume 4, Issue 3, ISSN (Online): 2249-071X, ISSN (Print):2278-4209, 2013."
+                        },
+                        {
+                            "S.No": "19",
+                            "Title of the Paper": "&ldquo;Performance Analysis for Parallel MRA in Heterogeneous Wireless Networks,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of ComputerApplications Technology andResearch, Volume 2&ndash;Issue 3, 329&ndash;334, 2013."
+                        },
+                        {
+                            "S.No": "20",
+                            "Title of the Paper": "&ldquo;Efficient way of Communication using Fuzzy Theory,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Science and Engineering, Volume 2 (1), 2013, 31-38."
+                        },
+                        {
+                            "S.No": "21",
+                            "Title of the Paper": "&ldquo;Design of Efficient Polyphase Multistage FIR Filter with Memory Saving Structure for Decimation,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "European Journal of Scientific Research, Vol. 93 No 2 December, 2012, pp.289-300 (Scopus Indexed)."
+                        },
+                        {
+                            "S.No": "22",
+                            "Title of the Paper": "&ldquo;Design and Analysis of Low Poser, Area Efficient Skip Logic for CSKA Circuit in Arithmetic Unit,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "IEEE International Conference on Emerging Devices and Smart Systems (IEEE&ndash;ICEDSS&rsquo;2018), March 2nd and 3rd 2018, Namakkal, Tamilnadu, India."
+                        },
+                        {
+                            "S.No": "23",
+                            "Title of the Paper": "&ldquo;Performance Analysis of Different Decimation Filter Structure Realizations using Multistage Approach for GSM Applications,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Conference on Engineering Technology and Science, (ICETS&rsquo;15), March 5th and 6th, 2015, Rasipuram, Tamilnadu, India."
+                        },
+                        {
+                            "S.No": "24",
+                            "Title of the Paper": "&ldquo;Design of Efficient Decimation Filter Structure for WiMAX Applications with Memory Saving Approach,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "IEEE Int. Symposium on Signal Processing and Information Technology, (IEEE-ISSPIT&rsquo;2014), December 15-17, 2014, Noida."
+                        },
+                        {
+                            "S.No": "25",
+                            "Title of the Paper": "&ldquo;Implementation of Two Stage FIR Decimation Filter Structure,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "2nd International Conference on Communications and Signal Processing (ICCSP&rsquo;2013), 1st &ndash; 3rd April, 2013, Ongole, India, pp. 99-10. (Achieved Best Paper Award)"
+                        },
+                        {
+                            "S.No": "26",
+                            "Title of the Paper": "&ldquo;Cascading Sharpened CIC and Polyphase FIR Filter for Decimation Filter,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "2nd International Conference on Advances in Electrical and Electronics Engineering (ICAEEE&rsquo;2013), March 17&ndash;18, 2013, Dubai (UAE), pp.148-154."
+                        },
+                        {
+                            "S.No": "27",
+                            "Title of the Paper": "&ldquo;Evaluation of the Conventional Vs. Ancient Computation methodology for Energy Efficient Arithmetic Architecture,&rdquo;",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "IEEE International Conference on Process Automation, Control and Computing (IEEE-PACC&rsquo;2011), July 20&ndash;22, 2011, Coimbatore,India."
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. K. Sathesh": {
         "name": "Dr. K. Sathesh",
         "email": "drsatheshk@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. K. Sathesh.JPG",
+        "image": "public/uploads/faculty/Dr. K. Sathesh.JPG",
         "designation": "Assoc. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "VLSI - Biomedical Signal Processing",
-                        "Branch": "ECE",
-                        "College Name/University": "Anna University, Chennai",
-                        "Year of Passing": "2016"
-                    },
-                    {
-                        "Course": "M.E.",
-                        "Specialization": "Communication Systems",
-                        "Branch": "ECE",
-                        "College Name/University": "Anna University, Chennai",
-                        "Year of Passing": "2008"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "Anna University, Chennai",
-                        "Year of Passing": "2006"
-                    }
-                ]
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus : https://www.scopus.com/authid/detail.uri?authorId=36703267200",
-                    "Vidwan : https://mits.irins.org/profile/273389",
-                    "Google scholar : https://scholar.google.com/citations?user=rnEzokIAAAAJ",
-                    "h-Index (As per Scopus Data) : 4"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2026-27",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Design of Energy-Efficient TinyML Accelerators: From MATLAB Modeling to FPGA and Embedded Deployment. 2026 9th International Conference on Computing Methodologies and Communication (ICCMC). IEEE, 2026.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design and Physical Implementation of an RV32IM RISC-V Core in 7-nm Technology Using Cadence EDA Flow, 2026 4th International Conference on Self Sustainable Artificial Intelligence Systems (ICSSAS), Erode, India, 2026, pp. 270-276, doi: 10.1109/ICSSAS68835.2026.11559546.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "5",
-                        "Details of Research Publication": "Design and Analysis of a Quarter-wave Fed Hexagonal Slotted Antenna with DGS for Satellite Communication Applications, 2026 7th International Conference on Inventive Research in Computing Applications (ICIRCA), Coimbatore, India, 2026, pp. 334-338, doi: 10.1109/ICIRCA69024.2026.11570492.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "5",
-                        "Details of Research Publication": "Design and Analysis of an SVR-based Optimization Technique for Multiband Koch Fractal Antennas in 5G Applications, 2026 7th International Conference on Inventive Research in Computing Applications (ICIRCA), Coimbatore, India, 2026, pp. 339-343, doi: 10.1109/ICIRCA69024.2026.11570608.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "5",
-                        "Details of Research Publication": "Intelligent Dynamic Task Scheduling in Embedded Systems based on CPU Load using FreeRTOS, 2026 International Conference on Recent Advancement in Electrical, Computer and Communication Technologies (IECCT), Bangalore, India, 2026, pp. 1-5, doi: 10.1109/IECCT68664.2026.11541586.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "ASIC &ndash; Based Lung Sound Separation: Performance Analysis of Adaptive Line Enhancer with Least Mean Square Algorithm Across Scaled CMOS Technologies, 2025 IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE), Bangalore, India, 2025, pp. 1-6, doi: 10.1109/ICWITE64848.2025.11306941.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Efficient ASIC Implementation of ALE-NLMS and ANN-LMS Filters for Biomedical Signal Enhancement Across Scaled CMOS Technologies, 2025 First International Conference on Intelligent Computing and Communication Systems (CICCS), Bengaluru, India, 2025, pp. 1-6, doi: 10.1109/CICCS66437.2025.11280191.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm https://doi.org/10.1109/ICSSEECC61126.2024.10649421 International Conference on Smart Systems for Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Integrated Smart Trolley System: Arduino Nano-Based RFID Billing and Weight Sensor Augmentation https://doi.org/10.1109/ICCSP60870.2024.10544371 International Conference on Communication and Signal Processing (ICCSP)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Clearer HeartBeats: Enhancement of cardiac sounds using Adaptive Filtering and Wavelet Decomposition https://doi.org/10.1109/ICCSP60870.2024.10543921 International Conference on Communication and Signal Processing (ICCSP)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Design and Implementation of Multi-Band Honeycomb Fractal Antenna for 5G Applications https://doi.org/10.1109/ICCSP60870.2024.10543430 International Conference on Communication and Signal Processing (ICCSP)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Chip Layout for Adaptive Line Enhancer Design using Adaptive Filtering Algorithms and Metrics Computation for Auscultation Signal Separation https://doi.org/10.15918/j.jbit1004-0579.2021.102 Journal of Beijing Institute of Technology",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Neural network-based design and evaluation of performance metrics using adaptive line enhancer with adaptive algorithms for auscultation analysis https://doi.org/10.1007/s00521-020-04864-0 Neural Computing and Applications",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Least Mean Square (LMS) based neural design and metric evaluation for auscultation signal separation https://doi.org/10.1016/j.bspc.2019.101784 Biomedical Signal Processing and Control",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014-15",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Heart sound signal separation from lung sound signal at real time using radial basis function network International Journal of Applied Engineering Research",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "16",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014-15",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Application of adaptive line enhancer with LMS to separate heart sound signal from lung sound signal at real time http://dx.doi.org/10.19026/rjaset.9.1424 Research Journal of Applied Sciences, Engineering and Technology",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "17",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2015-16",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Separation of Real Time Heart Sound Signal from Lung Sound Signal Using Neural Network https://doi.org/10.1007/978-3-319-20294-5_25 Lecture Notes in Computer Science",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "18",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2013-14",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Real time heart and lung sound separation using adaptive line enhancer with nlms-Journal of Theoretical and Applied Information Technology",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "19",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2010-11",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of MEMS switch for RF applications https://doi.org/10.1007/s00542-010-1196-4 Microsystem Technologies",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "VLSI - Biomedical Signal Processing",
+                            "Branch": "ECE",
+                            "College Name/University": "Anna University, Chennai",
+                            "Year of Passing": "2016"
+                        },
+                        {
+                            "Course": "M.E.",
+                            "Specialization": "Communication Systems",
+                            "Branch": "ECE",
+                            "College Name/University": "Anna University, Chennai",
+                            "Year of Passing": "2008"
+                        },
+                        {
+                            "Course": "B.E.",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "Anna University, Chennai",
+                            "Year of Passing": "2006"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus : https://www.scopus.com/authid/detail.uri?authorId=36703267200",
+                        "Vidwan : https://mits.irins.org/profile/273389",
+                        "Google scholar : https://scholar.google.com/citations?user=rnEzokIAAAAJ",
+                        "h-Index (As per Scopus Data) : 4"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2026-27",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Design of Energy-Efficient TinyML Accelerators: From MATLAB Modeling to FPGA and Embedded Deployment. 2026 9th International Conference on Computing Methodologies and Communication (ICCMC). IEEE, 2026.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design and Physical Implementation of an RV32IM RISC-V Core in 7-nm Technology Using Cadence EDA Flow, 2026 4th International Conference on Self Sustainable Artificial Intelligence Systems (ICSSAS), Erode, India, 2026, pp. 270-276, doi: 10.1109/ICSSAS68835.2026.11559546.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "5",
+                            "Details of Research Publication": "Design and Analysis of a Quarter-wave Fed Hexagonal Slotted Antenna with DGS for Satellite Communication Applications, 2026 7th International Conference on Inventive Research in Computing Applications (ICIRCA), Coimbatore, India, 2026, pp. 334-338, doi: 10.1109/ICIRCA69024.2026.11570492.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "5",
+                            "Details of Research Publication": "Design and Analysis of an SVR-based Optimization Technique for Multiband Koch Fractal Antennas in 5G Applications, 2026 7th International Conference on Inventive Research in Computing Applications (ICIRCA), Coimbatore, India, 2026, pp. 339-343, doi: 10.1109/ICIRCA69024.2026.11570608.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "5",
+                            "Details of Research Publication": "Intelligent Dynamic Task Scheduling in Embedded Systems based on CPU Load using FreeRTOS, 2026 International Conference on Recent Advancement in Electrical, Computer and Communication Technologies (IECCT), Bangalore, India, 2026, pp. 1-5, doi: 10.1109/IECCT68664.2026.11541586.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "ASIC &ndash; Based Lung Sound Separation: Performance Analysis of Adaptive Line Enhancer with Least Mean Square Algorithm Across Scaled CMOS Technologies, 2025 IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE), Bangalore, India, 2025, pp. 1-6, doi: 10.1109/ICWITE64848.2025.11306941.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Efficient ASIC Implementation of ALE-NLMS and ANN-LMS Filters for Biomedical Signal Enhancement Across Scaled CMOS Technologies, 2025 First International Conference on Intelligent Computing and Communication Systems (CICCS), Bengaluru, India, 2025, pp. 1-6, doi: 10.1109/CICCS66437.2025.11280191.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm https://doi.org/10.1109/ICSSEECC61126.2024.10649421 International Conference on Smart Systems for Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Integrated Smart Trolley System: Arduino Nano-Based RFID Billing and Weight Sensor Augmentation https://doi.org/10.1109/ICCSP60870.2024.10544371 International Conference on Communication and Signal Processing (ICCSP)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Clearer HeartBeats: Enhancement of cardiac sounds using Adaptive Filtering and Wavelet Decomposition https://doi.org/10.1109/ICCSP60870.2024.10543921 International Conference on Communication and Signal Processing (ICCSP)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Design and Implementation of Multi-Band Honeycomb Fractal Antenna for 5G Applications https://doi.org/10.1109/ICCSP60870.2024.10543430 International Conference on Communication and Signal Processing (ICCSP)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2020-21",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Chip Layout for Adaptive Line Enhancer Design using Adaptive Filtering Algorithms and Metrics Computation for Auscultation Signal Separation https://doi.org/10.15918/j.jbit1004-0579.2021.102 Journal of Beijing Institute of Technology",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2019-20",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Neural network-based design and evaluation of performance metrics using adaptive line enhancer with adaptive algorithms for auscultation analysis https://doi.org/10.1007/s00521-020-04864-0 Neural Computing and Applications",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2019-20",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Least Mean Square (LMS) based neural design and metric evaluation for auscultation signal separation https://doi.org/10.1016/j.bspc.2019.101784 Biomedical Signal Processing and Control",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "15",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014-15",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Heart sound signal separation from lung sound signal at real time using radial basis function network International Journal of Applied Engineering Research",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "16",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014-15",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Application of adaptive line enhancer with LMS to separate heart sound signal from lung sound signal at real time http://dx.doi.org/10.19026/rjaset.9.1424 Research Journal of Applied Sciences, Engineering and Technology",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "17",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2015-16",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Separation of Real Time Heart Sound Signal from Lung Sound Signal Using Neural Network https://doi.org/10.1007/978-3-319-20294-5_25 Lecture Notes in Computer Science",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "18",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2013-14",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Real time heart and lung sound separation using adaptive line enhancer with nlms-Journal of Theoretical and Applied Information Technology",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "19",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2010-11",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of MEMS switch for RF applications https://doi.org/10.1007/s00542-010-1196-4 Microsystem Technologies",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. Maneesh Kumar Singh": {
         "name": "Dr. Maneesh Kumar Singh",
         "email": "drmaneeshs@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr_Maneesh_Kumar_Singh.png",
+        "image": "public/uploads/faculty/Dr_Maneesh_Kumar_Singh.png",
         "designation": "Assoc. Professor &amp; Assistant Dean",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Audio Signal Processing",
-                        "Branch": "Electrical Engineering, Computing & Mathematical Science",
-                        "College Name/University": "Curtin University, Perth Australia",
-                        "Year of Passing": "2017"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Optical Wireless Communication",
-                        "Branch": "Communication System & Networks",
-                        "College Name/University": "National Institute of Technology, Hamirpur",
-                        "Year of Passing": "2011"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Electronics & Communication Engineering",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "Uttar Predesh Technical University, Lucknow",
-                        "Year of Passing": "2009"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Audio Signal Processing"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=58266802500",
-                    "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/644655",
-                    "Google scholar Link: https://scholar.google.com/citations?user=KROF-BEAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 3"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Evaluation of speech corrupted due to Himalayan snowfall noise and wireless transmission. https://doi.org/10.1007/s12243-026-01150-3",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022-23",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Performance Evaluation of Speech Over Wireless Transmission with Real Time Weather Induced noise During Snowfall at Himalayan Regions. DOI: http://dx.doi.org/10.2139/ssrn.4651221",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022-23",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Performance analysis of speech transmission over composite wireless channels DOI: https://doi.org/10.5152/electrica.2022.22097",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020-21",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Weighted Sigmoid-based Frequency-Selective Noise Filtering for Speech Intelligibility Improvements DOI: https://doi.org/10.1007/s00034-020-01469-9",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017-18",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Bayesian Noise Estimation in the Modulation Domain DOI: https://doi.org/10.1016/j.specom.2017.11.008",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018-19",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Sigmoid-based Adaptive Noise Estimation Method for Speech Intelligibility Improvement DOI: https://doi.org/10.1109/ICCMC.2019.8819855",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016-17",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Performance of FSO System Using PPM and MSK SCI Modulation DOI: https://doi.org/10.1109/WiSPNET.2017.8300205",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2011-12",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Power Budget Optimization for a Short Distance Optical Wireless Link over Different Atmospheric Turbulences DOI: https://doi.org/10.1063/1.3643589",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2011-12",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Bit Error Rate Analysis of Free Space Optical Link Using Different Optical Windows DOI: https://doi.org/10.1109/ICDECOM.2011.5738529",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2011-12",
-                        "Author Position": "1",
-                        "Details of Research Publication": "To study the FSO link performance over stochastic variations in additional attenuation DOI: https://doi.org/10.1109/ICCCET.2011.5762484",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2011-12",
-                        "Author Position": "2",
-                        "Details of Research Publication": "A Heuristic Approach for Component Selection of Low-Power Micro-sensor Nodes based on Energy Model DOI: https://doi.org/10.1109/ICECTECH.2011.5941906",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "Served as a supervisor in summer internship program under INSA-IASc-NASc (2018) and supervised two external interns.",
-                    "Faculty Coordinator, Society for Promotion of Electronic Culture (SPEC) at NIT Hamirpur.",
-                    "Received Curtin Postgraduate Research Scholarship."
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Audio Signal Processing",
+                            "Branch": "Electrical Engineering, Computing & Mathematical Science",
+                            "College Name/University": "Curtin University, Perth Australia",
+                            "Year of Passing": "2017"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Optical Wireless Communication",
+                            "Branch": "Communication System & Networks",
+                            "College Name/University": "National Institute of Technology, Hamirpur",
+                            "Year of Passing": "2011"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Electronics & Communication Engineering",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "Uttar Predesh Technical University, Lucknow",
+                            "Year of Passing": "2009"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Audio Signal Processing"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=58266802500",
+                        "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/644655",
+                        "Google scholar Link: https://scholar.google.com/citations?user=KROF-BEAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 3"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Evaluation of speech corrupted due to Himalayan snowfall noise and wireless transmission. https://doi.org/10.1007/s12243-026-01150-3",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022-23",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Performance Evaluation of Speech Over Wireless Transmission with Real Time Weather Induced noise During Snowfall at Himalayan Regions. DOI: http://dx.doi.org/10.2139/ssrn.4651221",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022-23",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Performance analysis of speech transmission over composite wireless channels DOI: https://doi.org/10.5152/electrica.2022.22097",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020-21",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Weighted Sigmoid-based Frequency-Selective Noise Filtering for Speech Intelligibility Improvements DOI: https://doi.org/10.1007/s00034-020-01469-9",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017-18",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Bayesian Noise Estimation in the Modulation Domain DOI: https://doi.org/10.1016/j.specom.2017.11.008",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018-19",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Sigmoid-based Adaptive Noise Estimation Method for Speech Intelligibility Improvement DOI: https://doi.org/10.1109/ICCMC.2019.8819855",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016-17",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Performance of FSO System Using PPM and MSK SCI Modulation DOI: https://doi.org/10.1109/WiSPNET.2017.8300205",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2011-12",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Power Budget Optimization for a Short Distance Optical Wireless Link over Different Atmospheric Turbulences DOI: https://doi.org/10.1063/1.3643589",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2011-12",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Bit Error Rate Analysis of Free Space Optical Link Using Different Optical Windows DOI: https://doi.org/10.1109/ICDECOM.2011.5738529",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2011-12",
+                            "Author Position": "1",
+                            "Details of Research Publication": "To study the FSO link performance over stochastic variations in additional attenuation DOI: https://doi.org/10.1109/ICCCET.2011.5762484",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2011-12",
+                            "Author Position": "2",
+                            "Details of Research Publication": "A Heuristic Approach for Component Selection of Low-Power Micro-sensor Nodes based on Energy Model DOI: https://doi.org/10.1109/ICECTECH.2011.5941906",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": [
+                        "Served as a supervisor in summer internship program under INSA-IASc-NASc (2018) and supervised two external interns.",
+                        "Faculty Coordinator, Society for Promotion of Electronic Culture (SPEC) at NIT Hamirpur.",
+                        "Received Curtin Postgraduate Research Scholarship."
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. Grande Naga Jyothi": {
@@ -2051,7 +2051,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Assoc. Professor",
       email: "drnagajyothig@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/Naga Jyothi.jpg",
+      image: "public/uploads/faculty/Naga Jyothi.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -2156,7 +2156,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Assoc. Professor",
       email: "drrakeshnatht@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/1120faf5d8ab8c822818d9c4034e8f1f.jpg",
+      image: "public/uploads/faculty/1120faf5d8ab8c822818d9c4034e8f1f.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -2253,1047 +2253,1047 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. R. Ravindraiah": {
         "name": "Dr. R. Ravindraiah",
         "email": "drravindraiahr@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. R. Ravindraiah.JPG",
+        "image": "public/uploads/faculty/Dr. R. Ravindraiah.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Bio Medical Image Processing & Embedded System",
-                        "Branch": "ECE",
-                        "College Name/University": "JNTUA, Anantapuramu",
-                        "Year of Passing": "2021"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Digital Electronics & Communication Systems",
-                        "Branch": "ECE",
-                        "College Name/University": "Annamacharya Institute of Technology & Science, JNTUA",
-                        "Year of Passing": "2011"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "G.Pulla Reddy Engineering College, SK University",
-                        "Year of Passing": "2008"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Bio-Medical Image Processing, VLSI & Embedded Systems"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=37011647300",
-                    "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/223479",
-                    "Google scholar Link: https://scholar.google.co.in/citations?user=TrBBNhYAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 4"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "MobileNet V2: Deep Learning Approach for Diabetic Retinal Image Classification. In: Raju, K.S., Senkerik, R., Kumar, T.K., Sellathurai, M., Naresh Kumar, V. (eds) Intelligent Computing and Communication. ICICC 2024. Lecture Notes in Networks and Systems, vol 1240. Springer, Singapore. https://doi.org/10.1007/978-981-96-1264-2_1",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Assessment of mechanical and tribological behavior of Mg-4Zn-1RE-0.7Zr alloy: Novel mixture of Si3N4/TiC/MoS2 utilizing casting technique&rdquo; Composites and Advanced Materials. Volume 33: 1&ndash;15, August 2024;33. Sage Publications Ltd; doi:10.1177/26349833241279311",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Enhanced Diabetic Retinopathy Classification Using Inception Net V3: A Deep Learning Approach&rdquo; Convergence of Internet of Medical Things (IoMT) and Generative AI, IGI Global Scientific Publishing, DOI: 10.4018/979-8-3693-6180-1.ch011, pp 267 &ndash; 290",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Deep Learning Classification of Diabetic Retinopathy Using ResNet-101 Convolutional Neural Networks&rdquo; Convergence of Internet of Medical Things (IoMT) and Generative AI, IGI Global Scientific Publishing, DOI: 10.4018/979-8-3693-6180-1.ch017, pp 417 &ndash; 438",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Enhancing IoT Data Quality Validation in Medical Field through Big Data&rdquo; Internet of Things and Big Data Analytics for a Green Environment, Chapter 2, 1st Edition, pp 23 &ndash; 39, Oct 2024, Chapman and Hall/CRC, Taylor & Francis group, eISBN: 9781032656830 doi: 10.1201/9781032656830",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Clinical Application of Neural Network for Cancer Detection Application&rdquo;. EAI Endorsed Trans Perv Health Tech, Vol 10, pp 1 &ndash; 6, March 2024; H index 13, ISSN: 24117145, https://doi.org/10.4108/eetpht.10.545410",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022-23",
-                        "Author Position": "4",
-                        "Details of Research Publication": "The future of Industry 4.0: Private 5G Networks&rdquo; Advanced Signal Processing for Industry 4.0, IOP Publishing, Ch. 3 (1-25), June 2023, doi: 10.1088/978-0-7503-5247-5ch3",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019-20",
-                        "Author Position": "1",
-                        "Details of Research Publication": "An Instinctive application of Spatially weighted Possibilistic Clustering Methods for the Detection of Lesions in Diabetic Retinopathy Images in Multi-dimensional Kernel Space&rdquo;, Volume 113 (1), pp 223-240, January 2020, https://doi.org/10.1007/s11277-020-07186-5 , ISSN: 09296212, 1572834X Wireless Personal Communications, Springer Nature, IF:1.671",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019-20",
-                        "Author Position": "1",
-                        "Details of Research Publication": "An Instinctive method for Lesion Detection in Diabetic retinopathy images using a novel Spatial Possibilistic C means clustering in Kernel space&rdquo;, International Journal of Recent Technology and Engineering, Volume-8, Issue-2S11, pp 2380-2386, September 2019, ISSN: 2277-3878, DoI: 10.35940/ijrte.B1272.0982S1119",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019-20",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;Evaluation of Conventional methods for the Detection of Lesions in Diabetic Retinopathy Images: A Research&rdquo;, International Journal of Innovative Technology and Exploring Engineering ISSN: 2278-3075, Volume-8, Issue- 9S2, July 2019, pp 52&ndash;57, DOI: 10.35940/ijitee.I1010.0789S219",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017-18",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Exudates detection in Diabetic Retinopathy images using Possibilistic C means clustering algorithm with induced Spatial constraint,&rdquo; Advances in Intelligent Systems and Computing, Springer Nature, Singapore, doi.org/10.1007/978-981-10-7868-2_44,pp 455-463",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2015-16",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Detection of Exudates in Diabetic Retinopathy Images using Laplacian Kernel induced Spatial FCM Clustering algorithm&rdquo; Indian Journal of Science and Technology, ISSN: 09745645, 09746846, Vol 9 (15), pp 1-6, April 2016, DoI: 10.17485/ijst/2016/v9i15/88171",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2011-12",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Quality Improvement for Analysis of Leukemia Images through Contrast Stretch Methods&rdquo; International Conference on Communication Technology and System Design 2011, Amrita Vishwa Vidyapeetham, Coimbatore, India, ELSEVIER Procedia Engineering 30 (2012) 475 &ndash; 481",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2011-12",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Segmentation of Electron Micrograph Images for Qualitative Analysis of Diabetic Atherosclerosis&rdquo; published in International Journal of Applied Engineering Research, PP.2061-2068, Volume 6, Number 17 (2011), ISSN 0973-4562",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2011-12",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Qualitative Evaluation of Enhancement Methods for Analysis of Acute Leukemia Images,&rdquo; published in International Journal of Applied Engineering Research, PP.2051-2060, Volume 6, Number 17 (2011), ISSN 0973-4562",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "16",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2011-12",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Qualitative and Quantitative Analysis of Segmentation of Human Retinal Images&rdquo; International Conference on Computer, Communication and Electrical Technology(ICCCET 2011), archived in IEEE publication and IEEE explorer, National Engineering College, Tirunelveli, Tamilnadu, India, pp 76-80",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "17",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2010-11",
-                        "Author Position": "6",
-                        "Details of Research Publication": "Qualitative Analysis of Segmentation Methods in Detection of Atherosclerosis in Diabetic Patients&rdquo; Proceedings of International Conference on Emerging Trends in Robotics & Communication Technologies (INTERACT 2010), Published by IEEE Press and IEEE explorer, Sathyabama University, Chennai. India, pp 263-267",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    }
-                ]
-            },
-            {
-                "title": "Research Projects & Events",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2017-18",
-                        "Funded Project /Event": "Funded Project",
-                        "Role": "P.I.",
-                        "Title of the Project/Event": "An Optimized Learning methods for the Classification of Diabetic Retinal Imag",
-                        "Amount in Rs. /-": "17,000",
-                        "Funding Agency": "MITS, Madanapalle Seed Grant"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Funded Project /Event": "Funded Project",
-                        "Role": "P.I.",
-                        "Title of the Project/Event": "Lesion detection in Diabetic Retinopathy images using Kernal induced Spatial Fuzzy clustering approach",
-                        "Amount in Rs. /-": "20,000",
-                        "Funding Agency": "MITS, Madanapalle under TEQIP II Seed"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "Others",
-                        "Academic Year": "2022-23",
-                        "Application ID": "202241065882",
-                        "Title of the Patent": "Implementation of Surveillance Monitoring Using ESP32 CAM Module",
-                        "Status": "Published"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "Others",
-                        "Academic Year": "2022-23",
-                        "Application ID": "202241060187",
-                        "Title of the Patent": "Tracking and Controlling of Transportation Vehicles",
-                        "Status": "Published"
-                    },
-                    {
-                        "S.No": "3",
-                        "Affiliation": "Others",
-                        "Academic Year": "2021-22",
-                        "Application ID": "202241020127",
-                        "Title of the Patent": "A Method for Efficient Power Allocation in Multiple Input/Ouput and Small Cell Network Systems",
-                        "Status": "Published"
-                    },
-                    {
-                        "S.No": "4",
-                        "Affiliation": "Others",
-                        "Academic Year": "2021-22",
-                        "Application ID": "202141060537",
-                        "Title of the Patent": "IoT based Fish Breeding Identification System employing Image Processing",
-                        "Status": "Published"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": "Resource person in &ldquo;Soft Clustering Methods in Image Processing&rdquo; a Five Days Online Faculty Development Program on &ldquo;Contemporary Research Trends in Electronics & Communications, and Computer Science&rdquo; organized by Department of ECE, Visvesvaraya Technological University Center for PG studies, Karnataka, 6th &ndash; 10th July 2020."
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Bio Medical Image Processing & Embedded System",
+                            "Branch": "ECE",
+                            "College Name/University": "JNTUA, Anantapuramu",
+                            "Year of Passing": "2021"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Digital Electronics & Communication Systems",
+                            "Branch": "ECE",
+                            "College Name/University": "Annamacharya Institute of Technology & Science, JNTUA",
+                            "Year of Passing": "2011"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "G.Pulla Reddy Engineering College, SK University",
+                            "Year of Passing": "2008"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Bio-Medical Image Processing, VLSI & Embedded Systems"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=37011647300",
+                        "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/223479",
+                        "Google scholar Link: https://scholar.google.co.in/citations?user=TrBBNhYAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 4"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "MobileNet V2: Deep Learning Approach for Diabetic Retinal Image Classification. In: Raju, K.S., Senkerik, R., Kumar, T.K., Sellathurai, M., Naresh Kumar, V. (eds) Intelligent Computing and Communication. ICICC 2024. Lecture Notes in Networks and Systems, vol 1240. Springer, Singapore. https://doi.org/10.1007/978-981-96-1264-2_1",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Assessment of mechanical and tribological behavior of Mg-4Zn-1RE-0.7Zr alloy: Novel mixture of Si3N4/TiC/MoS2 utilizing casting technique&rdquo; Composites and Advanced Materials. Volume 33: 1&ndash;15, August 2024;33. Sage Publications Ltd; doi:10.1177/26349833241279311",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Enhanced Diabetic Retinopathy Classification Using Inception Net V3: A Deep Learning Approach&rdquo; Convergence of Internet of Medical Things (IoMT) and Generative AI, IGI Global Scientific Publishing, DOI: 10.4018/979-8-3693-6180-1.ch011, pp 267 &ndash; 290",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Deep Learning Classification of Diabetic Retinopathy Using ResNet-101 Convolutional Neural Networks&rdquo; Convergence of Internet of Medical Things (IoMT) and Generative AI, IGI Global Scientific Publishing, DOI: 10.4018/979-8-3693-6180-1.ch017, pp 417 &ndash; 438",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Enhancing IoT Data Quality Validation in Medical Field through Big Data&rdquo; Internet of Things and Big Data Analytics for a Green Environment, Chapter 2, 1st Edition, pp 23 &ndash; 39, Oct 2024, Chapman and Hall/CRC, Taylor & Francis group, eISBN: 9781032656830 doi: 10.1201/9781032656830",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Clinical Application of Neural Network for Cancer Detection Application&rdquo;. EAI Endorsed Trans Perv Health Tech, Vol 10, pp 1 &ndash; 6, March 2024; H index 13, ISSN: 24117145, https://doi.org/10.4108/eetpht.10.545410",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022-23",
+                            "Author Position": "4",
+                            "Details of Research Publication": "The future of Industry 4.0: Private 5G Networks&rdquo; Advanced Signal Processing for Industry 4.0, IOP Publishing, Ch. 3 (1-25), June 2023, doi: 10.1088/978-0-7503-5247-5ch3",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019-20",
+                            "Author Position": "1",
+                            "Details of Research Publication": "An Instinctive application of Spatially weighted Possibilistic Clustering Methods for the Detection of Lesions in Diabetic Retinopathy Images in Multi-dimensional Kernel Space&rdquo;, Volume 113 (1), pp 223-240, January 2020, https://doi.org/10.1007/s11277-020-07186-5 , ISSN: 09296212, 1572834X Wireless Personal Communications, Springer Nature, IF:1.671",
+                            "Indexing": "SCIE",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019-20",
+                            "Author Position": "1",
+                            "Details of Research Publication": "An Instinctive method for Lesion Detection in Diabetic retinopathy images using a novel Spatial Possibilistic C means clustering in Kernel space&rdquo;, International Journal of Recent Technology and Engineering, Volume-8, Issue-2S11, pp 2380-2386, September 2019, ISSN: 2277-3878, DoI: 10.35940/ijrte.B1272.0982S1119",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019-20",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;Evaluation of Conventional methods for the Detection of Lesions in Diabetic Retinopathy Images: A Research&rdquo;, International Journal of Innovative Technology and Exploring Engineering ISSN: 2278-3075, Volume-8, Issue- 9S2, July 2019, pp 52&ndash;57, DOI: 10.35940/ijitee.I1010.0789S219",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017-18",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Exudates detection in Diabetic Retinopathy images using Possibilistic C means clustering algorithm with induced Spatial constraint,&rdquo; Advances in Intelligent Systems and Computing, Springer Nature, Singapore, doi.org/10.1007/978-981-10-7868-2_44,pp 455-463",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2015-16",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Detection of Exudates in Diabetic Retinopathy Images using Laplacian Kernel induced Spatial FCM Clustering algorithm&rdquo; Indian Journal of Science and Technology, ISSN: 09745645, 09746846, Vol 9 (15), pp 1-6, April 2016, DoI: 10.17485/ijst/2016/v9i15/88171",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2011-12",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Quality Improvement for Analysis of Leukemia Images through Contrast Stretch Methods&rdquo; International Conference on Communication Technology and System Design 2011, Amrita Vishwa Vidyapeetham, Coimbatore, India, ELSEVIER Procedia Engineering 30 (2012) 475 &ndash; 481",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2011-12",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Segmentation of Electron Micrograph Images for Qualitative Analysis of Diabetic Atherosclerosis&rdquo; published in International Journal of Applied Engineering Research, PP.2061-2068, Volume 6, Number 17 (2011), ISSN 0973-4562",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "15",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2011-12",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Qualitative Evaluation of Enhancement Methods for Analysis of Acute Leukemia Images,&rdquo; published in International Journal of Applied Engineering Research, PP.2051-2060, Volume 6, Number 17 (2011), ISSN 0973-4562",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "16",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2011-12",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Qualitative and Quantitative Analysis of Segmentation of Human Retinal Images&rdquo; International Conference on Computer, Communication and Electrical Technology(ICCCET 2011), archived in IEEE publication and IEEE explorer, National Engineering College, Tirunelveli, Tamilnadu, India, pp 76-80",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "17",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2010-11",
+                            "Author Position": "6",
+                            "Details of Research Publication": "Qualitative Analysis of Segmentation Methods in Detection of Atherosclerosis in Diabetic Patients&rdquo; Proceedings of International Conference on Emerging Trends in Robotics & Communication Technologies (INTERACT 2010), Published by IEEE Press and IEEE explorer, Sathyabama University, Chennai. India, pp 263-267",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Projects & Events",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2017-18",
+                            "Funded Project /Event": "Funded Project",
+                            "Role": "P.I.",
+                            "Title of the Project/Event": "An Optimized Learning methods for the Classification of Diabetic Retinal Imag",
+                            "Amount in Rs. /-": "17,000",
+                            "Funding Agency": "MITS, Madanapalle Seed Grant"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Funded Project /Event": "Funded Project",
+                            "Role": "P.I.",
+                            "Title of the Project/Event": "Lesion detection in Diabetic Retinopathy images using Kernal induced Spatial Fuzzy clustering approach",
+                            "Amount in Rs. /-": "20,000",
+                            "Funding Agency": "MITS, Madanapalle under TEQIP II Seed"
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "Others",
+                            "Academic Year": "2022-23",
+                            "Application ID": "202241065882",
+                            "Title of the Patent": "Implementation of Surveillance Monitoring Using ESP32 CAM Module",
+                            "Status": "Published"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "Others",
+                            "Academic Year": "2022-23",
+                            "Application ID": "202241060187",
+                            "Title of the Patent": "Tracking and Controlling of Transportation Vehicles",
+                            "Status": "Published"
+                        },
+                        {
+                            "S.No": "3",
+                            "Affiliation": "Others",
+                            "Academic Year": "2021-22",
+                            "Application ID": "202241020127",
+                            "Title of the Patent": "A Method for Efficient Power Allocation in Multiple Input/Ouput and Small Cell Network Systems",
+                            "Status": "Published"
+                        },
+                        {
+                            "S.No": "4",
+                            "Affiliation": "Others",
+                            "Academic Year": "2021-22",
+                            "Application ID": "202141060537",
+                            "Title of the Patent": "IoT based Fish Breeding Identification System employing Image Processing",
+                            "Status": "Published"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": "Resource person in &ldquo;Soft Clustering Methods in Image Processing&rdquo; a Five Days Online Faculty Development Program on &ldquo;Contemporary Research Trends in Electronics & Communications, and Computer Science&rdquo; organized by Department of ECE, Visvesvaraya Technological University Center for PG studies, Karnataka, 6th &ndash; 10th July 2020."
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. G. Reddy Hemantha": {
         "name": "Dr. G. Reddy Hemantha",
         "email": "drhemanthagr@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Reddy Hemantha(1).JPG",
+        "image": "public/uploads/faculty/Reddy Hemantha(1).JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "VLSI Design",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "JNTUA, Anantapuramum",
-                        "Year of Passing": "2021"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Digital Electronics and Communication Systems",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Madanapalle Institute of Technology & Science, JNTUA, Anantapuramum",
-                        "Year of Passing": "2010"
-                    },
-                    {
-                        "Course": "AMIE",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Institution Of Engineers India, IEI",
-                        "Year of Passing": "2008"
-                    },
-                    {
-                        "Course": "DECE",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "State Board of Technical Education and Training, Hyderabad",
-                        "Year of Passing": "1993"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "VLSI Design"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57201877495",
-                    "Vidwan Link: https://mits.irins.org/profile/260378",
-                    "Google scholar Link: https://scholar.google.com/citations?user=j3EVrbgAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 3"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Analysis and Detection of Breast Cancer Using Recursive Feature Elimination",
-                        "Indexing": "Scopus",
-                        "Publication": "Springer Conference Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Interactive Delta Bot with Voice Recognition and Image Processing - A Review",
-                        "Indexing": "Scopus",
-                        "Publication": "IEEE Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Characterization and Modeling of Gate-All-Around FET (GAA FET) for Low-Power and High- Performance Applications",
-                        "Indexing": "Scopus",
-                        "Publication": "IEEE Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Author Position": "1",
-                        "Details of Research Publication": "An Optimized FIR Filter Design for Noise Reduction in Bio-Medical Signal Processing",
-                        "Indexing": "Scopus",
-                        "Publication": "IEEE Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Design and Implementation of High Speed Self-Biased DTDC for Flash ADC",
-                        "Indexing": "Scopus",
-                        "Publication": "IEEE Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023",
-                        "Author Position": "3",
-                        "Details of Research Publication": "An Optimized Resource Allocation Model for Cloud Computing Using Ant Colony-based Auction Method",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Switch Controlled State Skipping Based Memory Efficient Test Pattern Generator for BIST Application",
-                        "Indexing": "Scopus",
-                        "Publication": "IEEE Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Author Position": "4",
-                        "Details of Research Publication": "A Miniature Circular Polarized Fractal based Antenna for Satellite Applications",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Medication Alarm: A Proficient IoT-Enabled Medication Alarm for Age Old People to the Betterment of their Medication Practice",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "High performance rns-fir filter using prefix accumulation based da arithmetic for Ecg signal classification",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Low latency prefix accumulation driven compound MAC unit for efficient FIR filter implementation",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "4",
-                        "Details of Research Publication": "High speed, low area exact speculative carry look ahead adder using MGDI technique",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "1",
-                        "Details of Research Publication": "FPGA Implementation of Speculative Prefix Accumulation-Driven RNS for High-Performance FIR Filter",
-                        "Indexing": "Scopus",
-                        "Publication": "Springer Conference Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "1",
-                        "Details of Research Publication": "DA based systematic approach using speculative addition for high-speed DSP applications",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Application ID": "422964-001",
-                        "Title of the Patent": "IOT BASED WASTE MANAGEMENT BIN",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Application ID": "412328-001",
-                        "Title of the Patent": "AI BASED ROBOTIC DELIVERY DEVICE",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "3",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2023",
-                        "Application ID": "202341000087",
-                        "Title of the Patent": "DESIGN AND PERFORMANCE OF CHARGE-PLASMA-BASED SCHOTTKY FET CMOS CIRCUIT RING OSCILLATOR FOR HIGH DENSITY",
-                        "Status": "Published"
-                    },
-                    {
-                        "S.No": "4",
-                        "Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Application ID": "202221012287",
-                        "Title of the Patent": "A SMART TRAFFIC MANAGEMENT SYSTEM",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "5",
-                        "Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Application ID": "202221012286",
-                        "Title of the Patent": "A SYSTEM FOR TRACKING AND DETECTION COUNTERFEIT IN PHARMACEUTICALS USING BLOCKCHAIN AND A METHOD THEREOF",
-                        "Status": "Granted"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "Reviewer for peer-reviewed journal and conferences.",
-                    "Session Chair for IEEE and International Conferences.",
-                    "Advisor for IEEE Sensor Council Hyderabad Section."
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "VLSI Design",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "JNTUA, Anantapuramum",
+                            "Year of Passing": "2021"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Digital Electronics and Communication Systems",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Madanapalle Institute of Technology & Science, JNTUA, Anantapuramum",
+                            "Year of Passing": "2010"
+                        },
+                        {
+                            "Course": "AMIE",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Institution Of Engineers India, IEI",
+                            "Year of Passing": "2008"
+                        },
+                        {
+                            "Course": "DECE",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "State Board of Technical Education and Training, Hyderabad",
+                            "Year of Passing": "1993"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "VLSI Design"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57201877495",
+                        "Vidwan Link: https://mits.irins.org/profile/260378",
+                        "Google scholar Link: https://scholar.google.com/citations?user=j3EVrbgAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 3"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Analysis and Detection of Breast Cancer Using Recursive Feature Elimination",
+                            "Indexing": "Scopus",
+                            "Publication": "Springer Conference Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Interactive Delta Bot with Voice Recognition and Image Processing - A Review",
+                            "Indexing": "Scopus",
+                            "Publication": "IEEE Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Characterization and Modeling of Gate-All-Around FET (GAA FET) for Low-Power and High- Performance Applications",
+                            "Indexing": "Scopus",
+                            "Publication": "IEEE Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Author Position": "1",
+                            "Details of Research Publication": "An Optimized FIR Filter Design for Noise Reduction in Bio-Medical Signal Processing",
+                            "Indexing": "Scopus",
+                            "Publication": "IEEE Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Design and Implementation of High Speed Self-Biased DTDC for Flash ADC",
+                            "Indexing": "Scopus",
+                            "Publication": "IEEE Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023",
+                            "Author Position": "3",
+                            "Details of Research Publication": "An Optimized Resource Allocation Model for Cloud Computing Using Ant Colony-based Auction Method",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Switch Controlled State Skipping Based Memory Efficient Test Pattern Generator for BIST Application",
+                            "Indexing": "Scopus",
+                            "Publication": "IEEE Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Author Position": "4",
+                            "Details of Research Publication": "A Miniature Circular Polarized Fractal based Antenna for Satellite Applications",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Medication Alarm: A Proficient IoT-Enabled Medication Alarm for Age Old People to the Betterment of their Medication Practice",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "High performance rns-fir filter using prefix accumulation based da arithmetic for Ecg signal classification",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Low latency prefix accumulation driven compound MAC unit for efficient FIR filter implementation",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "4",
+                            "Details of Research Publication": "High speed, low area exact speculative carry look ahead adder using MGDI technique",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "1",
+                            "Details of Research Publication": "FPGA Implementation of Speculative Prefix Accumulation-Driven RNS for High-Performance FIR Filter",
+                            "Indexing": "Scopus",
+                            "Publication": "Springer Conference Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "1",
+                            "Details of Research Publication": "DA based systematic approach using speculative addition for high-speed DSP applications",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Application ID": "422964-001",
+                            "Title of the Patent": "IOT BASED WASTE MANAGEMENT BIN",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Application ID": "412328-001",
+                            "Title of the Patent": "AI BASED ROBOTIC DELIVERY DEVICE",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "3",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2023",
+                            "Application ID": "202341000087",
+                            "Title of the Patent": "DESIGN AND PERFORMANCE OF CHARGE-PLASMA-BASED SCHOTTKY FET CMOS CIRCUIT RING OSCILLATOR FOR HIGH DENSITY",
+                            "Status": "Published"
+                        },
+                        {
+                            "S.No": "4",
+                            "Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Application ID": "202221012287",
+                            "Title of the Patent": "A SMART TRAFFIC MANAGEMENT SYSTEM",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "5",
+                            "Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Application ID": "202221012286",
+                            "Title of the Patent": "A SYSTEM FOR TRACKING AND DETECTION COUNTERFEIT IN PHARMACEUTICALS USING BLOCKCHAIN AND A METHOD THEREOF",
+                            "Status": "Granted"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": [
+                        "Reviewer for peer-reviewed journal and conferences.",
+                        "Session Chair for IEEE and International Conferences.",
+                        "Advisor for IEEE Sensor Council Hyderabad Section."
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. Janmoni Borah": {
         "name": "Dr. Janmoni Borah",
         "email": "drjanmonib@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Janmoni Borah.JPG",
+        "image": "public/uploads/faculty/Dr. Janmoni Borah.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Wireless Communication",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "NERIST, Arunachal Pradesh",
-                        "Year of Passing": "2021"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Mobile Communication and Computing",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "NIT Arunachal Pradesh",
-                        "Year of Passing": "2015"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "CIT Kokrajhar, Gauhati University",
-                        "Year of Passing": "2013"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Optical Device Modelling, 5G and Beyond, Antenna Design"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57190060964",
-                    "Vidwan Link: https://mits.irins.org/profile/273396",
-                    "Google scholar Link: https://scholar.google.co.in/citations?user=w0i7mz0AAAAJ",
-                    "h-Index (As per Scopus Data) : 7"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Numerical Analysis of a Next-Generation SW-CNT/ZnO Hybrid Charge Extraction Design in Lead-Free Cs2TiBr6 Perovskite Photovoltaic Cells Using SCAPS-1D DOI: 10.1007/s11664-025-12442-0",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Device engineering of a new lead free all inorganic CsSnI3/CsSnCl3 based graded perovskite absorber structure for high performance solar cell DOI: 10.1109/JQE.2025.3592472",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design and Optimization of Cs2AgInBr6/CsSnI3-Based Dual-Absorber Inorganic Perovskite Solar Cell for Enhanced Broadband Absorption DOI: 10.1016/j.micrna.2025.208274",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Performance enhancement of Non-Toxic Cs2AgBiI6 based double perovskite photovoltaic cell via integration of a novel Mono-Walled carbon nanotube (MW-CNT) electron extraction layer DOI: 10.1016/j.mseb.2025.118336",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Investigation of hybrid electron extraction architecture via integration of Mono-Shelled Carbon Nanotubes (MS-CNT) with perovskite oxide BaSnO3 for beyond 38% efficiency in BaZrSe3 photovoltaic cells DOI: 10.1016/j.optcom.2025.131769",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Device Engineering of a Novel Lead-Free Solar Cell Architecture Utilizing Inorganic CsSnCl3 and CsSnI3 Perovskite-Based Dual Absorbers for Sustainable Powering of Wireless Networks DOI: 10.1007/s11664-024-11605-9",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Device optimization of all inorganic CsPbBr3/LNMO based multi-layered perovskite light harvesters for broader capturing of solar spectrum DOI: 10.1016/j.solener.2024.112858",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Improvement of photovoltaic response in perovskite solar cell via all inorganic lead free cubic double La2NiMnO6/Cs3Bi2I9 based graded absorber architecture DOI: 10.1007/s11082-024-07239-0",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Improving Network Efficiency with Antenna and User Selections in a 5G Heterogeneous Cellular Network DOI: 10.3103/S0735272724050042",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "5G cellular network coverage with KUD-based SC deployment DOI: 10.3103/S0735272723100047",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Transmit power allocation for Sub-6GHz/mmWave based 5G cellular network DOI: 10.3103/S0735272723060043",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Device engineering of lead-free FaCsSnI3/Cs2AgBiI6-based dual-absorber perovskite solar cell architecture for powering next-generation wireless networks DOI: 10.1002/dac.5903",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Analytical investigation of CdSe/CdS/ZnSe based single core double-shell nanotextured vertical nanopillar array antenna for broadband photodetection applications DOI: 10.1002/dac.5752",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Optimization of All Inorganic Perovskite Solar Cell with Dual Active Layers for Beyond 29% Efficiency DOI: 10.1016/j.solener.2023.111939",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Transmit Antenna Selection for Achieving Energy Efficiency in Massive MIMO Based 5G Cellular Network DOI: 10.3103/S0735272723020048",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "16",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Dynamic Cell Sleeping Mechanism: An Energy-Efficient Approach for Mobile 5G HetCN DOI: 10.1002/dac.5422",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "17",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Analysis of Massive MIMO and Small Cells based 5G Cellular Networks: A simulative approach DOI: 10.3103/S0735272722060024",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "18",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Author Position": "6",
-                        "Details of Research Publication": "Capacity Maximization in Cell Free Massive MIMO Network with Access Point Selection Method DOI: 10.2174/2210327913666221222145957",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "19",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2021-22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Optical Modelling of GaAs/GaSb Core-Shell Cone Topped Octagonal Faced Nanopillar Array with Periodic Trapezoidal Textured Cut For High Photon Trapping Efficiency DOI: 10.1007/s10825-022-01898-6",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "20",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2021-23",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Miniaturization and Optimization of FR4 based CPW-fed Antenna for Multi-band Applications DOI: 10.3103/S0735272721120049",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "21",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020-21",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Energy-Efficient ICI Mitigation with Dynamic and Location-Based Power Allocation in Mobility-Based 5G HetCN DOI: 10.1007/s11277-020-07930-x",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "22",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020-21",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Dynamic and location-based power allocation mechanism for inter-cell interference mitigation in 5G heterogeneous cellular network DOI: 10.1002/dac.4548",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "23",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019-20",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Dynamic and Energy-efficient ICI Mitigation Techniques for Mobility based 5G HetCN DOI: 10.1049/iet-com.2019.0898",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "24",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019-20",
-                        "Author Position": "1",
-                        "Details of Research Publication": "ICI effects on user mobility with different FR-schemes in a multi-cell cellular network DOI: 10.1049/iet-com.2019.0397",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "25",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019-20",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Effect of intercell interference on cell boundary users in three-cell and seven-cell HetCN DOI: 10.1002/dac.4257",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "26",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "ICI mitigation with Fixed-Number (FN) and Fixed-Region (FRgn) based BS coordination and cooperation in a multi-cell cellular network DOI: 10.1007/978-981-15-7031-5_69",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "27",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Enhancement of Throughput for Cellular Data Network by Small cell Deployment DOI: 10.1109/ICRIEECE44171.2018.9009311",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "28",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018-19",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Small-cell intensities for cellular network affected by cell-edge and hotspot DOI: 10.1002/dac.3788",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "29",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018-19",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Effect on energy efficiency with small cell deployment in heterogeneous cellular networks DOI: 10.1002/itl2.97",
-                        "Indexing": "ESCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "30",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016-17",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Traditional Macro-tower to Heterogeneous Cellular Networks: A Survey DOI: 10.14257/ijast.2017.109.02",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "31",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016-17",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Miniaturization of a CPW-fed Dual-Band Antenna for GSM 1800/1900 and WLAN 5 GHz Applications DOI: 10.4313/TEEM.2017.18.2.119",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "32",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016-17",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Compact CPW-fed Tri-band Antenna with a Defected Ground Structure for GSM, WLAN and WiMAX Applications DOI: 10.3103/S0735272716070050",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "33",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design a compact tri-band band pass filter using asymmetric SIRs and DGS DOI: 10.1109/EPETSG.2015.7510169",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "34",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2015-16",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of Compact Bandpass Filter for WiMAX and UWB Application using Asymmetric SIRs and DGS DOI: 10.3103/S0735272716060066",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "35",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014-15",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Effects of Modified Ground Structure on a CPW-fed patch Antenna DOI: 10.14257/ijfgcn.2015.8.2.15",
-                        "Indexing": "ESCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "36",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2014-15",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Power Saving Strategies in Green Cloud Computing Systems DOI: 10.14257/ijgdc.2015.8.1.28",
-                        "Indexing": "ESCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "EDITORIAL BORAD MEMBER: Scientific Reports Journal",
-                    "Research Incentives: MITS Andhra Pradesh: AY 2021-2022, AY 2022-2023, AY 2023-2024",
-                    "Technical Committee Member - International Journal of Advanced Engineering and Management.",
-                    "Editorial Board Member - Wireless Communication Technology (WCT) journal.",
-                    "NPTEL Mentor Certificates: &ldquo;Research Methodology&rdquo; held during July-Dec 2023 (TOP PERFORMING MENTOR)",
-                    "&ldquo;The Joy of Computing using Python&rdquo; held during Jan-Apr 2022.",
-                    "Session Chair for &ldquo;Second International Conference on Computer Science, Engineering and Applications (ICCSEA&rsquo;22)&rdquo; organized GIET University, Gunupur, Odisha, held on September 2022.",
-                    "Reviewer of reputed journals - IEEE Access, Transactions on Emerging Telecommunications Technologies, IET Communications, Telecommunication Systems, Wireless Personal Communications, Renewable and Sustainable Energy Reviews, IET Electronics Letters, and Cogent Engineering and etc."
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Wireless Communication",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "NERIST, Arunachal Pradesh",
+                            "Year of Passing": "2021"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Mobile Communication and Computing",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "NIT Arunachal Pradesh",
+                            "Year of Passing": "2015"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "CIT Kokrajhar, Gauhati University",
+                            "Year of Passing": "2013"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Optical Device Modelling, 5G and Beyond, Antenna Design"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57190060964",
+                        "Vidwan Link: https://mits.irins.org/profile/273396",
+                        "Google scholar Link: https://scholar.google.co.in/citations?user=w0i7mz0AAAAJ",
+                        "h-Index (As per Scopus Data) : 7"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Numerical Analysis of a Next-Generation SW-CNT/ZnO Hybrid Charge Extraction Design in Lead-Free Cs2TiBr6 Perovskite Photovoltaic Cells Using SCAPS-1D DOI: 10.1007/s11664-025-12442-0",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Device engineering of a new lead free all inorganic CsSnI3/CsSnCl3 based graded perovskite absorber structure for high performance solar cell DOI: 10.1109/JQE.2025.3592472",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design and Optimization of Cs2AgInBr6/CsSnI3-Based Dual-Absorber Inorganic Perovskite Solar Cell for Enhanced Broadband Absorption DOI: 10.1016/j.micrna.2025.208274",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Performance enhancement of Non-Toxic Cs2AgBiI6 based double perovskite photovoltaic cell via integration of a novel Mono-Walled carbon nanotube (MW-CNT) electron extraction layer DOI: 10.1016/j.mseb.2025.118336",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Investigation of hybrid electron extraction architecture via integration of Mono-Shelled Carbon Nanotubes (MS-CNT) with perovskite oxide BaSnO3 for beyond 38% efficiency in BaZrSe3 photovoltaic cells DOI: 10.1016/j.optcom.2025.131769",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Device Engineering of a Novel Lead-Free Solar Cell Architecture Utilizing Inorganic CsSnCl3 and CsSnI3 Perovskite-Based Dual Absorbers for Sustainable Powering of Wireless Networks DOI: 10.1007/s11664-024-11605-9",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Device optimization of all inorganic CsPbBr3/LNMO based multi-layered perovskite light harvesters for broader capturing of solar spectrum DOI: 10.1016/j.solener.2024.112858",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Improvement of photovoltaic response in perovskite solar cell via all inorganic lead free cubic double La2NiMnO6/Cs3Bi2I9 based graded absorber architecture DOI: 10.1007/s11082-024-07239-0",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Improving Network Efficiency with Antenna and User Selections in a 5G Heterogeneous Cellular Network DOI: 10.3103/S0735272724050042",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "5G cellular network coverage with KUD-based SC deployment DOI: 10.3103/S0735272723100047",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Transmit power allocation for Sub-6GHz/mmWave based 5G cellular network DOI: 10.3103/S0735272723060043",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Device engineering of lead-free FaCsSnI3/Cs2AgBiI6-based dual-absorber perovskite solar cell architecture for powering next-generation wireless networks DOI: 10.1002/dac.5903",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Analytical investigation of CdSe/CdS/ZnSe based single core double-shell nanotextured vertical nanopillar array antenna for broadband photodetection applications DOI: 10.1002/dac.5752",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Optimization of All Inorganic Perovskite Solar Cell with Dual Active Layers for Beyond 29% Efficiency DOI: 10.1016/j.solener.2023.111939",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "15",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Transmit Antenna Selection for Achieving Energy Efficiency in Massive MIMO Based 5G Cellular Network DOI: 10.3103/S0735272723020048",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "16",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2022-23",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Dynamic Cell Sleeping Mechanism: An Energy-Efficient Approach for Mobile 5G HetCN DOI: 10.1002/dac.5422",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "17",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2022-23",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Analysis of Massive MIMO and Small Cells based 5G Cellular Networks: A simulative approach DOI: 10.3103/S0735272722060024",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "18",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2022-23",
+                            "Author Position": "6",
+                            "Details of Research Publication": "Capacity Maximization in Cell Free Massive MIMO Network with Access Point Selection Method DOI: 10.2174/2210327913666221222145957",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "19",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2021-22",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Optical Modelling of GaAs/GaSb Core-Shell Cone Topped Octagonal Faced Nanopillar Array with Periodic Trapezoidal Textured Cut For High Photon Trapping Efficiency DOI: 10.1007/s10825-022-01898-6",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "20",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2021-23",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Miniaturization and Optimization of FR4 based CPW-fed Antenna for Multi-band Applications DOI: 10.3103/S0735272721120049",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "21",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020-21",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Energy-Efficient ICI Mitigation with Dynamic and Location-Based Power Allocation in Mobility-Based 5G HetCN DOI: 10.1007/s11277-020-07930-x",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "22",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020-21",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Dynamic and location-based power allocation mechanism for inter-cell interference mitigation in 5G heterogeneous cellular network DOI: 10.1002/dac.4548",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "23",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019-20",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Dynamic and Energy-efficient ICI Mitigation Techniques for Mobility based 5G HetCN DOI: 10.1049/iet-com.2019.0898",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "24",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019-20",
+                            "Author Position": "1",
+                            "Details of Research Publication": "ICI effects on user mobility with different FR-schemes in a multi-cell cellular network DOI: 10.1049/iet-com.2019.0397",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "25",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019-20",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Effect of intercell interference on cell boundary users in three-cell and seven-cell HetCN DOI: 10.1002/dac.4257",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "26",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "ICI mitigation with Fixed-Number (FN) and Fixed-Region (FRgn) based BS coordination and cooperation in a multi-cell cellular network DOI: 10.1007/978-981-15-7031-5_69",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "27",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Enhancement of Throughput for Cellular Data Network by Small cell Deployment DOI: 10.1109/ICRIEECE44171.2018.9009311",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "28",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018-19",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Small-cell intensities for cellular network affected by cell-edge and hotspot DOI: 10.1002/dac.3788",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "29",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018-19",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Effect on energy efficiency with small cell deployment in heterogeneous cellular networks DOI: 10.1002/itl2.97",
+                            "Indexing": "ESCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "30",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016-17",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Traditional Macro-tower to Heterogeneous Cellular Networks: A Survey DOI: 10.14257/ijast.2017.109.02",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "31",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016-17",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Miniaturization of a CPW-fed Dual-Band Antenna for GSM 1800/1900 and WLAN 5 GHz Applications DOI: 10.4313/TEEM.2017.18.2.119",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "32",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016-17",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Compact CPW-fed Tri-band Antenna with a Defected Ground Structure for GSM, WLAN and WiMAX Applications DOI: 10.3103/S0735272716070050",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "33",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design a compact tri-band band pass filter using asymmetric SIRs and DGS DOI: 10.1109/EPETSG.2015.7510169",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "34",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2015-16",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of Compact Bandpass Filter for WiMAX and UWB Application using Asymmetric SIRs and DGS DOI: 10.3103/S0735272716060066",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "35",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014-15",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Effects of Modified Ground Structure on a CPW-fed patch Antenna DOI: 10.14257/ijfgcn.2015.8.2.15",
+                            "Indexing": "ESCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "36",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2014-15",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Power Saving Strategies in Green Cloud Computing Systems DOI: 10.14257/ijgdc.2015.8.1.28",
+                            "Indexing": "ESCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": [
+                        "EDITORIAL BORAD MEMBER: Scientific Reports Journal",
+                        "Research Incentives: MITS Andhra Pradesh: AY 2021-2022, AY 2022-2023, AY 2023-2024",
+                        "Technical Committee Member - International Journal of Advanced Engineering and Management.",
+                        "Editorial Board Member - Wireless Communication Technology (WCT) journal.",
+                        "NPTEL Mentor Certificates: &ldquo;Research Methodology&rdquo; held during July-Dec 2023 (TOP PERFORMING MENTOR)",
+                        "&ldquo;The Joy of Computing using Python&rdquo; held during Jan-Apr 2022.",
+                        "Session Chair for &ldquo;Second International Conference on Computer Science, Engineering and Applications (ICCSEA&rsquo;22)&rdquo; organized GIET University, Gunupur, Odisha, held on September 2022.",
+                        "Reviewer of reputed journals - IEEE Access, Transactions on Emerging Telecommunications Technologies, IET Communications, Telecommunication Systems, Wireless Personal Communications, Renewable and Sustainable Energy Reviews, IET Electronics Letters, and Cogent Engineering and etc."
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. S K Nurul Islam": {
@@ -3301,419 +3301,419 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "drnurulislamsk@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Nurul Islam.JPG",
+        "image": "public/uploads/faculty/Dr. Nurul Islam.JPG",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Microwave Engineering",
-                        "Branch": "Electronics and Telecommunication Engineering",
-                        "College Name/University": "Indian Institute of Engineering Science and Technology (IIEST), Shibpur",
-                        "Year of Passing": "2021"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Electronics & Communication Engineering",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "West Bengal University of Technology, Kolkata",
-                        "Year of Passing": "2013"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Electronics & Communication Engineering",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "West Bengal University of Technology, Kolkata",
-                        "Year of Passing": "2011"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "MIMO Antenna and FSS"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57191624895",
-                    "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/524305",
-                    "Google scholar Link: https://scholar.google.com/citations?view_op=list_works&hl=id&user=b03ZKhEAAAAJ",
-                    "h-Index (As per Scopus Data) : 8"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Dual\u2010band CPW fed MIMO antenna with polarization diversity and improved gain. International Journal of RF and Microwave Computer\u2010Aided Engineering, 30(4), p.e22128.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Isosceles Triangular Resonator Based Compact Triple Band Quad Element Multi Terminal Antenna. Radioengineering, 29(1)",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design of a compact triple band antenna with independent frequency tuning for MIMO applications. International Journal of RF and Microwave Computer\u2010Aided Engineering, 29(3), p.e21620",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design of a compact quad\u2010band antenna with independent frequency tuning. Electronics Letters, 54(15), pp.920-922.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "2",
-                        "Details of Research Publication": "A wideband compact antenna with quad\u2010circular polarized bands in its operating regions. International Journal of RF and Microwave Computer\u2010Aided Engineering, 30(11), p.e22405.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Design and analysis of a compact penta-band polarization-insensitive bandstop frequency selective surface. IEEE Antennas and Wireless Propagation Letters, 19(1), pp.59-63",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Miniaturisation of branch line couplers with a compact transmission line topology based on coupled line section. IET Microwaves, Antennas & Propagation, 14(5), pp.448-455",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of filtering directional coupler with improved performance. International Journal of RF and Microwave Computer\u2010Aided Engineering, 30(7), p.e22224",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Miniaturization and Harmonic Suppression of Power Divider using Coupled Line Section for High Power Applications. Radioengineering, 29(2).",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Composite dual transmission lines and ITS application to miniaturization of Gysel power divider. Progress In Electromagnetics Research Letters, 90, pp.91-97.",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Compact Wilkinson power divider with higher order harmonics suppression for LTE application. Progress In Electromagnetics Research Letters, 84, pp.23-29.",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of compact Wilkinson power divider and branch line coupler using hairpin based line. AEU-International Journal of Electronics and Communications, 110, p.152825.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of miniaturized Wilkinson power divider with higher order harmonic suppression for GSM application. Progress In Electromagnetics Research C, 85, pp.25-34.",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of miniaturized 10 dB wideband branch line coupler using dual feed and T-shape transmission lines. Radioengineering, 27(1), pp.207-213.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Broadband metamaterial absorber on a single-layer ultrathin substrate. Waves in Random and Complex Media, 29(1), pp.153-161.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "16",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "3",
-                        "Details of Research Publication": "A co-polarized microwave absorber with dual mode resonance based on dual split ring geometry for wi-max and WLAN applications. Progress In Electromagnetics Research M, 86, pp.145-152.",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "17",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Broadband perfect metamaterial absorber on thin substrate for X-band and Ku-band applications. Progress In Electromagnetics Research C, 73, pp.9-16.",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "18",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Ultra\u2010thin miniaturized metamaterial perfect absorber for x\u2010band application. Microwave and Optical Technology Letters, 58(10), pp.2367-2370.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "19",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Wideband circularly polarized CPW fed antenna for bluetooth applications. In 2018 3rd International Conference on Microwave and Photonics (ICMAP) (pp. 1-2). IEEE",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "20",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A compact dual-band antenna using triangular split ring resonator for bluetooth/WiMax/LTE applications. In 2018 IEEE Indian Conference on Antennas and Propogation (InCAP) (pp. 1-3). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "21",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A Dual-band MIMO Antenna for Bluetooth/WiMax/LTE Applications. In 2018 IEEE MTT-S International Microwave and RF Conference (IMaRC) (pp. 1-4). IEEE",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "22",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design and gain enhancement of a CPW-Fed dual band slot antenna using a metamaterial inspired superstrate. In 2016 International Conference on Advances in Computing, Communications and Informatics (ICACCI) (pp. 2539-2541). IEEE",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "23",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2016",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Dual-polarized dual-band CPW-fed slot antenna for WLAN applications. In 2016 Asia-Pacific Microwave Conference (APMC) (pp. 1-3). IEEE",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "24",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "2",
-                        "Details of Research Publication": "A novel AMC backed wide band wearable antenna. In 2019 IEEE Region 10 Symposium (TENSYMP) (pp. 628-630). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "25",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "2",
-                        "Details of Research Publication": "A semi circular shaped UWB body area network antenna with C-band and WLAN band rejection. In 2018 Emerging Trends in Electronic Devices and Computational Techniques (EDCT) (pp. 1-3). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "26",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Harmonic suppressed wilkinson power divider with filtering characteristic for GSM application. In 2018 IEEE MTT-S International Microwave and RF Conference (IMaRC) (pp. 1-3). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "27",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of wideband Wilkinson power divider with improved performances. In 2018 IEEE Indian Conference on Antennas and Propogation (InCAP) (pp. 1-4). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "28",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Miniaturization of wideband loose coupled (10db) blc using dual transmission lines. In 2017 IEEE MTT-S International Microwave and RF Conference (IMaRC) (pp. 1-5). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "29",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Miniaturization of dual-band Wilkinson power divider using dual transmission line. In 2017 IEEE Applied Electromagnetics Conference (AEMC) (pp. 1-2). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "30",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design of compact Wilkinson power divider with harmonic suppression for GSM application. In 2017 IEEE Applied Electromagnetics Conference (AEMC) (pp. 1-2). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "31",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "3",
-                        "Details of Research Publication": "A dual band wearable metamaterial absorber with reduced cross-polarized reflection. In 2018 3rd International Conference on Microwave and Photonics (ICMAP) (pp. 1-2). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "32",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Design of a polarization insensitive absorptive frequency selective surface for radome applications. In 2018 IEEE Indian Conference on Antennas and Propogation (InCAP) (pp. 1-3). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "33",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017",
-                        "Author Position": "3",
-                        "Details of Research Publication": "A polarization insensitive metamaterial inspired absorber with a transparent window using complementary structure for EMI/EMC applications. In 2017 IEEE Calcutta Conference (CALCON) (pp. 193-198). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "34",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017",
-                        "Author Position": "4",
-                        "Details of Research Publication": "A dual band metamaterial inspired absorber for WLAN/Wi-MAX applications using a novel I-shaped unit cell structure. In 2016 Asia-Pacific Microwave Conference (APMC) (pp. 1-3). IEEE.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Microwave Engineering",
+                            "Branch": "Electronics and Telecommunication Engineering",
+                            "College Name/University": "Indian Institute of Engineering Science and Technology (IIEST), Shibpur",
+                            "Year of Passing": "2021"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Electronics & Communication Engineering",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "West Bengal University of Technology, Kolkata",
+                            "Year of Passing": "2013"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Electronics & Communication Engineering",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "West Bengal University of Technology, Kolkata",
+                            "Year of Passing": "2011"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "MIMO Antenna and FSS"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57191624895",
+                        "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/524305",
+                        "Google scholar Link: https://scholar.google.com/citations?view_op=list_works&hl=id&user=b03ZKhEAAAAJ",
+                        "h-Index (As per Scopus Data) : 8"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Dual\u2010band CPW fed MIMO antenna with polarization diversity and improved gain. International Journal of RF and Microwave Computer\u2010Aided Engineering, 30(4), p.e22128.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Isosceles Triangular Resonator Based Compact Triple Band Quad Element Multi Terminal Antenna. Radioengineering, 29(1)",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design of a compact triple band antenna with independent frequency tuning for MIMO applications. International Journal of RF and Microwave Computer\u2010Aided Engineering, 29(3), p.e21620",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design of a compact quad\u2010band antenna with independent frequency tuning. Electronics Letters, 54(15), pp.920-922.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "2",
+                            "Details of Research Publication": "A wideband compact antenna with quad\u2010circular polarized bands in its operating regions. International Journal of RF and Microwave Computer\u2010Aided Engineering, 30(11), p.e22405.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Design and analysis of a compact penta-band polarization-insensitive bandstop frequency selective surface. IEEE Antennas and Wireless Propagation Letters, 19(1), pp.59-63",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Miniaturisation of branch line couplers with a compact transmission line topology based on coupled line section. IET Microwaves, Antennas & Propagation, 14(5), pp.448-455",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of filtering directional coupler with improved performance. International Journal of RF and Microwave Computer\u2010Aided Engineering, 30(7), p.e22224",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Miniaturization and Harmonic Suppression of Power Divider using Coupled Line Section for High Power Applications. Radioengineering, 29(2).",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Composite dual transmission lines and ITS application to miniaturization of Gysel power divider. Progress In Electromagnetics Research Letters, 90, pp.91-97.",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Compact Wilkinson power divider with higher order harmonics suppression for LTE application. Progress In Electromagnetics Research Letters, 84, pp.23-29.",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of compact Wilkinson power divider and branch line coupler using hairpin based line. AEU-International Journal of Electronics and Communications, 110, p.152825.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of miniaturized Wilkinson power divider with higher order harmonic suppression for GSM application. Progress In Electromagnetics Research C, 85, pp.25-34.",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of miniaturized 10 dB wideband branch line coupler using dual feed and T-shape transmission lines. Radioengineering, 27(1), pp.207-213.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "15",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Broadband metamaterial absorber on a single-layer ultrathin substrate. Waves in Random and Complex Media, 29(1), pp.153-161.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "16",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "3",
+                            "Details of Research Publication": "A co-polarized microwave absorber with dual mode resonance based on dual split ring geometry for wi-max and WLAN applications. Progress In Electromagnetics Research M, 86, pp.145-152.",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        },
+                        {
+                            "S.No": "17",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Broadband perfect metamaterial absorber on thin substrate for X-band and Ku-band applications. Progress In Electromagnetics Research C, 73, pp.9-16.",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "18",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Ultra\u2010thin miniaturized metamaterial perfect absorber for x\u2010band application. Microwave and Optical Technology Letters, 58(10), pp.2367-2370.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "19",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Wideband circularly polarized CPW fed antenna for bluetooth applications. In 2018 3rd International Conference on Microwave and Photonics (ICMAP) (pp. 1-2). IEEE",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "20",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A compact dual-band antenna using triangular split ring resonator for bluetooth/WiMax/LTE applications. In 2018 IEEE Indian Conference on Antennas and Propogation (InCAP) (pp. 1-3). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "21",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A Dual-band MIMO Antenna for Bluetooth/WiMax/LTE Applications. In 2018 IEEE MTT-S International Microwave and RF Conference (IMaRC) (pp. 1-4). IEEE",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "22",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design and gain enhancement of a CPW-Fed dual band slot antenna using a metamaterial inspired superstrate. In 2016 International Conference on Advances in Computing, Communications and Informatics (ICACCI) (pp. 2539-2541). IEEE",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "23",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2016",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Dual-polarized dual-band CPW-fed slot antenna for WLAN applications. In 2016 Asia-Pacific Microwave Conference (APMC) (pp. 1-3). IEEE",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "24",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "2",
+                            "Details of Research Publication": "A novel AMC backed wide band wearable antenna. In 2019 IEEE Region 10 Symposium (TENSYMP) (pp. 628-630). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "25",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "2",
+                            "Details of Research Publication": "A semi circular shaped UWB body area network antenna with C-band and WLAN band rejection. In 2018 Emerging Trends in Electronic Devices and Computational Techniques (EDCT) (pp. 1-3). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "26",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Harmonic suppressed wilkinson power divider with filtering characteristic for GSM application. In 2018 IEEE MTT-S International Microwave and RF Conference (IMaRC) (pp. 1-3). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "27",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of wideband Wilkinson power divider with improved performances. In 2018 IEEE Indian Conference on Antennas and Propogation (InCAP) (pp. 1-4). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "28",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Miniaturization of wideband loose coupled (10db) blc using dual transmission lines. In 2017 IEEE MTT-S International Microwave and RF Conference (IMaRC) (pp. 1-5). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "29",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Miniaturization of dual-band Wilkinson power divider using dual transmission line. In 2017 IEEE Applied Electromagnetics Conference (AEMC) (pp. 1-2). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "30",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design of compact Wilkinson power divider with harmonic suppression for GSM application. In 2017 IEEE Applied Electromagnetics Conference (AEMC) (pp. 1-2). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "31",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "3",
+                            "Details of Research Publication": "A dual band wearable metamaterial absorber with reduced cross-polarized reflection. In 2018 3rd International Conference on Microwave and Photonics (ICMAP) (pp. 1-2). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "32",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Design of a polarization insensitive absorptive frequency selective surface for radome applications. In 2018 IEEE Indian Conference on Antennas and Propogation (InCAP) (pp. 1-3). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "33",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017",
+                            "Author Position": "3",
+                            "Details of Research Publication": "A polarization insensitive metamaterial inspired absorber with a transparent window using complementary structure for EMI/EMC applications. In 2017 IEEE Calcutta Conference (CALCON) (pp. 193-198). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "34",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017",
+                            "Author Position": "4",
+                            "Details of Research Publication": "A dual band metamaterial inspired absorber for WLAN/Wi-MAX applications using a novel I-shaped unit cell structure. In 2016 Asia-Pacific Microwave Conference (APMC) (pp. 1-3). IEEE.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. C. Kumar": {
@@ -3721,7 +3721,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "drkumarc@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/cf383c1cdc0f26fc0b61ec41145a7dfb.jpg",
+      image: "public/uploads/faculty/cf383c1cdc0f26fc0b61ec41145a7dfb.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -3786,352 +3786,352 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Dr. Smriti Baruah": {
         "name": "Dr. Smriti Baruah",
         "email": "smritib@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Smriti Baruah.JPG",
+        "image": "public/uploads/faculty/Dr. Smriti Baruah.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Optical Communication",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "NERIST, Arunachal Pradesh",
-                        "Year of Passing": "2022"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Electronics Design and Manufacturing",
-                        "Branch": "Electronics Design and Manufacturing",
-                        "College Name/University": "NIT, Arunachal Pradesh",
-                        "Year of Passing": "2017"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "NIT, Arunachal Pradesh",
-                        "Year of Passing": "2015"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Semiconductor Optical Device Modelling, Optical & Wireless Communication"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: http://www.scopus.com/authid/detail.url?authorId=57215772386",
-                    "Vidwan Link: https://mits.irins.org/profile/273398",
-                    "Google scholar Link: http://scholar.google.co.in/citations?user=zOIlT4gAAAAJ",
-                    "h-Index (As per Scopus Data) : 7"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Numerical Analysis of a Next-Generation SW-CNT/ZnO Hybrid Charge Extraction Design in Lead-Free Cs2TiBr6 Perovskite Photovoltaic Cells Using SCAPS-1D DOI: 10.1007/s11664-025-12442-0",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Device engineering of a new lead free all inorganic CsSnI3/CsSnCl3 based graded perovskite absorber structure for high performance solar cell DOI: 10.1109/JQE.2025.3592472",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design and Optimization of Cs2AgInBr6/CsSnI3-Based Dual-Absorber Inorganic Perovskite Solar Cell for Enhanced Broadband Absorption DOI: 10.1016/j.micrna.2025.208274",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Performance enhancement of Non-Toxic Cs2AgBiI6 based double perovskite photovoltaic cell via integration of a novel Mono-Walled carbon nanotube (MW-CNT) electron extraction layer DOI: 10.1016/j.mseb.2025.118336",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Investigation of hybrid electron extraction architecture via integration of Mono-Shelled Carbon Nanotubes (MS-CNT) with perovskite oxide BaSnO3 for beyond 38% efficiency in BaZrSe3 photovoltaic cells DOI: 10.1016/j.optcom.2025.131769",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Device Engineering of a Novel Lead-Free Solar Cell Architecture Utilizing Inorganic CsSnCl3 and CsSnI3 Perovskite-Based Dual Absorbers for Sustainable Powering of Wireless Networks DOI: 10.1007/s11664-024-11605-9",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Device optimization of all inorganic CsPbBr3/LNMO based multi-layered perovskite light harvesters for broader capturing of solar spectrum DOI: 10.1016/j.solener.2024.112858",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Improvement of photovoltaic response in perovskite solar cell via all inorganic lead free cubic double La2NiMnO6/Cs3Bi2I9 based graded absorber architecture DOI: 10.1007/s11082-024-07239-0",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Improving Network Efficiency with Antenna and User Selections in a 5G Heterogeneous Cellular Network DOI: 10.3103/S0735272724050042",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "5G cellular network coverage with KUD-based SC deployment DOI: 10.3103/S0735272723100047",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Transmit power allocation for Sub-6GHz/mmWave based 5G cellular network DOI: 10.3103/S0735272723060043",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Device engineering of lead-free FaCsSnI3/Cs2AgBiI6-based dual-absorber perovskite solar cell architecture for powering next-generation wireless networks DOI: 10.1002/dac.5903",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Analytical investigation of CdSe/CdS/ZnSe based single core double-shell nanotextured vertical nanopillar array antenna for broadband photodetection applications DOI: 10.1002/dac.5752",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "8",
-                        "Details of Research Publication": "Hydrothermal Synthesis, Phase Analysis, and Magneto-Electronic Characterizations of Lead-Free Ferroelectric BM2+ (Zn, Ca, Mg) T&ndash;BFO System DOI: 10.1021/acsomega.3c08072",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Optimization of All Inorganic Perovskite Solar Cell with Dual Active Layers for Beyond 29% Efficiency DOI: 10.1016/j.solener.2023.111939",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "16",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Transmit Antenna Selection for Achieving Energy Efficiency in Massive MIMO Based 5G Cellular Network DOI: 10.3103/S0735272723020048",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "17",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Analysis of Massive MIMO and Small Cells based 5G Cellular Networks: A simulative approach DOI: 10.3103/S0735272722060024",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "18",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Optical Modelling of GaAs/GaSb Core-Shell Cone Topped Octagonal Faced Nanopillar Array with Periodic Trapezoidal Textured Cut For High Photon Trapping Efficiency DOI: 10.1007/s10825-022-01898-6",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "19",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2021-22",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Miniaturization and Optimization of FR4 based CPW-fed Antenna for Multi-band Applications DOI: 10.3103/S0735272721120049",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "20",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "1",
-                        "Details of Research Publication": "GaAs periodic half octagonal cut based nano texturized hexagonal shaped nanopillar array structure for highly responsive photodetector&rsquo;s performance DOI: 10.1007/s11082-021-02951-7",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "21",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Optical modeling of high-performance GaAs based photodetector with periodic right triangular texturization on nanopillar arrays structure DOI: 10.1088/1361-6641/abe05a",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "22",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Investigation and optimization of light trapping through hexagonal-shaped nanopillar (NP) array of indium gallium arsenide material based photodetector DOI: 10.1007/s11082-020-02496-1",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "23",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "InGaAs based square-shaped nanopillar array for high photodetector performance DOI: 10.1007/978-981-15-7031-5_70",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "24",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "1",
-                        "Details of Research Publication": "High performance wide response GaAs based photo detector with nano texture on nanopillar arrays structure DOI: 10.1007/s00542-020-04804-x",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    }
-                ]
-            },
-            {
-                "title": "Research Projects & Events",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Funded Project /Event": "Event",
-                        "Role": "Coordinator",
-                        "Title of the Project/Event": "One Day National Level Technical Symposium &ldquo;ECLECTICA 2K23&rdquo;",
-                        "Amount in Rs. /-": "-",
-                        "Funding Agency": "MITS, Andhra Pradesh"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2021-22",
-                        "Funded Project /Event": "Event",
-                        "Role": "Organizing Committee",
-                        "Title of the Project/Event": "Workshop &ldquo;The Art of Patenting and Drafting&rdquo;",
-                        "Amount in Rs. /-": "-",
-                        "Funding Agency": "MITS, Andhra Pradesh"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "EDITORIAL BORAD MEMBER: Scientific Reports Journal",
-                    "Research Incentives: MITS Andhra Pradesh: AY 2021-2022, AY 2022-2023, AY 2023"
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Optical Communication",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "NERIST, Arunachal Pradesh",
+                            "Year of Passing": "2022"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Electronics Design and Manufacturing",
+                            "Branch": "Electronics Design and Manufacturing",
+                            "College Name/University": "NIT, Arunachal Pradesh",
+                            "Year of Passing": "2017"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "NIT, Arunachal Pradesh",
+                            "Year of Passing": "2015"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Semiconductor Optical Device Modelling, Optical & Wireless Communication"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: http://www.scopus.com/authid/detail.url?authorId=57215772386",
+                        "Vidwan Link: https://mits.irins.org/profile/273398",
+                        "Google scholar Link: http://scholar.google.co.in/citations?user=zOIlT4gAAAAJ",
+                        "h-Index (As per Scopus Data) : 7"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Numerical Analysis of a Next-Generation SW-CNT/ZnO Hybrid Charge Extraction Design in Lead-Free Cs2TiBr6 Perovskite Photovoltaic Cells Using SCAPS-1D DOI: 10.1007/s11664-025-12442-0",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Device engineering of a new lead free all inorganic CsSnI3/CsSnCl3 based graded perovskite absorber structure for high performance solar cell DOI: 10.1109/JQE.2025.3592472",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design and Optimization of Cs2AgInBr6/CsSnI3-Based Dual-Absorber Inorganic Perovskite Solar Cell for Enhanced Broadband Absorption DOI: 10.1016/j.micrna.2025.208274",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Performance enhancement of Non-Toxic Cs2AgBiI6 based double perovskite photovoltaic cell via integration of a novel Mono-Walled carbon nanotube (MW-CNT) electron extraction layer DOI: 10.1016/j.mseb.2025.118336",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Investigation of hybrid electron extraction architecture via integration of Mono-Shelled Carbon Nanotubes (MS-CNT) with perovskite oxide BaSnO3 for beyond 38% efficiency in BaZrSe3 photovoltaic cells DOI: 10.1016/j.optcom.2025.131769",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Device Engineering of a Novel Lead-Free Solar Cell Architecture Utilizing Inorganic CsSnCl3 and CsSnI3 Perovskite-Based Dual Absorbers for Sustainable Powering of Wireless Networks DOI: 10.1007/s11664-024-11605-9",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Device optimization of all inorganic CsPbBr3/LNMO based multi-layered perovskite light harvesters for broader capturing of solar spectrum DOI: 10.1016/j.solener.2024.112858",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Improvement of photovoltaic response in perovskite solar cell via all inorganic lead free cubic double La2NiMnO6/Cs3Bi2I9 based graded absorber architecture DOI: 10.1007/s11082-024-07239-0",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Improving Network Efficiency with Antenna and User Selections in a 5G Heterogeneous Cellular Network DOI: 10.3103/S0735272724050042",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "5G cellular network coverage with KUD-based SC deployment DOI: 10.3103/S0735272723100047",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Transmit power allocation for Sub-6GHz/mmWave based 5G cellular network DOI: 10.3103/S0735272723060043",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Device engineering of lead-free FaCsSnI3/Cs2AgBiI6-based dual-absorber perovskite solar cell architecture for powering next-generation wireless networks DOI: 10.1002/dac.5903",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Analytical investigation of CdSe/CdS/ZnSe based single core double-shell nanotextured vertical nanopillar array antenna for broadband photodetection applications DOI: 10.1002/dac.5752",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "8",
+                            "Details of Research Publication": "Hydrothermal Synthesis, Phase Analysis, and Magneto-Electronic Characterizations of Lead-Free Ferroelectric BM2+ (Zn, Ca, Mg) T&ndash;BFO System DOI: 10.1021/acsomega.3c08072",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "15",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Optimization of All Inorganic Perovskite Solar Cell with Dual Active Layers for Beyond 29% Efficiency DOI: 10.1016/j.solener.2023.111939",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "16",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Transmit Antenna Selection for Achieving Energy Efficiency in Massive MIMO Based 5G Cellular Network DOI: 10.3103/S0735272723020048",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "17",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2022-23",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Analysis of Massive MIMO and Small Cells based 5G Cellular Networks: A simulative approach DOI: 10.3103/S0735272722060024",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "18",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2020-21",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Optical Modelling of GaAs/GaSb Core-Shell Cone Topped Octagonal Faced Nanopillar Array with Periodic Trapezoidal Textured Cut For High Photon Trapping Efficiency DOI: 10.1007/s10825-022-01898-6",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "19",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2021-22",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Miniaturization and Optimization of FR4 based CPW-fed Antenna for Multi-band Applications DOI: 10.3103/S0735272721120049",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "20",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2020-21",
+                            "Author Position": "1",
+                            "Details of Research Publication": "GaAs periodic half octagonal cut based nano texturized hexagonal shaped nanopillar array structure for highly responsive photodetector&rsquo;s performance DOI: 10.1007/s11082-021-02951-7",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "21",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2020-21",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Optical modeling of high-performance GaAs based photodetector with periodic right triangular texturization on nanopillar arrays structure DOI: 10.1088/1361-6641/abe05a",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "22",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2020-21",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Investigation and optimization of light trapping through hexagonal-shaped nanopillar (NP) array of indium gallium arsenide material based photodetector DOI: 10.1007/s11082-020-02496-1",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "23",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "InGaAs based square-shaped nanopillar array for high photodetector performance DOI: 10.1007/978-981-15-7031-5_70",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "24",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2019-20",
+                            "Author Position": "1",
+                            "Details of Research Publication": "High performance wide response GaAs based photo detector with nano texture on nanopillar arrays structure DOI: 10.1007/s00542-020-04804-x",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Projects & Events",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2022-23",
+                            "Funded Project /Event": "Event",
+                            "Role": "Coordinator",
+                            "Title of the Project/Event": "One Day National Level Technical Symposium &ldquo;ECLECTICA 2K23&rdquo;",
+                            "Amount in Rs. /-": "-",
+                            "Funding Agency": "MITS, Andhra Pradesh"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2021-22",
+                            "Funded Project /Event": "Event",
+                            "Role": "Organizing Committee",
+                            "Title of the Project/Event": "Workshop &ldquo;The Art of Patenting and Drafting&rdquo;",
+                            "Amount in Rs. /-": "-",
+                            "Funding Agency": "MITS, Andhra Pradesh"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": [
+                        "EDITORIAL BORAD MEMBER: Scientific Reports Journal",
+                        "Research Incentives: MITS Andhra Pradesh: AY 2021-2022, AY 2022-2023, AY 2023"
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. Rahul Mondal": {
@@ -4139,7 +4139,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "drrahulm@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/rahul.JPG",
+      image: "public/uploads/faculty/rahul.JPG",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -4209,139 +4209,139 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "saikumarv@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "https://mits.ac.in/public/uploads/faculty/Sai Sir.JPG",
+        "image": "public/uploads/faculty/Sai%20Sir.JPG",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Image Processing",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "Rayalaseema University, Kurnool",
-                        "Year of Passing": "2024"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "VLSI Design",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "V.I.T University, Vellore",
-                        "Year of Passing": "2007"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Specialization": "Electrical & Electronics Engineering",
-                        "Branch": "Electrical & Electronics Engineering",
-                        "College Name/University": "Periyar University, Salem",
-                        "Year of Passing": "2004"
-                    }
-                ]
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=60611279600",
-                    "Vidwan Link: https://mits.irins.org/profile/561197",
-                    "Google scholar Link: http://scholar.google.co.in/citations?user=cBMccQUAAAAJ",
-                    "h-Index (As per Scopus Data) :"
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Application ID": "460121-001",
-                        "Title of the Patent": "Design of a Networked IoT Security Node for Sensitive Data Protection",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Application ID": "460119-001",
-                        "Title of the Patent": "Smart Waste Management System for Farms",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "3",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Application ID": "460122-001",
-                        "Title of the Patent": "IoT-Based Distributed Ledger Device for Health and Security Data Management",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "4",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "441092-001",
-                        "Title of the Patent": "Smart Stress Detection Treadmill Under Examination",
-                        "Status": "Under Examination"
-                    },
-                    {
-                        "S.No": "5",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "440535-001",
-                        "Title of the Patent": "Smart Anti-theft Multipurpose Lock",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "6",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "441091-001",
-                        "Title of the Patent": "Smart Pest Control Device for Agricultural Applications Granted",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "7",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "441090-001",
-                        "Title of the Patent": "Smart Device for Prediction of Diabetes",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "8",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "429724-001",
-                        "Title of the Patent": "Textured Turing Cutting Insert",
-                        "Status": "Granted"
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Image Processing",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "Rayalaseema University, Kurnool",
+                            "Year of Passing": "2024"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "VLSI Design",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "V.I.T University, Vellore",
+                            "Year of Passing": "2007"
+                        },
+                        {
+                            "Course": "B.E.",
+                            "Specialization": "Electrical & Electronics Engineering",
+                            "Branch": "Electrical & Electronics Engineering",
+                            "College Name/University": "Periyar University, Salem",
+                            "Year of Passing": "2004"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=60611279600",
+                        "Vidwan Link: https://mits.irins.org/profile/561197",
+                        "Google scholar Link: http://scholar.google.co.in/citations?user=cBMccQUAAAAJ",
+                        "h-Index (As per Scopus Data) :"
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Application ID": "460121-001",
+                            "Title of the Patent": "Design of a Networked IoT Security Node for Sensitive Data Protection",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Application ID": "460119-001",
+                            "Title of the Patent": "Smart Waste Management System for Farms",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "3",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Application ID": "460122-001",
+                            "Title of the Patent": "IoT-Based Distributed Ledger Device for Health and Security Data Management",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "4",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Application ID": "441092-001",
+                            "Title of the Patent": "Smart Stress Detection Treadmill Under Examination",
+                            "Status": "Under Examination"
+                        },
+                        {
+                            "S.No": "5",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Application ID": "440535-001",
+                            "Title of the Patent": "Smart Anti-theft Multipurpose Lock",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "6",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Application ID": "441091-001",
+                            "Title of the Patent": "Smart Pest Control Device for Agricultural Applications Granted",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "7",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Application ID": "441090-001",
+                            "Title of the Patent": "Smart Device for Prediction of Diabetes",
+                            "Status": "Granted"
+                        },
+                        {
+                            "S.No": "8",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Application ID": "429724-001",
+                            "Title of the Patent": "Textured Turing Cutting Insert",
+                            "Status": "Granted"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. E. Aravindraj": {
@@ -4349,7 +4349,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "aravindraje@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/ara.jpg",
+      image: "public/uploads/faculty/ara.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -4426,578 +4426,578 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "nagaswethag@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "https://mits.ac.in/public/uploads/faculty/nagaswetha.png",
+        "image": "public/uploads/faculty/nagaswetha.png",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "VLSI & Embedded Systems",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "Viswesaraya Technological University,Belgaum",
-                        "Year of Passing": "2024"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Embedded Systems",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "AITS, Rajampet Affi.to JNTU Anantapur",
-                        "Year of Passing": "2010"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "ICE",
-                        "Branch": "ICE",
-                        "College Name/University": "AITS, Rajampet, Affi.to JNTU Hyderabad.",
-                        "Year of Passing": "2006"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "VLSI & Embedded Systems"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=58502230000",
-                    "Vidwan Link: https://mits.irins.org/profile/276004",
-                    "Google scholar Link: https://scholar.google.com/citations?user=AbHX0aYAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 2"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Creation of A Music Recommendation System using Facial Expression Recognition with MATLAB",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Extensive Challenge for Multi-Disease Identification using HYBRID Algorithm",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2023",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A Brand-New, Area - Efficient Architecture for the FFT Algorithm Designed for Implementation of FPGAs",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Avoiding Dynamic Time Error by Implementing Prediction Logic",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2021",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Efficient Multiplier Architecture for ECC Core",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Gain parameter for various microstrip patch antenna - Survey",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "Others",
-                        "Academic Year": "2023",
-                        "Application ID": "202341000087",
-                        "Title of the Patent": "DEVELOPMENT OF A CONTENTION-FREE DIFFERENTIAL FLIP-FLOP USING GDI AND CLOCK GATING TECHNIQUE",
-                        "Status": "Published"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2025",
-                        "Application ID": "202541080004",
-                        "Title of the Patent": "A SYSTEM FOR ELECTRICITY GENERATION FROM FOOD WASTE AND A METHOD OF MONITORING USING IoT",
-                        "Status": "Under Examination"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "Nominated as IEEE Signal Processing Society Advisor for MITS College under IEEE Hyderabad section Region 10.",
-                    "Selected as Anantapuram subsection Representative for IEEE Hyderabad Section WIE AG Committee."
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "VLSI & Embedded Systems",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "Viswesaraya Technological University,Belgaum",
+                            "Year of Passing": "2024"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Embedded Systems",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "AITS, Rajampet Affi.to JNTU Anantapur",
+                            "Year of Passing": "2010"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "ICE",
+                            "Branch": "ICE",
+                            "College Name/University": "AITS, Rajampet, Affi.to JNTU Hyderabad.",
+                            "Year of Passing": "2006"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "VLSI & Embedded Systems"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=58502230000",
+                        "Vidwan Link: https://mits.irins.org/profile/276004",
+                        "Google scholar Link: https://scholar.google.com/citations?user=AbHX0aYAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 2"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Creation of A Music Recommendation System using Facial Expression Recognition with MATLAB",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Extensive Challenge for Multi-Disease Identification using HYBRID Algorithm",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2023",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A Brand-New, Area - Efficient Architecture for the FFT Algorithm Designed for Implementation of FPGAs",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Avoiding Dynamic Time Error by Implementing Prediction Logic",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2021",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Efficient Multiplier Architecture for ECC Core",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Gain parameter for various microstrip patch antenna - Survey",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "Others",
+                            "Academic Year": "2023",
+                            "Application ID": "202341000087",
+                            "Title of the Patent": "DEVELOPMENT OF A CONTENTION-FREE DIFFERENTIAL FLIP-FLOP USING GDI AND CLOCK GATING TECHNIQUE",
+                            "Status": "Published"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2025",
+                            "Application ID": "202541080004",
+                            "Title of the Patent": "A SYSTEM FOR ELECTRICITY GENERATION FROM FOOD WASTE AND A METHOD OF MONITORING USING IoT",
+                            "Status": "Under Examination"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": [
+                        "Nominated as IEEE Signal Processing Society Advisor for MITS College under IEEE Hyderabad section Region 10.",
+                        "Selected as Anantapuram subsection Representative for IEEE Hyderabad Section WIE AG Committee."
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. Simadri Badatya": {
         "name": "Dr. Simadri Badatya",
         "email": "drsimadrib@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Simadri Badatya.JPG",
+        "image": "public/uploads/faculty/Dr. Simadri Badatya.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "2D material, Nanogenerator and self-powered sensors",
-                        "Branch": "Engineering Science",
-                        "College Name/University": "Academy of Scientific Innovation & Research (AcSIR), India",
-                        "Year of Passing": "2024"
-                    },
-                    {
-                        "Course": "M.Tech",
-                        "Specialization": "VLSI & Embedded System",
-                        "Branch": "ECE",
-                        "College Name/University": "Biju Patnaik University of Technology, Rourkela",
-                        "Year of Passing": "2015"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "Biju Patnaik University of Technology, Rourkela",
-                        "Year of Passing": "2012"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "VLSI, nanogenerator for energy harvesting and self-powered sensors"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57217005008",
-                    "Vidwan Link: https://vidwan.inflibnet.ac.in/myprofile_646427",
-                    "Google scholar Link: https://scholar.google.com/citations?user=0_UyiiwAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 9"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Spray Fluidized Bed Assisted Flexible Robust Light Weight Hollow Metallic Sphere Based Triboelectric Nanogenerator https://doi.org/10.1021/acsaelm.4c01010, Q1, ISSN: 2637-6113",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Self-poled graphene quantum dots reinforced PVDF_HFP nanocomposites based flexible triboelectric nanogenerator https://link.springer.com/article/10.1007/s41403-024-00483-6",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Unveiling a robust and high-temperature-stable two-dimensional Zn Al layered double hydroxide nanosheet based flexible triboelectric nanogenerator https://doi.org/10.1039/D3NR03894G",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2023",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Self-poled graphene quantum dots reinforced PVDF_HFP nanocomposites based flexible triboelectric nanogenerator https://link.springer.com/article/10.1007/s41403-024-00483-6",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2023",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Blue Light Emitting Piezoelectric Few-Layered Borophene Nanosheets For Flexible Nanogenerators https://doi.org/10.1038/s43246-023-00375-2",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2023",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Sustainable Robust Waste-Recycled Ocean Water-Resistant Fly Ash-Carbon Nanotube Nanocomposite-Based Triboelectric Nanogenerator https://doi.org/10.1039/D2SE01698B , Q1, ISSN 2398-4902.",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Poling-Polarization-Mediated Centrosymmetric Charge-Transfer Organic-Cocrystal-based Flexible Triboelectric Nanogenerator https://doi.org/10.1021/acsaelm.2c00630",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Flexible Interconnected Cu-Ni Nanoalloys Decorated Carbon Nanotube-Poly (vinylidene fluoride) Piezoelectric Nanogenerator https://doi.org/10.1002/admt.202101281",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Tailoring of the electrochemical stability and dielectric behaviour http://doi.org/10.1088/1402-4896/ac6d20",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Humidity Sustainable Hydrophobic Poly (vinylidene fluoride)-Carbon Nanotubes Foam Based Piezoelectric Nanogenerator https://doi.org/10.1021/acsami.1c02237",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Solution-Processed High-Performance Piezoelectric Eggshell Membrane &ndash; PVDF Hybrid Composite Nanogenerator via Engineering Interfacial Polarization https://doi.org/10.1016/J.JALLCOM.2020.158406",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Transparent flexible graphene quantum dot-(PVDF-HFP) piezoelectric nanogenerator https://doi.org/10.1016/j.matlet.2021.129493",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Unraveling Anomalous Dielectric Phase Transition In Few-Layered 2H/1T Mos2 Nanosheets https://doi.org/10.1021/acs.jpcc.1c03430",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Observation of Anomalous Phase Transition and Band Gap Shrinkage in Zinc Germanate Nanorods https://doi.org/10.1016/j.mseb.2020.114602",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "3",
-                        "Details of Research Publication": "A high performance flexible two dimensional vertically aligned ZnO nanodisc based piezoelectric nanogenerator via surface passivation https://doi.org/10.1039/C9NA00789J",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": "Awarded with Gold Medal for being the Best M. Tech Graduate in 2016."
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "2D material, Nanogenerator and self-powered sensors",
+                            "Branch": "Engineering Science",
+                            "College Name/University": "Academy of Scientific Innovation & Research (AcSIR), India",
+                            "Year of Passing": "2024"
+                        },
+                        {
+                            "Course": "M.Tech",
+                            "Specialization": "VLSI & Embedded System",
+                            "Branch": "ECE",
+                            "College Name/University": "Biju Patnaik University of Technology, Rourkela",
+                            "Year of Passing": "2015"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "Biju Patnaik University of Technology, Rourkela",
+                            "Year of Passing": "2012"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "VLSI, nanogenerator for energy harvesting and self-powered sensors"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57217005008",
+                        "Vidwan Link: https://vidwan.inflibnet.ac.in/myprofile_646427",
+                        "Google scholar Link: https://scholar.google.com/citations?user=0_UyiiwAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 9"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Spray Fluidized Bed Assisted Flexible Robust Light Weight Hollow Metallic Sphere Based Triboelectric Nanogenerator https://doi.org/10.1021/acsaelm.4c01010, Q1, ISSN: 2637-6113",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Self-poled graphene quantum dots reinforced PVDF_HFP nanocomposites based flexible triboelectric nanogenerator https://link.springer.com/article/10.1007/s41403-024-00483-6",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Unveiling a robust and high-temperature-stable two-dimensional Zn Al layered double hydroxide nanosheet based flexible triboelectric nanogenerator https://doi.org/10.1039/D3NR03894G",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2023",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Self-poled graphene quantum dots reinforced PVDF_HFP nanocomposites based flexible triboelectric nanogenerator https://link.springer.com/article/10.1007/s41403-024-00483-6",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2023",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Blue Light Emitting Piezoelectric Few-Layered Borophene Nanosheets For Flexible Nanogenerators https://doi.org/10.1038/s43246-023-00375-2",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2023",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Sustainable Robust Waste-Recycled Ocean Water-Resistant Fly Ash-Carbon Nanotube Nanocomposite-Based Triboelectric Nanogenerator https://doi.org/10.1039/D2SE01698B , Q1, ISSN 2398-4902.",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Poling-Polarization-Mediated Centrosymmetric Charge-Transfer Organic-Cocrystal-based Flexible Triboelectric Nanogenerator https://doi.org/10.1021/acsaelm.2c00630",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Flexible Interconnected Cu-Ni Nanoalloys Decorated Carbon Nanotube-Poly (vinylidene fluoride) Piezoelectric Nanogenerator https://doi.org/10.1002/admt.202101281",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Tailoring of the electrochemical stability and dielectric behaviour http://doi.org/10.1088/1402-4896/ac6d20",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Humidity Sustainable Hydrophobic Poly (vinylidene fluoride)-Carbon Nanotubes Foam Based Piezoelectric Nanogenerator https://doi.org/10.1021/acsami.1c02237",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Solution-Processed High-Performance Piezoelectric Eggshell Membrane &ndash; PVDF Hybrid Composite Nanogenerator via Engineering Interfacial Polarization https://doi.org/10.1016/J.JALLCOM.2020.158406",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Transparent flexible graphene quantum dot-(PVDF-HFP) piezoelectric nanogenerator https://doi.org/10.1016/j.matlet.2021.129493",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "13",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Unraveling Anomalous Dielectric Phase Transition In Few-Layered 2H/1T Mos2 Nanosheets https://doi.org/10.1021/acs.jpcc.1c03430",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "14",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Observation of Anomalous Phase Transition and Band Gap Shrinkage in Zinc Germanate Nanorods https://doi.org/10.1016/j.mseb.2020.114602",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "15",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "3",
+                            "Details of Research Publication": "A high performance flexible two dimensional vertically aligned ZnO nanodisc based piezoelectric nanogenerator via surface passivation https://doi.org/10.1039/C9NA00789J",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": "Awarded with Gold Medal for being the Best M. Tech Graduate in 2016."
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. Anurag Kumar Pandey": {
         "name": "Dr. Anurag Kumar Pandey",
         "email": "dranuragkumarp@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Anurag Kumar Pandey.JPG",
+        "image": "public/uploads/faculty/Dr. Anurag Kumar Pandey.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Nanomaterials, Biomedical, catalysis, Carbon quantum dots",
-                        "Branch": "School of Nanoscience and Technology",
-                        "College Name/University": "Indian Institute of Technology (IIT), Kharagpur",
-                        "Year of Passing": "2024"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Nanoscience and Technology",
-                        "Branch": "Nanoscience and Technology",
-                        "College Name/University": "Pondicherry Central University",
-                        "Year of Passing": "2016"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Feroze Gandhi Institute of Engineering and Technology (F.G.I.E.T)",
-                        "Year of Passing": "2013"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Carbon quantum dots, Nanomaterials optoelectronics properties, Bioimaging, Catalysis, Antibacterial"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57386962400",
-                    "Vidwan Link: https://mits.irins.org/profile/655138",
-                    "Google scholar Link: https://scholar.google.com/citations?hl=en&user=Un1E2swAAAAJ%20&user=Un1E2swAAAAJ",
-                    "h-Index (As per Scopus Data) : 4"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Sodium-Entrapped Carbon Nanodots from Silk Wastewater for Combating Multidrug-Resistant Bacteria in Healthcare Settings. ACS Applied Bio Materials 2025, https://doi.org/10.1021/acsabm.5c00538",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Effect of reaction temperatures on optical properties of clove buds derived carbon dots for targeting nucleolus, Journal of Industrial and Engineering Chemistry, 141 (2025): 441-455., https://doi.org/10.1016/j.jiec.2024.07.006",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2023-24",
-                        "Author Position": "7",
-                        "Details of Research Publication": "Green Synthesis of Poly (Vinyl Alcohol)-Silver Nanoparticles Composite using Flaxseed (Linumusitatissimum L) Peel Extract: Its Cytotoxic and Antibacterial Activities. ChemistrySelect, 2024, 9, e202402917. https://doi.org/10.1002/slct.202402917",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022-23",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Iodine functionalized 2, 5-dimethoxy-2, 5-dihydrofuran (DHFI) crosslinked whey protein-derived carbon nanodots (WCND) for antibacterial application: Colloids and Surfaces B: Biointerfaces, 231, 113543",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021-22",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Hydrothermal synthesis of PVP-passivated clove bud-derived carbon dots for antioxidant, catalysis, and cellular imaging applications. Colloids and Surfaces B: Biointerfaces",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020-21",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Nanotheranostics: Nanoparticles applications, perspectives, and challenges. BioSensing, Theranostics, and Medical Devices: From Laboratory to Point-of-Care Testing, 345-376, 10.1007/978-981-16-2782-8_14",
-                        "Indexing": "SCI",
-                        "Publication": "Book chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018-19",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Synergistic effect of bimetallic Cu: Ni nanoparticles for the efficient catalytic conversion of 4-nitrophenol. New Journal of Chemistry, 43(7), 3180-3187",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "Others",
-                        "Academic Year": "2023-25",
-                        "Application ID": "202431037271",
-                        "Title of the Patent": "Hydrothermal Synthesis of Indian Spice Derived Carbon Dots as a Fluorescent Probe for Nucleolus Imaging",
-                        "Status": "Filed"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "Others",
-                        "Academic Year": "2023-25",
-                        "Application ID": "202431049834",
-                        "Title of the Patent": "Textile industry wastewater-derived carbon-nanodot composition for surface disinfection and sanitization",
-                        "Status": "Filed"
-                    },
-                    {
-                        "S.No": "3",
-                        "Affiliation": "Others",
-                        "Academic Year": "2023-25",
-                        "Application ID": "202431037165",
-                        "Title of the Patent": "Surface Functionalized protein-derived carbon nano-dot (CND) for antimicrobial application and infected chronic wound management",
-                        "Status": "Filed"
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Nanomaterials, Biomedical, catalysis, Carbon quantum dots",
+                            "Branch": "School of Nanoscience and Technology",
+                            "College Name/University": "Indian Institute of Technology (IIT), Kharagpur",
+                            "Year of Passing": "2024"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Nanoscience and Technology",
+                            "Branch": "Nanoscience and Technology",
+                            "College Name/University": "Pondicherry Central University",
+                            "Year of Passing": "2016"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Feroze Gandhi Institute of Engineering and Technology (F.G.I.E.T)",
+                            "Year of Passing": "2013"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Carbon quantum dots, Nanomaterials optoelectronics properties, Bioimaging, Catalysis, Antibacterial"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57386962400",
+                        "Vidwan Link: https://mits.irins.org/profile/655138",
+                        "Google scholar Link: https://scholar.google.com/citations?hl=en&user=Un1E2swAAAAJ%20&user=Un1E2swAAAAJ",
+                        "h-Index (As per Scopus Data) : 4"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Sodium-Entrapped Carbon Nanodots from Silk Wastewater for Combating Multidrug-Resistant Bacteria in Healthcare Settings. ACS Applied Bio Materials 2025, https://doi.org/10.1021/acsabm.5c00538",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Effect of reaction temperatures on optical properties of clove buds derived carbon dots for targeting nucleolus, Journal of Industrial and Engineering Chemistry, 141 (2025): 441-455., https://doi.org/10.1016/j.jiec.2024.07.006",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2023-24",
+                            "Author Position": "7",
+                            "Details of Research Publication": "Green Synthesis of Poly (Vinyl Alcohol)-Silver Nanoparticles Composite using Flaxseed (Linumusitatissimum L) Peel Extract: Its Cytotoxic and Antibacterial Activities. ChemistrySelect, 2024, 9, e202402917. https://doi.org/10.1002/slct.202402917",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022-23",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Iodine functionalized 2, 5-dimethoxy-2, 5-dihydrofuran (DHFI) crosslinked whey protein-derived carbon nanodots (WCND) for antibacterial application: Colloids and Surfaces B: Biointerfaces, 231, 113543",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021-22",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Hydrothermal synthesis of PVP-passivated clove bud-derived carbon dots for antioxidant, catalysis, and cellular imaging applications. Colloids and Surfaces B: Biointerfaces",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020-21",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Nanotheranostics: Nanoparticles applications, perspectives, and challenges. BioSensing, Theranostics, and Medical Devices: From Laboratory to Point-of-Care Testing, 345-376, 10.1007/978-981-16-2782-8_14",
+                            "Indexing": "SCI",
+                            "Publication": "Book chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018-19",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Synergistic effect of bimetallic Cu: Ni nanoparticles for the efficient catalytic conversion of 4-nitrophenol. New Journal of Chemistry, 43(7), 3180-3187",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "Others",
+                            "Academic Year": "2023-25",
+                            "Application ID": "202431037271",
+                            "Title of the Patent": "Hydrothermal Synthesis of Indian Spice Derived Carbon Dots as a Fluorescent Probe for Nucleolus Imaging",
+                            "Status": "Filed"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "Others",
+                            "Academic Year": "2023-25",
+                            "Application ID": "202431049834",
+                            "Title of the Patent": "Textile industry wastewater-derived carbon-nanodot composition for surface disinfection and sanitization",
+                            "Status": "Filed"
+                        },
+                        {
+                            "S.No": "3",
+                            "Affiliation": "Others",
+                            "Academic Year": "2023-25",
+                            "Application ID": "202431037165",
+                            "Title of the Patent": "Surface Functionalized protein-derived carbon nano-dot (CND) for antimicrobial application and infected chronic wound management",
+                            "Status": "Filed"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. H. Shree Kumar": {
@@ -5005,7 +5005,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "shreekumarh@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/sreekumar.JPG",
+      image: "public/uploads/faculty/sreekumar.JPG",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -5060,648 +5060,648 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "image": "https://mits.ac.in/public/uploads/faculty/Dr. Rakesh Singh.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "RF& Microwave",
-                        "Branch": "ECE",
-                        "College Name/University": "Indian Institute of Technology, Roorkee",
-                        "Year of Passing": "2025"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "RF& Microwave",
-                        "Branch": "ECE",
-                        "College Name/University": "National Institute of Technology, Delhi",
-                        "Year of Passing": "2018"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "Meerut Institute of Technology, Meerut",
-                        "Year of Passing": "2012"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "RF & Microwave"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=59602251200",
-                    "Vidwan Link: https://mits.irins.org/profile/666607",
-                    "Google scholar Link: https://scholar.google.com/citations?hl=en&user=05BT8oAAAAAJ",
-                    "h-Index (As per Scopus Data) : 3"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Computation of Effective Dielectric Properties Using Dielectric Mixing Model Approach for Breast Cancer Detection",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Compact wideband microstrip patch antenna design for breast cancer detection",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Circularly polarized two-port MIMO dielectric resonator antenna",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2019",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Dimensions selection criteria of the stair-shaped slot for obtaining the wideband response of CPDRA",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022",
-                        "Author Position": "1",
-                        "Details of Research Publication": "DEVELOPMENT OF AN IMAGING SYSTEM FOR BREAST CANCER DETECTION",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2023",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Liquid-based phantom preparation and dielectric characterization for breast cancer imaging",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "Awarded with DST (Department of Science and Technology, Government of India) travel grant of INR 2,13,927 for participation in the European Conference on Antennas and Propagation (EuCAP) in 2023.",
-                    "Academic achievement: Qualified GATE Examination 8 Times."
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "RF& Microwave",
+                            "Branch": "ECE",
+                            "College Name/University": "Indian Institute of Technology, Roorkee",
+                            "Year of Passing": "2025"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "RF& Microwave",
+                            "Branch": "ECE",
+                            "College Name/University": "National Institute of Technology, Delhi",
+                            "Year of Passing": "2018"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "Meerut Institute of Technology, Meerut",
+                            "Year of Passing": "2012"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "RF & Microwave"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=59602251200",
+                        "Vidwan Link: https://mits.irins.org/profile/666607",
+                        "Google scholar Link: https://scholar.google.com/citations?hl=en&user=05BT8oAAAAAJ",
+                        "h-Index (As per Scopus Data) : 3"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Computation of Effective Dielectric Properties Using Dielectric Mixing Model Approach for Breast Cancer Detection",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Compact wideband microstrip patch antenna design for breast cancer detection",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Circularly polarized two-port MIMO dielectric resonator antenna",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2019",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Dimensions selection criteria of the stair-shaped slot for obtaining the wideband response of CPDRA",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022",
+                            "Author Position": "1",
+                            "Details of Research Publication": "DEVELOPMENT OF AN IMAGING SYSTEM FOR BREAST CANCER DETECTION",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2023",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Liquid-based phantom preparation and dielectric characterization for breast cancer imaging",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": [
+                        "Awarded with DST (Department of Science and Technology, Government of India) travel grant of INR 2,13,927 for participation in the European Conference on Antennas and Propagation (EuCAP) in 2023.",
+                        "Academic achievement: Qualified GATE Examination 8 Times."
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Dr. G. Subbarao": {
         "name": "Dr. G. Subbarao",
         "email": "subbaraog@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Dr. Subbarao.JPG",
+        "image": "public/uploads/faculty/Dr. Subbarao.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Microwave Absorbers",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "National Institute of Technology Mizoram (NITMZ), Mizoram",
-                        "Year of Passing": "2025"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Digital Electronics and Communication Systems",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "VVIT, Guntur",
-                        "Year of Passing": "2014"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Acharya Nagarjuna University",
-                        "Year of Passing": "2012"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Microwave Absorbers, MIMO Antennas for 5G and 6G Communications, Metamaterials"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57220805557",
-                    "Vidwan Link: https://mits.irins.org/profile/274820",
-                    "Google scholar Link: https://scholar.google.com/citations?user=1JFnnY4AAAAJ&hl=en&oi=sra",
-                    "h-Index (As per Scopus Data) : 2"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Mutual Coupling Reduction in UWB-MIMO Antennas Using Stepped Jesus Cross Stub DOI: 10.1007/978-981-95-1058-0_31",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Trident -Tree Fractal Printed Monopole Antenna for WLAN and 5G Applications DOI: 10.1109/INSPECT67393.2025.11350383",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025",
-                        "Author Position": "4",
-                        "Details of Research Publication": "Design of a Star-Shaped Dual-Band Ultra-Thin Polarization-Insensitive Metamaterial Absorber for S-Band Applications DOI: 10.1109/ICWITE64848.2025.11306966",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025",
-                        "Author Position": "5",
-                        "Details of Research Publication": "Design and Analysis of Triple- Band Copper- Based Metamaterial Absorber for GHz Applications DOI: 10.1109/ICCAMS65118.2025.11234549",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025",
-                        "Author Position": "5",
-                        "Details of Research Publication": "Design Analysis of We-Mo Satellite for Atmospheric Parameters DOI: 10.1109/WAMS64402.2025.11159014",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A 1&times; 4 Arrow Headed MIMO Antenna with Integrated Band Rejection and High Isolation for 6G Communication Systems DOI: 10.1109/ICETEA64585.2025.11099942",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024",
-                        "Author Position": "5",
-                        "Details of Research Publication": "A Power-Aware Algorithm for Mobile Devices Focused on Batteries DOI: 10.1109/ICCSP60870.2024.10544227",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design of a Graphene-Based Ultra-Wideband Polarization-Insensitive Absorber for Terahertz Applications DOI: 10.1007/s11468-025-03043",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2022-23",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Triple band single layer microwave absorber based on closed loop resonator structures with high stability under oblique incidence DOI: 10.1016/j.aeue.2023.154629",
-                        "Indexing": "SCI",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Triple Band Polarization Insensitive Microwave Absorber with Defected Ground Structure for EMI/EMC Applications DOI: 10.1109/IEMECON53809.2021.9689090",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2021",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design of Polarization-Insensitive Near Unity Dual Band Microwave Absorber for EMI/EMC Applications DOI: 10.1109/WiSPNET51692.2021.9419422",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Design of polarization-insensitive dual band microwave absorber for EMI/EMC applications DOI: 10.1109/ICCCA49541.2020.9250862",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
-                    }
-                ]
-            },
-            {
-                "title": "Research Projects & Events",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Funded Project /Event": "Event",
-                        "Role": "Co-Coordinator",
-                        "Title of the Project/Event": "Advances in Wireless Connectivity: Technologies, Systems and Network Evolution &ldquo;2025 IEEE ComsSoc School Series&rdquo;",
-                        "Amount in Rs. /-": "$5000",
-                        "Funding Agency": "IEEE"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "448604-001",
-                        "Title of the Patent": "MICROWAVE ANTENNA FOR 5G WAVE TRANSMISSION",
-                        "Status": "Granted"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": "Reviewer of reputed journals: Scientific Reports (Nature, UK), Advanced Electromagnetics Journal."
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Microwave Absorbers",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "National Institute of Technology Mizoram (NITMZ), Mizoram",
+                            "Year of Passing": "2025"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Digital Electronics and Communication Systems",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "VVIT, Guntur",
+                            "Year of Passing": "2014"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Acharya Nagarjuna University",
+                            "Year of Passing": "2012"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Microwave Absorbers, MIMO Antennas for 5G and 6G Communications, Metamaterials"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57220805557",
+                        "Vidwan Link: https://mits.irins.org/profile/274820",
+                        "Google scholar Link: https://scholar.google.com/citations?user=1JFnnY4AAAAJ&hl=en&oi=sra",
+                        "h-Index (As per Scopus Data) : 2"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Mutual Coupling Reduction in UWB-MIMO Antennas Using Stepped Jesus Cross Stub DOI: 10.1007/978-981-95-1058-0_31",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Trident -Tree Fractal Printed Monopole Antenna for WLAN and 5G Applications DOI: 10.1109/INSPECT67393.2025.11350383",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025",
+                            "Author Position": "4",
+                            "Details of Research Publication": "Design of a Star-Shaped Dual-Band Ultra-Thin Polarization-Insensitive Metamaterial Absorber for S-Band Applications DOI: 10.1109/ICWITE64848.2025.11306966",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025",
+                            "Author Position": "5",
+                            "Details of Research Publication": "Design and Analysis of Triple- Band Copper- Based Metamaterial Absorber for GHz Applications DOI: 10.1109/ICCAMS65118.2025.11234549",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025",
+                            "Author Position": "5",
+                            "Details of Research Publication": "Design Analysis of We-Mo Satellite for Atmospheric Parameters DOI: 10.1109/WAMS64402.2025.11159014",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A 1&times; 4 Arrow Headed MIMO Antenna with Integrated Band Rejection and High Isolation for 6G Communication Systems DOI: 10.1109/ICETEA64585.2025.11099942",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024",
+                            "Author Position": "5",
+                            "Details of Research Publication": "A Power-Aware Algorithm for Mobile Devices Focused on Batteries DOI: 10.1109/ICCSP60870.2024.10544227",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design of a Graphene-Based Ultra-Wideband Polarization-Insensitive Absorber for Terahertz Applications DOI: 10.1007/s11468-025-03043",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2022-23",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Triple band single layer microwave absorber based on closed loop resonator structures with high stability under oblique incidence DOI: 10.1016/j.aeue.2023.154629",
+                            "Indexing": "SCI",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Triple Band Polarization Insensitive Microwave Absorber with Defected Ground Structure for EMI/EMC Applications DOI: 10.1109/IEMECON53809.2021.9689090",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2021",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design of Polarization-Insensitive Near Unity Dual Band Microwave Absorber for EMI/EMC Applications DOI: 10.1109/WiSPNET51692.2021.9419422",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        },
+                        {
+                            "S.No": "12",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Design of polarization-insensitive dual band microwave absorber for EMI/EMC applications DOI: 10.1109/ICCCA49541.2020.9250862",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "NA"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Projects & Events",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Funded Project /Event": "Event",
+                            "Role": "Co-Coordinator",
+                            "Title of the Project/Event": "Advances in Wireless Connectivity: Technologies, Systems and Network Evolution &ldquo;2025 IEEE ComsSoc School Series&rdquo;",
+                            "Amount in Rs. /-": "$5000",
+                            "Funding Agency": "IEEE"
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Application ID": "448604-001",
+                            "Title of the Patent": "MICROWAVE ANTENNA FOR 5G WAVE TRANSMISSION",
+                            "Status": "Granted"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": "Reviewer of reputed journals: Scientific Reports (Nature, UK), Advanced Electromagnetics Journal."
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mr. T. Manivannan": {
         "name": "Mr. T. Manivannan",
         "email": "manivannant@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Mr. T. Manivannan.JPG",
+        "image": "public/uploads/faculty/Mr. T. Manivannan.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "Vel Tech University",
-                        "Year of Passing": "Pursuing"
-                    },
-                    {
-                        "Course": "M.E",
-                        "Specialization": "Applied Electronics",
-                        "Branch": "ECE",
-                        "College Name/University": "Anna University, Chennai",
-                        "Year of Passing": "2010"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "Vellore institute of Technology, Vellore",
-                        "Year of Passing": "2005"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Automotive Embedded Systems"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=59593730100",
-                    "Vidwan Link: https://mits.irins.org/profile/274753",
-                    "Google scholar Link: https://scholar.google.co.in/citations?user=iO84sWAAAAAJ",
-                    "h-Index (As per Scopus Data) : 1"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Detecting Cardiovascular Diseases Using Machine Learning and Biomedical Data Classification https://doi.org/10.1109/ICCSP64183.2025.11088785 International Conference on Communication and Signal Processing (ICCSP)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A Multiband Sierpinski Arrowhead Fractal Antenna with 3 &times; 3 CSRR Array for Various Wireless Applications https://doi.org/10.1007/978-981-97-5703-9_30 Lecture Notes in Networks and Systems",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm https://doi.org/10.1109/ICSSEECC61126.2024.10649421 International Conference on Smart Systems for Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Optimized High-Speed Wallace Tree Multiplier Using Parallel Prefix Adders https://doi.org/10.1109/ICSSEECC61126.2024.10649488 International Conference on Smart Systems for Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Underground Mine Terrain Obstacle Detection based on Multi-Robot System with Swarm Intelligence https://ijisae.org/index.php/IJISAE/article/view/4723 International Journal of Intelligent Systems and Applications in in Engineering",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Application ID": "202441003740",
-                        "Title of the Patent": "Trident Tree Fractal Embedded Hexagonal Printed Monopole Antenna",
-                        "Status": "Published"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Application ID": "202341000087",
-                        "Title of the Patent": "Design And Performance Of Charge-Plasma-Based Schottky-Fet Cmos Circuit Ring Oscillator For High Den",
-                        "Status": "Published"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": "Received the &ldquo;Best Paper Award&rdquo; at the Emerging Trends and Technologies on Intelligent Systems (ETTIS-2024) conference organized by C-DAC, Ministry of Electronics and Information Technology, Government of India."
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "Vel Tech University",
+                            "Year of Passing": "Pursuing"
+                        },
+                        {
+                            "Course": "M.E",
+                            "Specialization": "Applied Electronics",
+                            "Branch": "ECE",
+                            "College Name/University": "Anna University, Chennai",
+                            "Year of Passing": "2010"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "Vellore institute of Technology, Vellore",
+                            "Year of Passing": "2005"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Automotive Embedded Systems"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=59593730100",
+                        "Vidwan Link: https://mits.irins.org/profile/274753",
+                        "Google scholar Link: https://scholar.google.co.in/citations?user=iO84sWAAAAAJ",
+                        "h-Index (As per Scopus Data) : 1"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Detecting Cardiovascular Diseases Using Machine Learning and Biomedical Data Classification https://doi.org/10.1109/ICCSP64183.2025.11088785 International Conference on Communication and Signal Processing (ICCSP)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A Multiband Sierpinski Arrowhead Fractal Antenna with 3 &times; 3 CSRR Array for Various Wireless Applications https://doi.org/10.1007/978-981-97-5703-9_30 Lecture Notes in Networks and Systems",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm https://doi.org/10.1109/ICSSEECC61126.2024.10649421 International Conference on Smart Systems for Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Optimized High-Speed Wallace Tree Multiplier Using Parallel Prefix Adders https://doi.org/10.1109/ICSSEECC61126.2024.10649488 International Conference on Smart Systems for Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Underground Mine Terrain Obstacle Detection based on Multi-Robot System with Swarm Intelligence https://ijisae.org/index.php/IJISAE/article/view/4723 International Journal of Intelligent Systems and Applications in in Engineering",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Application ID": "202441003740",
+                            "Title of the Patent": "Trident Tree Fractal Embedded Hexagonal Printed Monopole Antenna",
+                            "Status": "Published"
+                        },
+                        {
+                            "S.No": "2",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Application ID": "202341000087",
+                            "Title of the Patent": "Design And Performance Of Charge-Plasma-Based Schottky-Fet Cmos Circuit Ring Oscillator For High Den",
+                            "Status": "Published"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": "Received the &ldquo;Best Paper Award&rdquo; at the Emerging Trends and Technologies on Intelligent Systems (ETTIS-2024) conference organized by C-DAC, Ministry of Electronics and Information Technology, Government of India."
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mr. Asif Moiz": {
         "name": "Mr. Asif Moiz",
         "email": "asifmoiz@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Mr. Asif Moiz.JPG",
+        "image": "public/uploads/faculty/Mr. Asif Moiz.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Image Processing",
-                        "Branch": "ECE",
-                        "College Name/University": "NIT, Patna",
-                        "Year of Passing": "Pursuing"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Communication",
-                        "Branch": "ECE",
-                        "College Name/University": "Supreme Knowledge Foundation Group of Institutions, MAKAUT, W.B.",
-                        "Year of Passing": "2016"
-                    },
-                    {
-                        "Course": "B.Sc.(Engg)",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "Maulana Azad College of Engineering & Technology, Maghad University,patna",
-                        "Year of Passing": "2006"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Computer Vision & Image Processing"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=59929870100",
-                    "Vidwan Link: https://mits.irins.org/profile/469083",
-                    "Google scholar Link: https://scholar.google.com/citations?user=3D6Z9FcAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 1"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Image Compression and Enhancement Using Deep Learning Algorithm https://doi.org/10.1109/ESCI63694.2025.10988240",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Design and Analysis of an Energy-Efficient Full Adder Using Reversible Charge Recovery Logic https://doi.org/10.1109/ICETETSIP64213.2025.11156360",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "6",
-                        "Details of Research Publication": "High-Speed Approximate Adder Design Through Charge Recovery Logic and Hybrid Low Power Technique https://doi.org/10.1109/VLSISATA65374.2025.11070085",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Un-Supervised Machine Learning for Computer Vision Image compression https://doi.org/10.4018/979-8-3373-5727-0.ch001",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Image Processing",
+                            "Branch": "ECE",
+                            "College Name/University": "NIT, Patna",
+                            "Year of Passing": "Pursuing"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Communication",
+                            "Branch": "ECE",
+                            "College Name/University": "Supreme Knowledge Foundation Group of Institutions, MAKAUT, W.B.",
+                            "Year of Passing": "2016"
+                        },
+                        {
+                            "Course": "B.Sc.(Engg)",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "Maulana Azad College of Engineering & Technology, Maghad University,patna",
+                            "Year of Passing": "2006"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Computer Vision & Image Processing"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=59929870100",
+                        "Vidwan Link: https://mits.irins.org/profile/469083",
+                        "Google scholar Link: https://scholar.google.com/citations?user=3D6Z9FcAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 1"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Image Compression and Enhancement Using Deep Learning Algorithm https://doi.org/10.1109/ESCI63694.2025.10988240",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Design and Analysis of an Energy-Efficient Full Adder Using Reversible Charge Recovery Logic https://doi.org/10.1109/ICETETSIP64213.2025.11156360",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "6",
+                            "Details of Research Publication": "High-Speed Approximate Adder Design Through Charge Recovery Logic and Hybrid Low Power Technique https://doi.org/10.1109/VLSISATA65374.2025.11070085",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Un-Supervised Machine Learning for Computer Vision Image compression https://doi.org/10.4018/979-8-3373-5727-0.ch001",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mr. V. Mustafa": {
@@ -5709,49 +5709,49 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "mustafav@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "https://mits.ac.in/public/uploads/faculty/V. Mustafa.JPG",
+        "image": "public/uploads/faculty/V. Mustafa.JPG",
         "sections": [
-            {
-                "title": "My Publications",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Title of the Paper": "Raspberry Pi based Real Time People Detection, Tracking and Counting System",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering and Techniques, Volume 3 Issue 6, Nov-Dec 2017"
-                    }
-                ]
-            },
-            {
-                "title": "Conferences & Workshops attended",
-                "content": "Participated in DST&ndash;SERB Sponsored KARYASHALA (High-End Workshop) &ldquo;Sensors for Healthcare Applications&rdquo; was organized by Department of Electronics and Communication Engineering NATIONAL INSTITUTE OF TECHNOLOGY, MIZORAM (An Institute of National Importance under MoE, GoI) on 12th &ndash; 18th February 2024."
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "My Publications",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Title of the Paper": "Raspberry Pi based Real Time People Detection, Tracking and Counting System",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering and Techniques, Volume 3 Issue 6, Nov-Dec 2017"
+                        }
+                    ]
+                },
+                {
+                    "title": "Conferences & Workshops attended",
+                    "content": "Participated in DST&ndash;SERB Sponsored KARYASHALA (High-End Workshop) &ldquo;Sensors for Healthcare Applications&rdquo; was organized by Department of Electronics and Communication Engineering NATIONAL INSTITUTE OF TECHNOLOGY, MIZORAM (An Institute of National Importance under MoE, GoI) on 12th &ndash; 18th February 2024."
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mr. G. Charan Kumar": {
@@ -5759,162 +5759,162 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "charang@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "https://mits.ac.in/public/uploads/faculty/Mr. G. Charan Kumar.JPG",
+        "image": "public/uploads/faculty/Mr. G. Charan Kumar.JPG",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D",
-                        "Specialization": "VLSI DESIGN",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Vel Tech University",
-                        "Year of Passing": "Pursuing"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "DSCE",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Sreyas Institute of Engineering and Technology, JNTU Hyderabad",
-                        "Year of Passing": "2014"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Madanapalle Institute of Science & Technology, Affiliated in JNTU Anantapur",
-                        "Year of Passing": "2012"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "VLSI DESIGN"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57684009300",
-                    "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/611575",
-                    "Google scholar Link: https://scholar.google.com/citations?user=sOGnrPsAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 1"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Comprehensive Survey on Internet of Medical Things (IoMT) &ndash; Applications and Challengesings None",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Efficient 32-Bit Fixed-Width Adder-Tree Design In Verilog For VLSI Applicationsone",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Parallel Processing based Image Enhancing Technique Implementation on Low-Cost FPGA",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Enhanced Deep Learning Methodology for Detection and I Identification of Brain Tumour using CNN in SCOPUS in Advances in nonlinear variational inequalities",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Efficient architectures of FIR filters using Distributed Arithmetic",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Analysis and Detection of Breast Cancer using Recursive Feature Elimination in Conference in December 2023",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Comparative analysis of CMOS AND gate and Domino Logic AND gate design by using Nano scaling technologies",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Application ID": "710021761",
-                        "Title of the Patent": "DESIGN AND PERFORMANCE OF CHARGE-PLASMA-BASED SCHOTTKY-FETCMOS CIRCUIT RING OSCILLATOR FOR HIGH DENSITY",
-                        "Status": "Published"
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D",
+                            "Specialization": "VLSI DESIGN",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Vel Tech University",
+                            "Year of Passing": "Pursuing"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "DSCE",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Sreyas Institute of Engineering and Technology, JNTU Hyderabad",
+                            "Year of Passing": "2014"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Madanapalle Institute of Science & Technology, Affiliated in JNTU Anantapur",
+                            "Year of Passing": "2012"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "VLSI DESIGN"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57684009300",
+                        "Vidwan Link: https://vidwan.inflibnet.ac.in/profile/611575",
+                        "Google scholar Link: https://scholar.google.com/citations?user=sOGnrPsAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 1"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Comprehensive Survey on Internet of Medical Things (IoMT) &ndash; Applications and Challengesings None",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Efficient 32-Bit Fixed-Width Adder-Tree Design In Verilog For VLSI Applicationsone",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Parallel Processing based Image Enhancing Technique Implementation on Low-Cost FPGA",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Enhanced Deep Learning Methodology for Detection and I Identification of Brain Tumour using CNN in SCOPUS in Advances in nonlinear variational inequalities",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Efficient architectures of FIR filters using Distributed Arithmetic",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Analysis and Detection of Breast Cancer using Recursive Feature Elimination in Conference in December 2023",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2019-20",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Comparative analysis of CMOS AND gate and Domino Logic AND gate design by using Nano scaling technologies",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2022-23",
+                            "Application ID": "710021761",
+                            "Title of the Patent": "DESIGN AND PERFORMANCE OF CHARGE-PLASMA-BASED SCHOTTKY-FETCMOS CIRCUIT RING OSCILLATOR FOR HIGH DENSITY",
+                            "Status": "Published"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mrs. K. Revathi": {
@@ -5923,101 +5923,101 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "image": "https://mits.ac.in/public/uploads/faculty/Mrs. Revathi.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "NIT, Mizoram",
-                        "Year of Passing": "Pursuing"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "VLSI & Embedded Systems",
-                        "Branch": "ECE",
-                        "College Name/University": "Krishnaveni Engineering College for Women, JNTUK-Kakinada",
-                        "Year of Passing": "2020"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "Krishnaveni Engineering College for Women, JNTUK-Kakinada",
-                        "Year of Passing": "2018"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "VLSI, Device Modelling"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=59404341900",
-                    "Vidwan Link: https://mits.irins.org/profile/274612",
-                    "Google scholar Link: https://scholar.google.com/citations?hl=en&user=P5njXwsAAAAJ",
-                    "h-Index (As per Scopus Data) : 1"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "QCA Revolution: Transforming ALU Operations in Microprocessor Structures,&quot; 2024 10th International Conference on Advanced Computing and Communication Systems (ICACCS), Coimbatore, India, 2024, pp. 2195-2199",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Optimizing Cost and Emissions in a 10-Unit Power Generation System using Different Optimization Techniques with Wind Energy Integration,&quot; 2025 4th International Conference on Distributed Computing and Electrical Circuits and Electronics (ICDCECE), Ballari, India, 2025, pp. 1-6",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": ""
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": "Received the best paper award in 4th IEEE International Conference on Distributed Computing and Electrical Circuits and Electronics (ICDCECE-2025) organized by Ballari Institute of Technology and Management, Ballari during 25-26 April, 2025."
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "NIT, Mizoram",
+                            "Year of Passing": "Pursuing"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "VLSI & Embedded Systems",
+                            "Branch": "ECE",
+                            "College Name/University": "Krishnaveni Engineering College for Women, JNTUK-Kakinada",
+                            "Year of Passing": "2020"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "Krishnaveni Engineering College for Women, JNTUK-Kakinada",
+                            "Year of Passing": "2018"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "VLSI, Device Modelling"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=59404341900",
+                        "Vidwan Link: https://mits.irins.org/profile/274612",
+                        "Google scholar Link: https://scholar.google.com/citations?hl=en&user=P5njXwsAAAAJ",
+                        "h-Index (As per Scopus Data) : 1"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "QCA Revolution: Transforming ALU Operations in Microprocessor Structures,&quot; 2024 10th International Conference on Advanced Computing and Communication Systems (ICACCS), Coimbatore, India, 2024, pp. 2195-2199",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "&quot;Optimizing Cost and Emissions in a 10-Unit Power Generation System using Different Optimization Techniques with Wind Energy Integration,&quot; 2025 4th International Conference on Distributed Computing and Electrical Circuits and Electronics (ICDCECE), Ballari, India, 2025, pp. 1-6",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": "Received the best paper award in 4th IEEE International Conference on Distributed Computing and Electrical Circuits and Electronics (ICDCECE-2025) organized by Ballari Institute of Technology and Management, Ballari during 25-26 April, 2025."
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mr. M. Kamesh": {
@@ -6025,7 +6025,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "kameshm@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/1d0ccd786e3504191039a886e12fe837.jpg",
+      image: "public/uploads/faculty/1d0ccd786e3504191039a886e12fe837.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -6063,142 +6063,142 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Mrs. Kowsalya P": {
         "name": "Mrs. Kowsalya P",
         "email": "kowsalyap@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Mrs. Kowsalya P.JPG",
+        "image": "public/uploads/faculty/Mrs. Kowsalya P.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "M.E.",
-                        "Specialization": "Digital Communication & Network Engineering",
-                        "Branch": "Digital Communication & Network Engineering",
-                        "College Name/University": "Arulmigu Kalasalingam College of Engg., Anna University",
-                        "Year of Passing": "2008"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Specialization": "Electronics & Communication Engineering",
-                        "Branch": "Electronics & Communication Engineering",
-                        "College Name/University": "P.S.N.A College of Engg& Tech, Madurai Kamaraj University",
-                        "Year of Passing": "2000"
-                    }
-                ]
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: http://www.scopus.com/authid/detail.url?authorId=58931576400",
-                    "Vidwan Link: https://mits.irins.org/profile/366744",
-                    "Google scholar Link: http://scholar.google.co.in/citations?user=ubGIdToAAAAJ",
-                    "h-Index (As per Scopus Data) : 2"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "&ldquo;Dynamic Infrastructure Assessment and Road Condition Monitoring using Unmanned Aerial Vehicle Images&rdquo; IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE), Bangalore https://doi.org/10.1109/ICWITE64848.2025.11307143",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "3",
-                        "Details of Research Publication": "&ldquo;Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm&rdquo;, International Conference on Smart Systems for Electrical Electronics Communication and Computer Engineering ICSSEEC 2024 Proceedings, Pages 176-179 https://doi.org/10.1109/ICSSEECC61126.2024.10649421",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&ldquo;Integrated Smart Trolley System: Arduino Nano-Based RFID Billing and Weight Sensor Augmentation&rdquo;, 10th International Conference on Communication and Signal Processing ICCSP 2024, Pages 958-963 http://dx.doi.org/10.1109/ICCSP60870.2024.10544371",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&ldquo;Clearer Heart Beats: Enhancement of cardiac sounds using Adaptive Filtering and Wavelet Decomposition&rdquo;, 10th International Conference on Communication and Signal Processing ICCSP 2024, Pages 947-952 http://dx.doi.org/10.1109/ICCSP60870.2024.10543921",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "5",
-                        "Details of Research Publication": "&ldquo;Design and Implementation of Multi-Band Honeycomb Fractal Antenna for 5G Applications&rdquo;, 10th International Conference on Communication and Signal Processing ICCSP 2024, Pages 1439-1444 https://doi.org/10.1109/ICCSP60870.2024.10543430",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "4",
-                        "Details of Research Publication": "&ldquo;Online Fraudulence Detection Based on Decision Support System in Digital Banking&rdquo;, International Journal of Intelligent Systems and Applications in Engineering, Volume 12, Year 2024, Pages 97-105 https://ijisae.org/index.php/IJISAE/article/viev/4720",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "Others",
-                        "Academic Year": "2023-24",
-                        "Application ID": "202441003740",
-                        "Title of the Patent": "TRIDENT TREE FRACTAL EMBEDDED HEXAGONAL PRINTEDMONOPOLE ANTENNA",
-                        "Status": "Published"
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "M.E.",
+                            "Specialization": "Digital Communication & Network Engineering",
+                            "Branch": "Digital Communication & Network Engineering",
+                            "College Name/University": "Arulmigu Kalasalingam College of Engg., Anna University",
+                            "Year of Passing": "2008"
+                        },
+                        {
+                            "Course": "B.E.",
+                            "Specialization": "Electronics & Communication Engineering",
+                            "Branch": "Electronics & Communication Engineering",
+                            "College Name/University": "P.S.N.A College of Engg& Tech, Madurai Kamaraj University",
+                            "Year of Passing": "2000"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: http://www.scopus.com/authid/detail.url?authorId=58931576400",
+                        "Vidwan Link: https://mits.irins.org/profile/366744",
+                        "Google scholar Link: http://scholar.google.co.in/citations?user=ubGIdToAAAAJ",
+                        "h-Index (As per Scopus Data) : 2"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "&ldquo;Dynamic Infrastructure Assessment and Road Condition Monitoring using Unmanned Aerial Vehicle Images&rdquo; IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE), Bangalore https://doi.org/10.1109/ICWITE64848.2025.11307143",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "3",
+                            "Details of Research Publication": "&ldquo;Efficient Noise Cancellation in Lung Signals Using Pipelined Adaptive LMS Algorithm&rdquo;, International Conference on Smart Systems for Electrical Electronics Communication and Computer Engineering ICSSEEC 2024 Proceedings, Pages 176-179 https://doi.org/10.1109/ICSSEECC61126.2024.10649421",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "2",
+                            "Details of Research Publication": "&ldquo;Integrated Smart Trolley System: Arduino Nano-Based RFID Billing and Weight Sensor Augmentation&rdquo;, 10th International Conference on Communication and Signal Processing ICCSP 2024, Pages 958-963 http://dx.doi.org/10.1109/ICCSP60870.2024.10544371",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "2",
+                            "Details of Research Publication": "&ldquo;Clearer Heart Beats: Enhancement of cardiac sounds using Adaptive Filtering and Wavelet Decomposition&rdquo;, 10th International Conference on Communication and Signal Processing ICCSP 2024, Pages 947-952 http://dx.doi.org/10.1109/ICCSP60870.2024.10543921",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "5",
+                            "Details of Research Publication": "&ldquo;Design and Implementation of Multi-Band Honeycomb Fractal Antenna for 5G Applications&rdquo;, 10th International Conference on Communication and Signal Processing ICCSP 2024, Pages 1439-1444 https://doi.org/10.1109/ICCSP60870.2024.10543430",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2023-24",
+                            "Author Position": "4",
+                            "Details of Research Publication": "&ldquo;Online Fraudulence Detection Based on Decision Support System in Digital Banking&rdquo;, International Journal of Intelligent Systems and Applications in Engineering, Volume 12, Year 2024, Pages 97-105 https://ijisae.org/index.php/IJISAE/article/viev/4720",
+                            "Indexing": "Scopus",
+                            "Publication": "Article",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "Others",
+                            "Academic Year": "2023-24",
+                            "Application ID": "202441003740",
+                            "Title of the Patent": "TRIDENT TREE FRACTAL EMBEDDED HEXAGONAL PRINTEDMONOPOLE ANTENNA",
+                            "Status": "Published"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mrs. P. Susmitha": {
@@ -6206,243 +6206,243 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         "designation": "Asst. Professor",
         "email": "susmithap@mits.ac.in",
         "officeAddress": "West Block",
-        "image": "https://mits.ac.in/public/uploads/faculty/Mrs. P. Susmitha.JPG",
+        "image": "public/uploads/faculty/Mrs. P. Susmitha.JPG",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Management Studies",
-                        "Group": "Management Studies",
-                        "College Name/University": "National Institute Of Technology Karnataka, Surathkal",
-                        "Year of Passing": "Thesis Submitted"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "VLSI",
-                        "Group": "ECE",
-                        "College Name/University": "CMR Institute & Technology, JNTU Hyderabad",
-                        "Year of Passing": "2014"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Information Technology",
-                        "Group": "Information Technology",
-                        "College Name/University": "D.M.S.Sri Venkateswara of Hindu College of Engineering, Acharya Nagarjuna University",
-                        "Year of Passing": "2012"
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "Ph.D.",
+                            "Specialization": "Management Studies",
+                            "Group": "Management Studies",
+                            "College Name/University": "National Institute Of Technology Karnataka, Surathkal",
+                            "Year of Passing": "Thesis Submitted"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "VLSI",
+                            "Group": "ECE",
+                            "College Name/University": "CMR Institute & Technology, JNTU Hyderabad",
+                            "Year of Passing": "2014"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Information Technology",
+                            "Group": "Information Technology",
+                            "College Name/University": "D.M.S.Sri Venkateswara of Hindu College of Engineering, Acharya Nagarjuna University",
+                            "Year of Passing": "2012"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mr. Shaik Tipu Rahaman": {
         "name": "Mr. Shaik Tipu Rahaman",
         "email": "tipurahamans@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Mr. Shaik Tipu Rahaman.JPG",
+        "image": "public/uploads/faculty/Mr. Shaik Tipu Rahaman.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "M.Sc.",
-                        "Specialization": "Applied Psychology",
-                        "Branch": "M.Sc.",
-                        "College Name/University": "Bharathiar University",
-                        "Year of Passing": "2019"
-                    },
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Sri Venkateswara Institute of Technology and Science",
-                        "Year of Passing": "2015"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "Electronics and Communication Engineering",
-                        "Branch": "Electronics and Communication Engineering",
-                        "College Name/University": "Vaagdevi Institute of Technology and Science",
-                        "Year of Passing": "2012"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Photonics, Optics, Biosensors"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57212120811",
-                    "Vidwan Link: NA",
-                    "Google scholar Link: https://scholar.google.com/citations?user=Zgc78NMAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : NA"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2013-14",
-                        "Author Position": "2",
-                        "Details of Research Publication": "An effective 6-bit flash ADC using low power CMOS technology https://ieeexplore.ieee.org/abstract/document/6710493/2013 15th International Conference on Advanced Computing Technologies (ICACT)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2013-14",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Implementation of error correcting methods for asynchronous communication and modified completion detector with reduced area overhead https://ieeexplore.ieee.org/abstract/document/6926116/2014 2nd International Conference on Devices, Circuits and Systems (ICDCS)",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2012-13",
-                        "Author Position": "3",
-                        "Details of Research Publication": "A Novel Approach for Image Retrieval Based on ROI and Multifeatures Using Genetic Algorithm https://doi.org/10.1109/ic-ETITE47903.2020.293 Proceedings of International Conference on Advances in Computing",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": "Cash-prize winner for two consecutive academic years at MITS under Training & Placement"
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "M.Sc.",
+                            "Specialization": "Applied Psychology",
+                            "Branch": "M.Sc.",
+                            "College Name/University": "Bharathiar University",
+                            "Year of Passing": "2019"
+                        },
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Sri Venkateswara Institute of Technology and Science",
+                            "Year of Passing": "2015"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "Electronics and Communication Engineering",
+                            "Branch": "Electronics and Communication Engineering",
+                            "College Name/University": "Vaagdevi Institute of Technology and Science",
+                            "Year of Passing": "2012"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Photonics, Optics, Biosensors"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57212120811",
+                        "Vidwan Link: NA",
+                        "Google scholar Link: https://scholar.google.com/citations?user=Zgc78NMAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : NA"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2013-14",
+                            "Author Position": "2",
+                            "Details of Research Publication": "An effective 6-bit flash ADC using low power CMOS technology https://ieeexplore.ieee.org/abstract/document/6710493/2013 15th International Conference on Advanced Computing Technologies (ICACT)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2013-14",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Implementation of error correcting methods for asynchronous communication and modified completion detector with reduced area overhead https://ieeexplore.ieee.org/abstract/document/6926116/2014 2nd International Conference on Devices, Circuits and Systems (ICDCS)",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2012-13",
+                            "Author Position": "3",
+                            "Details of Research Publication": "A Novel Approach for Image Retrieval Based on ROI and Multifeatures Using Genetic Algorithm https://doi.org/10.1109/ic-ETITE47903.2020.293 Proceedings of International Conference on Advances in Computing",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": "Cash-prize winner for two consecutive academic years at MITS under Training & Placement"
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mr. B. Subbarayudu": {
         "name": "Mr. B. Subbarayudu",
         "email": "subbarayudub@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/Mr. B. Subbarayudu - ECE.JPG",
+        "image": "public/uploads/faculty/Mr.%20B.%20Subbarayudu%20-%20ECE.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Embedded Systems",
-                        "Group": "ECE",
-                        "College Name/University": "CMR College of Engineering & Technology (J.N.T.U.H)",
-                        "Year of Passing": "2015"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "ECE",
-                        "Group": "ECE",
-                        "College Name/University": "KSRM College of Engineering (S.V.U)",
-                        "Year of Passing": "2010"
-                    }
-                ]
-            },
-            {
-                "title": "My Publications",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Title of the Paper": "Comparative Analysis on Sorting and Searching Algorithms",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Civil Engineering and Technology Volume 8, Issue 8, August 2017, pp. 955&ndash;978, Article ID: IJCIET_08_08_10."
-                    },
-                    {
-                        "S.No": "2",
-                        "Title of the Paper": "Review and Comparison on Software Process Models",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical Engineering and Technology Volume 8, Issue 8, August 2017, pp. 967&ndash;980, Article ID: IJMET_08_08_10"
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Embedded Systems",
+                            "Group": "ECE",
+                            "College Name/University": "CMR College of Engineering & Technology (J.N.T.U.H)",
+                            "Year of Passing": "2015"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "ECE",
+                            "Group": "ECE",
+                            "College Name/University": "KSRM College of Engineering (S.V.U)",
+                            "Year of Passing": "2010"
+                        }
+                    ]
+                },
+                {
+                    "title": "My Publications",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Title of the Paper": "Comparative Analysis on Sorting and Searching Algorithms",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Civil Engineering and Technology Volume 8, Issue 8, August 2017, pp. 955&ndash;978, Article ID: IJCIET_08_08_10."
+                        },
+                        {
+                            "S.No": "2",
+                            "Title of the Paper": "Review and Comparison on Software Process Models",
+                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical Engineering and Technology Volume 8, Issue 8, August 2017, pp. 967&ndash;980, Article ID: IJMET_08_08_10"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Ms. S. Kavi Priya": {
@@ -6450,7 +6450,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "kavipriyas@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/kavi.jpg",
+      image: "public/uploads/faculty/kavi.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",
@@ -6484,200 +6484,200 @@ export const eceProfiles: Record<string, FacultyProfile> = {
     "Mrs. V. Sai Anusha": {
         "name": "Mrs. V. Sai Anusha",
         "email": "saianushav@mits.ac.in",
-        "image": "https://mits.ac.in/public/uploads/faculty/V. Sai Anusha.JPG",
+        "image": "public/uploads/faculty/V. Sai Anusha.JPG",
         "designation": "Asst. Professor",
         "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "M.Tech.",
-                        "Specialization": "Wireless Networks and Application",
-                        "Branch": "ECE",
-                        "College Name/University": "Amrita Vishwa Vidyapeetham, Amrita Universit",
-                        "Year of Passing": "2017"
-                    },
-                    {
-                        "Course": "B.Tech.",
-                        "Specialization": "ECE",
-                        "Branch": "ECE",
-                        "College Name/University": "Siddartha Educational Academy group of institutions, JNTUA",
-                        "Year of Passing": "2015"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Networking and IoT, Wireless Communication"
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57195316787",
-                    "Vidwan Link: https://mits.irins.org/profile/242595",
-                    "Google scholar Link: https://scholar.google.com/citations?user=9fH7Q6AAAAAJ&hl=en",
-                    "h-Index (As per Scopus Data) : 3"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2026-27",
-                        "Author Position": "3",
-                        "Details of Research Publication": "Deep Learning Techniques for Real-Time Natural Language Processing: Applications in Sentiment Analysis and Machine Translation. International Journal of Computer Information Systems and Industrial Management Applications 18.8s (2026): 511-520.",
-                        "Indexing": "Scopus",
-                        "Publication": "Journal",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2026-27",
-                        "Author Position": "5",
-                        "Details of Research Publication": "AI Driven Intelligent Smart Irrigation System Using Multi Sensor Fusion and Embedded Machine Learning. Proceedings of the 6th International Conference on Artificial Intelligence and Smart Energy: ICAISE 2026, Volume 2. Vol. 2. Springer Nature, 2026.",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "5",
-                        "Details of Research Publication": "Refining Predictive Learning Models Through Adaptive Feature Selection in Educational Data Analysis. 2025 Control Instrumentation System Conference (CISCON). IEEE, 2025.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "5",
-                        "Details of Research Publication": "A Cybernetics-based Intrusion Detection System for Critical Infrastructure IoT Applications. 2025 6th International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS). IEEE, 2025.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Sewage Monitoring water using Raspberry Pi",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Analysis and Detection of Breast cancer using Recursive Feature Elimination",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Comprehensive Survey of Internet of Things (IoMT) &ndash; Applications & Challenges",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2020-21",
-                        "Author Position": "2",
-                        "Details of Research Publication": "Color Image Segmentation using Superpixel-based Fast FCM",
-                        "Indexing": "Scopus",
-                        "Publication": "Book Chapter",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2018-19",
-                        "Author Position": "1",
-                        "Details of Research Publication": "A Comprehensive survey of electromagnetic propagation models Scopus",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017-18",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Modeling rural connectivity requirements in India with case studies Scopus",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "Others",
-                        "Academic Year": "2017-18",
-                        "Author Position": "1",
-                        "Details of Research Publication": "Comparative Analysis of wireless technology options for rural connectivity",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "202441083977",
-                        "Title of the Patent": "IoT Driven VLSI Chip Inception Machine for Enhanced Processing and Connectivity",
-                        "Status": "Published"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": "[NPTEL Topper] Communication Networks: Jan. 22, 2024 to April 8, 2024"
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
+                {
+                    "title": "Details of Educational Qualification",
+                    "content": [
+                        {
+                            "Course": "M.Tech.",
+                            "Specialization": "Wireless Networks and Application",
+                            "Branch": "ECE",
+                            "College Name/University": "Amrita Vishwa Vidyapeetham, Amrita Universit",
+                            "Year of Passing": "2017"
+                        },
+                        {
+                            "Course": "B.Tech.",
+                            "Specialization": "ECE",
+                            "Branch": "ECE",
+                            "College Name/University": "Siddartha Educational Academy group of institutions, JNTUA",
+                            "Year of Passing": "2015"
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Areas",
+                    "content": "Networking and IoT, Wireless Communication"
+                },
+                {
+                    "title": "Research Identifiers",
+                    "content": [
+                        "Scopus Link: https://www.scopus.com/authid/detail.uri?authorId=57195316787",
+                        "Vidwan Link: https://mits.irins.org/profile/242595",
+                        "Google scholar Link: https://scholar.google.com/citations?user=9fH7Q6AAAAAJ&hl=en",
+                        "h-Index (As per Scopus Data) : 3"
+                    ]
+                },
+                {
+                    "title": "Publication Details",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2026-27",
+                            "Author Position": "3",
+                            "Details of Research Publication": "Deep Learning Techniques for Real-Time Natural Language Processing: Applications in Sentiment Analysis and Machine Translation. International Journal of Computer Information Systems and Industrial Management Applications 18.8s (2026): 511-520.",
+                            "Indexing": "Scopus",
+                            "Publication": "Journal",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
+                        },
+                        {
+                            "S.No": "2",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2026-27",
+                            "Author Position": "5",
+                            "Details of Research Publication": "AI Driven Intelligent Smart Irrigation System Using Multi Sensor Fusion and Embedded Machine Learning. Proceedings of the 6th International Conference on Artificial Intelligence and Smart Energy: ICAISE 2026, Volume 2. Vol. 2. Springer Nature, 2026.",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "3",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "5",
+                            "Details of Research Publication": "Refining Predictive Learning Models Through Adaptive Feature Selection in Educational Data Analysis. 2025 Control Instrumentation System Conference (CISCON). IEEE, 2025.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "4",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "5",
+                            "Details of Research Publication": "A Cybernetics-based Intrusion Detection System for Critical Infrastructure IoT Applications. 2025 6th International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS). IEEE, 2025.",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "5",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2025-26",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Sewage Monitoring water using Raspberry Pi",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "6",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Analysis and Detection of Breast cancer using Recursive Feature Elimination",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "7",
+                            "Publication Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Comprehensive Survey of Internet of Things (IoMT) &ndash; Applications & Challenges",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "8",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2020-21",
+                            "Author Position": "2",
+                            "Details of Research Publication": "Color Image Segmentation using Superpixel-based Fast FCM",
+                            "Indexing": "Scopus",
+                            "Publication": "Book Chapter",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "9",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2018-19",
+                            "Author Position": "1",
+                            "Details of Research Publication": "A Comprehensive survey of electromagnetic propagation models Scopus",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "10",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017-18",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Modeling rural connectivity requirements in India with case studies Scopus",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        },
+                        {
+                            "S.No": "11",
+                            "Publication Affiliation": "Others",
+                            "Academic Year": "2017-18",
+                            "Author Position": "1",
+                            "Details of Research Publication": "Comparative Analysis of wireless technology options for rural connectivity",
+                            "Indexing": "Scopus",
+                            "Publication": "Conference Proceedings",
+                            "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
+                        }
+                    ]
+                },
+                {
+                    "title": "Patents",
+                    "content": [
+                        {
+                            "S.No": "1",
+                            "Affiliation": "MITS",
+                            "Academic Year": "2024-25",
+                            "Application ID": "202441083977",
+                            "Title of the Patent": "IoT Driven VLSI Chip Inception Machine for Enhanced Processing and Connectivity",
+                            "Status": "Published"
+                        }
+                    ]
+                },
+                {
+                    "title": "Awards/Achievements",
+                    "content": "[NPTEL Topper] Communication Networks: Jan. 22, 2024 to April 8, 2024"
+                },
+                {
+                    "title": "Reach Us",
+                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
+                },
+                {
+                    "title": "Departments",
+                    "content": [
+                        "--> B.Tech Civil Engineering --> <!--",
+                        "--> B.Tech Computer Science --> <!--",
+                        "--> B.Tech Mechanical --> <!--",
+                        "--> B.Tech Electrical & Electronics --> <!--",
+                        "--> MBA --> <!--",
+                        "--> MCA --> <!--"
+                    ]
+                },
+                {
+                    "title": "Get in touch",
+                    "content": [
+                        "--> Documentation --> <!--",
+                        "--> Forums --> <!--",
+                        "--> Language Packs --> <!--",
+                        "--> Release Status --> <!--",
+                        "--> Documentation --> <!--",
+                        "Follow US:"
+                    ]
+                }
+            ]
     },
 
     "Mr. V. Nagaraja": {
@@ -6685,7 +6685,7 @@ export const eceProfiles: Record<string, FacultyProfile> = {
       designation: "Asst. Professor",
       email: "nagarajav@mits.ac.in",
       officeAddress: "West Block",
-      image: "https://mits.ac.in/public/uploads/faculty/nagaraju.jpg",
+      image: "public/uploads/faculty/nagaraju.jpg",
       sections: [
         {
           title: "Details of Educational Qualification",

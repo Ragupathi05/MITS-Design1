@@ -116,7 +116,7 @@ const placementTeamData: Omit<PlacementFacultyProfile, "slug">[] = [
     qualification: "Ph.D. (Anna University, Chennai)",
     department: "Placements",
     team: "placement",
-    image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg",
+    image: "public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg",
     sections: [
       {
         title: "Details of Educational Qualification",
