@@ -352,39 +352,42 @@ const Departments = () => {
     return (
       <ScrollReveal delay={index * 0.05}>
         <div 
-          className="group relative h-[220px] md:h-[250px] rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-[#0f2a44]"
+          className="group relative h-[220px] md:h-[250px] rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-[#0f2a44] p-[2px]"
         >
-          {/* Background Image */}
-          <img 
-            src={imageUrl} 
-            alt={dept.name}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 opacity-75 group-hover:opacity-40"
-          />
-          
-          {/* Dark Overlay for high contrast */}
-          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/80 transition-colors duration-300" />
-
           {/* Accent border on hover */}
-          <div className={`absolute inset-0 rounded-xl border-2 border-transparent transition-all duration-300 bg-gradient-to-r ${schoolAccent} opacity-0 group-hover:opacity-100 pointer-events-none`} />
+          <div className={`absolute inset-0 bg-gradient-to-r ${schoolAccent} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0`} />
 
-          {/* Department Name - Centered (default state) */}
-          <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300 p-4">
-            <h3 className="font-display text-lg md:text-xl font-bold text-white text-center drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
-              {dept.name}
-            </h3>
-          </div>
+          {/* Inner Card Content */}
+          <div className="relative w-full h-full rounded-[10px] overflow-hidden bg-[#0f2a44] z-10">
+            {/* Background Image */}
+            <img 
+              src={imageUrl} 
+              alt={dept.name}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 opacity-75 group-hover:opacity-40"
+            />
+            
+            {/* Dark Overlay for high contrast */}
+            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/80 transition-colors duration-300" />
 
-          {/* Hover Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-md">
-              {dept.name}
-            </h3>
-            <p className="text-white/90 text-xs md:text-sm text-center mb-4 line-clamp-3">
-              {dept.description}
-            </p>
-            <Link to={`/department/${dept.key}`} className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:opacity-90 transition-opacity shadow-md`}>
-              Explore Department
-            </Link>
+            {/* Department Name - Centered (default state) */}
+            <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300 p-4">
+              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
+                {dept.name}
+              </h3>
+            </div>
+
+            {/* Hover Content */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-md">
+                {dept.name}
+              </h3>
+              <p className="text-white/90 text-xs md:text-sm text-center mb-4 line-clamp-3">
+                {dept.description}
+              </p>
+              <Link to={`/department/${dept.key}`} className={`bg-gradient-to-r ${schoolAccent} text-white px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:opacity-90 transition-opacity shadow-md`}>
+                Explore Department
+              </Link>
+            </div>
           </div>
         </div>
       </ScrollReveal>
