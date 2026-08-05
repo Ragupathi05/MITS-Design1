@@ -378,7 +378,7 @@ const Departments = () => {
 
             {/* Hover Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-md">
+              <h3 className="font-display text-lg md:text-xl font-bold text-white text-center mb-2 drop-shadow-md whitespace-pre-line">
                 {dept.name}
               </h3>
               <p className="text-white/90 text-xs md:text-sm text-center mb-4 line-clamp-3 mx-auto">
