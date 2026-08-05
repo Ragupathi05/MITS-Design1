@@ -59,7 +59,7 @@ const placementTeamData: Omit<PlacementFacultyProfile, "slug">[] = [
     qualification: "Ph.D. (SPMVV, Tirupathi)",
     department: "Placements",
     team: "placement",
-    image: "https://mits.ac.in/public/uploads/faculty/Ganga%20Devi.JPG",
+    image: "https://mits.ac.in/public/uploads/faculty/Dr. S. V. S. Ganga Devi.JPG",
     sections: [
       {
         title: "Details of Educational Qualification",
@@ -359,7 +359,7 @@ const trainingTeamData: Omit<PlacementFacultyProfile, "slug">[] = [
     qualification: "M.Tech. (University BDT College of Engineering)",
     department: "ME",
     team: "training",
-    image: "https://mits.ac.in/public/uploads/faculty/Darshan.%20B.V.JPG",
+    image: "https://mits.ac.in/public/uploads/faculty/Darshan. B.V.JPG",
     sections: [
       {
         title: "Details of Educational Qualification",
@@ -384,7 +384,7 @@ const trainingTeamData: Omit<PlacementFacultyProfile, "slug">[] = [
     qualification: "M.Sc., M.Tech. (Nagarjuna University)",
     department: "MCA",
     team: "training",
-    image: "https://mits.ac.in/public/uploads/faculty/chandra.png",
+    image: "https://mits.ac.in/public/uploads/faculty/Naveen.JPG",
     sections: [
       {
         title: "Details of Educational Qualification",
@@ -422,7 +422,7 @@ const trainingTeamData: Omit<PlacementFacultyProfile, "slug">[] = [
     qualification: "M.Tech., M.Sc. (SVITS Kadapa)",
     department: "ECE",
     team: "training",
-    image: "https://mits.ac.in/public/uploads/faculty/tipu.JPG",
+    image: "https://mits.ac.in/public/uploads/faculty/Mr. Shaik Tipu Rahaman.JPG",
     sections: [
       {
         title: "Details of Educational Qualification",

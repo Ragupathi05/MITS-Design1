@@ -92,7 +92,7 @@ const placementTeam: TeamMember[] = [
     designation: "Associate Director (I/c) – Placements",
     department: "Placements",
     profileUrl: "https://mits.ac.in/facultyprofile/253",
-    image: "https://mits.ac.in/public/uploads/faculty/Ganga%20Devi.JPG",
+    image: "https://mits.ac.in/public/uploads/faculty/Dr. S. V. S. Ganga Devi.JPG",
   },
   {
     name: "Dr. S. Rajasekaran",
@@ -181,7 +181,7 @@ const trainingTeam: TeamMember[] = [
     designation: "Quantitative / Reasoning Aptitude Trainer",
     department: "ME",
     profileUrl: "https://mits.ac.in/facultyprofile/492",
-    image: "https://mits.ac.in/public/uploads/faculty/Darshan.%20B.V.JPG",
+    image: "https://mits.ac.in/public/uploads/faculty/Darshan. B.V.JPG",
   },
   {
     name: "Mr. A. Naveen Chandra",
@@ -189,7 +189,7 @@ const trainingTeam: TeamMember[] = [
     designation: "Aptitude & Reasoning Trainer",
     department: "MCA",
     profileUrl: "https://mits.ac.in/facultyprofile/487",
-    image: "https://mits.ac.in/public/uploads/faculty/chandra.png",
+    image: "https://mits.ac.in/public/uploads/faculty/Naveen.JPG",
   },
   {
     name: "Mr. Chollangi Venkata Ramu",
@@ -205,7 +205,7 @@ const trainingTeam: TeamMember[] = [
     designation: "Aptitude Trainer",
     department: "ECE",
     profileUrl: "https://mits.ac.in/facultyprofile/797",
-    image: "https://mits.ac.in/public/uploads/faculty/tipu.JPG",
+    image: "https://mits.ac.in/public/uploads/faculty/Mr. Shaik Tipu Rahaman.JPG",
   },
   {
     name: "Mrs. V. Srilatha",

@@ -157,7 +157,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       "To inculcate the skills necessary to continue their education after graduation, as well as for the societal needs."
     ],
     nbaAccredited: true,
-    hod: { name: "Dr. M. Sreedevi", designation: "Professor & Head", qualification: "Ph.D. (S V University)", image: "https://mits.ac.in/public/uploads/faculty/sri.jpg", profileUrl: "https://mits.ac.in/facultyprofile/140" },
+    hod: { name: "Dr. M. Sreedevi", designation: "Professor & Head", qualification: "Ph.D. (S V University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. M. Sreedavi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/140" },
     achievements: { consultancyAmount: "₹25+ Lakhs", researchProjects: "15+", patents: "12+", publications: "200+" },
     teachingApproach: {
       description: "The department follows an outcome-based education (OBE) framework integrated with experiential learning methodologies.",
@@ -171,7 +171,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Professor &amp; Head",
         qualification: "Ph.D. (S V University)",
         email: "drmsreedevi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/sri.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. M. Sreedavi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/140"
       },
       {
@@ -179,7 +179,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Professor",
         qualification: "Ph.D. (Anna University)",
         email: "drrnidhya@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7256.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Nidhya.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/83"
       },
       {
@@ -187,7 +187,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Assoc. Professor",
         qualification: "Ph.D. (Anna University)",
         email: "drgarunkumar@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7263.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. G. Arun Kumar.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/84"
       },
       {
@@ -195,7 +195,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Assoc. Professor",
         qualification: "Ph.D. (Anna University)",
         email: "drrsudhakar@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7283.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Sudhakar.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/86"
       },
       {
@@ -203,7 +203,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Assoc. Professor",
         qualification: "Ph.D. (Hindustan Institute of Technology and Science)",
         email: "drpkavitha@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/fdc5bad3c74a5e983077dc0c342bce6c.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. P. Kavitha - CSE.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1129"
       },
       {
@@ -211,7 +211,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Assoc. Professor",
         qualification: "Ph.D. (JNTUK, Kakinada)",
         email: "drnkrishnaiah@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/nallam.jpeg",
+        image: "https://mits.ac.in/public/uploads/faculty/Krishnaiah.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1093"
       },
       {
@@ -219,7 +219,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Assoc. Professor",
         qualification: "Ph.D. (Annamalai University)",
         email: "drdjashpinpabi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7265.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. D. J. Ashpin Pabi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/90"
       },
       {
@@ -259,7 +259,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "Ph.D. (Jaipur National University)",
         email: "drdineshsinghdhakar@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/dinesh.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Dinesh Singh Dhakar.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1125"
       },
       {
@@ -267,7 +267,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "Ph.D. (Anna University)",
         email: "drsenthilkumark@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/senthil(1).jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Senthil Kumar. K.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/679"
       },
       {
@@ -275,7 +275,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "Ph.D. (Anna University)",
         email: "drprasathb@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/prasanth.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Prasath. B.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/690"
       },
       {
@@ -283,7 +283,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "Ph.D. (University of Technology, Jaipur)",
         email: "drlakshmanaraon@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/lakshman.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Lakshmana Rao. N - CSE.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1118"
       },
       {
@@ -291,7 +291,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (Amrita Vishwa Vidyapeetham)",
         email: "mrnitinbraut@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/6efb3321a8cd48ce48cc2b95f81fe9bf.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Nitin B. Raut.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/747"
       },
       {
@@ -299,7 +299,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (SRM University)",
         email: "msssowmyadevi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7314.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Ms. S. Sowmyadevi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/447"
       },
       {
@@ -315,7 +315,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D) (Presidency University)",
         email: "mrsmsrilakshmipreethi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Sri Lakshmi Preethi.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. M. Sri Lakshmi Preethi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/562"
       },
       {
@@ -331,7 +331,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D) (JNTU, Kakinada)",
         email: "mrerajesh@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7311.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. E. Rajesh.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/576"
       },
       {
@@ -339,7 +339,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D) (NIT, Silchar)",
         email: "mraleemullakhanpathan@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Mr. Aleemullakhan Pathan.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Aleemullakhan Pathan.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/101"
       },
       {
@@ -355,7 +355,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D) (SRM University)",
         email: "mrsgbrenuka@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7276.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. G. B. Renuka.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/120"
       },
       {
@@ -363,7 +363,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D) (St. Peter&#039;s Institute Of Higher Education and Research)",
         email: "mrssangeetham@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7281.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. Sangeetha.M.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/471"
       },
       {
@@ -379,7 +379,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (Amrita Vishwa Vidyapeetham)",
         email: "mrsdeepthip@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7268.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Deepthi - CSE.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/535"
       },
       {
@@ -387,7 +387,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (SRM Institute of Science &amp; Technology)",
         email: "mranandarajb@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7305.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Anandaraj B.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/104"
       },
       {
@@ -395,7 +395,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (Dr. M.G.R. Educational and Research Institute)",
         email: "mrssvarshadevi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/varshadevi.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. S. Varshadevi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/746"
       },
       {
@@ -403,7 +403,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (SRM Institute of Science and Technology)",
         email: "mrspjayaselvi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7926.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. P. Jayaselvi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/589"
       },
       {
@@ -419,7 +419,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (SRM Institute of Science And Technology)",
         email: "mrsrkavipriya@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7273.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. R. Kavi Priya.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/579"
       },
       {
@@ -435,7 +435,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (NIT, Puducherry)",
         email: "mrsgvasundaradevi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7291.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. G. Vasundara Devi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/110"
       },
       {
@@ -451,7 +451,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (NIT, Mizoram)",
         email: "mrsvgeetha@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7293.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/V. Geetha.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/117"
       },
       {
@@ -459,7 +459,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (SRM Institute of Science And Technology)",
         email: "mrtmurali@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/murali.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Murali CSE.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/689"
       },
       {
@@ -467,7 +467,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.E.",
         email: "mrramalingamd@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/ramalingam.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Ramalingam. D.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/651"
       },
       {
@@ -483,7 +483,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech.",
         email: "mrdmabhinaykanth@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/abhi.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. D. M. Abhinay Kanth.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/109"
       },
       {
@@ -491,7 +491,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech.",
         email: "mrkhshabbeerbasha@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7259.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/shaber.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/115"
       },
       {
@@ -507,7 +507,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         designation: "Asst. Professor",
         qualification: "M.Tech.",
         email: "msgangarapuvandana@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Vandana.jpeg",
+        image: "https://mits.ac.in/public/uploads/faculty/Ms. Gangarapu Vandana.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1117"
       }
     ],
@@ -632,7 +632,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       name: "Dr. Dipankar Roy",
       designation: "Dean, School of Engineering",
       qualification: "Ph.D. (University of Pisa, Italy)",
-      image: "https://mits.ac.in/public/uploads/faculty/default.jpg",
+      image: "https://mits.ac.in/public/uploads/faculty/Deepankar Roy.JPG",
       profileUrl: "https://mits.ac.in/facultyprofile/dean-engineering"
     },
     achievements: {
@@ -661,7 +661,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         name: "Dr. Dipankar Roy",
         designation: "Dean, School of Engineering",
         qualification: "Ph.D. (University of Pisa, Italy)",
-        image: "https://mits.ac.in/public/uploads/faculty/default.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Deepankar Roy.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/dean-engineering"
       }
     ],
@@ -721,7 +721,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       "To foster the socio-economic and cultural upliftment in the region through formal and informal education."
     ],
     nbaAccredited: true,
-    hod: { name: "Dr. Vijayakumar Natesan", designation: "Asst. Professor & Head", qualification: "Ph.D. (IIT, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/fc9b84db32042ded85ace96100f6848f.JPG", profileUrl: "https://mits.ac.in/facultyprofile/7" },
+    hod: { name: "Dr. Vijayakumar Natesan", designation: "Asst. Professor & Head", qualification: "Ph.D. (IIT, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Vijayakumar Natesan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/7" },
     achievements: { consultancyAmount: "₹10+ Lakhs", researchProjects: "8+", patents: "5+", publications: "100+" },
     teachingApproach: {
       description: "The department emphasizes practical learning with site visits, surveying camps, and hands-on laboratory sessions.",
@@ -730,17 +730,17 @@ export const departmentsData: Record<string, DepartmentData> = {
     courses: ["B.Tech in Civil Engineering"],
     contactInfo: { email: "civilhod@mits.ac.in", phone: "+91-9100973371; 8571-280255; 280706" },
     faculty: [
-      { name: "Dr. Dipankar Roy", designation: "Professor & Dean - School of Engineering", qualification: "Ph.D. (Leonardo Da Vinci School of Engineering,\n\t\t\tUniversity of Pisa, Pisa, Italy.)", image: "https://mits.ac.in/public/uploads/faculty/drdipankarroy(1).jpg", profileUrl: "https://mits.ac.in/facultyprofile/1" },
-      { name: "Dr. Sudheer Kumar Yantrapalli", designation: "Assoc. Professor", qualification: "Ph.D. (National Institute of Technology, Warangal)", image: "https://mits.ac.in/public/uploads/faculty/e8ce6974dbf830579b5ea7d0adcb2d70.jpg", profileUrl: "https://mits.ac.in/facultyprofile/5" },
+      { name: "Dr. Dipankar Roy", designation: "Professor & Dean - School of Engineering", qualification: "Ph.D. (Leonardo Da Vinci School of Engineering,\n\t\t\tUniversity of Pisa, Pisa, Italy.)", image: "https://mits.ac.in/public/uploads/faculty/Deepankar Roy.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1" },
+      { name: "Dr. Sudheer Kumar Yantrapalli", designation: "Assoc. Professor", qualification: "Ph.D. (National Institute of Technology, Warangal)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sudheer Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/5" },
       { name: "Dr. Swapneel S. Jaiswal", designation: "Sr. Asst. Professor", qualification: "Ph.D. (Indian Institute of Technology, Roorkee)", image: "https://mits.ac.in/public/uploads/faculty/f8dd76e2193a70ab509f589ac9f34df6.jpg", profileUrl: "https://mits.ac.in/facultyprofile/6" },
-      { name: "Dr. Vijayakumar Natesan", designation: "Asst. Professor & Head", qualification: "Ph.D. (Indian Institute of Technology, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/fc9b84db32042ded85ace96100f6848f.JPG", profileUrl: "https://mits.ac.in/facultyprofile/7" },
-      { name: "Dr. T. Venkatesh Varma", designation: "Asst. Professor", qualification: "Postdoctoral Fellow (Technion - Israel Istitute of Technology, Haifa, Israel)", image: "https://mits.ac.in/public/uploads/faculty/varma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1067" },
+      { name: "Dr. Vijayakumar Natesan", designation: "Asst. Professor & Head", qualification: "Ph.D. (Indian Institute of Technology, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Vijayakumar Natesan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/7" },
+      { name: "Dr. T. Venkatesh Varma", designation: "Asst. Professor", qualification: "Postdoctoral Fellow (Technion - Israel Istitute of Technology, Haifa, Israel)", image: "https://mits.ac.in/public/uploads/faculty/Venkatesh Verma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1067" },
       { name: "Dr. Nakkeeran G", designation: "Asst. Professor", qualification: "Ph.D. (SRM Institute of Science and Technology)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Nakkeeran G.jpg", profileUrl: "https://mits.ac.in/facultyprofile/578" },
       { name: "Dr. Nunna Tagore Sai Priya", designation: "Asst. Professor", qualification: "Ph.D. (IIT Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/nunnapriya.png", profileUrl: "https://mits.ac.in/facultyprofile/677" },
-      { name: "Dr. Imran Kuttagola", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Karnataka)", image: "https://mits.ac.in/public/uploads/faculty/imran-Photoroom(1).png", profileUrl: "https://mits.ac.in/facultyprofile/680" },
-      { name: "Mrs. Kandukuri Anitha", designation: "Asst. Professor", qualification: "Ph.D. (Mohan Babu University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs Anitha K.jpg", profileUrl: "https://mits.ac.in/facultyprofile/13" },
+      { name: "Dr. Imran Kuttagola", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Karnataka)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Imran Kuttagola.JPG", profileUrl: "https://mits.ac.in/facultyprofile/680" },
+      { name: "Mrs. Kandukuri Anitha", designation: "Asst. Professor", qualification: "Ph.D. (Mohan Babu University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs.Anitha.png", profileUrl: "https://mits.ac.in/facultyprofile/13" },
       { name: "Mr. B. Veeresh", designation: "Asst. Professor", qualification: "Ph.D. (JNTUA, University)", image: "https://mits.ac.in/public/uploads/faculty/Mr.B. Veeresh.jpg", profileUrl: "https://mits.ac.in/facultyprofile/458" },
-      { name: "Mr. P. Sabarishkumar", designation: "Asst. Professor", qualification: "M.E. (Institute of Road & Transport Technology, Anna University)", image: "https://mits.ac.in/public/uploads/faculty/sabarish.jpg", profileUrl: "https://mits.ac.in/facultyprofile/517" },
+      { name: "Mr. P. Sabarishkumar", designation: "Asst. Professor", qualification: "M.E. (Institute of Road & Transport Technology, Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. P. Sabarishkumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/517" },
     ],
     detailedAchievements: [
       { title: "Civil Faculty Achievements 2024-25", description: "Department maintains year-wise faculty achievement records in official tab.", type: "faculty" },
@@ -825,31 +825,31 @@ export const departmentsData: Record<string, DepartmentData> = {
       "To enhance technical dexterity so graduates can find domain-appropriate solutions for societal welfare."
     ],
     nbaAccredited: true,
-    hod: { name: "Dr. Manavaalan Gunasekaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (IIT, Kanpur)", image: "https://mits.ac.in/public/uploads/faculty/manavaalan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/931" },
+    hod: { name: "Dr. Manavaalan Gunasekaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (IIT, Kanpur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Manavaalan Gunasekaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/931" },
     achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "6+", patents: "3+", publications: "80+" },
     teachingApproach: { description: "Hands-on approach with emphasis on renewable energy projects and smart grid technologies.", points: ["Power systems simulation labs", "Renewable energy installations", "Industry visits to power plants", "Smart grid research projects", "NPTEL certification courses"] },
     courses: ["B.Tech in Electrical & Electronics Engineering"],
     contactInfo: { email: "hod_eee@mits.ac.in", phone: "+91-8571-280255" },
 faculty: [
       { name: "Dr. C. Kamal Basha", designation: "Professor & Vice Principal", qualification: "Ph.D. (JNTUA, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/kamalbasha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/223" },
-      { name: "Dr. A. V. Pavan Kumar", designation: "Professor & Assistant Dean", qualification: "Ph.D. (Birla Institute of Technology & Science, Pilani, Hyderabad Campus)", image: "https://mits.ac.in/public/uploads/faculty/Pavan Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/224" },
-      { name: "Dr. Manavaalan Gunasekaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Indian Institute of Technology, Kanpur)", image: "https://mits.ac.in/public/uploads/faculty/manavaalan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/931" },
-      { name: "Dr. Somu Vijaya Bhaskar", designation: "Assoc. Professor", qualification: "Ph.D. (University of Florida, USA)", image: "https://mits.ac.in/public/uploads/faculty/somu.jpg", profileUrl: "https://mits.ac.in/facultyprofile/694" },
+      { name: "Dr. A. V. Pavan Kumar", designation: "Professor & Assistant Dean", qualification: "Ph.D. (Birla Institute of Technology & Science, Pilani, Hyderabad Campus)", image: "https://mits.ac.in/public/uploads/faculty/Dr. A. V. Pavan Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/224" },
+      { name: "Dr. Manavaalan Gunasekaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Indian Institute of Technology, Kanpur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Manavaalan Gunasekaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/931" },
+      { name: "Dr. Somu Vijaya Bhaskar", designation: "Assoc. Professor", qualification: "Ph.D. (University of Florida, USA)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Somu Vijaya Bhaskar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/694" },
       { name: "Dr. K. Lakshmikhandan", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Lakshmikhandan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/226" },
-      { name: "Dr. T. S. Balaji Damodhar", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Balaji Damodhar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/227" },
-      { name: "Dr. Sarat Kumar Mishra", designation: "Asst. Professor", qualification: "Ph.D. (BIT., Mesra (Ranchi))", image: "https://mits.ac.in/public/uploads/faculty/Sarat-Mishra.jpg", profileUrl: "https://mits.ac.in/facultyprofile/713" },
+      { name: "Dr. T. S. Balaji Damodhar", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Dr. T. S. Balaji Damodhar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/227" },
+      { name: "Dr. Sarat Kumar Mishra", designation: "Asst. Professor", qualification: "Ph.D. (BIT., Mesra (Ranchi))", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sarat Kumar Mishra.JPG", profileUrl: "https://mits.ac.in/facultyprofile/713" },
       { name: "Dr. V. B. Thurai Raaj", designation: "Asst. Professor", qualification: "Ph.D. (Vignan Foundation for Science, Technology & Research)", image: "https://mits.ac.in/public/uploads/faculty/Thurai Raaj.JPG", profileUrl: "https://mits.ac.in/facultyprofile/230" },
-      { name: "Dr. Vineet Kumar", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Hamirpur)", image: "https://mits.ac.in/public/uploads/faculty/Vineet Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/597" },
-      { name: "Dr. Satish Kumar Ramoji", designation: "Asst. Professor", qualification: "Ph.D. (NIT Silchar)", image: "https://mits.ac.in/public/uploads/faculty/satish.jfif", profileUrl: "https://mits.ac.in/facultyprofile/625" },
-      { name: "Dr. R. Saravana Kumar", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Puducherry)", image: "https://mits.ac.in/public/uploads/faculty/Saravana Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/583" },
-      { name: "Dr. Sovit Kumar Pradhan", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Silchar)", image: "https://mits.ac.in/public/uploads/faculty/4c433f2c7aa366903feaf92246f87d1a.JPG", profileUrl: "https://mits.ac.in/facultyprofile/703" },
+      { name: "Dr. Vineet Kumar", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Hamirpur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Vineet Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/597" },
+      { name: "Dr. Satish Kumar Ramoji", designation: "Asst. Professor", qualification: "Ph.D. (NIT Silchar)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Satish Kumar Ramoji.JPG", profileUrl: "https://mits.ac.in/facultyprofile/625" },
+      { name: "Dr. R. Saravana Kumar", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Puducherry)", image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Saravana Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/583" },
+      { name: "Dr. Sovit Kumar Pradhan", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Silchar)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sovit Kumar Pradhan.png", profileUrl: "https://mits.ac.in/facultyprofile/703" },
       { name: "Dr. B. Karthick", designation: "Asst. Professor", qualification: "Ph.D. (Pondicherry Engineering College, Pondicherry University)", image: "https://mits.ac.in/public/uploads/faculty/karthik.jpg", profileUrl: "https://mits.ac.in/facultyprofile/206" },
-      { name: "Mr. A. Karthik", designation: "Assistant Professor of Practice", qualification: "M.E. (Regional Engineering College, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/7a162cae11915d1d65fe0a96094485a5.jpg", profileUrl: "https://mits.ac.in/facultyprofile/1097" },
+      { name: "Mr. A. Karthik", designation: "Assistant Professor of Practice", qualification: "M.E. (Regional Engineering College, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Mr. A. Karthik.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1097" },
       { name: "Mr. Sridhar. N", designation: "Asst. Professor", qualification: "Ph.D. (VIT university)", image: "https://mits.ac.in/public/uploads/faculty/Sridhar. N.JPG", profileUrl: "https://mits.ac.in/facultyprofile/232" },
-      { name: "Mr. G. Mahammed Rafi", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/95ba2e835b9e1123fad3cf009c012955.jpg", profileUrl: "https://mits.ac.in/facultyprofile/205" },
-      { name: "Mr. E. Sathiyanarayanan", designation: "Asst. Professor", qualification: "Ph.D. (Puducherry Technological University (PTU))", image: "https://mits.ac.in/public/uploads/faculty/Sathiyanarayanan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/210" },
-      { name: "Mr. Ch Srinivas", designation: "Asst. Professor", qualification: "Ph.D. (Christ university)", image: "https://mits.ac.in/public/uploads/faculty/Ch Srinivas.JPG", profileUrl: "https://mits.ac.in/facultyprofile/480" },
-      { name: "Mr. Rajesh KS", designation: "Asst. Professor", qualification: "Ph.D. (JNTU, Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Rajesh KS.JPG", profileUrl: "https://mits.ac.in/facultyprofile/238" },
+      { name: "Mr. G. Mahammed Rafi", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. G. Mahammed Rafi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/205" },
+      { name: "Mr. E. Sathiyanarayanan", designation: "Asst. Professor", qualification: "Ph.D. (Puducherry Technological University (PTU))", image: "https://mits.ac.in/public/uploads/faculty/Mr. E. Sathiyanarayanan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/210" },
+      { name: "Mr. Ch Srinivas", designation: "Asst. Professor", qualification: "Ph.D. (Christ university)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Ch Srinivas.JPG", profileUrl: "https://mits.ac.in/facultyprofile/480" },
+      { name: "Mr. Rajesh KS", designation: "Asst. Professor", qualification: "Ph.D. (JNTU, Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Rajesh KS.JPG", profileUrl: "https://mits.ac.in/facultyprofile/238" },
       { name: "Mr. M. Venkatesh", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Mizoram)", image: "https://mits.ac.in/public/uploads/faculty/Venkatesh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/425" },
       { name: "Mr. E. Raghu Babu", designation: "Asst. Professor", qualification: "M.Tech. (National Institute of Technology, Kurukshetra)", image: "https://mits.ac.in/public/uploads/faculty/Raghu Babu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/484" },
       { name: "Mr. Ramesh Kumar R", designation: "Asst. Professor", qualification: "M.E. (College of Engineering, Guindy (CEG), Anna University)", image: "https://mits.ac.in/public/uploads/faculty/aravana Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/505" },
@@ -921,37 +921,37 @@ faculty: [
       "To promote excellence in teaching and research through collaborative activities."
     ],
     nbaAccredited: true,
-    hod: { name: "Dr. S. Baskaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (NIT, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Baskaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/306" },
+    hod: { name: "Dr. S. Baskaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (NIT, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/DR S BASKARAN.JPG", profileUrl: "https://mits.ac.in/facultyprofile/306" },
     achievements: { consultancyAmount: "₹12+ Lakhs", researchProjects: "10+", patents: "4+", publications: "120+" },
     teachingApproach: { description: "Emphasis on hands-on training through workshops, CAD/CAM labs, and industry-oriented projects.", points: ["Advanced CAD/CAM training", "Manufacturing workshop practice", "Industry visits", "Design competitions", "ANSYS simulation projects"] },
     courses: ["B.Tech in Mechanical Engineering"],
     contactInfo: { email: "mehod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. C. Yuvaraj", designation: "Professor & Vice Chancellor (I/c)", qualification: "Ph.D. (Bangalore University)", image: "https://mits.ac.in/public/uploads/faculty/principal.JPG", profileUrl: "https://mits.ac.in/facultyprofile/245" },
-      { name: "Dr. I. Arun", designation: "Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Arun.JPG", profileUrl: "https://mits.ac.in/facultyprofile/303" },
-      { name: "Dr. V. Vamsidhar", designation: "Assoc. Professor", qualification: "Ph.D. (J.N.T.U.A, Anantapuram)", image: "https://mits.ac.in/public/uploads/faculty/vamsidhar.jpg", profileUrl: "https://mits.ac.in/facultyprofile/304" },
-      { name: "Dr. S. Baskaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (National Institute of Technology, Trichy)", image: "https://mits.ac.in/public/uploads/faculty/Baskaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/306" },
+      { name: "Dr. C. Yuvaraj", designation: "Professor & Vice Chancellor (I/c)", qualification: "Ph.D. (Bangalore University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. C. Yuvaraj.JPG", profileUrl: "https://mits.ac.in/facultyprofile/245" },
+      { name: "Dr. I. Arun", designation: "Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/DR I ARUN.JPG", profileUrl: "https://mits.ac.in/facultyprofile/303" },
+      { name: "Dr. V. Vamsidhar", designation: "Assoc. Professor", qualification: "Ph.D. (J.N.T.U.A, Anantapuram)", image: "https://mits.ac.in/public/uploads/faculty/vamsi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/304" },
+      { name: "Dr. S. Baskaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (National Institute of Technology, Trichy)", image: "https://mits.ac.in/public/uploads/faculty/DR S BASKARAN.JPG", profileUrl: "https://mits.ac.in/facultyprofile/306" },
       { name: "Dr. K. V. Nagesha", designation: "Assoc. Professor", qualification: "Ph.D. (National Institute of Technology, Karnataka)", image: "https://mits.ac.in/public/uploads/faculty/Nagesha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/307" },
-      { name: "Dr. P. Sivaiah", designation: "Assoc. Professor", qualification: "Ph.D. (National Institute of Technology, Karnataka)", image: "https://mits.ac.in/public/uploads/faculty/1743130408070.jpg", profileUrl: "https://mits.ac.in/facultyprofile/308" },
+      { name: "Dr. P. Sivaiah", designation: "Assoc. Professor", qualification: "Ph.D. (National Institute of Technology, Karnataka)", image: "https://mits.ac.in/public/uploads/faculty/Dr. P. Sivaiah.png", profileUrl: "https://mits.ac.in/facultyprofile/308" },
       { name: "Dr. R. Prithivirajan", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Prithivirajan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/309" },
-      { name: "Dr. Praveen Kumar Bannaravuri", designation: "Sr. Asst. Professor", qualification: "Post Doctoral Fellow (IIT, Guwahati)", image: "https://mits.ac.in/public/uploads/faculty/praveen.JPG", profileUrl: "https://mits.ac.in/facultyprofile/728" },
+      { name: "Dr. Praveen Kumar Bannaravuri", designation: "Sr. Asst. Professor", qualification: "Post Doctoral Fellow (IIT, Guwahati)", image: "https://mits.ac.in/public/uploads/faculty/DR PRAVEEN KUMAR BANNARVAVURI.JPG", profileUrl: "https://mits.ac.in/facultyprofile/728" },
       { name: "Dr. Kamlesh Kumar", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela, Odisha, India.)", image: "https://mits.ac.in/public/uploads/faculty/PHOTO_ Dr. Kamlesh Kumar(1).png", profileUrl: "https://mits.ac.in/facultyprofile/311" },
-      { name: "Dr. Guniputi Balanarasimha", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Karnataka)", image: "https://mits.ac.in/public/uploads/faculty/bala.png", profileUrl: "https://mits.ac.in/facultyprofile/702" },
+      { name: "Dr. Guniputi Balanarasimha", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Karnataka)", image: "https://mits.ac.in/public/uploads/faculty/DR GUNIPUTI BALANARASIMHA.JPG", profileUrl: "https://mits.ac.in/facultyprofile/702" },
       { name: "Dr. Anantha Raman L", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Anantha Raman L.JPG", profileUrl: "https://mits.ac.in/facultyprofile/315" },
       { name: "Dr. Arun Kumar.D", designation: "Asst. Professor", qualification: "Ph.D. (PSG College of Technology/Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Thota S S Bhaskara Rao.JPG", profileUrl: "https://mits.ac.in/facultyprofile/316" },
-      { name: "Dr. Manish Sharma", designation: "Asst. Professor", qualification: "Ph.D. (Sardar Vallabhbhai National Institute\n\t\t\tof Technology, Surat)", image: "https://mits.ac.in/public/uploads/faculty/3c1c3241831b334db972daa4ffa6a6a2.jpg", profileUrl: "https://mits.ac.in/facultyprofile/318" },
-      { name: "Dr. Thrinadh Jadam", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology (NIT), Rourkela)", image: "https://mits.ac.in/public/uploads/faculty/thrinadh.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/707" },
-      { name: "Dr. Thota S S Bhaskara Rao", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", image: "https://mits.ac.in/public/uploads/faculty/thota.jpg", profileUrl: "https://mits.ac.in/facultyprofile/596" },
+      { name: "Dr. Manish Sharma", designation: "Asst. Professor", qualification: "Ph.D. (Sardar Vallabhbhai National Institute\n\t\t\tof Technology, Surat)", image: "https://mits.ac.in/public/uploads/faculty/DR MANIS SHARAM.JPG", profileUrl: "https://mits.ac.in/facultyprofile/318" },
+      { name: "Dr. Thrinadh Jadam", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology (NIT), Rourkela)", image: "https://mits.ac.in/public/uploads/faculty/DR THRINADH JADAM.JPG", profileUrl: "https://mits.ac.in/facultyprofile/707" },
+      { name: "Dr. Thota S S Bhaskara Rao", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", image: "https://mits.ac.in/public/uploads/faculty/THOTA SS BHASKARARA RAO.JPG", profileUrl: "https://mits.ac.in/facultyprofile/596" },
       { name: "Dr. G. Veeresalingam", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", image: "https://mits.ac.in/public/uploads/faculty/Veeresalingam.JPG", profileUrl: "https://mits.ac.in/facultyprofile/613" },
       { name: "Dr. Jagannath Pattar", designation: "Asst. Professor", qualification: "Ph.D. (Sri Siddhartha Academy of Higher Education, Tumkur)", image: "https://mits.ac.in/public/uploads/faculty/Jagannath Pattar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/334" },
-      { name: "Dr. Ved Prakash", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", image: "https://mits.ac.in/public/uploads/faculty/Ved Prakash.JPG", profileUrl: "https://mits.ac.in/facultyprofile/629" },
+      { name: "Dr. Ved Prakash", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", image: "https://mits.ac.in/public/uploads/faculty/DR VED PRAKSASH.JPG", profileUrl: "https://mits.ac.in/facultyprofile/629" },
       { name: "Dr. Gejendhiran. S", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Puducherry)", image: "https://mits.ac.in/public/uploads/faculty/Gejendhiran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/619" },
       { name: "Dr. Muthu Lakshmanan", designation: "Asst. Professor", qualification: "Ph.D. (SIMATS University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Muthu Laxmanan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/327" },
-      { name: "Dr. A. Pruthvi Deep", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Durgapur)", image: "https://mits.ac.in/public/uploads/faculty/Pruthvi Deep.JPG", profileUrl: "https://mits.ac.in/facultyprofile/623" },
+      { name: "Dr. A. Pruthvi Deep", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Durgapur)", image: "https://mits.ac.in/public/uploads/faculty/DR A PRUTVI DEEP.JPG", profileUrl: "https://mits.ac.in/facultyprofile/623" },
       { name: "Mr. S. Manoj Kumar", designation: "Asst. Professor", qualification: "Ph.D (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Manoj Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/329" },
       { name: "Mr. Pujari Rajesh", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Pujari Rajesh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/333" },
       { name: "Mr. G. Kumar", designation: "Asst. Professor", qualification: "Ph.D. (VELS University)", image: "https://mits.ac.in/public/uploads/faculty/G. Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/326" },
-      { name: "Mr. P. Mohammed Rizwan Ali", designation: "Asst. Professor", qualification: "M.Tech. (Madanapalle Institute of Technology and Science, JNTUA)", image: "https://mits.ac.in/public/uploads/faculty/rizwan ali.JPG", profileUrl: "https://mits.ac.in/facultyprofile/622" },
+      { name: "Mr. P. Mohammed Rizwan Ali", designation: "Asst. Professor", qualification: "M.Tech. (Madanapalle Institute of Technology and Science, JNTUA)", image: "https://mits.ac.in/public/uploads/faculty/MR P MOHAMMED RIZWAN ALI.JPG", profileUrl: "https://mits.ac.in/facultyprofile/622" },
     ],
     detailedAchievements: [
       { title: "Published 120+ research papers", description: "In national and international journals", type: "faculty" },
@@ -1040,43 +1040,43 @@ faculty: [
     contactInfo: { email: "hod_ece@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. Rama S Komaragiri", designation: "Professor & Dean-Academics", qualification: "Ph.D. (Technical University of Darmstadt, Germany)", image: "https://mits.ac.in/public/uploads/faculty/rama.jpg", profileUrl: "https://mits.ac.in/facultyprofile/735" },
-      { name: "Dr. P. Ramanathan", designation: "Professor & Principal", qualification: "Ph.D. (PSG College of Technology & Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Dr. P. Ramanathan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/172" },
-      { name: "Dr. Sanjay Kumar C. Gowre", designation: "Professor", qualification: "Ph.D. (IIT-Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/sanjay.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1018" },
+      { name: "Dr. P. Ramanathan", designation: "Professor & Principal", qualification: "Ph.D. (PSG College of Technology & Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/a744ebed6a293a48de32e80ba66680c8.JPG", profileUrl: "https://mits.ac.in/facultyprofile/172" },
+      { name: "Dr. Sanjay Kumar C. Gowre", designation: "Professor", qualification: "Ph.D. (IIT-Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sanjay Kumar C. Gowre.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1018" },
       { name: "Dr. S. Rajasekaran", designation: "Professor & Head", qualification: "Ph.D. (Coimbatore Institute of Technology, Anna University, Chennai, India.)", image: "https://mits.ac.in/public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/173" },
       { name: "Dr. Nehru Kandasamy", designation: "Professor", qualification: "Ph.D. (Anna University, Chennai, India.)", image: "https://mits.ac.in/public/uploads/faculty/Nehru.JPG", profileUrl: "https://mits.ac.in/facultyprofile/174" },
-      { name: "Dr. Murli Manohar", designation: "Assoc. Professor", qualification: "Ph.D. (Indian Institute of Technology, Guwahati)", image: "https://mits.ac.in/public/uploads/faculty/DSC_1790.JPG", profileUrl: "https://mits.ac.in/facultyprofile/734" },
-      { name: "Dr. V. Jayaprakasan", designation: "Assoc. Professor", qualification: "Ph.D. (JNTUA, Ananthapuramu)", image: "https://mits.ac.in/public/uploads/faculty/jaya.jpg", profileUrl: "https://mits.ac.in/facultyprofile/751" },
-      { name: "Dr. K. Sathesh", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/d2d05aafc81b3f86d9a6aef10752f751.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/177" },
-      { name: "Dr. Maneesh Kumar Singh", designation: "Assoc. Professor", qualification: "Ph.D. (Curtin University, Perth Australia)", image: "https://mits.ac.in/public/uploads/faculty/maneesh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/695" },
+      { name: "Dr. Murli Manohar", designation: "Assoc. Professor", qualification: "Ph.D. (Indian Institute of Technology, Guwahati)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Murali Manohar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/734" },
+      { name: "Dr. V. Jayaprakasan", designation: "Assoc. Professor", qualification: "Ph.D. (JNTUA, Ananthapuramu)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Jayaprakasan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/751" },
+      { name: "Dr. K. Sathesh", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Dr. K. Sathesh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/177" },
+      { name: "Dr. Maneesh Kumar Singh", designation: "Assoc. Professor", qualification: "Ph.D. (Curtin University, Perth Australia)", image: "https://mits.ac.in/public/uploads/faculty/Dr_Maneesh_Kumar_Singh.png", profileUrl: "https://mits.ac.in/facultyprofile/695" },
       { name: "Dr. Grande Naga Jyothi", designation: "Assoc. Professor", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Naga Jyothi.jpg", profileUrl: "https://mits.ac.in/facultyprofile/400" },
       { name: "Dr. Rakesh Nath Tiwari", designation: "Assoc. Professor", qualification: "Ph.D. (Uttarakhand Technical University, India)", image: "https://mits.ac.in/public/uploads/faculty/1120faf5d8ab8c822818d9c4034e8f1f.jpg", profileUrl: "https://mits.ac.in/facultyprofile/185" },
-      { name: "Dr. R. Ravindraiah", designation: "Asst. Professor", qualification: "Ph.D. (JNTUA, Anantapuramu)", image: "https://mits.ac.in/public/uploads/faculty/ravindraiah.JPG", profileUrl: "https://mits.ac.in/facultyprofile/514" },
-      { name: "Dr. G. Reddy Hemantha", designation: "Asst. Professor", qualification: "Ph.D. (JNTUA, Anantapuramum)", image: "https://mits.ac.in/public/uploads/faculty/3ccc236dd951753b0d97d3a15774c510.JPG", profileUrl: "https://mits.ac.in/facultyprofile/396" },
-      { name: "Dr. Janmoni Borah", designation: "Asst. Professor", qualification: "Ph.D. (NERIST, Arunachal Pradesh)", image: "https://mits.ac.in/public/uploads/faculty/7dc8828d43b484c2a1cdeeb451a3b8d5.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/191" },
-      { name: "Dr. S K Nurul Islam", designation: "Asst. Professor", qualification: "Ph.D. (Indian Institute of Engineering Science and Technology (IIEST), Shibpur)", image: "https://mits.ac.in/public/uploads/faculty/nurul.png", profileUrl: "https://mits.ac.in/facultyprofile/732" },
+      { name: "Dr. R. Ravindraiah", designation: "Asst. Professor", qualification: "Ph.D. (JNTUA, Anantapuramu)", image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Ravindraiah.JPG", profileUrl: "https://mits.ac.in/facultyprofile/514" },
+      { name: "Dr. G. Reddy Hemantha", designation: "Asst. Professor", qualification: "Ph.D. (JNTUA, Anantapuramum)", image: "https://mits.ac.in/public/uploads/faculty/Reddy Hemantha(1).JPG", profileUrl: "https://mits.ac.in/facultyprofile/396" },
+      { name: "Dr. Janmoni Borah", designation: "Asst. Professor", qualification: "Ph.D. (NERIST, Arunachal Pradesh)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Janmoni Borah.JPG", profileUrl: "https://mits.ac.in/facultyprofile/191" },
+      { name: "Dr. S K Nurul Islam", designation: "Asst. Professor", qualification: "Ph.D. (Indian Institute of Engineering Science and Technology (IIEST), Shibpur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Nurul Islam.JPG", profileUrl: "https://mits.ac.in/facultyprofile/732" },
       { name: "Dr. C. Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/cf383c1cdc0f26fc0b61ec41145a7dfb.jpg", profileUrl: "https://mits.ac.in/facultyprofile/193" },
-      { name: "Dr. Smriti Baruah", designation: "Asst. Professor", qualification: "Ph.D. (NERIST, Arunachal Pradesh)", image: "https://mits.ac.in/public/uploads/faculty/bffa0e1204711641930d546427117ac5.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/197" },
+      { name: "Dr. Smriti Baruah", designation: "Asst. Professor", qualification: "Ph.D. (NERIST, Arunachal Pradesh)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Smriti Baruah.JPG", profileUrl: "https://mits.ac.in/facultyprofile/197" },
       { name: "Dr. Rahul Mondal", designation: "Asst. Professor", qualification: "Post-Doctoral Fellow (IIT Madras & IIT Patna)", image: "https://mits.ac.in/public/uploads/faculty/rahul.JPG", profileUrl: "https://mits.ac.in/facultyprofile/720" },
-      { name: "Dr. V. Sai Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Rayalaseema University, Kurnool)", image: "https://mits.ac.in/public/uploads/faculty/sai.JPG", profileUrl: "https://mits.ac.in/facultyprofile/201" },
+      { name: "Dr. V. Sai Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Rayalaseema University, Kurnool)", image: "https://mits.ac.in/public/uploads/faculty/Sai Sir.JPG", profileUrl: "https://mits.ac.in/facultyprofile/201" },
       { name: "Dr. E. Aravindraj", designation: "Asst. Professor", qualification: "Ph.D. (Pondicherry University)", image: "https://mits.ac.in/public/uploads/faculty/ara.jpg", profileUrl: "https://mits.ac.in/facultyprofile/519" },
-      { name: "Dr. Gutti Nagaswetha", designation: "Asst. Professor", qualification: "Ph.D. (Viswesaraya Technological University,Belgaum)", image: "https://mits.ac.in/public/uploads/faculty/eeaf2b47c6fd6231b8d3206254238215.jpg", profileUrl: "https://mits.ac.in/facultyprofile/204" },
-      { name: "Dr. Simadri Badatya", designation: "Asst. Professor", qualification: "Ph.D. (Academy of Scientific Innovation & Research (AcSIR), India)", image: "https://mits.ac.in/public/uploads/faculty/simadri.jpg", profileUrl: "https://mits.ac.in/facultyprofile/700" },
-      { name: "Dr. Anurag Kumar Pandey", designation: "Asst. Professor", qualification: "Ph.D. (Indian Institute of Technology (IIT), Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/newanurag.png", profileUrl: "https://mits.ac.in/facultyprofile/731" },
+      { name: "Dr. Gutti Nagaswetha", designation: "Asst. Professor", qualification: "Ph.D. (Viswesaraya Technological University,Belgaum)", image: "https://mits.ac.in/public/uploads/faculty/nagaswetha.png", profileUrl: "https://mits.ac.in/facultyprofile/204" },
+      { name: "Dr. Simadri Badatya", designation: "Asst. Professor", qualification: "Ph.D. (Academy of Scientific Innovation & Research (AcSIR), India)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Simadri Badatya.JPG", profileUrl: "https://mits.ac.in/facultyprofile/700" },
+      { name: "Dr. Anurag Kumar Pandey", designation: "Asst. Professor", qualification: "Ph.D. (Indian Institute of Technology (IIT), Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Anurag Kumar Pandey.JPG", profileUrl: "https://mits.ac.in/facultyprofile/731" },
       { name: "Dr. H. Shree Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/sreekumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/443" },
-      { name: "Dr. Rakesh Singh", designation: "Asst. Professor", qualification: "Ph.D. (Indian Institute of Technology, Roorkee)", image: "https://mits.ac.in/public/uploads/faculty/rak.JPG", profileUrl: "https://mits.ac.in/facultyprofile/742" },
-      { name: "Dr. G. Subbarao", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology Mizoram (NITMZ), Mizoram)", image: "https://mits.ac.in/public/uploads/faculty/subbarao.JPG", profileUrl: "https://mits.ac.in/facultyprofile/212" },
-      { name: "Mr. T. Manivannan", designation: "Asst. Professor", qualification: "Ph.D. (Vel Tech University)", image: "https://mits.ac.in/public/uploads/faculty/mani.JPG", profileUrl: "https://mits.ac.in/facultyprofile/202" },
-      { name: "Mr. Asif Moiz", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Patna)", image: "https://mits.ac.in/public/uploads/faculty/asifmoiz.JPG", profileUrl: "https://mits.ac.in/facultyprofile/419" },
-      { name: "Mr. V. Mustafa", designation: "Asst. Professor", qualification: "Ph.D (Vel Tech University)", image: "https://mits.ac.in/public/uploads/faculty/ba159c5696db98c8f0f9a62bc9ec84d2.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/218" },
-      { name: "Mr. G. Charan Kumar", designation: "Asst. Professor", qualification: "Ph.D (Vel Tech University)", image: "https://mits.ac.in/public/uploads/faculty/493d2b545548fd4862897e82ccba65fb.jpg", profileUrl: "https://mits.ac.in/facultyprofile/251" },
-      { name: "Mrs. K. Revathi", designation: "Asst. Professor", qualification: "Ph.D (NIT, Mizoram)", image: "https://mits.ac.in/public/uploads/faculty/Revathi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/244" },
+      { name: "Dr. Rakesh Singh", designation: "Asst. Professor", qualification: "Ph.D. (Indian Institute of Technology, Roorkee)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Rakesh Singh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/742" },
+      { name: "Dr. G. Subbarao", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology Mizoram (NITMZ), Mizoram)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Subbarao.JPG", profileUrl: "https://mits.ac.in/facultyprofile/212" },
+      { name: "Mr. T. Manivannan", designation: "Asst. Professor", qualification: "Ph.D. (Vel Tech University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. T. Manivannan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/202" },
+      { name: "Mr. Asif Moiz", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Patna)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Asif Moiz.JPG", profileUrl: "https://mits.ac.in/facultyprofile/419" },
+      { name: "Mr. V. Mustafa", designation: "Asst. Professor", qualification: "Ph.D (Vel Tech University)", image: "https://mits.ac.in/public/uploads/faculty/V. Mustafa.JPG", profileUrl: "https://mits.ac.in/facultyprofile/218" },
+      { name: "Mr. G. Charan Kumar", designation: "Asst. Professor", qualification: "Ph.D (Vel Tech University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. G. Charan Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/251" },
+      { name: "Mrs. K. Revathi", designation: "Asst. Professor", qualification: "Ph.D (NIT, Mizoram)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. Revathi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/244" },
       { name: "Mr. M. Kamesh", designation: "Asst. Professor", qualification: "Ph.D. (Vel Tech University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/1d0ccd786e3504191039a886e12fe837.jpg", profileUrl: "https://mits.ac.in/facultyprofile/216" },
-      { name: "Mrs. Kowsalya P", designation: "Asst. Professor", qualification: "M.E. (Arulmigu Kalasalingam College of Engg., Anna University)", image: "https://mits.ac.in/public/uploads/faculty/kowsalya.JPG", profileUrl: "https://mits.ac.in/facultyprofile/434" },
-      { name: "Mrs. P. Susmitha", designation: "Asst. Professor", qualification: "M.Tech. (CMR Institute & Technology, JNTU Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/sushmitha.jfif", profileUrl: "https://mits.ac.in/facultyprofile/653" },
-      { name: "Mr. Shaik Tipu Rahaman", designation: "Asst. Professor", qualification: "M.Sc. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/tipu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/797" },
-      { name: "Mr. B. Subbarayudu", designation: "Asst. Professor", qualification: "M.Tech. (CMR College of Engineering & Technology (J.N.T.U.H))", image: "https://mits.ac.in/public/uploads/faculty/subbarayudu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/252" },
+      { name: "Mrs. Kowsalya P", designation: "Asst. Professor", qualification: "M.E. (Arulmigu Kalasalingam College of Engg., Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. Kowsalya P.JPG", profileUrl: "https://mits.ac.in/facultyprofile/434" },
+      { name: "Mrs. P. Susmitha", designation: "Asst. Professor", qualification: "M.Tech. (CMR Institute & Technology, JNTU Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. P. Susmitha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/653" },
+      { name: "Mr. Shaik Tipu Rahaman", designation: "Asst. Professor", qualification: "M.Sc. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Shaik Tipu Rahaman.JPG", profileUrl: "https://mits.ac.in/facultyprofile/797" },
+      { name: "Mr. B. Subbarayudu", designation: "Asst. Professor", qualification: "M.Tech. (CMR College of Engineering & Technology (J.N.T.U.H))", image: "https://mits.ac.in/public/uploads/faculty/Mr. B. Subbarayudu - ECE.JPG", profileUrl: "https://mits.ac.in/facultyprofile/252" },
       { name: "Ms. S. Kavi Priya", designation: "Asst. Professor", qualification: "M.Tech. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/kavi.jpg", profileUrl: "https://mits.ac.in/facultyprofile/424" },
-      { name: "Mrs. V. Sai Anusha", designation: "Asst. Professor", qualification: "M.Tech. (Amrita Vishwa Vidyapeetham, Amrita Universit)", image: "https://mits.ac.in/public/uploads/faculty/saianusha.jpg", profileUrl: "https://mits.ac.in/facultyprofile/416" },
+      { name: "Mrs. V. Sai Anusha", designation: "Asst. Professor", qualification: "M.Tech. (Amrita Vishwa Vidyapeetham, Amrita Universit)", image: "https://mits.ac.in/public/uploads/faculty/V. Sai Anusha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/416" },
       { name: "Mr. V. Nagaraja", designation: "Asst. Professor", qualification: "M.Tech. (SVU, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/nagaraju.jpg", profileUrl: "https://mits.ac.in/facultyprofile/534" },
     ],
     detailedAchievements: [
@@ -1149,33 +1149,33 @@ faculty: [
     vision: "To be a center of excellence in data science education producing data-driven problem solvers.",
     mission: ["To provide comprehensive education in data science and analytics.", "To promote research in machine learning and big data.", "To develop skilled professionals for the data economy."],
     nbaAccredited: false,
-    hod: { name: "Dr. S. Kusuma", designation: "Asst. Professor & Head", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Kusuma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/98" },
+    hod: { name: "Dr. S. Kusuma", designation: "Asst. Professor & Head", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/c9fcfd6e1946a61df27003a2c31fbb64.JPG", profileUrl: "https://mits.ac.in/facultyprofile/98" },
     achievements: { consultancyAmount: "INR 5+ Lakhs", researchProjects: "6+", patents: "4+", publications: "60+" },
     teachingApproach: { description: "Data-centric approach with Kaggle competitions, industry datasets, and hands-on ML projects.", points: ["Kaggle competition participation", "Industry dataset projects", "Python & R programming labs", "Tableau & Power BI training", "AWS/GCP cloud analytics"] },
     courses: ["B.Tech in CSE - Data Science"],
     contactInfo: { email: "dshod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
       { name: "Dr. K. Nirmala Devi", designation: "Assoc. Professor", qualification: "Post-Doctoral Researcher (Lincoln University College, Malaysia)", image: "https://mits.ac.in/public/uploads/faculty/nirmaladevi.png", profileUrl: "https://mits.ac.in/facultyprofile/729" },
-      { name: "Dr. S. Kusuma", designation: "Asst. Professor & Head", qualification: "Post-Doctoral Researcher (Lincoln University College, Malaysia)", image: "https://mits.ac.in/public/uploads/faculty/Kusuma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/98" },
+      { name: "Dr. S. Kusuma", designation: "Asst. Professor & Head", qualification: "Post-Doctoral Researcher (Lincoln University College, Malaysia)", image: "https://mits.ac.in/public/uploads/faculty/c9fcfd6e1946a61df27003a2c31fbb64.JPG", profileUrl: "https://mits.ac.in/facultyprofile/98" },
       { name: "Dr. S. Gopalakrishnan", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Gopalakrishnan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/509" },
-      { name: "Dr. M. Kiran Kumar", designation: "Asst. Professor", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/kiran.jfif", profileUrl: "https://mits.ac.in/facultyprofile/408" },
-      { name: "Dr. K. Pugazharasi", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Pugazharasi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/548" },
-      { name: "Mr. T. Balaji", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Balaji.JPG", profileUrl: "https://mits.ac.in/facultyprofile/603" },
-      { name: "Mrs. R. Roopa", designation: "Asst. Professor", qualification: "Ph.D. (Sri Venkateswara University)", image: "https://mits.ac.in/public/uploads/faculty/Roopa.JPG", profileUrl: "https://mits.ac.in/facultyprofile/508" },
-      { name: "Mrs. Vidhyashree B", designation: "Asst. Professor", qualification: "Ph.D. (Visvesvaraya Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Vidhyashree.JPG", profileUrl: "https://mits.ac.in/facultyprofile/428" },
+      { name: "Dr. M. Kiran Kumar", designation: "Asst. Professor", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Kiran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/408" },
+      { name: "Dr. K. Pugazharasi", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Dr. K. Pugazharasi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/548" },
+      { name: "Mr. T. Balaji", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. T. Balaji.JPG", profileUrl: "https://mits.ac.in/facultyprofile/603" },
+      { name: "Mrs. R. Roopa", designation: "Asst. Professor", qualification: "Ph.D. (Sri Venkateswara University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. R. Roopa.JPG", profileUrl: "https://mits.ac.in/facultyprofile/508" },
+      { name: "Mrs. Vidhyashree B", designation: "Asst. Professor", qualification: "Ph.D. (Visvesvaraya Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. Vidhyashree B.JPG", profileUrl: "https://mits.ac.in/facultyprofile/428" },
       { name: "Mrs. F. Twinkle Graf", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Twinkle.JPG", profileUrl: "https://mits.ac.in/facultyprofile/588" },
-      { name: "Mr. A. Kalyan Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Acharya Nagarjuna University)", image: "https://mits.ac.in/public/uploads/faculty/Kalyan Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/432" },
-      { name: "Mrs. S. Manjula", designation: "Asst. Professor", qualification: "Ph.D. (Annamalai University)", image: "https://mits.ac.in/public/uploads/faculty/Manjula Prabakaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/123" },
-      { name: "Mr. K. Durga Charan", designation: "Asst. Professor", qualification: "Ph.D. (JNTU, Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Durga Charan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/133" },
-      { name: "Mrs. T. Swetha", designation: "Asst. Professor", qualification: "Ph.D. (Amrita Vishwa Vidyapeetham)", image: "https://mits.ac.in/public/uploads/faculty/Swetha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/431" },
-      { name: "Mr. Vishnukumar Ravula", designation: "Asst. Professor", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_2849.JPG", profileUrl: "https://mits.ac.in/facultyprofile/661" },
-      { name: "Mr. Rajkumar. G", designation: "Asst. Professor", qualification: "Ph.D. (St. Peter)", image: "https://mits.ac.in/public/uploads/faculty/Rajkumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/470" },
-      { name: "Mr. G. Kiran Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Puducherry Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Kiran Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/511" },
-      { name: "Mrs. Anuradha Prudhivi", designation: "Asst. Professor", qualification: "Ph.D. (Dayananda Sagar University, Bangalore)", image: "https://mits.ac.in/public/uploads/faculty/Anuradha Prudhivi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/134" },
-      { name: "Mr. Arockia Raj Abraham", designation: "Asst. Professor", qualification: "Ph.D. (Saveetha University)", image: "https://mits.ac.in/public/uploads/faculty/Arockia Raj Abraham.JPG", profileUrl: "https://mits.ac.in/facultyprofile/426" },
-      { name: "Mrs. M. Nandhini", designation: "Asst. Professor", qualification: "Ph.D. (Puducherry Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Nandhini.JPG", profileUrl: "https://mits.ac.in/facultyprofile/453" },
-      { name: "Mr. B. Bhaskar", designation: "Asst. Professor", qualification: "M.Tech. (Madanapalle Institution of Technology and Science, JNTUA University)", image: "https://mits.ac.in/public/uploads/faculty/Bhaskar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/116" },
-      { name: "Mr. Nukala Bhargav Krishna", designation: "Asst. Professor", qualification: "M.Tech. (Integrated) (Vellore Institute of Technology, Vellore)", image: "https://mits.ac.in/public/uploads/faculty/krishna.jpg", profileUrl: "https://mits.ac.in/facultyprofile/750" },
+      { name: "Mr. A. Kalyan Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Acharya Nagarjuna University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. A. Kalyan Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/432" },
+      { name: "Mrs. S. Manjula", designation: "Asst. Professor", qualification: "Ph.D. (Annamalai University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. S. Manjula.JPG", profileUrl: "https://mits.ac.in/facultyprofile/123" },
+      { name: "Mr. K. Durga Charan", designation: "Asst. Professor", qualification: "Ph.D. (JNTU, Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Mr. K. Durga Charan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/133" },
+      { name: "Mrs. T. Swetha", designation: "Asst. Professor", qualification: "Ph.D. (Amrita Vishwa Vidyapeetham)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. T. Swetha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/431" },
+      { name: "Mr. Vishnukumar Ravula", designation: "Asst. Professor", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Vishnukumar Ravula.JPG", profileUrl: "https://mits.ac.in/facultyprofile/661" },
+      { name: "Mr. Rajkumar. G", designation: "Asst. Professor", qualification: "Ph.D. (St. Peter)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Rajkumar. G.JPG", profileUrl: "https://mits.ac.in/facultyprofile/470" },
+      { name: "Mr. G. Kiran Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Puducherry Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. G. Kiran Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/511" },
+      { name: "Mrs. Anuradha Prudhivi", designation: "Asst. Professor", qualification: "Ph.D. (Dayananda Sagar University, Bangalore)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. Anuradha Prudhivi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/134" },
+      { name: "Mr. Arockia Raj Abraham", designation: "Asst. Professor", qualification: "Ph.D. (Saveetha University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Arockia Raj Abraham.JPG", profileUrl: "https://mits.ac.in/facultyprofile/426" },
+      { name: "Mrs. M. Nandhini", designation: "Asst. Professor", qualification: "Ph.D. (Puducherry Technological University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. M. Nandhini.JPG", profileUrl: "https://mits.ac.in/facultyprofile/453" },
+      { name: "Mr. B. Bhaskar", designation: "Asst. Professor", qualification: "M.Tech. (Madanapalle Institution of Technology and Science, JNTUA University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. B. Bhaskar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/116" },
+      { name: "Mr. Nukala Bhargav Krishna", designation: "Asst. Professor", qualification: "M.Tech. (Integrated) (Vellore Institute of Technology, Vellore)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Nukala Bhargav Krishna.JPG", profileUrl: "https://mits.ac.in/facultyprofile/750" },
       { name: "Mr. Yawar Ayub Matta", designation: "Asst. Professor", qualification: "M.Tech. (NIT, Srinagar)", image: "https://mits.ac.in/public/uploads/faculty/Yawar Ayub Matta.JPG", profileUrl: "https://mits.ac.in/facultyprofile/664" },
     ],
     detailedAchievements: [
@@ -1236,29 +1236,29 @@ faculty: [
     vision: "To produce cybersecurity professionals capable of protecting digital infrastructure and ensuring information security.",
     mission: ["To provide comprehensive education in cybersecurity.", "To promote hands-on training in ethical hacking and penetration testing.", "To develop security professionals with industry certifications."],
     nbaAccredited: false,
-    hod: { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/persis.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
+    hod: { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. B. Persis Urbana IVY.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
     achievements: { consultancyAmount: "INR 3+ Lakhs", researchProjects: "4+", patents: "2+", publications: "40+" },
     teachingApproach: { description: "Practice-oriented curriculum with CTF competitions, ethical hacking labs, and security audits.", points: ["Capture The Flag competitions", "Ethical hacking practical labs", "Network penetration testing", "Security certifications (CEH, CompTIA)", "Cyber forensics workshops"] },
     courses: ["B.Tech in CSE - Cyber Security"],
     contactInfo: { email: "cshod@mits.ac.in", phone: "+91-9100973396; 8571-280255; 280706" },
     faculty: [
-      { name: "Dr. Chandra Prakash Gupta", designation: "Professor & Dean-School of Computing", qualification: "Ph.D. (University of Kota)", image: "https://mits.ac.in/public/uploads/faculty/gupta.png", profileUrl: "https://mits.ac.in/facultyprofile/730" },
-      { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/persis.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
-      { name: "Dr. Sachikanta Dash", designation: "Assoc. Professor", qualification: "Ph.D. (Berhampur University)", image: "https://mits.ac.in/public/uploads/faculty/dash.JPG", profileUrl: "https://mits.ac.in/facultyprofile/745" },
-      { name: "Dr. M. Jaganathan", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/jaganatha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1103" },
-      { name: "Dr. Brahm Prakash", designation: "Assoc. Professor", qualification: "Ph.D. (IKG Punjab Technical University)", image: "https://mits.ac.in/public/uploads/faculty/bhram.png", profileUrl: "https://mits.ac.in/facultyprofile/1085" },
-      { name: "Dr. K. P. Manikandan", designation: "Asst. Professor", qualification: "Ph.D. (JNTU-Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Manikandan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/91" },
-      { name: "Dr. R. Sandeep Kumar", designation: "Asst. Professor", qualification: "Ph.D. (MS Ramaiah University of Applied Sciences)", image: "https://mits.ac.in/public/uploads/faculty/sandeep.jpg", profileUrl: "https://mits.ac.in/facultyprofile/1092" },
-      { name: "Mrs. A. Komala", designation: "Asst. Professor", qualification: "Ph.D. (University of Hyderabad, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/Komala.JPG", profileUrl: "https://mits.ac.in/facultyprofile/95" },
-      { name: "Mrs. M. Sri Lakshmi Preethi", designation: "Asst. Professor", qualification: "Ph.D. (Presidency University)", image: "https://mits.ac.in/public/uploads/faculty/Sri Lakshmi Preethi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/562" },
-      { name: "Mr. Tunikipalli Nagaraju Yadav", designation: "Asst. Professor", qualification: "Ph.D. (Annamalai University)", image: "https://mits.ac.in/public/uploads/faculty/nagarjuna.jpg", profileUrl: "https://mits.ac.in/facultyprofile/1091" },
-      { name: "Mrs. M. Fathima Begum", designation: "Asst. Professor", qualification: "Ph.D. (VIT University, Vellore)", image: "https://mits.ac.in/public/uploads/faculty/Fathima Begum.JPG", profileUrl: "https://mits.ac.in/facultyprofile/566" },
-      { name: "Mr. Goli Nageswararao", designation: "Asst. Professor", qualification: "Ph.D. (IIT Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/goli.JPG", profileUrl: "https://mits.ac.in/facultyprofile/719" },
-      { name: "Mr. M. Mutharasu", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_2084.JPG", profileUrl: "https://mits.ac.in/facultyprofile/489" },
-      { name: "Mr. Roni Das", designation: "Asst. Professor", qualification: "Ph.D. (Vikrant University, Gwalior)", image: "https://mits.ac.in/public/uploads/faculty/roni.JPG", profileUrl: "https://mits.ac.in/facultyprofile/741" },
-      { name: "Mrs. S. Annapurna Shobitha", designation: "Asst. Professor", qualification: "Ph.D. (Saveetha University)", image: "https://mits.ac.in/public/uploads/faculty/shobita.jpg", profileUrl: "https://mits.ac.in/facultyprofile/1098" },
-      { name: "Mr. K. C. Mohanraj", designation: "Asst. Professor", qualification: "M.E. (Karpagam university, Coimbatore)", image: "https://mits.ac.in/public/uploads/faculty/mohan raj.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1101" },
-      { name: "Mrs. C. Ushapriya", designation: "Asst. Professor", qualification: "M.Tech. (VSB Engineering College, Karur)", image: "https://mits.ac.in/public/uploads/faculty/ushapriya.jpg", profileUrl: "https://mits.ac.in/facultyprofile/1099" },
+      { name: "Dr. Chandra Prakash Gupta", designation: "Professor & Dean-School of Computing", qualification: "Ph.D. (University of Kota)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Chandraprakash Guptha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/730" },
+      { name: "Dr. B. Persis Urbana IVY", designation: "Professor & Head", qualification: "Ph.D. (Sathyabama University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. B. Persis Urbana IVY.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1022" },
+      { name: "Dr. Sachikanta Dash", designation: "Assoc. Professor", qualification: "Ph.D. (Berhampur University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sachikanta Dash.JPG", profileUrl: "https://mits.ac.in/facultyprofile/745" },
+      { name: "Dr. M. Jaganathan", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Dr. M. Jaganathan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1103" },
+      { name: "Dr. Brahm Prakash", designation: "Assoc. Professor", qualification: "Ph.D. (IKG Punjab Technical University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Brahm Prakash.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1085" },
+      { name: "Dr. K. P. Manikandan", designation: "Asst. Professor", qualification: "Ph.D. (JNTU-Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Dr. K. P. Manikandan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/91" },
+      { name: "Dr. R. Sandeep Kumar", designation: "Asst. Professor", qualification: "Ph.D. (MS Ramaiah University of Applied Sciences)", image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Sandeep Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1092" },
+      { name: "Mrs. A. Komala", designation: "Asst. Professor", qualification: "Ph.D. (University of Hyderabad, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. A. Komala.jpg", profileUrl: "https://mits.ac.in/facultyprofile/95" },
+      { name: "Mrs. M. Sri Lakshmi Preethi", designation: "Asst. Professor", qualification: "Ph.D. (Presidency University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. M. Sri Lakshmi Preethi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/562" },
+      { name: "Mr. Tunikipalli Nagaraju Yadav", designation: "Asst. Professor", qualification: "Ph.D. (Annamalai University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Tunikipalli Nagaraju Yadav.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1091" },
+      { name: "Mrs. M. Fathima Begum", designation: "Asst. Professor", qualification: "Ph.D. (VIT University, Vellore)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. M. Fathima Begum.JPG", profileUrl: "https://mits.ac.in/facultyprofile/566" },
+      { name: "Mr. Goli Nageswararao", designation: "Asst. Professor", qualification: "Ph.D. (IIT Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Goli Nageswararao.JPG", profileUrl: "https://mits.ac.in/facultyprofile/719" },
+      { name: "Mr. M. Mutharasu", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. M. Mutharasu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/489" },
+      { name: "Mr. Roni Das", designation: "Asst. Professor", qualification: "Ph.D. (Vikrant University, Gwalior)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Roni Das.JPG", profileUrl: "https://mits.ac.in/facultyprofile/741" },
+      { name: "Mrs. S. Annapurna Shobitha", designation: "Asst. Professor", qualification: "Ph.D. (Saveetha University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. S. Annapurna Shobitha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1098" },
+      { name: "Mr. K. C. Mohanraj", designation: "Asst. Professor", qualification: "M.E. (Karpagam university, Coimbatore)", image: "https://mits.ac.in/public/uploads/faculty/Mr. K. C. Mohanraj.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1101" },
+      { name: "Mrs. C. Ushapriya", designation: "Asst. Professor", qualification: "M.Tech. (VSB Engineering College, Karur)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. C. Ushapriya.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1099" },
       { name: "Mr. Karanam Seshagiri Rao", designation: "Asst. Professor", qualification: "M.Tech. (St.Johns College of Engineering, JNTUA)", image: "https://mits.ac.in/public/uploads/faculty/Karanam-Seshagiri-Rao.jpg", profileUrl: "https://mits.ac.in/facultyprofile/1102" },
     ],
     detailedAchievements: [
@@ -1318,7 +1318,7 @@ faculty: [
       "M3: To motivate students to emerge as entrepreneurs with self-learning abilities, team spirit and leadership qualities through continuous industry-institute interaction."
     ],
     nbaAccredited: false,
-    hod: { name: "Dr. R. Kalpana", designation: "Professor & Head", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_9033.JPG", profileUrl: "https://mits.ac.in/facultyprofile/80" },
+    hod: { name: "Dr. R. Kalpana", designation: "Professor & Head", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Kalpana.JPG", profileUrl: "https://mits.ac.in/facultyprofile/80" },
     achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
     courses: ["B.Tech in Artificial Intelligence"],
@@ -1329,7 +1329,7 @@ faculty: [
         designation: "Professor &amp; Head",
         qualification: "Ph.D. (Anna University)",
         email: "drrkalpana@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_9033.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Kalpana.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/80"
       },
       {
@@ -1337,7 +1337,7 @@ faculty: [
         designation: "Professor",
         qualification: "Ph.D. (Karunya University)",
         email: "drbensujin@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/bensu.png",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Ben Sujin.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/564"
       },
       {
@@ -1345,7 +1345,7 @@ faculty: [
         designation: "Assoc. Professor",
         qualification: "Ph.D. (Anna University)",
         email: "drssatheeshkumar@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/sateesh.png",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. S. Satheesh Kumar.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/743"
       },
       {
@@ -1353,7 +1353,7 @@ faculty: [
         designation: "Assoc. Professor",
         qualification: "Ph.D. (Veltech University)",
         email: "drkchokkanathan@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Chokkanathan.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. K. Chokkanathan.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/121"
       },
       {
@@ -1361,7 +1361,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "Ph.D. (Pondicherry University)",
         email: "drapoongodai@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Poongodai.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. A. Poongodai.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/557"
       },
       {
@@ -1369,7 +1369,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "Ph.D. (Lincoln University College, Malaysia)",
         email: "drvamsibandi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Vamsi Bandi.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Vamsi Bandi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/122"
       },
       {
@@ -1377,7 +1377,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "Ph.D. (Anna University)",
         email: "drpurandharn@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Purandhar.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Purandhar N.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/609"
       },
       {
@@ -1401,7 +1401,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "Ph.D. (Kalinga University)",
         email: "dryraviraju@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7883.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Y. Ravi Raju.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/155"
       },
       {
@@ -1417,7 +1417,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D) (Jain University)",
         email: "mrjviswanath@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Viswanath.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. J. Viswanath.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/129"
       },
       {
@@ -1425,7 +1425,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D) (Jain University)",
         email: "mrpraguraman@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Raguraman.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. P. Raguraman.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/427"
       },
       {
@@ -1433,7 +1433,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (JNTU Anantapur)",
         email: "mrpraneelkumarperuru@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/peruru.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Praneel Kumar Peruru.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/676"
       },
       {
@@ -1441,7 +1441,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (Puducherry Technological University)",
         email: "mrvasudevanm@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Vasudevan.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Vasudevan M.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/488"
       },
       {
@@ -1449,7 +1449,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (Puducherry Technological University)",
         email: "mrkiranpalakeeti@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Mr. Kiran Palakeeti.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/fe2eba45961fcbed70a1a5b29e7ea727.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/497"
       },
       {
@@ -1457,7 +1457,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (Visvesvaraya Technological University (VTU))",
         email: "mrtoralkarpawan@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Toralkar Pawan.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Toralkar Pawan.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/138"
       },
       {
@@ -1465,7 +1465,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (JNTU, Anantapur)",
         email: "mrkmahammad@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Mahammad.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. K. Mahammad.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/403"
       },
       {
@@ -1473,7 +1473,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (Amrita University)",
         email: "mrsanagalakshmi@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Naga Lakshmi.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. A. Naga Lakshmi.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/475"
       },
       {
@@ -1481,7 +1481,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (Visvesvaraya Technological University)",
         email: "mrsaesthermerlin@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_2848.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. A. Esther Merlin.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/659"
       },
       {
@@ -1489,7 +1489,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech",
         email: "msnmohanapriya@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Mohana Priya.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Ms. N. Mohana Priya.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/406"
       },
       {
@@ -1505,7 +1505,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech",
         email: "mrdjaganathan@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Jaganathan.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. D. Jaganathan.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/457"
       },
       {
@@ -1521,7 +1521,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech.",
         email: "mrkvenkatasubramanyam@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/venkat.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. K. Venkata Subramanyam.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1096"
       }
     ],
@@ -1587,7 +1587,7 @@ faculty: [
       "M2: To strengthen industry partnerships and entrepreneurial ventures to develop ethical AI solutions for socio-economic and technological development."
     ],
     nbaAccredited: false,
-    hod: { name: "Dr. S. Padma", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/144" },
+    hod: { name: "Dr. S. Padma", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. S. Padma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/144" },
     achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
     courses: ["B.Tech in Artificial Intelligence and Machine Learning"],
@@ -1598,7 +1598,7 @@ faculty: [
         designation: "Professor of Practice",
         qualification: "M.B.A. (IISC, Bangalore)",
         email: "sanathhegde@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/sanath.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Sanath Hegde.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/884"
       },
       {
@@ -1606,7 +1606,7 @@ faculty: [
         designation: "Professor of Practice",
         qualification: "Ph.D. (IIIT, SriCity)",
         email: "drchandrasekharv@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/chandrasekhar.jfif",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. V. Chandra Sekhar.png",
         profileUrl: "https://mits.ac.in/facultyprofile/1130"
       },
       {
@@ -1614,7 +1614,7 @@ faculty: [
         designation: "Professor",
         qualification: "Ph.D. (Berhampur University)",
         email: "drramakantham@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Mohanty.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/eb2a41b68e1a35df79af8f682114ed41.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1100"
       },
       {
@@ -1622,7 +1622,7 @@ faculty: [
         designation: "Assoc. Professor",
         qualification: "Ph.D. (Anna University)",
         email: "drrajeswarim@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/rajeswari.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. M. Rajeswari.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/744"
       },
       {
@@ -1630,7 +1630,7 @@ faculty: [
         designation: "Assoc. Professor",
         qualification: "Ph.D. (JNTUK)",
         email: "drsureshk@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Suresh.jpeg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Kurumalla Suresh.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1110"
       },
       {
@@ -1638,7 +1638,7 @@ faculty: [
         designation: "Assoc. Professor & Head",
         qualification: "Ph.D. (Bharathiar University)",
         email: "drpadmas@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Padma.jpeg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. S. Padma.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/144"
       },
       {
@@ -1646,7 +1646,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "Ph.D. (SRMIST, Chennai)",
         email: "drsandhyae@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Sandhya.jpeg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Sandhya. E.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/501"
       },
       {
@@ -1654,7 +1654,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "Ph.D. (AMET University)",
         email: "drsathyanarayanand@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/satya.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Sathyanarayanan.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1127"
       },
       {
@@ -1662,7 +1662,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "Ph.D. (NIT, Durgapur)",
         email: "drpraveenkumarr@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Praveen Kumar.jpeg",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Praveen Kumar.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/628"
       },
       {
@@ -1670,7 +1670,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "Ph.D. (Pondicherry University)",
         email: "drshahnazeerck@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/shahnazeer.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Dr. Shahnazeer C K.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1114"
       },
       {
@@ -1678,7 +1678,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (Visvesvaraya Technological University)",
         email: "sivaramanv@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Sivaraman.jpeg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. V. Sivaraman.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/594"
       },
       {
@@ -1686,7 +1686,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (VIT, Vellore)",
         email: "udayakumarp@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Udayakumar.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. P. Udayakumar.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/660"
       },
       {
@@ -1694,7 +1694,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D.) (Anna University, Chennai)",
         email: "anbarasanc@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/anbarasan.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. C. Anbarasan.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1107"
       },
       {
@@ -1702,7 +1702,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (Saveetha University)",
         email: "shayeezahamedbsh@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Ahamed.jpeg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. B. S. H. Shayeez Ahamed.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/108"
       },
       {
@@ -1710,7 +1710,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (Saveetha University)",
         email: "ushar@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_7925.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/P. Usha.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/107"
       },
       {
@@ -1718,7 +1718,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (IIIT-Sri City)",
         email: "ramakrushnar@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/krushna.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Rama Krushna Rath.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1123"
       },
       {
@@ -1726,7 +1726,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D) (Anna University)",
         email: "manojkumark@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/manoj.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Manoj Kumar K.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1095"
       },
       {
@@ -1734,7 +1734,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.E., (Ph.D) (Anna University)",
         email: "nighithav@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/nighitha.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Ms. Nighitha Varghese.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1111"
       },
       {
@@ -1742,7 +1742,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (IIT, Tirupati)",
         email: "tharakeswararajub@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/tarak.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Tharakeswara Raju B.png",
         profileUrl: "https://mits.ac.in/facultyprofile/684"
       },
       {
@@ -1750,7 +1750,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (IIIT, Nagpur)",
         email: "Subhasdas@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/DSC_3008.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. Subhas Das.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/737"
       },
       {
@@ -1758,7 +1758,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (VIT-AP)",
         email: "harsharani@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/harsharani.JPG",
+        image: "https://mits.ac.in/public/uploads/faculty/Ms. Harsharani.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1124"
       },
       {
@@ -1766,7 +1766,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech., (Ph.D.) (Saveetha University)",
         email: "annapurnas@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/shobita.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mrs. S. Annapurna Shobitha.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1098"
       },
       {
@@ -1774,7 +1774,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "MS",
         email: "nithing@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/nitin.png",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. G. Nithin.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/685"
       },
       {
@@ -1782,7 +1782,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech",
         email: "esakkirajm@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/7fb428929e53ed95946b70746e57d138.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Mr. M. Esakkiraj.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1094"
       },
       {
@@ -1790,7 +1790,7 @@ faculty: [
         designation: "Asst. Professor",
         qualification: "M.Tech",
         email: "shivani@mits.ac.in",
-        image: "https://mits.ac.in/public/uploads/faculty/Shivani1.jpg",
+        image: "https://mits.ac.in/public/uploads/faculty/Ms. Shivani Jha.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1122"
       }
     ],
@@ -1928,26 +1928,26 @@ faculty: [
     courses: ["Bachelor of Computer Applications", "Master of Computer Applications"],
     contactInfo: { email: "mcahod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. S. V. S. Ganga Devi", designation: "Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visva Vidyalayam, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Ganga Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/253" },
+      { name: "Dr. S. V. S. Ganga Devi", designation: "Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visva Vidyalayam, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Dr. S. V. S. Ganga Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/253" },
       { name: "Dr. N. Naveen Kumar", designation: "Professor & Head", qualification: "Ph.D (S. V. University, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Naveen Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/254" },
       { name: "Dr. K. Nirmala Devi", designation: "Assoc. Professor", qualification: "Ph.D., (Anna university)", image: "https://mits.ac.in/public/uploads/faculty/nir.jpg", profileUrl: "https://mits.ac.in/facultyprofile/600" },
-      { name: "Dr.  K. Prathapchandran", designation: "Asst. Professor", qualification: "Ph.D. (The Gandhigram Rural Institute)", image: "https://mits.ac.in/public/uploads/faculty/pratap.JPG", profileUrl: "https://mits.ac.in/facultyprofile/736" },
-      { name: "Dr. R. Maruthamuthu", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Maruthamuthu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/260" },
-      { name: "Dr. A. Althaf Ali", designation: "Asst. Professor", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/fb78e50c6be0622546160aa3ebc31f58.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/262" },
-      { name: "Dr. Srinivasan Jagannathan", designation: "Asst. Professor", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Srinivasan Jagannathan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/263" },
+      { name: "Dr.  K. Prathapchandran", designation: "Asst. Professor", qualification: "Ph.D. (The Gandhigram Rural Institute)", image: "https://mits.ac.in/public/uploads/faculty/Dr.  K. Prathapchandran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/736" },
+      { name: "Dr. R. Maruthamuthu", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Maruthamuthu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/260" },
+      { name: "Dr. A. Althaf Ali", designation: "Asst. Professor", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Althaf Ali.JPG", profileUrl: "https://mits.ac.in/facultyprofile/262" },
+      { name: "Dr. Srinivasan Jagannathan", designation: "Asst. Professor", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Srinivasan Jagannathan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/263" },
       { name: "Dr. T. Saravanan", designation: "Asst. Professor", qualification: "Ph.D. (Bharathidasan University)", image: "https://mits.ac.in/public/uploads/faculty/T. Saravanan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/616" },
-      { name: "Dr. N. Nirmala Devi", designation: "Asst. Professor", qualification: "Ph.D. (Dr.SNS RajaLakshmi Arts and Science College, Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/N. Nirmala Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/544" },
+      { name: "Dr. N. Nirmala Devi", designation: "Asst. Professor", qualification: "Ph.D. (Dr.SNS RajaLakshmi Arts and Science College, Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. N. Nirmala Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/544" },
       { name: "Dr. Radhika K", designation: "Asst. Professor", qualification: "Ph.D. (Bharathidasan University, Trichy)", image: "https://mits.ac.in/public/uploads/faculty/rad.JPG", profileUrl: "https://mits.ac.in/facultyprofile/611" },
-      { name: "Dr. J. Jude Moses Anto Devakanth", designation: "Asst. Professor", qualification: "Ph.D. (Manonmaniam Sundaranar University)", image: "https://mits.ac.in/public/uploads/faculty/jude.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/634" },
+      { name: "Dr. J. Jude Moses Anto Devakanth", designation: "Asst. Professor", qualification: "Ph.D. (Manonmaniam Sundaranar University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. J. Jude Moses Anto Devakanth.JPG", profileUrl: "https://mits.ac.in/facultyprofile/634" },
       { name: "Dr. Saravanan Thirunavukarasu", designation: "Asst. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Saravanan Thirunavukarasu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/264" },
-      { name: "Mrs. S. Suganya", designation: "Asst. Professor", qualification: "Ph.D. (SRM Institute of Science and Technology)", image: "https://mits.ac.in/public/uploads/faculty/Suganya.JPG", profileUrl: "https://mits.ac.in/facultyprofile/639" },
-      { name: "Mr. G. R. Hemanth Kumar", designation: "Asst. Professor", qualification: "M.Tech. (Nagarjuna University, Guntur)", image: "https://mits.ac.in/public/uploads/faculty/hemanth.jpg", profileUrl: "https://mits.ac.in/facultyprofile/125" },
+      { name: "Mrs. S. Suganya", designation: "Asst. Professor", qualification: "Ph.D. (SRM Institute of Science and Technology)", image: "https://mits.ac.in/public/uploads/faculty/S. Suganya MCA.JPG", profileUrl: "https://mits.ac.in/facultyprofile/639" },
+      { name: "Mr. G. R. Hemanth Kumar", designation: "Asst. Professor", qualification: "M.Tech. (Nagarjuna University, Guntur)", image: "https://mits.ac.in/public/uploads/faculty/Hemanth.JPG", profileUrl: "https://mits.ac.in/facultyprofile/125" },
       { name: "Mr. S. Suresh", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Trichy)", image: "https://mits.ac.in/public/uploads/faculty/Suresh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/268" },
-      { name: "Mr. P. Hanok", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Hanok.JPG", profileUrl: "https://mits.ac.in/facultyprofile/462" },
+      { name: "Mr. P. Hanok", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Hanook.JPG", profileUrl: "https://mits.ac.in/facultyprofile/462" },
       { name: "Mr. P. Seshu Kumar", designation: "Asst. Professor", qualification: "Ph.D. (JNTU Kakinada)", image: "https://mits.ac.in/public/uploads/faculty/Seshu Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/473" },
-      { name: "Mrs. Roopa", designation: "Asst. Professor", qualification: "M.Tech. (Sri Sai Institute of Science and Technology, JNTUA)", image: "https://mits.ac.in/public/uploads/faculty/Roopa Prasad.JPG", profileUrl: "https://mits.ac.in/facultyprofile/506" },
+      { name: "Mrs. Roopa", designation: "Asst. Professor", qualification: "M.Tech. (Sri Sai Institute of Science and Technology, JNTUA)", image: "https://mits.ac.in/public/uploads/faculty/Roopa MCA.JPG", profileUrl: "https://mits.ac.in/facultyprofile/506" },
       { name: "Mr. Repana Mallikarjuna", designation: "Asst. Professor", qualification: "M.Tech. (Vellore Institute of Technology)", image: "https://mits.ac.in/public/uploads/faculty/malli.JPG", profileUrl: "https://mits.ac.in/facultyprofile/678" },
-      { name: "Mrs. K. Kavitha", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Puducherry)", image: "https://mits.ac.in/public/uploads/faculty/Untitled.jpg", profileUrl: "https://mits.ac.in/facultyprofile/460" },
+      { name: "Mrs. K. Kavitha", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Puducherry)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. K. Kavitha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/460" },
     ],
     detailedAchievements: [
       { title: "MCA Faculty Achievements 2025-26", description: "Department publishes year-wise faculty achievements in the official achievements tab.", type: "faculty" },
@@ -2006,29 +2006,29 @@ faculty: [
     vision: "To become a globally recognized centre of excellence in management by building managerial competencies and preparing visionary global business leaders.",
     mission: ["To empower students to face real-time business situations and foster entrepreneurship.", "To facilitate industry-driven learning among students and faculty.", "To provide a platform for knowledge creation and dissemination through relevant infrastructure.", "To contribute to socio-economic development through excellence in teaching and research."],
     nbaAccredited: true,
-    hod: { name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University)", image: "https://mits.ac.in/public/uploads/faculty/bhanu.png", profileUrl: "https://mits.ac.in/facultyprofile/701" },
+    hod: { name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University)", image: "https://mits.ac.in/public/uploads/faculty/Bhanu Sree Reddy.JPG", profileUrl: "https://mits.ac.in/facultyprofile/701" },
     achievements: { consultancyAmount: "₹5+ Lakhs", researchProjects: "4+", patents: "0", publications: "50+" },
     teachingApproach: { description: "Case-study based pedagogy with industry mentorship and live consulting projects.", points: ["Harvard case study methodology", "Industry mentorship programs", "Business simulation exercises", "National case competitions", "Live consulting projects"] },
     courses: ["Bachelor of Business Administration", "Master of Business Administration"],
     contactInfo: { email: "mbahod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/bhanu.png", profileUrl: "https://mits.ac.in/facultyprofile/701" },
+      { name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Bhanu Sree Reddy.JPG", profileUrl: "https://mits.ac.in/facultyprofile/701" },
       { name: "Dr. Nagarajan. G", designation: "Professor", qualification: "PGDM-AICTE (ISBR)", image: "https://mits.ac.in/public/uploads/faculty/DSC_6987.JPG", profileUrl: "https://mits.ac.in/facultyprofile/636" },
-      { name: "Dr. D. Pradeep Kumar", designation: "Professor & Registrar (I/c)", qualification: "Ph.D. (Sri Krishnadevaraya University, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/pradeep.jfif", profileUrl: "https://mits.ac.in/facultyprofile/270" },
-      { name: "Dr. N. Gangisetty", designation: "Professor", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/gangi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/271" },
+      { name: "Dr. D. Pradeep Kumar", designation: "Professor & Registrar (I/c)", qualification: "Ph.D. (Sri Krishnadevaraya University, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. D. Pradeep.JPG", profileUrl: "https://mits.ac.in/facultyprofile/270" },
+      { name: "Dr. N. Gangisetty", designation: "Professor", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Gangi Setty.JPG", profileUrl: "https://mits.ac.in/facultyprofile/271" },
       { name: "Dr. K. V. Geetha Devi", designation: "Assoc. Professor", qualification: "Ph.D. (S.K. University, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/DSC_6966.JPG", profileUrl: "https://mits.ac.in/facultyprofile/274" },
       { name: "Dr. N. Seshadri", designation: "Asst. Professor", qualification: "Ph.D. (J.N.T.U. Anantapuramu)", image: "https://mits.ac.in/public/uploads/faculty/DSC_6973.JPG", profileUrl: "https://mits.ac.in/facultyprofile/276" },
       { name: "Dr. Venkateswarlu Karumuri", designation: "Asst. Professor", qualification: "Ph.D. (Andhra university)", image: "https://mits.ac.in/public/uploads/faculty/DSC_6997.JPG", profileUrl: "https://mits.ac.in/facultyprofile/554" },
-      { name: "Dr. E. Gnanaprasuna", designation: "Asst. Professor", qualification: "Ph.D. (S V University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/DSC_6991.JPG", profileUrl: "https://mits.ac.in/facultyprofile/537" },
-      { name: "Dr. B. Rajesh Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Andhra University, Visakhapatnam)", image: "https://mits.ac.in/public/uploads/faculty/DSC_7000.JPG", profileUrl: "https://mits.ac.in/facultyprofile/499" },
+      { name: "Dr. E. Gnanaprasuna", designation: "Asst. Professor", qualification: "Ph.D. (S V University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Dr. E. Gnanaprasuna MBA.JPG", profileUrl: "https://mits.ac.in/facultyprofile/537" },
+      { name: "Dr. B. Rajesh Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Andhra University, Visakhapatnam)", image: "https://mits.ac.in/public/uploads/faculty/Dr. B. Rajesh Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/499" },
       { name: "Dr. G. Thouseef Ahamed", designation: "Asst. Professor", qualification: "Ph.D. (Sri Krishnadevaraya University, Anantapuramu)", image: "https://mits.ac.in/public/uploads/faculty/DSC_7021.JPG", profileUrl: "https://mits.ac.in/facultyprofile/640" },
       { name: "Dr. V V Subba Rao Adhikari", designation: "Asst. Professor", qualification: "Ph.D. (School of Management & Labour Studies, Tata Institute of Social Sciences (TISS), Mumbai)", image: "https://mits.ac.in/public/uploads/faculty/subba.jpg", profileUrl: "https://mits.ac.in/facultyprofile/718" },
-      { name: "Dr. Kosaraju Sireesha", designation: "Asst. Professor", qualification: "Ph.D. (SPMVV, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/kosaraju.JPG", profileUrl: "https://mits.ac.in/facultyprofile/712" },
-      { name: "Dr. Prem Sundar. M", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology - Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/prem.jfif", profileUrl: "https://mits.ac.in/facultyprofile/726" },
-      { name: "Dr. Kolati Yeliyya", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology - Puducherry)", image: "https://mits.ac.in/public/uploads/faculty/kolati.png", profileUrl: "https://mits.ac.in/facultyprofile/727" },
+      { name: "Dr. Kosaraju Sireesha", designation: "Asst. Professor", qualification: "Ph.D. (SPMVV, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Kosaraju Sireesha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/712" },
+      { name: "Dr. Prem Sundar. M", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology - Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Prem Sundar. M.JPG", profileUrl: "https://mits.ac.in/facultyprofile/726" },
+      { name: "Dr. Kolati Yeliyya", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology - Puducherry)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Kolati Yeliyya.JPG", profileUrl: "https://mits.ac.in/facultyprofile/727" },
       { name: "Mr. Roja Kiran", designation: "Asst. Professor", qualification: "Ph.D. (S.K. University, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/DSC_7005.JPG", profileUrl: "https://mits.ac.in/facultyprofile/539" },
       { name: "Mr. V. Venkata Rao", designation: "Asst. Professor", qualification: "M.Phil. (S.V. University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_7012.JPG", profileUrl: "https://mits.ac.in/facultyprofile/292" },
-      { name: "Mr. B. Sreekanth", designation: "Asst. Professor", qualification: "M.B.A. (Edith Cowan University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_6964.JPG", profileUrl: "https://mits.ac.in/facultyprofile/399" },
+      { name: "Mr. B. Sreekanth", designation: "Asst. Professor", qualification: "M.B.A. (Edith Cowan University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. B. Sreekanth.JPG", profileUrl: "https://mits.ac.in/facultyprofile/399" },
     ],
     detailedAchievements: [
       { title: "MBA Faculty Achievements 2024-25", description: "Department records faculty achievements year-wise in the achievements tab.", type: "faculty" },
@@ -2121,64 +2121,64 @@ faculty: [
     ],
     contactInfo: { email: "humhod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. Sudhakar Beedam", designation: "Assoc. Professor & Head (I/c)", qualification: "Ph.D. (EFLU, Hyderabad)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/sudhakar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/691.html" },
-      { name: "Dr. S. Shanmuga Priya", designation: "Assoc. Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visva Vidyalayam (Women’s University), Tirupati, A.P.)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/DSC_7358.JPG", profileUrl: "https://mits.ac.in/facultyprofile/281.html" },
-      { name: "Dr. Bishnu Paramguru Mahapatra", designation: "Assoc. Professor", qualification: "Ph.D. (Berhampur University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/bishnu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/697.html" },
+      { name: "Dr. Sudhakar Beedam", designation: "Assoc. Professor & Head (I/c)", qualification: "Ph.D. (EFLU, Hyderabad)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sudhakar Beedam.JPG", profileUrl: "https://mits.ac.in/facultyprofile/691.html" },
+      { name: "Dr. S. Shanmuga Priya", designation: "Assoc. Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visva Vidyalayam (Women’s University), Tirupati, A.P.)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. S. Shanmuga Priya.JPG", profileUrl: "https://mits.ac.in/facultyprofile/281.html" },
+      { name: "Dr. Bishnu Paramguru Mahapatra", designation: "Assoc. Professor", qualification: "Ph.D. (Berhampur University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. Bishnu Paramguru Mahapatra.JPG", profileUrl: "https://mits.ac.in/facultyprofile/697.html" },
       { name: "Dr. P. Athahar", designation: "Assoc. Professor  & Senior Manager-Student Affairs", qualification: "Ph.D. (Dravidian University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/sam.JPG", profileUrl: "https://mits.ac.in/facultyprofile/280.html" },
-      { name: "Dr. B. Anitha", designation: "Sr. Asst. Professor", qualification: "TEFL/TESOL (London College of Teachers)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/anitha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/413.html" },
-      { name: "Dr. K. Lakshmi Devi", designation: "Asst. Professor", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/DSC_7350.JPG", profileUrl: "https://mits.ac.in/facultyprofile/321.html" },
+      { name: "Dr. B. Anitha", designation: "Sr. Asst. Professor", qualification: "TEFL/TESOL (London College of Teachers)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. B. Anitha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/413.html" },
+      { name: "Dr. K. Lakshmi Devi", designation: "Asst. Professor", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/lakshmidevi.png", profileUrl: "https://mits.ac.in/facultyprofile/321.html" },
       { name: "Dr.  G. Hemalatha", designation: "Asst. Professor", qualification: "PG Diploma (PG Diploma in Communicative English, School of Distance Education, Bharathiar University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/DSC_7346.JPG", profileUrl: "https://mits.ac.in/facultyprofile/552.html" },
       { name: "Dr. S. Mohankumar", designation: "Asst. Professor", qualification: "Ph.D. (VIT University, Chennai)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr.Mohankumar S_English.jpg", profileUrl: "https://mits.ac.in/facultyprofile/330.html" },
-      { name: "Dr. R. Sriganesh", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/DSC_7349.JPG", profileUrl: "https://mits.ac.in/facultyprofile/332.html" },
+      { name: "Dr. R. Sriganesh", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Sriganesh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/332.html" },
       { name: "Dr. Saktheeswar V. B.", designation: "Asst. Professor", qualification: "Ph.D. (Bharathiar University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Saktheeswar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/339.html" },
       { name: "Dr. Suresh Chimata", designation: "Asst. Professor", qualification: "Ph.D. (Acharya Nagarjuna University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/sureshchimata.JPG", profileUrl: "https://mits.ac.in/facultyprofile/567.html" },
-      { name: "Dr. M. Parvathi", designation: "Asst. Professor", qualification: "Ph.D. (S. V. University, Tirupati)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/DSC_7363.JPG", profileUrl: "https://mits.ac.in/facultyprofile/346.html" },
+      { name: "Dr. M. Parvathi", designation: "Asst. Professor", qualification: "Ph.D. (S. V. University, Tirupati)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. M. Parvathi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/346.html" },
       { name: "Dr. Md Nasir Hossain", designation: "Asst. Professor", qualification: "Ph.D. (School of LL&I, MANU University (A Central University), Hyderabad)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/nasir-md.JPG", profileUrl: "https://mits.ac.in/facultyprofile/709.html" },
       { name: "Mr. Naresh Maruboina", designation: "Asst. Professor", qualification: "M.A. (Andhra University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/naresh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/545.html" },
-      { name: "Dr. R. Saravana", designation: "Assoc. Professor", qualification: "Ph.D. (S. V. University, Tirupati)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Saravana.jpg", profileUrl: "https://mits.ac.in/facultyprofile/351.html" },
+      { name: "Dr. R. Saravana", designation: "Assoc. Professor", qualification: "Ph.D. (S. V. University, Tirupati)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. R. Saravana.JPG", profileUrl: "https://mits.ac.in/facultyprofile/351.html" },
       { name: "Dr. K. V. Narasimha Murthy", designation: "Assoc. Professor", qualification: "Ph.D. (S. K. University, Anantapur)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. K.V N. Murthy.jpg", profileUrl: "https://mits.ac.in/facultyprofile/352.html" },
       { name: "Dr. M. Sudhakar Reddy", designation: "Assoc. Professor", qualification: "Ph.D. (Sri Venkateswara University)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/sudhakar.jpg", profileUrl: "https://mits.ac.in/facultyprofile/752.html" },
-      { name: "Dr. T. Chalapathi", designation: "Asst. Professor", qualification: "Ph.D. (Sri VenkateswaraUniversity, Tirupati)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/DSC_7459.JPG", profileUrl: "https://mits.ac.in/facultyprofile/446.html" },
-      { name: "Dr. A. Subba Rao", designation: "Asst. Professor & Assistant Dean", qualification: "Ph.D. (S.V. University, Tirupati)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. A. Subba Rao.JPG", profileUrl: "https://mits.ac.in/facultyprofile/353.html" },
+      { name: "Dr. T. Chalapathi", designation: "Asst. Professor", qualification: "Ph.D. (Sri VenkateswaraUniversity, Tirupati)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. T. Chalapathi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/446.html" },
+      { name: "Dr. A. Subba Rao", designation: "Asst. Professor & Assistant Dean", qualification: "Ph.D. (S.V. University, Tirupati)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/6d4daba8d4b2624f111fde2850c07c8f.JPG", profileUrl: "https://mits.ac.in/facultyprofile/353.html" },
       { name: "Dr. P. Ramesh Reddy", designation: "Asst. Professor & Head", qualification: "Ph.D. (S. K. University)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/DSC_7332.JPG", profileUrl: "https://mits.ac.in/facultyprofile/354.html" },
-      { name: "Dr. Kata Sreelakshmi", designation: "Asst. Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visvavidyalayam)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/DSC_7477.JPG", profileUrl: "https://mits.ac.in/facultyprofile/536.html" },
-      { name: "Dr. Bibin Mathew", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Calicut)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/bibin.JPG", profileUrl: "https://mits.ac.in/facultyprofile/696.html" },
+      { name: "Dr. Kata Sreelakshmi", designation: "Asst. Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visvavidyalayam)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Kata Sreelakshmi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/536.html" },
+      { name: "Dr. Bibin Mathew", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Calicut)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Bibin Mathew.JPG", profileUrl: "https://mits.ac.in/facultyprofile/696.html" },
       { name: "Dr. Ramesh . P", designation: "Asst. Professor", qualification: "Ph.D. (Periyar University)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/DSC_7448.JPG", profileUrl: "https://mits.ac.in/facultyprofile/526.html" },
       { name: "Dr. Pujari Bharath Kumar", designation: "Asst. Professor", qualification: "Ph.D. (Vellore Institute of Technology, Amaravati)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/DSC_7461.JPG", profileUrl: "https://mits.ac.in/facultyprofile/529.html" },
       { name: "Dr. T. Thamizharasan", designation: "Asst. Professor", qualification: "Ph.D. (Vellore Institute of Technology, Vellore)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/DSC_7456.JPG", profileUrl: "https://mits.ac.in/facultyprofile/530.html" },
       { name: "Dr. Murugan. P", designation: "Asst. Professor", qualification: "Ph.D. (Pondicherry University)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/DSC_7451.JPG", profileUrl: "https://mits.ac.in/facultyprofile/580.html" },
-      { name: "Dr. Bhanupriya C. K", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Calicut)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/priya.JPG", profileUrl: "https://mits.ac.in/facultyprofile/681.html" },
-      { name: "Dr. Sangeeta Dhawan", designation: "Asst. Professor", qualification: "Ph.D. (Birla Institute of Technology & Science - Pilani, Hyderabad)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/sangeetha.jpg", profileUrl: "https://mits.ac.in/facultyprofile/693.html" },
-      { name: "Dr. M. Chandra Sekhar", designation: "Assoc. Professor & Head", qualification: "International Research Professor (Yeungnam University, Republic of Korea)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Chandra Sekhar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/372.html" },
-      { name: "Dr. N. Nanda Kumar Reddy", designation: "Assoc. Professor & Associate Dean", qualification: "Ph.D. (Sri Venkateswara University)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. N. Nanda Kumar Reddy.JPG", profileUrl: "https://mits.ac.in/facultyprofile/378.html" },
+      { name: "Dr. Bhanupriya C. K", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Calicut)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Bhanupriya C. K.JPG", profileUrl: "https://mits.ac.in/facultyprofile/681.html" },
+      { name: "Dr. Sangeeta Dhawan", designation: "Asst. Professor", qualification: "Ph.D. (Birla Institute of Technology & Science - Pilani, Hyderabad)", subDepartment: "Department of Mathematics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sangeeta Dhawan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/693.html" },
+      { name: "Dr. M. Chandra Sekhar", designation: "Assoc. Professor & Head", qualification: "International Research Professor (Yeungnam University, Republic of Korea)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. M. Chandra Sekhar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/372.html" },
+      { name: "Dr. N. Nanda Kumar Reddy", designation: "Assoc. Professor & Associate Dean", qualification: "Ph.D. (Sri Venkateswara University)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/nanda.jpg", profileUrl: "https://mits.ac.in/facultyprofile/378.html" },
       { name: "Dr. Sanjaya Brahma", designation: "Research Asst. Professor", qualification: "Post Doctoral Fellow (National Cheng Kung University, Tainan, Taiwan)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Sanjaya-Brahma.jpg", profileUrl: "https://mits.ac.in/facultyprofile/715.html" },
-      { name: "Dr. N. Reddeppa", designation: "Asst. Professor", qualification: "Research Professor (Seoul National University of Science & Technology, Seoul, Republic of Korea)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/redde.JPG", profileUrl: "https://mits.ac.in/facultyprofile/370.html" },
-      { name: "Dr. Jagadeesh Babu Bellam", designation: "Asst. Professor", qualification: "Post-Doctoral Fellow (University of Maine, Le Mans-CNRS, France)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Jagadeesh Babu Bellam.JPG", profileUrl: "https://mits.ac.in/facultyprofile/375.html" },
-      { name: "Dr. Sunku Sreedhar", designation: "Asst. Professor", qualification: "Post-doctoral Fellow (SSCU, Indian Institute of Sciences, Bangalore, India)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Sunku Sreedhar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/379.html" },
-      { name: "Dr. Rajesh Dagupati", designation: "Asst. Professor", qualification: "Researcher (The Alexander Dubček University of Trenčín, Slovakia, Europe)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Rajesh Dagupati.JPG", profileUrl: "https://mits.ac.in/facultyprofile/550.html" },
+      { name: "Dr. N. Reddeppa", designation: "Asst. Professor", qualification: "Research Professor (Seoul National University of Science & Technology, Seoul, Republic of Korea)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. N. Reddeppa.JPG", profileUrl: "https://mits.ac.in/facultyprofile/370.html" },
+      { name: "Dr. Jagadeesh Babu Bellam", designation: "Asst. Professor", qualification: "Post-Doctoral Fellow (University of Maine, Le Mans-CNRS, France)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/fbbd46bc1db8ec973c35f6bca55a3663.JPG", profileUrl: "https://mits.ac.in/facultyprofile/375.html" },
+      { name: "Dr. Sunku Sreedhar", designation: "Asst. Professor", qualification: "Post-doctoral Fellow (SSCU, Indian Institute of Sciences, Bangalore, India)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sunku Sreedhar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/379.html" },
+      { name: "Dr. Rajesh Dagupati", designation: "Asst. Professor", qualification: "Researcher (The Alexander Dubček University of Trenčín, Slovakia, Europe)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Rajesh Dagupati.JPG", profileUrl: "https://mits.ac.in/facultyprofile/550.html" },
       { name: "Dr. Charan Kuchi", designation: "Asst. Professor", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Charan Kuchi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/482.html" },
       { name: "Dr. Usuf Rahaman", designation: "Asst. Professor", qualification: "Ph.D. (Aligarh Muslim University)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Usuf Rahaman.JPG", profileUrl: "https://mits.ac.in/facultyprofile/384.html" },
-      { name: "Dr. K. Chandrakanta", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Chandrakanta.JPG", profileUrl: "https://mits.ac.in/facultyprofile/387.html" },
-      { name: "Dr. Alok Barik", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Alok Barik.JPG", profileUrl: "https://mits.ac.in/facultyprofile/560.html" },
+      { name: "Dr. K. Chandrakanta", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. K. Chandrakanta.JPG", profileUrl: "https://mits.ac.in/facultyprofile/387.html" },
+      { name: "Dr. Alok Barik", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", subDepartment: "Department of Physics", image: "https://mits.ac.in/public/uploads/faculty/Dr. Alok Barik.JPG", profileUrl: "https://mits.ac.in/facultyprofile/560.html" },
       { name: "Dr. K. Chandra Mohan", designation: "Assoc. Professor & Assistant Dean", qualification: "Ph.D. (S. V. University, Tirupati)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Chandra Mohan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/376.html" },
       { name: "Dr. Gajanan Kunde", designation: "Assoc. Professor", qualification: "Postdoc Fellow (Indian Institute Technology, Delhi, India)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/kunde.jpg", profileUrl: "https://mits.ac.in/facultyprofile/710.html" },
       { name: "Dr. P. Amaladass", designation: "Asst. Professor", qualification: "Research professor (Korea University, South Korea)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Amaladass.JPG", profileUrl: "https://mits.ac.in/facultyprofile/368.html" },
-      { name: "Dr. Renjith Bhaskaran", designation: "Asst. Professor & Head", qualification: "Postdoctoral Research Associate (Texas A&M University)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Renjith Bhaskaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/377.html" },
+      { name: "Dr. Renjith Bhaskaran", designation: "Asst. Professor & Head", qualification: "Postdoctoral Research Associate (Texas A&M University)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/renjithbhaskar.png", profileUrl: "https://mits.ac.in/facultyprofile/377.html" },
       { name: "Dr. M. Balaji", designation: "Asst. Professor", qualification: "Post-Doctoral Fellow (Pusan National University, South Korea)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/1c33f336b2573fe1357aa193e4999386.JPG", profileUrl: "https://mits.ac.in/facultyprofile/595.html" },
       { name: "Dr. K. V. Vivekananda", designation: "Asst. Professor", qualification: "Post Doctoral Research (Bhabha Atomic Research Centre, Mumbai, India)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/90949dbc63eb24468711fe5cf72dadcb.JPG", profileUrl: "https://mits.ac.in/facultyprofile/714.html" },
       { name: "Dr. Rajaram. R", designation: "Asst. Professor", qualification: "Post-doctoral Fellow (Indian Institute of Technology, Madras)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Rajaram.JPG", profileUrl: "https://mits.ac.in/facultyprofile/491.html" },
-      { name: "Dr. V. Raju", designation: "Asst. Professor", qualification: "Ph.D. (VIT University)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Dr. V. Raju.JPG", profileUrl: "https://mits.ac.in/facultyprofile/380.html" },
+      { name: "Dr. V. Raju", designation: "Asst. Professor", qualification: "Ph.D. (VIT University)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/6bba97aa042cf03062920fdcaa74422f.JPG", profileUrl: "https://mits.ac.in/facultyprofile/380.html" },
       { name: "Dr. K. Imran", designation: "Asst. Professor", qualification: "Ph.D. (SVU College of Sciences, S V University)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Imran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/381.html" },
       { name: "Dr. C. Venkateswara Raju", designation: "Asst. Professor", qualification: "Post Doctoral (Chung Ang University)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/raju.JPG", profileUrl: "https://mits.ac.in/facultyprofile/602.html" },
-      { name: "Dr. Sanoop P", designation: "Asst. Professor", qualification: "Ph.D. (University of Kerala)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Sanoop P.JPG", profileUrl: "https://mits.ac.in/facultyprofile/500.html" },
+      { name: "Dr. Sanoop P", designation: "Asst. Professor", qualification: "Ph.D. (University of Kerala)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sanoop P.JPG", profileUrl: "https://mits.ac.in/facultyprofile/500.html" },
       { name: "Dr. Ugrabadi Sahoo", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Rourkela)", subDepartment: "Department of Chemistry", image: "https://mits.ac.in/public/uploads/faculty/Ugrabadi Sahoo.JPG", profileUrl: "https://mits.ac.in/facultyprofile/620.html" },
       { name: "Dr. Prageetha G Raju", designation: "Professor & Head - Humanities", qualification: "Ph.D. (Osmania University)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/pragathi.png", profileUrl: "https://mits.ac.in/facultyprofile/704.html" },
-      { name: "Dr. N. Venkata Ramana", designation: "Asst. Professor", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/3010d720e36c9a037ce2da58fa49f8c2.png", profileUrl: "https://mits.ac.in/facultyprofile/390.html" },
-      { name: "Mr. T. Gangadharam", designation: "Asst. Professor", qualification: "Ph.D. (S.V. University Tirupati)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/gangadharam.jpg", profileUrl: "https://mits.ac.in/facultyprofile/435.html" },
+      { name: "Dr. N. Venkata Ramana", designation: "Asst. Professor", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/Humanities.JPG", profileUrl: "https://mits.ac.in/facultyprofile/390.html" },
+      { name: "Mr. T. Gangadharam", designation: "Asst. Professor", qualification: "Ph.D. (S.V. University Tirupati)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/Mr. T. Gangadharam.png", profileUrl: "https://mits.ac.in/facultyprofile/435.html" },
       { name: "Mr. Chandran Krishnamurthy", designation: "Asst. Professor", qualification: "Ph.D. (Karunya University, Coimbatore)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/253e1b744bcefdad07d24bf986db6060.JPG", profileUrl: "https://mits.ac.in/facultyprofile/414.html" },
-      { name: "Dr. C. Srinivasa Raju", designation: "Librarian", qualification: "Ph.D. (J.N.T.U. Kakinada)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/Srinivasa.jpg", profileUrl: "https://mits.ac.in/facultyprofile/393.html" },
-      { name: "Dr. C. Damodharan", designation: "Physical Director", qualification: "Ph.D (Karpagam university, Coimbatore)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/PD.JPG", profileUrl: "https://mits.ac.in/facultyprofile/394.html" },
-      { name: "Mrs. Kadithi Radha", designation: "Assistant Physical Director", qualification: "Ph.D (Sri Krishnadevaraya University)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/kadithiradha.jpg", profileUrl: "https://mits.ac.in/facultyprofile/1088.html" },
+      { name: "Dr. C. Srinivasa Raju", designation: "Librarian", qualification: "Ph.D. (J.N.T.U. Kakinada)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/Dr. C. Srinivasa Raju.JPG", profileUrl: "https://mits.ac.in/facultyprofile/393.html" },
+      { name: "Dr. C. Damodharan", designation: "Physical Director", qualification: "Ph.D (Karpagam university, Coimbatore)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/damodaran.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/394.html" },
+      { name: "Mrs. Kadithi Radha", designation: "Assistant Physical Director", qualification: "Ph.D (Sri Krishnadevaraya University)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/Mrs. Kadithi Radha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1088.html" },
     ],
     detailedAchievements: [
       { title: "English & Foreign Languages Events", description: "International conferences, language-day programs, and communication-focused FDPs are organized regularly.", type: "faculty" },
