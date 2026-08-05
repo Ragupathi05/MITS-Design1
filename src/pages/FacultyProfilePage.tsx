@@ -260,15 +260,34 @@ const FacultyProfilePage = () => {
   const researchLinks: { label: string; url: string; color: string }[] = [];
   let hIndex: string | undefined;
   if (idSection && Array.isArray(idSection.content)) {
-    for (const item of idSection.content as Record<string, string>[]) {
-      if (!item.Identifier) continue;
-      if (/h-?index/i.test(item.Identifier)) {
-        hIndex = item.Link;
-        continue;
+    for (const item of idSection.content as unknown[]) {
+      // Handle object format: { Identifier: "Scopus", Link: "https://..." }
+      if (typeof item === "object" && item !== null && "Identifier" in item) {
+        const obj = item as Record<string, string>;
+        if (!obj.Identifier) continue;
+        if (/h-?index/i.test(obj.Identifier)) {
+          hIndex = obj.Link;
+          continue;
+        }
+        if (obj.Link?.startsWith("http")) {
+          const b = brandFor(obj.Identifier);
+          researchLinks.push({ label: b.label, url: obj.Link, color: b.color });
+        }
       }
-      if (item.Link?.startsWith("http")) {
-        const b = brandFor(item.Identifier);
-        researchLinks.push({ label: b.label, url: item.Link, color: b.color });
+      // Handle plain string format: "Scopus : https://..."
+      else if (typeof item === "string") {
+        if (/h-?index/i.test(item)) {
+          const hMatch = item.match(/:\s*(\d+)/);
+          if (hMatch) hIndex = hMatch[1];
+          continue;
+        }
+        const urlMatch = item.match(/(https?:\/\/[^\s]+)/);
+        if (urlMatch) {
+          const url = urlMatch[1];
+          const labelPart = item.split(":")[0]?.trim() || item;
+          const b = brandFor(labelPart);
+          researchLinks.push({ label: b.label, url, color: b.color });
+        }
       }
     }
   }
