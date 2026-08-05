@@ -718,66 +718,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     "content": "MITS- Best Teacher award for the academic year 2024-25."
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -904,47 +844,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -1125,66 +1024,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     "content": "NPTEL Discipline Star during July &ndash; October 2025 by IIT, Madras."
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -1311,47 +1150,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -1497,66 +1295,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -1683,47 +1421,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -2059,66 +1756,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -2245,47 +1882,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -2462,66 +2058,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -2648,47 +2184,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -2788,66 +2283,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -2974,47 +2409,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -3197,66 +2591,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -3383,47 +2717,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -3757,66 +3050,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -3943,47 +3176,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -4117,66 +3309,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -4303,47 +3435,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -4531,66 +3622,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     "content": "Recognized as NPTEL Discipline Star for the July&ndash;December 2025 session."
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -4717,47 +3748,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -4910,66 +3900,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -5096,47 +4026,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -5390,66 +4279,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -5576,47 +4405,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -5741,66 +4529,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -5927,47 +4655,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -6090,66 +4777,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -6276,47 +4903,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -6745,66 +5331,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -6931,47 +5457,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {
@@ -7046,66 +5531,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Metal Matrix Composites",
-                            "College Name/University": "Bangalore University",
-                            "Year of Passing": "2009"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Manufacturing Science and Engineering",
-                            "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                            "Year of Passing": "2000"
-                        },
-                        {
-                            "Course": "B.E.",
-                            "Branch": "Mechanical Engineering",
-                            "Specialization": "Mechanical Engineering",
-                            "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                            "Year of Passing": "1991"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Projects",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                            "Sanctioning Authority": "DST-SERB",
-                            "Sanctioned Amount": "38.37 Lakhs",
-                            "Duration of the Project": "3 Years"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Faculty": "Dr. C. Yuvaraj",
-                            "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                            "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                            "Sanctioned Amount": "25,500",
-                            "Duration of the Project": "1 Year"
-                        }
-                    ]
-                },
-                {
-                    "title": "Research Guideship",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Scholar Name": "T. Siva Prasad",
-                            "Guide Name": "Dr. C. Yuvaraj",
-                            "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                            "Date of Admission": "2015-16",
-                            "Area of Research": "Composite Materials"
-                        }
-                    ]
-                },
-                {
                     "title": "My Publications",
                     "content": [
                         {
@@ -7232,47 +5657,6 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
                         "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
                         "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
                         "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                            "App. No./Ref No.": "201941027725",
-                            "Date of Filing": "10/7/2019",
-                            "Date of Publishing": "2/8/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                            "Department": "ME",
-                            "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                            "App. No./Ref No.": "2019410117448",
-                            "Date of Filing": "02/05/2019",
-                            "Date of Publishing": "24/05/2019",
-                            "Status": "Filed & Published",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                            "Department": "ME",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "5/1/2018",
-                            "Status": "filed and published",
-                            "MITS Affiliated": "yes"
-                        }
                     ]
                 },
                 {

@@ -2094,63 +2094,6 @@ export const meProfiles: Record<string, FacultyProfile> = {
                     ]
                 },
                 {
-                    "title": "List of Patents",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Name of the Applicant": "Dr. P. Sivaiah,N Siva Balaji, MITS",
-                            "Name of the Inventors": "Dr. P. Sivaiah, N Siva Balaji, MITS",
-                            "Department": "Mechanical",
-                            "Title of the Patent": "Conical shaped micro grooved surface textured tool",
-                            "App. No./Ref No.": "400149-001",
-                            "Date of Filing": "17/11/2023",
-                            "Date of Publishing": "-",
-                            "Award Date": "-",
-                            "Status": "Under examination from 14/02/2024",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "2",
-                            "Name of the Applicant": "Dr. P. Sivaiah, Mr. Harinandan kumar, Dr. Muralidhar Singh, M. Hemanth Kumar, Dr. T. Vishnu Vardhan, Dr. Nagesha",
-                            "Name of the Inventors": "Dr. P. Sivaiah, Mr. Harinandan kumar, Dr. Muralidhar Singh, M. Hemanth Kumar, Dr. T. Vishnu Vardhan, Dr. Nagesha",
-                            "Department": "Civil Engineering",
-                            "Title of the Patent": "Utilization of Waste Poly Ethylene Bags and Fly Ash for Engineering Application",
-                            "App. No./Ref No.": "201841017716A",
-                            "Date of Filing": "11-05-2018",
-                            "Date of Publishing": "25-05-2018",
-                            "Award Date": "18/05/2021",
-                            "Status": "Granted",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "3",
-                            "Name of the Applicant": "Dr. P. Sivaiah, Dr. D. Chakradhar, Mrs. B. Uma, Mr. Harinandan Kumar, Dr. G. Hemanth kumar, Mr. P. Mallikarjuna",
-                            "Name of the Inventors": "Dr. P. Sivaiah, Dr. D. Chakradhar, Mrs. B. Uma, Mr. Harinandan Kumar, Dr. G. Hemanth kumar, Mr. P. Mallikarjuna",
-                            "Department": "Mechanical",
-                            "Title of the Patent": "Jet stream turning holder for cryogenic spray/jet cooling applications",
-                            "App. No./Ref No.": "201741043529A",
-                            "Date of Filing": "5/12/2017",
-                            "Date of Publishing": "15/12/2017",
-                            "Award Date": "11/05/2018",
-                            "Status": "Under examination",
-                            "MITS Affiliated": "yes"
-                        },
-                        {
-                            "S.No": "4",
-                            "Name of the Applicant": "Dr. P. Sivaiah, Dr. G. Hemanth Kumar, Dr. C. Yuvaraj, Mr. Harinandan Kumar, Mr. Prabhu Jayaraman",
-                            "Name of the Inventors": "Dr. P. Sivaiah, Dr. G. Hemanth Kumar, Dr. C. Yuvaraj, Mr. Harinandan Kumar, Mr. Prabhu Jayaraman",
-                            "Department": "Mechanical",
-                            "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                            "App. No./Ref No.": "201741046532A",
-                            "Date of Filing": "26/12/2017",
-                            "Date of Publishing": "05/01/2018",
-                            "Award Date": "05/01/2018",
-                            "Status": "Under examination",
-                            "MITS Affiliated": "yes"
-                        }
-                    ]
-                },
-                {
                     "title": "Conferences & Workshops attended",
                     "content": [
                         "Participated in 2nd International Conference on \"Mechanical Engineering : Research and Evolutionary Challenges\u201d was organized by NIT Warangal from 29th to 31st May 2024.",
