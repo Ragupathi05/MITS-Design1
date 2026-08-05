@@ -101,7 +101,6 @@ const textVariants = {
 const HeroSection = () => {
   const [current, setCurrent]           = useState(0);
   const [dir,     setDir]               = useState(1);
-  const [campusShrunk, setCampusShrunk] = useState(false);
   const [isVisible, setIsVisible]       = useState(true);
   const [isPlaying, setIsPlaying]       = useState(true);
   const [isHovered, setIsHovered]       = useState(false);
@@ -271,15 +270,7 @@ className="w-full h-full object-cover"
               transition={{ duration: 7, ease: "easeOut" }}
             />
           )}
-          {/* Campus: solid black shade that fades out when title moves */}
-          {s.id === "campus" ? (
-            <motion.div
-              className="absolute inset-0"
-              animate={{ opacity: campusShrunk ? 0 : 1 }}
-              transition={{ duration: 3, ease: "easeInOut" }}
-              style={{ background: "rgba(0,0,0,0.72)" }}
-            />
-          ) : s.overlay ? (
+          {s.overlay ? (
             <div className={`absolute inset-0 ${s.overlay}`} />
           ) : null}
         </motion.div>
