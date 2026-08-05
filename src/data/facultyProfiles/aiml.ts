@@ -1029,7 +1029,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
     },
   "Dr. S. Padma": {
         "name": "Dr. S. Padma",
-        "email": null,
+        "email": "drpadmas@mits.ac.in",
         "image": "https://mits.ac.in/public/uploads/faculty/Dr. S. Padma.JPG",
         "designation": "Assoc. Professor",
         "sections": [
@@ -1104,7 +1104,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "MITS",
                             "Academic Year": "2024",
                             "Author Position": "3",
-                            "Details of Research Publication": "Leveraging EfficientNetB3 in a Deep Learning Framework for High-Accuracy MRI Tumor Classification&rdquo;, CMC-Computers, Materials & Continua, DOI:10.32604/cmc.2024.053563",
+                            "Details of Research Publication": "Leveraging EfficientNetB3 in a Deep Learning Framework for High-Accuracy MRI Tumor Classification\u201d, CMC-Computers, Materials & Continua, DOI:10.32604/cmc.2024.053563",
                             "Indexing": "SCIE",
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
@@ -1114,7 +1114,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "MITS",
                             "Academic Year": "2024",
                             "Author Position": "2",
-                            "Details of Research Publication": "Classification of Mental Health and Emotion of Human from Text using Machine Learning Approaches,&quot; 2023 6th International Conference on Information Systems and Computer Networks (ISCON), Mathura, India, 2023, pp. 1-7, IEEE Xplore",
+                            "Details of Research Publication": "Classification of Mental Health and Emotion of Human from Text using Machine Learning Approaches,\" 2023 6th International Conference on Information Systems and Computer Networks (ISCON), Mathura, India, 2023, pp. 1-7, IEEE Xplore",
                             "Indexing": "Scopus",
                             "Publication": "Conference Proceedings",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1124,7 +1124,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "MITS",
                             "Academic Year": "2024",
                             "Author Position": "2",
-                            "Details of Research Publication": "Predictive Modeling of Academic Success using Extreme Learning Machine&rdquo;, at ICCICCT &ndash; 2024",
+                            "Details of Research Publication": "Predictive Modeling of Academic Success using Extreme Learning Machine\u201d, at ICCICCT &ndash; 2024",
                             "Indexing": "Scopus",
                             "Publication": "Book Chapter",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1134,7 +1134,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "MITS",
                             "Academic Year": "2024",
                             "Author Position": "2",
-                            "Details of Research Publication": "A Review on Smart Agriculture System&rdquo;, at ICCICCT &ndash; 2024",
+                            "Details of Research Publication": "A Review on Smart Agriculture System\u201d, at ICCICCT &ndash; 2024",
                             "Indexing": "Scopus",
                             "Publication": "Conference Proceedings",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1164,7 +1164,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "MITS",
                             "Academic Year": "2022",
                             "Author Position": "3",
-                            "Details of Research Publication": "Analyzing How E-Learning and Virtual Reality could be Integrated to Enhance Studies&rdquo;, ECS Transactions, 107 (1) 13163-13173 (2022), The Electrochemical Society",
+                            "Details of Research Publication": "Analyzing How E-Learning and Virtual Reality could be Integrated to Enhance Studies\u201d, ECS Transactions, 107 (1) 13163-13173 (2022), The Electrochemical Society",
                             "Indexing": "Scopus",
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
@@ -1174,7 +1174,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "MITS",
                             "Academic Year": "2021",
                             "Author Position": "1",
-                            "Details of Research Publication": "Imparting OBE to the Younger Generation.&quot; Assessment Tools for Mapping Learning Outcomes With Learning Objectives, edited by G. R. Sinha, IGI Global, 2021, pp. 27-41. https://doi.org/10.4018/978-1-7998-4784-7.ch003",
+                            "Details of Research Publication": "Imparting OBE to the Younger Generation.\" Assessment Tools for Mapping Learning Outcomes With Learning Objectives, edited by G. R. Sinha, IGI Global, 2021, pp. 27-41. https://doi.org/10.4018/978-1-7998-4784-7.ch003",
                             "Indexing": "Scopus",
                             "Publication": "Book chapter",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1194,7 +1194,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "Others",
                             "Academic Year": "2018",
                             "Author Position": "1",
-                            "Details of Research Publication": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network&rdquo;, International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11,2018",
+                            "Details of Research Publication": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network\u201d, International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11,2018",
                             "Indexing": "Scopus",
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
@@ -1204,7 +1204,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "Others",
                             "Academic Year": "2015",
                             "Author Position": "1",
-                            "Details of Research Publication": "A Survey on study of various machine learning methods for classification&ldquo; International Journal of Database Theory and Application Vol 8. No 5(2015)",
+                            "Details of Research Publication": "A Survey on study of various machine learning methods for classification\u201c International Journal of Database Theory and Application Vol 8. No 5(2015)",
                             "Indexing": "Scopus",
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
@@ -1214,7 +1214,7 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                             "Publication Affiliation": "Others",
                             "Academic Year": "2014",
                             "Author Position": "1",
-                            "Details of Research Publication": "A Comparative Study on Different Meta-Cognitive Learning for Classification Problems &ldquo; Journal of NanoScience and NanoTechnology - Spring Edition Vol 2, No 1 (2014)",
+                            "Details of Research Publication": "A Comparative Study on Different Meta-Cognitive Learning for Classification Problems \u201c Journal of NanoScience and NanoTechnology - Spring Edition Vol 2, No 1 (2014)",
                             "Indexing": "Scopus",
                             "Publication": "Article",
                             "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
@@ -1344,243 +1344,6 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                         "Senior Member IEEE &ndash; Membership No: 98329128",
                         "IEEE WIE Student Advisor &ndash; MITS Student Branch",
                         "Life Member ISTE &ndash; Membership No : LM140721"
-                    ]
-                },
-                {
-                    "title": "My Publications",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Title of the Paper": "Analysis and Optimization of Metal Injection Molding Feedstock SS 316L for Rheological Properties",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of The Institution of Engineers (India): Series D, pp.1-8, 2018."
-                        },
-                        {
-                            "S.No": "2",
-                            "Title of the Paper": "Investigation of Mechanical Properties of a Composite Tubular Electrode Based Hard coating on Mild Steel Substrate",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Research Foundation, Volume 4, Issue 3, March 2017"
-                        },
-                        {
-                            "S.No": "3",
-                            "Title of the Paper": "Metal Injection Molding \u2013 A Review",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Manufacturing Technology Today Journal, Vol. 15, Issue No. 12,2017"
-                        },
-                        {
-                            "S.No": "4",
-                            "Title of the Paper": "Structural Analysis and Fabrication of femoral component of Cemented Hip implant through Fused Deposition Modeling.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Sciences and Research Technology, 72-80, 2016."
-                        },
-                        {
-                            "S.No": "5",
-                            "Title of the Paper": "Application of Taguchi Method for Optimizing the Parameters of Thermal Properties of Al/SiC-Gr Hybrid Composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Bonfring International Journal of Advances in Image Processing, Vol. 6, No. 4, 2016."
-                        },
-                        {
-                            "S.No": "6",
-                            "Title of the Paper": "Fabrication of cast aluminium-silicon (Al-Si) and aluminium -Magnesium (Al-Mg) alloys and their properties",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Acta Metallurgica Slovaca, Vol 22, No.4, pp. 212-221, 2016."
-                        },
-                        {
-                            "S.No": "7",
-                            "Title of the Paper": "Design, Analysis, Fabrication and Testing of CFRP with CNF Composite Cylinder for Space Applications",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Composite Materials, Vol.5, No.5, pp.102-128, 2015."
-                        },
-                        {
-                            "S.No": "8",
-                            "Title of the Paper": "Experimental Characterization of Carbon Fibre T700 / Epoxy towpreg for Space Applications",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Research and Applications, Vol.5, No.12, pp.1-14, 2015."
-                        },
-                        {
-                            "S.No": "9",
-                            "Title of the Paper": "Optimisation Of Welding Process Of Composite Chromium-Carbide Based Tubular Electrode For Hardfacing",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical and Production Engineering Research and Development, Vol.4, No.1, pp. 39-46, 2014."
-                        },
-                        {
-                            "S.No": "10",
-                            "Title of the Paper": "Effect of Nickel Content on Microstructure of Modified Zinc aluminium Cast Alloys",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Technical Research and Applications, Vol.2, No.4, pp.81-83, 2014."
-                        },
-                        {
-                            "S.No": "11",
-                            "Title of the Paper": "Design and analysis of a single seater race car chassis frame",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Research Aeronautical and Mechanical Engineering, Vol.2, No.8, pp.12-23, 2014."
-                        },
-                        {
-                            "S.No": "12",
-                            "Title of the Paper": "Evaluation of Mechanical Properties of Al/SiC-Graphite Hybrid Metal Matrix Composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Trends in Computer Science and Engineering, Vol.2, No.6, pp. 286-289, 2013."
-                        },
-                        {
-                            "S.No": "13",
-                            "Title of the Paper": "Microstructural and Mechanical Behaviour of Zinc-Aluminium Cast Alloys",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical Engineering and Technology (IJMET), Vol.4, No.4, pp. 243 \u2013 248, 2013."
-                        },
-                        {
-                            "S.No": "14",
-                            "Title of the Paper": "Characterization of Machinability Behaviour of Al/Al2O3 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Engineering Research and Studies, Vol.1, No.2, pp. 114-117, 2012."
-                        },
-                        {
-                            "S.No": "15",
-                            "Title of the Paper": "Neural network for prediction of EDM of Al/SiC-graphite particulate reinforced hybrid composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Int J Emerg Technol Adv Eng, Vol.2, No.12, pp. 730-739, 2012."
-                        },
-                        {
-                            "S.No": "16",
-                            "Title of the Paper": "Effect of Thermal Fatigue Behaviour on Bending Strength of Al/Al 2 O 3 MMCs.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                        },
-                        {
-                            "S.No": "17",
-                            "Title of the Paper": "Effect of Drilling Parameters on Drillability Behaviour of Al/Al 2 O 3 MMCs.",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                        },
-                        {
-                            "S.No": "18",
-                            "Title of the Paper": "Study on Transition Behaviour of Al/Al2O3 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "World Journal of Engineering, Vol.5, No.4, pp. 543-544, 2008."
-                        },
-                        {
-                            "S.No": "19",
-                            "Title of the Paper": "Optimization of machinability parameters of aluminium/alumina metal matrix composites",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.3, No.9, pp.1197-1204, 2008."
-                        },
-                        {
-                            "S.No": "20",
-                            "Title of the Paper": "A study of transition wear behaviour of alumina particle reinforced Al-6061 MMCs",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Reinforced Plastics and Composites, Vol.28, No.23, pp. 2903-2909, 2009."
-                        }
-                    ]
-                },
-                {
-                    "title": "Conferences & Workshops attended",
-                    "content": [
-                        "Participated in \u201cAcademia Day-Part of \u201c3Dverve 2019\u201d- An Annual Technical Conference of Dassault Systemes Foundation and Dassault Systemes\u201d at Dassault Systemes, India R&D (Auditorium), Hinjewadi Phase 1, Pune on 21 February 2019.",
-                        "One Day workshop on Creating Roadmap for Innovation and Incubation Centres in AP Educational Institutions, organized by ITE&C department on 19-10-2016 at Gateway Hotel in Vijayawada.",
-                        "A workshop on \u201cQuality Initiatives in Technical & Higher Educational Institutions (in compliance with NBA & NAAC Accreditation)\u201d organized by Engineering Staff College of India (ESCI), Hyderabad, from 07-09-16 to 9-09-16.",
-                        "3rd International Conference in Transformations in Engineering Education (ICTIEE 2016) was organized by IUCEE (Indo-US Collaboration for Engineering Education) and College of Engineering, Pune (COEP) during 08-12 January 2016.",
-                        "An Orientation Session on \u201cSiemens Centres of Excellence (COE) Clusters in AP\u201d organized by Andhra Pradesh State Skill Development Corporation at the Sri City Business Centre, Sri City on 27th August 2015.",
-                        "A one-day workshop on \u201cAwareness on Various programs for Foreign University Collaborations\u201d was Organized at JNTUA, Ananthapuramu on 16th May 2015.",
-                        "A meet in Chennai conducted by Higher Education Forum, South Zone to receive Campus Preparedness Award 2015 on 26th March 2015.",
-                        "International conference in Transformations in Engineering Education (ICTIEE 2015). It is a four day International conference, among these first two days were pre-conference workshops conducted by the BMS College of Engineering, Bangalore and collaborating with Indo-US collaboration for Engineering Education (IUCEE) during 5-8 January 2015.",
-                        "A workshop on TEQIP-II : Good Governance, Leadership and Management on 14th - 15th October 2014 at Metropolitan Hotel, Near Bangla Sahib Gurudwara Road, New Delhi.",
-                        "Represented the college for the workshop on Procurement Practices attended on 22.08.2014, at PSG Institute of Technology, organized by PSG, SPFU-TN and NPIU at Coimbatore.",
-                        "A National Conference on \u201cLeadership in Higher Education\u201d held on July 4, 2014 at Engineering staff college of India (ESCI), Hyderabad.",
-                        "A one day workshop on \u201cAcademia Industry Management For creating Sustainable Employability\u201d held on 06-04-2014 Organized by GP Birla Institute of Human Excellence, Birla Center, Hyderabad.",
-                        "Participated in a Seminar on \u201cInnovative Teaching, Research Learning & Accreditation Practices\u201d (IE-ITR SESSION) organized by ESCI as the constituent part of IE(I) Congress-2013 on 21 December, 2013 at Hotel Leela Palace, Chennai.",
-                        "Appointed as the co ordinator of the program by AICTE and received a grant from AICTE to conduct 2 Weeks FDP On Fatigue & Fracture Mechanics In FE Analysis.",
-                        "A Two Day Workshop on \u201cRecent Trends In Manufacturing \u201c Under TEQIP-II Organised by the Department of Mechanical Engineering, Chaitanya Bharathi Institute of Technology, Gandipet, Hyderabad on 29-30 July 2013.",
-                        "A Two Day Workshop on \u201cProcurement Guidelines & PMSS Training\" under TEQIP-II conducted by NPIU - New Delhi and SPFU Andhra Pradesh at University College of engineering, Osmania University, Hyderabad on 16-17 May 2013.",
-                        "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
-                        "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
-                        "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                    ]
-                },
-                {
-                    "title": "Details of Educational Qualification",
-                    "content": [
-                        {
-                            "Course": "Ph.D.",
-                            "Specialization": "Computer Science",
-                            "Group": "Computer Science",
-                            "College Name/University": "Bharathiar University",
-                            "Year of Passing": "2020"
-                        },
-                        {
-                            "Course": "M.Phil.",
-                            "Specialization": "Computer Science",
-                            "Group": "Computer Science",
-                            "College Name/University": "Bharathidasan University",
-                            "Year of Passing": "2010"
-                        },
-                        {
-                            "Course": "M.E.",
-                            "Specialization": "Computer Science and Engineering",
-                            "Group": "Computer Science and Engineering",
-                            "College Name/University": "Anna University",
-                            "Year of Passing": "2010"
-                        },
-                        {
-                            "Course": "M.C.A",
-                            "Specialization": "Computer Applications",
-                            "Group": "Computer Applications",
-                            "College Name/University": "Bharathidasan University",
-                            "Year of Passing": "2002"
-                        },
-                        {
-                            "Course": "B.Sc.",
-                            "Specialization": "Computer Science",
-                            "Group": "B.Sc.",
-                            "College Name/University": "Bharathiar University",
-                            "Year of Passing": "1998"
-                        }
-                    ]
-                },
-                {
-                    "title": "List of Publications",
-                    "content": [
-                        {
-                            "S.No": "1",
-                            "Title of the Paper": "A Survey on Study of Various Machine Learning Methods for Classification",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Database Theory and Application, Vol. 8, No. 5, 2015, pp. 265 \u2013 272. (Scopus Indexed)"
-                        },
-                        {
-                            "S.No": "2",
-                            "Title of the Paper": "Improved Radial Basis Functions using Projection Based Learning Algorithm for Classification Problems",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Computing and Intelligent Systems, Volume 01, Issue 01, May2017 , pp. 22 \u2013 25"
-                        },
-                        {
-                            "S.No": "3",
-                            "Title of the Paper": "Projection Based Learning with Radial Basis Function Neural Network for Improved Classification Performance",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Shanlax International Journal of Arts, Science and Humanities, Special Issue 2, Oct 2017, Vol. 5, pp. 407 \u2013 413 (UGC Care)"
-                        },
-                        {
-                            "S.No": "4",
-                            "Title of the Paper": "Solving Classification Problems Using Projection Based Learning Algorithm With Fuzzy Radial Basis Function Neural Network",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Computer Intelligence and Applications (IJCIA) Vol. 17, No. 03, 1850013-1-11,2018. (Scopus Indexed)"
-                        },
-                        {
-                            "S.No": "5",
-                            "Title of the Paper": "Breast Cancer Detection and Classification using Fuzzy and Projection Based Learning in Meta-cognitive Extreme Learning Machine",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Compliance Engineering Journal, Vol. 11, Issue 1, 2020, 265 \u2013 279 (UGC Care)"
-                        },
-                        {
-                            "S.No": "6",
-                            "Title of the Paper": "Combined Fuzzy and Projection based Learning in META-Cognitive Neural Network for MAMMOGRAM classification",
-                            "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Computing and Intelligent Systems , Vol. 4, Issue 1, 93 - 98"
-                        }
-                    ]
-                },
-                {
-                    "title": "Conferences & Workshops attended",
-                    "content": [
-                        "Participated in \"3rd International Conference on Advancements in Smart Computing and Information Security (ASCIS 2024)\" as a Chairperson at ASCIS 2024 from October 16th to 18th, 2024.",
-                        "Attended insights from \"NASSCOM Global Inclusion Summit 2024\" at Bengaluru on 08th August 2024."
-                    ]
-                },
-                {
-                    "title": "Reach Us",
-                    "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-                },
-                {
-                    "title": "Departments",
-                    "content": [
-                        "--> B.Tech Civil Engineering --> <!--",
-                        "--> B.Tech Computer Science --> <!--",
-                        "--> B.Tech Mechanical --> <!--",
-                        "--> B.Tech Electrical & Electronics --> <!--",
-                        "--> MBA --> <!--",
-                        "--> MCA --> <!--"
-                    ]
-                },
-                {
-                    "title": "Get in touch",
-                    "content": [
-                        "--> Documentation --> <!--",
-                        "--> Forums --> <!--",
-                        "--> Language Packs --> <!--",
-                        "--> Release Status --> <!--",
-                        "--> Documentation --> <!--",
-                        "Follow US:"
                     ]
                 }
             ]
