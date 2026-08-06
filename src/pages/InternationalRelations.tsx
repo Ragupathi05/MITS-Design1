@@ -131,7 +131,7 @@ const AnimatedStat = ({ value, label }: { value: string; label: string }) => {
         {display}
         {suffix}
       </div>
-      <div className="text-sm md:text-sm text-muted-foreground mt-1">{label}</div>
+      <div className="text-sm text-muted-foreground mt-1">{label}</div>
     </div>
   );
 };
@@ -344,7 +344,7 @@ const AboutSection = () => (
           A Global Academic Community
         </h3>
         {aboutIR.intro.map((p, i) => (
-          <p key={i} className="text-slate-700">{p}</p>
+          <p key={i} className="text-sm">{p}</p>
         ))}
         {/* The goal and mission complete the academic-community story, with no unused space below it. */}
         <div className="grid gap-4 border-t border-slate-200 pt-5 xl:grid-cols-[0.8fr_1.2fr]">
@@ -387,7 +387,7 @@ const AboutSection = () => (
           <div className="flex items-center gap-2 text-[#0f2a44] font-bold text-sm uppercase tracking-widest">
             <Building2 className="w-4 h-4" /> Contact the IRO
           </div>
-          <div className="space-y-2 text-sm md:text-sm text-slate-700">
+          <div className="space-y-2 text-sm text-slate-700">
             <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />{contactCard.address}</div>
             <div className="flex items-center gap-2"><Calendar className="w-4 h-4 text-primary shrink-0" />{contactCard.timings}</div>
             <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${contactCard.phone}`} className="hover:underline">{contactCard.phone}</a></div>
@@ -433,7 +433,7 @@ const AboutSection = () => (
         <h3 className="text-2xl md:text-3xl font-bold mt-4 mb-3 text-white" style={{ fontFamily: "var(--font-display)" }}>
           {aboutIR.functionsTitle}
         </h3>
-        <p className="text-white/80 text-sm md:text-base max-w-4xl leading-relaxed">
+        <p className="text-white/80 text-sm max-w-4xl leading-relaxed">
           {aboutIR.functionsDesc}
         </p>
 
@@ -499,7 +499,7 @@ const AboutSection = () => (
           <h3 className="font-bold text-secondary text-2xl mb-3" style={{ fontFamily: "var(--font-display)" }}>
             {aboutIR.journey.title}
           </h3>
-          <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+          <p className="text-slate-700 text-sm leading-relaxed">
             {aboutIR.journey.text}
           </p>
         </div>
@@ -517,7 +517,7 @@ const AboutSection = () => (
         <p className="text-sm text-muted-foreground mb-4">Expanding MITS global footprint through bilateral research and pathways</p>
         <ul className="space-y-3">
           {aboutIR.longTermObjectives.map((obj, i) => (
-            <li key={i} className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 text-sm md:text-sm text-slate-700 font-medium">
+            <li key={i} className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 text-sm text-slate-700 font-medium">
               <ArrowRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
               <span>{obj}</span>
             </li>
@@ -532,7 +532,7 @@ const AboutSection = () => (
         <div className="flex items-center gap-2 text-[#caa74d] font-bold mb-3 uppercase text-sm tracking-widest">
           <Users className="w-4 h-4" /> International Relations Office (IRO) Leadership
         </div>
-        <p className="text-sm md:text-base leading-relaxed text-white/90">{aboutIR.office}</p>
+        <p className="text-sm leading-relaxed text-white/90">{aboutIR.office}</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2 border-t border-white/10">
@@ -718,7 +718,7 @@ export const PartnerCard = ({ p }: { p: (typeof partners)[0] }) => {
 
         {/* Full Detailed Description from Document */}
         {p.description && (
-          <p className="text-sm md:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+          <p className="text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
             {p.description}
           </p>
         )}
@@ -980,7 +980,7 @@ const ParticipantsModal = ({
           <div className="p-5 border-b border-border flex items-start justify-between gap-3 bg-gradient-to-r from-[#0f2a44] to-[#152f4f] text-white shrink-0">
             <div className="min-w-0">
               <div className="text-[11px] uppercase tracking-widest text-[#caa74d] font-bold mb-1">Participants</div>
-              <h3 className="font-bold leading-snug text-sm md:text-base" style={{ fontFamily: "var(--font-display)" }}>
+              <h3 className="font-bold leading-snug text-sm" style={{ fontFamily: "var(--font-display)" }}>
                 {program.title}
               </h3>
             </div>
@@ -1616,7 +1616,7 @@ const WorkshopsSection = () => (
           <h3 className="relative font-bold text-secondary text-xl md:text-2xl mb-4" style={{ fontFamily: "var(--font-display)" }}>
             {w.title}
           </h3>
-          <p className="relative text-sm md:text-base text-secondary/80 leading-relaxed mb-6">
+          <p className="relative text-sm text-secondary/80 leading-relaxed mb-6">
             {w.description}
           </p>
 
@@ -1703,7 +1703,7 @@ const GlobalFootprintStrip = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 mt-6 md:mt-8">
       <div className="rounded-2xl border border-border bg-white/70 backdrop-blur-sm px-5 py-4 md:px-8 md:py-5 flex flex-wrap items-center gap-3 md:gap-4 shadow-sm">
-        <span className="text-[11px] md:text-sm font-bold uppercase tracking-widest text-muted-foreground shrink-0 flex items-center gap-2">
+        <span className="text-sm font-bold uppercase tracking-widest text-muted-foreground shrink-0 flex items-center gap-2">
           <Globe className="w-3.5 h-3.5 text-primary" /> Our Global Footprint
         </span>
         <div className="h-4 w-px bg-border hidden md:block" />
@@ -1712,7 +1712,7 @@ const GlobalFootprintStrip = () => {
             <span
               key={country}
               className={cn(
-                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] md:text-sm font-semibold border border-transparent",
+                "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold border border-transparent",
                 regionColors[region] || regionColors.Other
               )}
             >
@@ -1795,7 +1795,7 @@ const InternationalRelations = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="font-body text-lg md:text-xl text-white/80 mt-6 max-w-2xl leading-relaxed"
+              className="font-body text-sm text-white/80 mt-6 max-w-2xl leading-relaxed"
             >
               Connecting MITS to global universities through academic partnerships, student mobility,
               collaborative research and international learning opportunities.
