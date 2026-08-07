@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { cn, slugify } from "@/lib/utils";
 import {
   aboutIR, aboutGallery, contactCard, partners, partnerImages, type Partner,
-  internships, internshipArchives, fellowships, globalPrograms,
+  internships, fellowships, globalPrograms,
   events, workshops, heroBanner, heroStats,
   internshipGallery, fellowshipGallery, globalGallery, eventGallery,
   workshopGallery, stanfordGallery, heroBanners,
@@ -780,8 +780,8 @@ const PartnerLogoTile = ({ p }: { p: (typeof partners)[0] }) => {
         <FallbackCrest name={p.name} />
       )}
       {/* Hover tooltip */}
-      <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-[#0f2a44] to-[#0f2a44]/90 text-white px-3 py-2 text-center">
-        <div className="text-[10px] font-bold leading-tight line-clamp-2">{p.name}</div>
+      <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-[#0f2a44] to-[#0f2a44]/90 px-3 py-2 text-center">
+        <div className="text-[10px] font-bold leading-tight line-clamp-2 text-[#caa74d]">{p.name}</div>
         <div className="text-[9px] text-white/70 mt-0.5">{p.country}</div>
       </div>
     </div>
@@ -946,11 +946,22 @@ const MoUSection = () => {
   );
 };
 
-/** Extracts the first 4-digit year from a period string, for year-wise grouping. */
-const getProgramYear = (period?: string): string => {
-  if (!period) return "Undated";
-  const match = period.match(/\d{4}/);
-  return match ? match[0] : "Undated";
+/** Extracts the academic year from a program, falling back to extracting from period string. */
+const getProgramYear = (p: (typeof internships)[number]): string => {
+  if (p.academicYear) return p.academicYear;
+  if (!p.period) return "Undated";
+  const match = p.period.match(/\d{4}/);
+  if (!match) return "Undated";
+  const year = parseInt(match[0], 10);
+  // Convert calendar year to academic year: July–Dec → year/year+1, Jan–Jun → year-1/year
+  const monthMatch = p.period.match(/(January|February|March|April|May|June|July|August|September|October|November|December)/i);
+  if (monthMatch) {
+    const month = monthMatch[0].toLowerCase();
+    const lateMonths = ["july", "august", "september", "october", "november", "december"];
+    if (lateMonths.includes(month)) return `${year}-${String(year + 1).slice(2)}`;
+    return `${year - 1}-${String(year).slice(2)}`;
+  }
+  return `${year}-${String(year + 1).slice(2)}`;
 };
 
 const ParticipantsModal = ({
@@ -980,7 +991,7 @@ const ParticipantsModal = ({
           <div className="p-5 border-b border-border flex items-start justify-between gap-3 bg-gradient-to-r from-[#0f2a44] to-[#152f4f] text-white shrink-0">
             <div className="min-w-0">
               <div className="text-[11px] uppercase tracking-widest text-[#caa74d] font-bold mb-1">Participants</div>
-              <h3 className="font-bold leading-snug text-sm" style={{ fontFamily: "var(--font-display)" }}>
+              <h3 className="font-bold leading-snug text-sm text-[#caa74d]" style={{ fontFamily: "var(--font-display)" }}>
                 {program.title}
               </h3>
             </div>
@@ -990,7 +1001,7 @@ const ParticipantsModal = ({
           </div>
           <div className="overflow-y-auto p-5">
             <table className="w-full text-sm">
-              <thead className="text-sm uppercase text-muted-foreground border-b border-border">
+              <thead className="text-sm uppercase text-[#caa74d] border-b border-border">
                 <tr>
                   <th className="text-left py-2 pr-4">#</th>
                   <th className="text-left py-2 pr-4">Name</th>
@@ -1053,7 +1064,7 @@ const InternshipProgramCard = ({
       <div className="p-5 md:p-6 bg-[linear-gradient(115deg,rgba(240,253,250,.95),rgba(255,255,255,.95)_52%,rgba(240,249,255,.9))] border-b border-slate-200/80">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h3 className="text-lg font-bold text-secondary leading-snug" style={{ fontFamily: "var(--font-display)" }}>
+            <h3 className="text-lg font-bold text-[#caa74d] leading-snug" style={{ fontFamily: "var(--font-display)" }}>
               {p.title}
             </h3>
             <div className="flex flex-wrap items-center gap-3 mt-2 text-sm text-muted-foreground">
@@ -1122,10 +1133,10 @@ const InternshipProgramCard = ({
           className="w-full flex items-center justify-between px-5 md:px-6 py-4 hover:bg-slate-50 transition-colors group"
         >
           <span className="inline-flex items-center gap-2 text-sm font-semibold text-secondary">
-            <Users className="w-4 h-4 text-primary" />
+            <Users className="w-4 h-4 text-[#caa74d]" />
             {p.participants.length} Participant{p.participants.length === 1 ? "" : "s"}
           </span>
-          <span className="text-sm font-bold text-primary inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+          <span className="text-sm font-bold text-[#caa74d] inline-flex items-center gap-1 group-hover:gap-2 transition-all">
             View List <ArrowRight className="w-3.5 h-3.5" />
           </span>
         </button>
@@ -1139,7 +1150,7 @@ const InternshipsSection = () => {
   const [activeProgram, setActiveProgram] = useState<(typeof internships)[number] | null>(null);
 
   const byYear = internships.reduce((acc, p) => {
-    const y = getProgramYear(p.period);
+    const y = getProgramYear(p);
     (acc[y] ||= []).push(p);
     return acc;
   }, {} as Record<string, typeof internships>);
@@ -1222,26 +1233,6 @@ const InternshipsSection = () => {
           ))}
         </motion.div>
       </AnimatePresence>
-
-      <div className="ir-lift-card rounded-[1.6rem] border border-white/70 bg-white/75 p-6 backdrop-blur-xl">
-        <h3 className="font-bold text-secondary mb-3" style={{ fontFamily: "var(--font-display)" }}>
-          Internship Archives
-        </h3>
-        <div className="flex flex-wrap gap-3">
-          {internshipArchives.map((a) => (
-            <a
-              key={a.year}
-              href={a.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-4 py-2 text-sm hover:border-primary hover:text-primary transition-colors"
-            >
-              <Download className="w-4 h-4" />
-              {a.year} Internships Data
-            </a>
-          ))}
-        </div>
-      </div>
 
       <ParticipantsModal program={activeProgram} onClose={() => setActiveProgram(null)} />
     </div>

@@ -2,6 +2,8 @@
 // Source: https://mits.ac.in/international-relations
 // All PDFs and images link to official mits.ac.in resources.
 
+import { University } from "lucide-react";
+
 export type IRPerson = {
   name: string;
   designation: string;
@@ -26,6 +28,7 @@ export type ProgramCard = {
   title: string;
   subtitle?: string;
   period?: string;
+  academicYear?: string;
   partner?: string;
   country?: string;
   description?: string;
@@ -144,18 +147,21 @@ export const partners: Partner[] = [
     region: "US",
     website: "https://www.bgsu.edu/",
     ranking: "QS Sustainability Rankings 2026: 1501+ band",
-    description: "Bowling Green State University (BGSU) is a public research university in Bowling Green, Ohio, known for being the No. 1 Public University in Ohio that students say they would choose again. Founded for the public good with over 114 years of history, BGSU is nationally ranked for its strengths in business, engineering, computer science, education, health sciences, psychology, media, and supply chain management/business. BGSU emphasizes applied research, innovation, experiential learning through internships and co-ops, and strong industry partnerships.",
-    strengths: ["Business & Supply Chain Management", "Engineering & Computer Science", "Education & Health Sciences", "Media & Arts", "Experiential Learning & Co-ops"],
-    highlight: "MoU signed 17 Feb 2025; Pathway, joint research, exchange & curriculum framing."
+    description: "Bowling Green State University (BGSU) is a public research university in Bowling Green, Ohio, known for being the No. 1 Public University in Ohio that students say they would choose again. For more than 114 years, Bowling Green State University has been a public university for the public good, always moving forward. Founded by the state, for the state, as a teacher-training institution, the University's history is defined by an educational pursuit for more.\nToday, BGSU is a high-research, nationally ranked, comprehensive university, always proud to be public. It is best known for its historic roots in teacher education, alongside prominent specialties in education, popular psychology and supply chain management/business. It is recognized for its strengths in business, engineering, computer science, education, health sciences, psychology, media, and the arts. However, it is included in the QS Sustainability Rankings 2026, where it is placed in the 1501+ band.\nThe university emphasizes applied research, innovation, experiential learning through internships and co-ops, and strong industry partnerships, preparing students with the practical skills and global perspective needed for successful careers",
+    // strengths: ["Business & Supply Chain Management", "Engineering & Computer Science", "Education & Health Sciences", "Media & Arts", "Experiential Learning & Co-ops"],
+    highlight: "Ranking:  It is a No. 1 Public University in Ohio and 1501+ band in QS Sustainability Rankings 2026."
   },
   {
     name: "University of Applied Sciences Upper Austria (Hagenberg Campus)",
     country: "Austria",
     region: "Europe",
     website: "https://fh-ooe.at/en",
-    description: "The University of Applied Sciences Upper Austria aims to be the leading university of applied sciences in Austria, based on a strong student-centered approach with outstanding applied research, modern services, and strong regional and international connections. Hagenberg Campus is internationally recognized for its excellence in information technology, software engineering, artificial intelligence, cybersecurity, data science, media technology, and communication engineering. It equips students with practical skills and career opportunities in digital and tech sectors.",
-    strengths: ["Information Technology & Software Engineering", "Artificial Intelligence & Cybersecurity", "Data Science & Media Technology", "Communication Engineering", "Project-Based Learning & Industry Collaboration"],
-    highlight: "Leading Austrian university of applied sciences for AI, IT & software engineering."
+    description: `The University of Applied Sciences Upper Austria aims to be the leading university of applied sciences in Austria. This ambition is based on a strong student-centred approach with excellent teaching, modern services, and an attractive environment, as well as outstanding applied research with strong regional roots and international connections. 
+The unique strength lies in the close integration of these two areas. Their mutual reinforcement makes our university a unique place for studying, research and knowledge transfer. University of Applied Sciences Upper Austria – Hagenberg Campus is internationally recognized for its excellence in information technology, software engineering, artificial intelligence, cybersecurity, data science, media technology, and communication engineering. 
+The university emphasizes applied research, industry collaboration, innovation and project-based learning, equipping students with practical skills and strong career opportunities in the digital and technology sectors.`,
+
+    // strengths: ["Information Technology & Software Engineering", "Artificial Intelligence & Cybersecurity", "Data Science & Media Technology", "Communication Engineering", "Project-Based Learning & Industry Collaboration"],
+    highlight: "Ranking: University of Applied Sciences Upper Austria ranks 39th nationally."
   },
   {
     name: "Brno University of Technology (BUT)",
@@ -163,9 +169,12 @@ export const partners: Partner[] = [
     region: "Europe",
     website: "https://www.vut.cz/en/?aid_redir=1",
     ranking: "QS World University Rankings 2027: #=588",
-    description: "Established in 1899, Brno University of Technology (BUT) is one of the largest and most prestigious technical universities in the Czech Republic. Located in Brno, a leading technology and innovation hub, BUT is recognized for excellence in Engineering, Information Technology, Architecture, Business, and Applied Sciences. Offers modern research facilities and extensive industry collaborations with global companies such as IBM, Siemens, Bosch, and Honeywell, alongside Erasmus+ exchange opportunities.",
-    strengths: ["Engineering & Information Technology", "Architecture & Applied Sciences", "IBM, Siemens, Bosch & Honeywell Industry Ties", "Erasmus+ & Global Partnerships"],
-    highlight: "Ranked #=588 in QS World University Rankings 2027."
+    description: `Brno University of Technology (BUT), established in 1899, is one of the largest and most prestigious technical universities in the Czech Republic. Located in Brno, a leading technology and innovation hub, the university is recognized for its excellence in Engineering, Information Technology, Architecture, Business and Applied Sciences. 
+The university is ranked =588 in the QS World University Rankings 2027, reflecting its growing international reputation in engineering, technology, and applied sciences. BUT offers modern research facilities, strong industry collaborations with companies such as IBM, Siemens, Bosch, and Honeywell, and extensive international exchange opportunities through Erasmus and other global partnerships. 
+With a strong emphasis on innovation, practical learning, and research, BUT prepares graduates for successful careers in academia, industry, and entrepreneurship`,
+
+    // strengths: ["Engineering & Information Technology", "Architecture & Applied Sciences", "IBM, Siemens, Bosch & Honeywell Industry Ties", "Erasmus+ & Global Partnerships"],
+    highlight: "World Rank: It is ranked with: #1201–1400 in QS World University Rankings 2027"
   },
   {
     name: "The University of South Bohemia in České Budějovice (USB)",
@@ -173,35 +182,46 @@ export const partners: Partner[] = [
     region: "Europe",
     website: "https://www.jcu.cz/en",
     ranking: "QS World University Rankings 2027: #1201–1400",
-    description: "Established in 1991, The University of South Bohemia (USB) is a leading public university in the Czech Republic renowned for excellence in Life Sciences, Agriculture, Fisheries, Environmental Sciences, Biology, Health Sciences, and Education. USB maintains extensive international partnerships and actively participates in Erasmus+ and global exchange programs, offering a supportive academic environment with a focus on sustainability, innovation, and applied research.",
-    strengths: ["Life Sciences & Environmental Sciences", "Agriculture & Fisheries", "Biology & Health Sciences", "Erasmus+ Exchange & Sustainability Research"],
-    highlight: "Ranked #1201–1400 in QS World University Rankings 2027."
+    description: `The University of South Bohemia (USB), established in 1991, is a leading public university in the Czech Republic, renowned for its excellence in Life Sciences, Agriculture, Fisheries, Environmental Sciences, Biology, Health Sciences, And Education. Located in the historic city of České Budějovice, the university is recognized for its strong research collaborations, modern laboratories, and interdisciplinary approach to teaching. 
+It is ranked with QS World University Rankings 2027: #1201–1400. USB maintains extensive international partnerships and actively participates in Erasmus+ and other global exchange programs, providing students with valuable international learning and research opportunities. 
+The university offers a supportive academic environment with a strong focus on sustainability, innovation, and applied research.`,
+
+    // strengths: ["Life Sciences & Environmental Sciences", "Agriculture & Fisheries", "Biology & Health Sciences", "Erasmus+ Exchange & Sustainability Research"],
+    highlight: "World Rank: It is ranked with: #1201–1400 in QS World University Rankings 2027"
   },
   {
     name: "Maharishi Vedic University",
     country: "Holland",
     region: "Europe",
     website: "https://meru.international/",
-    description: "Maharishi Vedic University, based in the Netherlands, is a specialized institution dedicated to Consciousness-Based Education, integrating Vedic knowledge with modern education, personal development, and scientific research. Inspired by Maharishi Mahesh Yogi, the university emphasizes Holistic Learning Through Transcendental Meditation, Yoga, Vedic Sciences, and Leadership Development, attracting global students seeking academic knowledge combined with mental well-being.",
-    strengths: ["Consciousness-Based Education", "Transcendental Meditation & Yoga", "Vedic Sciences & Leadership Development", "Holistic Education & Mental Well-being"],
-    highlight: "Unique holistic education network integrating Vedic science with modern research."
+    description: `Maharishi Vedic University, based in the Netherlands, is a specialized institution dedicated to Consciousness-Based Education, integrating Vedic knowledge with modern education, personal development, and scientific research. Inspired by the teachings of Maharishi Mahesh Yogi, the university emphasizes Holistic Learning Through Transcendental Meditation, Yoga, Vedic Sciences and Leadership Development. Its international learning environment attracts students from various countries seeking education that combines academic knowledge with mental well-being, self-development, and sustainable living. 
+The university's key strengths include its unique interdisciplinary curriculum, focus on holistic education, global network of Maharishi institutions, and emphasis on developing human potential through consciousness-based learning.`,
+
+    // strengths: ["Consciousness-Based Education", "Transcendental Meditation & Yoga", "Vedic Sciences & Leadership Development", "Holistic Education & Mental Well-being"],
+    highlight: "Ranking: It is ranked #66 nationally among Indian universities in the 2024 IIRF University Rankings."
   },
   {
     name: "University of Aizu (UoA)",
     country: "Japan",
     region: "Japan",
     website: "https://u-aizu.ac.jp/en/",
-    description: "Established in 1993 in Fukushima Prefecture, The University of Aizu (UoA) is Japan's first university dedicated exclusively to computer science and engineering. Renowned for innovative education and research, UoA offers programs in Computer Science, Artificial Intelligence, Software Engineering, Cybersecurity, Data Science, and Information Systems. Highly international environment with English-taught courses and cutting-edge computing facilities.",
-    strengths: ["Exclusive Computer Science & Engineering Focus", "AI, ICT & Cybersecurity Research", "English-Taught Degree Programs", "Global Outlook & Research Excellence"],
-    highlight: "Japan's premier CS university; long-standing research internship & MS pathway partner."
+    description: `The University of Aizu (UoA), established in 1993 in Fukushima Prefecture, is Japan's first university dedicated exclusively to computer science and engineering. Renowned for its innovative education and research, the university offers programs in computer science, artificial intelligence, software engineering, cybersecurity, data science, and information systems. 
+UoA has a highly international academic environment, with many courses taught in English and students and faculty from around the world. The university is recognized for its cutting-edge research, advanced computing facilities, and strong collaborations with industry and international universities. 
+Its key strengths include specialization in Computer Science, Global Outlook, Research Excellence in AI And ICT, practical industry partnerships, and a strong focus on innovation and entrepreneurship.`,
+
+    // strengths: ["Exclusive Computer Science & Engineering Focus", "AI, ICT & Cybersecurity Research", "English-Taught Degree Programs", "Global Outlook & Research Excellence"],
+    highlight: "Ranking:: UoA is ranked in the 601–800 band globally in Times Higher Education (THE) World University Rankings."
   },
   {
     name: "Ichinoseki College (National Institute of Technology - KOSEN)",
     country: "Japan",
     region: "Japan",
     website: "https://www.ichinoseki.ac.jp/english.html",
-    description: "Established in 1964 in Iwate Prefecture, National Institute of Technology (KOSEN), Ichinoseki College is one of Japan's prestigious KOSEN colleges dedicated to producing highly skilled engineers through practice-oriented education. Offers specialized programs in Mechanical Engineering, Electrical & Electronic Engineering, Control & Information Systems, Chemical & Biotechnology, and Civil Engineering with strong hands-on industry training.",
-    strengths: ["Practical Engineering Education", "Mechanical, EEE, Biotech & Civil Engineering", "Advanced Technical Training & Employability", "Sakura Science Exchange Host"],
+    description: `The National Institute of Technology (KOSEN), Ichinoseki College, established in 1964 in Iwate Prefecture, Japan, is one of Japan's prestigious KOSEN (Colleges of Technology) dedicated to producing highly skilled engineers through practice-oriented education. The college offers specialized programs in Mechanical Engineering, Electrical and Electronic Engineering, Control and Information Systems, Chemical and Biotechnology, And Civil Engineering. 
+It is well known for its strong emphasis on hands-on learning, industry collaboration, research, and innovation, enabling students to gain practical technical skills from an early stage. Ichinoseki College also promotes international exchange programs and collaborative research, preparing graduates for successful careers in engineering, manufacturing, and advanced technology industries. 
+Its key strengths include practical engineering education, strong industry partnerships, advanced technical training, and a high graduate employability rate.`,
+
+    // strengths: ["Practical Engineering Education", "Mechanical, EEE, Biotech & Civil Engineering", "Advanced Technical Training & Employability", "Sakura Science Exchange Host"],
     highlight: "Host institute for the Sakura Science Exchange Program in Japan."
   },
   {
@@ -209,9 +229,12 @@ export const partners: Partner[] = [
     country: "Japan",
     region: "Japan",
     website: "https://www.iwate-pu.ac.jp/en/",
-    description: "The Faculty of Software and Information Science at Iwate Prefectural University (IPU), established in 1998 in Iwate Prefecture, is recognized for excellence in software engineering, artificial intelligence, data science, cybersecurity, networking, and information systems. Emphasizes a balance of theoretical knowledge and practical application with industry, government, and international university collaborations.",
-    strengths: ["High-Quality Software & IT Education", "Cutting-edge AI & Info Tech Research", "Industry-Oriented Curriculum", "Modern Computing Research Facilities"],
-    highlight: "Advanced software engineering & AI research collaboration partner."
+    description: `The Faculty of Software and Information Science at Iwate Prefectural University (IPU), established in 1998, is recognized for its excellence in software engineering, artificial intelligence, data science, cybersecurity, networking, and information systems. 
+Located in Iwate Prefecture, Japan, the faculty emphasizes a balance of theoretical knowledge and practical application, equipping students with advanced digital and computing skills. It maintains strong collaborations with industry, government, and international universities, providing opportunities for research, internships, and global exchange. 
+The faculty's key strengths include high-quality software and IT education, cutting-edge research in AI and information technologies, industry-oriented curriculum, modern research facilities, and a strong focus on innovation and digital transformation.`,
+
+    // strengths: ["High-Quality Software & IT Education", "Cutting-edge AI & Info Tech Research", "Industry-Oriented Curriculum", "Modern Computing Research Facilities"],
+    highlight: "Ranking: It has historically placed in the 151–200 tier in Times Higher Education Japan University "
   },
   {
     name: "Asia University (AU)",
@@ -219,9 +242,12 @@ export const partners: Partner[] = [
     region: "Taiwan",
     website: "https://www.asia.edu.tw/",
     ranking: "QS World University Rankings 2027: #=649",
-    description: "Asia University (AU), established in 2001 in Taichung, Taiwan, is a leading private university recognized for excellence in Artificial Intelligence, Information Technology, Health Sciences, Management, Design, and Creative Innovation. Ranked #=649 in QS World University Rankings 2027, AU is known for its modern campus, interdisciplinary education, AI & smart healthcare research, and strong industry partnerships.",
-    strengths: ["AI & Smart Healthcare Research", "Information Technology & Management", "Creative Innovation & Design", "Industry-Linked Exchange Programs"],
-    highlight: "Ranked #=649 in QS World University Rankings 2027; Semester exchange partner since 2017-18."
+    description: `Asia University (AU), established in 2001 in Taichung, Taiwan, is a leading private university recognized for its excellence in Artificial Intelligence, Information Technology, Health Sciences, Management, Design, and Creative Innovation. 
+In the QS World University Rankings 2027, Asia University is ranked #=649, reflecting its growing global reputation and research impact. The university is known for its modern campus, interdisciplinary education, and strong emphasis on research and international collaboration. Asia University has established partnerships with universities and industries worldwide, providing students with global learning, exchange, and internship opportunities. 
+Its key strengths include AI and smart healthcare research, innovation-driven education, industry-linked curriculum, advanced research centres and a strong commitment to entrepreneurship and internationalization, preparing graduates for careers in the global knowledge economy. `,
+
+    // strengths: ["AI & Smart Healthcare Research", "Information Technology & Management", "Creative Innovation & Design", "Industry-Linked Exchange Programs"],
+    highlight: "Ranking: Asia University is ranked #=649 in QS World University Rankings 2027."
   },
   {
     name: "Providence University",
@@ -229,9 +255,12 @@ export const partners: Partner[] = [
     region: "Taiwan",
     website: "https://enpu.pu.edu.tw/",
     ranking: "QS Asian University Rankings 2026: #951–1000",
-    description: "Providence University, established in 1956 in Taichung, Taiwan, is a well-respected private university known for strengths in business & management, foreign languages, humanities, social sciences, IT, and applied sciences. Ranked #951–1000 in QS Asian University Rankings 2026, offering student-centered learning, student exchange, dual-degree, and internship opportunities.",
-    strengths: ["Business & Management", "Foreign Languages & Multilingual Education", "Information Technology & Applied Sciences", "Dual-Degree & Internship Pathways"],
-    highlight: "Ranked #951–1000 in QS Asian University Rankings 2026; Sponsor of Global Immersion Program."
+    description: `Providence University, established in 1956 in Taichung, Taiwan, is a well-respected private university known for its strengths in business and management, foreign languages, humanities, social sciences, information technology, and applied sciences.
+It is ranked in QS Asian University Rankings 2026: #951–1000. The university provides a student-centred learning environment with a strong emphasis on international education, interdisciplinary learning, and community engagement. Through partnerships with universities across the globe, Providence University offers extensive student exchange, dual-degree, and internship opportunities. 
+Its key strengths include quality teaching, global collaborations, multilingual education, research in business and social sciences and a commitment to sustainable development and social responsibility, preparing graduates for successful careers in an increasingly globalized world. `,
+
+    // strengths: ["Business & Management", "Foreign Languages & Multilingual Education", "Information Technology & Applied Sciences", "Dual-Degree & Internship Pathways"],
+    highlight: "Ranking: It is ranked #951–1000 in QS Asian University Rankings- 2026. "
   },
   {
     name: "Pusan National University (PNU)",
@@ -239,9 +268,12 @@ export const partners: Partner[] = [
     region: "South Korea",
     website: "https://www.pusan.ac.kr/eng/Main.do",
     ranking: "QS World University Rankings 2027: #=449",
-    description: "Pusan National University (PNU), established in 1946, is one of South Korea's leading national research universities, located in Busan. Ranked #=449 in QS World University Rankings 2027, PNU is renowned for excellence in Engineering, Natural Sciences, Medicine, Business, Information Technology, and Environmental Sciences with high-impact research and top graduate employability.",
-    strengths: ["High-Impact Research & STEM Programs", "Engineering, Natural Sciences & Medicine", "Business & Environmental Sciences", "Excellent Graduate Employability"],
-    highlight: "Ranked #=449 in QS World University Rankings 2027; South Korea's top national research university."
+    description: `Pusan National University (PNU), established in 1946, is one of South Korea's leading national research universities, located in Busan, the country's second-largest city. It has QS World University Rankings 2027: #=449. 
+The university is renowned for its excellence in Engineering, Natural Sciences, Medicine, Business, Information Technology and Environmental Sciences. PNU is recognized for its world-class research, modern academic facilities, and strong collaborations with global universities and industry partners. 
+The university offers a wide range of English-taught programs and international exchange opportunities, fostering a diverse and globally connected learning environment. Its key strengths include high-impact research, outstanding engineering and STEM programs, strong industry partnerships, innovation-driven education, and excellent graduate employability, making it one of the top higher education institutions in South Korea.`,
+
+    // strengths: ["High-Impact Research & STEM Programs", "Engineering, Natural Sciences & Medicine", "Business & Environmental Sciences", "Excellent Graduate Employability"],
+    highlight: "Ranking: It has QS World University Rankings 2027: #=449. "
   },
   {
     name: "Kookmin University",
@@ -249,9 +281,12 @@ export const partners: Partner[] = [
     region: "South Korea",
     website: "https://english.kookmin.ac.kr/",
     ranking: "QS World University Rankings 2027: #1001–1200",
-    description: "Established in 1946 in Seoul, South Korea, Kookmin University is ranked #1001–1200 in QS World University Rankings 2027. Recognized for strengths in Engineering, Computer Science, Artificial Intelligence, Automotive Engineering, Business, Design, and Architecture. Known for innovation-driven education and close collaboration with industry in mobility, smart technologies, and digital transformation.",
-    strengths: ["Automotive Engineering & Mobility", "Artificial Intelligence & Computer Science", "Business, Design & Architecture", "Industry Linkages & Entrepreneurship"],
-    highlight: "Ranked #1001–1200 in QS World University Rankings 2027; Leading Korean mobility & AI university."
+    description: `Kookmin University is ranked #1001–1200 in the QS World University Rankings 2027, reflecting its growing international presence in higher education and research. Established in 1946 in Seoul, South Korea, is one of the country's leading private universities, recognized for its strengths in Engineering, Computer Science, Artificial Intelligence, Automotive Engineering, Business, Design, and Architecture. 
+The university is well known for its innovation-driven education, cutting-edge research, and close collaboration with industry, particularly in the fields of mobility, smart technologies, and digital transformation. Kookmin University maintains extensive international partnerships and offers a wide range of student exchange and joint research opportunities, creating a globally oriented academic environment. 
+Its key strengths include advanced engineering and AI research, strong industry linkages, interdisciplinary education, modern research facilities and a focus on entrepreneurship and innovation, preparing graduates for successful careers in the global workforce.`,
+
+    // strengths: ["Automotive Engineering & Mobility", "Artificial Intelligence & Computer Science", "Business, Design & Architecture", "Industry Linkages & Entrepreneurship"],
+    highlight: "Ranking: Pusan National University is ranked #=449 globally in the QS World University Rankings."
   }
 ];
 
@@ -272,23 +307,11 @@ export const partnerImages = [
 
 export const internships: ProgramCard[] = [
   {
-    title: "Research Internship – GS Co., Ltd., Gyeonggi-do",
-    country: "South Korea",
-    partner: "GS Co., Ltd.",
-    period: "16 June 2025 – 14 August 2025",
-    description: "Completed research internship programme under industry guidance for ECE and AI-ML students.",
-    participants: [
-      { sno: 1, name: "Pathakunta Lokeswar Reddy", dept: "ECE", roll: "22691A04C4" },
-      { sno: 2, name: "Muli Vijay Kumar Reddy", dept: "ECE", roll: "23695A0407" },
-      { sno: 3, name: "Madamanchi Mohan Krishna", dept: "AI-ML", roll: "23691A3334" },
-      { sno: 4, name: "Matli Vishnu Vardhan Naidu", dept: "CSN (Networks)", roll: "24695A4006" },
-    ],
-  },
-  {
     title: "Research Internship – University of Aizu, Fukushima",
     country: "Japan",
     partner: "University of Aizu",
-    period: "15 January – 30 March 2026 (in progress)",
+    academicYear: "2025-26",
+    period: "15 January – 30 March 2026",
     participants: [
       { sno: 1, name: "Devisriprasad Subbanna Vinodkumar", dept: "IV-CSE-AI", roll: "22691A3131" },
       { sno: 2, name: "Gowri Shankar Mugadi", dept: "IV-CSE-AI", roll: "22691A3139" },
@@ -298,6 +321,7 @@ export const internships: ProgramCard[] = [
     title: "Sakura Science Exchange Program",
     country: "Japan",
     partner: "National Institute of Technology – Ichinoseki College",
+    academicYear: "2025-26",
     period: "17 – 23 November 2025",
     reportUrl:
       "https://mits.ac.in/assets/pdf/event/Report%20on%20Sakura%20Science%20Exchange%20Program%202025.pdf",
@@ -315,9 +339,24 @@ export const internships: ProgramCard[] = [
     ],
   },
   {
+    title: "Research Internship – GS Co., Ltd., Gyeonggi-do",
+    country: "South Korea",
+    partner: "GS Co., Ltd.",
+    academicYear: "2025-26",
+    period: "16 June 2025 – 14 August 2025",
+    description: "Completed research internship programme under industry guidance for ECE and AI-ML students.",
+    participants: [
+      { sno: 1, name: "Pathakunta Lokeswar Reddy", dept: "ECE", roll: "22691A04C4" },
+      { sno: 2, name: "Muli Vijay Kumar Reddy", dept: "ECE", roll: "23695A0407" },
+      { sno: 3, name: "Madamanchi Mohan Krishna", dept: "AI-ML", roll: "23691A3334" },
+      { sno: 4, name: "Matli Vishnu Vardhan Naidu", dept: "CSN (Networks)", roll: "24695A4006" },
+    ],
+  },
+  {
     title: "University of Aizu – Offline Research Internship",
     country: "Japan",
     partner: "University of Aizu",
+    academicYear: "2024-25",
     period: "30 December 2024 – 4 March 2025",
     participants: [
       { sno: 1, name: "Pallavi Konduru", dept: "IV AI-B", roll: "21691a31b5" },
@@ -332,6 +371,7 @@ export const internships: ProgramCard[] = [
     title: "Iwate Prefectural University – Offline Internship",
     country: "Japan",
     partner: "Iwate Prefectural University",
+    academicYear: "2024-25",
     period: "16 January – 18 March 2025",
     participants: [
       { sno: 1, name: "Vivek Bhojanam", dept: "IV CSE", roll: "21691a05p1" },
@@ -344,6 +384,7 @@ export const internships: ProgramCard[] = [
     title: "Asia University Taiwan – 2024 Summer Program",
     country: "Taiwan",
     partner: "Asia University",
+    academicYear: "2024-25",
     period: "6 July 2024 – 16 August 2024",
     activity: "MoU Activity – Artificial Intelligence",
     participants: [
@@ -359,18 +400,278 @@ export const internships: ProgramCard[] = [
       { sno: 10, name: "Poojitha Nagishetti", dept: "CS-DS", roll: "21691a3267" },
     ],
   },
+  // ── 2023-24 ──────────────────────────────────────────────────────────────
+  {
+    title: "University of Aizu – Research Internship",
+    country: "Japan",
+    partner: "University of Aizu",
+    academicYear: "2023-24",
+    period: "17 January – 20 March 2024",
+    activity: "Non-MoU Activity",
+    participants: [
+      { sno: 1, name: "Charan Teja Marrimanu", dept: "IV AI (2020-2024)", roll: "21695A3101" },
+      { sno: 2, name: "Hareesh Kumar Yerragolla", dept: "IV AI (2020-2024)", roll: "20691A3116" },
+    ],
+  },
+  {
+    title: "Iwate Prefectural University – Research Internship",
+    country: "Japan",
+    partner: "Iwate Prefectural University",
+    academicYear: "2023-24",
+    period: "5 January – 29 March 2024",
+    activity: "MoU Activity",
+    participants: [
+      { sno: 1, name: "Tahaseen Naguru", dept: "IV CSE-CS (2020-2024)", roll: "20691A3744" },
+      { sno: 2, name: "Mokshitha Reedy Busireddy", dept: "IV CSE-CS (2020-2024)", roll: "20691A3730" },
+      { sno: 3, name: "Chaitanya Kumar Kurra", dept: "IV CSE-CS (2020-2024)", roll: "20691A3706" },
+    ],
+  },
+  {
+    title: "Research Internship – HEIG-VD, Switzerland (Virtual)",
+    country: "Switzerland",
+    partner: "HEIG-VD (Prof. Cédric Bornand)",
+    academicYear: "2023-24",
+    period: "4 months (Virtual)",
+    activity: "Non-MoU Activity",
+    participants: [
+      { sno: 1, name: "Sine Nitesh", dept: "IV CSE-B (2020-2024)", roll: "20691A05B4" },
+      { sno: 2, name: "Venkata Puneeth Chowdary Gangarapu", dept: "IV CSE-D (2020-2024)", roll: "20691A05l8" },
+    ],
+  },
+  // ── 2021-22 ──────────────────────────────────────────────────────────────
+  {
+    title: "Nanyang Technological University – India Connect Program",
+    country: "Singapore",
+    partner: "Nanyang Technological University (NTU)",
+    academicYear: "2021-22",
+    period: "3 August – 31 December 2021",
+    activity: "Non-MoU Activity",
+    participants: [
+      { sno: 1, name: "K V N S Jayanth Sarma", dept: "ECE (2018-2022)", roll: "18691A0474" },
+    ],
+  },
+  // ── 2019-20 ──────────────────────────────────────────────────────────────
+  {
+    title: "Innopolis University – Research Internship",
+    country: "Russia",
+    partner: "Innopolis University",
+    academicYear: "2019-20",
+    period: "15 January – 10 April 2020",
+    participants: [
+      { sno: 1, name: "Sunil Reddy Aramreddys", dept: "CSE (2016-20)", roll: "16691A0598" },
+      { sno: 2, name: "Gnana Sanjeev Majjari", dept: "ECE (2016-20)", roll: "16691A0430" },
+      { sno: 3, name: "Mohammed Sohel Madirepalle", dept: "MECH (2016-20)", roll: "16691A03C9" },
+      { sno: 4, name: "Yugal Kishore Nadimicherla", dept: "MECH (2016-20)", roll: "16691A03B9" },
+      { sno: 5, name: "Madhava Reddy Pesala", dept: "MECH (2016-20)", roll: "16691A03C7" },
+      { sno: 6, name: "Nagendra Babu Vallepu", dept: "MECH (2016-20)", roll: "17695A0355" },
+      { sno: 7, name: "Sailokesh Ramesh", dept: "MECH (2016-20)", roll: "16691A0359" },
+    ],
+  },
+  {
+    title: "Asia University Taiwan – Offline Internship",
+    country: "Taiwan",
+    partner: "Asia University",
+    academicYear: "2019-20",
+    period: "3 February – 2 April 2020",
+    participants: [
+      { sno: 1, name: "Ramyasree", dept: "ECE (2016-20)", roll: "17695A0435" },
+      { sno: 2, name: "Issac", dept: "ECE (2016-20)", roll: "16691A0445" },
+      { sno: 3, name: "Teja Venkata Sai", dept: "CSE (2016-20)", roll: "16691A05A1" },
+    ],
+  },
+  {
+    title: "National Chiao Tung University (NCTU) – Internship",
+    country: "Taiwan",
+    partner: "National Chiao Tung University",
+    academicYear: "2019-20",
+    period: "3 February – 2 April 2020",
+    participants: [
+      { sno: 1, name: "Susmitha Dupati", dept: "ECE (2016-20)", roll: "16691A04F5" },
+      { sno: 2, name: "Sai Kumar Naidu Peddi Neni", dept: "ECE (2016-20)", roll: "16691A04E2" },
+    ],
+  },
+  {
+    title: "National Chung Cheng University (NCCU) – Internship",
+    country: "Taiwan",
+    partner: "National Chung Cheng University",
+    academicYear: "2019-20",
+    period: "15 June – 15 September 2019",
+    participants: [
+      { sno: 1, name: "T. Varsha", dept: "ECE (2016-20)", roll: "16691A04G9" },
+    ],
+  },
+  // ── 2018-19 ──────────────────────────────────────────────────────────────
+  {
+    title: "Asia University – First Batch Internship Programme",
+    country: "Taiwan",
+    partner: "Asia University",
+    academicYear: "2017-18",
+    period: "2017-18",
+    description: "First batch of MITS students completed a fully paid semester internship at Asia University, Taichung, Taiwan.",
+    participants: [
+      { sno: 1, name: "T. Pruthvi Naidu", dept: "EEE (2014-18)", roll: "-" },
+      { sno: 2, name: "C. Jhansi Lakshmi", dept: "ECE (2014-18)", roll: "-" },
+      { sno: 3, name: "Manikanta T C", dept: "ECE (2014-18)", roll: "-" },
+      { sno: 4, name: "Manoj Kumar Reddy T", dept: "ECE (2014-18)", roll: "-" },
+      { sno: 5, name: "S. Mukula", dept: "ECE (2014-18)", roll: "-" },
+    ],
+  },
+  {
+    title: "Asia University – Second Batch Internship Programme",
+    country: "Taiwan",
+    partner: "Asia University",
+    academicYear: "2018-19",
+    period: "2018-19",
+    description: "Second batch of MITS students participated in the Asia University internship programme in Taiwan.",
+    participants: [
+      { sno: 1, name: "P. Arjun Chakravarthi", dept: "ECE (2015-19)", roll: "-" },
+      { sno: 2, name: "K. Jayasree", dept: "ECE (2015-19)", roll: "-" },
+    ],
+  },
+  {
+    title: "National Chiao Tung University (NCTU) – Professor-Level Programme",
+    country: "Taiwan",
+    partner: "National Chiao Tung University",
+    academicYear: "2018-19",
+    period: "2018-19",
+    description: "Professor-level academic exposure and collaboration with National Chiao Tung University, Taiwan.",
+    participants: [
+      { sno: 1, name: "Sucharitha C", dept: "ECE (2015-19)", roll: "-" },
+      { sno: 2, name: "Umeshwar Reddy N", dept: "ECE (2015-19)", roll: "-" },
+    ],
+  },
+  {
+    title: "Nanyang Technological University – India Connect Programme",
+    country: "Singapore",
+    partner: "Nanyang Technological University",
+    academicYear: "2018-19",
+    period: "2018-19",
+    description: "Student participation in the NTU India Connect Programme with academic exposure in Singapore.",
+    participants: [
+      { sno: 1, name: "Sai Kumar Perimbeti", dept: "Mechanical (2015-19)", roll: "-" },
+    ],
+  },
+  {
+    title: "Karlsruhe Institute of Technology – Professor-Level Programme",
+    country: "Germany",
+    partner: "Karlsruhe Institute of Technology",
+    academicYear: "2018-19",
+    period: "2018-19",
+    description: "Professor-level academic collaboration and exchange with Karlsruhe Institute of Technology, Germany.",
+    participants: [
+      { sno: 1, name: "Sai Praneeth R", dept: "Mechanical (2015-19)", roll: "-" },
+      { sno: 2, name: "Yuvasree M", dept: "Mechanical (2015-19)", roll: "-" },
+    ],
+  },
+  {
+    title: "Iwate Prefectural University – Japan Internship",
+    country: "Japan",
+    partner: "Iwate Prefectural University",
+    academicYear: "2018-19",
+    period: "2018-19",
+    description: "Student internship and academic engagement programme at Iwate Prefectural University, Japan.",
+    participants: [
+      { sno: 1, name: "Kavya Sree Gajjala", dept: "CSE (2015-19)", roll: "-" },
+      { sno: 2, name: "Ashika Kothamachu Ramesh", dept: "CSE (2015-19)", roll: "-" },
+    ],
+  },
+  {
+    title: "Internship in Rise and Shine Group of Companies – Dubai",
+    country: "UAE",
+    partner: "Rise and Shine Group of Companies",
+    academicYear: "2018-19",
+    period: "2018-19",
+    description: "Industry internship programme in Dubai for civil engineering students with Rise and Shine Group of Companies.",
+    participants: [
+      { sno: 1, name: "Ashok Kumar P", dept: "Civil (2015-19)", roll: "-" },
+      { sno: 2, name: "Asif Hussain S", dept: "Civil (2015-19)", roll: "-" },
+      { sno: 3, name: "Ganesh Kumar Reddy S", dept: "Civil (2015-19)", roll: "-" },
+      { sno: 4, name: "Moinuddin Shaik N", dept: "Civil (2015-19)", roll: "-" },
+      { sno: 5, name: "Chiranjeevi P", dept: "Civil (2015-19)", roll: "-" },
+    ],
+  },
+  {
+    title: "University of Eastern Finland – Professor-Level Programme",
+    country: "Finland",
+    partner: "University of Eastern Finland",
+    academicYear: "2018-19",
+    period: "2018-19",
+    description: "Professor-level academic exchange and collaboration with the University of Eastern Finland, Finland.",
+    participants: [
+      { sno: 1, name: "Susmitha Dupati", dept: "ECE (2016-20)", roll: "-" },
+      { sno: 2, name: "Kutagulla Issac", dept: "ECE (2016-20)", roll: "-" },
+      { sno: 3, name: "Sai Kumar Kesarla Venkata", dept: "ECE (2016-20)", roll: "-" },
+    ],
+  },
+  {
+    title: "Internship in Egypt – AIESEC Leadership Development Experience",
+    country: "Egypt",
+    partner: "AIESEC",
+    academicYear: "2017-18",
+    period: "18 June – 18 July 2017",
+    description: "Leadership development internship experience in Egypt organised through AIESEC (programme duration: 2 months).",
+    participants: [
+      { sno: 1, name: "Sailokesh Ramesh", dept: "Mechanical (2016-20)", roll: "-" },
+    ],
+  },
+  {
+    title: "Asia Pacific Innovation Academy (APIA) – International Innovation Accelerator Program",
+    country: "China",
+    partner: "Chinachem Foundation & European Innovation Institute",
+    academicYear: "2018-19",
+    period: "19 July – 9 August 2018",
+    description: "The 2018 APIA International Innovation Accelerator Program held at Shenzhen University, China. 40+ teams, 350+ participants & speakers with mentors from Silicon Valley, EU & Asia, 50+ nationalities. From MITS, Sucharitha's team was selected in top 5 among 42 teams and awarded Business Mentoring by HAG Consulting.",
+    participants: [
+      { sno: 1, name: "Arjun Chakravarthi P", dept: "ECE (2015-19)", roll: "15691A04N8", extra: "CDO at Gotch'ya, APIA Delegate at European Innovation Academy" },
+      { sno: 2, name: "Sucharitha C", dept: "ECE (2015-19)", roll: "15699A04A0", extra: "CTO at B2Brain, APIA Delegate at European Innovation Academy" },
+      { sno: 3, name: "Umeshwar Reddy N", dept: "ECE (2015-19)", roll: "15699A04A8", extra: "CEO & CTO at Kids Matter, APIA Delegate at European Innovation Academy" },
+    ],
+  },
+  {
+    title: "Global Immersion Program – Providence University, Taiwan",
+    country: "Taiwan",
+    partner: "Providence University",
+    academicYear: "2018-19",
+    period: "16 December 2018 – 11 January 2019",
+    description: "15 students and 5 faculty attended two programmes: (1) Special topics on IoT and Big Data Analytics (16–25 Dec 2018) and (2) Introduction to Big Data & Artificial Intelligence (2–11 Jan 2019). Sponsored by Providence University (PU), Taiwan.",
+    participants: [
+      { sno: 1, name: "Sunil Kumar Pattem", dept: "EEE", roll: "15699a0223", extra: "Student" },
+      { sno: 2, name: "Harinatha Reddy Digavinti", dept: "EEE", roll: "15699a0210", extra: "Student" },
+      { sno: 3, name: "Sai Sumanth Dega", dept: "EEE", roll: "15691a0258", extra: "Student" },
+      { sno: 4, name: "Kodandaramu Saraipulikonda", dept: "EEE", roll: "15691A0225", extra: "Student" },
+      { sno: 5, name: "Prem Kumar Gutta", dept: "EEE", roll: "15691A0247", extra: "Student" },
+      { sno: 6, name: "Yandapalli Siva Reddy", dept: "ECE", roll: "15699a0494", extra: "Student" },
+      { sno: 7, name: "Sravani Varapana", dept: "ECE", roll: "15699a0497", extra: "Student" },
+      { sno: 8, name: "Sudheer Ragula", dept: "ECE", roll: "15699A04A1", extra: "Student" },
+      { sno: 9, name: "Sai Santhosh Dinnuri", dept: "ECE", roll: "15699a0488", extra: "Student" },
+      { sno: 10, name: "Umamaheswari Kaveti", dept: "ECE", roll: "16690a0402", extra: "Student" },
+      { sno: 11, name: "M. Lokesh Gorrela Krishna Reddy", dept: "CSE", roll: "15691a0567", extra: "Student" },
+      { sno: 12, name: "Srinath Laka", dept: "MECH", roll: "16695A0339", extra: "Student" },
+      { sno: 13, name: "Patan Irfan Khan", dept: "MCA", roll: "16691F0010", extra: "Student" },
+      { sno: 14, name: "Vamsi Thummakula", dept: "MCA", roll: "17699f00a0", extra: "Student" },
+      { sno: 15, name: "Venkatesh Pagadala", dept: "MCA", roll: "17691f0056", extra: "Student" },
+      { sno: 16, name: "Gaurav Varshney", dept: "ECE", roll: "Faculty", extra: "Faculty" },
+      { sno: 17, name: "Kuppusamy Pothanicker", dept: "CSE", roll: "Faculty", extra: "Faculty" },
+      { sno: 18, name: "Prasanna Kumar Duvvi", dept: "MECH", roll: "Faculty", extra: "Faculty" },
+      { sno: 19, name: "Siva Shankar", dept: "MCA", roll: "Faculty", extra: "Faculty" },
+      { sno: 20, name: "Subhasish Mahapatra", dept: "EEE", roll: "Faculty", extra: "Faculty" },
+    ],
+  },
+  {
+    title: "Internship at Jenmars Technical Services LLC – Dubai",
+    country: "UAE",
+    partner: "Jenmars Technical Services LLC",
+    academicYear: "2017-18",
+    period: "2017-18",
+    description: "Industrial internship opportunity in Dubai with Jenmars Technical Services LLC.",
+    participants: [
+      { sno: 1, name: "Harsha Vardhan Bandarla", dept: "MBA (2016-18)", roll: "-" },
+      { sno: 2, name: "B. Chitanya Kumar", dept: "MBA (2016-18)", roll: "-" },
+    ],
+  },
 ];
 
-export const internshipArchives = [
-  {
-    year: "2023-24",
-    url: "https://mits.ac.in/assets/pdf/oir/2023-24%20Internships%20Data.pdf",
-  },
-  {
-    year: "2021-22",
-    url: "https://mits.ac.in/assets/pdf/oir/2021-22%20Internships%20Data.pdf",
-  },
-];
+export const internshipArchives: never[] = [];
 
 /* ---------- FELLOWSHIPS (Scholarships / Programmes referenced) ---------- */
 
@@ -425,6 +726,49 @@ export const fellowships: ProgramCard[] = [
 /* ---------- GLOBAL IMMERSION / SUMMER / WINTER ---------- */
 
 export const globalPrograms: ProgramCard[] = [
+  {
+    title: "Global Immersion Program for Indian Students and Teachers – Providence University, Taiwan",
+    country: "Taiwan",
+    partner: "Providence University",
+    academicYear: "2018-19",
+    period: "16 December 2018 – 11 January 2019",
+    description: "15 students and 5 faculty members attended the Global Immersion Program sponsored by Providence University (PU), Taiwan. The programme covered IoT and Big Data Analytics and Introduction to Big Data & Artificial Intelligence.",
+    participants: [
+      { sno: 1, name: "Sunil Kumar Pattem", dept: "EEE", roll: "15699A0223", extra: "Student" },
+      { sno: 2, name: "Harinatha Reddy Digavinti", dept: "EEE", roll: "15699A0210", extra: "Student" },
+      { sno: 3, name: "Sai Sumanth Dega", dept: "EEE", roll: "15691A0258", extra: "Student" },
+      { sno: 4, name: "Kodandaramu Saraipulikonda", dept: "EEE", roll: "15691A0225", extra: "Student" },
+      { sno: 5, name: "Prem Kumar Gutta", dept: "EEE", roll: "15691A0247", extra: "Student" },
+      { sno: 6, name: "Yandapalli Siva Reddy", dept: "ECE", roll: "15699A0494", extra: "Student" },
+      { sno: 7, name: "Sravani Varapana", dept: "ECE", roll: "15699A0497", extra: "Student" },
+      { sno: 8, name: "Sudheer Ragula", dept: "ECE", roll: "15699A04A1", extra: "Student" },
+      { sno: 9, name: "Sai Santhosh Dinnuri", dept: "ECE", roll: "15699A0488", extra: "Student" },
+      { sno: 10, name: "Umamaheswari Kaveti", dept: "ECE", roll: "16690A0402", extra: "Student" },
+      { sno: 11, name: "M. Lokesh Gorrela Krishna Reddy", dept: "CSE", roll: "15691A0567", extra: "Student" },
+      { sno: 12, name: "Srinath Laka", dept: "MECH", roll: "16695A0339", extra: "Student" },
+      { sno: 13, name: "Patan Irfan Khan", dept: "MCA", roll: "16691F0010", extra: "Student" },
+      { sno: 14, name: "Vamsi Thummakula", dept: "MCA", roll: "17699F00A0", extra: "Student" },
+      { sno: 15, name: "Venkatesh Pagadala", dept: "MCA", roll: "17691F0056", extra: "Student" },
+      { sno: 16, name: "Gaurav Varshney", dept: "ECE", roll: "Faculty", extra: "Faculty" },
+      { sno: 17, name: "Kuppusamy Pothanicker", dept: "CSE", roll: "Faculty", extra: "Faculty" },
+      { sno: 18, name: "Prasanna Kumar Duvvi", dept: "MECH", roll: "Faculty", extra: "Faculty" },
+      { sno: 19, name: "Siva Shankar", dept: "MCA", roll: "Faculty", extra: "Faculty" },
+      { sno: 20, name: "Subhasish Mahapatra", dept: "EEE", roll: "Faculty", extra: "Faculty" },
+    ],
+  },
+  {
+    title: "Asia Pacific Innovation Academy – International Innovation Accelerator Program",
+    country: "China",
+    partner: "Asia Pacific Innovation Academy",
+    academicYear: "2018-19",
+    period: "19 July – 9 August 2018",
+    description: "The 2018 APIA International Innovation Accelerator Program was conducted at Shenzhen University, China, with 40+ teams, 350+ participants and speakers, and 50+ nationalities. From MITS, the team led by Sucharitha C was selected among the top 5 teams and received business mentoring from HAG Consulting.",
+    participants: [
+      { sno: 1, name: "Arjun Chakravarthi P", dept: "ECE (2015-19)", roll: "15691A04N8", extra: "CDO at Gotch'ya, APIA Delegate" },
+      { sno: 2, name: "Sucharitha C", dept: "ECE (2015-19)", roll: "15699A04A0", extra: "CTO at B2Brain, APIA Delegate" },
+      { sno: 3, name: "Umeshwar Reddy N", dept: "ECE (2015-19)", roll: "15699A04A8", extra: "CEO & CTO at Kids Matter, APIA Delegate" },
+    ],
+  },
   {
     title: "Asia University Summer Program (Offline)",
     country: "Taiwan",

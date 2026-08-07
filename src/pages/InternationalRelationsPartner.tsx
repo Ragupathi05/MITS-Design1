@@ -280,7 +280,7 @@ const InternationalRelationsPartner = () => {
               className="ir-lift-card rounded-[1.8rem] border border-white/80 bg-white/85 p-6 md:p-10 shadow-sm text-center backdrop-blur-xl"
             >
               {bodyDescription && (
-                <p className="text-[15px] md:text-base leading-relaxed text-secondary/90 text-justify [text-align-last:center]">
+                <p className="text-[15px] md:text-base leading-relaxed text-secondary/90 text-justify [text-align-last:center] whitespace-pre-line">
                   {bodyDescription}
                 </p>
               )}
