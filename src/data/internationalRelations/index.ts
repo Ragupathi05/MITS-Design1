@@ -120,12 +120,13 @@ export const aboutGallery: string[] = [
 /* ---------- CONTACT ---------- */
 
 export const contactCard = {
+  
   office: "Office of International Relations (IRO)",
   institute: "Madanapalle Institute of Technology & Science (Deemed to be University)",
   address:
     "Madanapalle-Kadiri Road, kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India",
   timings: "Mon – Sat: 9:00 AM – 5:00 PM",
-  phone: "+91 99100600773 , 9160140270",
+  phone: "+91 9100600773 , 9160140270",
   email: "iro@mits.ac.in",
   mapsUrl: "https://maps.google.com/?q=Madanapalle+Institute+of+Technology+and+Science",
   team: [

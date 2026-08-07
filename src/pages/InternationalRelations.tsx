@@ -1869,7 +1869,26 @@ const InternationalRelations = () => {
         {/* Contact card — bottom placement for every tab except About (About shows it up top instead) */}
         {active !== "about" && (
           <div className="ir-media-deck mt-14 rounded-[2rem] border border-white/15 bg-gradient-to-br from-[#0a1f33] via-[#0f2a44] to-[#183f61] text-white p-6 md:p-8">
-            <div className="flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-widest mb-4">
+                        {/* Team members — just before Contact the IRO */}
+            <div className="grid sm:grid-cols-2 gap-3 mb-6">
+              {contactCard.team.map((t) => (
+                <div key={t.name} className="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 transition-all">
+                  <div className="w-10 h-10 rounded-full bg-[#caa74d]/20 border border-[#caa74d]/40 text-[#caa74d] flex items-center justify-center font-bold text-sm shrink-0">
+                    {t.initials}
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-sm text-white leading-snug">{t.name}</div>
+                    <div className="text-[11px] text-white/70 mt-0.5 leading-snug">{t.designation}</div>
+                    {t.email && (
+                      <a href={`mailto:${t.email}`} className="text-[11px] text-[#caa74d] hover:underline inline-flex items-center gap-1 mt-0.5">
+                        <Mail className="w-3 h-3" />{t.email}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+<div className="flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-widest mb-4">
               <Phone className="w-4 h-4" />Contact the IRO
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -1900,3 +1919,4 @@ const InternationalRelations = () => {
 };
 
 export default InternationalRelations;
+
