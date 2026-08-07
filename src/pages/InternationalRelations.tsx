@@ -337,6 +337,28 @@ const AboutSection = () => (
     />
     <ImageCarousel images={aboutGallery} />
 
+    {/* Partner logo marquee — directly under images */}
+    <div className="relative overflow-hidden rounded-5xl border border-border bg-white py-5">
+      <p className="text-center text-[14px] font-bold uppercase tracking-widest text-muted-foreground mb-5">
+        In Partnership With Universities Worldwide
+      </p>
+      <div className="recruiter-marquee-track">
+        {[...partners, ...partners].map((p, i) => {
+          const BASE = import.meta.env.BASE_URL;
+          const local = localLogos[p.name];
+          return (
+            <div key={`${p.name}-${i}`} className="recruiter-logo-card" aria-hidden={i >= partners.length}>
+              {local ? (
+                <img src={`${BASE}${local}`} alt={p.name} className="h-16 w-auto object-contain" loading="lazy" />
+              ) : (
+                <span className="text-sm font-bold text-secondary text-center px-2">{p.name}</span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
     {/* Intro Overview Grid — Contact now sits top-right, beside "A Global Academic Community" */}
     <div className="grid lg:grid-cols-5 gap-6">
       <div className="lg:col-span-3 space-y-4 text-[15px] leading-relaxed text-secondary/90 bg-white p-6 md:p-8 rounded-2xl border border-border shadow-sm">
@@ -363,7 +385,7 @@ const AboutSection = () => (
             style={{ transformStyle: "preserve-3d" }}
             className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-sm"
           >
-            <div className="mb-3 flex items-center gap-2 font-bold text-primary">
+            <div className="mb-3 flex items-center gap-2 font-bold text-[16px]">
               <Award className="h-5 w-5 text-primary" /> Key Mission
             </div>
             <ul className="space-y-2.5 text-sm text-slate-700">
@@ -402,53 +424,31 @@ const AboutSection = () => (
       </div>
     </div>
 
-    {/* Partner logo marquee — fills otherwise-empty space with real MoU partner crests */}
-    <div className="relative overflow-hidden rounded-5xl border border-border bg-white py-5">
-      <p className="text-center text-[14px] font-bold uppercase tracking-widest text-muted-foreground mb-5">
-        In Partnership With Universities Worldwide
-      </p>
-      <div className="recruiter-marquee-track">
-        {[...partners, ...partners].map((p, i) => {
-          const BASE = import.meta.env.BASE_URL;
-          const local = localLogos[p.name];
-          return (
-            <div key={`${p.name}-${i}`} className="recruiter-logo-card" aria-hidden={i >= partners.length}>
-              {local ? (
-                <img src={`${BASE}${local}`} alt={p.name} className="h-16 w-auto object-contain" loading="lazy" />
-              ) : (
-                <span className="text-sm font-bold text-secondary text-center px-2">{p.name}</span>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </div>
-
     {/* Functions of IRO & Central Hub */}
-    <div className="bg-gradient-to-br from-slate-900 to-[#0f2a44] text-white p-8 md:p-10 rounded-3xl shadow-xl space-y-6 relative overflow-hidden">
-      <div className="relative z-10">
-        <span className="text-sm font-bold uppercase tracking-widest text-[#caa74d] bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
-          Multicultural Ecosystem
-        </span>
-        <h3 className="text-2xl md:text-3xl font-bold mt-4 mb-3 text-white" style={{ fontFamily: "var(--font-display)" }}>
-          {aboutIR.functionsTitle}
-        </h3>
-        <p className="text-white/80 text-sm max-w-4xl leading-relaxed">
-          {aboutIR.functionsDesc}
-        </p>
-
-        <div className="mt-8 border-t border-white/10 pt-6">
-          <h4 className="text-base font-bold text-[#caa74d] mb-4 uppercase tracking-wider text-sm">
-            Central Hub for Global Engagement Objectives
-          </h4>
-          <div className="space-y-3">
-            {aboutIR.centralHubObjectives.map((obj, i) => (
-              <div key={i} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 transition-all hover:bg-white/10">
-                <CheckCircle2 className="w-4 h-4 text-[#caa74d] shrink-0" />
-                <span className="text-sm text-white/90 font-medium">{obj}</span>
-              </div>
-            ))}
-          </div>
+    <div className="bg-white rounded-3xl border border-border shadow-sm p-8 md:p-10">
+      <span className="text-sm font-bold uppercase tracking-widest text-[#0f2a44] bg-[#0f2a44]/8 px-3.5 py-1 rounded-full border border-[#0f2a44]/20">
+        Multicultural Ecosystem
+      </span>
+      <div className="mt-6 grid lg:grid-cols-2 gap-8 lg:gap-12">
+        {/* Left — title + description */}
+        <div className="space-y-4">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#0f2a44]" style={{ fontFamily: "var(--font-display)" }}>
+            {aboutIR.functionsTitle}
+          </h3>
+          <p className="text-base text-slate-600 leading-loose">
+            {aboutIR.functionsDesc}
+          </p>
+          <div className="h-1 w-16 bg-gradient-to-r from-[#0f2a44] via-[#caa74d] to-sky-400 rounded-full" />
+        </div>
+        {/* Right — bullet objectives */}
+        <div className="space-y-3">
+          <p className="text-sm font-bold uppercase tracking-wider text-[#caa74d] mb-1">Central Hub for Global Engagement Objectives</p>
+          {aboutIR.centralHubObjectives.map((obj, i) => (
+            <div key={i} className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50 p-3.5 hover:border-[#caa74d]/50 hover:bg-[#caa74d]/5 transition-all group">
+              <CheckCircle2 className="w-4 h-4 text-[#caa74d] shrink-0 mt-0.5" />
+              <span className="text-sm text-slate-700 font-medium leading-snug group-hover:text-[#0f2a44]">{obj}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -467,7 +467,7 @@ const AboutSection = () => (
         </div>
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="grid sm:grid-cols-2 gap-3">
         {aboutIR.studentBenefits.map((b, i) => (
           <motion.div
             key={i}

@@ -1,4 +1,4 @@
-// International Relations - MITS Deemed to be University
+﻿// International Relations - MITS Deemed to be University
 // Source: https://mits.ac.in/international-relations
 // All PDFs and images link to official mits.ac.in resources.
 
@@ -125,7 +125,7 @@ export const contactCard = {
   address:
     "Madanapalle-Kadiri Road, kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India",
   timings: "Mon – Sat: 9:00 AM – 5:00 PM",
-  phone: "+91-8571-280255; 280706",
+  phone: "+91 99100600773 , 9160140270",
   email: "iro@mits.ac.in",
   mapsUrl: "https://maps.google.com/?q=Madanapalle+Institute+of+Technology+and+Science",
   team: [
