@@ -310,7 +310,7 @@ export const cellsDetailData: Record<string, CellDetail> = {
       {
         "name": "Mrs. Vijaya Lakshmi U",
         "designation": "Associate Director - International Relations & Institute Counsellor - MITS",
-        "email": "",
+        "email": "vijayalakshmiu@mits.ac.in",
         "phone": "Phone :\n+91 9100600773\n",
         "address": "Madanapalle Institute of Technology & Science"
       },
@@ -692,7 +692,7 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "name": "Mrs. U. Vijaya Lakshmi",
         "designation": "Institute Counsellor",
         "position": "Member Secretary",
-        "email": "ad-iro@mits.ac.in"
+        "email": "vijayalakshmiu@mits.ac.in"
       }
     ],
     "documents": [
@@ -743,11 +743,11 @@ export const cellsDetailData: Record<string, CellDetail> = {
     ],
     "contacts": [
       {
-        "name": "Coordinator:",
-        "designation": "Mrs. U. Vijaya Lakshmi",
-        "email": "",
-        "phone": "Phone :\n\n                                                    +91-9100600773",
-        "address": "Madanapalle Institute of Technology & Science"
+        "name": "Mrs. U. Vijaya Lakshmi",
+        "designation": "Coordinator - Associate Director-International Relations & Institute Counsellor - MITS",
+        "email": "vijayalakshmiu@mits.ac.in",
+        "phone": "Phone :\n+91-9100600773, 8571-280255, 280706\n",
+        "address": "Madanapalle Institute of Technology & Science, Deemed to be University, Madanapalle-Kadiri Road, kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India"
       }
     ],
     "id": "pcc",
@@ -1188,7 +1188,7 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "name": "Mrs. U. Vijaya Lakshmi",
         "designation": "Senior Manager - Student Counsellor",
         "position": "Member",
-        "email": "ad-iro@mits.ac.in"
+        "email": "vijayalakshmiu@mits.ac.in"
       },
       {
         "sno": "3",
