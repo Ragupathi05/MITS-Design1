@@ -2901,9 +2901,9 @@ export const csecsProfiles: Record<string, FacultyProfile> = {
     "Mr. Karanam Seshagiri Rao": {
         "name": "Mr. Karanam Seshagiri Rao",
         "designation": "Asst. Professor",
-        "email": "",
+        "email": "seshagiriraok@mits.ac.in",
         "officeAddress": "NPN204",
-        "image": "https://mits.ac.in/public/uploads/faculty/Karanam-Seshagiri-Rao.jpg",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mr. Karanam Seshagiri Rao.JPG",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -2925,5 +2925,53 @@ export const csecsProfiles: Record<string, FacultyProfile> = {
                     ]
                 }
             ]
+    },
+    "Mr. Bhabani Sankar Samantray": {
+        "name": "Mr. Bhabani Sankar Samantray",
+        "designation": "Asst. Professor",
+        "email": "bhabanisankars@mits.ac.in",
+        "officeAddress": "NPN204",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mr. Bhabani Sankar Samantray.JPG",
+        "sections": [
+            {
+                "title": "Details of Educational Qualification",
+                "content": [
+                    { "Course": "Ph.D.", "Specialization": "Blockchain Technologies & Secure Systems", "Branch": "CSE", "College Name/University": "VIT-AP University", "Year of Passing": "Pursuing" },
+                    { "Course": "M.Tech.", "Specialization": "Computer Science and Engineering", "Branch": "CSE", "College Name/University": "Biju Patnaik University of Technology", "Year of Passing": "2014" },
+                    { "Course": "M.C.A.", "Specialization": "Computer Applications", "Branch": "MCA", "College Name/University": "Biju Patnaik University of Technology", "Year of Passing": "2009" }
+                ]
+            }
+        ]
+    },
+    "Mrs. Pagadala Naveena": {
+        "name": "Mrs. Pagadala Naveena",
+        "designation": "Asst. Professor",
+        "email": "naveenap@mits.ac.in",
+        "officeAddress": "NPN204",
+        "image": "https://mits.ac.in/public/uploads/faculty/Mrs. Pagadala Naveena.JPG",
+        "sections": [
+            {
+                "title": "Details of Educational Qualification",
+                "content": [
+                    { "Course": "M.Tech.", "Specialization": "Computer Science and Engineering", "Branch": "CSE", "College Name/University": "Vemu Institute of Technology", "Year of Passing": "2020" },
+                    { "Course": "B.Tech.", "Specialization": "Information Technology", "Branch": "IT", "College Name/University": "SITAMS", "Year of Passing": "2016" }
+                ]
+            }
+        ]
+    },
+    "Ms. Chinnapapannagari Aparna": {
+        "name": "Ms. Chinnapapannagari Aparna",
+        "designation": "Asst. Professor",
+        "email": "aparnac@mits.ac.in",
+        "officeAddress": "NPN204",
+        "image": "https://mits.ac.in/public/uploads/faculty/Ms. Chinnapapannagari Aparna.JPG",
+        "sections": [
+            {
+                "title": "Details of Educational Qualification",
+                "content": [
+                    { "Course": "M.Tech.", "Specialization": "Computer Science and Engineering", "Branch": "CSE", "College Name/University": "MITS", "Year of Passing": "2021" }
+                ]
+            }
+        ]
     }
 };
