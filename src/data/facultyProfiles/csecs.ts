@@ -1698,7 +1698,7 @@ export const csecsProfiles: Record<string, FacultyProfile> = {
 
     "Dr. Brahm Prakash": {
         "name": "Dr. Brahm Prakash",
-        "designation": "Assoc. Professor &amp; Head",
+        "designation": "Assoc. Professor & Head",
         "email": "drbrahmprakash@mits.ac.in",
         "officeAddress": "NPN204",
         "image": "https://mits.ac.in/public/uploads/faculty/Dr. Brahm Prakash.JPG",

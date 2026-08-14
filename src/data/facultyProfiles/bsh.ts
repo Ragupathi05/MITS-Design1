@@ -1832,7 +1832,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
         "name": "Dr. R. Saravana",
         "email": "drsaravanar@mits.ac.in",
         "image": "https://mits.ac.in/public/uploads/faculty/Dr. R. Saravana.JPG",
-        "designation": "Assoc. Professor",
+        "designation": "Assoc. Professor & Head (I/c)",
         "sections": [
                 {
                     "title": "Details of Educational Qualification",
@@ -3008,7 +3008,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
 
     "Dr. P. Ramesh Reddy": {
       name: "Dr. P. Ramesh Reddy",
-      designation: "Asst. Professor & Head",
+      designation: "Asst. Professor",
       email: "rameshreddyp@mits.ac.in",
       officeAddress: "BSH Block",
       image: "https://mits.ac.in/public/uploads/faculty/DSC_7332.JPG",
@@ -10939,7 +10939,7 @@ export const bshProfiles: Record<string, FacultyProfile> = {
 
     "Dr. Prageetha G Raju": {
       name: "Dr. Prageetha G Raju",
-      designation: "Professor & Head",
+      designation: "Professor",
       email: "drprageethagraju@mits.ac.in",
       officeAddress: "BSH Block",
       image: "https://mits.ac.in/public/uploads/faculty/pragathi.png",
