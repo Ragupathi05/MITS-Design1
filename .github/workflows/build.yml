@@ -26,11 +26,10 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: Prepare cPanel deployment
+      - name: Prepare deployment package
         run: |
           rm -rf deploy
           mkdir deploy
-
           cp -R dist/. deploy/
 
           cat > deploy/.cpanel.yml <<'EOF'
@@ -38,7 +37,30 @@ jobs:
           deployment:
             tasks:
               - export DEPLOYPATH=/home/mits/public_html/
-              - find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name '.cpanel.yml' -exec cp -R {} "$DEPLOYPATH" \;
+              - /bin/cp -R index.html "$DEPLOYPATH"
+              - /bin/cp -R assets "$DEPLOYPATH"
+              - /bin/cp -R admissions "$DEPLOYPATH"
+              - /bin/cp -R careers "$DEPLOYPATH"
+              - /bin/cp -R departments "$DEPLOYPATH"
+              - /bin/cp -R "Hero-Section" "$DEPLOYPATH"
+              - /bin/cp -R infrastructure "$DEPLOYPATH"
+              - /bin/cp -R "Intranational Relations" "$DEPLOYPATH"
+              - /bin/cp -R library "$DEPLOYPATH"
+              - /bin/cp -R Logos "$DEPLOYPATH"
+              - /bin/cp -R "news-events" "$DEPLOYPATH"
+              - /bin/cp -R "placement-pictures" "$DEPLOYPATH"
+              - /bin/cp -R recruiters "$DEPLOYPATH"
+              - /bin/cp -R Research "$DEPLOYPATH"
+              - /bin/cp -R librery "$DEPLOYPATH"
+              - /bin/cp -R "MITS Official Logo.png" "$DEPLOYPATH"
+              - /bin/cp -R "MITS name.jpg" "$DEPLOYPATH"
+              - /bin/cp -R estd.png "$DEPLOYPATH"
+              - /bin/cp -R "mits-logo.jfif" "$DEPLOYPATH"
+              - /bin/cp -R "mits-logo.png" "$DEPLOYPATH"
+              - /bin/cp -R robots.txt "$DEPLOYPATH"
+              - /bin/cp -R site.webmanifest "$DEPLOYPATH"
+              - /bin/cp -R sitemap.xml "$DEPLOYPATH"
+              - /bin/cp -R stats.html "$DEPLOYPATH"
           EOF
 
       - name: Configure SSH
@@ -46,7 +68,6 @@ jobs:
           CPANEL_SSH_KEY: ${{ secrets.CPANEL_SSH_KEY }}
         run: |
           mkdir -p ~/.ssh
-
           printf '%s\n' "$CPANEL_SSH_KEY" > ~/.ssh/cpanel_deploy
           chmod 600 ~/.ssh/cpanel_deploy
 
@@ -59,12 +80,16 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git branch -M master
-
           git add .
           git commit -m "Deploy ${GITHUB_SHA}"
 
           git remote add cpanel \
             "ssh://mits@mits.edu:22133/home/mits/mits-website-deploy"
 
-          GIT_SSH_COMMAND="ssh -i ~/.ssh/cpanel_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
+          GIT_SSH_COMMAND="ssh \
+            -i ~/.ssh/cpanel_deploy \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=20" \
             git push --force cpanel master
