@@ -40,4 +40,4 @@ jobs:
           rsync -az --checksum \
             -e "ssh -i ~/.ssh/cpanel_deploy -p 22133 -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=20" \
             dist/ \
-            mits@mits.edu:/home/mits/public_html/
+            mits@mits.edu:/home/mits/public_html/university/
