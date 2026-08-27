@@ -205,7 +205,10 @@ async function safeFetch<T>(endpoint: string, key: string): Promise<T[]> {
   const base = IS_LOCAL ? "/cms-api" : CMS_DIRECT;
   const url = base + "/" + endpoint;
   try {
-    const res = await fetch(url, { credentials: "include", signal: AbortSignal.timeout(10000) });
+    const res = await fetch(url, {
+      credentials: IS_LOCAL ? "include" : "omit",
+      signal: AbortSignal.timeout(10000),
+    });
     if (!res.ok) return [];
     let text = stripPhpWarnings(await res.text());
     // CMS bot-protection challenge — solve it and retry once
@@ -254,7 +257,10 @@ export async function fetchEventDetail(id: number): Promise<CMSEvent | null> {
   const base = IS_LOCAL ? "/cms-api" : CMS_DIRECT;
   const url = `${base}/event_detail.php?id=${id}`;
   try {
-    const res = await fetch(url, { credentials: "include", signal: AbortSignal.timeout(15000) });
+    const res = await fetch(url, {
+      credentials: IS_LOCAL ? "include" : "omit",
+      signal: AbortSignal.timeout(15000),
+    });
     if (!res.ok) return null;
     let text = stripPhpWarnings(await res.text());
     if (text.trimStart().startsWith("<")) {

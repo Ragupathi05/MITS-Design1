@@ -89,6 +89,7 @@ export default {
           "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
           "Access-Control-Allow-Methods": "GET, OPTIONS",
           "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Credentials": "true",
           "Access-Control-Max-Age": "86400",
         },
       });
@@ -112,6 +113,7 @@ export default {
         headers: {
           "Content-Type": "application/json; charset=utf-8",
           "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
+          "Access-Control-Allow-Credentials": "true",
           "Cache-Control": "public, max-age=60",
         },
       });
@@ -121,6 +123,7 @@ export default {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
+          "Access-Control-Allow-Credentials": "true",
         },
       });
     }
