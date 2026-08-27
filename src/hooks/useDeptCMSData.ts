@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 
 const IS_LOCAL = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
-const CMS_BASE = "https://aicampus.mits.ac.in/mits-cms/backend/public_api";
+
+// Production: all requests go through the Cloudflare Worker proxy which fixes
+// the duplicate Access-Control-Allow-Origin header the CMS server sends.
+// Deploy cloudflare-worker/cms-proxy.js and update this URL.
+const WORKER_URL = "https://mits-cms-proxy.mits-website.workers.dev/public_api";
+
+// Dev: Vite proxy at /cms-api (see vite.config.ts cmsProxyPlugin)
+const CMS_BASE = IS_LOCAL ? "/cms-api" : WORKER_URL;
 
 const CMS_CODE: Record<string, string> = {
   cse:   "CSE",
@@ -188,8 +195,7 @@ function stripPhpWarnings(text: string): string {
 }
 
 async function safeFetch<T>(endpoint: string, key: string): Promise<T[]> {
-  const base = IS_LOCAL ? "/cms-api" : CMS_BASE;
-  const url = base + "/" + endpoint;
+  const url = CMS_BASE + "/" + endpoint;
   try {
     const res = await fetch(url, { credentials: "include", signal: AbortSignal.timeout(10000) });
     if (!res.ok) return [];
@@ -211,9 +217,7 @@ function normalizeEvents(items: CMSEvent[]): CMSEvent[] {
     ...e,
     type: e.type || e.event_type,
     // In dev, rewrite image URLs through the Vite proxy
-    poster: IS_LOCAL && e.poster
-      ? e.poster.replace("https://aicampus.mits.ac.in/mits-cms/backend", "/cms-api")
-      : (e.poster ?? null),
+    poster: e.poster ?? null,
   }));
 }
 
@@ -225,8 +229,7 @@ function normalizeMoUs(items: CMSMoU[]): CMSMoU[] {
 }
 
 export async function fetchEventDetail(id: number): Promise<CMSEvent | null> {
-  const base = IS_LOCAL ? "/cms-api" : CMS_BASE;
-  const url = `${base}/event_detail.php?id=${id}`;
+  const url = `${CMS_BASE}/event_detail.php?id=${id}`;
   try {
     const res = await fetch(url, { credentials: "include", signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;

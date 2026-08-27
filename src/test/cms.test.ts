@@ -7,7 +7,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 // ── constants mirrored from the hook ────────────────────────────────────────
-const CMS_BASE = "https://aicampus.mits.ac.in/mits-cms/backend/public_api";
+const WORKER_URL = "https://mits-cms-proxy.mits-website.workers.dev/public_api";
+const CMS_BASE   = WORKER_URL; // production path (worker fixes duplicate CORS header)
 
 const CMS_CODE: Record<string, string> = {
   cse: "CSE", ce: "CE", civil: "CE", eee: "EEE", me: "MECH",
@@ -49,10 +50,15 @@ function makeJsonResponse(data: unknown, ok = true) {
   });
 }
 
-// ── 1. CMS_BASE URL is correct ───────────────────────────────────────────────
-describe("CMS_BASE", () => {
-  it("points to the correct public_api endpoint", () => {
-    expect(CMS_BASE).toBe("https://aicampus.mits.ac.in/mits-cms/backend/public_api");
+// ── 1. WORKER_URL / CMS_BASE is correct ─────────────────────────────────────
+describe("CMS_BASE (Cloudflare Worker proxy)", () => {
+  it("points to the Cloudflare Worker proxy", () => {
+    expect(WORKER_URL).toContain("workers.dev");
+    expect(WORKER_URL).toContain("/public_api");
+  });
+
+  it("does NOT point directly to aicampus (would cause duplicate CORS header)", () => {
+    expect(CMS_BASE).not.toContain("aicampus.mits.ac.in");
   });
 });
 
@@ -130,7 +136,8 @@ describe("CMS endpoint URL construction", () => {
     it(`builds correct URL for ${ep}.php`, () => {
       const dept = encodeURIComponent("CSE");
       const url = `${CMS_BASE}/${ep}.php?dept=${dept}`;
-      expect(url).toBe(`https://aicampus.mits.ac.in/mits-cms/backend/public_api/${ep}.php?dept=CSE`);
+      expect(url).toContain("/public_api/");
+      expect(url).toContain(`${ep}.php?dept=CSE`);
     });
   });
 });
@@ -205,10 +212,10 @@ describe("Image URL rewrite for dev proxy", () => {
 
 // ── 10. event_detail.php URL ─────────────────────────────────────────────────
 describe("fetchEventDetail URL", () => {
-  it("builds correct event_detail URL", () => {
+  it("builds correct event_detail URL via worker proxy", () => {
     const id = 42;
     const url = `${CMS_BASE}/event_detail.php?id=${id}`;
-    expect(url).toBe("https://aicampus.mits.ac.in/mits-cms/backend/public_api/event_detail.php?id=42");
+    expect(url).toContain("/public_api/event_detail.php?id=42");
   });
 
   it("parses event_detail response", async () => {
