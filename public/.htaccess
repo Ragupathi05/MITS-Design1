@@ -1,3 +1,8 @@
+# Correct MIME type for web manifest
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
 # Override CSP to allow eval (required by framer-motion and bundled libs)
 <IfModule mod_headers.c>
   Header always unset Content-Security-Policy
@@ -9,9 +14,10 @@
   RewriteEngine On
   RewriteBase /university/
 
-  # Skip real files and directories
+  # Skip real files, directories, and manifest
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.webmanifest$
 
   # Rewrite everything else to index.html
   RewriteRule ^ index.html [L]
