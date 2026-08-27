@@ -171,9 +171,9 @@ export const autonomousArchive: ExamLink[] = [
 
 // -------------------- CoE OFFICE --------------------
 export const coeOffice = {
-  name: "Dr. K. V. Narasimha Murthy",
+  name: "Dr. Sai Kumar.V",
   designation: "Controller of Examinations",
-  address: "Madanapalle Institute of Technology & Science, Post Box No: 14, Kadiri Road, Angallu, Madanapalle — 517325, Andhra Pradesh, India",
+  address: "Madanapalle Institute of Technology & Science (Deemed to be University), Madanapalle-Kadiri Road, Kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India",
   phone: "08571-280255, 280706",
   email: "coe@mits.ac.in",
 };

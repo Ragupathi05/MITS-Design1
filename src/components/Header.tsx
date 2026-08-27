@@ -23,6 +23,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Programs Offered", href: "/academics" },
       { label: "Departments", href: "/departments" },
+      { label: "Academic Regulations", href: "/academic-regulations" },
       { label: "Academic Calendar", href: "/academic-calendar" },
       { label: "Examinations", href: "/examinations" },
       { label: "Library", href: "/library" },

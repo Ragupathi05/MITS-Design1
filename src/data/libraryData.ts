@@ -1,4 +1,4 @@
-// Central Library — official data (source: attached Central Library Details doc + mits.ac.in)
+// Central Library — official data (source: Central Library Details doc + mits.ac.in)
 
 export interface LibStat {
   key: string;
@@ -38,6 +38,71 @@ export const digitalResources: DigitalResource[] = [
   { name: "DELNET", count: "1,000+ e-books", desc: "Developing Library Network — resource sharing (Membership ID: IM-9078).", category: "Network", href: "https://delnet.in/" },
   { name: "National Digital Library (NDL)", count: "3,200+ e-books", desc: "Government of India's virtual repository of learning resources.", category: "E-Books", href: "https://ndl.iitkgp.ac.in/" },
   { name: "INFLIBNET SOUL 3.0", desc: "Software for University Libraries — integrated library management system.", category: "Software", href: "https://inflibnet.ac.in/soul/" },
+];
+
+export const quickLibraryActions = [
+  {
+    title: "Plagiarism",
+    href: "https://madanpalle.turnitin.com/home/sign-in?redirect_to=https:%2F%2Fmadanpalle.turnitin.com%2F",
+    external: true,
+    variant: "primary" as const,
+  },
+  {
+    title: "Digital Library",
+    href: "http://172.16.0.250/gdlc/",
+    external: true,
+    variant: "secondary" as const,
+  },
+  {
+    title: "Previous Year's Question Papers",
+    href: "/examinations",
+    external: false,
+    variant: "primary" as const,
+  },
+  {
+    title: "Download Request Letter for Plagiarism Verification Certificate",
+    href: "https://mits.ac.in/images/request-letter-for-plagiarism-verification-certificate.pdf",
+    external: true,
+    variant: "secondary" as const,
+  },
+];
+
+export const libraryAchievements = [
+  "Dr. C. Srinivasa Raju Presented a paper in International conference on Building Sustainable Libraries in Connecting Communities: Librarianship, Technology and Collaboration organized by Central Library, Bharatidasan University at Tiruchirapalli during 7th and 8th February 2025.",
+  "Dr. C. Srinivasa Raju, Librarian presented a paper in National conference on Recent Technology Innovation towards Best practices of Libraries in Knowledge Society organized by Central Library, Alagappa University at Karaikudi during 12th and 13th April 2023.",
+  "Dr. P. Rama Murthy Librarian I/c & Mr. G. Sudheer Babu attended One Day Workshop on Consortium of Library Resources and DELNET Services organized by Directorate of Faculty Development & IQAC, JNTUA, Ananthapur on 8th May, 2019.",
+  "Mr. L. Husman & Mr. J. Bharat Kumar attended One-Day National Workshop on \"DELNET: Resources, Services & Facilities\" organised by JSS Academy of Technical Education, Bangalore on 7th May 2013.",
+  "Mr. L. Husman & Mr. J. Bharat Kumar attended Participated in Two Day National Level Workshop on \"Library & Automation\" was organized by Sree Vidyanikethan Engineering College, Sree Sainath Nagar, Tirupathi - 517102, A. P. on 19th - 20th January 2013.",
+];
+
+export const libraryEvents = [
+  {
+    title: "A \"National Librarians Day\" was organized by Central Library of MITS, Deemed to be University on 12th August 2026.",
+    date: "12th August 2026",
+    reportUrl: "https://mits.ac.in/public/uploads/mandatory/Librarians_Day_Report_2026.pdf",
+  },
+  {
+    title: "A One-Day User Awareness Programme on IEEE and EBSCO, E-Journals Accesses was organised by Department of Library on 8th May 2024.",
+    date: "8th May 2024",
+    reportUrl: "https://mits.ac.in/public/uploads/mandatory/Library_IEEE_EBSCO_Awareness_2024.pdf",
+  },
+];
+
+export const libraryContacts = [
+  {
+    name: "Dr. M. Suresh Babu",
+    designation: "Librarian",
+    address: "Madanapalle Institute of Technology & Science (Deemed to be University), Madanapalle-Kadiri Road, Kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India",
+    phone: "+91-8571-280255; 280706",
+    email: "librarian@mits.ac.in",
+  },
+  {
+    name: "Dr. C. Srinivasa Raju",
+    designation: "Librarian",
+    address: "Madanapalle Institute of Technology & Science (Deemed to be University), Madanapalle-Kadiri Road, Kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India",
+    phone: "+91-8571-280255; 280706",
+    email: "drsrinivasarajuc@mits.ac.in",
+  },
 ];
 
 export const memberships = [
@@ -91,12 +156,12 @@ export const quickAccess = [
 ];
 
 export const libraryContact = {
-  location: "Central Library, MITS Campus, Angallu (V), Madanapalle – 517325, Chittoor Dist., A.P.",
-  email: "library@mits.ac.in",
-  phone: "+91 8571 280255",
+  location: "Central Library, MITS Campus, Angallu (V), Madanapalle — 517325, Annamayya Dist., A.P.",
+  email: "librarian@mits.ac.in",
+  phone: "+91-8571-280255; 280706",
   hours: [
-    { day: "Monday – Friday", time: "8:00 AM – 10:00 PM" },
-    { day: "Saturday", time: "9:00 AM – 5:00 PM" },
+    { day: "Monday — Friday", time: "8:00 AM — 10:00 PM" },
+    { day: "Saturday", time: "9:00 AM — 5:00 PM" },
     { day: "Sunday & Holidays", time: "Closed" },
   ],
 };

@@ -11,10 +11,11 @@ import { cellCategories } from "@/data/cellsData";
 
 const BASE = import.meta.env.BASE_URL;
 
-export default function CellDetail() {
+export default function CellDetail({ overrideId }: { overrideId?: string } = {}) {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const cell = id ? cellsDetailData[id] : null;
+  const targetId = overrideId || id;
+  const cell = targetId ? cellsDetailData[targetId] : null;
 
   if (!cell) {
     return (

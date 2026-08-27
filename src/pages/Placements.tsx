@@ -248,6 +248,22 @@ const onlinePracticeLinks = [
 
 // Placement Statistics Data for all years
 const placementStatsData: { [key: string]: { branches: { [key: string]: { eligible: number; placed: number } } } } = {
+  "2025-26*": {
+    branches: {
+      "CSE": { eligible: 264, placed: 174 },
+      "CST": { eligible: 192, placed: 133 },
+      "CAI": { eligible: 196, placed: 130 },
+      "CSD": { eligible: 129, placed: 75 },
+      "CSC": { eligible: 58, placed: 31 },
+      "ECE": { eligible: 245, placed: 164 },
+      "EEE": { eligible: 65, placed: 61 },
+      "MECH": { eligible: 26, placed: 23 },
+      "Civil": { eligible: 30, placed: 30 },
+      "MBA": { eligible: 167, placed: 201 },
+      "MCA": { eligible: 185, placed: 82 },
+      "M.Tech": { eligible: 27, placed: 3 },
+    }
+  },
   "2024-25": {
     branches: {
       "CSE": { eligible: 285, placed: 169 },
@@ -529,7 +545,7 @@ const TeamFacultyCard = ({
 
 const Placements = () => {
   const [activeTab, setActiveTab] = useState("training-placement-cell");
-  const [selectedYear, setSelectedYear] = useState("2024-25");
+  const [selectedYear, setSelectedYear] = useState("2025-26*");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
   const params = useParams();
@@ -545,6 +561,14 @@ const Placements = () => {
       console.debug(e);
     }
     setSidebarOpen(false);
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 500, behavior: "smooth" });
+      }
+    }, 80);
   };
 
   // Set active tab from URL param on mount
@@ -747,9 +771,30 @@ const Placements = () => {
                       <p className="text-slate-600 leading-relaxed mb-6 text-lg">
                         MITS-TPC team manages active relationships with companies that recruit students, working to ensure that the recruiting process is smooth, hassle-free and rewarding. In concert with administration, faculty-corporate relations and students, the TPC works continually to bring new companies on-Grounds and to expand existing relationships.
                       </p>
-                      <p className="text-slate-600 leading-relaxed text-lg">
+                      <p className="text-slate-600 leading-relaxed text-lg mb-8">
                         The TPC also maintains an intranet that facilitates many technical aspects of the job search, allowing students to manage their search electronically from computers on-Grounds or online. Using the TPC site, students can research companies and contacts, search for employment opportunities, apply for jobs, sign up for company presentations, schedule on-Campus interviews and much more.
                       </p>
+
+                      <div className="mt-8 pt-6 border-t border-slate-200/80">
+                        <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex items-center justify-between gap-4">
+                          <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 rounded-lg bg-red-50 text-red-700 flex items-center justify-center shrink-0">
+                              <FileText className="w-6 h-6" />
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-slate-800 text-base">Training & Placements Committee Order</h4>
+                              <p className="text-xs text-slate-500 mt-0.5">Official constitution order and administrative structure of the Placement Cell</p>
+                            </div>
+                          </div>
+                          <Button asChild variant="outline" className="border-red-700 text-red-700 hover:bg-red-700 hover:text-white shrink-0">
+                            <a href="https://mits.ac.in/assets/pdf/admin/TPC_Committee_Order.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                              <FileText className="w-4 h-4" />
+                              View Order PDF
+                              <ExternalLink className="w-3.5 h-3.5" />
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
                     </div>
                   </ScrollReveal>
                 </section>

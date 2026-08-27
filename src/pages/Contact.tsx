@@ -9,10 +9,10 @@ import { useState } from "react";
 const BASE = import.meta.env.BASE_URL;
 
 const contactCards = [
-  { icon: MapPin, title: "Visit Us", lines: ["Madanapalle Institute of Technology & Science", "Post Box No. 14, Angallu", "Madanapalle – 517325, A.P., India"], accent: "from-[#b30000] to-[#d93030]" },
-  { icon: Phone, title: "Call Us", lines: ["+91 7330803555", "+91 7330852555", "Mon – Sat, 9:00 AM – 5:00 PM"], accent: "from-[#0f2a44] to-[#1a3d5c]" },
-  { icon: Mail, title: "Email Us", lines: ["info@mits.ac.in", "principal@mits.ac.in", "admissions@mits.ac.in"], accent: "from-[#8a6a1a] to-[#caa74d]" },
-  { icon: Clock, title: "Office Hours", lines: ["Mon – Fri: 9:00 AM – 5:00 PM", "Saturday: 9:00 AM – 1:00 PM", "Sunday: Closed"], accent: "from-[#7a0000] to-[#b30000]" },
+  { icon: MapPin, title: "Address", lines: ["Madanapalle Institute of Technology & Science", "Deemed to be University", "Madanapalle-Kadiri Road, NH-42, Kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India"], accent: "from-[#b30000] to-[#d93030]" },
+  { icon: Phone, title: "Phone & WhatsApp", lines: ["Phone: +91-7330803555 / 7330852555", "Landline: +91-8712655132 / 4 / 8", "WhatsApp: +91 7330803555"], accent: "from-[#0f2a44] to-[#1a3d5c]" },
+  { icon: Mail, title: "Email Address", lines: ["admissions@mits.ac.in", "principal@mits.ac.in", "info@mits.ac.in"], accent: "from-[#8a6a1a] to-[#caa74d]" },
+  { icon: Clock, title: "Office Hours", lines: ["Mon — Fri: 9:00 AM — 5:00 PM", "Saturday: 9:00 AM — 1:00 PM", "Sunday & Holidays: Closed"], accent: "from-[#7a0000] to-[#b30000]" },
 ];
 
 const departments = [

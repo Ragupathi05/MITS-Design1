@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
                   <p className="font-body text-[#1a1a1a] mb-6 leading-[1.8] italic text-base md:text-lg">"{testimonials[active].text}"</p>
                   <div>
                     <p className="font-display font-bold text-[#0f172a] text-xl">{testimonials[active].name}</p>
-                    <p className="font-body text-[#b30000] text-sm font-semibold mt-1">{testimonials[active].type} • {testimonials[active].role}</p>
+                    <p className="font-body text-[#b30000] text-sm font-semibold mt-1">{testimonials[active].type}  -  {testimonials[active].role}</p>
                   </div>
                 </motion.div>
               </AnimatePresence>

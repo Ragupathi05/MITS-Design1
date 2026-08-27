@@ -176,7 +176,7 @@ const OverviewSection = () => (
     {/* H-Index chart
     <ScrollReveal delay={0.12}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="H-Index Growth" subtitle="MITS institutional H-Index trend (Scopus, 2019 – 2025)." />
+        <SectionHeading title="H-Index Growth" subtitle="MITS institutional H-Index trend (Scopus, 2019  -  2025)." />
         <div className="flex items-center gap-3 mb-4 text-sm">
           <TrendingUp className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">H-Index has grown from <b className="text-foreground">21</b> in 2019 to <b className="text-foreground">70</b> in 2025.</span>
@@ -221,21 +221,21 @@ const ProjectsSection = () => (
             fields and collaborations with many organizations to tackle current issues. This demonstrates the organization's commitment towards significant research and development. 
             Researchers at MITS are engaged in carrying out impactful projects in diverse areas such as science, engineering, emerging technologies, healthcare, sustainability, 
             and interdisciplinary domains. Along with successfully completed and ongoing projects, faculty members continuously submit innovative research proposals to various funding agencies,
-             reflecting the institution’s vibrant research ecosystem and dedication to solving real-world societal and technological challenges. 
-             These efforts demonstrate MITS University’s emphasis on high-quality research, industry interaction, innovation-led growth, and meaningful contributions to national and global scientific advancement.
+             reflecting the institution - s vibrant research ecosystem and dedication to solving real-world societal and technological challenges. 
+             These efforts demonstrate MITS University - s emphasis on high-quality research, industry interaction, innovation-led growth, and meaningful contributions to national and global scientific advancement.
         </p>
       </div>
     </ScrollReveal>
     <ScrollReveal>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-        <SectionHeading title="Project Funding Analytics" subtitle="Year-wise sanctioned project funding (Amount in ? Lakhs)." />
+        <SectionHeading title="Project Funding Analytics" subtitle="Year-wise sanctioned project funding (Amount in â‚¹ Lakhs)." />
         <div className="grid place-items-center mb-6">
   <div className="w-full max-w-md bg-primary/5 border border-primary/20 rounded-xl p-5">
     <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">
       Total Sanctioned
     </p>
     <p className="font-display text-3xl font-bold text-primary mt-1">
-      ?18.46 Cr
+      â‚¹18.46 Cr
     </p>
     <p className="text-sm text-muted-foreground mt-1">
       Cumulative Research Projects / Workshops/ seminar grants till date
@@ -243,7 +243,7 @@ const ProjectsSection = () => (
   </div>
 </div>
         <div className="mb-2 text-center">
-  <p className="text-sm font-semibold text-muted-foreground">Amount in ? Lakhs</p>
+  <p className="text-sm font-semibold text-muted-foreground">Amount in â‚¹ Lakhs</p>
 </div>
 <BarChart data={projectFunding} height={300} />  
 </div>  </ScrollReveal>
@@ -378,7 +378,7 @@ const PublicationsSection = () => {
           The university has consistently demonstrated excellence in research through quality publications in reputed international and national journals, conferences, and academic proceedings 
           indexed in Scopus and Web of Science databases. With a rapidly growing research ecosystem, MITS has made remarkable contributions in emerging areas such as Artificial Intelligence, 
           Machine Learning, Smart Healthcare, Renewable Energy, Advanced Materials, Cyber Security, Sustainable Infrastructure, and Data Science.
-          The institution’s research initiatives are closely aligned with the United Nations Sustainable Development Goals (SDGs), contributing to advancements in healthcare, clean energy, environmental sustainability, smart technologies, and societal development.
+          The institution - s research initiatives are closely aligned with the United Nations Sustainable Development Goals (SDGs), contributing to advancements in healthcare, clean energy, environmental sustainability, smart technologies, and societal development.
           Faculty members and researchers at MITS actively collaborate with premier national and international institutions, industries, and research organizations, thereby enhancing the quality, visibility, and global impact of their research outcomes.
         </p>
       </div>
@@ -388,7 +388,7 @@ const PublicationsSection = () => {
           <div className="bg-card border border-border rounded-2xl p-5">
             <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">Scopus/WOS Indexed Publications</p>
             <p className="font-display text-3xl font-bold text-primary mt-1">3,200+</p>
-            {/* <p className="text-sm text-muted-foreground mt-1">• Scopus ID 60107346</p> */}
+            {/* <p className="text-sm text-muted-foreground mt-1"> -  Scopus ID 60107346</p> */}
           </div>
           {/* <div className="bg-card border border-border rounded-2xl p-5">
             <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">SCI / Scopus Articles</p>
@@ -501,7 +501,7 @@ const PublicationsSection = () => {
       </div>
     </ScrollReveal>
 
-      {/* SDGs Publications & Book Chapters — PDF boxes, no title */}
+      {/* SDGs Publications & Book Chapters  -  PDF boxes, no title */}
       <ScrollReveal delay={0.08}>
         <div className="grid sm:grid-cols-2 gap-4">
           {[
@@ -545,7 +545,7 @@ const PatentsSection = () => {
         into valuable intellectual property with significant societal and industrial impact. Through periodic workshops, training programs, expert mentoring, 
         and dedicated institutional support, the IPR Cell promotes a strong culture of innovation, creativity, and entrepreneurship while enhancing collaboration between
          academia and industry. The increasing number of patent applications, granted patents, copyrights, trademarks, and technology-driven innovations demonstrates
-          MITS University’s dedication to research excellence, knowledge commercialization, and meaningful contributions to national and global technological progress.
+          MITS University - s dedication to research excellence, knowledge commercialization, and meaningful contributions to national and global technological progress.
         </p>
       </div>
     </ScrollReveal>
@@ -586,7 +586,7 @@ const PatentsSection = () => {
       {/* AY-wise charts */}
       <ScrollReveal delay={0.08}>
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-          <SectionHeading title="Patents — Academic Year wise" subtitle="Filed, published, granted and total patents across academic years." />
+          <SectionHeading title="Patents â€” Academic Year wise" subtitle="Filed, published, granted and total patents across academic years." />
           <BarChart
             series={[
               { name: "Total",     color: "hsl(var(--primary))" },
@@ -680,7 +680,7 @@ const PoliciesSection = () => (
       </div>
     </ScrollReveal>
 
-    {/* SEED Grant Policy — inline */}
+    {/* SEED Grant Policy  -  inline */}
     {/* <ScrollReveal delay={0.05}>
       <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
         <SectionHeading
@@ -1214,7 +1214,7 @@ const FoundationSection = () => (
           </div>
           <div>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">{mitsFoundationData.title}</h2>
-            <p className="text-sm text-primary font-semibold mt-1 uppercase tracking-wider">Section 8 Company • Incubation & Innovation</p>
+            <p className="text-sm text-primary font-semibold mt-1 uppercase tracking-wider">Section 8 Company  -  Incubation & Innovation</p>
           </div>
         </div>
         <p className="text-muted-foreground leading-relaxed text-justify">{mitsFoundationData.description}</p>
@@ -1353,7 +1353,7 @@ const MDRFSection = () => {
             </div>
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Multidisciplinary Research Forum (MDRF)</h2>
-              <p className="text-sm text-blue-700 dark:text-blue-400 font-semibold mt-1 uppercase tracking-wider">Constituted 2024 • Cross-Disciplinary Synergies • MITS Deemed University</p>
+              <p className="text-sm text-blue-700 dark:text-blue-400 font-semibold mt-1 uppercase tracking-wider">Constituted 2024  -  Cross-Disciplinary Synergies  -  MITS Deemed University</p>
             </div>
           </div>
           <p className="text-muted-foreground leading-relaxed text-sm text-justify">
@@ -1384,7 +1384,7 @@ const MDRFSection = () => {
           {/* Sub-tab Content Panels */}
           <div className="p-6 md:p-8">
 
-            {/* 1 — About MDRF */}
+            {/* 1  -  About MDRF */}
             {activeMdrf === "about" && (
               <div className="space-y-6">
                 <div>
@@ -1446,7 +1446,7 @@ const MDRFSection = () => {
               </div>
             )}
 
-            {/* 2 — Administrative Support */}
+            {/* 2  -  Administrative Support */}
             {activeMdrf === "admin" && (
               <div className="space-y-6 text-foreground text-sm leading-relaxed">
                 <div>
@@ -1455,7 +1455,7 @@ const MDRFSection = () => {
                     Madanapalle Institute of Technology &amp; Science (MITS) recognizes the growing importance of interdisciplinary research in addressing complex real-world challenges and has established a supportive administrative framework to promote such collaborations. This framework provides essential resources, encourages interaction among departments, and simplifies the research process for faculty and students working across disciplines.
                   </p>
                   <p className="text-muted-foreground leading-relaxed text-justify">
-                    At MITS, interdisciplinary research activities are coordinated through the Research &amp; Development (R&amp;D) Cell, functioning under the guidance of the institute leadership. The R&amp;D Cell provides strategic direction, facilitates collaboration among various departments, and ensures that research initiatives are aligned with the institution’s academic goals and societal needs.
+                    At MITS, interdisciplinary research activities are coordinated through the Research &amp; Development (R&amp;D) Cell, functioning under the guidance of the institute leadership. The R&amp;D Cell provides strategic direction, facilitates collaboration among various departments, and ensures that research initiatives are aligned with the institution - s academic goals and societal needs.
                   </p>
                 </div>
 
@@ -1564,7 +1564,7 @@ const MDRFSection = () => {
               </div>
             )}
 
-            {/* 3 — Research Areas & Clusters */}
+            {/* 3  -  Research Areas & Clusters */}
             {activeMdrf === "clusters" && (
               <div className="space-y-6">
                 <div>
@@ -1583,7 +1583,7 @@ const MDRFSection = () => {
               </div>
             )}
 
-            {/* 4 — Partnerships / Collaborations */}
+            {/* 4  -  Partnerships / Collaborations */}
             {activeMdrf === "partnerships" && (
               <div className="space-y-6">
                 <div>
@@ -1609,7 +1609,7 @@ const MDRFSection = () => {
               </div>
             )}
 
-            {/* 5 — Facilities */}
+            {/* 5  -  Facilities */}
             {activeMdrf === "facilities" && (
               <div className="space-y-6">
                 <div>
@@ -1657,7 +1657,7 @@ const MDRFSection = () => {
               </div>
             )}
 
-            {/* 6 — Outcomes */}
+            {/* 6  -  Outcomes */}
             {activeMdrf === "outcomes" && (
               <div className="space-y-6">
                 <div>
@@ -1672,7 +1672,7 @@ const MDRFSection = () => {
                     <p className="text-sm text-muted-foreground mt-1 font-medium">Scopus Publications</p>
                   </div>
                   <div className="border border-border rounded-xl p-4 bg-muted/20">
-                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">?18.44 Cr</p>
+                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">â‚¹18.44 Cr</p>
                     <p className="text-sm text-muted-foreground mt-1 font-medium">Funded Research Projects</p>
                   </div>
                   <div className="border border-border rounded-xl p-4 bg-muted/20">
@@ -1687,7 +1687,7 @@ const MDRFSection = () => {
               </div>
             )}
 
-            {/* 7 — Projects */}
+            {/* 7  -  Projects */}
             {activeMdrf === "projects" && (
               <div className="space-y-6">
                 <div>
@@ -1725,7 +1725,7 @@ const MDRFSection = () => {
               </div>
             )}
 
-            {/* 8 — Gallery */}
+            {/* 8  -  Gallery */}
             {activeMdrf === "gallery" && (
               <div className="space-y-6">
                 <div>
@@ -1753,7 +1753,7 @@ const MDRFSection = () => {
               </div>
             )}
 
-            {/* 9 — Contact */}
+            {/* 9  -  Contact */}
             {activeMdrf === "contact" && (
               <div className="space-y-6">
                 <div className="bg-primary/5 border border-primary/20 rounded-xl p-3 md:p-4">
@@ -1813,10 +1813,10 @@ const WWRCSection = () => {
   ];
 
   const projects = [
-    { sno: 1, year: "2025 – 2026", title: "Mechanical properties of PP fiber reinforced concrete with partial replacement of Aggregates with glass waste.", team: "Dr. Vijay Kumar Natesan", status: "On Going" },
-    { sno: 2, year: "2025 – 2026", title: "Mechanical Properties of coconut Fibre Reinforced Concrete with Partial Replacement of Aggregates using Glass Waste.", team: "Dr. Vijay Kumar Natesan", status: "On Going" },
-    { sno: 3, year: "2025 – 2026", title: "Smart waste management solutions for MITS campus Madanapalle.", team: "Dr. N Tagore Sai Priya", status: "On Going" },
-    { sno: 4, year: "2025 – 2026", title: "A study on Utilization of C & D waste and granite dust as a Fine Aggregate in Paver Blocks and Plain Cement Concrete.", team: "Dr. Sudheer Kumar Y", status: "On Going" },
+    { sno: 1, year: "2025  -  2026", title: "Mechanical properties of PP fiber reinforced concrete with partial replacement of Aggregates with glass waste.", team: "Dr. Vijay Kumar Natesan", status: "On Going" },
+    { sno: 2, year: "2025  -  2026", title: "Mechanical Properties of coconut Fibre Reinforced Concrete with Partial Replacement of Aggregates using Glass Waste.", team: "Dr. Vijay Kumar Natesan", status: "On Going" },
+    { sno: 3, year: "2025  -  2026", title: "Smart waste management solutions for MITS campus Madanapalle.", team: "Dr. N Tagore Sai Priya", status: "On Going" },
+    { sno: 4, year: "2025  -  2026", title: "A study on Utilization of C & D waste and granite dust as a Fine Aggregate in Paver Blocks and Plain Cement Concrete.", team: "Dr. Sudheer Kumar Y", status: "On Going" },
   ];
 
   const galleryImages = [
@@ -1837,7 +1837,7 @@ const WWRCSection = () => {
             </div>
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Waste to Wealth Research Centre (WWRC)</h2>
-              <p className="text-sm text-green-700 dark:text-green-400 font-semibold mt-1 uppercase tracking-wider">Circular Economy • Waste Valorization • Sustainable Innovation</p>
+              <p className="text-sm text-green-700 dark:text-green-400 font-semibold mt-1 uppercase tracking-wider">Circular Economy  -  Waste Valorization  -  Sustainable Innovation</p>
             </div>
           </div>
           <p className="text-muted-foreground leading-relaxed text-sm text-justify">
@@ -1872,7 +1872,7 @@ const WWRCSection = () => {
           {/* Tab panels */}
           <div className="p-6 md:p-8">
 
-            {/* 1 — About */}
+            {/* 1  -  About */}
             {activeWwrc === "about" && (
               <div className="space-y-4">
                 <SectionHeading title="About Waste to Wealth Research Center" />
@@ -1885,7 +1885,7 @@ const WWRCSection = () => {
               </div>
             )}
 
-            {/* 2 — Administrative Support */}
+            {/* 2  -  Administrative Support */}
             {activeWwrc === "admin" && (
               <div className="space-y-4">
                 <SectionHeading title="Administrative Support" />
@@ -1908,7 +1908,7 @@ const WWRCSection = () => {
               </div>
             )}
 
-            {/* 3 — Research Areas */}
+            {/* 3  -  Research Areas */}
             {activeWwrc === "areas" && (
               <div className="space-y-4">
                 <SectionHeading title="Research Areas" />
@@ -1932,10 +1932,10 @@ const WWRCSection = () => {
               </div>
             )}
 
-            {/* 4 — Projects */}
+            {/* 4  -  Projects */}
             {activeWwrc === "projects" && (
               <div className="space-y-4">
-                <SectionHeading title="Projects" subtitle="Active research projects under the Waste to Wealth Research Centre (2025–2026)." />
+                <SectionHeading title="Projects" subtitle="Active research projects under the Waste to Wealth Research Centre (2025 - 2026)." />
                 <div className="overflow-x-auto rounded-xl border border-border">
                   <table className="w-full text-sm">
                     <thead className="bg-green-500/10 border-b border-border">
@@ -1966,7 +1966,7 @@ const WWRCSection = () => {
               </div>
             )}
 
-            {/* 5 — Gallery */}
+            {/* 5  -  Gallery */}
             {activeWwrc === "gallery" && (
               <div className="space-y-4">
                 <SectionHeading title="Gallery" subtitle="Images from W2WRC activities, lab work, and field projects." />
@@ -2001,8 +2001,8 @@ const Research = () => {
     <div className="min-h-screen">
       <Header />
       <SEO
-        title="Research & Innovation at MITS Madanapalle – 3,085 Scopus Papers"
-        description="MITS research: 3,085 Scopus publications, H-Index 70, ?18.44 Cr funded projects, 200+ patents. Explore R&D cell, IPR, consultancy, MDRF and innovation ecosystem."
+        title="Research & Innovation at MITS Madanapalle  -  3,085 Scopus Papers"
+        description="MITS research: 3,085 Scopus publications, H-Index 70, â‚¹118.44 Cr funded projects, 200+ patents. Explore R&D cell, IPR, consultancy, MDRF and innovation ecosystem."
         canonical="/research"
       />
       <main>

@@ -260,7 +260,7 @@ const Careers = () => {
               {/* What We Do Here */}
               <ScrollReveal delay={0.1}>
                 <div className="bg-muted/30 border border-border rounded-2xl p-6 md:p-8">
-                  <SectionHeading title="What We Do Here?" subtitle="A vibrant culture of collaborative learning and innovation." />
+                  <SectionHeading title="What We Do Here -  subtitle="A vibrant culture of collaborative learning and innovation." />
                   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                     {whatWeDoList.map((item, idx) => (
                       <div key={idx} className="bg-card border border-border rounded-xl p-4 flex flex-col items-center text-center">
@@ -397,7 +397,7 @@ const Careers = () => {
                     <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground">
                       Deans Recruitment Drive for the Academic Year 2026-27
                     </h2>
-                    <p className="text-muted-foreground text-sm md:text-sm max-w-4xl mx-auto leading-relaxed text-justify md:text-center">
+                    <p className="text-muted-foreground text-sm md:text-sm max-w-4xl mx-auto leading-relaxed text-justify">
                       Madanapalle Institute of Technology &amp; Science (MITS) since its establishment in 1998, has evolved into an Autonomous Institution in 2014 and was conferred Deemed to be University status by Ministry of Education &amp; UGC, New Delhi vide Notification No. 9-1/2025-U.3(A) dated 15th July, 2025. MITS Deemed to be University is poised for exponential growth invites applications from self-motivated, committed and competent academic leaders who can make a difference and add significant value to the University.
                     </p>
                     <p className="text-red-700 dark:text-red-400 font-bold text-sm md:text-sm pt-2">
@@ -474,7 +474,7 @@ const Careers = () => {
                     <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground">
                       Faculty Recruitment Drive for the Academic Year 2026-27
                     </h2>
-                    <p className="text-muted-foreground text-sm md:text-sm max-w-4xl mx-auto leading-relaxed text-justify md:text-center">
+                    <p className="text-muted-foreground text-sm md:text-sm max-w-4xl mx-auto leading-relaxed text-justify">
                       Madanapalle Institute of Technology &amp; Science (MITS) since its establishment in 1998, has evolved into an Autonomous Institution in 2014 and was conferred Deemed to be University status by Ministry of Education &amp; UGC, New Delhi vide Notification No. 9-1/2025-U.3(A) dated 15th July, 2025. MITS Deemed to be University is poised for exponential growth invites applications from self-motivated, committed and competent academic leaders who can make a difference and add significant value to the University.
                     </p>
                   </div>

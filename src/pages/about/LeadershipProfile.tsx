@@ -1,6 +1,6 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link, Navigate } from "react";
 import { motion } from "framer-motion";
-import { Quote, Award, ExternalLink, FileText, ArrowLeft } from "lucide-react";
+import { Quote, Award, FileText, ArrowLeft, GraduationCap, Sparkles, BookOpen, Briefcase, Award as Medal } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
 import { leadershipProfiles } from "@/data/aboutData";
 import { Button } from "@/components/ui/button";
@@ -17,24 +17,24 @@ const LeadershipProfilePage = () => {
     <PageShell
       eyebrow="Leadership"
       title={profile.name}
-      intro={profile.designation + (profile.qualification ? ` · ${profile.qualification}` : "")}
+      intro={profile.designation + (profile.qualification ? ` • ${profile.qualification}` : "")}
     >
       <Link
         to="/about/leadership"
-        className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline mb-6"
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline mb-6"
       >
         <ArrowLeft className="w-4 h-4" /> Back to Leadership
       </Link>
 
       <div className="grid lg:grid-cols-12 gap-8">
-        {/* Portrait card */}
+        {/* Portrait Sidebar Card */}
         <motion.aside
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="lg:col-span-4"
         >
-          <div className="sticky top-28 bg-card border border-border rounded-2xl overflow-hidden shadow-2xl">
+          <div className="sticky top-28 bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
             <div className="aspect-[3/4] bg-secondary/5 relative">
               <img
                 src={profile.image}
@@ -45,81 +45,146 @@ const LeadershipProfilePage = () => {
                     "https://mits.ac.in/images/inner-banner.jpg";
                 }}
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent text-white p-5">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white p-5">
                 {profile.tagline && (
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">
-                    {profile.tagline}
+                  <p className="text-xs uppercase tracking-[0.18em] text-amber-300 font-bold mb-1">
+                    "{profile.tagline}"
                   </p>
                 )}
-                <p className="font-display text-lg font-bold text-white" style={{ fontFamily: "var(--font-display)" }}>
+                <p className="font-display text-xl font-bold text-white leading-tight">
                   {profile.name}
                 </p>
-                <p className="text-sm text-white/90 mt-0.5">{profile.designation}</p>
+                <p className="text-sm text-white/90 mt-1 font-medium">{profile.designation}</p>
               </div>
             </div>
             {profile.qualification && (
-              <div className="px-5 py-3 border-t border-border text-sm text-secondary/80">
+              <div className="px-5 py-3 bg-slate-50 border-t border-border text-xs font-semibold text-secondary/80">
                 {profile.qualification}
               </div>
             )}
           </div>
         </motion.aside>
 
-        {/* Body */}
+        {/* Main Content Body */}
         <motion.section
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="lg:col-span-8 space-y-8"
         >
-          {profile.message && (
-            <div className="relative bg-gradient-to-br from-primary/5 to-accent/5 border-l-4 border-primary p-6 md:p-8 rounded-r-xl">
-              <Quote className="w-8 h-8 text-primary/30 mb-3" />
-              <p className="text-base md:text-lg italic text-secondary/90 leading-relaxed">
-                {profile.message}
-              </p>
-              <p className="mt-4 text-sm font-semibold text-primary">— {profile.name}</p>
+          {/* Motto Tagline Banner */}
+          {profile.tagline && (
+            <div className="bg-amber-500/10 border-l-4 border-amber-500 p-4 rounded-r-xl text-amber-900 font-semibold italic text-base sm:text-lg">
+              "{profile.tagline}"
             </div>
           )}
 
+          {/* Message Box (e.g. Chancellor's Message) */}
+          {profile.message && (
+            <div className="relative bg-gradient-to-br from-primary/5 via-white to-amber-500/5 border-l-4 border-primary p-6 md:p-8 rounded-r-2xl shadow-xs space-y-3">
+              <div className="flex items-center gap-2 text-primary font-bold text-lg font-display">
+                <Quote className="w-5 h-5" />
+                <h3>{profile.designation.includes("Chancellor") ? "Chancellor's Message:" : "Leadership Message:"}</h3>
+              </div>
+              <p className="text-base md:text-lg italic text-secondary/90 leading-relaxed pt-1">
+                "{profile.message}"
+              </p>
+              <p className="text-sm font-bold text-primary text-right pt-2">— {profile.name}</p>
+            </div>
+          )}
+
+          {/* Brief Profile Bio */}
           <div>
-            <h2 className="text-2xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>
+            <h2 className="text-2xl font-bold text-secondary mb-4 font-display pb-2 border-b border-border">
               Brief Profile
             </h2>
-            <div className="space-y-4 text-secondary/80 text-base leading-[1.8]">
+            <div className="space-y-4 text-secondary/85 text-base leading-[1.8] text-justify">
               {profile.bio.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
           </div>
 
+          {/* Recognized Highlights / Awards */}
           {profile.highlights && profile.highlights.length > 0 && (
             <div>
-              <h2 className="text-2xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>
+              <h2 className="text-2xl font-bold text-secondary mb-4 font-display pb-2 border-b border-border">
                 Recognitions & Highlights
               </h2>
               <ul className="grid sm:grid-cols-2 gap-3">
                 {profile.highlights.map((h, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-3 p-4 bg-white border border-border rounded-lg hover:border-primary/40 hover:shadow-sm transition-all"
+                    className="flex items-start gap-3 p-4 bg-white border border-border rounded-xl hover:border-primary/40 hover:shadow-sm transition-all"
                   >
-                    <Award className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                    <span className="text-sm text-secondary/85">{h}</span>
+                    <Award className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                    <span className="text-sm text-secondary/85 font-medium">{h}</span>
                   </li>
                 ))}
               </ul>
             </div>
           )}
 
+          {/* Detailed Sections (Educational Qualifications, Publications, Patents, Research Projects) */}
+          {profile.sections && profile.sections.length > 0 && (
+            <div className="space-y-8 pt-4">
+              {profile.sections.map((section, idx) => (
+                <div key={idx} className="bg-white border border-border rounded-2xl p-6 shadow-xs space-y-4">
+                  <h3 className="text-xl font-bold text-secondary font-display flex items-center gap-2 border-b border-border pb-3">
+                    <GraduationCap className="w-5 h-5 text-primary" />
+                    <span>{section.title}</span>
+                  </h3>
+
+                  {Array.isArray(section.content) && section.content.length > 0 && typeof section.content[0] === "object" ? (
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left text-sm border-collapse">
+                        <thead>
+                          <tr className="bg-primary text-white">
+                            {Object.keys(section.content[0]).map((key) => (
+                              <th key={key} className="p-3 border border-white/20 font-semibold capitalize">
+                                {key}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border">
+                          {section.content.map((row: any, rIdx: number) => (
+                            <tr key={rIdx} className="hover:bg-slate-50">
+                              {Object.values(row).map((val: any, cIdx: number) => (
+                                <td key={cIdx} className="p-3 border border-border text-secondary/85 text-xs sm:text-sm">
+                                  {val}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : (
+                    <ul className="space-y-2 text-sm text-secondary/85">
+                      {Array.isArray(section.content) &&
+                        section.content.map((item: any, iIdx: number) => (
+                          <li key={iIdx} className="flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                            <span>{typeof item === "string" ? item : JSON.stringify(item)}</span>
+                          </li>
+                        ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Documents */}
           {profile.documents && profile.documents.length > 0 && (
             <div>
-              <h2 className="text-2xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>
-                Documents
+              <h2 className="text-2xl font-bold text-secondary mb-4 font-display pb-2 border-b border-border">
+                Documents & Publications
               </h2>
               <div className="flex flex-wrap gap-3">
                 {profile.documents.map((d) => (
-                  <Button key={d.url} asChild variant="outline" className="border-primary text-primary">
+                  <Button key={d.url} asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
                     <a href={d.url} target="_blank" rel="noopener noreferrer">
                       <FileText className="w-4 h-4 mr-2" /> {d.label}
                     </a>

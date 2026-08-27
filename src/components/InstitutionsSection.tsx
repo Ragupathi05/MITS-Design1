@@ -41,7 +41,7 @@ const trustCards = [
   },
   {
     svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21l4-18 4 18"/><path d="M6 15h12"/><circle cx="12" cy="3" r="1.5" fill="currentColor" stroke="none" opacity="0.3"/></svg>`,
-    value: "201–300",
+    value: "201 - 300",
     label: "NIRF Ranking",
     sub: "Consistently ranked in NIRF Engineering category",
     isStatic: true,

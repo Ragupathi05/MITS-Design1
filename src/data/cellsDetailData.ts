@@ -48,42 +48,42 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "name": "Dr. P. Ramanathan",
         "designation": "Principal",
         "position": "Chairperson",
-        "email": "[email protected]"
+        "email": "drramanathanp@mits.ac.in"
       },
       {
         "sno": "2",
         "name": "Dr. C. Kamal Basha",
         "designation": "Professor",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "viceprincipaladministration@mits.ac.in"
       },
       {
         "sno": "3",
         "name": "Dr. S. Shanmuga Priya",
         "designation": "Associate Professor",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "shanmugapriyas@mits.ac.in"
       },
       {
         "sno": "4",
         "name": "Dr. K. Chandra Mohan",
         "designation": "Associate Professor",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drkchandramohan@mits.ac.in"
       },
       {
         "sno": "5",
         "name": "Dr. Rajesh Dagupati",
         "designation": "Assistant Professor",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drrajeshd@mits.ac.in"
       },
       {
         "sno": "6",
         "name": "Ms. Ch. Jeshnavi",
         "designation": "Student",
         "position": "Special Invitee",
-        "email": "[email protected]"
+        "email": "jeshnavichintapalli@gmail.com"
       }
     ],
     "documents": [
@@ -310,7 +310,7 @@ export const cellsDetailData: Record<string, CellDetail> = {
       {
         "name": "Mrs. Vijaya Lakshmi U",
         "designation": "Associate Director - International Relations & Institute Counsellor - MITS",
-        "email": "",
+        "email": "vijayalakshmiu@mits.ac.in",
         "phone": "Phone :\n+91 9100600773\n",
         "address": "Madanapalle Institute of Technology & Science"
       },
@@ -622,77 +622,77 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "name": "Dr. C. Yuvaraj",
         "designation": "Vice Chancellor (I/c)",
         "position": "Chairman",
-        "email": "[email protected]"
+        "email": "vicechancellor@mits.ac.in"
       },
       {
         "sno": "2",
         "name": "Dr. C. Kamal Basha",
         "designation": "Vice Principal - Administration",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "viceprincipaladministration@mits.ac.in"
       },
       {
         "sno": "3",
         "name": "Dr. K. Chandra Mohan",
         "designation": "Associate Professor",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drkchandramohan@mits.ac.in"
       },
       {
         "sno": "4",
         "name": "Dr. K. Dasthagiri Basha",
         "designation": "Psychologist",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drdasthagiribashak@mits.ac.in"
       },
       {
         "sno": "5",
         "name": "Dr. Sujay Nama",
         "designation": "External Expert Counsellor (Psychiatrist)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "dr_sujay@yahoo.com"
       },
       {
         "sno": "6",
         "name": "Mr. Jaswanth Muthineedi",
         "designation": "Student (3rd Year AI-B)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "21691A3168@mits.ac.in"
       },
       {
         "sno": "7",
         "name": "Ms. Lakshmi Sree Kota",
         "designation": "Student (3rd Year AI-B)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "21691A3183@mits.ac.in"
       },
       {
         "sno": "8",
         "name": "Mr. Abubakar Siddiq Khan P",
         "designation": "Student (3rd Year Civil)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "21691A0101@mits.ac.in"
       },
       {
         "sno": "9",
         "name": "Mr. Prasad",
         "designation": "Parent",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "prasadfour@gmail.com"
       },
       {
         "sno": "10",
         "name": "Dr. M. Parvathi",
         "designation": "Assistant Professor - Department of English & Foreign Languages",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "parvathim@mits.ac.in"
       },
       {
         "sno": "11",
         "name": "Mrs. U. Vijaya Lakshmi",
         "designation": "Institute Counsellor",
         "position": "Member Secretary",
-        "email": "[email protected]"
+        "email": "vijayalakshmiu@mits.ac.in"
       }
     ],
     "documents": [
@@ -743,11 +743,11 @@ export const cellsDetailData: Record<string, CellDetail> = {
     ],
     "contacts": [
       {
-        "name": "Coordinator:",
-        "designation": "Mrs. U. Vijaya Lakshmi",
-        "email": "",
-        "phone": "Phone :\n\n                                                    +91-9100600773",
-        "address": "Madanapalle Institute of Technology & Science"
+        "name": "Mrs. U. Vijaya Lakshmi",
+        "designation": "Coordinator - Associate Director-International Relations & Institute Counsellor - MITS",
+        "email": "vijayalakshmiu@mits.ac.in",
+        "phone": "Phone :\n+91-9100600773, 8571-280255, 280706\n",
+        "address": "Madanapalle Institute of Technology & Science, Deemed to be University, Madanapalle-Kadiri Road, kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India"
       }
     ],
     "id": "pcc",
@@ -1181,133 +1181,133 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "name": "Dr. P. Ramanathan",
         "designation": "Principal",
         "position": "Chairman",
-        "email": "[email protected]"
+        "email": "drramanathanp@mits.ac.in"
       },
       {
         "sno": "2",
         "name": "Mrs. U. Vijaya Lakshmi",
         "designation": "Senior Manager - Student Counsellor",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "vijayalakshmiu@mits.ac.in"
       },
       {
         "sno": "3",
         "name": "Dr. N. Sai Priya",
         "designation": "Assistant Professor - CIVIL",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drsaipriyan@mits.ac.in"
       },
       {
         "sno": "4",
         "name": "Mr. Ibrahim Zafar",
         "designation": "Assistant Professor - EEE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "ibrahimzafar@mits.ac.in"
       },
       {
         "sno": "5",
         "name": "Dr. Smriti Baruah",
         "designation": "Assistant Professor - ECE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "smritib@mits.ac.in"
       },
       {
         "sno": "6",
         "name": "Mr. Pujari Rajesh",
         "designation": "Assistant Professor - MECH",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "rajeshp@mits.ac.in"
       },
       {
         "sno": "7",
         "name": "Mrs. G. Vasundara Devi",
         "designation": "Assistant Professor - CSE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "mrsgvasundaradevi@mits.ac.in"
       },
       {
         "sno": "8",
         "name": "Mr. Sreenath K.",
         "designation": "Assistant Professor - AI",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "sreenathk@mits.ac.in"
       },
       {
         "sno": "9",
         "name": "Mr. A. Arockiaraj",
         "designation": "Assistant Professor - DS",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "arokiaraja@mits.ac.in"
       },
       {
         "sno": "10",
         "name": "Mr. T. Niranjan Babu",
         "designation": "Assistant Professor - CS",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "niranjanbabut@mits.ac.in"
       },
       {
         "sno": "11",
         "name": "Mr. V. Sivaraman",
         "designation": "Assistant Professor - AI & ML",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "sivaramanv@mits.ac.in"
       },
       {
         "sno": "12",
         "name": "Mr. Ashok Dasari",
         "designation": "Assistant Professor - CST",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "ashokd@mits.ac.in"
       },
       {
         "sno": "13",
         "name": "Dr. K. S. Krishna",
         "designation": "Assistant Professor - MBA",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drkrishnaks@mits.ac.in"
       },
       {
         "sno": "14",
         "name": "Mrs. Roopa Prasad",
         "designation": "Assistant Professor - MCA",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "roopak@mits.ac.in"
       },
       {
         "sno": "15",
         "name": "Dr. Sreenivasulu K V",
         "designation": "Assistant Professor - Physics",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "kvsreenivasulu@mits.ac.in"
       },
       {
         "sno": "16",
         "name": "Dr. V. Raju",
         "designation": "Assistant Professor - Chemistry",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drrajuv@mits.ac.in"
       },
       {
         "sno": "17",
         "name": "Dr. B. Anitha",
         "designation": "Sr. Assistant Professor",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "dranithab@mits.ac.in"
       },
       {
         "sno": "18",
         "name": "Dr. P. Ramesh",
         "designation": "Assistant Professor - Maths",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drrameshp@mits.ac.in"
       },
       {
         "sno": "19",
         "name": "Dr. M. Parvathi",
         "designation": "Assistant Professor - English",
         "position": "Coordinator",
-        "email": "[email protected]"
+        "email": "parvathim@mits.ac.in"
       }
     ],
     "documents": [
@@ -4151,111 +4151,111 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "name": "Dr. C. Yuvaraj",
         "designation": "Vice Chancellor (I/c)",
         "position": "Chairman",
-        "email": "[email protected]"
+        "email": "vicechancellor@mits.ac.in"
       },
       {
         "sno": "2",
         "name": "Dr. P. Ramanathan",
         "designation": "Professor, Dept of ECE",
         "position": "Member Secretary",
-        "email": "[email protected]"
+        "email": "drramanathanp@mits.ac.in"
       },
       {
         "sno": "3",
         "name": "Mr. P. Sabarishkumar",
         "designation": "Assistant Professor, Dept of CE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "sabarishkumarp@mits.ac.in"
       },
       {
         "sno": "4",
         "name": "Dr. Thrinadh Jadam",
         "designation": "Assistant Professor, Dept of ME",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drthrinadhj@mits.ac.in"
       },
       {
         "sno": "5",
         "name": "Mrs. V. Sai Anusha",
         "designation": "Assistant Professor, Dept of ECE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "saianushav@mits.ac.in"
       },
       {
         "sno": "6",
         "name": "Mr. Ibrahim Zafar",
         "designation": "Assistant Professor, Dept of EEE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "ibrahimzafar@mits.ac.in"
       },
       {
         "sno": "7",
         "name": "Mr. B. Anandaraj",
         "designation": "Assistant Professor, Dept of CSE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "anandarajb@mits.ac.in"
       },
       {
         "sno": "8",
         "name": "Mr. Devajit Das",
         "designation": "Assistant Professor, Dept of CSE (CS)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "devajitdas@mits.ac.in"
       },
       {
         "sno": "9",
         "name": "Mr. S. Jamil Ahmed",
         "designation": "Assistant Professor, Dept of CSE (DS)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "jamilahmeds@mits.ac.in"
       },
       {
         "sno": "10",
         "name": "Mr. K. Chandra Sekhar",
         "designation": "Assistant Professor, Dept of CSE (AI)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "mrkchandrasekhar@mits.ac.in"
       },
       {
         "sno": "11",
         "name": "Mr. P. Udaya Kumar",
         "designation": "Assistant Professor, Dept of CSE (AI and ML)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "udayakumarp@mits.ac.in"
       },
       {
         "sno": "12",
         "name": "Mr. Noorbhasha Junnubabu",
         "designation": "Assistant Professor, Dept of CST",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "junnubabun@mits.ac.in"
       },
       {
         "sno": "13",
         "name": "Dr. G. Nagarajan",
         "designation": "Professor, Dept of MBA",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drnagarajang@mits.ac.in"
       },
       {
         "sno": "14",
         "name": "Mrs. S. Suganya",
         "designation": "Assistant Professor, Dept of MCA",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "suganyas@mits.ac.in"
       },
       {
         "sno": "15",
         "name": "Mr. Sridhar. N",
         "designation": "Assistant Professor, Dept of EEE",
         "position": "Coordinator - AICTE PARAKH",
-        "email": "[email protected]"
+        "email": "sridharn@mits.ac.in"
       },
       {
         "sno": "16",
         "name": "Mr. Darshan B V",
         "designation": "Assistant Professor, Dept of ME",
-        "position": "[email protected]",
+        "position": "darshanbv@mits.ac.in",
         "email": ""
       }
     ],
@@ -10911,140 +10911,140 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "name": "Dr. C. Yuvaraj",
         "designation": "Vice Chancellor I/C",
         "position": "Chairperson",
-        "email": "[email protected]"
+        "email": "vicechancellor@mits.ac.in"
       },
       {
         "sno": "2",
         "name": "Dr. Rama S Komaragiri",
         "designation": "Dean (Academies)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "deanacademics@mits.ac.in"
       },
       {
         "sno": "3",
         "name": "Mr. D. Venugopal Chowdary",
         "designation": "Head, Training & Placement",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "venugopal.d@mits.ac.in"
       },
       {
         "sno": "4",
         "name": "Dr. P. Ramanathan",
         "designation": "Professor, Dept. of ECE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drramanathanp@mits.ac.in"
       },
       {
         "sno": "5",
         "name": "Mr. Imran Kuttagola",
         "designation": "Assistant Professor, Dept. of CE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "imrankuttagola@mits.ac.in"
       },
       {
         "sno": "6",
         "name": "Mr. G. Kumar",
         "designation": "Assistant Professor, Dept. of, ME",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "kumarg@mits.ac.in"
       },
       {
         "sno": "7",
         "name": "Mr. Asif Moiz",
         "designation": "Assistant Professor, Dept. of ECE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "asifmoiz@mits.ac.in"
       },
       {
         "sno": "8",
         "name": "Dr. Vineet Kumar",
         "designation": "Assistant Professor, Dept. of EEE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drvineetkumar@mits.ac.in"
       },
       {
         "sno": "9",
         "name": "Dr. Senthil Kumar.K",
         "designation": "Assistant Professor, Dept. of CSE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drsenthilkumark@mits.ac.in"
       },
       {
         "sno": "10",
         "name": "Mr. L. Arul Jaya Prakash",
         "designation": "Assistant Professor, Dept. of CST",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "aruljayaprakashl@mits.ac.in"
       },
       {
         "sno": "11",
         "name": "Dr. Vamsi Bandi",
         "designation": "Assistant. Professor, Dept. of CSE (AI)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drvamsibandi@mits.ac.in"
       },
       {
         "sno": "12",
         "name": "Mrs. F. Twinkle Graf",
         "designation": "Assistant. Professor, Dept. of CSE (DS)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "twinklegraff@mits.ac.in"
       },
       {
         "sno": "13",
         "name": "Ms. K. Mamatha",
         "designation": "Lab Assistant, Dept. of CSE (CS)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "mamathak@mits.ac.in"
       },
       {
         "sno": "14",
         "name": "Ms. P. Sireesha",
         "designation": "Assistant Professor, Dept. of MBA",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "sireeshap@mits.ac.in"
       },
       {
         "sno": "15",
         "name": "Dr. K. Nirmaladevi",
         "designation": "Assistant Professor, Dept. of MCA",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drnirmaladevik@mits.ac.in"
       },
       {
         "sno": "16",
         "name": "Mr. Bojjam Praveen Kumar",
         "designation": "Regional Lead, AP Academic and Government Relations NASSCOM Representative",
         "position": "External Member",
-        "email": "[email protected]"
+        "email": "t-bojjam@mail.nasscom.in"
       },
       {
         "sno": "17",
         "name": "Dr. K. Sathesh",
         "designation": "IQAC Coordinator",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drsatheshk@mits.ac.in"
       },
       {
         "sno": "18",
         "name": "Ms. S. Madhu Priya",
         "designation": "Student Representative, II Year ECE",
         "position": "External Member",
-        "email": "[email protected]"
+        "email": "24691A04D3@mits.ac.in"
       },
       {
         "sno": "19",
         "name": "Mr. Nagesh Sreesanth",
         "designation": "Student Representative, II Year CSE (AI and ML)",
         "position": "External Member",
-        "email": "[email protected]"
+        "email": "24691A33B3@mits.ac.in"
       },
       {
         "sno": "20",
         "name": "Dr. E. Sandhya",
         "designation": "NASSCOM SPOC",
         "position": "Coordinator",
-        "email": "[email protected]"
+        "email": "drsandhyae@mits.ac.in"
       }
     ],
     "documents": [
@@ -11159,56 +11159,56 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "name": "Dr. C. Yuvaraj",
         "designation": "Vice Chancellor (I/c)",
         "position": "Chairman",
-        "email": "[email protected]"
+        "email": "vicechancellor@mits.ac.in"
       },
       {
         "sno": "2",
         "name": "Dr. P. Ramanathan",
         "designation": "Principal",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drramanathanp@mits.ac.in"
       },
       {
         "sno": "3",
         "name": "Dr. S. Baskaran",
         "designation": "Assoc. Professor & Head, ME",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "mehod@mits.ac.in"
       },
       {
         "sno": "4",
         "name": "Dr. A. V. Pavan Kumar",
         "designation": "Professor & Head, EEE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "pavankumarav@mits.ac.in"
       },
       {
         "sno": "5",
         "name": "Dr. S. Rajasekaran",
         "designation": "Professor & Head, ECE",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "hod_ece@mits.ac.in"
       },
       {
         "sno": "6",
         "name": "Dr. S. Padma",
         "designation": "Assoc. Professor & Head, CSE (AI and ML)",
         "position": "Member",
-        "email": "[email protected]"
+        "email": "drpadmas@mits.ac.in"
       },
       {
         "sno": "7",
         "name": "Ms. Revathi K.",
         "designation": "Assistant Professor, EEE",
         "position": "Co-Coordinator",
-        "email": "[email protected]"
+        "email": "revathik@mits.ac.in"
       },
       {
         "sno": "8",
         "name": "Dr. C. Kumar",
         "designation": "Assistant Professor, EEE",
         "position": "Coordinator",
-        "email": "[email protected]"
+        "email": "ckumar@mits.ac.in"
       }
     ],
     "documents": [

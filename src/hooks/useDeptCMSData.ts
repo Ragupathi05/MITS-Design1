@@ -1,7 +1,21 @@
 import { useState, useEffect } from "react";
 
 const IS_LOCAL = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
-const CMS_BASE = "https://aicampus.mits.ac.in/mits-cms/backend/public_api";
+const CMS_DIRECT = "https://aicampus.mits.ac.in/mits-cms/backend/public_api";
+// In production (GitHub Pages) we read pre-fetched static JSON baked at build time.
+// This avoids all CORS issues. The files live at /MITS-Design1/cms-data/<deptKey>/<endpoint>.json
+const STATIC_BASE = "/MITS-Design1/cms-data";
+
+async function staticFetch<T>(deptKey: string, endpoint: string, key: string): Promise<T[]> {
+  try {
+    const res = await fetch(`${STATIC_BASE}/${deptKey}/${endpoint}.json`, { signal: AbortSignal.timeout(10000) });
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.success ? ((json[key] as T[]) ?? []) : [];
+  } catch {
+    return [];
+  }
+}
 
 const CMS_CODE: Record<string, string> = {
   cse:   "CSE",
@@ -188,7 +202,7 @@ function stripPhpWarnings(text: string): string {
 }
 
 async function safeFetch<T>(endpoint: string, key: string): Promise<T[]> {
-  const base = IS_LOCAL ? "/cms-api" : CMS_BASE;
+  const base = IS_LOCAL ? "/cms-api" : CMS_DIRECT;
   const url = base + "/" + endpoint;
   try {
     const res = await fetch(url, { credentials: "include", signal: AbortSignal.timeout(10000) });
@@ -225,7 +239,19 @@ function normalizeMoUs(items: CMSMoU[]): CMSMoU[] {
 }
 
 export async function fetchEventDetail(id: number): Promise<CMSEvent | null> {
-  const base = IS_LOCAL ? "/cms-api" : CMS_BASE;
+  if (!IS_LOCAL) {
+    // Production: read from pre-fetched static event detail file
+    for (const deptKey of Object.keys(CMS_CODE)) {
+      try {
+        const res = await fetch(`${STATIC_BASE}/${deptKey}/event_${id}.json`, { signal: AbortSignal.timeout(5000) });
+        if (!res.ok) continue;
+        const json = await res.json();
+        if (json.success && json.event) return json.event as CMSEvent;
+      } catch { continue; }
+    }
+    return null;
+  }
+  const base = IS_LOCAL ? "/cms-api" : CMS_DIRECT;
   const url = `${base}/event_detail.php?id=${id}`;
   try {
     const res = await fetch(url, { credentials: "include", signal: AbortSignal.timeout(15000) });
@@ -238,9 +264,10 @@ export async function fetchEventDetail(id: number): Promise<CMSEvent | null> {
     const json = JSON.parse(text);
     if (!json.success) return null;
     const ev = json.event as CMSEvent;
+    // In dev, rewrite image URLs to go through the Vite proxy
     if (IS_LOCAL) {
-      const rewrite = (u: string | null | undefined) =>
-        u ? u.replace("https://aicampus.mits.ac.in/mits-cms/backend", "/cms-api") : u;
+      const rewrite = (url: string | null | undefined) =>
+        url ? url.replace("", "/cms-api") : url;
       ev.poster = rewrite(ev.poster) ?? null;
       ev.gallery = (ev.gallery ?? []).map((u) => rewrite(u) ?? u);
     }
@@ -273,31 +300,59 @@ export function useDeptCMSData(deptKey: string) {
 
     const d = encodeURIComponent(cmsCode);
 
-    // Dev: proxy via Vite (/cms-api); Production: direct CMS fetch
-    Promise.all([
-      safeFetch<CMSEvent>       ("events.php?dept=" + d,       "events"),
-      safeFetch<CMSMoU>         ("mous.php?dept=" + d,         "mous"),
-      safeFetch<CMSAchievement> ("achievements.php?dept=" + d, "achievements"),
-      safeFetch<CMSPatent>      ("patents.php?dept=" + d,      "patents"),
-      safeFetch<CMSPublication> ("publications.php?dept=" + d, "publications"),
-      safeFetch<CMSPlacement>   ("placements.php?dept=" + d,   "placements"),
-      safeFetch<CMSProject>     ("projects.php?dept=" + d,     "projects"),
-    ]).then(([events, mous, achievements, patents, publications, placements, projects]) => {
-      if (!cancelled) {
-        setData({
-          events: normalizeEvents(events),
-          mous: normalizeMoUs(mous),
-          achievements,
-          patents,
-          publications,
-          placements,
-          projects,
-        });
-        setLoading(false);
-      }
-    }).catch(() => {
-      if (!cancelled) setLoading(false);
-    });
+    if (IS_LOCAL) {
+      // Dev: fetch live from CMS via Vite proxy
+      Promise.all([
+        safeFetch<CMSEvent>       ("events.php?dept=" + d,       "events"),
+        safeFetch<CMSMoU>         ("mous.php?dept=" + d,         "mous"),
+        safeFetch<CMSAchievement> ("achievements.php?dept=" + d, "achievements"),
+        safeFetch<CMSPatent>      ("patents.php?dept=" + d,      "patents"),
+        safeFetch<CMSPublication> ("publications.php?dept=" + d, "publications"),
+        safeFetch<CMSPlacement>   ("placements.php?dept=" + d,   "placements"),
+        safeFetch<CMSProject>     ("projects.php?dept=" + d,     "projects"),
+      ]).then(([events, mous, achievements, patents, publications, placements, projects]) => {
+        if (!cancelled) {
+          setData({
+            events: normalizeEvents(events),
+            mous: normalizeMoUs(mous),
+            achievements,
+            patents,
+            publications,
+            placements,
+            projects,
+          });
+          setLoading(false);
+        }
+      }).catch(() => {
+        if (!cancelled) setLoading(false);
+      });
+    } else {
+      // Production: read pre-built static JSON files (no CORS)
+      Promise.all([
+        staticFetch<CMSEvent>       (deptKey, "events",       "events"),
+        staticFetch<CMSMoU>         (deptKey, "mous",         "mous"),
+        staticFetch<CMSAchievement> (deptKey, "achievements", "achievements"),
+        staticFetch<CMSPatent>      (deptKey, "patents",      "patents"),
+        staticFetch<CMSPublication> (deptKey, "publications", "publications"),
+        staticFetch<CMSPlacement>   (deptKey, "placements",   "placements"),
+        staticFetch<CMSProject>     (deptKey, "projects",     "projects"),
+      ]).then(([events, mous, achievements, patents, publications, placements, projects]) => {
+        if (!cancelled) {
+          setData({
+            events: normalizeEvents(events),
+            mous: normalizeMoUs(mous),
+            achievements,
+            patents,
+            publications,
+            placements,
+            projects,
+          });
+          setLoading(false);
+        }
+      }).catch(() => {
+        if (!cancelled) setLoading(false);
+      });
+    }
 
     return () => { cancelled = true; };
   }, [deptKey]);

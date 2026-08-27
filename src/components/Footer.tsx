@@ -38,15 +38,15 @@ const Footer = () => {
               <ul className="space-y-3 text-sm">
                 <li className="flex gap-3 text-white/80 font-body">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                  Post Box No. 4, Angallu, Madanapalle – 517325, Andhra Pradesh
+                  <span>Madanapalle-Kadiri Road, NH-42, Kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India</span>
                 </li>
                 <li className="flex gap-3 text-white/80 font-body">
-                  <Phone className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  +91- 7330803555 / 7330852555
+                  <Phone className="w-4 h-4 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>+91-7330803555 / 7330852555</span>
                 </li>
                 <li className="flex gap-3 text-white/80 font-body">
-                  <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  info@mits.ac.in
+                  <Mail className="w-4 h-4 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>admissions@mits.ac.in</span>
                 </li>
               </ul>
             </div>
@@ -61,7 +61,7 @@ const Footer = () => {
                   Get the details now
                 </Link>
                 <a
-                  href="https://mits.ac.in/public/uploads/static-pdf/College%20Brochure-2026.pdf"
+                  href="https://mits.ac.in/public/uploads/static-pdf/MITS%20Deemed%20to%20be%20University%20Brochure%202026.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-[#b31317] hover:bg-[#990000] text-white text-sm font-bold uppercase tracking-wider transition-colors shadow-sm text-center"
@@ -83,8 +83,9 @@ const Footer = () => {
                 { label: "Placements", href: "/placements" },
                 { label: "Contact", href: "/contact" },
                 { label: "Apply Now", href: "/admissions" },
-                { label: "Scholarships", href: "/admissions" },
+                { label: "Scholarships", href: "/eligibility-and-fees" },
                 { label: "Mandatory Disclosure", href: "/about/mandatory-disclosures" },
+                { label: "IEI Student Chapter", href: "/iei" },
               ].map((link) => (
                 <li key={link.label}>
                   {link.href && /^https?:\/\//.test(link.href) ? (
@@ -111,7 +112,7 @@ const Footer = () => {
                 { label: "IQAC", href: "/iqac" },
                 { label: "Affiliations & Accreditations", href: "/affiliations-accreditations" },
                 { label: "Public Self Disclosures", href: "/psd" },
-                { label: "Circulars", href: "https://mits.ac.in/circulars" },
+                { label: "Circulars", href: "/examinations" },
                 { label: "Cells & Committees", href: "/cells" },
                 { label: "MITS Radio", href: "/mits-radio" },
                 { label: "Moodle Login", href: "https://moodle.mits.ac.in/" },

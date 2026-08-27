@@ -34,7 +34,7 @@ const AdmissionHighlight = () => (
                   Register for Admissions 2026
                 </p>
                 <h2 className="font-display text-2xl md:text-4xl font-bold text-white leading-tight">
-                  Admissions 2026 — MITS Deemed to be University
+                  Admissions 2026  -  MITS Deemed to be University
                 </h2>
                 <p className="mt-2 text-sm md:text-base text-white/90 leading-relaxed max-w-3xl">
                   Join MITS through the official admission portal. Explore industry-aligned programs and complete your admission process for AY 2026-27.

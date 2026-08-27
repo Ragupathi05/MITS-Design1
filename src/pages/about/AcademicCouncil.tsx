@@ -1,4 +1,4 @@
-import { FileText, ExternalLink, BookOpen, Calendar } from "lucide-react";
+import { FileText, ExternalLink, BookOpen, Calendar, Archive } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
 import { Button } from "@/components/ui/button";
 import { academicCouncil } from "@/data/aboutData";
@@ -32,9 +32,18 @@ const AcademicCouncil = () => {
           </div>
 
           <div className="bg-white border border-border rounded-2xl p-6">
-            <h3 className="text-lg font-bold text-secondary mb-5" style={{ fontFamily: "var(--font-display)" }}>
-              Minutes of Academic Council Meetings
-            </h3>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5 pb-3 border-b border-border">
+              <h3 className="text-lg font-bold text-secondary" style={{ fontFamily: "var(--font-display)" }}>
+                Minutes of Academic Council Meetings
+              </h3>
+              <Button asChild size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+                <a href="https://mits.ac.in/minutes-ac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-semibold">
+                  <Archive className="w-3.5 h-3.5" />
+                  View All Minutes (2014-2026) <ExternalLink className="w-3 h-3" />
+                </a>
+              </Button>
+            </div>
+
             <div className="space-y-4">
               {[
                 {
@@ -73,12 +82,28 @@ const AcademicCouncil = () => {
                   </Button>
                 </div>
               ))}
+
+              <div className="mt-4 pt-4 border-t border-dashed border-border/80 flex items-center justify-between bg-primary/5 p-4 rounded-xl">
+                <div className="flex items-center gap-2">
+                  <Archive className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-semibold text-secondary">Complete Academic Council Minutes Repository (2014-2026)</span>
+                </div>
+                <a
+                  href="https://mits.ac.in/minutes-ac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"
+                >
+                  <span>Explore Archive</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <aside>
-          <div className="bg-gradient-to-br from-primary to-[#7a0a0d] text-primary-foreground rounded-2xl p-6">
+          <div className="bg-gradient-to-br from-primary to-[#7a0a0d] text-primary-foreground rounded-2xl p-6 shadow-md">
             <p className="text-[10px] uppercase tracking-[0.18em] text-accent font-bold mb-2">Governance</p>
             <h4 className="text-xl font-bold mb-2" style={{ fontFamily: "var(--font-display)" }}>Apex Academic Authority</h4>
             <p className="text-sm text-primary-foreground/85 leading-relaxed">

@@ -316,7 +316,7 @@ const AffiliationsAccreditations = () => {
                                 <Microscope className="w-10 h-10 text-[#caa74d]" />
                               </div>
                               <div className="flex-1">
-                                <p className="font-display text-xl md:text-2xl font-bold">Recognised Research Centre</p>
+                                <p className="font-display text-xl md:text-2xl font-bold text-white">Recognised Research Centre</p>
                                 <p className="font-body text-white/75 text-sm mt-2 max-w-2xl">
                                   MITS is a recognised research centre offering Ph.D. programmes, supervised
                                   research, and inter-disciplinary innovation across engineering, computing,

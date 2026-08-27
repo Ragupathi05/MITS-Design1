@@ -30,6 +30,3 @@ college main video.mp4
 test-*.cjs
 tmp/
 dist.zip
-.env
-.env.*
-!.env.example

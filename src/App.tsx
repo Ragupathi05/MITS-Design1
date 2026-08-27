@@ -23,6 +23,7 @@ const NewsEvents = lazy(() => import("./pages/NewsEvents"));
 const NewsEventDetail = lazy(() => import("./pages/NewsEventDetail"));
 const EligibilityAndFees = lazy(() => import("./pages/EligibilityAndFees"));
 const AcademicCalendar = lazy(() => import("./pages/AcademicCalendar"));
+const AcademicRegulations = lazy(() => import("./pages/AcademicRegulations"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const CampusLifeDetail = lazy(() => import("./pages/CampusLifeDetail"));
 const DepartmentPage = lazy(() => import("./pages/DepartmentPage"));
@@ -104,6 +105,7 @@ const App = () => (
             <Route path="/about/organogram" element={<Organogram />} />
             <Route path="/about/mandatory-disclosures" element={<MandatoryDisclosures />} />
             <Route path="/academics" element={<Academics />} />
+            <Route path="/academic-regulations" element={<AcademicRegulations />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/research" element={<Research />} />
             <Route path="/placements" element={<Placements />} />
@@ -148,6 +150,7 @@ const App = () => (
             <Route path="/newsletter" element={<NewsletterPage />} />
             <Route path="/cells" element={<Cells />} />
             <Route path="/cells/:id" element={<CellDetail />} />
+            <Route path="/iei" element={<CellDetail overrideId="iei" />} />
             <Route path="/career" element={<Careers />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="*" element={<NotFound />} />

@@ -22,11 +22,13 @@ import {
   ScanLine,
   Barcode,
   Library as LibraryIcon,
-  GraduationCap,
   BookMarked,
   Sparkles,
   Wifi,
   Users,
+  ShieldCheck,
+  Calendar,
+  Download,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -44,10 +46,14 @@ import {
   collections,
   quickAccess,
   libraryContact,
+  quickLibraryActions,
+  libraryAchievements,
+  libraryEvents,
+  libraryContacts,
 } from "@/data/libraryData";
 
 const BASE = import.meta.env.BASE_URL;
-const heroImg = `${BASE}infrastructure/library/library-1.webp`;
+const heroImg = `${BASE}departments/department images/library.png`;
 const galleryImgs = [
   `${BASE}infrastructure/library/library-2.webp`,
   `${BASE}infrastructure/library/library-3.webp`,
@@ -99,136 +105,182 @@ const SectionHeading = ({
   </div>
 );
 
-const statIconFor = (key: string): any => {
-  const map: Record<string, any> = {
-    titles: BookOpen,
-    volumes: BookMarked,
-    reference: LibraryIcon,
-    ebooks: Monitor,
-    ejournals: FileText,
-    projectReports: FileText,
-    boundVolumes: BookOpen,
-    cdroms: Disc,
-    digitalSystems: Monitor,
-    newspapers: Newspaper,
-    periodicals: FileText,
-    magazines: Newspaper,
-  };
+const StatCard = ({
+  stat,
+  icon: Icon,
+  index,
+}: {
+  stat: (typeof libraryStats)[0];
+  icon: typeof BookOpen;
+  index: number;
+}) => {
+  const [inView, setInView] = useState(false);
+  const count = useCountUp(stat.value, 1400, inView);
 
-  return map[key] || BookOpen;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      onViewportEnter={() => setInView(true)}
+      transition={{ duration: 0.4, delay: Math.min(index * 0.04, 0.3) }}
+      className="group relative rounded-2xl border border-border/80 bg-white p-5 md:p-6 shadow-sm hover:border-primary/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+    >
+      <div>
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">{stat.key}</span>
+          <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+            <Icon className="w-4 h-4" />
+          </div>
+        </div>
+        <p className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+          {count.toLocaleString()}
+          {stat.suffix && <span className="text-primary text-2xl ml-0.5">{stat.suffix}</span>}
+        </p>
+        <p className="text-sm font-semibold text-secondary mt-1">{stat.label}</p>
+      </div>
+      {stat.note && (
+        <p className="text-[11px] text-muted-foreground border-t border-border/60 pt-2.5 mt-4">{stat.note}</p>
+      )}
+    </motion.div>
+  );
 };
-
-const facilityIconFor = (title: string): any => {
-  const map: Record<string, any> = {
-    "Digital Library": Monitor,
-    "SOUL 3.0": Database,
-    Photocopying: Copy,
-    Printing: Printer,
-    Scanning: ScanLine,
-    Barcoding: Barcode,
-    "Reading Hall": Users,
-    "Reference Section": BookMarked,
-    "Internet & Wi-Fi": Wifi,
-    "Remote Access": Globe,
-  };
-
-  return map[title] || Sparkles;
-};
-
-const serviceByTitle = Object.fromEntries(services.map((service) => [service.title, service.desc])) as Record<string, string>;
-
-const audienceServices = [
-  {
-    key: "students",
-    label: "Students",
-    note: "Borrow print material, discover the catalogue and stay connected to the core collection.",
-    items: [
-      { title: "Book Lending", desc: serviceByTitle["Book Lending"] },
-      { title: "Online Catalogue (OPAC)", desc: serviceByTitle["Online Catalogue (OPAC)"] },
-      { title: "Library Membership", desc: serviceByTitle["Library Membership"] },
-    ],
-  },
-  {
-    key: "faculty",
-    label: "Faculty",
-    note: "Use the library as a teaching, publication and class-preparation partner.",
-    items: [
-      { title: "Reference Services", desc: serviceByTitle["Reference Services"] },
-      { title: "Journal Access", desc: serviceByTitle["Journal Access"] },
-    ],
-  },
-  {
-    key: "researchers",
-    label: "Researchers",
-    note: "Access deeper databases and document delivery for project work and publications.",
-    items: [
-      { title: "Digital Access", desc: serviceByTitle["Digital Access"] },
-      { title: "Document Delivery", desc: serviceByTitle["Document Delivery"] },
-    ],
-  },
-  {
-    key: "phd",
-    label: "PhD Scholars",
-    note: "Find focused support for literature review, citation discipline and current awareness.",
-    items: [
-      { title: "Research Support", desc: serviceByTitle["Research Support"] },
-      { title: "Current Awareness", desc: serviceByTitle["Current Awareness"] },
-    ],
-  },
-] as const;
 
 const Library = () => {
+  const statIconFor = (key: string) => {
+    const map: Record<string, typeof BookOpen> = {
+      titles: BookOpen,
+      volumes: LibraryIcon,
+      reference: BookMarked,
+      ebooks: Monitor,
+      ejournals: Newspaper,
+      projectReports: FileText,
+      boundVolumes: Disc,
+      cdroms: Disc,
+      digitalSystems: Database,
+      newspapers: Newspaper,
+      periodicals: Globe,
+      magazines: Newspaper,
+    };
+
+    return map[key] || BookOpen;
+  };
+
+  const facilityIconFor = (title: string) => {
+    const map: Record<string, typeof BookOpen> = {
+      "Digital Library": Monitor,
+      "SOUL 3.0": Database,
+      Photocopying: Copy,
+      Printing: Printer,
+      Scanning: ScanLine,
+      Barcoding: Barcode,
+      "Reading Hall": Users,
+      "Reference Section": BookMarked,
+      "Internet & Wi-Fi": Wifi,
+      "Remote Access": Globe,
+    };
+
+    return map[title] || Sparkles;
+  };
+
+  const serviceByTitle = Object.fromEntries(services.map((service) => [service.title, service.desc])) as Record<string, string>;
+
+  const audienceServices = [
+    {
+      key: "students",
+      label: "Students",
+      note: "Borrow print material, discover the catalogue and stay connected to the core collection.",
+      items: [
+        { title: "Book Lending", desc: serviceByTitle["Book Lending"] },
+        { title: "Digital Access", desc: serviceByTitle["Digital Access"] },
+        { title: "Online OPAC", desc: serviceByTitle["Online Catalogue (OPAC)"] },
+        { title: "Reference Help", desc: serviceByTitle["Reference Services"] },
+      ],
+    },
+    {
+      key: "faculty",
+      label: "Faculty & Staff",
+      note: "Access high-impact journals, inter-library requests and research databases.",
+      items: [
+        { title: "Journal Access", desc: serviceByTitle["Journal Access"] },
+        { title: "Research Support", desc: serviceByTitle["Research Support"] },
+        { title: "Document Delivery", desc: serviceByTitle["Document Delivery"] },
+        { title: "Current Awareness", desc: serviceByTitle["Current Awareness"] },
+      ],
+    },
+    {
+      key: "researchers",
+      label: "Research Scholars",
+      note: "Literature search support, citation assistance and plagiarism guidance.",
+      items: [
+        { title: "Plagiarism Support", desc: "Turnitin authentication and plagiarism verification assistance." },
+        { title: "IEEE & Springer", desc: "Full-text access to IEEE Xplore, Springer Nature and EBSCO." },
+        { title: "DELNET Document Delivery", desc: serviceByTitle["Document Delivery"] },
+        { title: "Research Guidance", desc: serviceByTitle["Research Support"] },
+      ],
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <Header />
+    <div className="min-h-screen bg-background font-body text-foreground">
       <SEO
-        title="Central Library – MITS | Official Resources and Services"
-        description="Explore the MITS Central Library with official collection figures, research databases, facilities, audience-based services, gallery, and contact details."
+        title="Central Library | MITS Madanapalle — Print, Digital & Research Access"
+        description="Explore the Central Library at MITS Madanapalle. Access 64,000+ volumes, 14,000+ e-books, IEEE, Springer, EBSCO databases, SOUL 3.0 OPAC and DELNET services."
         canonical="/library"
       />
 
-      <main className="flex-1">
+      <Header />
+
+      <main>
+        {/* Exact Hero Section from User Screenshot */}
         <section
-          className="relative pt-32 md:pt-40 pb-20 overflow-hidden"
+          className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
           style={{
-            backgroundImage: `url(${heroImg})`,
+            backgroundImage: `url("${heroImg}")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">Central Library</p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">
-              Knowledge Access <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">at MITS</span>
+            <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+              CENTRAL LIBRARY
+            </p>
+            <h1
+              className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-5 text-white tracking-tight"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Knowledge Access <span className="text-[#ffd15c]">at MITS</span>
             </h1>
-            <p className="text-white/80 text-lg max-w-3xl mx-auto leading-relaxed">
-              The Central Library is the academic spine of the campus, combining print collections, digital access,
-              research support and quiet study spaces in one fully computerised environment.
+            <p className="text-white/90 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-normal">
+              The Central Library is the academic spine of the campus, combining print collections, digital access, research support and quiet study spaces in one fully computerised environment.
             </p>
           </div>
-          <div className="absolute bottom-4 left-6 z-10">
+
+          {/* Bottom Left Breadcrumb Navigation (Exact match to screenshot: Home › About › Central Library) */}
+          <div className="absolute bottom-4 left-6 z-10 hidden sm:block">
             <nav aria-label="Breadcrumb">
-              <ol className="flex items-center gap-1.5 text-sm">
+              <ol className="flex items-center gap-1.5 text-xs text-white/80">
                 <li>
-                  <Link to="/" className="text-white/70 hover:text-white transition-colors">
+                  <Link to="/" className="hover:text-white transition-colors">
                     Home
                   </Link>
                 </li>
                 <li className="text-white/50">›</li>
                 <li>
-                  <Link to="/about" className="text-white/70 hover:text-white transition-colors">
+                  <Link to="/about" className="hover:text-white transition-colors">
                     About
                   </Link>
                 </li>
                 <li className="text-white/50">›</li>
-                <li className="text-white font-semibold">Central Library</li>
+                <li className="text-amber-300 font-semibold">Central Library</li>
               </ol>
             </nav>
           </div>
         </section>
 
-        <section className="py-20 bg-background">
+        {/* About Section */}
+        <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-8 items-start">
               <ScrollReveal>
@@ -239,19 +291,13 @@ const Library = () => {
                   </h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
                     <p>
-                      The Central Library at MITS is the intellectual heart of the campus - a spacious, fully
-                      computerised facility with a rich collection of print and digital resources spanning
-                      engineering, sciences, management, humanities and research.
+                      The Central Library at MITS is the intellectual heart of the campus — a spacious, fully computerised facility with a rich collection of print and digital resources spanning engineering, sciences, management, humanities and research.
                     </p>
                     <p>
-                      The library operates on the INFLIBNET <strong className="text-foreground">SOUL 3.0</strong>
-                      integrated library management system and offers barcoded circulation, an online OPAC, and
-                      network-wide document delivery via <strong className="text-foreground">DELNET</strong>.
+                      The library operates on the INFLIBNET <strong className="text-foreground">SOUL 3.0 Integrated</strong> library management system and offers barcoded circulation, an online OPAC, and network-wide document delivery via <strong className="text-foreground">DELNET</strong>.
                     </p>
                     <p>
-                      With access to <strong className="text-foreground">IEEE, Springer Nature, EBSCO</strong>,and the
-                      <strong className="text-foreground"> National Digital Library of India</strong>, students and faculty gain a
-                      research-ready digital environment alongside the print collection.
+                      With access to <strong className="text-foreground">IEEE, Springer Nature, EBSCO</strong>, and the <strong className="text-foreground">National Digital Library of India</strong>, students and faculty gain a research-ready digital environment alongside the print collection.
                     </p>
                   </div>
                 </div>
@@ -264,8 +310,7 @@ const Library = () => {
                       <Sparkles className="w-4 h-4" /> Mission
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      To acquire, organise and disseminate high-quality knowledge resources that empower academic
-                      excellence, innovation and lifelong learning.
+                      To acquire, organise and disseminate high-quality knowledge resources that empower academic excellence, innovation and lifelong learning.
                     </p>
                   </Card>
 
@@ -279,13 +324,31 @@ const Library = () => {
                         "24x7 access pathways to e-resources on campus and remotely.",
                         "Research productivity through database access and document delivery.",
                         "An inclusive, technology-enabled learning environment for all users.",
-                      ].map((item) => (
-                        <li key={item} className="flex gap-2">
+                      ].map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
                           <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
+                  </Card>
+
+                  {/* e-Content Callout Box */}
+                  <Card className="p-6 bg-gradient-to-br from-primary via-[#7a0a0d] to-slate-900 text-white border-none shadow-lg">
+                    <div className="flex items-center gap-2 text-amber-300 font-bold mb-2 text-xs uppercase tracking-wider">
+                      <Sparkles className="w-4 h-4" /> Digital Repository
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-white mb-2">e-Content & Faculty Video Lectures</h3>
+                    <p className="text-xs text-white/80 leading-relaxed mb-4">
+                      Access courseware, video lectures, SOPs, lab manuals, and digital learning assets created by MITS faculty across departments.
+                    </p>
+                    <Button asChild size="sm" className="w-full bg-amber-400 text-slate-950 hover:bg-white font-bold text-xs">
+                      <Link to="/e-content">
+                        <BookOpen className="w-3.5 h-3.5 mr-1.5" />
+                        Open e-Content Portal
+                        <ChevronRight className="w-3.5 h-3.5 ml-auto" />
+                      </Link>
+                    </Button>
                   </Card>
                 </div>
               </ScrollReveal>
@@ -293,7 +356,94 @@ const Library = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-muted/40">
+        {/* Clean, Compact Quick Action Links Section */}
+        <section id="quick-links" className="py-10 bg-muted/40 border-y border-border">
+          <div className="container mx-auto px-4">
+            <div className="mb-6">
+              <p className="text-primary font-bold text-xs uppercase tracking-widest">Library Direct Services</p>
+              <h3 className="font-display text-2xl font-bold text-foreground">Quick Actions & Portals</h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Plagiarism Button */}
+              <a
+                href={quickLibraryActions[0].href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-4 rounded-xl border border-border bg-white hover:border-primary hover:shadow-md transition-all duration-300"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">Plagiarism Check</h4>
+                    <p className="text-xs text-muted-foreground">Turnitin Portal</p>
+                  </div>
+                </div>
+                <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+              </a>
+
+              {/* Digital Library Button */}
+              <a
+                href={quickLibraryActions[1].href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-4 rounded-xl border border-border bg-white hover:border-primary hover:shadow-md transition-all duration-300"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <Monitor className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">Digital Library</h4>
+                    <p className="text-xs text-muted-foreground">GDLC Intranet</p>
+                  </div>
+                </div>
+                <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+              </a>
+
+              {/* Previous Year Papers Button */}
+              <Link
+                to={quickLibraryActions[2].href}
+                className="group flex items-center justify-between p-4 rounded-xl border border-border bg-white hover:border-primary hover:shadow-md transition-all duration-300"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <FileText className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">Previous Year Papers</h4>
+                    <p className="text-xs text-muted-foreground">Exam Question Bank</p>
+                  </div>
+                </div>
+                <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+              </Link>
+
+              {/* Plagiarism Request Letter Button */}
+              <a
+                href={quickLibraryActions[3].href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-4 rounded-xl border border-border bg-white hover:border-primary hover:shadow-md transition-all duration-300"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <Download className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-xs sm:text-sm text-foreground group-hover:text-primary transition-colors">Plagiarism Request Letter</h4>
+                    <p className="text-xs text-muted-foreground">Verification Form PDF</p>
+                  </div>
+                </div>
+                <Download className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Statistics */}
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <SectionHeading
               eyebrow="Statistics"
@@ -308,7 +458,8 @@ const Library = () => {
           </div>
         </section>
 
-        <section id="digital-resources" className="py-20 bg-background">
+        {/* Digital Resources */}
+        <section id="digital-resources" className="py-20 bg-muted/40">
           <div className="container mx-auto px-4">
             <SectionHeading
               eyebrow="Digital Resources"
@@ -342,36 +493,33 @@ const Library = () => {
                             <div className="text-sm uppercase tracking-[0.18em] text-primary font-semibold">
                               {collection.title}
                             </div>
-                            <div className="mt-1 text-lg font-bold text-foreground">{collection.value}</div>
+                            <div className="font-display text-xl font-bold text-foreground mt-1">
+                              {collection.value}
+                            </div>
                           </div>
                         ))}
                     </div>
-                    <p className="text-sm text-muted-foreground mt-5 leading-relaxed">
-                      Books, reference material, journals, magazines, project reports, CD-ROMs and digital content are
-                      organised for direct academic use across disciplines.
-                    </p>
                   </div>
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.1}>
-                <Card className="overflow-hidden border-border/80 shadow-sm h-full">
+              <ScrollReveal delay={0.12}>
+                <Card className="overflow-hidden border-border/80 shadow-sm">
                   <div className="border-b border-border bg-secondary/5 px-6 py-5">
                     <div className="flex items-center gap-3">
                       <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
                         <Database className="w-5 h-5" />
                       </div>
                       <div>
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">Access</p>
-                        <h3 className="font-display text-xl font-bold text-foreground">Research resources and portals</h3>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">E-Databases</p>
+                        <h3 className="font-display text-xl font-bold text-foreground">Subscribed electronic resources</h3>
                       </div>
                     </div>
                   </div>
-
                   <div className="p-6 space-y-6">
                     <div>
                       <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-secondary mb-3">
-                        Research databases
+                        Subscribed E-Journals
                       </h4>
                       <div className="space-y-3">
                         {digitalResources
@@ -470,6 +618,63 @@ const Library = () => {
           </div>
         </section>
 
+        {/* ACHIEVEMENTS & EVENTS SECTION */}
+        <section className="py-20 bg-background border-y border-border/80">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Achievements */}
+              <ScrollReveal>
+                <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm h-full">
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-3 border-b border-border pb-4">
+                    <Award className="w-6 h-6 text-primary" />
+                    Achievements
+                  </h3>
+                  <ul className="space-y-4">
+                    {libraryAchievements.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm text-secondary/85 leading-relaxed">
+                        <span className="w-2 h-2 rounded-full bg-red-700 shrink-0 mt-2" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollReveal>
+
+              {/* Events */}
+              <ScrollReveal delay={0.1}>
+                <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm h-full flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-3 border-b border-border pb-4">
+                      <Calendar className="w-6 h-6 text-primary" />
+                      Events
+                    </h3>
+                    <div className="space-y-6">
+                      {libraryEvents.map((evt, idx) => (
+                        <div key={idx} className="p-4 rounded-xl border border-border bg-muted/30 space-y-2">
+                          <p className="text-sm font-bold text-foreground leading-relaxed flex items-start gap-2">
+                            <span className="w-2 h-2 rounded-full bg-red-700 shrink-0 mt-2" />
+                            {evt.title}
+                          </p>
+                          <a
+                            href={evt.reportUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline pt-1 pl-4"
+                          >
+                            <span>Click here for Report on Event</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Facilities */}
         <section className="py-20 bg-muted/40">
           <div className="container mx-auto px-4">
             <SectionHeading
@@ -483,81 +688,29 @@ const Library = () => {
                 const Icon = facilityIconFor(facility.title);
 
                 return (
-                  <ScrollReveal key={facility.title} delay={index * 0.04}>
-                    <Card className="p-6 h-full border-border shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-primary/40 transition-all group">
-                      <div className="w-11 h-11 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <motion.div
+                    key={facility.title}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.4, delay: Math.min(index * 0.04, 0.3) }}
+                  >
+                    <Card className="p-6 h-full border-border shadow-sm hover:border-primary/40 hover:shadow-md transition-all">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
                         <Icon className="w-5 h-5" />
                       </div>
-                      <h3 className="font-display font-bold text-lg text-foreground">{facility.title}</h3>
-                      <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{facility.desc}</p>
+                      <h3 className="font-display font-bold text-foreground text-lg mb-2">{facility.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{facility.desc}</p>
                     </Card>
-                  </ScrollReveal>
+                  </motion.div>
                 );
               })}
             </div>
           </div>
         </section>
 
+        {/* Gallery */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <SectionHeading
-              eyebrow="Library Services"
-              title="Audience-based services with a clear focus"
-              subtitle="Research support, service portfolio and user-specific help are consolidated into one tabbed experience."
-            />
-
-            <Tabs defaultValue="students" className="w-full">
-              <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-2 lg:grid-cols-4 h-auto p-1.5 rounded-full bg-muted/70">
-                {audienceServices.map((audience) => (
-                  <TabsTrigger
-                    key={audience.key}
-                    value={audience.key}
-                    className="rounded-full data-[state=active]:bg-white data-[state=active]:text-foreground data-[state=active]:shadow-sm py-2.5"
-                  >
-                    {audience.label}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-
-              {audienceServices.map((audience) => (
-                <TabsContent key={audience.key} value={audience.key}>
-                  <Card className="mt-6 p-6 md:p-8 border-border shadow-sm">
-                    <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-6 items-start">
-                      <div>
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-2">{audience.label}</p>
-                        <h3 className="font-display text-2xl font-bold text-foreground mb-3">
-                          Tailored support for {audience.label.toLowerCase()}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed">{audience.note}</p>
-                      </div>
-
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        {audience.items.map((serviceItem) => (
-                          <div
-                            key={serviceItem.title}
-                            className="rounded-xl border border-border bg-muted/25 p-4 hover:bg-white hover:shadow-sm transition-all"
-                          >
-                            <div className="flex items-start gap-3">
-                              <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                                <BookMarked className="w-5 h-5" />
-                              </div>
-                              <div>
-                                <h4 className="font-semibold text-foreground">{serviceItem.title}</h4>
-                                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{serviceItem.desc}</p>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </Card>
-                </TabsContent>
-              ))}
-            </Tabs>
-          </div>
-        </section>
-
-        <section className="py-20 bg-muted/40">
           <div className="container mx-auto px-4">
             <SectionHeading eyebrow="Gallery" title="Inside the Central Library" subtitle="A concise visual snapshot of the reading and digital spaces." />
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -590,13 +743,14 @@ const Library = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-background">
+        {/* REACH THE LIBRARY SECTION */}
+        <section className="py-20 bg-muted/40">
           <div className="container mx-auto px-4">
             <SectionHeading eyebrow="Contact" title="Reach the library" subtitle="Contact details and working hours for visits, assistance and enquiries." />
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
               <Card className="p-6 md:p-7 border-border shadow-sm">
-                <h3 className="font-display font-bold text-foreground mb-4 flex items-center gap-2">
+                <h3 className="font-display font-bold text-foreground text-lg mb-4 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-primary" /> Location and contact
                 </h3>
                 <div className="space-y-4 text-sm">
@@ -604,30 +758,68 @@ const Library = () => {
                     <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                     <span>{libraryContact.location}</span>
                   </div>
-                  <a href={`mailto:${libraryContact.email}`} className="flex gap-3 text-muted-foreground hover:text-primary transition-colors">
-                    <Mail className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <a href={`mailto:${libraryContact.email}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                    <Mail className="w-4 h-4 text-primary shrink-0" />
                     <span>{libraryContact.email}</span>
                   </a>
-                  <a href={`tel:${libraryContact.phone}`} className="flex gap-3 text-muted-foreground hover:text-primary transition-colors">
-                    <Phone className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <a href={`tel:${libraryContact.phone}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                    <Phone className="w-4 h-4 text-primary shrink-0" />
                     <span>{libraryContact.phone}</span>
                   </a>
                 </div>
               </Card>
 
               <Card className="p-6 md:p-7 border-border shadow-sm">
-                <h3 className="font-display font-bold text-foreground mb-4 flex items-center gap-2">
+                <h3 className="font-display font-bold text-foreground text-lg mb-4 flex items-center gap-2">
                   <Clock className="w-5 h-5 text-primary" /> Working hours
                 </h3>
                 <div className="space-y-3 text-sm">
                   {libraryContact.hours.map((hour) => (
-                    <div key={hour.day} className="flex items-center justify-between gap-4 border-b border-border last:border-0 pb-2 last:pb-0">
-                      <span className="text-muted-foreground">{hour.day}</span>
-                      <span className="font-semibold text-foreground">{hour.time}</span>
+                    <div key={hour.day} className="flex items-center justify-between gap-4 border-b border-border last:border-0 pb-2.5 last:pb-0">
+                      <span className="text-muted-foreground font-medium">{hour.day}</span>
+                      <span className="font-bold text-foreground">{hour.time}</span>
                     </div>
                   ))}
                 </div>
               </Card>
+            </div>
+
+            {/* Individual Librarians Contact Cards */}
+            <div className="pt-8 border-t border-border/80">
+              <div className="text-center mb-8">
+                <h3 className="font-display text-2xl font-bold text-foreground">Library Administration</h3>
+                <p className="text-sm text-muted-foreground mt-1">Direct contact information for the Central Librarians</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                {libraryContacts.map((contact, idx) => (
+                  <Card key={idx} className="p-6 md:p-7 border-border shadow-sm space-y-4">
+                    <div>
+                      <h4 className="font-display text-xl font-bold text-red-800 dark:text-red-400">{contact.name}</h4>
+                      <p className="text-sm font-bold text-red-900 dark:text-red-300">{contact.designation}</p>
+                    </div>
+                    
+                    <div className="space-y-3 text-sm pt-2 border-t border-border">
+                      <div>
+                        <p className="font-bold text-red-900 dark:text-red-400">Address:</p>
+                        <p className="text-muted-foreground mt-1 leading-relaxed">{contact.address}</p>
+                      </div>
+                      <div>
+                        <p className="font-bold text-red-900 dark:text-red-400">Phone:</p>
+                        <a href={`tel:${contact.phone}`} className="text-muted-foreground hover:text-primary transition-colors">
+                          {contact.phone}
+                        </a>
+                      </div>
+                      <div>
+                        <p className="font-bold text-red-900 dark:text-red-400">Email:</p>
+                        <a href={`mailto:${contact.email}`} className="text-muted-foreground hover:text-primary transition-colors">
+                          {contact.email}
+                        </a>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -635,35 +827,6 @@ const Library = () => {
 
       <Footer />
     </div>
-  );
-};
-
-const StatCard = ({ stat, icon: Icon, index }: { stat: typeof libraryStats[number]; icon: any; index: number }) => {
-  const [inView, setInView] = useState(false);
-  const value = useCountUp(stat.value, 1400, inView);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      onViewportEnter={() => setInView(true)}
-      transition={{ duration: 0.5, delay: Math.min(index * 0.04, 0.3) }}
-      className="group relative overflow-hidden rounded-xl border border-border bg-card p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
-    >
-      <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors" />
-      <div className="relative">
-        <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
-          <Icon className="w-5 h-5" />
-        </div>
-        <div className="font-display text-3xl md:text-4xl font-bold text-foreground tabular-nums">
-          {value.toLocaleString("en-IN")}
-          {stat.suffix || (stat.value >= 1000 ? "+" : "")}
-        </div>
-        <div className="text-sm font-semibold text-foreground/80 mt-1">{stat.label}</div>
-        {stat.note && <div className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{stat.note}</div>}
-      </div>
-    </motion.div>
   );
 };
 
