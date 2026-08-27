@@ -260,7 +260,7 @@ const Careers = () => {
               {/* What We Do Here */}
               <ScrollReveal delay={0.1}>
                 <div className="bg-muted/30 border border-border rounded-2xl p-6 md:p-8">
-                  <SectionHeading title="What We Do Here -  subtitle="A vibrant culture of collaborative learning and innovation." />
+                  <SectionHeading title="What We Do Here" subtitle="A vibrant culture of collaborative learning and innovation." />
                   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                     {whatWeDoList.map((item, idx) => (
                       <div key={idx} className="bg-card border border-border rounded-xl p-4 flex flex-col items-center text-center">

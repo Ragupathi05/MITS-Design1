@@ -78,42 +78,42 @@ const admissionsFaqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the eligibility for B.Tech admission at MITS Madanapalle - ,
+      "name": "What is the eligibility for B.Tech admission at MITS Madanapalle?",
       "acceptedAnswer": { "@type": "Answer", "text": "Candidates must have passed 10+2 (or equivalent) with Physics, Chemistry and Mathematics, securing at least 45% aggregate marks. Admission is through AP EAMCET / JEE Main counselling or direct admission based on merit." }
     },
     {
       "@type": "Question",
-      "name": "Does MITS accept AP EAMCET scores - ,
+      "name": "Does MITS accept AP EAMCET scores?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. MITS Madanapalle accepts AP EAMCET scores for B.Tech admissions. Candidates who have appeared in AP EAMCET are eligible to apply through the APSCHE counselling process." }
     },
     {
       "@type": "Question",
-      "name": "Is MITS a deemed university or affiliated college - ,
+      "name": "Is MITS a deemed university or affiliated college?",
       "acceptedAnswer": { "@type": "Answer", "text": "MITS is a Deemed-to-be University recognised by UGC under Section 3 of the UGC Act, 1956. It is also NAAC A+ accredited and AICTE approved." }
     },
     {
       "@type": "Question",
-      "name": "What programmes does MITS offer - ,
+      "name": "What programmes does MITS offer?",
       "acceptedAnswer": { "@type": "Answer", "text": "MITS offers B.Tech (CSE, ECE, EEE, Mechanical, Civil, AI, AI&ML, CSE-Data Science, CSE-Cyber Security), M.Tech, MBA, MCA, and BCA/BBA programmes." }
     },
     {
       "@type": "Question",
-      "name": "How do I apply for admission to MITS - ,
+      "name": "How do I apply for admission to MITS?",
       "acceptedAnswer": { "@type": "Answer", "text": "Applications can be submitted online at admission.mits.ac.in. The process involves registering, filling the application form, uploading documents, and attending counselling for fee payment and confirmation." }
     },
     {
       "@type": "Question",
-      "name": "Are scholarships available at MITS - ,
+      "name": "Are scholarships available at MITS?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. MITS students are eligible for state government scholarships (AP Jagananna Vidya Deevena, Vasathi Deevena), central government scholarships, and merit-based fee concessions. Details are available on the admissions portal." }
     },
     {
       "@type": "Question",
-      "name": "What is the placement record at MITS - ,
+      "name": "What is the placement record at MITS?",
       "acceptedAnswer": { "@type": "Answer", "text": "MITS has a 94% placement rate with an average package of ₹6.8 LPA and a highest package of ₹21 LPA. Over 200 companies recruit from campus, including Google, Microsoft, Amazon, TCS, Infosys, and Wipro." }
     },
     {
       "@type": "Question",
-      "name": "Does MITS have hostel facilities - ,
+      "name": "Does MITS have hostel facilities?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. MITS provides separate hostel facilities for male and female students on campus, with mess, Wi-Fi, and security arrangements." }
     }
   ]
