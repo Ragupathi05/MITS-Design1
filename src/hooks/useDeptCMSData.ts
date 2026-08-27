@@ -5,7 +5,7 @@ const IS_LOCAL = typeof window !== "undefined" && (window.location.hostname === 
 // Production: all requests go through the Cloudflare Worker proxy which fixes
 // the duplicate Access-Control-Allow-Origin header the CMS server sends.
 // Deploy cloudflare-worker/cms-proxy.js and update this URL.
-const WORKER_URL = "https://mits-cms-proxy.mits-website.workers.dev/public_api";
+const WORKER_URL = "https://mits-cms-proxy.23691a4054.workers.dev/public_api";
 
 // Dev: Vite proxy at /cms-api (see vite.config.ts cmsProxyPlugin)
 const CMS_BASE = IS_LOCAL ? "/cms-api" : WORKER_URL;
