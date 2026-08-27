@@ -33,3 +33,19 @@ dist.zip
 .env
 .env.*
 !.env.example
+
+# Build cache
+.vite/
+tsconfig.tsbuildinfo
+
+# Scraping / codegen scripts (dev-only, not part of the app)
+*.py
+*.mjs
+ir_page.html
+cells_update.json
+scraped_cells.json
+structured_cells.json
+
+# Bun (project uses npm)
+bun.lock
+bun.lockb
