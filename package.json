@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ragupathi05.github.io/MITS-Design1",
+  "homepage": "https://mits.edu/university",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

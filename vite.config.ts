@@ -140,7 +140,7 @@ function cmsProxyPlugin() {
 }
 
 export default defineConfig(({ mode }) => ({
-  base: "/MITS-Design1/",
+  base: "/university/",
   server: {
     host: "::",
     port: 8080,

@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { useEffect, Suspense, lazy } from "react";
 
@@ -62,7 +62,7 @@ const Careers = lazy(() => import("./pages/Careers"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
-const Router = HashRouter;
+const Router = BrowserRouter;
 
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
@@ -88,7 +88,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <Router basename="/university" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <ScrollToTop />
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>

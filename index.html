@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/MITS-Design1/mits-logo.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/MITS-Design1/mits-logo.png" />
-    <link rel="apple-touch-icon" href="/MITS-Design1/mits-logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/university/mits-logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/university/mits-logo.png" />
+    <link rel="apple-touch-icon" href="/university/mits-logo.png" />
     <link rel="manifest" href="./site.webmanifest" />
     <meta name="theme-color" content="#b30000" />
 
@@ -26,16 +26,25 @@
     <meta property="og:title" content="MITS Madanapalle – NAAC A+ Deemed University" />
     <meta property="og:description" content="NAAC A+ Accredited | UGC Recognised | AICTE Approved | NBA Accredited | NIRF Ranked" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ragupathi05.github.io/MITS-Design1/" />
-    <meta property="og:image" content="https://ragupathi05.github.io/MITS-Design1/mits-logo.png" />
+    <meta property="og:url" content="https://mits.edu/" />
+    <meta property="og:image" content="https://mits.edu/mits-logo.png" />
     <meta property="og:site_name" content="MITS Madanapalle" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@MITSMadanapalle" />
-    <meta name="twitter:image" content="https://ragupathi05.github.io/MITS-Design1/mits-logo.png" />
+    <meta name="twitter:image" content="https://mits.edu/mits-logo.png" />
   </head>
   <body>
+    <!-- Handle 404 redirect from cPanel for BrowserRouter deep links -->
+    <script>
+      (function() {
+        var p = new URLSearchParams(window.location.search).get("p");
+        if (p) {
+          window.history.replaceState(null, "", "/university" + decodeURIComponent(p));
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

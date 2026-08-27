@@ -8,7 +8,8 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 // ── constants mirrored from the hook ────────────────────────────────────────
 const WORKER_URL = "https://mits-cms-proxy.23691a4054.workers.dev/public_api";
-const CMS_BASE   = WORKER_URL; // production path (worker fixes duplicate CORS header)
+const CMS_BASE   = WORKER_URL;
+const APP_BASENAME = "/university";
 
 const CMS_CODE: Record<string, string> = {
   cse: "CSE", ce: "CE", civil: "CE", eee: "EEE", me: "MECH",
@@ -59,6 +60,24 @@ describe("CMS_BASE (Cloudflare Worker proxy)", () => {
 
   it("does NOT point directly to aicampus (would cause duplicate CORS header)", () => {
     expect(CMS_BASE).not.toContain("aicampus.mits.ac.in");
+  });
+});
+
+// ── 0. App routing base ───────────────────────────────────────────────────
+describe("App routing (BrowserRouter)", () => {
+  it("uses /university as basename (no hash routing)", () => {
+    expect(APP_BASENAME).toBe("/university");
+    expect(APP_BASENAME).not.toContain("#");
+    expect(APP_BASENAME).not.toContain("MITS-Design1");
+  });
+
+  it("builds correct full URLs for key routes", () => {
+    const routes = ["/", "/about", "/admissions", "/department/cse", "/placements"];
+    routes.forEach((r) => {
+      const full = `https://mits.edu${APP_BASENAME}${r === "/" ? "" : r}`;
+      expect(full).toContain("mits.edu/university");
+      expect(full).not.toContain("#");
+    });
   });
 });
 
