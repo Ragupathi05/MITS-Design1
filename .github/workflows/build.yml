@@ -41,3 +41,11 @@ jobs:
             -e "ssh -i ~/.ssh/cpanel_deploy -p 22133 -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=20" \
             dist/ \
             mits@mits.edu:/home/mits/public_html/university/
+
+      - name: Deploy root .htaccess (redirect mits.edu → /university/)
+        run: |
+          printf 'RewriteEngine On\nRewriteRule ^$ /university/ [R=301,L]\nRewriteCond %%{REQUEST_URI} !^/university/\nRewriteRule ^(.*)$ /university/$1 [R=301,L]\n' > /tmp/root.htaccess
+          rsync -az \
+            -e "ssh -i ~/.ssh/cpanel_deploy -p 22133 -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=20" \
+            /tmp/root.htaccess \
+            mits@mits.edu:/home/mits/public_html/.htaccess
