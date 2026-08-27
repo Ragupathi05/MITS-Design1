@@ -7,7 +7,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 // ── constants mirrored from the hook ────────────────────────────────────────
-const WORKER_URL = "https://mits-cms-proxy.mits-website.workers.dev/public_api";
+const WORKER_URL = "https://mits-cms-proxy.23691a4054.workers.dev/public_api";
 const CMS_BASE   = WORKER_URL; // production path (worker fixes duplicate CORS header)
 
 const CMS_CODE: Record<string, string> = {
