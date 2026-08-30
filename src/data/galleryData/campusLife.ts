@@ -73,26 +73,6 @@ export const campusLifeData: Record<string, CampusLifeCategory> = {
       "/gallery/gym6.jpg"
     ]
   },
-  hostel: {
-    id: "hostel",
-    title: "Hostel Life",
-    stats: "Safe Residential Campus",
-    description: "MITS offers separate secure and comfortable residential hostel blocks for boys and girls. Equipped with modern mess dining facilities, study zones, and recreation rooms, our hostels provide a home away from home.",
-    highlights: [
-      "Secure separate hostel blocks for boys and girls",
-      "Nutritious mess dining serving hygienic vegetarian and non-vegetarian food",
-      "Wi-Fi connected study zones and indoor sports recreation rooms",
-      "24/7 security surveillance and medical emergency assistance"
-    ],
-    images: [
-      "/gallery/mits-college-girls-hostel-angallu-chittoor-colleges-tvt7wi1897.avif",
-      "/gallery/mits-college-girls-hostel-angallu-chittoor-colleges-4dxo7gi5c5.avif",
-      "/gallery/Circular Block.JPG",
-      "/gallery/West Block.JPG",
-      "/gallery/main entrance.JPG",
-      "/gallery/South Block.JPG"
-    ]
-  },
   infrastructure: {
     id: "infrastructure",
     title: "Campus Infrastructure",

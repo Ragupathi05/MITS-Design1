@@ -110,11 +110,6 @@ const admissionsFaqSchema = {
       "@type": "Question",
       "name": "What is the placement record at MITS?",
       "acceptedAnswer": { "@type": "Answer", "text": "MITS has a 94% placement rate with an average package of ₹6.8 LPA and a highest package of ₹21 LPA. Over 200 companies recruit from campus, including Google, Microsoft, Amazon, TCS, Infosys, and Wipro." }
-    },
-    {
-      "@type": "Question",
-      "name": "Does MITS have hostel facilities?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MITS provides separate hostel facilities for male and female students on campus, with mess, Wi-Fi, and security arrangements." }
     }
   ]
 };

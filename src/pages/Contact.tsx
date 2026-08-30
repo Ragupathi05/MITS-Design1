@@ -21,7 +21,7 @@ const departments = [
   { name: "Placement Cell", phone: "+91 7330852557", email: "placements@mits.ac.in" },
   { name: "Research & Development", phone: "+91 8571 280256", email: "rnd@mits.ac.in" },
   { name: "Library", phone: "+91 8571 280258", email: "library@mits.ac.in" },
-  { name: "Hostel Office", phone: "+91 7330852558", email: "hostel@mits.ac.in" },
+  { name: "Student Affairs & Helpdesk", phone: "+91 7330852558", email: "studentaffairs@mits.ac.in" },
 ];
 
 const Contact = () => {

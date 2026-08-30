@@ -167,7 +167,7 @@ const infrastructureItems = [
       "Multiple food stalls across campus",
       "Vegetarian and non-vegetarian options",
       "Hygienic food preparation with regular audits",
-      "Affordable meal plans for hostel students",
+      "Affordable meal plans and snacks for students",
       "Special dietary options available on request",
     ],
   },
@@ -176,7 +176,7 @@ const infrastructureItems = [
     desc: "High-speed internet connectivity is available across the entire campus for seamless academic and research activities.",
     points: [
       "Campus-wide Wi-Fi with 1 Gbps internet bandwidth",
-      "500+ access points across academic and hostel blocks",
+      "500+ access points across academic and administrative blocks",
       "24/7 connectivity for students and faculty",
       "Secure network with firewall and content filtering",
       "Dedicated bandwidth for research and labs",
@@ -632,12 +632,7 @@ const Infrastructure = () => {
       <Header />
       <SEO
         title="MITS Campus Infrastructure – Labs, Library, Sports & Facilities"
-        description="Explore MITS Madanapalle infrastructure: 26.17-acre campus, 3,000+ computers, 1 Gbps Wi-Fi, central library with 50,000+ volumes, AICTE Idea Lab, sports grounds, and hostel facilities."
-        canonical="/infrastructure"
-      />
-      <SEO
-        title="MITS Campus Infrastructure – Labs, Library, Sports & Facilities"
-        description="Explore MITS Madanapalle infrastructure: 26.17-acre campus, 3,000+ computers, 1 Gbps Wi-Fi, central library with 50,000+ volumes, AICTE Idea Lab, sports grounds, and hostel facilities."
+        description="Explore MITS Madanapalle infrastructure: 26.17-acre campus, 3,000+ computers, 1 Gbps Wi-Fi, central library with 50,000+ volumes, AICTE Idea Lab, auditoriums, and sports grounds."
         canonical="/infrastructure"
       />
       <main>

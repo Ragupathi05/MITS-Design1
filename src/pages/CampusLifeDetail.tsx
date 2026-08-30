@@ -23,7 +23,7 @@ const getLocalUrl = (url: string) => {
 };
 
 interface CampusLifeDetailProps {
-  categoryKey: "clubs" | "cultural" | "sports" | "hostel";
+  categoryKey: "clubs" | "cultural" | "sports";
 }
 
 const CampusLifeDetail = ({ categoryKey }: CampusLifeDetailProps) => {

@@ -10,7 +10,6 @@ const categoryConfig: Record<string, { href: string; icon: React.ComponentType<{
   clubs: { href: "/campus-life/student-clubs", icon: Users },
   cultural: { href: "/campus-life/cultural-life", icon: Sparkles },
   sports: { href: "/sports", icon: Dumbbell },
-  hostel: { href: "/hostels", icon: Home },
   infrastructure: { href: "/infrastructure", icon: Building2 },
 };
 
@@ -145,7 +144,7 @@ const CampusLifeSection = () => {
               Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-accent">Campus Life</span>
             </h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto font-light leading-relaxed">
-              Explore the vibrant student clubs, cultural celebrations, sports activities, residential life, and academic infrastructure.
+              Explore the vibrant student clubs, cultural celebrations, sports activities, and academic infrastructure.
             </p>
           </div>
         </ScrollReveal>

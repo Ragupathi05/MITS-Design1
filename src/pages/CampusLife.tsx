@@ -62,15 +62,6 @@ const experienceCards = [
     href: "/sports",
   },
   {
-    id: "hostel",
-    title: campusLifeData.hostel.title,
-    description: campusLifeData.hostel.description,
-    image: getLocalUrl(campusLifeData.hostel.images[0]),
-    icon: Home,
-    stats: campusLifeData.hostel.stats,
-    href: "/hostels",
-  },
-  {
     id: "infrastructure",
     title: campusLifeData.infrastructure.title,
     description: campusLifeData.infrastructure.description,
@@ -99,15 +90,54 @@ const ashvGallery = [
   },
   {
     id: 3,
-    title: "Cultural Activities",
-    description: "Annual day fests and student group choreography fests",
-    image: getLocalUrl("/gallery/ashv(2k25)30.jpg"),
+    title: "Celebrity & Music Concerts",
+    description: "High-energy musical nights featuring renowned guest artists",
+    image: getLocalUrl(campusLifeData.cultural.images[1]) || `${BASE}news-events/3k-run.jpg`,
   },
   {
     id: 4,
-    title: "Traditional Dance & Celebrations",
-    description: "Dazzling dance showcases during annual college fests",
-    image: getLocalUrl("/gallery/ashv(2k25)15.jpg"),
+    title: "Dance & Choreography",
+    description: "Inter-collegiate dance troupes competing in the race of talent",
+    image: getLocalUrl("/gallery/ashv(2k26)4.jpg"),
+  },
+];
+
+// ============================================
+// CLUBS SHOWCASE DATA (Generated from official MITS data)
+// ============================================
+const clubsShowcase = [
+  {
+    name: "Technical Clubs",
+    category: "Coding & Innovation",
+    icon: Code2,
+    color: "from-blue-600 to-indigo-600",
+    description:
+      "Coding, Web Development, Robotics, and IoT enthusiasts collaborating on hackathons, live engineering builds, and tech competitions.",
+    activities: ["Hackathons & Coding Sprints", "Robotics & Drone Workshops", "Open Source Projects"],
+    image: getLocalUrl(campusLifeData.clubs.images[5]),
+    reverse: false,
+  },
+  {
+    name: "Arts & Cultural Club",
+    category: "Creative Expressions",
+    icon: Palette,
+    color: "from-purple-600 to-pink-600",
+    description:
+      "Unleashing stage talents in classical and western dance, vocal music, drama, fine arts, and anchoring for major university events.",
+    activities: ["Music & Band Performances", "Dance Competitions", "Theater & Drama"],
+    image: getLocalUrl(campusLifeData.clubs.images[0]),
+    reverse: true,
+  },
+  {
+    name: "Social Responsibility (MSR)",
+    category: "Community Impact",
+    icon: HeartHandshake,
+    color: "from-emerald-600 to-teal-600",
+    description:
+      "Dedicated to social outreach, blood donation camps, rural development, environmental green drives, and education for underprivileged children.",
+    activities: ["Blood Donation Camps", "Village Adoption Drives", "Eco-Friendly Initiatives"],
+    image: getLocalUrl(campusLifeData.clubs.images[3]),
+    reverse: false,
   },
 ];
 
@@ -149,7 +179,7 @@ const campusGallery = [
   { id: 2, image: getLocalUrl(campusLifeData.clubs.images[2]), title: "Student Club Activities" },
   { id: 3, image: getLocalUrl(campusLifeData.infrastructure.images[2]), title: "Industrial Block" },
   { id: 4, image: getLocalUrl(campusLifeData.infrastructure.images[1]), title: "Circular Academic Block" },
-  { id: 5, image: getLocalUrl(campusLifeData.hostel.images[1]), title: "Hostel Complex Area" },
+  { id: 5, image: getLocalUrl(campusLifeData.infrastructure.images[6]), title: "Central Library & Digital Hub" },
   { id: 6, image: getLocalUrl(campusLifeData.sports.images[0]), title: "Official Sports Ground" },
   { id: 7, image: getLocalUrl(campusLifeData.cultural.images[5]), title: "Cultural Festival Stages" },
   { id: 8, image: getLocalUrl(campusLifeData.infrastructure.images[5]), title: "Innovation Cell & Laboratories" },
@@ -190,10 +220,10 @@ const facilities = [
   },
   {
     id: 5,
-    title: "Hostels",
-    description: "Secure boys and girls residential blocks offering community living with modern amenities.",
-    image: getLocalUrl(campusLifeData.hostel.images[2]),
-    icon: Home,
+    title: "Smart Classrooms",
+    description: "Interactive audio-visual smart classrooms and multimedia seminar halls.",
+    image: getLocalUrl(campusLifeData.infrastructure.images[1]),
+    icon: Building2,
   },
   {
     id: 6,

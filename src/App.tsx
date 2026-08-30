@@ -114,7 +114,7 @@ const App = () => (
             <Route path="/campus-life/student-clubs" element={<CampusLifeDetail categoryKey="clubs" />} />
             <Route path="/campus-life/cultural-life" element={<CampusLifeDetail categoryKey="cultural" />} />
             <Route path="/sports" element={<CampusLifeDetail categoryKey="sports" />} />
-            <Route path="/hostels" element={<CampusLifeDetail categoryKey="hostel" />} />
+            <Route path="/hostels" element={<CampusLife />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/infrastructure" element={<Infrastructure />} />
             <Route path="/departments" element={<Departments />} />

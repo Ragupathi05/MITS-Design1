@@ -36,14 +36,13 @@ const getFriendlyTitle = (url: string) => {
   if (decoded.toLowerCase().includes("sports") || decoded.toLowerCase().includes("ground")) return "Sports Ground & Activities";
   if (decoded.toLowerCase().includes("gym")) return "Campus Gymnasium";
   if (decoded.toLowerCase().includes("lib") || decoded.toLowerCase().includes("library")) return "Central Library Facility";
-  if (decoded.toLowerCase().includes("lab")) return "Advanced Lab Facility";
-  if (decoded.toLowerCase().includes("hostel")) return "Student Hostel Life";
-  if (decoded.toLowerCase().includes("mess")) return "Hostel Dining Mess";
+  if (decoded.toLowerCase().includes("hostel")) return "Campus Residential Complex";
+  if (decoded.toLowerCase().includes("mess")) return "Campus Dining Hall";
   if (decoded.toLowerCase().includes("canteen")) return "Campus Canteen Dining";
   if (decoded.toLowerCase().includes("seminar") || decoded.toLowerCase().includes("workshop")) return "Academic Seminar Hall";
   if (decoded.toLowerCase().includes("auditorium")) return "MITS Main Auditorium";
   if (decoded.toLowerCase().includes("block")) return `${decoded.replace(/[-_]/g, " ")} Block`;
-  if (decoded.toLowerCase().startsWith("hl-")) return "Hostel Life Activity";
+  if (decoded.toLowerCase().startsWith("hl-")) return "Campus Life Activity";
   if (decoded.toLowerCase().includes("wifi")) return "Wi-Fi Hub & Connectivity";
   if (decoded.toLowerCase().includes("dji")) return "MITS Campus Aerial View";
   if (decoded.toLowerCase().includes("whatsapp image")) return "MITS Campus Event Activity";
