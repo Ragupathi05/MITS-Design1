@@ -25,7 +25,7 @@ const slides: Slide[] = [
   {
     id: "identity",
     video: `${BASE}Hero-Section/MITS%20first-Slide.mp4`,
-    image: `${BASE}Hero-Section/image%201.JPG`,
+    image: `${BASE}Hero-Section/image-1.jpg`,
     overlay: "",
     eyebrow: "",
     title: "",
@@ -60,7 +60,7 @@ const slides: Slide[] = [
   },
   {
     id: "credentials",
-    image: `${BASE}Hero-Section/image%205.JPG`,
+    image: `${BASE}Hero-Section/image-5.jpg`,
     overlay: "bg-[linear-gradient(180deg,rgba(7,21,37,0.80)_0%,rgba(7,21,37,0.70)_100%)]",
     eyebrow: "Excellence Since 1998",
     title: "Legacy of Achievements",

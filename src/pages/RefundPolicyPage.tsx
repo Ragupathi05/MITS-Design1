@@ -30,7 +30,7 @@ export default function RefundPolicyPage() {
       <section
         className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
         style={{
-          backgroundImage: `url(${BASE}Hero-Section/image%205.JPG)`,
+          backgroundImage: `url("${BASE}Hero-Section/image-5.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

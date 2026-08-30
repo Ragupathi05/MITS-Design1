@@ -131,7 +131,10 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center min-w-0 shrink-0" onClick={() => setMobileOpen(false)}>
             <img
-              src={`${import.meta.env.BASE_URL}MITS%20Official%20Logo.png`}
+              src={`${import.meta.env.BASE_URL}mits-official-logo.png`}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = `${import.meta.env.BASE_URL}mits-logo.png`;
+              }}
               alt="MITS Madanapalle official logo"
               className="h-12 sm:h-14 md:h-16 lg:h-[76px] w-auto max-w-[270px] sm:max-w-[330px] md:max-w-[390px] object-contain shrink-0"
             />

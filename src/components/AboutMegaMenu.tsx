@@ -15,47 +15,47 @@ const previewMap: Record<string, { title: string; body: string; image: string }>
   leadership: {
     title: "Institutional Leadership",
     body: "Founder & Chancellor and Pro-Chancellor guiding the institution at the highest level.",
-    image: `${BASE}Hero-Section/image%201.JPG`,
+    image: `${BASE}Hero-Section/image-1.jpg`,
   },
   "academic-leadership": {
     title: "Academic Leadership",
     body: "Vice-Chancellor, Registrar, Controller of Examinations and Ombudsperson supporting academic governance.",
-    image: `${BASE}Hero-Section/image%202.JPG`,
+    image: `${BASE}Hero-Section/image-2.jpg`,
   },
   deans: {
     title: "Deans of Schools",
     body: "School Deans steering each academic vertical with global academic credentials.",
-    image: `${BASE}Hero-Section/image%203.JPG`,
+    image: `${BASE}Hero-Section/image-3.jpg`,
   },
   "department-heads": {
     title: "Department Heads",
     body: "Heads of departments across Engineering, Computing, Sciences, Humanities and Management.",
-    image: `${BASE}Hero-Section/image%204.JPG`,
+    image: `${BASE}Hero-Section/image-4.jpg`,
   },
   "executive-council": {
     title: "Executive Council",
     body: "Apex governance body — administration, financial governance and strategic direction.",
-    image: `${BASE}Hero-Section/image%205.JPG`,
+    image: `${BASE}Hero-Section/image-5.jpg`,
   },
   "academic-council": {
     title: "Academic Council",
     body: "Highest academic authority — curriculum, evaluation and academic policy.",
-    image: `${BASE}Hero-Section/image%201.JPG`,
+    image: `${BASE}Hero-Section/image-1.jpg`,
   },
   bos: {
     title: "Board of Studies",
     body: "Departmental academic boards for curriculum design across all schools.",
-    image: `${BASE}Hero-Section/image%202.JPG`,
+    image: `${BASE}Hero-Section/image-2.jpg`,
   },
   organogram: {
     title: "University Organogram",
     body: "Complete organisational hierarchy of MITS Deemed to be University.",
-    image: `${BASE}Hero-Section/image%203.JPG`,
+    image: `${BASE}Hero-Section/image-3.jpg`,
   },
   "important-links": {
     title: "Important Links",
     body: "Quick access to institutional certifications, quality ratings, and public disclosures.",
-    image: `${BASE}Hero-Section/image%205.JPG`,
+    image: `${BASE}Hero-Section/image-5.jpg`,
   },
 };
 
@@ -177,7 +177,7 @@ const AboutMegaMenu = ({ open, onClose }: Props) => {
                           alt={preview.title}
                           className="w-full h-full object-cover"
                           onError={(e) => {
-                            (e.currentTarget as HTMLImageElement).src = `${BASE}Hero-Section/image%201.JPG`;
+                            (e.currentTarget as HTMLImageElement).src = `${BASE}Hero-Section/image-1.jpg`;
                           }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />

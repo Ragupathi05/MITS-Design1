@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Quote, Award, FileText, ArrowLeft, GraduationCap, Sparkles, BookOpen, Briefcase, Award as Medal } from "lucide-react";
 import PageShell from "@/components/about/PageShell";

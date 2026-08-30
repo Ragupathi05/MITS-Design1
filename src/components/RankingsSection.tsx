@@ -57,7 +57,7 @@ const RankingsSection = () => {
       aria-labelledby="trust-heading"
       className="relative py-12 overflow-hidden bg-cover bg-center bg-fixed md:bg-fixed bg-no-repeat"
       style={{
-        backgroundImage: `url(${BASE}Hero-Section/image%204.JPG)`,
+        backgroundImage: `url("${BASE}Hero-Section/image-4.jpg")`,
       }}
     >
       <div className="absolute inset-0 bg-black/35" />
