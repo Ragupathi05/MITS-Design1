@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { ChevronDown, X, Play, Pause, ArrowRight, Calendar, MapPin, Users, Award, Sparkles, BookOpen, Mic2, Dumbbell, Building2, Home, Music, Palette, Theater, Trophy, FlaskConical, Laptop } from "lucide-react";
+import { ChevronDown, X, Play, Pause, ArrowRight, Calendar, MapPin, Users, Award, Sparkles, BookOpen, Mic2, Dumbbell, Building2, Home, Music, Palette, Theater, Trophy, FlaskConical, Laptop, Code2, HeartHandshake } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
