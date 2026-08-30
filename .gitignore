@@ -29,4 +29,6 @@ college main video.mp4
 # Local test and temp files
 test-*.cjs
 tmp/
+scratch/
+faculty_response.json
 dist.zip

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-const AUTONOMOUS_URL = "https://mits.ac.in/ugc-autonomous";
+const ADMISSIONS_URL = "https://admission.mits.ac.in/";
 
 const FloatingAutonomousTab = () => {
   const location = useLocation();
@@ -11,10 +11,10 @@ const FloatingAutonomousTab = () => {
 
   return (
     <a
-      href={AUTONOMOUS_URL}
+      href={ADMISSIONS_URL}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Autonomous Institution"
+      aria-label="Admissions 2026 - Apply Online"
       className="group fixed right-0 top-1/2 z-[60] w-11 -translate-y-1/2 p-2 sm:w-12 lg:w-14 focus:outline-none focus-visible:-translate-x-1 focus-visible:ring-2 focus-visible:ring-white/70"
       style={{
         backgroundColor: "#B30000",
@@ -26,7 +26,7 @@ const FloatingAutonomousTab = () => {
         borderTopLeftRadius: "12px",
         borderBottomLeftRadius: "12px",
         letterSpacing: "0.08em",
-        fontWeight: 600,
+        fontWeight: 700,
         textDecoration: "none",
         transition:
           "background-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease",
@@ -45,8 +45,8 @@ const FloatingAutonomousTab = () => {
         e.currentTarget.style.filter = "brightness(1)";
       }}
     >
-      <span className="block py-3 text-[13px] sm:py-4 sm:text-sm lg:py-5 lg:text-base">
-        Autonomous Institution
+      <span className="block py-3 text-[13px] sm:py-4 sm:text-sm lg:py-5 lg:text-base font-bold tracking-wide">
+        🎓 Admissions 2026
       </span>
     </a>
   );

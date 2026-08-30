@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import AboutMegaMenu from "@/components/AboutMegaMenu";
 import { aboutSections } from "@/data/aboutData";
+import HeaderSearchBar from "@/components/HeaderSearchBar";
 
 type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[]; mega?: "about" };
@@ -51,7 +52,6 @@ const navItems: NavItem[] = [
       { label: "Infrastructure", href: "/infrastructure" },
       { label: "International Relations", href: "/international-relations" },
       { label: "MITS Radio 90.8 CRS", href: "/mits-radio" },
-      { label: "Moodle Login", href: "https://moodle.mits.ac.in/" },
       { label: "Contact Us", href: "/contact" },
     ],
   },
@@ -113,14 +113,21 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-4 px-6 text-sm font-semibold shrink-0 z-20 bg-primary h-full">
-            <Link to="/mits-radio" className="hover:text-accent transition-colors flex items-center gap-1">
-              <span>📻</span> MITS Radio 90.8 CRS
-            </Link>
-            <span className="text-primary-foreground/30">|</span>
-            <a href="https://moodle.mits.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">
-              <span>🖥️</span> Moodle Login
+          <div className="flex items-center gap-3 px-3 sm:px-5 text-sm font-semibold shrink-0 z-20 bg-primary h-full">
+            {/* Blue Box Autonomous Institution Link */}
+            <a
+              href="https://mits.ac.in/ugc-autonomous"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#005bb5] hover:bg-[#004994] text-white text-xs sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-md shadow-xs hover:shadow transition-all flex items-center gap-1.5 shrink-0 border border-blue-300/30 tracking-wide"
+              title="UGC Autonomous Institution"
+            >
+              <span>🏛️</span>
+              <span>Autonomous Institution</span>
             </a>
+            <span className="text-primary-foreground/30">|</span>
+            {/* Interactive Search Bar in place of Moodle */}
+            <HeaderSearchBar variant="topbar" />
           </div>
         </div>
       </div>
@@ -213,16 +220,19 @@ const Header = () => {
             )}
           </nav>
 
-          {/* Right: Apply + Mobile toggle */}
-          <div className="flex items-center gap-3 shrink-0 ml-auto lg:ml-0">
+          {/* Right: Search + Apply + Mobile toggle */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-auto lg:ml-0">
+            <HeaderSearchBar variant="navbar" className="hidden lg:flex" />
             <Link to="/admissions">
-              <Button className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-sm px-5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg">
+              <Button className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-sm px-4 sm:px-5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg">
                 Apply Now
               </Button>
             </Link>
+            <HeaderSearchBar variant="navbar" className="lg:hidden" />
             <button
-              className="xl:hidden text-secondary hover:text-primary transition-colors"
+              className="xl:hidden text-secondary hover:text-primary transition-colors p-1"
               onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle Menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -238,9 +248,14 @@ const Header = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="xl:hidden bg-white border-t border-border shadow-lg max-h-[70vh] overflow-y-auto"
+            className="xl:hidden bg-white border-t border-border shadow-lg max-h-[75vh] overflow-y-auto"
           >
-            <nav className="w-full px-[20px] py-4 flex flex-col gap-1">
+            {/* Mobile Search input */}
+            <div className="px-4 pt-3.5 pb-1">
+              <HeaderSearchBar variant="mobile" />
+            </div>
+
+            <nav className="w-full px-[20px] py-3 flex flex-col gap-1">
               {navItems.map((item) => (
                 <div key={item.label}>
                   <div className="flex items-center justify-between">
@@ -257,6 +272,7 @@ const Header = () => {
                       <button
                         className="p-2 text-secondary hover:text-primary"
                         onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+                        aria-label={`Toggle ${item.label} submenu`}
                       >
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileExpanded === item.label ? "rotate-180" : ""}`} />
                       </button>
@@ -307,5 +323,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
