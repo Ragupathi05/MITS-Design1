@@ -7,9 +7,10 @@ import SEO from "@/components/SEO";
 import { getDepartmentByKey, type FacultyMember } from "@/data/departmentData";
 import { getFacultyProfile, type FacultyProfile, type FacultySection } from "@/data/facultyProfiles";
 import { slugifyFaculty } from "@/lib/facultySlug";
+import { useFacultyData } from "@/hooks/useFacultyData";
 import {
   ArrowLeft, ArrowRight, Mail, GraduationCap, BookOpen,
-  Award, FileText, Users, ExternalLink, ChevronRight, Sparkles, Briefcase
+  Award, FileText, Users, ExternalLink, ChevronRight, Sparkles, Briefcase, Clock, Building
 } from "lucide-react";
 
 function buildFromFacultyMember(f: FacultyMember): FacultyProfile {
@@ -205,6 +206,7 @@ const SECTION_ICONS: Record<string, React.ComponentType<{ className?: string }>>
   "Details of Educational Qualification": GraduationCap,
   "Education": GraduationCap,
   "Research Areas": Sparkles,
+  "Research Areas / Specialization": Sparkles,
   "Research Identifiers": ExternalLink,
   "Publication Details": BookOpen,
   "Publications": BookOpen,
@@ -213,36 +215,67 @@ const SECTION_ICONS: Record<string, React.ComponentType<{ className?: string }>>
   "Projects": Briefcase,
   "Books": BookOpen,
   "Conferences": Users,
+  "Academic & Administrative Roles": Users,
+  "Previous Employment & Experience": Briefcase,
+  "Subjects Taught": BookOpen,
+  "Laboratories Handled": Award,
+  "Certifications": FileText,
 };
 
 const FacultyProfilePage = () => {
   const { deptKey, slug } = useParams<{ deptKey: string; slug: string }>();
   const navigate = useNavigate();
   const dept = getDepartmentByKey(deptKey || "");
+  const { getFacultyByDept, getFacultyProfileBySlug, getRawFacultyBySlug, loading: facultyLoading } = useFacultyData();
 
   useEffect(() => { window.scrollTo(0, 0); }, [slug]);
 
-  const { faculty, profile, prev, next, index } = useMemo(() => {
-    if (!dept || !slug) return { faculty: undefined, profile: undefined, prev: undefined, next: undefined, index: -1 };
-    const idx = dept.faculty.findIndex((f) => slugifyFaculty(f.name) === slug);
-    if (idx < 0) return { faculty: undefined, profile: undefined, prev: undefined, next: undefined, index: -1 };
-    const f = dept.faculty[idx];
-    const rich = getFacultyProfile(deptKey || "", f.name);
-    const merged: FacultyProfile = rich
-      ? { ...rich, image: rich.image || f.image, email: rich.email || f.email }
-      : buildFromFacultyMember(f);
+  const { faculty, profile, rawFaculty, prev, next, index } = useMemo(() => {
+    if (!dept || !slug) return { faculty: undefined, profile: undefined, rawFaculty: undefined, prev: undefined, next: undefined, index: -1 };
+
+    // 1. Get live faculty list for department (fallback to static dept.faculty)
+    const liveDeptFaculty = getFacultyByDept(deptKey || "");
+    const effectiveDeptFaculty = liveDeptFaculty.length > 0 ? liveDeptFaculty : dept.faculty;
+
+    // 2. Find faculty member by slug
+    let idx = effectiveDeptFaculty.findIndex((f) => slugifyFaculty(f.name) === slug);
+    let f = idx >= 0 ? effectiveDeptFaculty[idx] : undefined;
+
+    // If not found in current department list, attempt global slug search
+    const raw = getRawFacultyBySlug(slug, deptKey);
+    const liveProfile = getFacultyProfileBySlug(deptKey || "", slug);
+
+    if (!f && liveProfile) {
+      f = {
+        name: liveProfile.name,
+        designation: liveProfile.designation,
+        qualification: "Ph.D.",
+        email: liveProfile.email,
+        image: liveProfile.image,
+      };
+    }
+
+    // 3. Resolve rich profile: live API profile -> static getFacultyProfile -> buildFromFacultyMember
+    const rich = liveProfile || getFacultyProfile(deptKey || "", f?.name || "");
+    const merged: FacultyProfile | undefined = rich
+      ? { ...rich, image: rich.image || f?.image, email: rich.email || f?.email }
+      : f ? buildFromFacultyMember(f) : undefined;
+
     return {
       faculty: f,
       profile: merged,
-      prev: dept.faculty[idx - 1],
-      next: dept.faculty[idx + 1],
+      rawFaculty: raw,
+      prev: idx > 0 ? effectiveDeptFaculty[idx - 1] : undefined,
+      next: idx >= 0 && idx < effectiveDeptFaculty.length - 1 ? effectiveDeptFaculty[idx + 1] : undefined,
       index: idx,
     };
-  }, [dept, slug, deptKey]);
+  }, [dept, slug, deptKey, getFacultyByDept, getFacultyProfileBySlug, getRawFacultyBySlug]);
 
   useEffect(() => {
-    if (deptKey && dept && !faculty) navigate(`/department/${deptKey}/faculty`, { replace: true });
-  }, [deptKey, dept, faculty, navigate]);
+    if (!facultyLoading && deptKey && dept && !faculty) {
+      navigate(`/department/${deptKey}/faculty`, { replace: true });
+    }
+  }, [deptKey, dept, faculty, facultyLoading, navigate]);
 
   if (!dept || !faculty || !profile) {
     return (
@@ -360,36 +393,52 @@ const FacultyProfilePage = () => {
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-accent to-primary blur-xl opacity-50" />
               <div className="relative w-44 h-44 md:w-56 md:h-56 rounded-3xl overflow-hidden border-4 border-white/20 shadow-2xl bg-slate-200">
                 {profile.image ? (
-                  <img src={profile.image} alt={profile.name} className="w-full h-full object-cover" />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-white/40">
-                    <Users className="w-20 h-20" />
-                  </div>
-                )}
+                  <img
+                    src={profile.image}
+                    alt={profile.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLElement).style.display = "none";
+                      const fallback = (e.currentTarget.parentElement?.querySelector(".avatar-fallback") as HTMLElement);
+                      if (fallback) fallback.style.display = "flex";
+                    }}
+                  />
+                ) : null}
+                <div className={`avatar-fallback w-full h-full ${profile.image ? "hidden" : "flex"} items-center justify-center bg-gradient-to-br from-primary/30 to-secondary text-white font-bold text-4xl`}>
+                  {profile.name.split(" ").filter(Boolean).slice(0, 2).map((n) => n[0]).join("")}
+                </div>
               </div>
             </div>
 
             <div className="text-center md:text-left">
-              <p className="inline-block text-[11px] tracking-[0.3em] uppercase font-semibold text-accent mb-3 px-3 py-1 rounded-full bg-white/10 border border-white/15">
-                {dept.name}
-              </p>
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-3">
+                <span className="inline-block text-[11px] tracking-[0.2em] uppercase font-semibold text-accent px-3 py-1 rounded-full bg-white/10 border border-white/15">
+                  {rawFaculty?.department?.name || dept.name}
+                </span>
+                {rawFaculty?.experience ? (
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-300 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/20">
+                    <Clock className="w-3 h-3" /> {rawFaculty.experience} Years Exp.
+                  </span>
+                ) : null}
+              </div>
               <h1 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
                 {profile.name}
               </h1>
-              <p className="text-lg md:text-xl text-accent font-medium mb-3">{profile.designation}</p>
+              <p className="text-lg md:text-xl text-accent font-medium mb-2">{profile.designation}</p>
               {faculty.qualification && (
-                <p className="text-sm text-white/70 mb-4">{faculty.qualification}</p>
+                <p className="text-sm text-white/80 mb-4">{faculty.qualification}</p>
               )}
 
               <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm">
                 {profile.email && (
-                  <a href={`mailto:${profile.email}`} className="inline-flex items-center gap-2 text-white/90 hover:text-accent">
-                    <Mail className="w-4 h-4" /> {profile.email}
+                  <a href={`mailto:${profile.email}`} className="inline-flex items-center gap-2 text-white/90 hover:text-accent bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg border border-white/10 transition-colors">
+                    <Mail className="w-4 h-4 text-accent" /> {profile.email}
                   </a>
                 )}
               </div>
-              <p className="mt-3 text-sm text-white/75">
-                Office Address : NPN204
+              <p className="mt-3 text-xs text-white/70 flex items-center justify-center md:justify-start gap-1.5">
+                <Building className="w-3.5 h-3.5" />
+                {profile.officeAddress || `Department of ${dept.shortName}, MITS Madanapalle`}
               </p>
             </div>
           </motion.div>

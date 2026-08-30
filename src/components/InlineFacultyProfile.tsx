@@ -123,14 +123,22 @@ export default function InlineFacultyProfile({ profile, onBack }: InlineFacultyP
         <div className="h-4 bg-gradient-to-r from-primary via-accent to-secondary" />
         <div className="p-6 md:p-10 flex flex-col md:flex-row gap-8 items-start">
           <div className="shrink-0 relative group">
-            <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden border-4 border-white shadow-lg bg-slate-100">
+            <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden border-4 border-white shadow-lg bg-slate-100 relative">
               {profile.image ? (
-                <img src={profile.image} alt={profile.name} className="w-full h-full object-cover" />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-300">
-                  <Users className="w-16 h-16" />
-                </div>
-              )}
+                <img
+                  src={profile.image}
+                  alt={profile.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLElement).style.display = "none";
+                    const fallback = (e.currentTarget.parentElement?.querySelector(".avatar-fallback") as HTMLElement);
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+              ) : null}
+              <div className={`avatar-fallback w-full h-full ${profile.image ? "hidden" : "flex"} items-center justify-center bg-gradient-to-br from-primary/10 to-slate-200 text-primary font-bold text-3xl`}>
+                {profile.name.split(" ").filter(Boolean).slice(0, 2).map((n) => n[0]).join("")}
+              </div>
             </div>
           </div>
 

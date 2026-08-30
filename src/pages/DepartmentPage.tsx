@@ -37,6 +37,7 @@ import InlineFacultyProfile from "@/components/InlineFacultyProfile";
 import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfiles";
 import { slugifyFaculty } from "@/lib/facultySlug";
 import { useDeptCMSData, type CMSMoU, type CMSAchievement, type CMSPatent, type CMSPublication, type CMSPlacement, type CMSProject } from "@/hooks/useDeptCMSData";
+import { useFacultyData } from "@/hooks/useFacultyData";
 import EventDetailModal from "@/components/EventDetailModal";
 import MouDetailModal from "@/components/MouDetailModal";
 import AchievementDetailModal from "@/components/AchievementDetailModal";
@@ -45,7 +46,7 @@ import PublicationDetailModal from "@/components/PublicationDetailModal";
 import PlacementDetailModal from "@/components/PlacementDetailModal";
 import ProjectDetailModal from "@/components/ProjectDetailModal";
 import {
-  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, ExternalLink
+  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, ExternalLink, Search, Filter, Sparkles, RefreshCw
 } from "lucide-react";
 
 const sidebarItems = [
@@ -70,6 +71,8 @@ const DepartmentPage = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProfile, setSelectedProfile] = useState<FacultyProfile | null>(null);
+  const [facultySearch, setFacultySearch] = useState("");
+  const [designationFilter, setDesignationFilter] = useState("all");
   const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
   const [selectedMou, setSelectedMou] = useState<CMSMoU | null>(null);
   const [selectedAchievement, setSelectedAchievement] = useState<CMSAchievement | null>(null);
@@ -79,6 +82,7 @@ const DepartmentPage = () => {
   const [selectedProject, setSelectedProject] = useState<CMSProject | null>(null);
   const dept = getDepartmentByKey(deptKey || "");
   const { data: cms, loading: cmsLoading } = useDeptCMSData(deptKey || "");
+  const { getFacultyByDept, getFacultyProfileBySlug, loading: facultyLoading, refresh: refreshFaculty } = useFacultyData();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -105,13 +109,13 @@ const DepartmentPage = () => {
     const params = new URLSearchParams(location.search);
     const facultyName = params.get('faculty');
     if (facultyName && deptKey) {
-      const profile = getFacultyProfile(deptKey, facultyName);
+      const profile = getFacultyProfileBySlug(deptKey, slugifyFaculty(facultyName)) || getFacultyProfile(deptKey, facultyName);
       if (profile) {
         setActiveSection('faculty');
         setSelectedProfile(profile);
       }
     }
-  }, [location.pathname, location.hash, location.search, deptKey, dept, navigate]);
+  }, [location.pathname, location.hash, location.search, deptKey, dept, navigate, getFacultyProfileBySlug]);
 
   const handleSectionChange = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -162,16 +166,44 @@ const DepartmentPage = () => {
     "Dr. Renjith Bhaskaran": "Department of Chemistry",
   };
 
+  const liveFaculty = getFacultyByDept(deptKey || "");
+  const effectiveFaculty = liveFaculty.length > 0 ? liveFaculty : dept.faculty;
+
+  const filteredFaculty = effectiveFaculty.filter((f) => {
+    const q = facultySearch.toLowerCase().trim();
+    const matchesSearch =
+      !q ||
+      f.name.toLowerCase().includes(q) ||
+      f.designation.toLowerCase().includes(q) ||
+      f.qualification.toLowerCase().includes(q) ||
+      (f.email && f.email.toLowerCase().includes(q)) ||
+      (f.profile?.researchAreas && f.profile.researchAreas.toLowerCase().includes(q));
+
+    const des = f.designation.toLowerCase();
+    let matchesDesignation = true;
+    if (designationFilter === "professor") {
+      matchesDesignation = des.includes("professor") && !des.includes("assistant") && !des.includes("associate");
+    } else if (designationFilter === "associate") {
+      matchesDesignation = des.includes("associate professor");
+    } else if (designationFilter === "assistant") {
+      matchesDesignation = des.includes("assistant professor");
+    } else if (designationFilter === "hod") {
+      matchesDesignation = des.includes("hod") || des.includes("head");
+    }
+
+    return matchesSearch && matchesDesignation;
+  });
+
   const groupedBshFaculty =
     deptKey === "bsh"
-      ? dept.faculty.reduce((acc, member) => {
-          const group = member.subDepartment || bshFacultyGroupByName[member.name] || "Other";
+      ? filteredFaculty.reduce((acc, member) => {
+          const group = member.subDepartment || bshFacultyGroupByName[member.name] || "Department of Basic Sciences";
           if (!acc[group]) {
             acc[group] = [];
           }
           acc[group].push(member);
           return acc;
-        }, {} as Record<string, typeof dept.faculty>)
+        }, {} as Record<string, typeof filteredFaculty>)
       : null;
 
   return (
@@ -430,19 +462,112 @@ const DepartmentPage = () => {
                   />
                 ) : (
                   <>
-                    <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>People / Faculty</h2>
-                    {(deptKey === "bsh" && groupedBshFaculty) ? (
-                      <div className="space-y-8">
-                        {[...bshGroupOrder, "Other"].map((groupTitle) => {
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-border/60">
+                      <div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-secondary flex items-center gap-3" style={{ fontFamily: "var(--font-display)" }}>
+                          People / Faculty
+                          <span className="text-xs md:text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
+                            {filteredFaculty.length} {filteredFaculty.length === 1 ? "Member" : "Members"}
+                          </span>
+                        </h2>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          Distinguished faculty and researchers in the Department of {dept.shortName}
+                        </p>
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => refreshFaculty()}
+                          disabled={facultyLoading}
+                          title="Refresh faculty list from database"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-lg transition-colors disabled:opacity-50"
+                        >
+                          <RefreshCw className={`w-3.5 h-3.5 ${facultyLoading ? "animate-spin text-primary" : ""}`} />
+                          <span className="hidden sm:inline">Sync Data</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Search & Filter Toolbar */}
+                    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-4 mb-8 space-y-3">
+                      <div className="relative">
+                        <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                        <input
+                          type="text"
+                          value={facultySearch}
+                          onChange={(e) => setFacultySearch(e.target.value)}
+                          placeholder="Search faculty by name, designation, specialization, email..."
+                          className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                        />
+                        {facultySearch && (
+                          <button
+                            onClick={() => setFacultySearch("")}
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-400 hover:text-slate-600 bg-slate-100 hover:bg-slate-200 px-2 py-1 rounded"
+                          >
+                            Clear
+                          </button>
+                        )}
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-2 pt-1">
+                        <span className="text-xs font-semibold text-slate-500 flex items-center gap-1 mr-1">
+                          <Filter className="w-3 h-3" /> Filter:
+                        </span>
+                        {[
+                          { id: "all", label: "All" },
+                          { id: "hod", label: "HOD / Leadership" },
+                          { id: "professor", label: "Professors" },
+                          { id: "associate", label: "Associate Prof." },
+                          { id: "assistant", label: "Assistant Prof." },
+                        ].map((chip) => (
+                          <button
+                            key={chip.id}
+                            onClick={() => setDesignationFilter(chip.id)}
+                            className={`text-xs px-3 py-1.5 rounded-full font-medium transition-all ${
+                              designationFilter === chip.id
+                                ? "bg-primary text-white shadow-sm"
+                                : "bg-white text-slate-600 border border-slate-200 hover:border-primary/40 hover:text-primary"
+                            }`}
+                          >
+                            {chip.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {filteredFaculty.length === 0 ? (
+                      <div className="text-center py-16 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
+                        <Users className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                        <h4 className="font-bold text-slate-700 text-lg">No Faculty Members Found</h4>
+                        <p className="text-sm text-slate-500 mt-1 max-w-md mx-auto">
+                          No profiles matched your search term "{facultySearch}". Try searching for a different name, designation, or reset your filters.
+                        </p>
+                        <button
+                          onClick={() => { setFacultySearch(""); setDesignationFilter("all"); }}
+                          className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-primary bg-primary/10 hover:bg-primary hover:text-white px-4 py-2 rounded-lg transition-colors"
+                        >
+                          Reset Filters
+                        </button>
+                      </div>
+                    ) : (deptKey === "bsh" && groupedBshFaculty) ? (
+                      <div className="space-y-10">
+                        {[...bshGroupOrder, "Department of Basic Sciences", "Other"].map((groupTitle) => {
                           const members = groupedBshFaculty[groupTitle] || [];
                           if (members.length === 0) {
                             return null;
                           }
                           return (
-                            <section key={groupTitle}>
-                              <h3 className="text-xl md:text-2xl font-bold text-secondary mb-4 text-center" style={{ fontFamily: "var(--font-display)" }}>
-                                {groupTitle}
-                              </h3>
+                            <section key={groupTitle} className="bg-slate-50/50 p-6 rounded-2xl border border-slate-200/60">
+                              <div className="flex items-center justify-between gap-4 mb-6 pb-3 border-b border-slate-200">
+                                <h3 className="text-xl md:text-2xl font-bold text-secondary flex items-center gap-2.5" style={{ fontFamily: "var(--font-display)" }}>
+                                  <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+                                  {groupTitle}
+                                </h3>
+                                <span className="text-xs font-semibold text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
+                                  {members.length} {members.length === 1 ? "Faculty" : "Faculties"}
+                                </span>
+                              </div>
+
                               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                                 {members.map((f, i) => (
                                   <Link
@@ -450,14 +575,24 @@ const DepartmentPage = () => {
                                     to={`/department/${deptKey}/faculty/${slugifyFaculty(f.name)}`}
                                     className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 flex flex-col items-center text-center cursor-pointer no-underline"
                                   >
-                                    <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
+                                    <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm relative">
                                       {f.image ? (
-                                        <img src={f.image} alt={f.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                      ) : (
-                                        <Users className="w-8 h-8 text-slate-300" />
-                                      )}
+                                        <img
+                                          src={f.image}
+                                          alt={f.name}
+                                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                          onError={(e) => {
+                                            (e.currentTarget as HTMLElement).style.display = "none";
+                                            const fallback = (e.currentTarget.parentElement?.querySelector(".avatar-fallback") as HTMLElement);
+                                            if (fallback) fallback.style.display = "flex";
+                                          }}
+                                        />
+                                      ) : null}
+                                      <div className={`avatar-fallback w-full h-full ${f.image ? "hidden" : "flex"} items-center justify-center bg-gradient-to-br from-primary/10 to-slate-100 text-primary font-bold text-2xl`}>
+                                        {f.name.split(" ").filter(Boolean).slice(0, 2).map((n) => n[0]).join("")}
+                                      </div>
                                     </div>
-                                    <h4 className="font-extrabold text-secondary mb-1" style={{ fontFamily: "var(--font-display)" }}>{f.name}</h4>
+                                    <h4 className="font-extrabold text-secondary mb-1 line-clamp-1" style={{ fontFamily: "var(--font-display)" }}>{f.name}</h4>
                                     <p className="text-[13px] text-primary font-semibold mb-0.5">{f.designation}</p>
                                     <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{f.qualification}</p>
                                     <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">
@@ -474,20 +609,30 @@ const DepartmentPage = () => {
                       </div>
                     ) : (
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {dept.faculty.map((f, i) => (
+                        {filteredFaculty.map((f, i) => (
                           <Link
                             key={i}
                             to={`/department/${deptKey}/faculty/${slugifyFaculty(f.name)}`}
                             className="group relative bg-white border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 flex flex-col items-center text-center cursor-pointer no-underline"
                           >
-                            <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm">
+                            <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary/20 transition-colors shadow-sm relative">
                               {f.image ? (
-                                <img src={f.image} alt={f.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                              ) : (
-                                <Users className="w-8 h-8 text-slate-300" />
-                              )}
+                                <img
+                                  src={f.image}
+                                  alt={f.name}
+                                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                  onError={(e) => {
+                                    (e.currentTarget as HTMLElement).style.display = "none";
+                                    const fallback = (e.currentTarget.parentElement?.querySelector(".avatar-fallback") as HTMLElement);
+                                    if (fallback) fallback.style.display = "flex";
+                                  }}
+                                />
+                              ) : null}
+                              <div className={`avatar-fallback w-full h-full ${f.image ? "hidden" : "flex"} items-center justify-center bg-gradient-to-br from-primary/10 to-slate-100 text-primary font-bold text-2xl`}>
+                                {f.name.split(" ").filter(Boolean).slice(0, 2).map((n) => n[0]).join("")}
+                              </div>
                             </div>
-                            <h4 className="font-extrabold text-secondary mb-1" style={{ fontFamily: "var(--font-display)" }}>{f.name}</h4>
+                            <h4 className="font-extrabold text-secondary mb-1 line-clamp-1" style={{ fontFamily: "var(--font-display)" }}>{f.name}</h4>
                             <p className="text-[13px] text-primary font-semibold mb-0.5">{f.designation}</p>
                             <p className="text-[11px] text-slate-500 mb-3 uppercase tracking-wider">{f.qualification}</p>
                             <div className="mt-auto pt-4 w-full flex justify-center border-t border-slate-50">

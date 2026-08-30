@@ -139,6 +139,55 @@ function cmsProxyPlugin() {
   };
 }
 
+function facultyProxyPlugin() {
+  return {
+    name: "faculty-proxy",
+    configureServer(server: import("vite").ViteDevServer) {
+      server.middlewares.use((req, res, next) => {
+        if (!req.url?.startsWith("/faculty-api")) return next();
+        const urlPath = "/mitsfaculty/api" + req.url.slice("/faculty-api".length);
+        const headers: Record<string, string> = {
+          "User-Agent": "Mozilla/5.0 (compatible; MITSWeb/1.0)",
+          "Accept": "*/*",
+          "x-api-key": "mits_faculty_public_api_key_2026",
+        };
+
+        const r = https.request(
+          {
+            hostname: "engageai.mits.ac.in",
+            path: urlPath,
+            method: "GET",
+            headers,
+            rejectUnauthorized: false,
+          },
+          (resp) => {
+            const chunks: Buffer[] = [];
+            resp.on("data", (chunk) => {
+              chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+            });
+            resp.on("end", () => {
+              const contentType = resp.headers["content-type"] || (urlPath.includes("/uploads/") ? "image/jpeg" : "application/json");
+              res.setHeader("Content-Type", contentType);
+              res.setHeader("Access-Control-Allow-Origin", "*");
+              res.statusCode = resp.statusCode || 200;
+              res.end(Buffer.concat(chunks));
+            });
+          }
+        );
+
+        r.on("error", (err) => {
+          console.error("[faculty-proxy] Error:", err.message);
+          res.statusCode = 502;
+          res.setHeader("Content-Type", "application/json");
+          res.setHeader("Access-Control-Allow-Origin", "*");
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        });
+        r.end();
+      });
+    },
+  };
+}
+
 export default defineConfig(({ mode }) => ({
   base: "/university/",
   server: {
@@ -149,6 +198,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     cmsProxyPlugin(),
+    facultyProxyPlugin(),
     mode === "development" && componentTagger(),
     visualizer({
       filename: "dist/stats.html",
