@@ -20,11 +20,10 @@
   RewriteEngine On
   RewriteBase /university/
 
-  # Skip real files, directories, and manifest
+  # Skip real files and manifest — but NOT directories (BrowserRouter routes look like dirs)
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !\.webmanifest$
 
-  # Rewrite everything else to index.html
+  # Rewrite everything else (including directory-like routes) to index.html
   RewriteRule ^ index.html [L]
 </IfModule>
