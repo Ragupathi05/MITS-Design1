@@ -1,7 +1,4 @@
-// Examination portal data — sourced from official MITS pages:
-//   https://mits.ac.in/university-exam  (current Deemed-to-be-University portal)
-//   https://mits.ac.in/ugc-autonomous-exam-portal  (UGC-Autonomous archive)
-//   https://mits.ac.in/results
+// Examination portal data — sourced directly from official MITS portal: https://mits.ac.in/university-exam
 
 export type ExamLink = {
   no?: number;
@@ -18,125 +15,780 @@ export type ExamGroup = {
 
 const pdf = (no: number, title: string, href: string): ExamLink => ({ no, title, href, kind: "pdf" });
 
-// -------------------- UG PROGRAMMES (Deemed University, R25) --------------------
+// -------------------- UG PROGRAMMES (Deemed University) --------------------
 export const ugNotifications: ExamLink[] = [
-  pdf(5, "Notification for B.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2026", "https://mits.ac.in/public/uploads/files/Notification%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20Supplementary%20End%20Semester%20Examinations%20June%202026.pdf"),
-  pdf(4, "Notification for B.Tech I Year II Semester (R25) Regular End Semester Examinations June 2026", "https://mits.ac.in/public/uploads/files/Notification%20for%20B.Tech%20I%20Year%20II%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20June%202026.pdf"),
-  pdf(3, "Recounting Notification for B.Tech I Year I Semester (R25) Regular End Exams January 2026", "https://mits.ac.in/public/uploads/files/Recounting%20Notification%20for%20B.Tech%20I%20year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026.pdf"),
-  pdf(2, "Re-Evaluation Notification for B.Tech I Year I Semester (R25) Regular End Exams January 2026", "https://mits.ac.in/public/uploads/files/Re-Evaluation%20Notification%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026.pdf"),
-  pdf(1, "Notification for B.Tech I Year I Semester (R25) Regular End Semester Exams January 2026", "https://mits.ac.in/public/uploads/files/Notification%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026.pdf"),
+  {
+    "no": 10,
+    "title": "Re-Evaluation Notification for B.Tech I Year II Semester (R25) Regular, B.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-Evaluation Notification for B.Tech I-II(R25) Regular, B.Tech I-I(R25) Supplementary End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 9,
+    "title": "Re-Counting Notification for B.Tech I Year II Semester (R25) Regular and B.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-Counting Notification for B.Tech I-II(R25) Regular and B.Tech I-I(R25) Supplementary End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 8,
+    "title": "Re-evaluation Notification for B.Tech I Year II Semester Regular & I Semester Supplementary (R25) End Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-evaluation Notification for B.Tech I Year II Semester Regular & I Semester Supplementary (R25) End Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 7,
+    "title": "Re-counting Notification for B.Tech I Year II Semester Regular & I Semester Supplementary (R25) End Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-counting Notification for B.Tech I Year II Semester Regular & I Semester Supplementary (R25) End Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 6,
+    "title": "Notification for B.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for B.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 5,
+    "title": "Notification for B.Tech I Year II Semester (R25) Regular End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for B.Tech I Year II Semester (R25) Regular End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 4,
+    "title": "Recounting Notification for B.Tech I Year I Semester (R25) Regular End Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Recounting Notification for B.Tech I year I Semester (R25) Regular End Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "Re-Evaluation Notification for B.Tech I Year I Semester (R25) Regular End Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-Evaluation Notification for B.Tech I Year I Semester (R25) Regular End Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "Notification for B.Tech I year I Semester (R25) Regular End Semester Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for B.Tech I Year I Semester (R25) Regular End Semester Examinations January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "Date Extension - Last Chance Notification for B.Tech I,II,III,IV Year I & II Semesters End Exams September 2025",
+    "href": "https://mits.ac.in/public/uploads/ugc/Last Chance Notification for B.Tech I,II,III,IV Year I &amp; II Semesters End Exams September 2025.pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const ugCirculars: ExamLink[] = [
-  pdf(1, "Re Evaluation Results for B.Tech I Year I Semester (R25) Regular End Exams January 2026", "https://mits.ac.in/public/uploads/ugc/Re%20Evaluation%20Results%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026.pdf"),
+  {
+    "no": 4,
+    "title": "Re-Evaluation Results for B.Tech I Year II Semester (R25) Regular & I Semester Supplementary End Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Re-evaluation Results for -B.Tech I Year II Semester (R25) Regular & I Semester Supplementary End Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "Recounting Results for B.Tech I Year II Semester (R25) Regular End Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Recounting Results for -B.Tech I Year II Semester (R25) Regular End Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "Results Announcement Ciruclar for B.Tech I Year II Semester Regular & I Semester (R25) Supplementary, MBA, MCA I Year I Semester (R25) Supplementary Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Results Announcement Ciruclar for -B.Tech I Year II Semester Regular & I Semester (R25) Supplementary ,MBA,MCA I Year I Semester (R25) Supplementary Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "Re-Evaluation Results for B.Tech I Year I Semester (R25) Regular End Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Re Evaluation Results for B.Tech I Year I Semester (R25) Regular End Exams January 2026.pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const ugMidTermTimetables: ExamLink[] = [
-  pdf(12, "Time Table for B.Tech I Year II Semester (R25) Engineering Graphics II Mid Exams June 2026", "https://mits.ac.in/public/uploads/exam/Engineering%20Graphics%20Mid%20Time%20Table%20for%20B.Tech%20I%20year%20II%20Semester%20(R25)%20Exams%20June%202026.pdf"),
-  pdf(11, "Model Lab Time Table for B.Tech I Year II Semester (R25) Regular Exams June 2026 (Physics Stream)", "https://mits.ac.in/public/uploads/exam/Model%20Lab%20Time%20Table%20for%20B.Tech%20I%20Year%20II%20Semester%20(R25)%20Regular%20Exams%20June%202026%20(Physics%20Stream).pdf"),
-  pdf(10, "Model Lab Time Table for B.Tech I Year II Semester (R25) Regular Exams June 2026 (Chemistry Stream)", "https://mits.ac.in/public/uploads/exam/Model%20Lab%20Time%20Table%20for%20B.Tech%20I%20Year%20II%20Semester%20(R25)%20Regular%20Exams%20June%202026%20(Chemistry%20Stream).pdf"),
-  pdf(9, "Time Table for B.Tech I Year II Semester (R25) II Mid Exams June 2026", "https://mits.ac.in/public/uploads/ugc/Mid%20Exam%20Time%20Table%20for%20B.Tech%20I%20Year%20II%20Semester%20(R25)%20Exams%20June%202026-1.pdf"),
-  pdf(8, "Time Table for Engineering Graphics Time Table for B.Tech I Year II Semester (R25) I Mid Exams April 2026", "https://mits.ac.in/public/uploads/ugc/Engineering%20Graphics%20Time%20Table%20for%20B.Tech%20I%20Year%20II%20Semester%20(R25)%20I%20Mid%20Exams%20April%202026.pdf"),
-  pdf(7, "Time Table for B.Tech I year II Semester (R25) I Mid Exams April 2026", "https://mits.ac.in/public/uploads/ugc/Time%20Table%20for%20B.Tech%20I%20Year%20II%20Semester%20(R25)%20I%20Mid%20Exams%20April%202026.pdf"),
-  pdf(6, "Time Table for B.Tech I Year I Semester (R25) II Mid Exams January 2026", "https://mits.ac.in/public/uploads/ugc/Time%20Table%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20II%20Mid%20Exams%20January%202026.pdf"),
-  pdf(5, "Model Lab Time Table for B.Tech I year I Semester (R25) Regular Exams December / January 2025-26 (Physics Stream)", "https://mits.ac.in/public/uploads/ugc/Model%20Lab%20Time%20Table%20for%20B.Tech%20I%20year%20I%20Semester%20(R25)%20Regular%20Exams%20Dec-Jan%202025-26%20(Physics%20Stream).pdf"),
-  pdf(4, "Model Lab Time Table for B.Tech I year I Semester (R25) Regular Exams December / January 2025-26 (Chemistry Stream)", "https://mits.ac.in/public/uploads/ugc/Model%20Lab%20Time%20Table%20for%20B.Tech%20I%20year%20I%20Semester%20(R25)%20Regular%20Exams%20Dec-Jan%202025-26%20(Chemistry%20Stream).pdf"),
-  pdf(3, "Time Table for Engineering Graphics Mid Time Table for B.Tech I Year I Semester (R25) II Mid Exams December / January 2026", "https://mits.ac.in/public/uploads/ugc/Engineering%20Graphics%20Time%20Table%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20II%20Mid%20Exams%20December-January-2025-2026.pdf"),
-  pdf(2, "Engineering Graphics Mid Time Table for B.Tech I Year I Semester (R25) I Mid Exams November 2025", "https://mits.ac.in/public/uploads/ugc/Engineering%20Graphics%20Mid%20Time%20Table%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20November%202025.pdf"),
-  pdf(1, "Time Table for B.Tech I Year I Semester (R25) I Mid Term Exams November 2025", "https://mits.ac.in/public/uploads/ugc/Time%20Table%20for-B.Tech%20I%20Year%20I%20Semester%20(R25)%20I%20Mid%20Term%20Exams%20November%202025.pdf"),
+  {
+    "no": 16,
+    "title": "B.Tech II Year I Semester (R25) I Mid Exams September 2026",
+    "href": "https://mits.ac.in/public/uploads/exam/Time Table for-B.Tech. II Year I Semester (R25) - I Mid Term Test - September 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 15,
+    "title": "B.Tech I Year II Semester (R25) I Mid Exams June 2026 (NCC Students only)",
+    "href": "https://mits.ac.in/public/uploads/exam/B.Tech I Year II Semester (R25) I Mid Exams June 2025 (NCC Students only).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 14,
+    "title": "B.Tech I Year II Semester (R25) II Mid Exams June 2026 (NCC Students only)",
+    "href": "https://mits.ac.in/public/uploads/exam/B.Tech I Year II Semester (R25) II Mid Exams June 2026 (NCC Students only).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 13,
+    "title": "Time Table for B.Tech I Year II Semester (R25) Engineering Graphics II Mid Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/exam/Engineering Graphics Mid Time Table for B.Tech I year II Semester (R25) Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 12,
+    "title": "Model Lab Time Table for B.Tech I Year II Semester (R25) Regular Exams June 2026 (Physics Stream)",
+    "href": "https://mits.ac.in/public/uploads/exam/Model Lab Time Table for B.Tech I Year II Semester (R25) Regular Exams June 2026 (Physics Stream).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 11,
+    "title": "Model Lab Time Table for B.Tech I Year II Semester (R25) Regular Exams June 2026 (Chemistry Stream)",
+    "href": "https://mits.ac.in/public/uploads/exam/Model Lab Time Table for B.Tech I Year II Semester (R25) Regular Exams June 2026 (Chemistry Stream).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 10,
+    "title": "Time Table for B.Tech I Year II Semester (R25) II Mid Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Mid Exam Time Table for B.Tech I Year II Semester (R25) Exams June 2026-1.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 9,
+    "title": "Time Table for Engineering Graphics Time Table for B.Tech I Year II Semester (R25) I Mid Exams April 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Engineering Graphics Time Table for B.Tech I Year II Semester (R25) I Mid Exams April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 8,
+    "title": "Time Table for B.Tech I year II Semester (R25) I Mid Exams April 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Time Table for B.Tech I Year II Semester (R25) I Mid Exams April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 7,
+    "title": "Time Table for B.Tech I Year I Semester (R25) II Mid Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Time Table for B.Tech I Year I Semester (R25) II Mid Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 6,
+    "title": "Model Lab Time Table for B.Tech I year I Semester (R25) Regular Exams December / January 2025-26 (Physics Stream)",
+    "href": "https://mits.ac.in/public/uploads/ugc/Model Lab Time Table for B.Tech I year I Semester (R25) Regular Exams Dec-Jan 2025-26 (Physics Stream).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 5,
+    "title": "Model Lab Time Table for B.Tech I year I Semester (R25) Regular Exams December / January 2025-26 (Chemistry Stream)",
+    "href": "https://mits.ac.in/public/uploads/ugc/Model Lab Time Table for B.Tech I year I Semester (R25) Regular Exams Dec-Jan 2025-26 (Chemistry Stream).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 4,
+    "title": "Time Table for Engineering Graphics Mid Time Table for B.Tech I Year I Semester (R25) II Mid Exams December / January 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Engineering Graphics Time Table for B.Tech I Year I Semester (R25) II Mid Exams December-January-2025-2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "Engineering Graphics Mid Time Table for B.Tech I Year I Semester (R25) I Mid Exams November 2025",
+    "href": "https://mits.ac.in/public/uploads/ugc/Engineering Graphics Mid Time Table for B.Tech I Year I Semester (R25) November 2025.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "Time Table for B.Tech I Year I Semester (R25) I Mid Term Exams November 2025",
+    "href": "https://mits.ac.in/public/uploads/ugc/Time Table for-B.Tech I Year I Semester (R25) I Mid Term Exams November 2025.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "B.Tech II Year II Semester (R14) Supplementary (Last Chance ) End Semester Examinations October 2025",
+    "href": "https://mits.ac.in/public/uploads/ugc/B.Tech II Year II Semester (R14) Supplementary (Last Chance ) End Semester Examinations - October 2025.pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const ugEndSemTimetables: ExamLink[] = [
-  pdf(11, "Model Lab Time Table — B.Tech I Year II Semester (R25) Regular June 2026 (Physics Stream)", "https://mits.ac.in/public/uploads/exam/Model%20Lab%20Time%20Table%20for%20B.Tech%20I%20Year%20II%20Semester%20(R25)%20Regular%20Exams%20June%202026%20(Physics%20Stream).pdf"),
-  pdf(10, "Model Lab Time Table — B.Tech I Year II Semester (R25) Regular June 2026 (Chemistry Stream)", "https://mits.ac.in/public/uploads/exam/Model%20Lab%20Time%20Table%20for%20B.Tech%20I%20Year%20II%20Semester%20(R25)%20Regular%20Exams%20June%202026%20(Chemistry%20Stream).pdf"),
-  pdf(5, "Engineering Graphics Time Table — B.Tech I Year I Semester (R25) Regular End Exams January 2026", "https://mits.ac.in/public/uploads/exam/Engineering%20Graphics%20Time%20Table%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026.pdf"),
-  pdf(4, "Time Table for B.Tech I Year I Semester (R25) Regular End Exams January 2026 (Chemistry Stream)", "https://mits.ac.in/public/uploads/exam/Time%20Table%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026%20(Chemistry%20Stream).pdf"),
-  pdf(3, "Time Table for B.Tech I Year I Semester (R25) Regular End Exams January 2026 (Physics Stream)", "https://mits.ac.in/public/uploads/exam/Time%20Table%20for%20B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026%20(Physics%20Stream).pdf"),
-  pdf(2, "B.Tech I Year I Semester (R25) Regular End Semester Practical Exams January 2026 (Chemistry Stream)", "https://mits.ac.in/public/uploads/exam/B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Practical%20Exams%20January%202026(Chemistry%20Stream).pdf"),
-  pdf(1, "B.Tech I Year I Semester (R25) Regular End Semester Practical Exams January 2026 (Physics Stream)", "https://mits.ac.in/public/uploads/exam/B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Practical%20Exams%20January%202026(Physics%20Stream).pdf"),
+  {
+    "no": 10,
+    "title": "B.Tech I Year I Semester (R25) Supplementary End Practical Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/exam/Time Table for-B.Tech I Year I Semester (R25) Supplementary End Practical Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 9,
+    "title": "Revised Time Table for B.Tech I Year II Semester (R25) Regular End Semester Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/exam/Revised Time Table for B.Tech I Year II Semester (R25) Regular End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 8,
+    "title": "B.Tech I Year I Semester (R25) Supplementary End Semester Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/exam/B.Tech I Year I Semester (R25) Supplementary End Semester Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 7,
+    "title": "B.Tech I Year II Semester (R25) End Semester Practical Regular Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/exam/End Semester Practical Exams for B.Tech I Year II Semester (R25) Regular Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 6,
+    "title": "Engineering Graphics Time Table for B.Tech I Year I Semester (R25) Regular End Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/exam/Engineering Graphics Time Table for B.Tech I Year I Semester (R25) Regular End Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 5,
+    "title": "Time Table for B.Tech I Year I Semester (R25) Regular End Exams January 2026 (Chemistry Stream)",
+    "href": "https://mits.ac.in/public/uploads/exam/Time Table for B.Tech I Year I Semester (R25) Regular End Exams January 2026 (Chemistry Stream).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 4,
+    "title": "Time Table for B.Tech I Year I Semester (R25) Regular End Exams January 2026 (Physics Stream)",
+    "href": "https://mits.ac.in/public/uploads/exam/Time Table for B.Tech I Year I Semester (R25) Regular End Exams January 2026 (Physics Stream).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "B.Tech I Year I Semester (R25) Regular End Semester Practical Exams January 2026 (Chemistry Stream)",
+    "href": "https://mits.ac.in/public/uploads/exam/B.Tech I Year I Semester (R25) Regular End Semester Practical Exams January 2026(Chemistry Stream).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "B.Tech I Year I Semester (R25) Regular End Semester Practical Exams January 2026 (Physics Stream)",
+    "href": "https://mits.ac.in/public/uploads/exam/B.Tech I Year I Semester (R25) Regular End Semester Practical Exams January 2026(Physics Stream).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "UG External Lab Award Format - R23",
+    "href": "https://mits.ac.in/public/uploads/ugc/UG_Ext_Lab_Award Format_R23.xlsx",
+    "kind": "xlsx"
+  }
 ];
 
 export const ugFacultyFormats: ExamLink[] = [
-  { no: 1, title: "End Semester Examinations — Invigilation Duty Substitution Letter", href: "https://mits.ac.in/public/uploads/ugc/ES_Invigilation_Substitute_Letter.docx", kind: "doc" },
+  {
+    "no": 1,
+    "title": "End Semester Examinations — Invigilation Duty Substitution Letter",
+    "href": "https://mits.ac.in/public/uploads/ugc/ES_Invigilation_Substitute_Letter.docx",
+    "kind": "doc"
+  }
 ];
 
 export const ugStudentFormats: ExamLink[] = [
-  pdf(2, "Recounting Application form", "https://mits.ac.in/public/uploads/ugc/Recounting-MITS%20DTBU_Application.pdf"),
-  pdf(1, "Re-Evaluation Applicaton Form", "https://mits.ac.in/public/uploads/ugc/Re%20Valuation-MITS%20DTBU_Application%20Form.pdf"),
+  {
+    "no": 2,
+    "title": "Recounting Application Form",
+    "href": "https://mits.ac.in/public/uploads/ugc/Recounting-MITS%20DTBU_Application.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "Re-Evaluation Application Form",
+    "href": "https://mits.ac.in/public/uploads/ugc/Re%20Valuation-MITS%20DTBU_Application%20Form.pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const ugDownloads: ExamLink[] = [
-  pdf(1, "B.Tech I Year I Semester (R25) Regular End Semester Exams — Question Papers January 2026", "https://mits.ac.in/public/uploads/ugc/Question%20Papers%20for%20-B.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Exams%20January%202026.pdf"),
+  {
+    "no": 4,
+    "title": "B.Tech I Year II Semester (R25) Regular & I Semester Supplementary Exams Questions Papers June 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/B.Tech I year II Semester (R25) Regular & I Semester Supplementary Exams June 2026 -Questions Papers.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "B.Tech I Year I Semester (R25) Regular End Semester Exams Question Papers January 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Question Papers for -B.Tech I Year I Semester (R25) Regular End Semester Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "End Semester Examinations - Invigilation Duty Substitution Letter",
+    "href": "https://mits.ac.in/public/uploads/ugc/ES_Invigilation_Substitute_Letter.docx",
+    "kind": "doc"
+  },
+  {
+    "no": 1,
+    "title": "Circular - Post Pone Exam dates December 2023",
+    "href": "https://mits.ac.in/public/uploads/ugc/Circular - post pone Exam dates.pdf",
+    "kind": "pdf"
+  }
 ];
 
-// -------------------- PG PROGRAMMES --------------------
+// -------------------- PG PROGRAMMES (Deemed University) --------------------
 export const pgNotifications: ExamLink[] = [
-  pdf(11, "Notification for M.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch Only)", "https://mits.ac.in/public/uploads/files/Notification%20for%20M.Tech%20I%20Year%20I%20Semester%20(R25)%20Supplementary%20End%20Semester%20Examinations%20June%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(10, "Notification for M.Tech I Year II Semester (R25) Regular End Semester Examination June 2026 (For 2025 Admitted batch Only)", "https://mits.ac.in/public/uploads/files/Notification%20for%20M.Tech%20I%20Year%20II%20Semester%20(R25)%20Regular%20End%20Semester%20Examination%20June%202026%20(For%202025%20admitted%20batch).pdf"),
-  pdf(9, "Notification for MBA I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch Only)", "https://mits.ac.in/public/uploads/files/Notification%20for%20MBA%20I%20Year%20I%20Semester%20(R25)%20Supplementary%20End%20Semester%20Examinations%20June%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(8, "Notification for MBA I Year II Semester (R25) Regular End Semester Examinations June 2026 (For 2025 Admitted batch Only)", "https://mits.ac.in/public/uploads/files/Notification%20for%20MBA%20I%20Year%20II%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20June%202026%20(For%202025%20Admitted%20batch)%20.pdf"),
-  pdf(7, "Notification for MCA I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch Only)", "https://mits.ac.in/public/uploads/files/Notification%20for%20MCA%20I%20Year%20I%20Semester%20(R25)%20Supplementary%20End%20Semester%20Examinations%20June%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(6, "Notification for MCA I Year II Semester (R25) Regular End Semester Examinations June 2026 (For 2025 Admitted batch Only)", "https://mits.ac.in/public/uploads/files/Notification%20for%20MCA%20I%20Year%20II%20Semester%20(R25)%20Regular%20End%20Semester%20Examination%20June%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(5, "Recounting Notification for M.Tech, MBA, MCA I Year I Semester (R25) Regular End Exams January 2026", "https://mits.ac.in/public/uploads/files/Recounting%20Notification%20for%20M.Tech,MBA,MCA%20I%20year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026.pdf"),
-  pdf(4, "Re-Evaluation Notification for M.Tech, MBA, MCA I Year I Semester (R25) Regular End Exams January 2026", "https://mits.ac.in/public/uploads/files/Re-Evaluation%20Notification%20for%20M.Tech,MBA,MCA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026.pdf"),
-  pdf(3, "M.Tech I Year I Semester (R25) Regular End Semester Examinations January 2026 (2025 Admitted batch)", "https://mits.ac.in/public/uploads/files/Notification%20for%20M.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(2, "MBA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)", "https://mits.ac.in/public/uploads/files/Notification%20for%20MBA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(1, "MCA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)", "https://mits.ac.in/public/uploads/files/Notification%20for%20MCA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
+  {
+    "no": 16,
+    "title": "Re-Counting Notification for MBA, MCA I Year I Semester (R25) Supplementary End Semester Examinations July 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-Counting Notification for MBA, MCA I-I(R25) Supplementary End Semester Examinations July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 15,
+    "title": "Re-Evaluation Notification for MBA, MCA I Year I Semester (R25) Supplementary End Semester Examinations July 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-Evaluation Notification for MBA, MCA I-I(R25) Supplementary End Semester Examinations  July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 14,
+    "title": "Recounting Notification for MBA I-I,I-II,II-I (R22), MBA I-I, I-II, II-I (R24), MCA II-I (R22), MCA I-I, I-II, II-I (R24) Supplementary End Semester Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Recounting Notification for MBA I-I,I-II,II-I(R22), MBA I-I, I-II, II-I(R24), MCA II-I(R22), MCA I-I, I-II, II-I(R24) Supplementary End Semester Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 13,
+    "title": "Re-Evaluation Notification For MBA, MCA, M.Tech I Year II Semester (R25) Regular End Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-Evaluation Notification for MBA, MCA, M.Tech I Year II Semester (R25) Regular and M.Tech I-I(R25) Supplementary End Exams June_July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 12,
+    "title": "Recounting Notification for MBA, MCA, M.Tech I Year II Semester (R25) Regular End Semester Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Recounting Notification for MBA, MCA, M.Tech I Year II Semester (R25) Regular and M.Tech I-I(R25) Supplementary End Semester Exams June_July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 11,
+    "title": "Notification for M.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch Only)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for M.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 10,
+    "title": "Notification for M.Tech I Year II Semester (R25) Regular End Semester Examination June 2026 (For 2025 Admitted batch Only)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for M.Tech I Year II Semester (R25) Regular End Semester Examination June 2026 (For 2025 admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 9,
+    "title": "Notification for MBA I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch Only)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for MBA I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 8,
+    "title": "Notification for MBA I Year II Semester (R25) Regular End Semester Examinations June 2026 (For 2025 Admitted batch Only)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for MBA I Year II Semester (R25) Regular End Semester Examinations June 2026 (For 2025 Admitted batch) .pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 7,
+    "title": "Notification for MCA I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch Only)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for MCA I Year I Semester (R25) Supplementary End Semester Examinations June 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 6,
+    "title": "Notification for MCA I Year II Semester (R25) Regular End Semester Examinations June 2026 (For 2025 Admitted batch Only)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for MCA I Year II Semester (R25) Regular End Semester Examination June 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 5,
+    "title": "Recounting Notification for M.Tech, MBA, MCA I Year I Semester (R25) Regular End Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Recounting Notification for M.Tech,MBA,MCA I year I Semester (R25) Regular End Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 4,
+    "title": "Re-Evaluation Notification for M.Tech, MBA, MCA I Year I Semester (R25) Regular End Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Re-Evaluation Notification for M.Tech,MBA,MCA I Year I Semester (R25) Regular End Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "M.Tech I Year I Semester (R25) Regular End Semester Examinations January 2026 (2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for M.Tech I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "MBA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for MBA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "MCA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/files/Notification for MCA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const pgCirculars: ExamLink[] = [
-  pdf(1, "Re Evaluation Results for M.Tech, MCA I Year I Semester (R25) Regular End Exams January 2026", "https://mits.ac.in/public/uploads/ugc/Re%20Evaluation%20Results%20for%20M.Tech,MCA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Exams%20January%202026.pdf"),
+  {
+    "no": 5,
+    "title": "Re-Evaluation Results for MCA, M.Tech I Year II Semester (R25) Regular End Semester Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Re Evaluation Results for MCA, M.Tech I Year II Semester (R25) Regular End Semester Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 4,
+    "title": "Results Announcement Ciruclar for B.Tech I Year II Semester Regular & I Semester (R25) Supplementary, MBA, MCA I Year I Semester (R25) Supplementary Exams June 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Results Announcement Ciruclar for -B.Tech I Year II Semester Regular & I Semester (R25) Supplementary ,MBA,MCA I Year I Semester (R25) Supplementary Exams June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "Result Announcement Circular for M.Tech, M.B.A & M.C.A. I Year II Semester (R25) Regular End Semester Examinations June 2025 & M.Tech I Year I Semester (R25) Supplementary End Semester Examinations June 2025",
+    "href": "https://mits.ac.in/public/uploads/ugc/Result Announcement Circular June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "Re-Evaluation Results for M.Tech, MCA I Year I Semester (R25) Regular End Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/Re Evaluation Results for M.Tech,MCA I Year I Semester (R25) Regular End Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "Circular-Postponement of B.Tech , MBA End Semester & Mid Term Examinations March 2023",
+    "href": "https://mits.ac.in/public/uploads/files/Circular-Revised dates of Postponement of B.Tech and MBA End Semester &amp; Mid Term Examinations March 2023.pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const pgMidTermTimetables: ExamLink[] = [
-  pdf(21, "MBA I Year II Semester (R25) II Mid Term Test Schedule June 2026", "https://mits.ac.in/public/uploads/files/MBA%20I%20Year%20II%20Semester%20(R25)%20II%20Mid%20Term%20Test%20Schedule%20June%202026.pdf"),
-  pdf(20, "MCA I Year II Semester (R25) II Mid Term Test Schedule June 2026", "https://mits.ac.in/public/uploads/files/MCA%20I%20Year%20II%20Semester%20(R25)%20II%20Mid%20Term%20Test%20Schedule%20June%202026.pdf"),
-  pdf(19, "M. Tech I Year II Semester (R25) II Mid Term Test Schedule June 2026", "https://mits.ac.in/public/uploads/files/M.%20Tech%20I%20Year%20II%20Semester%20(R25)%20II%20Mid%20Term%20Test%20Schedule%20June%202026.pdf"),
-  pdf(18, "MBA I Year II Semester (R25) SEC-II Mid Term Test -I Schedule April 2026", "https://mits.ac.in/public/uploads/files/MBA%20I%20Year%20II%20Semester%20(R25)%20SEC-II%20Mid%20Term%20Test%20-I%20Schedule%20April%202026.pdf"),
-  pdf(17, "MCA I Year II Semester (R25) SEC-II Mid Term Test-I Schedule April 2026", "https://mits.ac.in/public/uploads/files/MCA%20I%20Year%20II%20Semester%20(R25)%20SEC-II%20Mid%20Term%20Test-I%20Schedule%20April%202026.pdf"),
-  pdf(16, "M.Tech (VLSI & ES) I Year II Semester (R25) SEC-II I Mid Exam Schedule April 2026", "https://mits.ac.in/public/uploads/ugc/M.Tech-(VLSI%20&%20ES)%20I%20Year%20II%20Semester%20(R25)%20SEC%20II%20I%20Mid%20Exam%20Schedule%20April%202026.pdf"),
-  pdf(15, "M.Tech (CSE) I Year II Semester (R25) SEC-II I Mid Term Test Schedule April 2026", "https://mits.ac.in/public/uploads/ugc/M.Tech%20(CSE)%20I%20Year%20II%20Semester%20(R25)%20SEC-II,%20Mid%20Term%20Test%20-I%20Schedule%20April%202026.pdf"),
-  pdf(14, "M.Tech (CSE & VES) I Year II Semester (R25) I Mid Term Test Schedule April 2026", "https://mits.ac.in/public/uploads/ugc/M.Tech%20(CSE%20&%20VES)%20I%20Year%20II%20Semester%20(R25)%20I%20Mid%20Term%20Test%20Schedule%20%20April%202026.pdf"),
-  pdf(13, "MBA I Year II Semester (R25) I Mid Term Test Schedule April 2026", "https://mits.ac.in/public/uploads/ugc/MBA%20I%20Year%20II%20Semester%20(R25)%20I%20Mid%20Term%20Test%20Schedule%20%20April%202026.pdf"),
-  pdf(12, "MCA I Year II Semester (R25) I Mid Term Test Schedule April 2026", "https://mits.ac.in/public/uploads/ugc/MCA%20I%20Year%20II%20Semester%20(R25)%20I%20Mid%20Term%20Test%20Schedule%20April%202026.pdf"),
-  pdf(11, "M.Tech I Year I Semester (R25) II Mid Term Test Schedule January 2026 (For 2025 Admitted batch)", "https://mits.ac.in/public/uploads/ugc/M.Tech%20I%20Year%20I%20Semester%20(R25)%20II%20Mid%20Term%20Test%20Schedule%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(10, "MBA I Year I Semester (R25) II Mid Term Test Schedule January 2026 (For 2025 Admitted batch)", "https://mits.ac.in/public/uploads/ugc/MBA%20I%20Year%20I%20Semester%20(R25)%20%20II%20Mid%20Term%20Test%20Schedule%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(9, "MCA I Year I Semester (R25) II Mid Term Test Schedule January 2026 (For 2025 Admitted batch)", "https://mits.ac.in/public/uploads/ugc/MCA%20I%20Year%20I%20Semester%20(R25)%20II%20Mid%20Term%20Test%20Schedule%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(8, "M.Tech I Year I Semester (R25) SEC-I Mid Term Test II Schedule December / January 2025-26", "https://mits.ac.in/public/uploads/ugc/M.Tech%20I-I(R25)%20SEC-I%20Mid%20Term%20Test%20-II%20Schedule%20December_January%20%202025%20-26%20.pdf"),
-  pdf(7, "MBA I Year I Semester (R25) SEC-I Mid Term Test II Schedule January 2026", "https://mits.ac.in/public/uploads/ugc/MBA%20I%20Year%20I%20Semester%20(R25)%20%20SEC-%20I%20%20Mid%20Term%20Test%20-II%20Schedule%20January%202026.pdf"),
-  pdf(6, "MCA I Year I Semester SEC-I Mid Term Test II Schedule December 2025", "https://mits.ac.in/public/uploads/files/MCA%20I%20Year%20I%20Semester%20SEC-I%20Mid%20Term%20Test%20II%20Schedule%20December%202025.pdf"),
-  pdf(5, "M.Tech (CSE, VES) I Year I Semester SEC-I I Mid Term Test Schedule November 2025", "https://mits.ac.in/public/uploads/files/M.Tech%20(CSE,%20VES)%20I%20Year%20I%20Semester%20SEC-I%20Mid-%20I%20Term%20Test%20Schedule%20November%202025.pdf"),
-  pdf(4, "MBA I Year I Semester SEC-I I Mid Term Test Schedule 2025", "https://mits.ac.in/public/uploads/files/MBA%20I%20Year%20I%20Semester%20SEC-I%20Mid-%20I%20Term%20Test%20Schedule%20November%202025.pdf"),
-  pdf(3, "MCA I Year I Semester SEC-I Mid Term Test I Schedule November 2025", "https://mits.ac.in/public/uploads/files/MCA%20I%20Year%20I%20Semester%20SEC-I%20Mid%20Term%20Test%20-I%20Schedule%20November%202025.pdf"),
-  pdf(3, "MCA I Year I Semester I Mid Term Test Schedule November 2025", "https://mits.ac.in/public/uploads/files/MCA%20I%20Year%20I%20Semester%20%20I%20Mid%20Term%20Test%20Schedule%20November%202025.pdf"),
-  pdf(2, "MBA I Year I Semester I Mid Term Test Schedule November 2025", "https://mits.ac.in/public/uploads/files/MBA%20I%20Year%20I%20Semester%20%20I%20Mid%20%20Term%20Test%20Schedule%20November%202025.pdf"),
-  pdf(1, "M.Tech (CSE, VES) I Year I Semester I Mid Term Test Schedule November 2025", "https://mits.ac.in/public/uploads/files/M.Tech%20(CSE,%20VES)%20I%20Year%20I%20Semester%20I%20Mid%20Term%20Test%20Schedule%20November%202025.pdf"),
+  {
+    "no": 25,
+    "title": "M.Tech I Year II Semester (R25) SEC II Mid Term Test-II Schedule June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech I Year II Semester (R25) SEC II Mid Term Test -II Schedule June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 24,
+    "title": "MCA I Year II Semester SEC-II Mid Term Test-II Schedule June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year II Semester SEC-II  Mid Term Test-II Schedule June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 23,
+    "title": "MBA I Year II Semester (R25) SEC II Mid Term Test Schedule June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year II Semester (R25) SEC II Mid Term Test Schedule June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 22,
+    "title": "MBA I Year II Semester (R25) II Mid Term Test Schedule June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year II Semester (R25) II Mid Term Test Schedule June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 21,
+    "title": "MCA I Year II Semester (R25) II Mid Term Test Schedule June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year II Semester (R25) II Mid Term Test Schedule June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 20,
+    "title": "M. Tech I Year II Semester (R25) II Mid Term Test Schedule June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/M. Tech I Year II Semester (R25) II Mid Term Test Schedule June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 19,
+    "title": "MBA I Year II Semester (R25) SEC-II Mid Term Test -I Schedule April 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year II Semester (R25) SEC-II Mid Term Test -I Schedule April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 18,
+    "title": "MCA I Year II Semester (R25) SEC-II Mid Term Test-I Schedule April 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year II Semester (R25) SEC-II Mid Term Test-I Schedule April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 17,
+    "title": "M.Tech (VLSI & ES) I Year II Semester (R25) SEC-II I Mid Exam Schedule April 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/M.Tech-(VLSI & ES) I Year II Semester (R25) SEC II I Mid Exam Schedule April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 16,
+    "title": "M.Tech (CSE) I Year II Semester (R25) SEC-II I Mid Term Test Schedule April 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/M.Tech (CSE) I Year II Semester (R25) SEC-II, Mid Term Test -I Schedule April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 15,
+    "title": "M.Tech (CSE & VES) I Year II Semester (R25) I Mid Term Test Schedule April 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/M.Tech (CSE & VES) I Year II Semester (R25) I Mid Term Test Schedule  April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 14,
+    "title": "MBA I Year II Semester (R25) I Mid Term Test Schedule April 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/MBA I Year II Semester (R25) I Mid Term Test Schedule  April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 13,
+    "title": "MCA I Year II Semester (R25) I Mid Term Test Schedule April 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/MCA I Year II Semester (R25) I Mid Term Test Schedule April 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 12,
+    "title": "M.Tech I Year I Semester (R25) II Mid Term Test Schedule January 2026 (For 2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/ugc/M.Tech I Year I Semester (R25) II Mid Term Test Schedule January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 11,
+    "title": "MBA I Year I Semester (R25) II Mid Term Test Schedule January 2026 (For 2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/ugc/MBA I Year I Semester (R25)  II Mid Term Test Schedule January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 10,
+    "title": "MCA I Year I Semester (R25) II Mid Term Test Schedule January 2026 (For 2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/ugc/MCA I Year I Semester (R25) II Mid Term Test Schedule January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 9,
+    "title": "M.Tech I Year I Semester (R25) SEC-I Mid Term Test II Schedule December / January 2025-26",
+    "href": "https://mits.ac.in/public/uploads/ugc/M.Tech I-I(R25) SEC-I Mid Term Test -II Schedule December_January  2025 -26 .pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 8,
+    "title": "MBA I Year I Semester (R25) SEC-I Mid Term Test II Schedule January 2026",
+    "href": "https://mits.ac.in/public/uploads/ugc/MBA I Year I Semester (R25)  SEC- I  Mid Term Test -II Schedule January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 7,
+    "title": "MCA I Year I Semester SEC-I Mid Term Test II Schedule December 2025",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year I Semester SEC-I Mid Term Test II Schedule December 2025.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 6,
+    "title": "M.Tech (CSE, VES) I Year I Semester SEC-I I Mid Term Test Schedule November 2025",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech (CSE, VES) I Year I Semester SEC-I Mid- I Term Test Schedule November 2025.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 5,
+    "title": "MBA I Year I Semester SEC-I I Mid Term Test Schedule 2025",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year I Semester SEC-I Mid- I Term Test Schedule November 2025.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 4,
+    "title": "MCA I Year I Semester SEC-I Mid Term Test I Schedule November 2025",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year I Semester SEC-I Mid Term Test -I Schedule November 2025.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "MCA I Year I Semester I Mid Term Test Schedule November 2025",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year I Semester  I Mid Term Test Schedule November 2025.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "MBA I Year I Semester I Mid Term Test Schedule November 2025",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year I Semester  I Mid  Term Test Schedule November 2025.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "M.Tech (CSE, VES) I Year I Semester I Mid Term Test Schedule November 2025",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech (CSE, VES) I Year I Semester I Mid Term Test Schedule November 2025.pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const pgEndSemTimetables: ExamLink[] = [
-  pdf(7, "M.Tech I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)", "https://mits.ac.in/public/uploads/files/M.Tech%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(6, "MBA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)", "https://mits.ac.in/public/uploads/files/MBA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(5, "MCA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)", "https://mits.ac.in/public/uploads/files/MCA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026%20(For%202025%20Admitted%20batch).pdf"),
-  pdf(4, "M.Tech (CSE) I Year I Semester (R25) Regular End Semester Practical Exams January 2026", "https://mits.ac.in/public/uploads/files/M.Tech%20(CSE)%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Practical%20Exams%20January%202026.pdf"),
-  pdf(3, "M.Tech (VLSI Design & Embedded Systems ) (R25) Regular End Semester Practical Exams January 2026", "https://mits.ac.in/public/uploads/files/M.Tech%20(VLSI%20Design%20&%20Embedded%20Systems%20)%20(R25)%20Regular%20End%20Semester%20Practical%20Exams%20January%202026.pdf"),
-  pdf(2, "MBA I Year I Semester (R25) Regular End Semester Practical Exams January 2026", "https://mits.ac.in/public/uploads/files/MBA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Practical%20Exams%20January%202026.pdf"),
-  pdf(1, "MCA I Year I Semester (R25) Regular End Semester Practical Exams January 2026", "https://mits.ac.in/public/uploads/files/MCA%20%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Practical%20Exams%20%20January%202026.pdf"),
+  {
+    "no": 20,
+    "title": "MCA I Year I Semester (R25) Supplementary Practical End Semester Examinations Schedule July 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year I Semester (R25) Supplementary Practical End Semester Examinations Schedule July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 19,
+    "title": "MBA I Year I Semester (R25) Supplementary Practical End Semester Examinations Schedule July 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year I Semester (R25) Supplementary Practical End Semester Examinations Schedule July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 18,
+    "title": "Revised Time Table for MCA I Year II Semester (R25) Regular End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Revised Time Table - MCA I Year II Semester (R25) Regular End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 17,
+    "title": "Revised Time Table for MCA I Year I Semester (R25) Supplementary End Semester Examinations July 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Revised Time Table - MCA I Year I Semester (R25) Supplementary End Semester Examinations July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 16,
+    "title": "Revised Time Table for MBA I Year II Semester (R25) Regular End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Revised Time Table - MBA I Year II Semester (R25) Regular End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 15,
+    "title": "Revised Time Table for MBA I Year I Semester (R25) Supplementary End Semester Examinations July 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Revised Time Table - MBA I Year I Semester (R25) Supplementary End Semester Examinations July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 14,
+    "title": "Revised Time Table for M.Tech I Year II Semester (R25) Regular End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Revised Time Table - M.Tech I Year II Semester (R25) Regular End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 13,
+    "title": "Revised Time Table for M.Tech I Year I Semester (R25) Supplementary End Semester Examinations July 2026",
+    "href": "https://mits.ac.in/public/uploads/files/Revised Time Table - M.Tech I Year I Semester (R25) Supplementary End Semester Examinations July 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 12,
+    "title": "M.Tech (CSE) I Year II Semester (R25) Regular Practical End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech (CSE) I Year II Semester (R25) Regular Practical End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 11,
+    "title": "M.Tech (VLSI & Embedded Systems) I Year II Semester (R25) Regular Practical End Semester Examinations June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech (VLSI & Embedded Systems) I Year II Semester (R25) Regular Practical End Semester Examinations June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 10,
+    "title": "MCA I Year II Semester (R25) Regular Practical End Semester Examinations Schedule June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year II Semester (R25) Regular Practical End Semester Examinations Schedule  June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 9,
+    "title": "MBA I Year II Semester (R25) Regular Practical End Semester Examinations Schedule June 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year II Semester (R25) Regular Practical End Semester Examinations Schedule June 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 8,
+    "title": "M.Tech I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 7,
+    "title": "MBA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 6,
+    "title": "MCA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/files/MCA I Year I Semester (R25) Regular End Semester Examinations January 2026 (For 2025 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 5,
+    "title": "M.Tech (CSE) I Year I Semester (R25) Regular End Semester Practical Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech (CSE) I Year I Semester (R25) Regular End Semester Practical Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 4,
+    "title": "M.Tech (VLSI Design & Embedded Systems ) (R25) Regular End Semester Practical Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech (VLSI Design & Embedded Systems ) (R25) Regular End Semester Practical Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "MBA I Year I Semester (R25) Regular End Semester Practical Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MBA I Year I Semester (R25) Regular End Semester Practical Exams January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "MCA I Year I Semester (R25) Regular End Semester Practical Exams January 2026",
+    "href": "https://mits.ac.in/public/uploads/files/MCA  I Year I Semester (R25) Regular End Semester Practical Exams  January 2026.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "UGC-Autonomous Syllabi (R24) For M.Tech (CSE)",
+    "href": "https://mits.ac.in/public/uploads/files/548bf25b37cffe2b78cd6f5202411ba5.pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const pgFacultyFormats: ExamLink[] = [
-  { no: 1, title: "End Semester Examinations - Invigilation Duty Substitution Letter", href: "https://mits.ac.in/public/uploads/ugc/ES_Invigilation_Substitute_Letter.docx", kind: "doc" },
+  {
+    "no": 1,
+    "title": "End Semester Examinations — Invigilation Duty Substitution Letter",
+    "href": "https://mits.ac.in/public/uploads/ugc/ES_Invigilation_Substitute_Letter.docx",
+    "kind": "doc"
+  },
+  {
+    "no": 2,
+    "title": "Invigilation Duty Substitute Letter",
+    "href": "https://mits.ac.in/public/uploads/exam/Invigilation%20Duty_Substitute.docx",
+    "kind": "doc"
+  }
 ];
 
 export const pgStudentFormats: ExamLink[] = [
-  pdf(2, "Recounting Application form", "https://mits.ac.in/public/uploads/ugc/Recounting-MITS%20DTBU_Application.pdf"),
-  pdf(1, "Re-Evaluation Applicaton Form", "https://mits.ac.in/public/uploads/ugc/Re%20Valuation-MITS%20DTBU_Application%20Form.pdf"),
+  {
+    "no": 2,
+    "title": "Recounting Application Form",
+    "href": "https://mits.ac.in/public/uploads/ugc/Recounting-MITS%20DTBU_Application.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "Re-Evaluation Application Form",
+    "href": "https://mits.ac.in/public/uploads/ugc/Re%20Valuation-MITS%20DTBU_Application%20Form.pdf",
+    "kind": "pdf"
+  }
 ];
 
 export const pgDownloads: ExamLink[] = [
-  pdf(1, "MBA Question Papers — MBA I Year I Semester (R25) Regular End Semester Examinations January 2026", "https://mits.ac.in/public/uploads/ugc/MBA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026.pdf"),
-  pdf(1, "MCA Question Papers — MCA I Year I Semester (R25) Regular End Semester Examinations January 2026", "https://mits.ac.in/public/uploads/ugc/MCA%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20%20January%202026.pdf"),
-  pdf(2, "M.Tech Question Papers — M.Tech (CSE) I Year I Semester Regular End Semester Examinations January 2026", "https://mits.ac.in/public/uploads/ugc/M.Tech%20(CSE)%20I%20Year%20I%20Semester%20Regular%20End%20Semester%20Examinations%20January%202026.pdf"),
-  pdf(1, "M.Tech Question Papers — M.Tech (VLSI ES) I Year I Semester (R25) Regular End Semester Examinations January 2026", "https://mits.ac.in/public/uploads/ugc/M.Tech%20(VLSI%20%20ES)%20I%20Year%20I%20Semester%20(R25)%20Regular%20End%20Semester%20Examinations%20January%202026.pdf"),
+  {
+    "no": 2,
+    "title": "End Semester Examinations - Invigilation Duty Substitution Letter",
+    "href": "https://mits.ac.in/public/uploads/ugc/ES_Invigilation_Substitute_Letter.docx",
+    "kind": "doc"
+  },
+  {
+    "no": 1,
+    "title": "Circular - Post Pone Exam dates December 2023",
+    "href": "https://mits.ac.in/public/uploads/ugc/Circular - post pone Exam dates.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 3,
+    "title": "M.Tech (CSE) I Year I Semester (R24) Regular End Semester Examinations March 2025 (For 2024 Admitted batch)",
+    "href": "https://mits.ac.in/public/uploads/files/M.Tech (CSE) I Year I Semester  (R24) Regular End Semester Examinations March 2025 (For 2024 Admitted batch).pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 2,
+    "title": "Office Order - Constitution of Examination Committee",
+    "href": "https://mits.ac.in/public/uploads/ugc/Office Order No - 60 - Constitution of Examination Committee.pdf",
+    "kind": "pdf"
+  },
+  {
+    "no": 1,
+    "title": "email protected]",
+    "href": "https://mits.ac.in/cdn-cgi/l/email-protection",
+    "kind": "link"
+  }
 ];
 
 // -------------------- RESULTS --------------------
@@ -158,15 +810,6 @@ export const apaarAbc: ExamLink[] = [
   pdf(1, "Manual for APAAR / ABC ID Creation", "https://mits.ac.in/assets/pdf/exam/APAAR%20ID%20Creation.pdf"),
   { title: "Academic Bank of Credits (ABC) — Official Portal", href: "https://www.abc.gov.in/", kind: "link" },
   { title: "APAAR ID — Official Portal", href: "https://apaar.education.gov.in/", kind: "link" },
-];
-
-// -------------------- AUTONOMOUS (Archive) — top-30 recent --------------------
-export const autonomousArchive: ExamLink[] = [
-  pdf(436, "B.Tech III Year I Semester (R23) Supplementary End Exams May 2026", "https://mits.ac.in/ugc-autonomous-exam-portal"),
-  pdf(435, "B.Tech III Year II Semester (R23) Regular End Semester Exams May 2026", "https://mits.ac.in/ugc-autonomous-exam-portal"),
-  pdf(428, "B.Tech II Year II Semester (R23) Regular & Supplementary End Semester Exams May 2026", "https://mits.ac.in/ugc-autonomous-exam-portal"),
-  pdf(420, "B.Tech IV Year II Semester (R20) Regular & Supplementary End Semester Exams April 2026", "https://mits.ac.in/ugc-autonomous-exam-portal"),
-  pdf(412, "B.Tech II Year II Semester (R23) Supplementary End Semester Exams January 2026", "https://mits.ac.in/ugc-autonomous-exam-portal"),
 ];
 
 // -------------------- CoE OFFICE --------------------
