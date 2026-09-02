@@ -144,7 +144,7 @@ function facultyProxyPlugin() {
     name: "faculty-proxy",
     configureServer(server: import("vite").ViteDevServer) {
       server.middlewares.use((req, res, next) => {
-        if (!req.url?.startsWith("/faculty-api")) return next();
+        if (!req.url || !req.url.startsWith("/faculty-api")) return next();
         const urlPath = "/mitsfaculty/api" + req.url.slice("/faculty-api".length);
         const headers: Record<string, string> = {
           "User-Agent": "Mozilla/5.0 (compatible; MITSWeb/1.0)",

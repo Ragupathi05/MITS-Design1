@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Building, IndianRupee, TrendingUp, Users, Target, Briefcase, GraduationCap, Star, ChevronRight, ArrowRight, CheckCircle2, Zap, Trophy, Globe, Clock, Heart, Mail, Phone, MapPin, ExternalLink, ChevronDown, Calendar, Video, FileText, Link2, Users2, Building2, Sparkles, TrendingDown, BarChart3, PieChart, Activity } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
