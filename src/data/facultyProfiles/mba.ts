@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const mbaProfiles: Record<string, FacultyProfile> = {
-    "Dr. Bhanu Sree Reddy": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Dr. Bhanu Sree Reddy": {
         "name": "Dr. Bhanu Sree Reddy",
         "email": "drbhanusreereddy@mits.ac.in",
         "image": "https://mits.ac.in/public/uploads/faculty/Bhanu Sree Reddy.JPG",
@@ -2007,4 +2009,5 @@ export const mbaProfiles: Record<string, FacultyProfile> = {
                 }
             ]
     }
+  */
 };

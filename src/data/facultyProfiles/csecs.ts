@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const csecsProfiles: Record<string, FacultyProfile> = {
-    "Dr. Chandra Prakash Gupta": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Dr. Chandra Prakash Gupta": {
         "name": "Dr. Chandra Prakash Gupta",
         "email": "drcpgupta@mits.ac.in",
         "image": "https://mits.ac.in/public/uploads/faculty/Dr. Chandraprakash Guptha.JPG",
@@ -2974,4 +2976,5 @@ export const csecsProfiles: Record<string, FacultyProfile> = {
             }
         ]
     }
+  */
 };

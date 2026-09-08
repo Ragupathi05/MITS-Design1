@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const csedsProfiles: Record<string, FacultyProfile> = {
-    "Dr. K. Nirmala Devi": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Dr. K. Nirmala Devi": {
       name: "Dr. K. Nirmala Devi",
       designation: "Assoc. Professor",
       email: "drnirmaladevikathamuthu@mits.ac.in",
@@ -3155,4 +3157,5 @@ export const csedsProfiles: Record<string, FacultyProfile> = {
         }
       ]
     }
+  */
 };

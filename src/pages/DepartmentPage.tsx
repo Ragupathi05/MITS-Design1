@@ -659,10 +659,15 @@ const DepartmentPage = () => {
                   const studentAch = (!cmsLoading && cms.achievements.length > 0)
                     ? cms.achievements.filter(a => a.type === "student")
                     : dept.detailedAchievements.filter(a => a.type === "student");
+                  if (facultyAch.length === 0 && studentAch.length === 0) {
+                    return <p className="text-muted-foreground text-sm py-8">No achievement records available at this time.</p>;
+                  }
                   return (
                     <div className="space-y-4">
-                      <h3 className="font-semibold text-primary">Faculty Achievements</h3>
-                      <div className="grid md:grid-cols-2 gap-4">
+                      {facultyAch.length > 0 && (
+                        <>
+                          <h3 className="font-semibold text-primary">Faculty Achievements</h3>
+                          <div className="grid md:grid-cols-2 gap-4">
                         {facultyAch.map((a, i) => {
                           const isCMS = 'id' in a && typeof a.id === 'number';
                           return (
@@ -684,9 +689,13 @@ const DepartmentPage = () => {
                             </Card>
                           );
                         })}
-                      </div>
-                      <h3 className="font-semibold text-accent-foreground mt-6">Student Achievements</h3>
-                      <div className="grid md:grid-cols-2 gap-4">
+                          </div>
+                        </>
+                      )}
+                      {studentAch.length > 0 && (
+                        <>
+                          <h3 className="font-semibold text-accent-foreground mt-6">Student Achievements</h3>
+                          <div className="grid md:grid-cols-2 gap-4">
                         {studentAch.map((a, i) => {
                           const isCMS = 'id' in a && typeof a.id === 'number';
                           return (
@@ -703,7 +712,9 @@ const DepartmentPage = () => {
                             </Card>
                           );
                         })}
-                      </div>
+                          </div>
+                        </>
+                      )}
                     </div>
                   );
                 })()}
@@ -869,9 +880,14 @@ const DepartmentPage = () => {
             {activeSection === "events" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Events</h2>
-                {(
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {((!cmsLoading && cms.events.length > 0) ? cms.events : dept.events).map((e, i) => {
+                {(() => {
+                  const allEvents = (!cmsLoading && cms.events.length > 0) ? cms.events : dept.events;
+                  if (allEvents.length === 0) {
+                    return <p className="text-muted-foreground text-sm py-8">No event records available at this time.</p>;
+                  }
+                  return (
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {allEvents.map((e, i) => {
                       const isCMS = 'id' in e && typeof e.id === 'number';
                       return (
                         <Card
@@ -913,16 +929,22 @@ const DepartmentPage = () => {
                       );
                     })}
                   </div>
-                )}
+                  );
+                })()}
               </motion.div>
             )}
 
             {activeSection === "mou" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Memoranda of Understanding (MoU)</h2>
-                {(
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {((!cmsLoading && cms.mous.length > 0) ? cms.mous : dept.mous).map((m, i) => {
+                {(() => {
+                  const allMous = (!cmsLoading && cms.mous.length > 0) ? cms.mous : dept.mous;
+                  if (allMous.length === 0) {
+                    return <p className="text-muted-foreground text-sm py-8">No MoU records available at this time.</p>;
+                  }
+                  return (
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {allMous.map((m, i) => {
                       const isCMS = 'id' in m && typeof m.id === 'number';
                       return (
                         <Card key={i} onClick={() => isCMS && setSelectedMou(m as CMSMoU)}
@@ -953,40 +975,49 @@ const DepartmentPage = () => {
                       );
                     })}
                   </div>
-                )}
-              </motion.div>
-            )}
+                );
+              })()}
+            </motion.div>
+          )}
 
             {activeSection === "placement" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Placement / Internship</h2>
-                {/* Static summary stats always shown from departmentData */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <Card className="text-center bg-gradient-to-br from-primary/5 to-primary/10">
-                    <CardContent className="p-4">
-                      <p className="text-2xl font-bold text-primary">{dept.placement.percentage}</p>
-                      <p className="text-sm text-muted-foreground">Placed</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="text-center bg-gradient-to-br from-accent/10 to-accent/20">
-                    <CardContent className="p-4">
-                      <p className="text-2xl font-bold text-accent-foreground">{dept.placement.avgPackage}</p>
-                      <p className="text-sm text-muted-foreground">Avg Package</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="text-center bg-gradient-to-br from-muted to-muted/50">
-                    <CardContent className="p-4">
-                      <p className="text-2xl font-bold text-secondary">{dept.placement.highestPackage}</p>
-                      <p className="text-sm text-muted-foreground">Highest</p>
-                    </CardContent>
-                  </Card>
-                </div>
-                <h3 className="font-semibold text-secondary mb-3">Top Recruiters</h3>
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {dept.placement.recruiters.map((r, i) => (
-                    <span key={i} className="bg-muted text-muted-foreground text-sm px-3 py-1.5 rounded-full font-medium">{r}</span>
-                  ))}
-                </div>
+                {dept.placement.percentage !== "N/A" && (
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    <Card className="text-center bg-gradient-to-br from-primary/5 to-primary/10">
+                      <CardContent className="p-4">
+                        <p className="text-2xl font-bold text-primary">{dept.placement.percentage}</p>
+                        <p className="text-sm text-muted-foreground">Placed</p>
+                      </CardContent>
+                    </Card>
+                    <Card className="text-center bg-gradient-to-br from-accent/10 to-accent/20">
+                      <CardContent className="p-4">
+                        <p className="text-2xl font-bold text-accent-foreground">{dept.placement.avgPackage}</p>
+                        <p className="text-sm text-muted-foreground">Avg Package</p>
+                      </CardContent>
+                    </Card>
+                    <Card className="text-center bg-gradient-to-br from-muted to-muted/50">
+                      <CardContent className="p-4">
+                        <p className="text-2xl font-bold text-secondary">{dept.placement.highestPackage}</p>
+                        <p className="text-sm text-muted-foreground">Highest</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                )}
+                {dept.placement.recruiters.length > 0 && (
+                  <>
+                    <h3 className="font-semibold text-secondary mb-3">Top Recruiters</h3>
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {dept.placement.recruiters.map((r, i) => (
+                        <span key={i} className="bg-muted text-muted-foreground text-sm px-3 py-1.5 rounded-full font-medium">{r}</span>
+                      ))}
+                    </div>
+                  </>
+                )}
+                {dept.placement.percentage === "N/A" && !cmsLoading && cms.placements.length === 0 && (
+                  <p className="text-muted-foreground text-sm py-8">No placement records available at this time.</p>
+                )}
                 {/* Live placement records from CMS */}
                 {!cmsLoading && cms.placements.length > 0 && (
                   <>
@@ -1034,9 +1065,14 @@ const DepartmentPage = () => {
             {activeSection === "projects" && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Student Projects</h2>
-                {(
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {((!cmsLoading && cms.projects.length > 0) ? cms.projects : dept.studentProjects).map((p, i) => {
+                {(() => {
+                  const allProjects = (!cmsLoading && cms.projects.length > 0) ? cms.projects : dept.studentProjects;
+                  if (allProjects.length === 0) {
+                    return <p className="text-muted-foreground text-sm py-8">No student project records available at this time.</p>;
+                  }
+                  return (
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {allProjects.map((p, i) => {
                       const isCMS = 'id' in p && typeof p.id === 'number';
                       return (
                         <Card key={i} onClick={() => isCMS && setSelectedProject(p as CMSProject)}
@@ -1062,9 +1098,10 @@ const DepartmentPage = () => {
                       );
                     })}
                   </div>
-                )}
-              </motion.div>
-            )}
+                );
+              })()}
+            </motion.div>
+          )}
 
             {activeSection === "subjects" && (
               <motion.div
@@ -1073,7 +1110,10 @@ const DepartmentPage = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2 className="text-2xl font-bold text-secondary mb-6" style={{ fontFamily: "var(--font-display)" }}>Subjects</h2>
-                {["core", "elective", "professional-skill", "optional-training"].map(type => {
+                {dept.subjects.length === 0 ? (
+                  <p className="text-muted-foreground text-sm py-8">No curriculum / syllabus records available at this time.</p>
+                ) : (
+                  ["core", "elective", "professional-skill", "optional-training"].map(type => {
                   const filtered = dept.subjects.filter(s => s.type === type);
                   if (filtered.length === 0) return null;
                   const label = type === "core" ? "Core Subjects" : type === "elective" ? "Elective Subjects" : type === "professional-skill" ? "Professional Skills" : "Optional Training (Industry)";
@@ -1097,7 +1137,7 @@ const DepartmentPage = () => {
                       </div>
                     </div>
                   );
-                })}
+                }))}
               </motion.div>
             )}
           </main>

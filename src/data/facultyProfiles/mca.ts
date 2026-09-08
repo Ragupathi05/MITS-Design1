@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const mcaProfiles: Record<string, FacultyProfile> = {
-    "Dr. S. V. S. Ganga Devi": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Dr. S. V. S. Ganga Devi": {
         "name": "Dr. S. V. S. Ganga Devi",
         "email": "drgangadevisvs@mits.ac.in",
         "image": "https://mits.ac.in/public/uploads/faculty/Dr. S. V. S. Ganga Devi.JPG",
@@ -2813,4 +2815,5 @@ export const mcaProfiles: Record<string, FacultyProfile> = {
                 }
             ]
     }
+  */
 };

@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const ceProfiles: Record<string, FacultyProfile> = {
-    "Dr. Dipankar Roy": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Dr. Dipankar Roy": {
         "name": "Dr. Dipankar Roy",
         "email": "drdipankarroy@mits.ac.in",
         "image": "https://mits.ac.in/public/uploads/faculty/Deepankar Roy.JPG",
@@ -1503,5 +1505,5 @@ export const ceProfiles: Record<string, FacultyProfile> = {
             }
         ]
     }
-
+  */
 };

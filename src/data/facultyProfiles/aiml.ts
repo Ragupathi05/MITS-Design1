@@ -19,7 +19,9 @@
 import type { FacultyProfile } from './index';
 
 export const aimlProfiles: Record<string, FacultyProfile> = {
-  "Mr. Sanath Hegde": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Mr. Sanath Hegde": {
         "name": "Mr. Sanath Hegde",
         "designation": "Professor of Practice",
         "email": "",
@@ -2957,4 +2959,5 @@ export const aimlProfiles: Record<string, FacultyProfile> = {
                 }
             ]
     }
+  */
 };

@@ -1,4 +1,7 @@
 import { departmentsData } from "@/data/departmentData";
+import fallbackFacultyData from "@/data/facultyApiFallback.json";
+import { mapApiDeptToDeptKey } from "@/lib/facultyApi";
+import { slugifyFaculty } from "@/lib/facultySlug";
 import {
   leadershipProfiles,
   deansList,
@@ -556,6 +559,40 @@ function generateDepartmentItems(): SearchItem[] {
       });
     }
   });
+
+  // 7. Dynamic Faculty from live database fallback snapshot
+  if (fallbackFacultyData && Array.isArray((fallbackFacultyData as { data?: any[] }).data)) {
+    (fallbackFacultyData as { data: any[] }).data.forEach((f, idx) => {
+      if (!f.fullName) return;
+      const deptKey = mapApiDeptToDeptKey(f.department?.code, f.department?.name);
+      const facSlug = slugifyFaculty(f.fullName);
+      const deptName = f.department?.name || deptKey.toUpperCase();
+      const qualification = f.phd?.status === "Awarded" || f.phd?.topic ? "Ph.D." : (f.pg?.degree || f.ug?.degree || "Faculty");
+      items.push({
+        id: `fac-api-${f._id || idx}`,
+        title: f.fullName,
+        category: "Faculty & Leadership",
+        description: `${f.designation} (${qualification}) in Department of ${deptName}. ${f.email ? `Email: ${f.email}` : ""}`,
+        href: `/department/${deptKey}/faculty/${facSlug}`,
+        isExternal: false,
+        tags: [
+          f.fullName.toLowerCase(),
+          f.designation.toLowerCase(),
+          deptKey,
+          deptName.toLowerCase(),
+          "faculty",
+          "professor",
+          qualification.toLowerCase(),
+          f.email ? f.email.toLowerCase() : "",
+          ...(f.specialization || []).map((s: string) => s.toLowerCase()),
+        ].filter(Boolean),
+        department: deptKey.toUpperCase(),
+        designation: f.designation,
+        qualification: qualification,
+        metaBadge: deptKey.toUpperCase(),
+      });
+    });
+  }
 
   return items;
 }

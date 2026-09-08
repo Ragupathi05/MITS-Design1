@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const cseProfiles: Record<string, FacultyProfile> = {
-  "Mrs. M. Sri Lakshmi Preethi": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Mrs. M. Sri Lakshmi Preethi": {
         "name": "Mrs. M. Sri Lakshmi Preethi",
         "designation": "Asst. Professor",
         "email": "srilakshmipreethim@mits.ac.in",
@@ -5663,4 +5665,5 @@ export const cseProfiles: Record<string, FacultyProfile> = {
                 }
             ]
     }
+  */
 };

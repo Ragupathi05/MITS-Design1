@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const eceProfiles: Record<string, FacultyProfile> = {
-    "Dr. Rama S Komaragiri": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Dr. Rama S Komaragiri": {
       name: "Dr. Rama S Komaragiri",
       designation: "Professor & Dean-Academics",
       email: "deanacademics@mits.ac.in",
@@ -6016,4 +6018,5 @@ export const eceProfiles: Record<string, FacultyProfile> = {
         }
       ]
     }
+  */
 };

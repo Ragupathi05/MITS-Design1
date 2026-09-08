@@ -166,7 +166,8 @@ export const departmentsData: Record<string, DepartmentData> = {
     courses: ["B.Tech in Computer Science and Engineering", "M.Tech in Computer Science and Engineering", "Ph.D. in Computer Science and Engineering"],
     contactInfo: { email: "csehod@mits.ac.in", phone: "+91-9160020784; 8571-280255; 280706" },
     faculty: [
-      {
+      /*
+{
         name: "Dr. M. Sreedevi",
         designation: "Professor &amp; Head",
         qualification: "Ph.D. (S V University)",
@@ -510,14 +511,17 @@ export const departmentsData: Record<string, DepartmentData> = {
         image: "https://mits.ac.in/public/uploads/faculty/Ms. Gangarapu Vandana.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1117"
       }
+      */
     ],
     detailedAchievements: [
-      { title: "NBA Accreditation received for B.Tech CSE program", description: "Accredited by the National Board of Accreditation (NBA) under AICTE", type: "faculty" },
+      /*
+{ title: "NBA Accreditation received for B.Tech CSE program", description: "Accredited by the National Board of Accreditation (NBA) under AICTE", type: "faculty" },
       { title: "CSE students placed in TCS, Infosys, IBM, Tech Mahindra", description: "Packages ranging from 4.5 LPA to 24 LPA in top MNC companies", type: "student" },
       { title: "200+ Research Publications", description: "Faculty have published in National/International Journals and Conferences", type: "faculty" },
       { title: "12+ Patents Filed", description: "Multiple patents filed in areas of AI, ML, and IoT", type: "faculty" },
       { title: "NPTEL Star Performers", description: "Students consistently achieving Gold and Silver in NPTEL certifications", type: "student" },
       { title: "Hackathon Winners", description: "Students won multiple state and national level hackathons", type: "student" },
+      */
     ],
     facilities: [
       { name: "Programming Lab", description: "Equipped with high-end systems for C, C++, Java, Python programming", equipment: ["60 HP Workstations", "Intel i7 Processors", "16GB RAM each"] },
@@ -527,20 +531,24 @@ export const departmentsData: Record<string, DepartmentData> = {
       { name: "Database Lab", description: "Oracle and MySQL database training infrastructure", equipment: ["Oracle 19c Server", "MySQL clusters", "MongoDB instances"] },
     ],
     patents: [
-      { title: "Smart IoT-based Health Monitoring System", status: "Published", year: "2023" },
+      /*
+{ title: "Smart IoT-based Health Monitoring System", status: "Published", year: "2023" },
       { title: "AI-Driven Crop Disease Detection using Deep Learning", status: "Filed", year: "2023" },
       { title: "Blockchain-Based Secure Voting System", status: "Published", year: "2022" },
       { title: "Intelligent Traffic Management Using Computer Vision", status: "Filed", year: "2024" },
       { title: "Natural Language Processing for Regional Languages", status: "Granted", year: "2022" },
       { title: "Cloud-Based Smart Classroom Management System", status: "Filed", year: "2023" },
+      */
     ],
     publications: [
-      { title: "Deep Learning Approaches for Medical Image Analysis", type: "journal", year: "2024", authors: "Dr. K. Subramanyam et al." },
+      /*
+{ title: "Deep Learning Approaches for Medical Image Analysis", type: "journal", year: "2024", authors: "Dr. K. Subramanyam et al." },
       { title: "Sentiment Analysis of Social Media Using NLP", type: "journal", year: "2023", authors: "Dr. B. Srinivasa Rao et al." },
       { title: "IoT-based Smart Agriculture System", type: "conference", year: "2023", authors: "Dr. M. Sreenivasulu et al." },
       { title: "Cybersecurity Framework for Cloud Computing", type: "journal", year: "2024", authors: "Dr. N. Venkateswara Rao et al." },
       { title: "Machine Learning for Predictive Maintenance", type: "conference", year: "2022", authors: "Dr. S. Nagaprasad et al." },
       { title: "Edge Computing in Healthcare Applications", type: "journal", year: "2023", authors: "Dr. P. Rajesh et al." },
+      */
     ],
     consultancy: [
       { title: "Web Application Development", agency: "Local Industries", amount: "₹3 Lakhs" },
@@ -548,7 +556,8 @@ export const departmentsData: Record<string, DepartmentData> = {
       { title: "Network Infrastructure Setup", agency: "Regional Businesses", amount: "₹2 Lakhs" },
     ],
     events: [
-      { title: "National Level Technical Symposium GMOCS-2K26", date: "2nd April 2026", description: "A One Day National Level Technical Symposium GMOCS-2K26 organized by Department of Computer Science & Engineering." },
+      /*
+{ title: "National Level Technical Symposium GMOCS-2K26", date: "2nd April 2026", description: "A One Day National Level Technical Symposium GMOCS-2K26 organized by Department of Computer Science & Engineering." },
       { title: "Seminar on Engineering the Human–Machine Future", date: "16th March 2026", description: "Seminar on 'Engineering the Human–Machine Future: Converging CPS, AI, and Human Intelligence for Industry 5.0' under AICTE - DPS." },
       { title: "Industrial Visit to National Atmospheric Research Laboratory (NARL)", date: "13th March 2026", description: "Industrial Visit to National Atmospheric Research Laboratory (NARL), Gadanki, Pakala, Andhra Pradesh organized by Department." },
       { title: "AWS Global Certificate Training Programme", date: "4th to 18th March 2026", description: "15 days Skill Development Program on AWS – Amazon Web Services – Global Certificate Training." },
@@ -558,29 +567,38 @@ export const departmentsData: Record<string, DepartmentData> = {
       { title: "One Week International Faculty Development Programme", date: "December 2025", description: "International Faculty Development Programme organized by Department of Computer Science and Engineering." },
       { title: "Expert Talk on Latest Technologies in Computing", date: "October 2025", description: "Expert Talk series on emerging technologies and industry trends organized by Department." },
       { title: "Hackathon Event", date: "September 2025", description: "Annual hackathon event for student innovation and skill development." },
+      */
     ],
     mous: [
-      { name: "Infosys", purpose: "Campus Connect Program & Training", year: "2020" },
+      /*
+{ name: "Infosys", purpose: "Campus Connect Program & Training", year: "2020" },
       { name: "IBM", purpose: "Center of Excellence in AI", year: "2021" },
       { name: "Microsoft", purpose: "Azure Academy Partner", year: "2022" },
       { name: "TCS", purpose: "TCS iON Digital Learning Hub", year: "2019" },
       { name: "Accenture", purpose: "Industry Readiness Training", year: "2021" },
       { name: "Tech Mahindra", purpose: "Skill Development Partnership", year: "2022" },
+      */
     ],
     placement: {
-      percentage: "98%",
+      /*
+percentage: "98%",
       avgPackage: "₹6.5 LPA",
       highestPackage: "₹24 LPA",
       recruiters: ["TCS", "Infosys", "IBM", "Tech Mahindra", "Accenture", "Mindtree", "Wipro", "Cognizant", "HCL", "Capgemini"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
     },
     studentProjects: [
-      { title: "AI-Powered Chatbot for Student Services", students: "Team of 4 - Final Year", description: "NLP-based chatbot for answering student queries about academics and placements" },
+      /*
+{ title: "AI-Powered Chatbot for Student Services", students: "Team of 4 - Final Year", description: "NLP-based chatbot for answering student queries about academics and placements" },
       { title: "Smart Attendance System using Face Recognition", students: "Team of 3 - Final Year", description: "OpenCV and deep learning based automated attendance system" },
       { title: "E-Commerce Platform with Recommendation Engine", students: "Team of 4 - Final Year", description: "Full-stack web application with ML-based product recommendations" },
       { title: "IoT-based Weather Monitoring Station", students: "Team of 3 - Third Year", description: "Arduino and sensor-based real-time weather data collection system" },
+      */
     ],
     subjects: [
-      { name: "Programming for Problem Solving (C)", semester: 1, type: "core" },
+      /*
+{ name: "Programming for Problem Solving (C)", semester: 1, type: "core" },
       { name: "Data Structures", semester: 2, type: "core" },
       { name: "Object Oriented Programming (Java)", semester: 3, type: "core" },
       { name: "Database Management Systems", semester: 3, type: "core" },
@@ -603,6 +621,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       { name: "IBM Full Stack Development", semester: 5, type: "optional-training" },
       { name: "Accenture Developer Program", semester: 6, type: "optional-training" },
       { name: "AWS Cloud Practitioner", semester: 7, type: "optional-training" },
+      */
     ],
     documents: [
       { title: "Faculty List 2024-25", url: "https://mits.ac.in/assets/pdf/cse/CSE%20CAY%202024-25.pdf" },
@@ -657,13 +676,15 @@ export const departmentsData: Record<string, DepartmentData> = {
       phone: "+91-8571-280255; 280706"
     },
     faculty: [
-      {
+      /*
+{
         name: "Dr. Dipankar Roy",
         designation: "Dean, School of Engineering",
         qualification: "Ph.D. (University of Pisa, Italy)",
         image: "https://mits.ac.in/public/uploads/faculty/Deepankar Roy.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/dean-engineering"
       }
+      */
     ],
     detailedAchievements: [],
     facilities: [
@@ -679,14 +700,18 @@ export const departmentsData: Record<string, DepartmentData> = {
     events: [],
     mous: [],
     placement: {
-      percentage: "85%",
+      /*
+percentage: "85%",
       averagePackage: "₹6 LPA",
       highestPackage: "₹10 LPA",
       topRecruiters: ["Cognizant", "TCS", "Accenture", "Wipro"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
     },
     studentProjects: [],
     subjects: [
-      {
+      /*
+{
         code: "20BI101",
         name: "Introduction to Bioinformatics",
         semester: 3,
@@ -698,6 +723,7 @@ export const departmentsData: Record<string, DepartmentData> = {
         semester: 4,
         type: "core"
       }
+      */
     ],
     documents: [
       {
@@ -730,7 +756,8 @@ export const departmentsData: Record<string, DepartmentData> = {
     courses: ["B.Tech in Civil Engineering"],
     contactInfo: { email: "civilhod@mits.ac.in", phone: "+91-9100973371; 8571-280255; 280706" },
     faculty: [
-      { name: "Dr. Dipankar Roy", designation: "Professor & Dean - School of Engineering", qualification: "Ph.D. (University of Pisa, Italy)", image: "https://mits.ac.in/public/uploads/faculty/Deepankar Roy.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1" },
+      /*
+{ name: "Dr. Dipankar Roy", designation: "Professor & Dean - School of Engineering", qualification: "Ph.D. (University of Pisa, Italy)", image: "https://mits.ac.in/public/uploads/faculty/Deepankar Roy.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1" },
       { name: "Dr. Sudheer Kumar Yantrapalli", designation: "Assoc. Professor", qualification: "Ph.D. (NIT, Warangal)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sudheer Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/5" },
       { name: "Dr. Ashok Julaganti", designation: "Sr. Asst. Professor", qualification: "Ph.D. (IIT, Guwahati)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Ashok.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1131" },
       { name: "Dr. Vijayakumar Natesan", designation: "Asst. Professor & Head", qualification: "Ph.D. (IIT, Hyderabad)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Vijayakumar Natesan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/7" },
@@ -738,11 +765,14 @@ export const departmentsData: Record<string, DepartmentData> = {
       { name: "Dr. Imran Kuttagola", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Karnataka)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Imran Kuttagola.JPG", profileUrl: "https://mits.ac.in/facultyprofile/680" },
       { name: "Mrs. Kandukuri Anitha", designation: "Asst. Professor", qualification: "M.Tech., (Ph.D.) (Mohan Babu University)", image: "https://mits.ac.in/public/uploads/faculty/Mrs.Anitha.png", profileUrl: "https://mits.ac.in/facultyprofile/13" },
       { name: "Mr. P. Sabarishkumar", designation: "Asst. Professor", qualification: "M.E. (Institute of Road & Transport Technology, Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. P. Sabarishkumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/517" },
+      */
     ],
     detailedAchievements: [
-      { title: "Civil Faculty Achievements 2024-25", description: "Department maintains year-wise faculty achievement records in official tab.", type: "faculty" },
+      /*
+{ title: "Civil Faculty Achievements 2024-25", description: "Department maintains year-wise faculty achievement records in official tab.", type: "faculty" },
       { title: "Civil Faculty Achievements 2023-24", description: "Faculty achievement updates are published annually.", type: "faculty" },
       { title: "Civil Faculty Achievements 2022-23", description: "Official year-wise achievements are available on department page.", type: "faculty" },
+      */
     ],
     facilities: [
       { name: "Structural Engineering Lab", description: "Testing of concrete, steel, and composite structures", equipment: ["Universal Testing Machine", "Compression Testing Machine"] },
@@ -751,20 +781,25 @@ export const departmentsData: Record<string, DepartmentData> = {
       { name: "Environmental Engineering Lab", description: "Water and wastewater quality testing", equipment: ["BOD incubator", "Turbidity meter", "pH meters"] },
     ],
     patents: [
-      { title: "Eco-friendly Concrete Mix using Industrial Waste", status: "Filed", year: "2023" },
+      /*
+{ title: "Eco-friendly Concrete Mix using Industrial Waste", status: "Filed", year: "2023" },
       { title: "Smart Water Distribution Monitoring System", status: "Published", year: "2022" },
+      */
     ],
     publications: [
-      { title: "Faculty Publications 2024-2025", type: "journal", year: "2024-25" },
+      /*
+{ title: "Faculty Publications 2024-2025", type: "journal", year: "2024-25" },
       { title: "Faculty Publications 2023-2024", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
+      */
     ],
     consultancy: [
       { title: "Soil Testing for Construction Projects", agency: "Local Builders", amount: "₹3 Lakhs" },
       { title: "Structural Design Review", agency: "AP Government", amount: "₹5 Lakhs" },
     ],
     events: [
-      { title: "Alumni Guest Lecture on Higher Education Abroad", date: "3rd February 2024", description: "'The Path of Higher Education Abroad' organized by Department in association with Builders Club." },
+      /*
+{ title: "Alumni Guest Lecture on Higher Education Abroad", date: "3rd February 2024", description: "'The Path of Higher Education Abroad' organized by Department in association with Builders Club." },
       { title: "Quality Control & Management Workshop", date: "2nd February 2024", description: "'Understanding Quality control and Quality Management in Construction Activities' organized by Department." },
       { title: "National Pollution Control Day", date: "2nd December 2023", description: "Organized by Department of Civil Engineering in association with Institution Innovation Council." },
       { title: "World Soil Day Celebration", date: "5th December 2023", description: "Organized by Department in association with ASCE MITS Student Chapter." },
@@ -774,18 +809,29 @@ export const departmentsData: Record<string, DepartmentData> = {
       { title: "Engineers' Day Celebration", date: "15th September 2022", description: "Organized by Department of Civil Engineering commemorating Sir M. Visvesvaraya." },
       { title: "Sustainable Construction Practices Workshop", date: "2023", description: "Workshop on sustainable and green building technologies organized by Department." },
       { title: "BIM Technology Seminar", date: "2023", description: "Building Information Modeling seminar organized for students and faculty." },
+      */
     ],
     mous: [
-      { name: "L&T Construction", purpose: "Industrial Training", year: "2021" },
+      /*
+{ name: "L&T Construction", purpose: "Industrial Training", year: "2021" },
       { name: "NHAI", purpose: "Highway Design Projects", year: "2022" },
+      */
     ],
-    placement: { percentage: "80%", avgPackage: "₹4.5 LPA", highestPackage: "₹9 LPA", recruiters: ["L&T", "Shapoorji Pallonji", "NCC", "Ramky Group", "Megha Engineering"] },
+    placement: {
+      /*
+percentage: "80%", avgPackage: "₹4.5 LPA", highestPackage: "₹9 LPA", recruiters: ["L&T", "Shapoorji Pallonji", "NCC", "Ramky Group", "Megha Engineering"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "Green Concrete using Fly Ash", students: "Team of 4", description: "Sustainable concrete mix design using industrial waste" },
+      /*
+{ title: "Green Concrete using Fly Ash", students: "Team of 4", description: "Sustainable concrete mix design using industrial waste" },
       { title: "Rainwater Harvesting System Design", students: "Team of 3", description: "Comprehensive design for campus rainwater collection" },
+      */
     ],
     subjects: [
-      { name: "Engineering Mechanics", semester: 1, type: "core" },
+      /*
+{ name: "Engineering Mechanics", semester: 1, type: "core" },
       { name: "Building Materials & Construction", semester: 2, type: "core" },
       { name: "Strength of Materials", semester: 3, type: "core" },
       { name: "Surveying", semester: 3, type: "core" },
@@ -798,6 +844,7 @@ export const departmentsData: Record<string, DepartmentData> = {
       { name: "Steel Structures", semester: 7, type: "elective" },
       { name: "Foundation Engineering", semester: 7, type: "elective" },
       { name: "Estimation & Costing", semester: 7, type: "core" },
+      */
     ],
     documents: [
       { title: "Faculty List 2024-25", url: "https://mits.ac.in/public/uploads/departments/34609776fc6d3d8390a9657b4aa23f5a.pdf" },
@@ -828,7 +875,8 @@ export const departmentsData: Record<string, DepartmentData> = {
     courses: ["B.Tech in Electrical & Electronics Engineering"],
     contactInfo: { email: "hod_eee@mits.ac.in", phone: "+91-8571-280255" },
 faculty: [
-      { name: "Dr. C. Kamal Basha", designation: "Professor & Vice Principal", qualification: "Ph.D. (JNTUA, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/kamalbasha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/223" },
+      /*
+{ name: "Dr. C. Kamal Basha", designation: "Professor & Vice Principal", qualification: "Ph.D. (JNTUA, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/kamalbasha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/223" },
       { name: "Dr. A. V. Pavan Kumar", designation: "Professor & Assistant Dean", qualification: "Ph.D. (Birla Institute of Technology & Science, Pilani, Hyderabad Campus)", image: "https://mits.ac.in/public/uploads/faculty/Dr. A. V. Pavan Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/224" },
       { name: "Dr. Manavaalan Gunasekaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Indian Institute of Technology, Kanpur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Manavaalan Gunasekaran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/931" },
       { name: "Dr. Somu Vijaya Bhaskar", designation: "Assoc. Professor", qualification: "Ph.D. (University of Florida, USA)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Somu Vijaya Bhaskar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/694" },
@@ -850,11 +898,14 @@ faculty: [
       { name: "Mr. M. Venkatesh", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Mizoram)", image: "https://mits.ac.in/public/uploads/faculty/Venkatesh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/425" },
       { name: "Mr. E. Raghu Babu", designation: "Asst. Professor", qualification: "M.Tech. (National Institute of Technology, Kurukshetra)", image: "https://mits.ac.in/public/uploads/faculty/Raghu Babu.JPG", profileUrl: "https://mits.ac.in/facultyprofile/484" },
       { name: "Mr. Ramesh Kumar R", designation: "Asst. Professor", qualification: "M.E. (College of Engineering, Guindy (CEG), Anna University)", image: "https://mits.ac.in/public/uploads/faculty/aravana Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/505" },
+      */
     ],
     detailedAchievements: [
-      { title: "Smart Grid Research Publications", description: "Published 80+ papers in reputed journals", type: "faculty" },
+      /*
+{ title: "Smart Grid Research Publications", description: "Published 80+ papers in reputed journals", type: "faculty" },
       { title: "Solar Energy Installation on Campus", description: "Designed and installed 50KW solar plant for campus use", type: "faculty" },
       { title: "Robotic Arm Design Competition Winners", description: "Students won state-level robotics competition", type: "student" },
+      */
     ],
     facilities: [
       { name: "Power Electronics Lab", description: "Advanced power converter systems and drives", equipment: ["Inverters", "Converters", "Motor drives"] },
@@ -863,31 +914,47 @@ faculty: [
       { name: "Renewable Energy Lab", description: "Solar panel testing and wind energy systems", equipment: ["Solar panels", "Wind turbine models", "Battery systems"] },
     ],
     patents: [
-      { title: "Efficient Solar MPPT Controller", status: "Filed", year: "2023" },
+      /*
+{ title: "Efficient Solar MPPT Controller", status: "Filed", year: "2023" },
       { title: "Smart Meter with IoT Integration", status: "Published", year: "2022" },
+      */
     ],
     publications: [
-      { title: "Optimal Power Flow Analysis using PSO", type: "journal", year: "2024" },
+      /*
+{ title: "Optimal Power Flow Analysis using PSO", type: "journal", year: "2024" },
       { title: "Solar Inverter Efficiency Enhancement", type: "conference", year: "2023" },
+      */
     ],
     consultancy: [
       { title: "Power Audit for Local Industries", agency: "APSPDCL", amount: "₹4 Lakhs" },
     ],
     events: [
-      { title: "EEE Alumni Meet-2026", date: "4th April 2026", description: "Organized by Department of Electrical & Electronics Engineering." },
+      /*
+{ title: "EEE Alumni Meet-2026", date: "4th April 2026", description: "Organized by Department of Electrical & Electronics Engineering." },
       { title: "Skill Development Program on AI in Electronics", date: "9th to 13th March 2026", description: "Five-day offline training organized by APSSDC and Department of EEE." },
       { title: "Hands-on Workshop on Real World Applications of IoT", date: "19th to 21st February 2026", description: "Three-day workshop organized by Department of EEE in association with MITS IE(I) Students’ Chapter." },
+      */
     ],
     mous: [
-      { name: "APSPDCL", purpose: "Industrial Training & Internships", year: "2021" },
+      /*
+{ name: "APSPDCL", purpose: "Industrial Training & Internships", year: "2021" },
       { name: "Schneider Electric", purpose: "Automation Training", year: "2022" },
+      */
     ],
-    placement: { percentage: "85%", avgPackage: "₹4.5 LPA", highestPackage: "₹10 LPA", recruiters: ["Schneider Electric", "Siemens", "ABB", "L&T", "BHEL"] },
+    placement: {
+      /*
+percentage: "85%", avgPackage: "₹4.5 LPA", highestPackage: "₹10 LPA", recruiters: ["Schneider Electric", "Siemens", "ABB", "L&T", "BHEL"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "Solar Powered EV Charging Station", students: "Team of 4", description: "Renewable energy based charging infrastructure" },
+      /*
+{ title: "Solar Powered EV Charging Station", students: "Team of 4", description: "Renewable energy based charging infrastructure" },
+      */
     ],
     subjects: [
-      { name: "Circuit Theory", semester: 2, type: "core" },
+      /*
+{ name: "Circuit Theory", semester: 2, type: "core" },
       { name: "Electrical Machines - I", semester: 3, type: "core" },
       { name: "Network Analysis", semester: 3, type: "core" },
       { name: "Power Systems - I", semester: 5, type: "core" },
@@ -895,6 +962,7 @@ faculty: [
       { name: "Control Systems", semester: 4, type: "core" },
       { name: "Renewable Energy Sources", semester: 7, type: "elective" },
       { name: "Smart Grid", semester: 7, type: "elective" },
+      */
     ],
     documents: [
       { title: "Faculty List 2024-25", url: "https://mits.ac.in/assets/pdf/eee/EEE Faculty List AY 2024-25.pdf" },
@@ -924,7 +992,8 @@ faculty: [
     courses: ["B.Tech in Mechanical Engineering"],
     contactInfo: { email: "mehod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. C. Yuvaraj", designation: "Professor & Vice Chancellor (I/c)", qualification: "Ph.D. (Bangalore University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. C. Yuvaraj.JPG", profileUrl: "https://mits.ac.in/facultyprofile/245" },
+      /*
+{ name: "Dr. C. Yuvaraj", designation: "Professor & Vice Chancellor (I/c)", qualification: "Ph.D. (Bangalore University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. C. Yuvaraj.JPG", profileUrl: "https://mits.ac.in/facultyprofile/245" },
       { name: "Dr. I. Arun", designation: "Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/DR I ARUN.JPG", profileUrl: "https://mits.ac.in/facultyprofile/303" },
       { name: "Dr. V. Vamsidhar", designation: "Assoc. Professor", qualification: "Ph.D. (J.N.T.U.A, Anantapuram)", image: "https://mits.ac.in/public/uploads/faculty/vamsi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/304" },
       { name: "Dr. S. Baskaran", designation: "Assoc. Professor & Head", qualification: "Ph.D. (National Institute of Technology, Trichy)", image: "https://mits.ac.in/public/uploads/faculty/DR S BASKARAN.JPG", profileUrl: "https://mits.ac.in/facultyprofile/306" },
@@ -949,10 +1018,13 @@ faculty: [
       { name: "Mr. Pujari Rajesh", designation: "Asst. Professor", qualification: "Ph.D. (National Institute of Technology, Tiruchirappalli)", image: "https://mits.ac.in/public/uploads/faculty/Pujari Rajesh.JPG", profileUrl: "https://mits.ac.in/facultyprofile/333" },
       { name: "Mr. G. Kumar", designation: "Asst. Professor", qualification: "Ph.D. (VELS University)", image: "https://mits.ac.in/public/uploads/faculty/G. Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/326" },
       { name: "Mr. P. Mohammed Rizwan Ali", designation: "Asst. Professor", qualification: "M.Tech. (Madanapalle Institute of Technology and Science, JNTUA)", image: "https://mits.ac.in/public/uploads/faculty/MR P MOHAMMED RIZWAN ALI.JPG", profileUrl: "https://mits.ac.in/facultyprofile/622" },
+      */
     ],
     detailedAchievements: [
-      { title: "Published 120+ research papers", description: "In national and international journals", type: "faculty" },
+      /*
+{ title: "Published 120+ research papers", description: "In national and international journals", type: "faculty" },
       { title: "SAE India BAJA competition participants", description: "Students designed and built ATV vehicles for SAE BAJA", type: "student" },
+      */
     ],
     facilities: [
       { name: "CAD/CAM Lab", description: "SolidWorks, AutoCAD, CATIA workstations", equipment: ["40 CAD workstations", "SolidWorks Enterprise", "ANSYS simulation"] },
@@ -961,19 +1033,24 @@ faculty: [
       { name: "Metallurgy Lab", description: "Material testing and analysis", equipment: ["Metallurgical microscope", "Hardness testers", "Impact testing machines"] },
     ],
     patents: [
-      { title: "Efficient Heat Exchanger Design using Nano-fluids", status: "Filed", year: "2023" },
+      /*
+{ title: "Efficient Heat Exchanger Design using Nano-fluids", status: "Filed", year: "2023" },
       { title: "3D Printed Prosthetic Limb Design", status: "Published", year: "2022" },
+      */
     ],
     publications: [
-      { title: "Optimization of CNC Machining Parameters", type: "journal", year: "2024" },
+      /*
+{ title: "Optimization of CNC Machining Parameters", type: "journal", year: "2024" },
       { title: "Thermal Analysis of IC Engines", type: "conference", year: "2023" },
+      */
     ],
     consultancy: [
       { title: "Material Testing Services", agency: "Local Industries", amount: "₹4 Lakhs" },
       { title: "CAD Design for SMEs", agency: "Small Enterprises", amount: "₹3 Lakhs" },
     ],
     events: [
-      { title: "International FDP on Sustainability and Research in Modern Mechanical Engineering", date: "9th to 13th March 2026", description: "International Five Day Faculty Development Programme on 'Sustainability and Research in Modern Mechanical Engineering' organized by Department." },
+      /*
+{ title: "International FDP on Sustainability and Research in Modern Mechanical Engineering", date: "9th to 13th March 2026", description: "International Five Day Faculty Development Programme on 'Sustainability and Research in Modern Mechanical Engineering' organized by Department." },
       { title: "Seminar on Drone Technology and Career Opportunities", date: "6th March 2026", description: "'Drone Technology and Its Career Opportunities' organized under AICTE Distinguished Professionals Scheme." },
       { title: "Parents Meeting", date: "26th February 2026", description: "Regular parental engagement activity organized by Department." },
       { title: "Seminar on Maritime Sector Opportunities", date: "6th February 2026", description: "'Maritime sector opportunities and career for Mechanical Engineers' organized with ISTE Student Chapter." },
@@ -983,18 +1060,29 @@ faculty: [
       { title: "Hands on Workshop on IC Engine Dismantling & Assembly", date: "8th October 2025", description: "Workshop with Institution of Engineers - INDIA Student Chapter organized by Department." },
       { title: "Industrial Visit to IIT Tirupati Centre of Excellence", date: "6th September 2025", description: "Industry visit to Centre of Excellence Mechanical Engineering organized for students." },
       { title: "Workshop on CAD/CAM and Design Optimization", date: "2024-2025", description: "Regular workshops on CAD/CAM tools and design optimization organized by Department." },
+      */
     ],
     mous: [
-      { name: "Ashok Leyland", purpose: "Automotive Training", year: "2021" },
+      /*
+{ name: "Ashok Leyland", purpose: "Automotive Training", year: "2021" },
       { name: "TVS Motors", purpose: "Industrial Internships", year: "2022" },
+      */
     ],
-    placement: { percentage: "88%", avgPackage: "₹5 LPA", highestPackage: "₹11 LPA", recruiters: ["Ashok Leyland", "TVS", "Mahindra", "Tata Motors", "L&T"] },
+    placement: {
+      /*
+percentage: "88%", avgPackage: "₹5 LPA", highestPackage: "₹11 LPA", recruiters: ["Ashok Leyland", "TVS", "Mahindra", "Tata Motors", "L&T"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "Design of Hybrid Vehicle Chassis", students: "Team of 4", description: "Lightweight chassis design for electric-hybrid vehicle" },
+      /*
+{ title: "Design of Hybrid Vehicle Chassis", students: "Team of 4", description: "Lightweight chassis design for electric-hybrid vehicle" },
       { title: "Solar Water Heater Optimization", students: "Team of 3", description: "Efficiency improvement using reflector design" },
+      */
     ],
     subjects: [
-      { name: "Engineering Drawing", semester: 1, type: "core" },
+      /*
+{ name: "Engineering Drawing", semester: 1, type: "core" },
       { name: "Engineering Mechanics", semester: 2, type: "core" },
       { name: "Thermodynamics", semester: 3, type: "core" },
       { name: "Strength of Materials", semester: 3, type: "core" },
@@ -1007,6 +1095,7 @@ faculty: [
       { name: "Automobile Engineering", semester: 7, type: "elective" },
       { name: "Robotics", semester: 7, type: "elective" },
       { name: "Finite Element Analysis", semester: 8, type: "elective" },
+      */
     ],
     documents: [
       { title: "Faculty List 2024-25", url: "https://mits.ac.in/public/uploads/departments/4715af8e6a43fe8dfdc8ef6c72de286f.pdf" },
@@ -1036,7 +1125,8 @@ faculty: [
     courses: ["B.Tech in Electronics & Communication Engineering"],
     contactInfo: { email: "hod_ece@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. Rama S Komaragiri", designation: "Professor & Dean-Academics", qualification: "Ph.D. (Technical University of Darmstadt, Germany)", image: "public/uploads/faculty/rama.jpg", profileUrl: "https://mits.ac.in/facultyprofile/735" },
+      /*
+{ name: "Dr. Rama S Komaragiri", designation: "Professor & Dean-Academics", qualification: "Ph.D. (Technical University of Darmstadt, Germany)", image: "public/uploads/faculty/rama.jpg", profileUrl: "https://mits.ac.in/facultyprofile/735" },
       { name: "Dr. P. Ramanathan", designation: "Professor & Principal", qualification: "Ph.D. (PSG College of Technology & Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/a744ebed6a293a48de32e80ba66680c8.JPG", profileUrl: "https://mits.ac.in/facultyprofile/172" },
       { name: "Dr. Sanjay Kumar C. Gowre", designation: "Professor", qualification: "Ph.D. (IIT-Kharagpur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sanjay Kumar C. Gowre.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1018" },
       { name: "Dr. S. Rajasekaran", designation: "Professor & Head", qualification: "Ph.D. (Coimbatore Institute of Technology, Anna University, Chennai, India.)", image: "public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/173" },
@@ -1075,11 +1165,14 @@ faculty: [
       { name: "Ms. S. Kavi Priya", designation: "Asst. Professor", qualification: "M.Tech. (VIT University)", image: "public/uploads/faculty/kavi.jpg", profileUrl: "https://mits.ac.in/facultyprofile/424" },
       { name: "Mrs. V. Sai Anusha", designation: "Asst. Professor", qualification: "M.Tech. (Amrita Vishwa Vidyapeetham, Amrita Universit)", image: "https://mits.ac.in/public/uploads/faculty/V. Sai Anusha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/416" },
       { name: "Mr. V. Nagaraja", designation: "Asst. Professor", qualification: "M.Tech. (SVU, Tirupathi)", image: "public/uploads/faculty/nagaraju.jpg", profileUrl: "https://mits.ac.in/facultyprofile/534" },
+      */
     ],
     detailedAchievements: [
-      { title: "NBA Accredited Program", description: "B.Tech ECE accredited by National Board of Accreditation", type: "faculty" },
+      /*
+{ title: "NBA Accredited Program", description: "B.Tech ECE accredited by National Board of Accreditation", type: "faculty" },
       { title: "150+ Research Publications", description: "Published in IEEE, Elsevier, and Springer journals", type: "faculty" },
       { title: "IoT Hackathon Winners", description: "Students won regional IoT innovation challenge", type: "student" },
+      */
     ],
     facilities: [
       { name: "VLSI Design Lab", description: "Cadence tools for chip design and verification", equipment: ["Cadence Virtuoso", "Xilinx FPGA kits", "Logic analyzers"] },
@@ -1088,36 +1181,52 @@ faculty: [
       { name: "PCB Design Lab", description: "PCB fabrication and testing", equipment: ["PCB prototyping machine", "Soldering stations", "Oscilloscopes"] },
     ],
     patents: [
-      { title: "Low Power VLSI Circuit Design for IoT Sensors", status: "Granted", year: "2022" },
+      /*
+{ title: "Low Power VLSI Circuit Design for IoT Sensors", status: "Granted", year: "2022" },
       { title: "Antenna Design for 5G Applications", status: "Filed", year: "2023" },
       { title: "Smart Home Automation System", status: "Published", year: "2023" },
+      */
     ],
     publications: [
-      { title: "MIMO Antenna Design for 5G Communications", type: "journal", year: "2024" },
+      /*
+{ title: "MIMO Antenna Design for 5G Communications", type: "journal", year: "2024" },
       { title: "IoT-based Environmental Monitoring", type: "conference", year: "2023" },
       { title: "FPGA Implementation of Image Processing Algorithms", type: "journal", year: "2023" },
+      */
     ],
     consultancy: [
       { title: "PCB Design Services", agency: "Electronics Firms", amount: "₹5 Lakhs" },
       { title: "IoT Sensor Network Design", agency: "Agriculture Dept", amount: "₹6 Lakhs" },
     ],
     events: [
-      { title: "National Level Technical Symposium ECLECTICA 2K26", date: "1st April 2026", description: "Organized by Department of Electronics and Communication Engineering." },
+      /*
+{ title: "National Level Technical Symposium ECLECTICA 2K26", date: "1st April 2026", description: "Organized by Department of Electronics and Communication Engineering." },
       { title: "Seminar on Semiconductor Innovation", date: "24th February 2026", description: "Seminar on 'From Silicon to Systems: Powering the future with Semiconductor Innovation' organized by ECE with MITS IETE Students Forum." },
       { title: "MoU Signing Ceremony with Sense Semiconductor", date: "24th February 2026", description: "Organized by Department of ECE in association with Industry Relation Cell MITS." },
+      */
     ],
     mous: [
-      { name: "Texas Instruments", purpose: "Embedded Systems Training", year: "2021" },
+      /*
+{ name: "Texas Instruments", purpose: "Embedded Systems Training", year: "2021" },
       { name: "Qualcomm", purpose: "5G Research Collaboration", year: "2022" },
       { name: "BSNL", purpose: "Telecom Training", year: "2020" },
+      */
     ],
-    placement: { percentage: "90%", avgPackage: "₹5 LPA", highestPackage: "₹12 LPA", recruiters: ["Qualcomm", "Samsung", "Intel", "TCS", "Infosys", "Wipro"] },
+    placement: {
+      /*
+percentage: "90%", avgPackage: "₹5 LPA", highestPackage: "₹12 LPA", recruiters: ["Qualcomm", "Samsung", "Intel", "TCS", "Infosys", "Wipro"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "IoT-based Smart Agriculture System", students: "Team of 4", description: "Sensor-based soil moisture and weather monitoring" },
+      /*
+{ title: "IoT-based Smart Agriculture System", students: "Team of 4", description: "Sensor-based soil moisture and weather monitoring" },
       { title: "Gesture Controlled Robot", students: "Team of 3", description: "Accelerometer-based robot control system" },
+      */
     ],
     subjects: [
-      { name: "Electronic Devices & Circuits", semester: 2, type: "core" },
+      /*
+{ name: "Electronic Devices & Circuits", semester: 2, type: "core" },
       { name: "Signals & Systems", semester: 3, type: "core" },
       { name: "Analog Communications", semester: 4, type: "core" },
       { name: "Digital Communications", semester: 5, type: "core" },
@@ -1127,6 +1236,7 @@ faculty: [
       { name: "Antenna & Wave Propagation", semester: 5, type: "core" },
       { name: "IoT", semester: 7, type: "elective" },
       { name: "5G & Beyond", semester: 7, type: "elective" },
+      */
     ],
     documents: [
       { title: "Stock Register", url: "https://mits.ac.in/assets/pdf/stock-registers/ECE%20Stock%20Register.pdf" },
@@ -1152,7 +1262,8 @@ faculty: [
     courses: ["B.Tech in CSE - Data Science"],
     contactInfo: { email: "dshod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. K. Nirmala Devi", designation: "Assoc. Professor", qualification: "Post-Doctoral Researcher (Lincoln University College, Malaysia)", image: "https://mits.ac.in/public/uploads/faculty/c9fcfd6e1946a61df27003a2c31fbb64.JPG", profileUrl: "https://mits.ac.in/facultyprofile/729" },
+      /*
+{ name: "Dr. K. Nirmala Devi", designation: "Assoc. Professor", qualification: "Post-Doctoral Researcher (Lincoln University College, Malaysia)", image: "https://mits.ac.in/public/uploads/faculty/c9fcfd6e1946a61df27003a2c31fbb64.JPG", profileUrl: "https://mits.ac.in/facultyprofile/729" },
       { name: "Dr. S. Kusuma", designation: "Asst. Professor & Head", qualification: "Post-Doctoral Researcher (Lincoln University College, Malaysia)", image: "https://mits.ac.in/public/uploads/faculty/c9fcfd6e1946a61df27003a2c31fbb64.JPG", profileUrl: "https://mits.ac.in/facultyprofile/98" },
       { name: "Dr. S. Gopalakrishnan", designation: "Asst. Professor", qualification: "Ph.D. (Anna University)", image: "https://mits.ac.in/public/uploads/faculty/Gopalakrishnan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/509" },
       { name: "Dr. M. Kiran Kumar", designation: "Asst. Professor", qualification: "Ph.D. (VIT University)", image: "https://mits.ac.in/public/uploads/faculty/Kiran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/408" },
@@ -1174,39 +1285,60 @@ faculty: [
       { name: "Mr. B. Bhaskar", designation: "Asst. Professor", qualification: "M.Tech. (Madanapalle Institution of Technology and Science, JNTUA University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. B. Bhaskar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/116" },
       { name: "Mr. Nukala Bhargav Krishna", designation: "Asst. Professor", qualification: "M.Tech. (Integrated) (Vellore Institute of Technology, Vellore)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Nukala Bhargav Krishna.JPG", profileUrl: "https://mits.ac.in/facultyprofile/750" },
       { name: "Mr. Yawar Ayub Matta", designation: "Asst. Professor", qualification: "M.Tech. (NIT, Srinagar)", image: "https://mits.ac.in/public/uploads/faculty/Yawar Ayub Matta.JPG", profileUrl: "https://mits.ac.in/facultyprofile/664" },
+      */
     ],
     detailedAchievements: [
-      { title: "Faculty Achievements 2023-24", description: "Department maintains year-wise faculty achievement records on official page.", type: "faculty" },
+      /*
+{ title: "Faculty Achievements 2023-24", description: "Department maintains year-wise faculty achievement records on official page.", type: "faculty" },
       { title: "Student Achievements 2024-25", description: "Department highlights student achievements year-wise in the achievements tab.", type: "student" },
       { title: "Student Achievements 2023-24", description: "Official records include academic and co-curricular achievement updates.", type: "student" },
+      */
     ],
     facilities: [
       { name: "Digital Classrooms", description: "State-of-the-art digital classrooms for interactive learning.", equipment: ["Digital boards", "Projectors", "Audio systems"] },
       { name: "IT-Enabled Computing Labs", description: "Department infrastructure includes IT-enabled labs for practical sessions.", equipment: ["High-performance workstations", "Programming toolchains"] },
     ],
     patents: [
-      { title: "Predictive Analytics Model for Student Performance", status: "Filed", year: "2023" },
+      /*
+{ title: "Predictive Analytics Model for Student Performance", status: "Filed", year: "2023" },
       { title: "Real-Time Data Pipeline Architecture", status: "Published", year: "2022" },
+      */
     ],
     publications: [
-      { title: "Faculty Publications 2024-25", type: "journal", year: "2024-25" },
+      /*
+{ title: "Faculty Publications 2024-25", type: "journal", year: "2024-25" },
       { title: "Faculty Publications 2023-24", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-23", type: "journal", year: "2022-23" },
+      */
     ],
     consultancy: [{ title: "Data Analytics for SMEs", agency: "Local Businesses", amount: "INR 2 Lakhs" }],
     events: [
-      { title: "National Level Technical Symposium DFesta-2026", date: "8th April 2026", description: "Organized by Department of CSE - Data Science." },
+      /*
+{ title: "National Level Technical Symposium DFesta-2026", date: "8th April 2026", description: "Organized by Department of CSE - Data Science." },
       { title: "Technical Talk on Fostering Innovation and Entrepreneurship in Engineering Education", date: "16th March 2026", description: "Organized by Departments of CSE-(AI) and CSE-(DS) under AICTE Sponsored DPS Scheme." },
       { title: "Career Talk on Process Mining and AI in Process Intelligence", date: "13th March 2026", description: "Organized by Department of Training & Skill Development in association with CSE - Data Science." },
+      */
     ],
-    mous: [{ name: "Google", purpose: "Cloud Data Analytics", year: "2022" }, { name: "AWS", purpose: "Data Engineering Training", year: "2023" }],
-    placement: { percentage: "2023-24: 50 offers out of 62 eligible", avgPackage: "As per placement cell records", highestPackage: "As per placement cell records", recruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "Deloitte", "Accenture"] },
+    mous: [
+      /*
+{ name: "Google", purpose: "Cloud Data Analytics", year: "2022" }, { name: "AWS", purpose: "Data Engineering Training", year: "2023" }
+      */
+    ],
+    placement: {
+      /*
+percentage: "2023-24: 50 offers out of 62 eligible", avgPackage: "As per placement cell records", highestPackage: "As per placement cell records", recruiters: ["TCS", "Infosys", "Wipro", "Capgemini", "Deloitte", "Accenture"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "Credit Card Fraud Detection System", students: "Team of 3", description: "ML model for real-time fraud detection" },
+      /*
+{ title: "Credit Card Fraud Detection System", students: "Team of 3", description: "ML model for real-time fraud detection" },
       { title: "Sentiment Analysis Dashboard", students: "Team of 4", description: "NLP-based social media sentiment tracker" },
+      */
     ],
     subjects: [
-      { name: "Introduction to Data Science", semester: 2, type: "core" },
+      /*
+{ name: "Introduction to Data Science", semester: 2, type: "core" },
       { name: "Statistics for Data Science", semester: 3, type: "core" },
       { name: "Machine Learning", semester: 4, type: "core" },
       { name: "Big Data Technologies", semester: 5, type: "core" },
@@ -1214,6 +1346,7 @@ faculty: [
       { name: "Deep Learning", semester: 6, type: "core" },
       { name: "NLP", semester: 7, type: "elective" },
       { name: "Reinforcement Learning", semester: 7, type: "elective" },
+      */
     ],
     documents: [
       { title: "Stock Register", url: "https://mits.ac.in/assets/pdf/stock-registers/CSD%20Stock%20Register.pdf" },
@@ -1239,7 +1372,8 @@ faculty: [
     courses: ["B.Tech in CSE - Cyber Security"],
     contactInfo: { email: "cshod@mits.ac.in", phone: "+91-9100973396; 8571-280255; 280706" },
     faculty: [
-      { name: "Dr. Chandra Prakash Gupta", designation: "Professor & Dean-School of Computing", qualification: "Ph.D. (University of Kota)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Chandraprakash Guptha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/730" },
+      /*
+{ name: "Dr. Chandra Prakash Gupta", designation: "Professor & Dean-School of Computing", qualification: "Ph.D. (University of Kota)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Chandraprakash Guptha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/730" },
       { name: "Dr. Sachikanta Dash", designation: "Assoc. Professor", qualification: "Ph.D. (Berhampur University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sachikanta Dash.JPG", profileUrl: "https://mits.ac.in/facultyprofile/745" },
       { name: "Dr. M. Jaganathan", designation: "Assoc. Professor", qualification: "Ph.D. (Anna University, Chennai)", image: "https://mits.ac.in/public/uploads/faculty/Dr. M. Jaganathan.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1103" },
       { name: "Dr. Brahm Prakash", designation: "Assoc. Professor & Head", qualification: "Ph.D. (IKG Punjab Technical University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. Brahm Prakash.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1085" },
@@ -1257,41 +1391,63 @@ faculty: [
       { name: "Mrs. Pagadala Naveena", designation: "Asst. Professor", qualification: "M.Tech.", image: "https://mits.ac.in/public/uploads/faculty/Mrs. Pagadala Naveena.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1106" },
       { name: "Mr. Karanam Seshagiri Rao", designation: "Asst. Professor", qualification: "M.Tech. (St.Johns College of Engineering, JNTUA)", image: "https://mits.ac.in/public/uploads/faculty/Mr. Karanam Seshagiri Rao.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1102" },
       { name: "Ms. Chinnapapannagari Aparna", designation: "Asst. Professor", qualification: "M.Tech.", image: "https://mits.ac.in/public/uploads/faculty/Ms. Chinnapapannagari Aparna.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1104" },
+      */
     ],
     detailedAchievements: [
-      { title: "Faculty Achievements 2023-24", description: "Department publishes annual faculty achievements in the official achievements tab.", type: "faculty" },
+      /*
+{ title: "Faculty Achievements 2023-24", description: "Department publishes annual faculty achievements in the official achievements tab.", type: "faculty" },
       { title: "Student Achievements 2023-24", description: "Student achievement records are maintained year-wise by the department.", type: "student" },
       { title: "Student Achievements 2022-23", description: "Official page includes year-wise student performance highlights.", type: "student" },
+      */
     ],
     facilities: [
       { name: "Digital Classrooms", description: "IT-enabled classrooms support cybersecurity-focused teaching and demonstrations.", equipment: ["Digital boards", "Projectors", "Networked systems"] },
       { name: "Department Labs", description: "Lab facilities support practical sessions in security, systems, and computing.", equipment: ["Configured lab workstations", "Security software stack"] },
     ],
     patents: [
-      { title: "AI-based Intrusion Detection System", status: "Filed", year: "2023" },
+      /*
+{ title: "AI-based Intrusion Detection System", status: "Filed", year: "2023" },
+      */
     ],
     publications: [
-      { title: "ML-based Malware Detection Framework", type: "journal", year: "2024" },
+      /*
+{ title: "ML-based Malware Detection Framework", type: "journal", year: "2024" },
       { title: "Phishing URL Detection using Deep Learning", type: "conference", year: "2023" },
+      */
     ],
     consultancy: [{ title: "Security Audit Services", agency: "Local IT Companies", amount: "INR 2 Lakhs" }],
     events: [
-      { title: "Workshop cum Hackathon on Ethical Hacking and Cyber Security", date: "2nd to 21st March 2026", description: "Organized by CSE - Cyber Security with IIIC and ISTE Student Chapter." },
+      /*
+{ title: "Workshop cum Hackathon on Ethical Hacking and Cyber Security", date: "2nd to 21st March 2026", description: "Organized by CSE - Cyber Security with IIIC and ISTE Student Chapter." },
       { title: "International Conference on Cyber and AI Security", date: "9th to 10th March 2026", description: "Organized by Department of CSE - Cyber Security." },
       { title: "National Level Technical Symposium EPICS 2K26", date: "26th February 2026", description: "Organized by Department of CSE - Cyber Security." },
+      */
     ],
-    mous: [{ name: "EC-Council", purpose: "CEH Certification Training", year: "2022" }],
-    placement: { percentage: "92%", avgPackage: "INR 5.5 LPA", highestPackage: "INR 15 LPA", recruiters: ["Deloitte", "KPMG", "TCS", "Infosys", "Wipro"] },
+    mous: [
+      /*
+{ name: "EC-Council", purpose: "CEH Certification Training", year: "2022" }
+      */
+    ],
+    placement: {
+      /*
+percentage: "92%", avgPackage: "INR 5.5 LPA", highestPackage: "INR 15 LPA", recruiters: ["Deloitte", "KPMG", "TCS", "Infosys", "Wipro"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "Network Vulnerability Scanner", students: "Team of 3", description: "Automated vulnerability scanning tool" },
+      /*
+{ title: "Network Vulnerability Scanner", students: "Team of 3", description: "Automated vulnerability scanning tool" },
+      */
     ],
     subjects: [
-      { name: "Network Security", semester: 4, type: "core" },
+      /*
+{ name: "Network Security", semester: 4, type: "core" },
       { name: "Ethical Hacking", semester: 5, type: "core" },
       { name: "Cryptography", semester: 5, type: "core" },
       { name: "Digital Forensics", semester: 6, type: "core" },
       { name: "Cloud Security", semester: 7, type: "elective" },
       { name: "Malware Analysis", semester: 7, type: "elective" },
+      */
     ],
     documents: [
       { title: "Stock Register", url: "https://mits.ac.in/assets/pdf/stock-registers/CS%20Stock%20register.pdf" },
@@ -1321,7 +1477,8 @@ faculty: [
     courses: ["B.Tech in Artificial Intelligence"],
     contactInfo: { email: "aihod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      {
+      /*
+{
         name: "Dr. R. Kalpana",
         designation: "Professor &amp; Head",
         qualification: "Ph.D. (Anna University)",
@@ -1521,40 +1678,59 @@ faculty: [
         image: "https://mits.ac.in/public/uploads/faculty/Mr. K. Venkata Subramanyam.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1096"
       }
+      */
     ],
     detailedAchievements: [
-      { title: "Achievements Tab Status", description: "Official department tab currently indicates achievements will be updated soon.", type: "faculty" },
+      /*
+{ title: "Achievements Tab Status", description: "Official department tab currently indicates achievements will be updated soon.", type: "faculty" },
       { title: "AI Powered Solution Expo 2025-26", description: "Department conducted an innovation-driven AI/Industry 4.0 prototype demo day.", type: "student" },
+      */
     ],
     facilities: [
       { name: "Digital Classrooms", description: "State-of-the-art digital classrooms support AI-enabled teaching workflows.", equipment: ["Digital boards", "Projectors", "Network-enabled systems"] },
       { name: "Department Labs", description: "Lab facilities are listed in department infrastructure for practical AI sessions.", equipment: ["Computing workstations", "Programming environments"] },
     ],
     patents: [
-      { title: "AI-based Medical Diagnosis System", status: "Published", year: "2023" },
+      /*
+{ title: "AI-based Medical Diagnosis System", status: "Published", year: "2023" },
       { title: "Generative AI for Content Creation", status: "Filed", year: "2024" },
       { title: "Autonomous Drone Navigation using RL", status: "Filed", year: "2023" },
+      */
     ],
     publications: [
-      { title: "Publication Records", type: "journal", year: "Will be updated soon" },
+      /*
+{ title: "Publication Records", type: "journal", year: "Will be updated soon" },
+      */
     ],
     consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "₹5 Lakhs" }],
     events: [
-      { title: "AI Powered Solution Expo", date: "7th April 2026", description: "Innovation driven exhibition Demo Day for AI / Industry 4.0 prototypes organized by Department of CSE - Artificial Intelligence." },
+      /*
+{ title: "AI Powered Solution Expo", date: "7th April 2026", description: "Innovation driven exhibition Demo Day for AI / Industry 4.0 prototypes organized by Department of CSE - Artificial Intelligence." },
       { title: "AI Innovation Workshop using LangChain and MCP", date: "17th March 2026", description: "Organized by Department of CSE - Artificial Intelligence." },
       { title: "Hands-on Workshop on AWS and Docker", date: "16th March 2026", description: "Industrial View of Cloud Computing workshop organized by Department of CSE - Artificial Intelligence." },
+      */
     ],
     mous: [
-      { name: "NVIDIA", purpose: "GPU Computing Partnership", year: "2022" },
+      /*
+{ name: "NVIDIA", purpose: "GPU Computing Partnership", year: "2022" },
       { name: "Google DeepMind", purpose: "Research Collaboration", year: "2023" },
+      */
     ],
-    placement: { percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
+    placement: {
+      /*
+percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "AI-Powered Medical Diagnosis Assistant", students: "Team of 4", description: "Deep learning model for X-ray analysis" },
+      /*
+{ title: "AI-Powered Medical Diagnosis Assistant", students: "Team of 4", description: "Deep learning model for X-ray analysis" },
       { title: "Chatbot using Large Language Models", students: "Team of 3", description: "Custom LLM-based conversational AI" },
+      */
     ],
     subjects: [
-      { name: "Machine Learning Fundamentals", semester: 3, type: "core" },
+      /*
+{ name: "Machine Learning Fundamentals", semester: 3, type: "core" },
       { name: "Deep Learning", semester: 4, type: "core" },
       { name: "Natural Language Processing", semester: 5, type: "core" },
       { name: "Computer Vision", semester: 5, type: "core" },
@@ -1562,6 +1738,7 @@ faculty: [
       { name: "Generative AI", semester: 7, type: "elective" },
       { name: "Explainable AI", semester: 7, type: "elective" },
       { name: "AI Ethics & Responsible AI", semester: 8, type: "elective" },
+      */
     ],
     documents: [
       { title: "Stock Register", url: "https://mits.ac.in/assets/pdf/stock-registers/CAI%20Stock%20Register.pdf" },
@@ -1590,7 +1767,8 @@ faculty: [
     courses: ["B.Tech in Artificial Intelligence and Machine Learning"],
     contactInfo: { email: "aimlhod@mits.ac.in", phone: "+91-9154291788; 8571-280255; 280706" },
     faculty: [
-      {
+      /*
+{
         name: "Mr. Sanath Hegde",
         designation: "Professor of Practice",
         qualification: "M.B.A. (IISC, Bangalore)",
@@ -1790,27 +1968,35 @@ faculty: [
         image: "https://mits.ac.in/public/uploads/faculty/Ms. Shivani Jha.JPG",
         profileUrl: "https://mits.ac.in/facultyprofile/1122"
       }
+      */
     ],
     detailedAchievements: [
-      { title: "Achievements Tab Status", description: "Official AIML achievements section currently marked to be updated shortly.", type: "faculty" },
+      /*
+{ title: "Achievements Tab Status", description: "Official AIML achievements section currently marked to be updated shortly.", type: "faculty" },
       { title: "Industry Readiness Programme 2025-26", description: "Department conducted skill development programme for AIML engineers.", type: "student" },
+      */
     ],
     facilities: [
       { name: "Class Rooms", description: "Department class room infrastructure is maintained for regular academic delivery.", equipment: ["Smart boards", "Projection systems"] },
       { name: "Labs", description: "Department labs are listed in infrastructure and are progressively expanded.", equipment: ["Computing systems", "Programming toolchains"] },
     ],
     patents: [
-      { title: "AI-based Medical Diagnosis System", status: "Published", year: "2023" },
+      /*
+{ title: "AI-based Medical Diagnosis System", status: "Published", year: "2023" },
       { title: "Generative AI for Content Creation", status: "Filed", year: "2024" },
       { title: "Autonomous Drone Navigation using RL", status: "Filed", year: "2023" },
+      */
     ],
     publications: [
-      { title: "Journals", type: "journal", year: "To be updated shortly" },
+      /*
+{ title: "Journals", type: "journal", year: "To be updated shortly" },
       { title: "Conferences", type: "conference", year: "To be updated shortly" },
+      */
     ],
     consultancy: [{ title: "AI Model Development for Agri-Tech", agency: "Agri Startups", amount: "₹5 Lakhs" }],
     events: [
-      { title: "Guest Lecture on Knowledge and Skills for the AI-Driven World", date: "10th April 2026", description: "A Guest Lecture under AICTE DPS Scheme organized by Department of CSE - Artificial Intelligence and Machine Learning.", image: "" },
+      /*
+{ title: "Guest Lecture on Knowledge and Skills for the AI-Driven World", date: "10th April 2026", description: "A Guest Lecture under AICTE DPS Scheme organized by Department of CSE - Artificial Intelligence and Machine Learning.", image: "" },
       { title: "Skill Development Programme on Industry Readiness for AIML Engineers", date: "6th April 2026", description: "A Skill Development Programme on 'Industry Readiness for an AIML Engineer' organized by Department of CSE - Artificial Intelligence and Machine Learning." },
       { title: "Six-Day Online Faculty Development Program on Cyber Defense with Deep Learning", date: "16th to 21st March 2026", description: "An Online Faculty Development Program on 'Next Generation Cyber Defense with Deep Learning' organized by Department of CSE - Artificial Intelligence and Machine Learning." },
       { title: "One-Day Workshop on Interactive Game Development using Scratch", date: "13th March 2026", description: "A One day workshop on 'Interactive Game Development using Scratch' organized by Department of Computer Science and Engineering - Artificial Intelligence and Machine Learning." },
@@ -1877,18 +2063,29 @@ faculty: [
       { title: "One Day Workshop on IOT Applications", date: "6th September 2024", description: "A One Day Workshop on 'IOT Applications' organized by Department of Computer Science & Engineering - Artificial Intelligence & Machine Learning." },
       { title: "CISCO Networking Awareness Program", date: "2nd September 2024", description: "An Awareness Program 'CISCO Networking Awareness Program' organized by Department of Computer Science & Engineering - Artificial Intelligence & Machine Learning." },
       { title: "Departmental Level Hackathon", date: "30th August 2024", description: "A 'Departmental Level Hackathon' organized by Department of Computer Science & Engineering - Artificial Intelligence & Machine Learning in association with Institution's Innovation Council." },
+      */
     ],
     mous: [
-      { name: "NVIDIA", purpose: "GPU Computing Partnership", year: "2022" },
+      /*
+{ name: "NVIDIA", purpose: "GPU Computing Partnership", year: "2022" },
       { name: "Google DeepMind", purpose: "Research Collaboration", year: "2023" },
+      */
     ],
-    placement: { percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"] },
+    placement: {
+      /*
+percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruiters: ["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Wipro", "IBM"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "AI-Powered Medical Diagnosis Assistant", students: "Team of 4", description: "Deep learning model for X-ray analysis" },
+      /*
+{ title: "AI-Powered Medical Diagnosis Assistant", students: "Team of 4", description: "Deep learning model for X-ray analysis" },
       { title: "Chatbot using Large Language Models", students: "Team of 3", description: "Custom LLM-based conversational AI" },
+      */
     ],
     subjects: [
-      { name: "Machine Learning Fundamentals", semester: 3, type: "core" },
+      /*
+{ name: "Machine Learning Fundamentals", semester: 3, type: "core" },
       { name: "Deep Learning", semester: 4, type: "core" },
       { name: "Natural Language Processing", semester: 5, type: "core" },
       { name: "Computer Vision", semester: 5, type: "core" },
@@ -1896,6 +2093,7 @@ faculty: [
       { name: "Generative AI", semester: 7, type: "elective" },
       { name: "Explainable AI", semester: 7, type: "elective" },
       { name: "AI Ethics & Responsible AI", semester: 8, type: "elective" },
+      */
     ],
     documents: [
       { title: "Stock Register", url: "https://mits.ac.in/assets/pdf/stock-registers/Stock_Register_CSE_AIML.pdf" },
@@ -1925,7 +2123,8 @@ faculty: [
     courses: ["Bachelor of Computer Applications", "Master of Computer Applications"],
     contactInfo: { email: "mcahod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. S. V. S. Ganga Devi", designation: "Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visva Vidyalayam, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Dr. S. V. S. Ganga Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/253" },
+      /*
+{ name: "Dr. S. V. S. Ganga Devi", designation: "Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visva Vidyalayam, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Dr. S. V. S. Ganga Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/253" },
       { name: "Dr. N. Naveen Kumar", designation: "Professor & Head", qualification: "Ph.D (S. V. University, Tirupathi)", image: "https://mits.ac.in/public/uploads/faculty/Naveen Kumar.JPG", profileUrl: "https://mits.ac.in/facultyprofile/254" },
       { name: "Dr. K. Nirmala Devi", designation: "Assoc. Professor", qualification: "Ph.D., (Anna university)", image: "https://mits.ac.in/public/uploads/faculty/Dr. K. Nirmala Devi.JPG", profileUrl: "https://mits.ac.in/facultyprofile/600" },
       { name: "Dr.  K. Prathapchandran", designation: "Asst. Professor", qualification: "Ph.D. (The Gandhigram Rural Institute)", image: "https://mits.ac.in/public/uploads/faculty/Dr.  K. Prathapchandran.JPG", profileUrl: "https://mits.ac.in/facultyprofile/736" },
@@ -1945,38 +2144,59 @@ faculty: [
       { name: "Mrs. Roopa", designation: "Asst. Professor", qualification: "M.Tech. (Sri Sai Institute of Science and Technology, JNTUA)", image: "https://mits.ac.in/public/uploads/faculty/Roopa MCA.JPG", profileUrl: "https://mits.ac.in/facultyprofile/506" },
       { name: "Mr. Repana Mallikarjuna", designation: "Asst. Professor", qualification: "M.Tech. (Vellore Institute of Technology)", image: "https://mits.ac.in/public/uploads/faculty/malli.JPG", profileUrl: "https://mits.ac.in/facultyprofile/678" },
       { name: "Mrs. K. Kavitha", designation: "Asst. Professor", qualification: "Ph.D. (NIT, Puducherry)", image: "https://mits.ac.in/public/uploads/faculty/Mrs. K. Kavitha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/460" },
+      */
     ],
     detailedAchievements: [
-      { title: "MCA Faculty Achievements 2025-26", description: "Department publishes year-wise faculty achievements in the official achievements tab.", type: "faculty" },
+      /*
+{ title: "MCA Faculty Achievements 2025-26", description: "Department publishes year-wise faculty achievements in the official achievements tab.", type: "faculty" },
       { title: "MCA Faculty Achievements 2024-25", description: "Official annual records include academic and research accomplishments.", type: "faculty" },
       { title: "MCA Faculty Achievements 2023-24", description: "Achievements are maintained and updated year-wise.", type: "faculty" },
+      */
     ],
     facilities: [
       { name: "Class Rooms", description: "Department has sufficient class rooms supporting regular academic activities.", equipment: ["Digital teaching aids", "Projection systems"] },
       { name: "Department Labs", description: "Labs are available beyond curriculum requirements and used through weekly schedules.", equipment: ["Programming workstations", "Practical lab infrastructure"] },
     ],
     patents: [
-      { title: "Smart Workflow Automation for Campus Services", status: "Filed", year: "2024" },
+      /*
+{ title: "Smart Workflow Automation for Campus Services", status: "Filed", year: "2024" },
+      */
     ],
     publications: [
-      { title: "Faculty Publications 2024-2025", type: "journal", year: "2024-25" },
+      /*
+{ title: "Faculty Publications 2024-2025", type: "journal", year: "2024-25" },
       { title: "Faculty Publications 2023-2024", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
+      */
     ],
     consultancy: [{ title: "Web Application Development Support", agency: "Local Organizations", amount: "₹2 Lakhs" }],
     events: [
-      { title: "Workshop on Machine Learning: From Fundamentals to Future Frontiers", date: "22nd December 2025", description: "Organized by Department of Computer Applications in association with ISTE, MITS." },
+      /*
+{ title: "Workshop on Machine Learning: From Fundamentals to Future Frontiers", date: "22nd December 2025", description: "Organized by Department of Computer Applications in association with ISTE, MITS." },
       { title: "Workshop on Generative AI Using Microservices Architecture", date: "13th June 2025", description: "One-day workshop organized by Department of Computer Applications in association with ISTE and IIC." },
       { title: "Workshop on NS3 for Cybersecurity through Cloud-based Innovations", date: "29th to 30th January 2025", description: "Two-day workshop organized by Department of Computer Applications in association with ISTE." },
+      */
     ],
-    mous: [{ name: "Industry Partners (IT)", purpose: "Internships and project collaborations", year: "2024" }],
-    placement: { percentage: "95%", avgPackage: "₹8 LPA", highestPackage: "₹14 LPA", recruiters: ["TCS", "Infosys", "Wipro", "Accenture", "Cognizant"] },
+    mous: [
+      /*
+{ name: "Industry Partners (IT)", purpose: "Internships and project collaborations", year: "2024" }
+      */
+    ],
+    placement: {
+      /*
+percentage: "95%", avgPackage: "₹8 LPA", highestPackage: "₹14 LPA", recruiters: ["TCS", "Infosys", "Wipro", "Accenture", "Cognizant"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "Enterprise Task Automation Platform", students: "Team of 4", description: "Workflow automation system for institutional operations" },
+      /*
+{ title: "Enterprise Task Automation Platform", students: "Team of 4", description: "Workflow automation system for institutional operations" },
       { title: "AI-enabled Resume Screening Tool", students: "Team of 3", description: "ML-based profile matching for recruitment use-cases" },
+      */
     ],
     subjects: [
-      { name: "Advanced Algorithms", semester: 1, type: "core" },
+      /*
+{ name: "Advanced Algorithms", semester: 1, type: "core" },
       { name: "Software Architecture", semester: 1, type: "core" },
       { name: "Cloud Computing", semester: 2, type: "core" },
       { name: "Artificial Intelligence", semester: 2, type: "core" },
@@ -1984,6 +2204,7 @@ faculty: [
       { name: "Data Science for Applications", semester: 3, type: "elective" },
       { name: "Cyber Security for Applications", semester: 4, type: "elective" },
       { name: "DevOps and MLOps", semester: 4, type: "elective" },
+      */
     ],
     documents: [
       { title: "BoS 2024-25", url: "https://mits.ac.in/public/uploads/departments/3ce2d90ae1fbe764f9eefdf900e2a803.pdf" },
@@ -2009,7 +2230,8 @@ faculty: [
     courses: ["Bachelor of Business Administration", "Master of Business Administration"],
     contactInfo: { email: "mbahod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Bhanu Sree Reddy.JPG", profileUrl: "https://mits.ac.in/facultyprofile/701" },
+      /*
+{ name: "Dr. Bhanu Sree Reddy", designation: "Professor & Dean-School of Management", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Bhanu Sree Reddy.JPG", profileUrl: "https://mits.ac.in/facultyprofile/701" },
       { name: "Dr. Nagarajan. G", designation: "Professor", qualification: "PGDM-AICTE (ISBR)", image: "https://mits.ac.in/public/uploads/faculty/DSC_6987.JPG", profileUrl: "https://mits.ac.in/facultyprofile/636" },
       { name: "Dr. D. Pradeep Kumar", designation: "Professor & Registrar (I/c)", qualification: "Ph.D. (Sri Krishnadevaraya University, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/Dr. D. Pradeep.JPG", profileUrl: "https://mits.ac.in/facultyprofile/270" },
       { name: "Dr. N. Gangisetty", designation: "Professor", qualification: "Ph.D. (Sri Venkateswara University, Tirupati)", image: "https://mits.ac.in/public/uploads/faculty/Gangi Setty.JPG", profileUrl: "https://mits.ac.in/facultyprofile/271" },
@@ -2026,11 +2248,14 @@ faculty: [
       { name: "Mr. Roja Kiran", designation: "Asst. Professor", qualification: "Ph.D. (S.K. University, Anantapur)", image: "https://mits.ac.in/public/uploads/faculty/DSC_7005.JPG", profileUrl: "https://mits.ac.in/facultyprofile/539" },
       { name: "Mr. V. Venkata Rao", designation: "Asst. Professor", qualification: "M.Phil. (S.V. University)", image: "https://mits.ac.in/public/uploads/faculty/DSC_7012.JPG", profileUrl: "https://mits.ac.in/facultyprofile/292" },
       { name: "Mr. B. Sreekanth", designation: "Asst. Professor", qualification: "M.B.A. (Edith Cowan University)", image: "https://mits.ac.in/public/uploads/faculty/Mr. B. Sreekanth.JPG", profileUrl: "https://mits.ac.in/facultyprofile/399" },
+      */
     ],
     detailedAchievements: [
-      { title: "MBA Faculty Achievements 2024-25", description: "Department records faculty achievements year-wise in the achievements tab.", type: "faculty" },
+      /*
+{ title: "MBA Faculty Achievements 2024-25", description: "Department records faculty achievements year-wise in the achievements tab.", type: "faculty" },
       { title: "MBA Faculty Achievements 2023-24", description: "Annual faculty achievement records are maintained on official page.", type: "faculty" },
       { title: "MBA Faculty Achievements 2022-23", description: "Department publishes year-wise achievement updates for faculty.", type: "faculty" },
+      */
     ],
     facilities: [
       { name: "Business Analytics Lab", description: "Data-driven decision making training", equipment: ["SPSS", "Excel Advanced", "Tableau"] },
@@ -2039,13 +2264,16 @@ faculty: [
     ],
     patents: [],
     publications: [
-      { title: "Faculty Publications 2024-2025", type: "journal", year: "2024-25" },
+      /*
+{ title: "Faculty Publications 2024-2025", type: "journal", year: "2024-25" },
       { title: "Faculty Publications 2023-2024", type: "journal", year: "2023-24" },
       { title: "Faculty Publications 2022-2023", type: "journal", year: "2022-23" },
+      */
     ],
     consultancy: [{ title: "Business Strategy Consulting", agency: "SMEs", amount: "₹2 Lakhs" }],
     events: [
-      { title: "Industry Leader Talk on Global Business Strategy Post-2025 Trends", date: "15th April 2026", description: "An insightful session by senior executives from Fortune 500 companies discussing emerging global business opportunities and strategic frameworks in the post-pandemic era. Participants will learn about digital transformation, ESG integration, and market expansion strategies. Organized by Department of Management Studies." },
+      /*
+{ title: "Industry Leader Talk on Global Business Strategy Post-2025 Trends", date: "15th April 2026", description: "An insightful session by senior executives from Fortune 500 companies discussing emerging global business opportunities and strategic frameworks in the post-pandemic era. Participants will learn about digital transformation, ESG integration, and market expansion strategies. Organized by Department of Management Studies." },
       { title: "National Case Study Competition on Business Innovation 2026", date: "8th April 2026", description: "A competitive platform where MBA teams present solutions to real-time business challenges from industry partners. Participants analyze complex case studies in marketing, finance, supply chain, and HR domains. Winners receive recognition and internship opportunities. Hosted by Department of Management Studies." },
       { title: "Workshop on Artificial Intelligence for Business Decision Making", date: "28th March 2026", description: "Hands-on training on leveraging AI and machine learning tools for business analytics, demand forecasting, and customer behavior prediction. Industry experts demonstrate real-world applications and tools used in management consulting. Organized in collaboration with IIC and industry partners." },
       { title: "Alumni Entrepreneurs Roundtable: Starting Your Business", date: "20th March 2026", description: "A panel discussion featuring MITS MBA alumni who have founded and scaled successful startups. Topics include funding strategies, market entry, team building, and managing growth. Interactive Q&A session with guidance on entrepreneurship. Organized by Department of Management Studies." },
@@ -2055,17 +2283,28 @@ faculty: [
       { title: "Marketing Strategy Workshop: Digital Transformation for Businesses", date: "14th February 2026", description: "Hands-on workshop on modern digital marketing strategies including social media marketing, SEO/SEM, content marketing, and customer relationship management. Industry practitioners share case studies from successful campaigns across FMCG, e-commerce, and B2B sectors." },
       { title: "Corporate Finance and Risk Management Seminar", date: "31st January 2026", description: "A comprehensive seminar on contemporary corporate finance practices including M&A strategies, financial modeling, risk assessment, and derivative instruments. Guest speakers from investment banks and corporate finance teams share insights on capital management and portfolio optimization." },
       { title: "Business Excellence and Entrepreneurial Leadership Lecture Series", date: "18th January 2026", description: "Inaugural lecture series featuring renowned business leaders discussing lessons in leadership, organizational culture, and building high-performing teams. Topics include ethical business practices, corporate governance, and sustainable business models for long-term value creation." },
+      */
     ],
     mous: [
-      { name: "ICFAI Business School", purpose: "Academic Exchange", year: "2021" },
+      /*
+{ name: "ICFAI Business School", purpose: "Academic Exchange", year: "2021" },
       { name: "CII", purpose: "Industry Interaction", year: "2022" },
+      */
     ],
-    placement: { percentage: "90%", avgPackage: "₹5 LPA", highestPackage: "₹12 LPA", recruiters: ["Deloitte", "KPMG", "HDFC", "ICICI", "Amazon", "Flipkart"] },
+    placement: {
+      /*
+percentage: "90%", avgPackage: "₹5 LPA", highestPackage: "₹12 LPA", recruiters: ["Deloitte", "KPMG", "HDFC", "ICICI", "Amazon", "Flipkart"]
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [
-      { title: "Market Research for FMCG Product Launch", students: "Team of 5", description: "Primary and secondary research for new product positioning" },
+      /*
+{ title: "Market Research for FMCG Product Launch", students: "Team of 5", description: "Primary and secondary research for new product positioning" },
+      */
     ],
     subjects: [
-      { name: "Principles of Management", semester: 1, type: "core" },
+      /*
+{ name: "Principles of Management", semester: 1, type: "core" },
       { name: "Financial Accounting", semester: 1, type: "core" },
       { name: "Marketing Management", semester: 2, type: "core" },
       { name: "Human Resource Management", semester: 2, type: "core" },
@@ -2073,6 +2312,7 @@ faculty: [
       { name: "Strategic Management", semester: 3, type: "core" },
       { name: "International Business", semester: 4, type: "elective" },
       { name: "Digital Marketing", semester: 4, type: "elective" },
+      */
     ],
     documents: [
       { title: "Faculty Initiatives on Teaching and Learning", url: "https://mits.ac.in/assets/pdf/mba/Faculty Initiatives on Teaching and learning-MBA.pdf" },
@@ -2118,7 +2358,8 @@ faculty: [
     ],
     contactInfo: { email: "humhod@mits.ac.in", phone: "+91-8571-280255" },
     faculty: [
-      { name: "Dr. Sudhakar Beedam", designation: "Assoc. Professor & Head (I/c)", qualification: "Ph.D. (EFLU, Hyderabad)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sudhakar Beedam.JPG", profileUrl: "https://mits.ac.in/facultyprofile/691.html" },
+      /*
+{ name: "Dr. Sudhakar Beedam", designation: "Assoc. Professor & Head (I/c)", qualification: "Ph.D. (EFLU, Hyderabad)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. Sudhakar Beedam.JPG", profileUrl: "https://mits.ac.in/facultyprofile/691.html" },
       { name: "Dr. S. Shanmuga Priya", designation: "Assoc. Professor", qualification: "Ph.D. (Sri Padmavathi Mahila Visva Vidyalayam (Women’s University), Tirupati, A.P.)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. S. Shanmuga Priya.JPG", profileUrl: "https://mits.ac.in/facultyprofile/281.html" },
       { name: "Dr. Bishnu Paramguru Mahapatra", designation: "Assoc. Professor", qualification: "Ph.D. (Berhampur University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/Dr. Bishnu Paramguru Mahapatra.JPG", profileUrl: "https://mits.ac.in/facultyprofile/697.html" },
       { name: "Dr. P. Athahar", designation: "Assoc. Professor  & Senior Manager-Student Affairs", qualification: "Ph.D. (Dravidian University)", subDepartment: "Department of English & Foreign Languages", image: "https://mits.ac.in/public/uploads/faculty/sam.JPG", profileUrl: "https://mits.ac.in/facultyprofile/280.html" },
@@ -2176,11 +2417,14 @@ faculty: [
       { name: "Dr. C. Srinivasa Raju", designation: "Librarian", qualification: "Ph.D. (J.N.T.U. Kakinada)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/Dr. C. Srinivasa Raju.JPG", profileUrl: "https://mits.ac.in/facultyprofile/393.html" },
       { name: "Dr. C. Damodharan", designation: "Physical Director", qualification: "Ph.D (Karpagam university, Coimbatore)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/damodaran.jpeg", profileUrl: "https://mits.ac.in/facultyprofile/394.html" },
       { name: "Mrs. Kadithi Radha", designation: "Assistant Physical Director", qualification: "Ph.D (Sri Krishnadevaraya University)", subDepartment: "Department of Humanities", image: "https://mits.ac.in/public/uploads/faculty/Mrs. Kadithi Radha.JPG", profileUrl: "https://mits.ac.in/facultyprofile/1088.html" },
+      */
     ],
     detailedAchievements: [
-      { title: "English & Foreign Languages Events", description: "International conferences, language-day programs, and communication-focused FDPs are organized regularly.", type: "faculty" },
+      /*
+{ title: "English & Foreign Languages Events", description: "International conferences, language-day programs, and communication-focused FDPs are organized regularly.", type: "faculty" },
       { title: "Mathematics Day and FDP Series", description: "Department conducts Mathematics Day events and specialized FDPs in computational intelligence and applied mathematics.", type: "faculty" },
       { title: "Physics and Chemistry Conferences", description: "Departments organize science-day celebrations, international symposia, and domain seminars for student engagement.", type: "student" }
+      */
     ],
     facilities: [
       { name: "English & Foreign Languages", description: "Language and communication training facilities supporting professional communication and global competence." },
@@ -2191,22 +2435,32 @@ faculty: [
     ],
     patents: [],
     publications: [
-      { title: "Department of English & Foreign Languages - Year-wise publications", type: "journal", year: "Published on official records" },
+      /*
+{ title: "Department of English & Foreign Languages - Year-wise publications", type: "journal", year: "Published on official records" },
       { title: "Department of Mathematics - Year-wise publications", type: "journal", year: "Published on official records" },
       { title: "Department of Physics/Chemistry - Year-wise publications", type: "journal", year: "Published on official records" }
+      */
     ],
     consultancy: [],
     events: [
-      { title: "Cultural Studies and AI-Enabled ELT", date: "11-12 Mar 2026", description: "Organized by Department of English & Foreign Languages." },
+      /*
+{ title: "Cultural Studies and AI-Enabled ELT", date: "11-12 Mar 2026", description: "Organized by Department of English & Foreign Languages." },
       { title: "National Science Day Celebrations", date: "28 Feb 2026", description: "Organized by Department of Physics with NSS." },
       { title: "Mathematics Day Celebrations", date: "22 Dec 2025", description: "Organized by Department of Mathematics." },
       { title: "World Ozone Day", date: "16 Sep 2025", description: "Organized by Department of Chemistry." }
+      */
     ],
     mous: [],
-    placement: { percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [] },
+    placement: {
+      /*
+percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: []
+      */
+      percentage: "N/A", avgPackage: "N/A", highestPackage: "N/A", recruiters: [],
+    },
     studentProjects: [],
     subjects: [
-      { name: "Communicative English", semester: 1, type: "core" },
+      /*
+{ name: "Communicative English", semester: 1, type: "core" },
       { name: "English for Professional Purposes", semester: 2, type: "core" },
       { name: "Engineering Mathematics", semester: 1, type: "core" },
       { name: "Engineering Physics", semester: 1, type: "core" },
@@ -2214,6 +2468,7 @@ faculty: [
       { name: "Physics Laboratory", semester: 1, type: "core" },
       { name: "Chemistry Laboratory", semester: 1, type: "core" },
       { name: "Communicative English Laboratory", semester: 1, type: "core" }
+      */
     ],
     documents: [
       { title: "Department of English and Foreign Languages - BOS 2023-24", url: "https://mits.ac.in/public/uploads/departments/ca7f5260ce3ca09f652eb43f45f03f4f.pdf" },

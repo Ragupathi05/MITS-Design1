@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const bshProfiles: Record<string, FacultyProfile> = {
-    "Dr. Sudhakar Beedam": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Dr. Sudhakar Beedam": {
         "name": "Dr. Sudhakar Beedam",
         "designation": "Assoc. Professor &amp; Head (I/c)",
         "email": "drsudhakarb@mits.ac.in",
@@ -11587,4 +11589,5 @@ export const bshProfiles: Record<string, FacultyProfile> = {
                 }
             ]
     }
+  */
 };

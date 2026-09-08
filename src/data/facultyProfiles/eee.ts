@@ -33,7 +33,9 @@ export interface FacultyProfile {
 }
 
 export const eeeProfiles: Record<string, FacultyProfile> = {
-    "Dr. C. Kamal Basha": {
+  /*
+  // Static faculty profile data preserved in comments (Dynamic profiles fetched from EngageAI database API)
+"Dr. C. Kamal Basha": {
         "name": "Dr. C. Kamal Basha",
         "email": "viceprincipaladministration@mits.ac.in",
         "image": "https://mits.ac.in/public/uploads/faculty/kamalbasha.JPG",
@@ -4806,4 +4808,5 @@ export const eeeProfiles: Record<string, FacultyProfile> = {
         }
       ]
     }
+  */
 };
