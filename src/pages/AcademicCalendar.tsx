@@ -98,44 +98,47 @@ const AcademicCalendar = () => {
       />
 
       <main className="pt-0">
-        {/* HERO SECTION */}
-        <section className="relative h-[280px] sm:h-[320px] md:h-[360px] overflow-hidden bg-[#0f2a44]">
-          <div className="absolute inset-0">
-            <img
-              src={`${BASE}Hero-Section/image%206.jpg`}
-              alt="MITS Academic Calendars"
-              className="w-full h-full object-cover opacity-60"
-            />
-            <div className="absolute inset-0 bg-black/40 bg-gradient-to-b from-black/50 via-black/30 to-[#0f2a44]" />
+        {/* HERO SECTION - Exact match to Library page layout and typography */}
+        <section
+          className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
+          style={{
+            backgroundImage: `url("${BASE}Hero-Section/image-2.jpg")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+              ACADEMIC SCHEDULE
+            </p>
+            <h1
+              className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-5 text-white tracking-tight"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Academic <span className="text-[#ffd15c]">Calendars</span>
+            </h1>
+            <p className="text-white/90 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-normal">
+              Semester schedules, examination dates, instruction periods, and academic timelines for UG &amp; PG programs.
+            </p>
           </div>
 
-          <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center pt-12">
-            <ScrollReveal>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 text-xs sm:text-sm font-semibold mb-3">
-                <Calendar className="w-4 h-4 text-amber-400" />
-                <span>Academic Schedule</span>
-              </div>
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-md">
-                Academic <span className="text-amber-400">Calendars</span>
-              </h1>
-              <p className="text-white/85 text-xs sm:text-sm md:text-base max-w-2xl mx-auto mt-2 leading-relaxed">
-                Semester schedules, examination dates, instruction periods, and academic timelines for UG & PG programs.
-              </p>
-            </ScrollReveal>
-          </div>
-
-          {/* Breadcrumb */}
-          <div className="absolute bottom-4 left-4 sm:left-8 z-10">
+          {/* Bottom Left Breadcrumb Navigation (Exact match to Library screenshot) */}
+          <div className="absolute bottom-4 left-6 sm:left-8 z-10">
             <nav aria-label="Breadcrumb">
-              <ol className="flex items-center gap-1.5 text-xs sm:text-sm text-white/90">
+              <ol className="flex items-center gap-1.5 text-xs sm:text-sm text-white/80">
                 <li>
-                  <Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
+                  <Link to="/" className="hover:text-white transition-colors">
+                    Home
+                  </Link>
                 </li>
-                <li className="text-white/40">&gt;</li>
+                <li className="text-white/50">›</li>
                 <li>
-                  <Link to="/academics" className="text-white/70 hover:text-white transition-colors">Academics</Link>
+                  <Link to="/academics" className="hover:text-white transition-colors">
+                    Academics
+                  </Link>
                 </li>
-                <li className="text-white/40">&gt;</li>
+                <li className="text-white/50">›</li>
                 <li className="text-amber-300 font-semibold">Academic Calendar</li>
               </ol>
             </nav>

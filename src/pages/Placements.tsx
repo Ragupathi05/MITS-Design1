@@ -21,6 +21,7 @@ const sidebarTabs = [
   { id: "recruiters", label: "Our Recruiters", icon: Building2 },
   { id: "placement-training-team", label: "Placement & Training Team", icon: Award },
   { id: "placement-gallery", label: "Placement Gallery", icon: Building2 },
+  { id: "cisco-networking-academy", label: "Cisco Networking Academy", icon: Globe, path: "/cisco-networking-academy" },
   { id: "contact", label: "Contact", icon: Mail },
 ];
 
@@ -555,6 +556,11 @@ const Placements = () => {
   const shouldShowSection = (id: string) => activeTab === id;
 
   const scrollToSection = (id: string) => {
+    const targetTab = sidebarTabs.find(t => t.id === id);
+    if (targetTab && 'path' in targetTab && targetTab.path) {
+      navigate(targetTab.path);
+      return;
+    }
     setActiveTab(id);
     try {
       navigate(`/placements/${id}`, { replace: true });

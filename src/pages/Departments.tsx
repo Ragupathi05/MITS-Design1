@@ -398,48 +398,52 @@ const Departments = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <Header />
       <main className="pt-0">
-        {/* ==================== HERO SECTION ==================== */}
-        <div className="relative h-[300px] md:h-[350px] overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={`${BASE}Hero-Section/image%206.jpg`}
-              alt="MITS Departments & Schools" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
+        {/* HERO SECTION - Exact match to Library page layout and typography */}
+        <section
+          className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
+          style={{
+            backgroundImage: `url("${BASE}Hero-Section/image-6.jpg")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
+              ACADEMIC DEPARTMENTS
+            </p>
+            <h1
+              className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-5 text-white tracking-tight"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Departments <span className="text-[#ffd15c]">&amp; Schools</span>
+            </h1>
+            <p className="text-white/90 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-normal">
+              Explore our academic excellence across disciplines
+            </p>
           </div>
 
-          <div className="absolute inset-0 flex items-center justify-center text-center px-4 pt-16">
-            <div>
-              <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-2xl">
-                Departments <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">&amp; Schools</span>
-              </h1>
-              <p className="text-base md:text-lg text-white/85 max-w-xl mx-auto">
-                Explore our academic excellence across disciplines
-              </p>
-              <div className="w-20 h-0.5 bg-gradient-to-r from-amber-400 via-red-500 to-amber-400 mx-auto mt-3 rounded-full" />
-            </div>
-          </div>
-
-          {/* Breadcrumb  -  bottom-left */}
-          <div className="absolute bottom-4 left-6">
+          {/* Bottom Left Breadcrumb Navigation (Exact match to Library screenshot) */}
+          <div className="absolute bottom-4 left-6 sm:left-8 z-10">
             <nav aria-label="Breadcrumb">
-              <ol className="flex items-center gap-1.5 text-sm">
+              <ol className="flex items-center gap-1.5 text-xs sm:text-sm text-white/80">
                 <li>
-                  <Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
+                  <Link to="/" className="hover:text-white transition-colors">
+                    Home
+                  </Link>
                 </li>
-                <li className="text-white/50"> - </li>
+                <li className="text-white/50">›</li>
                 <li>
-                  <Link to="/academics" className="text-white/70 hover:text-white transition-colors">Academics</Link>
+                  <Link to="/academics" className="hover:text-white transition-colors">
+                    Academics
+                  </Link>
                 </li>
-                <li className="text-white/50"> - </li>
-                <li className="text-white font-semibold">Departments</li>
+                <li className="text-white/50">›</li>
+                <li className="text-amber-300 font-semibold">Departments</li>
               </ol>
             </nav>
           </div>
-
-
-        </div>
+        </section>
 
         {/* ==================== SEARCH & FILTER SECTION ==================== */}
         <div className="bg-gradient-to-r from-[#0f2a44] to-[#1a3d5c] shadow-md relative z-10 -mt-1">

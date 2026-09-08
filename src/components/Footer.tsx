@@ -22,8 +22,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-11 h-11 rounded-sm bg-white p-1.5 flex items-center justify-center">
-                <img src={`${import.meta.env.BASE_URL}mits-logo.jfif`} alt="MITS logo" className="w-full h-full object-contain" />
+              <div className="w-11 h-11 rounded-sm bg-white p-1 flex items-center justify-center">
+                <img src={`${import.meta.env.BASE_URL}mits-logo.png`} alt="MITS logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <p className="font-display font-bold text-sm text-white">MITS</p>

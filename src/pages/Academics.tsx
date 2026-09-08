@@ -103,9 +103,9 @@ const Academics = () => {
                     </div>
                     <ul className="space-y-2">
                       {school.depts.map((dept) => (
-                        <li key={dept} className="text-muted-foreground text-sm flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                          {dept}
+                        <li key={dept} className="text-muted-foreground text-sm flex items-center gap-2 text-left tracking-normal">
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                          <span>{dept}</span>
                         </li>
                       ))}
                     </ul>

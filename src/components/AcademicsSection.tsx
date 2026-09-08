@@ -59,13 +59,11 @@ const tabItems: { key: ProgramBucket; label: string }[] = [
 const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
   ug: [
     {
-      school: "School of Engineering",
+      school: "School of AI & ML",
       courses: [
-        { name: "B.Tech in Civil Engineering", icon: HardHat, link: "/department/ce" },
-        { name: "B.Tech in Electrical & Electronics Engineering", icon: Zap, link: "/department/eee" },
-        { name: "B.Tech in Mechanical Engineering", icon: Cog, link: "/department/me" },
-        { name: "B.Tech in Electronics & Communication Engineering", icon: CircuitBoard, link: "/department/ece" },
-        { name: "B.Tech in Bioinformatics", icon: Dna, link: "/department/bioinfo" },
+        { name: "B.Tech CSE (AI and ML)", icon: BrainCircuit, link: "/department/aiml" },
+        { name: "B.Tech CSE (AI and Data Science)", icon: ChartNoAxesCombined, link: "/department/cseds" },
+        { name: "B.Tech CSE (AI and Robotics)", icon: Bot, link: "/department/ai" },
       ],
     },
     {
@@ -77,11 +75,13 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
       ],
     },
     {
-      school: "School of AI & ML",
+      school: "School of Engineering",
       courses: [
-        { name: "B.Tech CSE (AI and ML)", icon: BrainCircuit, link: "/department/aiml" },
-        { name: "B.Tech CSE (AI and Data Science)", icon: ChartNoAxesCombined, link: "/department/cseds" },
-        { name: "B.Tech CSE (AI and Robotics)", icon: Bot, link: "/department/ai" },
+        { name: "B.Tech in Civil Engineering", icon: HardHat, link: "/department/ce" },
+        { name: "B.Tech in Electrical & Electronics Engineering", icon: Zap, link: "/department/eee" },
+        { name: "B.Tech in Mechanical Engineering", icon: Cog, link: "/department/me" },
+        { name: "B.Tech in Electronics & Communication Engineering", icon: CircuitBoard, link: "/department/ece" },
+        { name: "B.Tech in Bioinformatics", icon: Dna, link: "/department/bioinfo" },
       ],
     },
     {
@@ -91,12 +91,9 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
   ],
   pg: [
     {
-      school: "School of Engineering",
+      school: "School of AI & ML",
       courses: [
-        { name: "M.Tech Civil Engineering (Construction Engineering & Management)", icon: Construction },
-        { name: "M.Tech Automation and Robotics", icon: Rocket },
-        { name: "M.Tech Electric Vehicle Technology", icon: Gauge },
-        { name: "M.Tech VLSI Design & Embedded Systems", icon: Cable },
+        { name: "M.Tech CSE (AI and ML)", icon: Sparkles },
       ],
     },
     {
@@ -107,9 +104,12 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
       ],
     },
     {
-      school: "School of AI & ML",
+      school: "School of Engineering",
       courses: [
-        { name: "M.Tech CSE (AI and ML)", icon: Sparkles },
+        { name: "M.Tech Civil Engineering (Construction Engineering & Management)", icon: Construction },
+        { name: "M.Tech Automation and Robotics", icon: Rocket },
+        { name: "M.Tech Electric Vehicle Technology", icon: Gauge },
+        { name: "M.Tech VLSI Design & Embedded Systems", icon: Cable },
       ],
     },
     {
@@ -119,12 +119,9 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
   ],
   phd: [
     {
-      school: "School of Engineering",
+      school: "School of AI & ML",
       courses: [
-        { name: "Ph.D Civil Engineering", icon: Building2 },
-        { name: "Ph.D Electronics & Communication Engineering", icon: ScanLine },
-        { name: "Ph.D Electrical & Electronics Engineering", icon: Binary },
-        { name: "Ph.D Mechanical Engineering", icon: Microscope },
+        { name: "Ph.D Artificial Intelligence & Machine Learning", icon: Sparkles },
       ],
     },
     {
@@ -132,6 +129,15 @@ const programsByTab: Record<ProgramBucket, SchoolGroup[]> = {
       courses: [
         { name: "Ph.D Computer Science", icon: Orbit },
         { name: "Ph.D Computer Science and Engineering", icon: Library },
+      ],
+    },
+    {
+      school: "School of Engineering",
+      courses: [
+        { name: "Ph.D Civil Engineering", icon: Building2 },
+        { name: "Ph.D Electronics & Communication Engineering", icon: ScanLine },
+        { name: "Ph.D Electrical & Electronics Engineering", icon: Binary },
+        { name: "Ph.D Mechanical Engineering", icon: Microscope },
       ],
     },
     {
@@ -310,7 +316,7 @@ const AcademicsSection = () => {
                           <div className="relative z-10 w-12 h-12 shrink-0 rounded-xl border border-[#b30000]/40 bg-white flex items-center justify-center shadow-[0_3px_10px_rgba(179,0,0,0.08)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                             <Icon className="w-5 h-5 text-[#b30000]" />
                           </div>
-                          <p className="relative z-10 text-sm md:text-[15px] font-medium leading-snug text-[#0f2a44] transition-transform duration-300 group-hover:translate-x-1">
+                          <p className="relative z-10 text-sm md:text-[15px] font-medium leading-snug text-[#0f2a44] text-left tracking-normal transition-transform duration-300 group-hover:translate-x-1">
                             {course.name}
                           </p>
                         </motion.article>

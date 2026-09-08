@@ -49,7 +49,7 @@ const AdmissionHighlight = () => (
 
             {/* Badges */}
             <div className="flex flex-wrap gap-2 text-sm md:text-sm mb-8">
-              {["27+ Years of Legacy", "100% Placement Support", "50+ LPA Highest Package", "15+ Global Partners", "NAAC A+ Accredited", "UGC Recognized"].map(b => (
+              {["28+ Years of Legacy", "100% Placement Support", "21 LPA Highest Package", "15+ Global Partners", "NAAC A+ Accredited", "UGC Recognized"].map(b => (
                 <span key={b} className="rounded-full border border-white/20 bg-[#2a4a6b] px-3 py-1 text-white">{b}</span>
               ))}
             </div>

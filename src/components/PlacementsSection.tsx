@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const stats = [
   { icon: IndianRupee, value: 21, suffix: " LPA", label: "Highest Package" },
   { icon: TrendingUp, value: 6, suffix: ".8 LPA", label: "Average Package" },
-  { icon: Users, value: 94, suffix: "%", label: "Placement %" },
+  { icon: Users, value: 94, suffix: "%", label: "Placement Percentage" },
   { icon: Building, value: 200, suffix: "+", label: "Recruiters" },
 ];
 
