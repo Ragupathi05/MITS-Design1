@@ -1,7 +1,7 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import {
   ArrowLeft, FileText, Download, Phone, Mail, MapPin,
-  Users, BookOpen, ChevronRight, ExternalLink,
+  Users, BookOpen, ChevronRight, ExternalLink, Calendar, ShieldCheck,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,6 +11,39 @@ import { cellCategories } from "@/data/cellsData";
 import IeiView from "@/components/cells/IeiView";
 
 const BASE = import.meta.env.BASE_URL;
+
+// Helper to make URLs and emails clickable in about text
+function renderTextWithLinks(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+|[\w.-]+@[\w.-]+\.[a-zA-Z]{2,})/g;
+  const parts = text.split(urlRegex);
+  return parts.map((part, index) => {
+    if (part.startsWith("http://") || part.startsWith("https://")) {
+      return (
+        <a
+          key={index}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#b31317] hover:text-[#8b0000] underline font-medium break-all"
+        >
+          {part}
+        </a>
+      );
+    }
+    if (part.includes("@") && !part.includes(" ")) {
+      return (
+        <a
+          key={index}
+          href={`mailto:${part}`}
+          className="text-[#b31317] hover:text-[#8b0000] underline font-medium"
+        >
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+}
 
 export default function CellDetail({ overrideId }: { overrideId?: string } = {}) {
   const { id } = useParams<{ id: string }>();
@@ -42,7 +75,7 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
     cellCategories.find((cat) => cat.cells.some((c) => c.detailId === id))?.title ??
     "Cells & Committees";
 
-  const brochureDoc = cell.documents.find((d) => d.title === "Download Brochure");
+  const brochureDoc = cell.id !== "grc" ? cell.documents.find((d) => d.title === "Download Brochure") : null;
   const otherDocs   = cell.documents.filter((d) => d.title !== "Download Brochure");
   const isStatsTable = cell.id === "swc" && cell.members.length > 0 && cell.members[0].sno === "Year";
 
@@ -100,9 +133,49 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
                   </h2>
                   <div className="space-y-3">
                     {cell.aboutText.map((para, i) => (
-                      <p key={i} className="text-[#0f2a44]/80 text-sm md:text-base leading-relaxed">{para}</p>
+                      <p key={i} className="text-[#0f2a44]/80 text-sm md:text-base leading-relaxed">
+                        {renderTextWithLinks(para)}
+                      </p>
                     ))}
                   </div>
+                </section>
+              </ScrollReveal>
+            )}
+
+            {cell.id === "grc" && (
+              <ScrollReveal>
+                <section className="bg-gradient-to-br from-[#fffdfa] to-[#fff8e6]/50 rounded-2xl border border-[#caa74d]/30 shadow-sm p-6 md:p-8">
+                  <h3 className="font-display text-lg font-bold text-[#0f2a44] mb-3 flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5 text-[#b31317]" />
+                    All the students and staff
+                  </h3>
+                  <ul className="space-y-2.5 text-sm text-[#0f2a44]/85">
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-[#b31317] font-bold mt-0.5">•</span>
+                      <span>can utilize the suggestion box to drop their complaints.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-[#b31317] font-bold mt-0.5">•</span>
+                      <span>can complain to the GRC Coordinator directly.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-[#b31317] font-bold mt-0.5">•</span>
+                      <span>can complain to their respective HoDs.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-[#b31317] font-bold mt-0.5">•</span>
+                      <span>can complain directly to the Principal.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-[#b31317] font-bold mt-0.5">•</span>
+                      <span>
+                        can complain through mails to{" "}
+                        <a href="mailto:grc@mits.ac.in" className="text-[#b31317] font-semibold underline hover:text-[#8b0000]">
+                          grc@mits.ac.in
+                        </a>
+                      </span>
+                    </li>
+                  </ul>
                 </section>
               </ScrollReveal>
             )}
@@ -204,6 +277,39 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
                         </li>
                       );
                     })}
+                  </ul>
+                </section>
+              </ScrollReveal>
+            )}
+
+            {cell.events && cell.events.length > 0 && (
+              <ScrollReveal>
+                <section className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm p-6 md:p-8">
+                  <h2 className="font-display text-xl font-bold text-[#0f2a44] mb-5 flex items-center gap-2">
+                    <Calendar className="w-5 h-5 text-[#b31317]" />
+                    Events
+                  </h2>
+                  <ul className="space-y-3">
+                    {cell.events.map((ev, i) => (
+                      <li key={i}>
+                        <a
+                          href={ev.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-start justify-between gap-3 p-3.5 rounded-xl border border-[#0f2a44]/10 hover:border-[#caa74d] hover:bg-[#fff8e6]/30 transition-all group"
+                        >
+                          <div className="flex items-start gap-3 min-w-0">
+                            <span className="w-5 h-5 rounded-full bg-[#b31317] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm group-hover:bg-[#8b0000] transition-colors">
+                              <ChevronRight className="w-3.5 h-3.5 -mr-0.5" />
+                            </span>
+                            <span className="text-sm font-medium text-[#0f2a44] group-hover:text-[#b31317] transition-colors leading-relaxed">
+                              {ev.title}
+                            </span>
+                          </div>
+                          <ExternalLink className="w-4 h-4 shrink-0 text-slate-400 group-hover:text-[#b31317] transition-colors mt-0.5" />
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </section>
               </ScrollReveal>

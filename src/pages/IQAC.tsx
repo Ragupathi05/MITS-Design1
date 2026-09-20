@@ -844,10 +844,14 @@ const IQAC = () => {
                   ))}
                 </nav>
               </div>
-              <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-xl p-5">
-                <p className="font-body text-sm uppercase tracking-[0.2em] text-[#caa74d] mb-2">IQAC Coordinator</p>
-                <p className="font-body text-sm text-white/85">{contact.email}</p>
-                <p className="font-body text-sm text-white/85 mt-1">{contact.phone}</p>
+              <div className="bg-gradient-to-br from-[#0f2a44] to-[#152f4f] text-white rounded-xl p-5 shadow-sm">
+                <p className="font-body text-xs uppercase tracking-[0.2em] text-[#caa74d] mb-1 font-bold">IQAC Leadership</p>
+                <p className="font-display font-bold text-base text-white">Dr. A. V. Pavan Kumar</p>
+                <p className="text-xs text-white/70 mb-2">Chief Coordinator</p>
+                <div className="space-y-1.5 text-xs text-white/80">
+                  <p className="flex items-center gap-2"><Mail className="w-3.5 h-3.5 text-[#caa74d]" /> iqac@mits.ac.in</p>
+                  <p className="flex items-center gap-2"><Phone className="w-3.5 h-3.5 text-[#caa74d]" /> +91-8571-280255</p>
+                </div>
               </div>
             </div>
           </aside>
@@ -894,6 +898,66 @@ const IQAC = () => {
 
           {/* Content */}
           <main className="min-w-0">
+            {/* Quick Live Publications Banner matching mits.ac.in/iqac */}
+            <div className="mb-8 rounded-2xl bg-white border border-[#0f2a44]/10 p-5 md:p-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-gray-100">
+                <div className="flex items-center gap-2.5">
+                  <Award className="w-5 h-5 text-[#b31317]" />
+                  <h3 className="font-display font-bold text-base md:text-lg text-[#0f2a44]">
+                    Official IQAC Documentation &amp; Statutory Notifications
+                  </h3>
+                </div>
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#caa74d] bg-[#0f2a44] px-2.5 py-1 rounded-md self-start sm:self-auto">
+                  Live Notifications
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                {[
+                  {
+                    title: "Composition of IQAC",
+                    href: "https://mits.ac.in/assets/pdf/admin/Composition of IQAC.pdf",
+                    desc: "Official Committee Notification",
+                  },
+                  {
+                    title: "Functions of IQAC",
+                    href: "https://mits.ac.in/assets/pdf/admin/Functions of IQAC.pdf",
+                    desc: "Core Mandate & Guidelines",
+                  },
+                  {
+                    title: "IQAC Meetings",
+                    href: "https://mits.ac.in/assets/pdf/admin/Meetings.pdf",
+                    desc: "Minutes & Agendas",
+                  },
+                  {
+                    title: "Student Quality Assurance Cell (SQAC)",
+                    href: "https://mits.ac.in/assets/pdf/swc/Notification 1.pdf",
+                    desc: "SQAC Official Charter",
+                  },
+                ].map((doc) => (
+                  <a
+                    key={doc.title}
+                    href={doc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col justify-between p-3.5 rounded-xl border border-gray-100 bg-[#faf7f2]/60 hover:bg-[#fff8e6] hover:border-[#caa74d]/60 hover:shadow-sm transition-all group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <FileText className="w-4 h-4 text-[#b31317] group-hover:scale-110 transition-transform" />
+                        <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#b31317] transition-colors" />
+                      </div>
+                      <p className="font-display font-bold text-xs sm:text-sm text-[#0f2a44] group-hover:text-[#b31317] transition-colors line-clamp-2">
+                        {doc.title}
+                      </p>
+                    </div>
+                    <p className="text-[11px] text-gray-500 mt-2 font-medium">
+                      {doc.desc}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}

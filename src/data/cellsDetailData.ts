@@ -21,12 +21,19 @@ export interface ContactInfo {
   email?: string;
 }
 
+export interface CellEvent {
+  title: string;
+  href: string;
+  date?: string;
+}
+
 export interface CellDetail {
   id: string;
   name: string;
   aboutText: string[];
   members: Member[];
   documents: DocumentLink[];
+  events?: CellEvent[];
   contacts: ContactInfo[];
   url: string;
 }
@@ -36,11 +43,10 @@ export const cellsDetailData: Record<string, CellDetail> = {
     "name": "Grievance Redressal Cell",
     "aboutText": [
       "As per All India Council for Technical Education (AICTE) regulations regarding the establishment of Mechanism for Grievance Redressal in Technical Institutions, a Grievance Redressal Committee (GRC) is formed to address the grievances of the students.",
-      "The Vice-Principal \u2013 Administration is nominated as the Co-ordinator for the Grievance Redressal Committee. The student grievance can be lodged online at the website",
+      "The Vice-Principal – Administration is nominated as the Co-ordinator for the Grievance Redressal Committee. The student grievance can be lodged online at the website https://mitsmadanapalle.edugrievance.com/ or through https://forms.office.com/r/vke9XhMFac or send through e-mail to grc@mits.ac.in or in writing to \"The Coordinator-GRC, MITS, Madanapalle - 517325\". For each grievance, reported to the Committee, an enquiry committee shall be constituted under the Chairmanship of the Principal and he shall nominate the appropriate members.",
       "The Principal will nominate the co-opt members to the Enquiry Committee as per the type and the nature of the grievance and the situation. Coordinator-GRC will chair the meeting for that particular matter.",
-      "If any of the complainants are not satisfied with the decision of the Grievance Redressal Committee, they may approach the Ombudsman in JNTUA directly. The Ombudsman shall hear to those grievances and disposes them. Within one month of receipt for early redressal of grievance.",
-      "The online students Grievance Redressal Portal",
-      "\u2022 can utilize the suggestion box to drop their complaints."
+      "If any of the complainants are not satisfied with the decision of the Grievance Redressal Committee, they may approach the Ombudsman in JNTUA directly. The Ombudsman shall hear to those grievances and disposes them within one month of receipt for early redressal of grievance.",
+      "The online students Grievance Redressal Portal https://samadhaan.ugc.ac.in/ is initiated by the University Grants Commission, and https://www.aicte-india.org/feedback/ by AICTE to facilitate students and staff to lodge his/her grievance and provide a mechanism for redressal of their grievances."
     ],
     "members": [
       {
@@ -88,14 +94,6 @@ export const cellsDetailData: Record<string, CellDetail> = {
     ],
     "documents": [
       {
-        "title": "BoS",
-        "href": "https://mits.ac.in/assets/pdf/admin/MITS-DTBU-BOS-AY(2025-2026).pdf"
-      },
-      {
-        "title": "Organogram",
-        "href": "https://mits.ac.in/assets/pdf/admin/Organogram-MITS DTBU.pdf"
-      },
-      {
         "title": "Ombudsperson by JNTUA",
         "href": "http://www.mits.ac.in/assets/pdf/admin/appointment of - OMBUDSMAN-Nomination.pdf"
       },
@@ -114,10 +112,6 @@ export const cellsDetailData: Record<string, CellDetail> = {
       {
         "title": "Grievances Redressed",
         "href": "https://www.mits.ac.in/assets/pdf/admin/GRC.pdf"
-      },
-      {
-        "title": "Download Brochure",
-        "href": "https://mits.ac.in/public/uploads/static-pdf/MITS Deemed to be University Brochure 2026.pdf"
       }
     ],
     "contacts": [
@@ -142,16 +136,20 @@ export const cellsDetailData: Record<string, CellDetail> = {
     "members": [],
     "documents": [
       {
-        "title": "BOG",
-        "href": "https://mits.ac.in/Board of Governors 2025-26 members Constitution.pdf"
+        "title": "Anti-Ragging Committee 2026-27",
+        "href": "https://mits.ac.in/assets/pdf/admin/Anti Ragging Proceedings-scan-2026.pdf"
       },
       {
-        "title": "Academic Council",
-        "href": "https://mits.ac.in/Academic Council 2025-26 Members constitution.pdf"
+        "title": "Anti-Ragging Cell with effective from 07-08-2026",
+        "href": "https://mits.ac.in/assets/pdf/admin/Antiragging-2026-27.pdf"
       },
       {
-        "title": "Organogram",
-        "href": "https://mits.ac.in/MITS_Autonomous_Organogram.pdf"
+        "title": "Anti-Ragging Cell Policy (MITSDTBU) 2026-27",
+        "href": "https://mits.ac.in/assets/pdf/admin/AR-MITSDTBU-Policy 2026-27.pdf"
+      },
+      {
+        "title": "Anti-Ragging Cell Standard Operating Procedure",
+        "href": "https://mits.ac.in/assets/pdf/admin/SOP - Anti-Ragging.pdf"
       },
       {
         "title": "Anti-Ragging Committee 2025-26",
@@ -248,17 +246,35 @@ export const cellsDetailData: Record<string, CellDetail> = {
       {
         "title": "AP Prohibition of Ragging in All Educational Institutions Rules, 2002",
         "href": "https://mits.ac.in/public/uploads/antiraggging/AP Prohibition of Ragging in All Educational Institutions Rules 2002.pdf"
+      }
+    ],
+    "events": [
+      {
+        "title": "An \"Anti-Ragging Week\" was organized on 13th of August 2026.",
+        "href": "https://mits.ac.in/assets/pdf/assoc/Anti-Ragging Week-2026.pdf"
       },
       {
-        "title": "An \u201cAnti-Ragging Week\" was organized from 12th to 18th August 2025.",
+        "title": "An \"Anti-Ragging Day Rally\" was organized on 12th August 2026.",
+        "href": "https://mits.ac.in/assets/pdf/assoc/Anti-Ragging Day Rally-2026.pdf"
+      },
+      {
+        "title": "An \"Anti-Ragging Day\" was organized on 12th August 2026.",
+        "href": "https://mits.ac.in/assets/pdf/admin/Anti-Ragging Day – Awareness Program.pdf"
+      },
+      {
+        "title": "Anti-Ragging Week Celebrations - 12th to 18th August 2026",
+        "href": "https://mits.ac.in/assets/pdf/assoc/Report on Anti-Ragging Week Celebrations - 12-18 August 2026.pdf"
+      },
+      {
+        "title": "An \"Anti-Ragging Week\" was organized from 12th to 18th August 2025.",
         "href": "https://mits.ac.in/assets/pdf/admin/Anti-Ragging Week 2025.pdf"
       },
       {
-        "title": "An \u201cAnti-Ragging Day\" was organized on 12th August 2025.",
+        "title": "An \"Anti-Ragging Day\" was organized on 12th August 2025.",
         "href": "https://mits.ac.in/assets/pdf/admin/Anti-Ragging Day-Rally 2025-26.pdf"
       },
       {
-        "title": "An Awareness programme on Anti-Ragging by Shri. K. Ramesh, Circle - Inspector of Police on on 5th November 2024.",
+        "title": "An Awareness programme on Anti-Ragging by Shri. K. Ramesh, Circle - Inspector of Police on 5th November 2024.",
         "href": "https://mits.ac.in/assets/pdf/admin/Anti-Ragging Awareness program 05-11-2024.pdf"
       },
       {
@@ -270,19 +286,15 @@ export const cellsDetailData: Record<string, CellDetail> = {
         "href": "https://mits.ac.in/assets/pdf/admin/Report of Anti-Ragging Week Celebration - 12-17, August 2024.pdf"
       },
       {
-        "title": "An Awareness programs on Anti-Ragging to the freshers of B.Tech, MBA and MCA in all the venues of Student Induction Program for the academic year 2024-25 was concucted at MITS.",
+        "title": "An Awareness programs on Anti-Ragging to the freshers of B.Tech, MBA and MCA in all the venues of Student Induction Program for the academic year 2024-25 was conducted at MITS.",
         "href": "https://mits.ac.in/assets/pdf/admin/Report on Awareness on Anti Ragging  to Freshers (B.Tech., M.B.A and M.C.A) 2024-25 in Stident Induction Program.pdf"
-      },
-      {
-        "title": "Download Brochure",
-        "href": "https://mits.ac.in/public/uploads/static-pdf/MITS Deemed to be University Brochure 2026.pdf"
       }
     ],
     "contacts": [
       {
         "name": "Help Line",
-        "designation": "[email\u00a0protected]",
-        "email": "",
+        "designation": "Anti-Ragging Helpline",
+        "email": "antiragginghelpline@mits.ac.in",
         "phone": "Phone :\n+91 8008500767\n",
         "address": "Madanapalle Institute of Technology & Science"
       },
