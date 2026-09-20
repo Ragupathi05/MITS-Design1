@@ -124,7 +124,27 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
           {/* MAIN CONTENT */}
           <div className="lg:col-span-2 space-y-8">
 
-            {cell.aboutText.length > 0 && (
+            {cell.sections && cell.sections.length > 0 ? (
+              <div className="space-y-8">
+                {cell.sections.map((sec, sIdx) => (
+                  <ScrollReveal key={sIdx}>
+                    <section className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm p-6 md:p-8">
+                      <h2 className="font-display text-xl font-bold text-[#0f2a44] mb-4 flex items-center gap-2">
+                        <BookOpen className="w-5 h-5 text-[#b31317]" />
+                        {sec.title}
+                      </h2>
+                      <div className="space-y-3">
+                        {sec.paragraphs.map((para, pIdx) => (
+                          <p key={pIdx} className="text-[#0f2a44]/80 text-sm md:text-base leading-relaxed">
+                            {renderTextWithLinks(para)}
+                          </p>
+                        ))}
+                      </div>
+                    </section>
+                  </ScrollReveal>
+                ))}
+              </div>
+            ) : cell.aboutText.length > 0 ? (
               <ScrollReveal>
                 <section className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm p-6 md:p-8">
                   <h2 className="font-display text-xl font-bold text-[#0f2a44] mb-5 flex items-center gap-2">
@@ -140,7 +160,7 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
                   </div>
                 </section>
               </ScrollReveal>
-            )}
+            ) : null}
 
             {cell.id === "grc" && (
               <ScrollReveal>
@@ -287,7 +307,7 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
                 <section className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm p-6 md:p-8">
                   <h2 className="font-display text-xl font-bold text-[#0f2a44] mb-5 flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-[#b31317]" />
-                    Events
+                    Events Organized
                   </h2>
                   <ul className="space-y-3">
                     {cell.events.map((ev, i) => (
@@ -299,9 +319,7 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
                           className="flex items-start justify-between gap-3 p-3.5 rounded-xl border border-[#0f2a44]/10 hover:border-[#caa74d] hover:bg-[#fff8e6]/30 transition-all group"
                         >
                           <div className="flex items-start gap-3 min-w-0">
-                            <span className="w-5 h-5 rounded-full bg-[#b31317] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm group-hover:bg-[#8b0000] transition-colors">
-                              <ChevronRight className="w-3.5 h-3.5 -mr-0.5" />
-                            </span>
+                            <span className="w-2.5 h-2.5 rounded-full bg-[#b31317] shrink-0 mt-2 shadow-sm group-hover:scale-125 transition-transform" />
                             <span className="text-sm font-medium text-[#0f2a44] group-hover:text-[#b31317] transition-colors leading-relaxed">
                               {ev.title}
                             </span>
