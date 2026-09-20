@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Quote, Award, FileText, ArrowLeft, GraduationCap, Sparkles, BookOpen, Briefcase, Award as Medal } from "lucide-react";
+import { Quote, Award, FileText, ArrowLeft, GraduationCap, Sparkles, BookOpen, Briefcase, Award as Medal, Mail } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
 import { leadershipProfiles } from "@/data/aboutData";
 import { Button } from "@/components/ui/button";
@@ -60,6 +60,14 @@ const LeadershipProfilePage = () => {
             {profile.qualification && (
               <div className="px-5 py-3 bg-slate-50 border-t border-border text-xs font-semibold text-secondary/80">
                 {profile.qualification}
+              </div>
+            )}
+            {profile.email && (
+              <div className="px-5 py-3 bg-white border-t border-border flex items-center gap-2 text-xs font-medium text-secondary/80">
+                <Mail className="w-4 h-4 text-primary shrink-0" />
+                <a href={`mailto:${profile.email}`} className="text-primary hover:underline font-semibold break-all">
+                  {profile.email}
+                </a>
               </div>
             )}
           </div>
@@ -176,12 +184,14 @@ const LeadershipProfilePage = () => {
             </div>
           )}
 
-          {/* Documents */}
+          {/* Official Orders / Documents (removed "Documents & Publications" heading as requested) */}
           {profile.documents && profile.documents.length > 0 && (
-            <div>
-              <h2 className="text-2xl font-bold text-secondary mb-4 font-display pb-2 border-b border-border">
-                Documents & Publications
-              </h2>
+            <div className="pt-2">
+              {profile.documentTitle && (
+                <h2 className="text-2xl font-bold text-secondary mb-4 font-display pb-2 border-b border-border">
+                  {profile.documentTitle}
+                </h2>
+              )}
               <div className="flex flex-wrap gap-3">
                 {profile.documents.map((d) => (
                   <Button key={d.url} asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">

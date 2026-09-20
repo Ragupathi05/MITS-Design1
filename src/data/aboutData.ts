@@ -36,8 +36,14 @@ export interface LeadershipProfile {
   message?: string;
   bio: string[];
   highlights?: string[];
+  email?: string;
+  documentTitle?: string;
   documents?: { label: string; url: string }[];
   sourceUrl: string;
+  sections?: {
+    title: string;
+    content: any;
+  }[];
 }
 
 export const leadershipProfiles: Record<string, LeadershipProfile> = {
@@ -85,708 +91,39 @@ export const leadershipProfiles: Record<string, LeadershipProfile> = {
     name: "Dr. C. Yuvaraj",
     designation: "Vice-Chancellor (I/c)",
     qualification: "M.E., Ph.D., MISTE., FIE",
-    image: "https://mits.ac.in/public/uploads/faculty/Dr. C. Yuvaraj.JPG",
+    image: "https://mits.ac.in/images/vc.jpg",
     bio: [
       "Dr. C. Yuvaraj is the Vice Chancellor (I/c) of MITS Deemed to be University. He obtained his B.E from M.S. Ramaiah Institute of Technology, Bangalore, M.E. from University Visveswaraiah College of Engineering, Bangalore, Ph.D from Bangalore University and MBA from S.K. University, Anantapur. With more than 34 years of professional experience, Dr. Yuvaraj has made significant contributions to academia in various capacities. His areas of interest include Composite Materials, Development of new material, Material Characterization, Development of Tubular Electrodes, and Hybrid Metal Matrix Composites. Dr. C. Yuvaraj has to his credit 42 publications in various International Journals and 30 presentations at International Conferences/Seminars (17 National and 13 International). He chaired several Sessions at Conferences, and participated in 58 refresher courses/short-term courses/conferences/ workshops.",
       "He also holds memberships in several professional bodies/societies. Dr. C. Yuvaraj has supervised 7 Ph.D., Scholars. As a Co-Principal Investigator (Co-PI), he has completed two funded research projects worth Rs. 39,12,690/-. He received the ISTE AP Section “Best Engineering College Principal Award-2023”. He was also honoured with the “University Best Principal Awards 2023” by JNT University Anantapur, Ananthapuramu, A.P. In 2011 he received both the “Best Educationist Award” from the International Institute of Education and Management, New Delhi, and the “Rashtriya Vidya Gaurav Gold Medal Award” from the Indian Solidarity Council, New Delhi.",
     ],
     highlights: [
-      "ISTE AP Section Best Engineering College Principal Award-2023",
+      "ISTE AP Section “Best Engineering College Principal Award-2023”",
       "University Best Principal Award 2023 — JNT University Anantapur",
-      "Best Educationist Award — International Institute of Education & Management",
-      "Rashtriya Vidya Gaurav Gold Medal Award — Indian Solidarity Council",
+      "Best Educationist Award — International Institute of Education & Management, New Delhi (2011)",
+      "Rashtriya Vidya Gaurav Gold Medal Award — Indian Solidarity Council, New Delhi (2011)",
+      "Supervised 7 Ph.D. scholars & completed 2 funded research projects worth Rs. 39.12 Lakhs",
+      "Over 34 years of academic experience; 42 international journal publications & 30 conference papers",
     ],
-    documents: [
-      { label: "Email: vicechancellor@mits.ac.in", url: "mailto:vicechancellor@mits.ac.in" },
-    ],
+    email: "vicechancellor@mits.ac.in",
     sourceUrl: "https://mits.ac.in/vice-chancellor",
-        "sections": [
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Specialization": "Metal Matrix Composites",
-                        "Branch": "Mechanical Engineering",
-                        "College Name/University": "Bangalore University",
-                        "Year of Passing": "2009"
-                    },
-                    {
-                        "Course": "M.E.",
-                        "Specialization": "Manufacturing Science and Engineering",
-                        "Branch": "Mechanical Engineering",
-                        "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                        "Year of Passing": "2000"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Specialization": "Mechanical Engineering",
-                        "Branch": "Mechanical Engineering",
-                        "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                        "Year of Passing": "1991"
-                    }
-                ]
-            },
-            {
-                "title": "Research Areas",
-                "content": "Composite Materials, Machining, Coatings and Tribology."
-            },
-            {
-                "title": "Research Identifiers",
-                "content": [
-                    "Scopus: https://www.scopus.com/authid/detail.uri?authorId=57192235789",
-                    "Vidwan: https://mits.irins.org/profile/274702",
-                    "Google scholar: https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=mFyRNfUAAAAJ",
-                    "h-Index (As per Scopus Data) : 10"
-                ]
-            },
-            {
-                "title": "Publication Details",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2025-26",
-                        "Author Position": "6",
-                        "Details of Research Publication": "&quot;Facile Single-Step Electrodeposition of Flower-Shaped Cu doped ZnO Nanostructures for optical, photoluminescence and photocatalytic assessment.&quot; Optical Materials (2025): 117624.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "2",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "6",
-                        "Details of Research Publication": "&quot;Realization of CO2 gas sensors and broadband photodetectors using metal/high-k CeO2/p-Si heterojunction.&quot; Ceramics International 50.18 (2024): 31845-31858.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "3",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Author Position": "8",
-                        "Details of Research Publication": "&quot;Optical, vibrational, and photoluminescence properties of holmium\u2010doped boro\u2010bismuth\u2010germanate glasses.&quot; Luminescence 39.7 (2024): e4822.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "4",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Author Position": "4",
-                        "Details of Research Publication": "&quot;Performance evaluation of developed new textured tools during turning of AISI 321 material.&quot; Materials and Manufacturing Processes 39.5 (2024): 688-699.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "5",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Author Position": "11",
-                        "Details of Research Publication": "&quot;Structure, morphology, photonconversion and energy transfer characteristics of Er3+/Yb3+: BaYF5 nanocrystals synthesized by hydrothermal method for photovoltaics.&quot; Ceramics International 49.16 (2023): 26879-26889.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "6",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Author Position": "3",
-                        "Details of Research Publication": "&quot;UV-to-NIR broadband photodetecting sensors using n-TiO2 nanorods/p-Si heterojunction in lateral and vertical configurations.&quot; Applied Physics A 129.6 (2023): 412.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "7",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2022-23",
-                        "Author Position": "4",
-                        "Details of Research Publication": "&ldquo;Investigation on turning process performance during machining of 15-5PH stainless steel material with eco-friendly machining technique.&rdquo; Materials Today: Proceedings. Scopus Conference None",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "8",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2021-22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Micro-structure and self-lubricant properties of powder mixed electrical discharge metal matrix composite coating.&quot; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering 236.4 (2022): 1369-1376.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "9",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2021-22",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Electric discharge coating process variation and its wear properties.&quot; International Journal of Surface Science and Engineering 15.2 (2021): 131-151.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q4"
-                    },
-                    {
-                        "S.No": "10",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "5",
-                        "Details of Research Publication": "&quot;High performance, self-powered and thermally stable 200&ndash;750 nm spectral responsive gallium nitride (GaN) based broadband photodetectors.&quot; Solar Energy Materials and Solar Cells 225 (2021): 111033.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "11",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;A comparison on microstructure and mechanical properties of electric discharge metal matrix nickel and silica composite coating on duplex stainless steel.&quot; Journal of Composite Materials 55.4 (2021): 507-520.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "12",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "3",
-                        "Details of Research Publication": "&quot;Statistical analysis of current&ndash;voltage characteristics in Au/Ta2O5/n-GaN Schottky barrier heterojunction using different methods.&quot; Applied Physics A 127.1 (2021): 46.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "13",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2020-21",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Evaluation of electrical parameters of Ni/n-type Si Schottky barrier diodes using polyvinyl alcohol (PVA) as an interfacial layer.&quot; AIP Conference Proceedings. Vol. 2269. No. 1. AIP Publishing LLC, 2020.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "14",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Influence of silica on microstructural modification of electrical discharge composite coating and its wear performance. SILICON (2020).&quot;",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "15",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "10",
-                        "Details of Research Publication": "&quot;Near infrared broadband and visible upconversion emissions of erbium ions in oxyfluoride glasses for optical amplifier applications.&quot; Optics & Laser Technology 127 (2020): 106167.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q1"
-                    },
-                    {
-                        "S.No": "16",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2019-20",
-                        "Author Position": "3",
-                        "Details of Research Publication": "&quot;Electrical discharge metal matrix composite coating on duplex stainless steel and its wear behavior under different environmental conditions.&quot; Materials Research Express 6.9 (2019): 0965c5.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "17",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2018-19",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Synthesis of electrical discharge metal matrix composite coating through compacted semi-sintered electrode and its tribological studies.&quot; Journal of the Brazilian Society of Mechanical Sciences and Engineering 41.5 (2019): 213.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "18",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2018-19",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Effect of feed rate on difficult to cut metals on surface roughness and tool wear using surface treated and untreated tools.&quot; Procedia Manufacturing 30 (2019): 216-223.",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "19",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2018-19",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Analysis and optimization of metal injection molding feedstock SS 316L for rheological properties.&quot; Journal of The Institution of Engineers (India): Series D 99.2 (2018): 177-184.",
-                        "Indexing": "SCIE",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q2"
-                    },
-                    {
-                        "S.No": "20",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2018-19",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Development and experimental investigation of mechanical and microstructural behaviour 0f welded dual phase steels (DPS).&quot; (2018).",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "21",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2017-18",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Investigation of Mechanical Properties of a Composite Tubular Electrode Based Hard coating on Mild Steel Substrate.&quot;",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "22",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2016-17",
-                        "Author Position": "2",
-                        "Details of Research Publication": "&quot;Application of Taguchi Method for Optimizing the Parameters of Thermal Properties of Al/SiC-Gr Hybrid Composites.&quot; Bonfring International Journal of Advances in Image Processing 6.4 (2016): 28.",
-                        "Indexing": "Scopus",
-                        "Publication": "Conference Proceedings",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "None"
-                    },
-                    {
-                        "S.No": "23",
-                        "Publication Affiliation": "MITS",
-                        "Academic Year": "2016-17",
-                        "Author Position": "4",
-                        "Details of Research Publication": "&quot;Fabrication of Cast Aluminium-Silicon (Al-Si) and Aluminium-Magnesium (Al-Mg) Alloys and Their Properties.&quot; Acta Metallurgica Slovaca 22.4 (2016): 212-221.",
-                        "Indexing": "Scopus",
-                        "Publication": "Article",
-                        "Journal Quartile (Q1/Q2/Q3/Q4)": "Q3"
-                    }
-                ]
-            },
-            {
-                "title": "Research Projects and Events",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2016-17",
-                        "Project/Event": "Project",
-                        "Role": "PI",
-                        "Title of the Project/Event": "Development of High Strength Material for Micro Air Vehicle Structures",
-                        "Amount in Rs. /-": "25,000",
-                        "Funding Agency": "Institute of Engineers, Kolkatta"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2016-17",
-                        "Project/Event": "Event - Seminar",
-                        "Role": "PI",
-                        "Title of the Project/Event": "Recent Advances in Additive Manufacturing",
-                        "Amount in Rs. /-": "1,00,000",
-                        "Funding Agency": "DST, SERB, New Delhi - Seminar"
-                    },
-                    {
-                        "S.No": "3",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2016-17",
-                        "Project/Event": "Project",
-                        "Role": "Co-PI",
-                        "Title of the Project/Event": "Investigation and Characterization of Electrical Discharge Coated (EDC) Alloys for Mitigation of Biological Fouling on Maritime Structures",
-                        "Amount in Rs. /-": "38,37,690",
-                        "Funding Agency": "DST-SERB - ECRA"
-                    },
-                    {
-                        "S.No": "4",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2013-14",
-                        "Project/Event": "Event - FDP",
-                        "Role": "PI",
-                        "Title of the Project/Event": "Fatigue & Fracture Mechanics in FE Analysis",
-                        "Amount in Rs. /-": "7,00,000",
-                        "Funding Agency": "AICTE - FDP"
-                    },
-                    {
-                        "S.No": "5",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2013-14",
-                        "Project/Event": "Project",
-                        "Role": "PI",
-                        "Title of the Project/Event": "Design and Fabrication of Multi-Crop Smashing Combination Thresher",
-                        "Amount in Rs. /-": "50,000",
-                        "Funding Agency": "Institute of Engineers, Kolkatta"
-                    }
-                ]
-            },
-            {
-                "title": "Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "437596-001",
-                        "Title of the Patent": "Multi-Sieving Machine",
-                        "Status": "Examination"
-                    },
-                    {
-                        "S.No": "2",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "429724-001",
-                        "Title of the Patent": "Textured turning cutting insert",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "3",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "443252-001",
-                        "Title of the Patent": "Feedstock Filament Extuder",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "4",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "429875-001",
-                        "Title of the Patent": "Dual surface textured tool",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "5",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2024-25",
-                        "Application ID": "429725-001",
-                        "Title of the Patent": "Cutting tool for turning operation",
-                        "Status": "Examination"
-                    },
-                    {
-                        "S.No": "6",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2023-24",
-                        "Application ID": "201941017448",
-                        "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "7",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2021-22",
-                        "Application ID": "201941027725",
-                        "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                        "Status": "Granted"
-                    },
-                    {
-                        "S.No": "8",
-                        "Affiliation": "MITS",
-                        "Academic Year": "2017-18",
-                        "Application ID": "201741046532A",
-                        "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material (pmmc)",
-                        "Status": "Examination"
-                    }
-                ]
-            },
-            {
-                "title": "Awards/Achievements",
-                "content": [
-                    "Ratified as Professor & Principal by JNTUA, Ananthapuramu.",
-                    "Worked as BOS Member for the Dept. of Mechanical Engg., JNTUA, Ananthapuramu in the academic year 2020 & 2021.",
-                    "Worked as a Committee Member for APECET during 2015-16.",
-                    "Senior Life Member: Indian Society for Technical Education (ISTE), Membership No. SLM &ndash; 030 (dt: 20.09.2024).",
-                    "Life Member: Indian Society for Technical Education (ISTE), Membership No. 68296 (year: 2010).",
-                    "Life Member: Fellow of Institute of Engineers (FIE), Membership No. F-114969-1.",
-                    "Life Member: International Association of Engineers (IAENG), Membership Number: 127904.",
-                    "At the State Level Committees: Worked as Committee Member, APECET 2016.",
-                    "At the University level: Member in BoS, Dept. of Mechanical Engineering, JNTUA, Ananthapuramu, Andhra Pradesh.",
-                    "Received &ldquo;ISTE - Best Engineering College Principal Award for 2023&rdquo;, presented through the Sri G. Krishna Kumar Memorial State Award by the ISTE AP Section on 23rd September 2024.",
-                    "Received Best Principal Award from JNT University Anantapur, Ananthapuramu, Andhra Pradesh during the &ldquo;University Principal Awards 2023&rdquo; on 13th December 2023.",
-                    "&ldquo;Best Educationist Award&rdquo; received from International Institute of Education and Management, New Delhi in the year 2011 for outstanding achievements and remarkable role in the field of education.",
-                    "&ldquo;Rashtriya Vidya Gaurav Gold Medal Award&rdquo; received from Indian Solidarity Council, New Delhi in the year 2011."
-                ]
-            },
-            {
-                "title": "Details of Educational Qualification",
-                "content": [
-                    {
-                        "Course": "Ph.D.",
-                        "Branch": "Mechanical Engineering",
-                        "Specialization": "Metal Matrix Composites",
-                        "College Name/University": "Bangalore University",
-                        "Year of Passing": "2009"
-                    },
-                    {
-                        "Course": "M.E.",
-                        "Branch": "Mechanical Engineering",
-                        "Specialization": "Manufacturing Science and Engineering",
-                        "College Name/University": "University Visveswaraiah College of Engineering, Bangalore University, Bangalore.",
-                        "Year of Passing": "2000"
-                    },
-                    {
-                        "Course": "B.E.",
-                        "Branch": "Mechanical Engineering",
-                        "Specialization": "Mechanical Engineering",
-                        "College Name/University": "M S Ramaiah Institute of Technology, Bangalore University, Bangalore.",
-                        "Year of Passing": "1991"
-                    }
-                ]
-            },
-            {
-                "title": "Research Projects",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Name of the Faculty": "Dr. I. Arun & Dr. C. Yuvaraj",
-                        "Title of the Project/Event": "Investigation and characterization of Electrical Discharge Coated (EDC) alloys for mitigation of biological fouling on maritime structures.",
-                        "Sanctioning Authority": "DST-SERB",
-                        "Sanctioned Amount": "38.37 Lakhs",
-                        "Duration of the Project": "3 Years"
-                    },
-                    {
-                        "S.No": "2",
-                        "Name of the Faculty": "Dr. C. Yuvaraj",
-                        "Title of the Project/Event": "Design and Fabrication of multi-Crop Smashing Combination Thresher",
-                        "Sanctioning Authority": "Institute of Engineers, Kolkata",
-                        "Sanctioned Amount": "25,500",
-                        "Duration of the Project": "1 Year"
-                    }
-                ]
-            },
-            {
-                "title": "Research Guideship",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Scholar Name": "T. Siva Prasad",
-                        "Guide Name": "Dr. C. Yuvaraj",
-                        "Co-Guide from JNTUA College of Engineering, Anantapur": "Dr. K. Prahlada Rao Principal, JNTUA College of Engineering, Ananthapuramu",
-                        "Date of Admission": "2015-16",
-                        "Area of Research": "Composite Materials"
-                    }
-                ]
-            },
-            {
-                "title": "My Publications",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Title of the Paper": "Analysis and Optimization of Metal Injection Molding Feedstock SS 316L for Rheological Properties",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of The Institution of Engineers (India): Series D, pp.1-8, 2018."
-                    },
-                    {
-                        "S.No": "2",
-                        "Title of the Paper": "Investigation of Mechanical Properties of a Composite Tubular Electrode Based Hard coating on Mild Steel Substrate",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Research Foundation, Volume 4, Issue 3, March 2017"
-                    },
-                    {
-                        "S.No": "3",
-                        "Title of the Paper": "Metal Injection Molding \u2013 A Review",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Manufacturing Technology Today Journal, Vol. 15, Issue No. 12,2017"
-                    },
-                    {
-                        "S.No": "4",
-                        "Title of the Paper": "Structural Analysis and Fabrication of femoral component of Cemented Hip implant through Fused Deposition Modeling.",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Sciences and Research Technology, 72-80, 2016."
-                    },
-                    {
-                        "S.No": "5",
-                        "Title of the Paper": "Application of Taguchi Method for Optimizing the Parameters of Thermal Properties of Al/SiC-Gr Hybrid Composites",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Bonfring International Journal of Advances in Image Processing, Vol. 6, No. 4, 2016."
-                    },
-                    {
-                        "S.No": "6",
-                        "Title of the Paper": "Fabrication of cast aluminium-silicon (Al-Si) and aluminium -Magnesium (Al-Mg) alloys and their properties",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Acta Metallurgica Slovaca, Vol 22, No.4, pp. 212-221, 2016."
-                    },
-                    {
-                        "S.No": "7",
-                        "Title of the Paper": "Design, Analysis, Fabrication and Testing of CFRP with CNF Composite Cylinder for Space Applications",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Composite Materials, Vol.5, No.5, pp.102-128, 2015."
-                    },
-                    {
-                        "S.No": "8",
-                        "Title of the Paper": "Experimental Characterization of Carbon Fibre T700 / Epoxy towpreg for Space Applications",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Engineering Research and Applications, Vol.5, No.12, pp.1-14, 2015."
-                    },
-                    {
-                        "S.No": "9",
-                        "Title of the Paper": "Optimisation Of Welding Process Of Composite Chromium-Carbide Based Tubular Electrode For Hardfacing",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical and Production Engineering Research and Development, Vol.4, No.1, pp. 39-46, 2014."
-                    },
-                    {
-                        "S.No": "10",
-                        "Title of the Paper": "Effect of Nickel Content on Microstructure of Modified Zinc aluminium Cast Alloys",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Technical Research and Applications, Vol.2, No.4, pp.81-83, 2014."
-                    },
-                    {
-                        "S.No": "11",
-                        "Title of the Paper": "Design and analysis of a single seater race car chassis frame",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Research Aeronautical and Mechanical Engineering, Vol.2, No.8, pp.12-23, 2014."
-                    },
-                    {
-                        "S.No": "12",
-                        "Title of the Paper": "Evaluation of Mechanical Properties of Al/SiC-Graphite Hybrid Metal Matrix Composites",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Trends in Computer Science and Engineering, Vol.2, No.6, pp. 286-289, 2013."
-                    },
-                    {
-                        "S.No": "13",
-                        "Title of the Paper": "Microstructural and Mechanical Behaviour of Zinc-Aluminium Cast Alloys",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Mechanical Engineering and Technology (IJMET), Vol.4, No.4, pp. 243 \u2013 248, 2013."
-                    },
-                    {
-                        "S.No": "14",
-                        "Title of the Paper": "Characterization of Machinability Behaviour of Al/Al2O3 MMCs",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Advanced Engineering Research and Studies, Vol.1, No.2, pp. 114-117, 2012."
-                    },
-                    {
-                        "S.No": "15",
-                        "Title of the Paper": "Neural network for prediction of EDM of Al/SiC-graphite particulate reinforced hybrid composites",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Int J Emerg Technol Adv Eng, Vol.2, No.12, pp. 730-739, 2012."
-                    },
-                    {
-                        "S.No": "16",
-                        "Title of the Paper": "Effect of Thermal Fatigue Behaviour on Bending Strength of Al/Al 2 O 3 MMCs.",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                    },
-                    {
-                        "S.No": "17",
-                        "Title of the Paper": "Effect of Drilling Parameters on Drillability Behaviour of Al/Al 2 O 3 MMCs.",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.5, No.7, 2010."
-                    },
-                    {
-                        "S.No": "18",
-                        "Title of the Paper": "Study on Transition Behaviour of Al/Al2O3 MMCs",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "World Journal of Engineering, Vol.5, No.4, pp. 543-544, 2008."
-                    },
-                    {
-                        "S.No": "19",
-                        "Title of the Paper": "Optimization of machinability parameters of aluminium/alumina metal matrix composites",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "International Journal of Applied Engineering Research, Vol.3, No.9, pp.1197-1204, 2008."
-                    },
-                    {
-                        "S.No": "20",
-                        "Title of the Paper": "A study of transition wear behaviour of alumina particle reinforced Al-6061 MMCs",
-                        "Full Journal Name / Conference Name, Volume number, page number, Date": "Journal of Reinforced Plastics and Composites, Vol.28, No.23, pp. 2903-2909, 2009."
-                    }
-                ]
-            },
-            {
-                "title": "Conferences & Workshops attended",
-                "content": [
-                    "Participated in \u201cAcademia Day-Part of \u201c3Dverve 2019\u201d- An Annual Technical Conference of Dassault Systemes Foundation and Dassault Systemes\u201d at Dassault Systemes, India R&D (Auditorium), Hinjewadi Phase 1, Pune on 21 February 2019.",
-                    "One Day workshop on Creating Roadmap for Innovation and Incubation Centres in AP Educational Institutions, organized by ITE&C department on 19-10-2016 at Gateway Hotel in Vijayawada.",
-                    "A workshop on \u201cQuality Initiatives in Technical & Higher Educational Institutions (in compliance with NBA & NAAC Accreditation)\u201d organized by Engineering Staff College of India (ESCI), Hyderabad, from 07-09-16 to 9-09-16.",
-                    "3rd International Conference in Transformations in Engineering Education (ICTIEE 2016) was organized by IUCEE (Indo-US Collaboration for Engineering Education) and College of Engineering, Pune (COEP) during 08-12 January 2016.",
-                    "An Orientation Session on \u201cSiemens Centres of Excellence (COE) Clusters in AP\u201d organized by Andhra Pradesh State Skill Development Corporation at the Sri City Business Centre, Sri City on 27th August 2015.",
-                    "A one-day workshop on \u201cAwareness on Various programs for Foreign University Collaborations\u201d was Organized at JNTUA, Ananthapuramu on 16th May 2015.",
-                    "A meet in Chennai conducted by Higher Education Forum, South Zone to receive Campus Preparedness Award 2015 on 26th March 2015.",
-                    "International conference in Transformations in Engineering Education (ICTIEE 2015). It is a four day International conference, among these first two days were pre-conference workshops conducted by the BMS College of Engineering, Bangalore and collaborating with Indo-US collaboration for Engineering Education (IUCEE) during 5-8 January 2015.",
-                    "A workshop on TEQIP-II : Good Governance, Leadership and Management on 14th - 15th October 2014 at Metropolitan Hotel, Near Bangla Sahib Gurudwara Road, New Delhi.",
-                    "Represented the college for the workshop on Procurement Practices attended on 22.08.2014, at PSG Institute of Technology, organized by PSG, SPFU-TN and NPIU at Coimbatore.",
-                    "A National Conference on \u201cLeadership in Higher Education\u201d held on July 4, 2014 at Engineering staff college of India (ESCI), Hyderabad.",
-                    "A one day workshop on \u201cAcademia Industry Management For creating Sustainable Employability\u201d held on 06-04-2014 Organized by GP Birla Institute of Human Excellence, Birla Center, Hyderabad.",
-                    "Participated in a Seminar on \u201cInnovative Teaching, Research Learning & Accreditation Practices\u201d (IE-ITR SESSION) organized by ESCI as the constituent part of IE(I) Congress-2013 on 21 December, 2013 at Hotel Leela Palace, Chennai.",
-                    "Appointed as the co ordinator of the program by AICTE and received a grant from AICTE to conduct 2 Weeks FDP On Fatigue & Fracture Mechanics In FE Analysis.",
-                    "A Two Day Workshop on \u201cRecent Trends In Manufacturing \u201c Under TEQIP-II Organised by the Department of Mechanical Engineering, Chaitanya Bharathi Institute of Technology, Gandipet, Hyderabad on 29-30 July 2013.",
-                    "A Two Day Workshop on \u201cProcurement Guidelines & PMSS Training\" under TEQIP-II conducted by NPIU - New Delhi and SPFU Andhra Pradesh at University College of engineering, Osmania University, Hyderabad on 16-17 May 2013.",
-                    "A One Day workshop (28 September,2012) on \u201c Metallurgy For Non-Metallurgists\u201d (MNM-2012) organised by Indian Institute of Metals, Hyderabad Chapter on 28th September 2012.",
-                    "Appointed as Principal Investigator, for the project \u201cDEVELOPMENT OF HIGH STRENGTH MATERIALS FOR Micro Air Vehicle STRUCTURES \u201c.",
-                    "Participated in an interactive session with Dr. U. Chandrasekhar, Director, ESCI & Gp Capt B.S. Phillora, Head Management , Technology & Information Divisions, Engineering Staff College of India at Hyderabad on 14th December 2013."
-                ]
-            },
-            {
-                "title": "List of Patents",
-                "content": [
-                    {
-                        "S.No": "1",
-                        "Name of the Applicant": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                        "Name of the Inventors": "Dr.C.Yuvaraj, Dr. G. Hemanth, Mr.A.Vasudeva Reddy, Dr.H.Mohit",
-                        "Department": "ME",
-                        "Title of the Patent": "Removal Apparatus For Cylindrical Polymer Matrix Composite (Pmc) Parts Fabricated By Compression Cum Extruder Method",
-                        "App. No./Ref No.": "201941027725",
-                        "Date of Filing": "10/7/2019",
-                        "Date of Publishing": "2/8/2019",
-                        "Status": "Filed & Published",
-                        "MITS Affiliated": "yes"
-                    },
-                    {
-                        "S.No": "2",
-                        "Name of the Applicant": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                        "Name of the Inventors": "Dr.C.Yuvaraj, Dr.G. Hemanth Kumar, Mr.S.Mohan Raj, Mr.H.Mohit",
-                        "Department": "ME",
-                        "Title of the Patent": "A Novel Hole Making Technique During The Thermoforming On Plastic Sheets",
-                        "App. No./Ref No.": "2019410117448",
-                        "Date of Filing": "02/05/2019",
-                        "Date of Publishing": "24/05/2019",
-                        "Status": "Filed & Published",
-                        "MITS Affiliated": "yes"
-                    },
-                    {
-                        "S.No": "3",
-                        "Name of the Applicant": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                        "Name of the Inventors": "Dr. C. Yuvaraj, Dr. G. Hemanth Kumar, Mr. Harinandan Kumar, Dr. P. Sivaiah, Mr. Prabhu Jayaraman",
-                        "Department": "ME",
-                        "Title of the Patent": "New Invention of Low Cost Creep Testing Machine with Variable Temperature and Environmental and Environmental Conditions for Composite Material(pmmc)",
-                        "App. No./Ref No.": "201741046532",
-                        "Date of Filing": "26/12/2017",
-                        "Date of Publishing": "5/1/2018",
-                        "Status": "filed and published",
-                        "MITS Affiliated": "yes"
-                    }
-                ]
-            },
-            {
-                "title": "Reach Us",
-                "content": "Madanapalle Institute of Technology & Science Deemed to be University Madanapalle-Kadiri Road NH-42, kurabalakota Mandal, Madanapalle-517325 Andhra Pradesh, India +91-8571-280255; 280706 [emailprotected] Andhra Pradesh, India"
-            },
-            {
-                "title": "Departments",
-                "content": [
-                    "--> B.Tech Civil Engineering --> <!--",
-                    "--> B.Tech Computer Science --> <!--",
-                    "--> B.Tech Mechanical --> <!--",
-                    "--> B.Tech Electrical & Electronics --> <!--",
-                    "--> MBA --> <!--",
-                    "--> MCA --> <!--"
-                ]
-            },
-            {
-                "title": "Get in touch",
-                "content": [
-                    "--> Documentation --> <!--",
-                    "--> Forums --> <!--",
-                    "--> Language Packs --> <!--",
-                    "--> Release Status --> <!--",
-                    "--> Documentation --> <!--",
-                    "Follow US:"
-                ]
-            }
-        ]
-    },
+  },
   registrar: {
     slug: "registrar",
     name: "Dr. D. Pradeep Kumar",
     designation: "Registrar (I/c)",
     qualification: "Ph.D.",
-    image: "https://mits.ac.in/public/uploads/faculty/Dr. D. Pradeep.JPG",
+    image: "https://mits.ac.in/public/uploads/faculty/Dr.%20D.%20Pradeep.JPG",
     bio: [
       "Dr. D. Pradeep Kumar is a Professor of Management with an MBA (1988) and a Ph.D. in Strategic Marketing (2004) from Sri Krishnadevaraya University, Anantapur. He has over 36 years of experience, including six years in industry and 30 years in academia at institutions such as ISSR Vellore, KSRMCE Kadapa, and MITS. His areas of expertise include Marketing Management, Human Resource Management, Strategy, Business Analytics, and Digital Marketing. He has authored 4 books with leading publishers, published and presented more than 50 papers in reputed journals and conferences, and guided 10 Ph.D. scholars. He has organized AICTE-funded national and international conferences, delivered numerous guest lectures, and chaired technical sessions. He is a Member of the Board of Studies for AITS, Rajampet, SSGS College, Guntakal and JNTUA, Anantapuram.",
     ],
-    documents: [
-      { label: "Email: registrar@mits.ac.in", url: "mailto:registrar@mits.ac.in" },
+    highlights: [
+      "Over 36 years of experience (6 years in industry and 30 years in academia)",
+      "Ph.D. in Strategic Marketing (2004) & MBA (1988) from Sri Krishnadevaraya University",
+      "Authored 4 books with leading publishers and published/presented 50+ papers in reputed journals & conferences",
+      "Guided 10 Ph.D. research scholars in Management & Marketing",
+      "Member of the Board of Studies for AITS Rajampet, SSGS College Guntakal, and JNTUA Anantapuram",
     ],
+    email: "registrar@mits.ac.in",
     sourceUrl: "https://mits.ac.in/registrar",
   },
   "controller-of-examinations": {
@@ -794,23 +131,23 @@ export const leadershipProfiles: Record<string, LeadershipProfile> = {
     name: "Dr. Sai Kumar. V",
     designation: "Controller of Examinations (I/c)",
     qualification: "B.E, M.Tech, Ph.D.",
-    image: "https://mits.ac.in/images/sai.jpg",
+    image: "https://mits.ac.in/public/uploads/faculty/Sai%20Sir.JPG",
     bio: [
       "Dr. Sai Kumar.V is having a professional career with over 18 years of academic and industry experience, of which more than 12 years is in academic administration. He was awarded a Doctor of Philosophy degree from Rayalaseema University, Kurnool, Andhra Pradesh, India. He holds a Master of Technology degree in VLSI Design from Vellore Institute of Technology University, Vellore, Tamil Nadu, and a Bachelor of Engineering degree in Electrical and Electronics Engineering from Periyar University, Salem, Tamil Nadu.",
       "Dr. Sai Kumar’s areas of expertise include VLSI, Micro and Nano Electronics, IC Fabrication, Image Processing, Neural Networks, and Computer Vision Techniques. Throughout his career, he has made significant contributions to research, having published research papers, filed multiple patents, and participated in various faculty development and management enhancement programs. He has also guided numerous undergraduate and postgraduate students, helping them with their project work and supporting them in publishing their research work.",
       "In the academic administration contributions, Dr. Sai Kumar has been actively involved in designing curriculum frameworks for various undergraduate and postgraduate programs. He has played a pivotal role in framing academic policies, rules, and regulations for both undergraduate and postgraduate degree programs. During his tenure at MITS, Madanapalle, he served as Assistant Controller of Examinations and Controller of Examinations (I/c) under Autonomous status. In the capacity of the Controller of Examinations(I/c) for the MITS Deemed to be University, Madanapalle, he was instrumental in developing examination policies, bringing several examination reforms and digitalization of various examination procedures.",
       "He has also been involved in the UGC's initiative for the digitalization of academic credentials, the Academic Bank of Credits (ABC) through the National Academic Depository (NAD) platform. With over 11 years of experience in managing the examination process, he has consistently ensured strict compliance with regulatory guidelines while improving examination procedures and safeguarding the integrity and security of examinations.",
       "He is also the NEP 2020 Cell Coordinator. Through the NEP Cell, various NEP initiatives like multiple entry multiple exit, dual degree programs, Academic Bank of Credits were suggested to be incorporated into the curriculum of various under and post graduate degree programs. Additionally, he is also the NEP SAARTHI (Student Ambassador for Academic Reforms in Transforming Higher Education in India) Coordinator launched by University Grants Commission (UGC) to promote the NEP 2020 initiatives. He has coordinated the UGC nominated NEP SAARTHI’s in successfully implementing the monthly activity calendar to promote NEP 2020 Initiatives in the student and faculty fraternity.",
-      "Dr. Sai Kumar is also responsible for providing verification and genuineness services to a variety of stakeholders, including government entities, educational institutions, corporate bodies, and private verification agencies. He can be reached at coeu@mits.ac.in.",
+      "Dr. Sai Kumar is also responsible for providing verification and genuineness services to a variety of stakeholders, including government entities, educational institutions, corporate bodies, and private verification agencies.",
     ],
     highlights: [
-      "Over 11 years managing the examination process",
-      "Led digitalization of academic credentials via NAD (UGC ABC)",
-      "NEP 2020 Cell Coordinator & NEP SAARTHI Coordinator",
+      "Over 18 years of academic & industry experience; 12+ years in academic administration",
+      "Over 11 years managing institutional examination processes, security, and examination reforms",
+      "Instrumental in developing examination policies and complete digitalization of examination procedures",
+      "Led university implementation of Academic Bank of Credits (ABC) via UGC National Academic Depository (NAD)",
+      "Institutional Coordinator for NEP 2020 Cell and UGC NEP SAARTHI Coordinator",
     ],
-    documents: [
-      { label: "Email: coeu@mits.ac.in", url: "mailto:coeu@mits.ac.in" },
-    ],
+    email: "coeu@mits.ac.in",
     sourceUrl: "https://mits.ac.in/controller-of-examinations",
   },
   principal: {
@@ -833,9 +170,7 @@ export const leadershipProfiles: Record<string, LeadershipProfile> = {
       "Life Member of ISTE and IEI; Fellow of IETE",
       "Over 25 years of teaching experience in VLSI Design & Embedded Systems",
     ],
-    documents: [
-      { label: "Email: principal@mits.ac.in", url: "mailto:principal@mits.ac.in" },
-    ],
+    email: "principal@mits.ac.in",
     sourceUrl: "https://mits.ac.in/principal",
   },
   ombudsperson: {
@@ -857,10 +192,12 @@ export const leadershipProfiles: Record<string, LeadershipProfile> = {
       "Guided 24 Ph.D. and 11 M.Phil. scholars in Public Economics, Local Finance & Agricultural Economics",
       "Published 66 research papers; 4 authored books & 3 edited books in Economics",
       "Completed 3 major research projects funded by UGC & ICSSR",
+      "Former Registrar, Director Admissions, and Dept Head at Sri Krishnadevaraya University",
     ],
+    documentTitle: "Official Order",
     documents: [
       {
-        label: "Ombudsperson Appointment Order",
+        label: "Ombudsperson Appointment Order - Click to View",
         url: "https://mits.ac.in/assets/pdf/admin/Ombudsperson%20Appointment.pdf",
       },
     ],

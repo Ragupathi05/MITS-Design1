@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
@@ -234,15 +234,15 @@ export default function IeiView() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/50 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+        <div className="absolute inset-0 bg-black/20 bg-gradient-to-b from-black/15 via-transparent to-black/30" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffd15c] font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-4">
+          <p className="text-[#ffd15c] font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-4 drop-shadow-sm">
             Cells &amp; Committees • Professional Societies &amp; Chapters
           </p>
-          <h1 className="font-display text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white leading-tight max-w-4xl mx-auto">
+          <h1 className="font-display text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white leading-tight max-w-4xl mx-auto drop-shadow-md">
             The Institution of Engineers (India) [IEI] Cell
           </h1>
-          <p className="text-white/85 text-sm md:text-base max-w-2xl mx-auto">
+          <p className="text-white/95 text-sm md:text-base max-w-2xl mx-auto drop-shadow-sm font-medium">
             Fostering technical knowledge, professional engineering skills, and industry exposure through the MITS-IE(I) Students Chapter.
           </p>
         </div>
@@ -576,8 +576,8 @@ export default function IeiView() {
                 <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#ffd15c] mb-4">
                   <GraduationCap className="w-6 h-6" />
                 </div>
-                <h4 className="font-display font-bold text-base mb-1">Institutional Member</h4>
-                <p className="text-xs text-white/80 mb-3 leading-relaxed">
+                <h4 className="font-display font-bold text-lg text-white mb-1">Institutional Member</h4>
+                <p className="text-xs text-white/85 mb-3 leading-relaxed">
                   Institution of Engineers (India) membership since 18 February 2025.
                 </p>
                 <div className="bg-white/10 rounded-lg p-3 text-center border border-white/10">
