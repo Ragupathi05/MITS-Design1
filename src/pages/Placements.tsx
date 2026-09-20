@@ -252,17 +252,17 @@ const onlinePracticeLinks = [
 const placementStatsData: { [key: string]: { branches: { [key: string]: { eligible: number; placed: number } } } } = {
   "2025-26*": {
     branches: {
-      "CSE": { eligible: 264, placed: 174 },
-      "CST": { eligible: 192, placed: 133 },
-      "CAI": { eligible: 196, placed: 130 },
-      "CSD": { eligible: 129, placed: 75 },
-      "CSC": { eligible: 58, placed: 31 },
-      "ECE": { eligible: 245, placed: 164 },
-      "EEE": { eligible: 65, placed: 61 },
-      "MECH": { eligible: 26, placed: 23 },
-      "Civil": { eligible: 30, placed: 30 },
+      "CSE": { eligible: 264, placed: 209 },
+      "CST": { eligible: 192, placed: 179 },
+      "CAI": { eligible: 196, placed: 180 },
+      "CSD": { eligible: 115, placed: 93 },
+      "CSC": { eligible: 57, placed: 38 },
+      "ECE": { eligible: 245, placed: 168 },
+      "EEE": { eligible: 60, placed: 76 },
+      "MECH": { eligible: 48, placed: 66 },
+      "Civil": { eligible: 49, placed: 53 },
       "MBA": { eligible: 167, placed: 201 },
-      "MCA": { eligible: 185, placed: 82 },
+      "MCA": { eligible: 185, placed: 91 },
       "M.Tech": { eligible: 27, placed: 3 },
     }
   },

@@ -31,6 +31,7 @@ import {
   cycle1Documents,
   aisheReports,
   criteria,
+  criteriaWithMetrics,
   extendedProfileDVV,
   iqacLinks,
   highlights,
@@ -48,9 +49,7 @@ type SectionKey =
   | "criteria"
   | "dvv-ep"
   | "aishe"
-  | "certificate"
-  | "reports"
-  | "contact";
+  | "certificate";
 
 const sections: { key: SectionKey; label: string; icon: React.ComponentType<{ className?: string }> }[] = [
   { key: "overview", label: "Overview", icon: BookOpen },
@@ -61,8 +60,6 @@ const sections: { key: SectionKey; label: string; icon: React.ComponentType<{ cl
   { key: "dvv-ep", label: "DVV / Extended Profile", icon: GraduationCap },
   { key: "aishe", label: "AISHE Reports", icon: Building2 },
   { key: "certificate", label: "Certificate", icon: Award },
-  { key: "reports", label: "Peer Team Reports", icon: FileText },
-  { key: "contact", label: "Coordinator", icon: Users },
 ];
 
 const DocCard = ({ doc, highlight }: { doc: DocLink; highlight?: boolean }) => {
@@ -127,6 +124,7 @@ const DocGrid = ({ docs }: { docs: DocLink[] }) => (
 const NAAC = () => {
   const [active, setActive] = useState<SectionKey>("overview");
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [selectedCriterion, setSelectedCriterion] = useState<number>(1);
 
   const filter = (docs: DocLink[]) => docs;
 
@@ -334,6 +332,34 @@ const NAAC = () => {
                       <h3 className="font-display text-xl font-bold text-[#0f2a44] mb-4">Quick Access</h3>
                       <DocGrid docs={accreditationCore} />
                     </div>
+
+                    <div className="mt-8">
+                      <h3 className="font-display text-xl font-bold text-[#0f2a44] mb-4">IQAC Office &amp; Coordinator</h3>
+                      <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-6 md:p-8 shadow-sm">
+                        <p className="font-display text-xl font-bold text-[#0f2a44]">{coordinator.office}</p>
+                        <p className="font-body text-[#0f2a44]/70 mt-1">{coordinator.institute}</p>
+                        <div className="grid md:grid-cols-3 gap-4 mt-6">
+                          <div className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2]">
+                            <MapPin className="w-5 h-5 text-[#caa74d] shrink-0 mt-0.5" />
+                            <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.address}</p>
+                          </div>
+                          <a
+                            href={`mailto:${coordinator.email}`}
+                            className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2] hover:bg-[#caa74d]/10 transition-colors"
+                          >
+                            <Mail className="w-5 h-5 text-[#caa74d] shrink-0 mt-0.5" />
+                            <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.email}</p>
+                          </a>
+                          <a
+                            href={`tel:${coordinator.phone}`}
+                            className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2] hover:bg-[#caa74d]/10 transition-colors"
+                          >
+                            <Phone className="w-5 h-5 text-[#caa74d] shrink-0 mt-0.5" />
+                            <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.phone}</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </section>
                 )}
 
@@ -395,56 +421,161 @@ const NAAC = () => {
                 {active === "criteria" && (
                   <section>
                     <SectionHeader
-                      eyebrow="Framework"
+                      eyebrow="Framework & DVV Clarifications"
                       title="NAAC Criteria 1 – 7"
-                      description="The seven criteria framework prescribed by NAAC for institutional assessment. Each criterion opens its detailed metric-wise documentation on the official NAAC repository."
+                      description="The seven criteria framework prescribed by NAAC for institutional assessment. Access metric-wise DVV clarifications and supporting PDF documentation for each criterion."
                     />
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      {criteria.map((c, i) => (
-                        <motion.a
-                          key={c.number}
-                          href={c.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: i * 0.05 }}
-                          whileHover={{ y: -3 }}
-                          className="group relative overflow-hidden bg-white rounded-2xl border border-[#0f2a44]/10 p-6 shadow-sm hover:shadow-[0_16px_40px_rgba(15,42,68,0.12)] hover:border-[#caa74d] transition-all"
-                        >
-                          <div className="flex items-start gap-4">
-                            <div className="shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-[#0f2a44] to-[#11355a] text-[#caa74d] flex items-center justify-center font-display text-2xl font-bold">
+
+                    {/* Criterion Selector Pills */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {criteriaWithMetrics.map((c) => {
+                        const isSelected = selectedCriterion === c.number;
+                        return (
+                          <button
+                            key={c.number}
+                            onClick={() => setSelectedCriterion(c.number)}
+                            className={`px-4 py-2.5 rounded-xl font-body text-sm font-semibold transition-all flex items-center gap-2 ${
+                              isSelected
+                                ? "bg-[#0f2a44] text-[#caa74d] shadow-md border-b-2 border-[#caa74d]"
+                                : "bg-white text-[#0f2a44]/80 border border-[#0f2a44]/10 hover:bg-[#faf7f2] hover:text-[#0f2a44]"
+                            }`}
+                          >
+                            <span className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold ${isSelected ? "bg-[#caa74d] text-[#0f2a44]" : "bg-[#0f2a44]/10 text-[#0f2a44]"}`}>
                               {c.number}
-                            </div>
-                            <div className="flex-1">
-                              <p className="font-body text-sm uppercase tracking-wider text-[#caa74d] font-semibold mb-1">
-                                Criterion {c.number}
-                              </p>
-                              <h3 className="font-display text-lg font-bold text-[#0f2a44] leading-snug">
-                                {c.title}
-                              </h3>
-                              <p className="font-body text-sm text-[#0f2a44]/70 mt-2 leading-relaxed">
-                                {c.description}
-                              </p>
-                              <span className="inline-flex items-center gap-1.5 text-[#caa74d] font-body text-sm font-semibold mt-3 group-hover:gap-2.5 transition-all">
-                                Open Metric Repository <ExternalLink className="w-3.5 h-3.5" />
+                            </span>
+                            <span>Criterion {c.number}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Selected Criterion Details */}
+                    {(() => {
+                      const current = criteriaWithMetrics.find((c) => c.number === selectedCriterion) || criteriaWithMetrics[0];
+                      return (
+                        <div className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm overflow-hidden">
+                          <div className="p-6 bg-gradient-to-r from-[#0f2a44] to-[#1a3a5c] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <div>
+                              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#caa74d]">
+                                Criterion {current.number}
                               </span>
+                              <h3 className="font-display text-2xl font-bold text-white mt-1">
+                                {current.title}
+                              </h3>
+                              <p className="font-body text-white/80 text-sm mt-1 max-w-2xl leading-relaxed">
+                                {current.description}
+                              </p>
+                            </div>
+                            <a
+                              href={current.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/20 transition-all shrink-0"
+                            >
+                              Official Portal Page <ExternalLink className="w-3.5 h-3.5" />
+                            </a>
+                          </div>
+
+                          <div className="p-4 md:p-6">
+                            <h4 className="font-display text-lg font-bold text-[#0f2a44] mb-4 flex items-center gap-2">
+                              <ScrollText className="w-5 h-5 text-[#caa74d]" />
+                              Metric-wise DVV Clarifications
+                            </h4>
+                            <div className="overflow-x-auto rounded-xl border border-[#0f2a44]/10">
+                              <table className="w-full text-left border-collapse">
+                                <thead>
+                                  <tr className="bg-[#0f2a44] text-white font-display text-sm">
+                                    <th className="py-3.5 px-4 font-bold w-28 shrink-0">Metric ID</th>
+                                    <th className="py-3.5 px-4 font-bold">DVV Clarifications</th>
+                                    <th className="py-3.5 px-4 font-bold text-center w-36 shrink-0">Download PDF</th>
+                                  </tr>
+                                </thead>
+                                <tbody className="divide-y divide-[#0f2a44]/10 font-body text-sm">
+                                  {current.metrics.map((m, idx) => (
+                                    <tr
+                                      key={m.metricId + idx}
+                                      className="hover:bg-[#faf7f2] transition-colors"
+                                    >
+                                      <td className="py-4 px-4 font-bold text-[#0f2a44] align-top">
+                                        <span className="inline-block px-2.5 py-1 rounded-md bg-[#0f2a44]/10 text-[#0f2a44] font-mono text-xs font-bold">
+                                          {m.metricId}
+                                        </span>
+                                      </td>
+                                      <td className="py-4 px-4 text-[#0f2a44]/85 leading-relaxed align-top">
+                                        {m.description}
+                                      </td>
+                                      <td className="py-4 px-4 text-center align-top shrink-0">
+                                        <a
+                                          href={m.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#b31317] hover:bg-[#7a0a0d] text-white text-xs font-semibold shadow-sm transition-all hover:shadow"
+                                        >
+                                          <Download className="w-3.5 h-3.5" />
+                                          Download
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
                             </div>
                           </div>
-                        </motion.a>
-                      ))}
-                    </div>
+                        </div>
+                      );
+                    })()}
                   </section>
                 )}
 
                 {active === "dvv-ep" && (
                   <section>
                     <SectionHeader
-                      eyebrow="DVV"
-                      title="DVV Clarifications — Extended Profile"
-                      description="Data Validation & Verification clarifications submitted against the Extended Profile metrics."
+                      eyebrow="DVV Clarifications"
+                      title="Extended Profile DVV Clarifications"
+                      description="Data Validation & Verification (DVV) clarifications submitted against the Extended Profile metrics, fully verified with metric IDs and supporting PDFs."
                     />
-                    <DocGrid docs={filter(extendedProfileDVV)} />
+
+                    <div className="bg-white rounded-2xl border border-[#0f2a44]/10 shadow-sm overflow-hidden p-4 md:p-6">
+                      <div className="overflow-x-auto rounded-xl border border-[#0f2a44]/10">
+                        <table className="w-full text-left border-collapse">
+                          <thead>
+                            <tr className="bg-[#0f2a44] text-white font-display text-sm">
+                              <th className="py-3.5 px-4 font-bold w-28 shrink-0">Metric ID</th>
+                              <th className="py-3.5 px-4 font-bold">Extended Profile Metric Description</th>
+                              <th className="py-3.5 px-4 font-bold text-center w-36 shrink-0">Download PDF</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-[#0f2a44]/10 font-body text-sm">
+                            {extendedProfileDVV.map((ep, idx) => (
+                              <tr
+                                key={ep.metricId || idx}
+                                className="hover:bg-[#faf7f2] transition-colors"
+                              >
+                                <td className="py-4 px-4 font-bold text-[#0f2a44] align-top">
+                                  <span className="inline-block px-2.5 py-1 rounded-md bg-[#caa74d]/20 text-[#0f2a44] font-mono text-xs font-bold border border-[#caa74d]/40">
+                                    {ep.metricId || `EP-${idx + 1}`}
+                                  </span>
+                                </td>
+                                <td className="py-4 px-4 text-[#0f2a44]/85 leading-relaxed align-top font-medium">
+                                  {ep.title}
+                                </td>
+                                <td className="py-4 px-4 text-center align-top shrink-0">
+                                  <a
+                                    href={ep.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#0f2a44] hover:bg-[#1a3a5c] text-white text-xs font-semibold shadow-sm transition-all hover:shadow"
+                                  >
+                                    <Download className="w-3.5 h-3.5 text-[#caa74d]" />
+                                    Download
+                                  </a>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </section>
                 )}
 
@@ -468,55 +599,6 @@ const NAAC = () => {
                     <div className="grid md:grid-cols-2 gap-4">
                       <DocCard doc={cycle1Documents[0]} highlight />
                       <DocCard doc={cycle1Documents[1]} highlight />
-                    </div>
-                  </section>
-                )}
-
-                {active === "reports" && (
-                  <section>
-                    <SectionHeader
-                      eyebrow="Evaluation"
-                      title="Peer Team & Metric-wise Reports"
-                      description="Reports issued by the NAAC peer team following institutional evaluation."
-                    />
-                    <DocGrid
-                      docs={filter([
-                        cycle1Documents[2],
-                        cycle1Documents[3],
-                        cycle1Documents[4],
-                        cycle1Documents[5],
-                        cycle1Documents[6],
-                      ])}
-                    />
-                  </section>
-                )}
-
-                {active === "contact" && (
-                  <section>
-                    <SectionHeader eyebrow="Contact" title="IQAC Coordinator" />
-                    <div className="bg-white rounded-2xl border border-[#0f2a44]/10 p-6 md:p-8 shadow-sm">
-                      <p className="font-display text-xl font-bold text-[#0f2a44]">{coordinator.office}</p>
-                      <p className="font-body text-[#0f2a44]/70 mt-1">{coordinator.institute}</p>
-                      <div className="grid md:grid-cols-3 gap-4 mt-6">
-                        <div className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2]">
-                          <MapPin className="w-5 h-5 text-[#caa74d] shrink-0 mt-0.5" />
-                          <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.address}</p>
-                        </div>
-                        <a
-                          href={`mailto:${coordinator.email}`}
-                          className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2] hover:bg-[#caa74d]/10 transition-colors"
-                        >
-                          <Mail className="w-5 h-5 text-[#caa74d] shrink-0 mt-0.5" />
-                          <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.email}</p>
-                        </a>
-                        <a
-                          href={`tel:${coordinator.phone}`}
-                          className="flex items-start gap-3 p-4 rounded-lg bg-[#faf7f2] hover:bg-[#caa74d]/10 transition-colors"
-                        >
-                          <Phone className="w-5 h-5 text-[#caa74d] shrink-0 mt-0.5" />
-                          <p className="font-body text-sm text-[#0f2a44]/85">{coordinator.phone}</p>
-                        </a>
-                      </div>
                     </div>
                   </section>
                 )}

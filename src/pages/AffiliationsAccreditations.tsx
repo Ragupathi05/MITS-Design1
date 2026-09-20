@@ -14,6 +14,7 @@ import {
   Landmark,
   ScrollText,
   Building2,
+  BarChart3,
   LucideIcon,
 } from "lucide-react";
 const BASE = import.meta.env.BASE_URL;
@@ -35,6 +36,7 @@ type SectionKey =
   | "aiu"
   | "aicte"
   | "naac"
+  | "nirf"
   | "nba"
   | "research"
   | "ugc2f12b"
@@ -46,7 +48,8 @@ const sections: { key: SectionKey; title: string; icon: LucideIcon }[] = [
   { key: "aiu", title: "Affiliation to Association of Indian Universities (AIU)", icon: GraduationCap },
   { key: "aicte", title: "Approved by AICTE, New Delhi", icon: ScrollText },
   { key: "naac", title: "Accredited by NAAC", icon: Award },
-  { key: "nba", title: "Accredited by NBA", icon: BadgeCheck },
+  { key: "nirf", title: "National Institutional Ranking Framework", icon: BarChart3 },
+  { key: "nba", title: "Accredited by NBA for CIVIL, CSE, ECE, EEE, ME, MBA & MCA", icon: BadgeCheck },
   { key: "research", title: "Recognised Research Centre", icon: Microscope },
   { key: "ugc2f12b", title: "Recognised by UGC under Sections 2(f) & 12(B)", icon: Shield },
   { key: "dsir", title: "Recognised as Scientific & Industrial Research Organisation (SIRO)", icon: Building2 },
@@ -80,6 +83,7 @@ const AffiliationsAccreditations = () => {
     aiu: false,
     aicte: false,
     naac: false,
+    nirf: false,
     nba: false,
     research: false,
     ugc2f12b: false,
@@ -268,6 +272,49 @@ const AffiliationsAccreditations = () => {
                                 View Complete NAAC Details
                                 <ChevronRight className="w-4 h-4" />
                               </Link>
+                            </div>
+                          </div>
+                        )}
+
+                        {s.key === "nirf" && (
+                          <div className="mt-5 rounded-2xl bg-gradient-to-br from-[#fff8e6] to-white border border-[#caa74d]/30 p-6 md:p-8">
+                            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                              <div className="shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-[#0f2a44] to-[#1a3a5c] flex items-center justify-center text-[#caa74d] shadow-md">
+                                <BarChart3 className="w-10 h-10" />
+                              </div>
+                              <div className="flex-1">
+                                <span className="inline-block px-3 py-1 rounded-full bg-[#caa74d]/20 text-[#0f2a44] text-xs font-bold uppercase tracking-wider mb-2">
+                                  Ministry of Education · MoE
+                                </span>
+                                <p className="font-display text-2xl font-bold text-[#0f2a44]">
+                                  NIRF Ranking — Band 201–300
+                                </p>
+                                <p className="font-body text-sm text-[#0f2a44]/75 mt-1 leading-relaxed">
+                                  Madanapalle Institute of Technology & Science participates annually in the National Institutional Ranking Framework (NIRF) and has consistently ranked in the top engineering colleges band in India.
+                                </p>
+                              </div>
+                              <Link
+                                to="/nirf"
+                                className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#0f2a44] text-white text-sm font-semibold hover:bg-[#b31317] transition-colors shrink-0 shadow-md"
+                              >
+                                View Complete NIRF Portal
+                                <ChevronRight className="w-4 h-4" />
+                              </Link>
+                            </div>
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6 pt-5 border-t border-[#caa74d]/20">
+                              <PdfLink
+                                title="NIRF 2025 Ranking Certificate (Band 201–300)"
+                                url="https://mits.ac.in/public/uploads/scholarship/Ranking%20Engg_2025-band%20201-300.pdf"
+                                highlight
+                              />
+                              <PdfLink
+                                title="NIRF 2026 Engineering Data"
+                                url="https://mits.ac.in/public/uploads/scholarship/Engg.NIRF_2026.pdf"
+                              />
+                              <PdfLink
+                                title="NIRF 2026 Overall Data"
+                                url="https://mits.ac.in/public/uploads/scholarship/Overall.NIRF_2026.pdf"
+                              />
                             </div>
                           </div>
                         )}

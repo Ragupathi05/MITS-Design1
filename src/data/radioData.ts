@@ -218,9 +218,109 @@ export const radioDownloads: RadioDoc[] = [
 
 export const radioEvents: RadioEvent[] = [
   {
+    title: "MITS RADIO 90.8 CR Teachers Day celebrations",
+    date: "05-09-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2005-09-2026%20-%20MITS%20RADIO%2090.8%20CR%20Teachers%20Day%20celebrations.pdf",
+  },
+  {
+    title: "MITS RADIO 900.8 CR A Special Sports Awareness and Student Motivation Programme",
+    date: "28-08-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2028-08-2026%20-%20MITS%20RADIO%20900.8%20CR%20A%20Special%20Sports%20Awareness%20and%20Student%20Motivation%20Programme.pdf",
+  },
+  {
+    title: "MITS RADIO 900.8 CR - 80th Independence Day Special Programme",
+    date: "15-08-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2015-08-2026%20-%20MITS%20RADIO%20900.8%20CR%20-%2080th%20Independence%20Day%20Special%20Programme.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - National Librarians Day",
+    date: "12-08-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2012-08-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20National%20Librarians%20Day.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Community Awareness on El Nino",
+    date: "12-08-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2012-08-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Community%20Awareness%20on%20El%20Nino.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - International Academic Interaction and Scientific Awareness",
+    date: "09-07-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2009-07-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20International%20Academic%20Interaction%20and%20Scientific%20Awareness.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Special Radio Talk on World Yoga Day 2026",
+    date: "17-06-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2017-06-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Special%20Radio%20Talk%20on%20World%20Yoga%20Day%202026.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Creating Awareness on Voluntary Blood Donation",
+    date: "12-06-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2012-06-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Creating%20Awareness%20on%20Voluntary%20Blood%20Donation.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Inspiring Journey of Academic Excellence and Global Success",
+    date: "09-06-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2009-06-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Inspiring%20Journey%20of%20Academic%20Excellence%20and%20Global%20Success.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Empowering Mothers and Children",
+    date: "13-05-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2013-05-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Empowering%20Mothers%20and%20Children.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Alumni Success Stories",
+    date: "05-05-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2005-05-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Alumni%20Success%20Stories.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Community Outreach and Social Transformation through Spiritual Service",
+    date: "03-05-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2003-05-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Community%20Outreach%20and%20Social%20Transformation%20through%20Spiritual%20Service.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Career Guidance on Civil Services",
+    date: "18-04-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2018-04-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Career%20Guidance%20on%20Civil%20Services.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Inspiring Civil Service Aspirants",
+    date: "18-04-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2018-04-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Inspiring%20Civil%20Service%20Aspirants.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Ensuring Public Safety and Social Awareness",
+    date: "12-04-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2012-04-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Ensuring%20Public%20Safety%20and%20Social%20Awareness.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Alumni Insights and Career Guidance",
+    date: "11-04-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2011-04-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Alumni%20Insights%20and%20Career%20Guidance.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Career Insights in Data Analytics and Emerging Technologies",
+    date: "08-04-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2008-04-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Career%20Insights%20in%20Data%20Analytics%20and%20Emerging%20Technologies.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - International Workers' Day",
+    date: "01-04-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2001-04-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20International%20Workers%E2%80%99%20Day.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Maa Vooru Outreach Programme at Arogyavaram Sanatorium",
+    date: "18-03-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2018-03-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Maa%20Vooru%20Outreach%20Programme%20at%20Arogyavaram%20Sanatorium.pdf",
+  },
+  {
     title: "Celebration of World Radio Day 2026",
     date: "13-02-2026",
     url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2013.02.2026%20-%20Celebration%20of%20World%20Radio%20Day%202026.pdf",
+  },
+  {
+    title: "MITS RADIO 90.8 CR - Promoting Sustainable Agriculture through Micro Irrigation",
+    date: "12-02-2026",
+    url: "https://mits.ac.in/assets/pdf/radio/2026%20-%2012-02-2026%20-%20MITS%20RADIO%2090.8%20CR%20-%20Promoting%20Sustainable%20Agriculture%20through%20Micro%20Irrigation.pdf",
   },
   {
     title: "From Campus to Corporate - Inspiring Journey of MITS Alumni",
