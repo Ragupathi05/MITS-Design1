@@ -85,7 +85,6 @@ const Footer = () => {
                 { label: "Apply Now", href: "/admissions" },
                 { label: "Scholarships", href: "/eligibility-and-fees" },
                 { label: "Mandatory Disclosure", href: "/about/mandatory-disclosures" },
-                { label: "IEI Student Chapter", href: "/iei" },
               ].map((link) => (
                 <li key={link.label}>
                   {link.href && /^https?:\/\//.test(link.href) ? (

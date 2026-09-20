@@ -88,7 +88,7 @@ export const cellCategories: CellCategory[] = [
       { name: "Computer Society of India - CSI Student Branch", href: "https://mits.ac.in/csi-content", detailId: "csi" },
       { name: "Institution of Electronics and Telecommunication Engineers", abbreviation: "IETE", href: "https://mits.ac.in/iete", detailId: "iete" },
       { name: "National Association of Software and Services Companies", abbreviation: "NASSCOM", href: "https://mits.ac.in/nasscom-cell", detailId: "nasscom" },
-      { name: "The Institution of Engineers (India)", abbreviation: "IEI", href: "https://mits.ac.in/iei", detailId: "iei" },
+      { name: "The Institution of Engineers (India) - IEI Student Chapter", abbreviation: "IEI", href: "/cells/iei", detailId: "iei" },
     ],
   },
 ];

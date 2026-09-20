@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { cellsDetailData } from "@/data/cellsDetailData";
 import { cellCategories } from "@/data/cellsData";
+import IeiView from "@/components/cells/IeiView";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -15,6 +16,11 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const targetId = overrideId || id;
+
+  if (targetId === "iei") {
+    return <IeiView />;
+  }
+
   const cell = targetId ? cellsDetailData[targetId] : null;
 
   if (!cell) {
