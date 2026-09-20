@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, FileText, ExternalLink, Search, ShieldCheck } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
@@ -10,12 +11,12 @@ const keyMandatoryDocs = [
   {
     sno: "9",
     name: "Minutes of Governing Council Meeting 2014-2026",
-    url: "https://mits.ac.in/bog",
+    url: "/bog",
   },
   {
     sno: "10",
     name: "Minutes of Academic Council Meeting 2014-2026",
-    url: "https://mits.ac.in/minutes-ac",
+    url: "/minutes-ac",
   },
   {
     sno: "54",
@@ -88,15 +89,25 @@ const MandatoryDisclosures = () => {
                     {doc.name}
                   </td>
                   <td className="py-3 px-4 text-center border border-slate-200">
-                    <a
-                      href={doc.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-bold text-[#8b0000] hover:text-[#6e0000] hover:underline"
-                    >
-                      <span>View</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
+                    {doc.url.startsWith("/") ? (
+                      <Link
+                        to={doc.url}
+                        className="inline-flex items-center gap-1 text-xs font-bold text-[#8b0000] hover:text-[#6e0000] hover:underline"
+                      >
+                        <span>View</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </Link>
+                    ) : (
+                      <a
+                        href={doc.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-bold text-[#8b0000] hover:text-[#6e0000] hover:underline"
+                      >
+                        <span>View</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
                   </td>
                 </tr>
               ))}
@@ -157,20 +168,35 @@ const MandatoryDisclosures = () => {
                     <ul className="divide-y divide-border border-t border-border">
                       {cat.items.map((it) => (
                         <li key={it.url}>
-                          <a
-                            href={it.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-between gap-3 px-5 py-3 text-sm hover:bg-secondary/5 transition-colors group"
-                          >
-                            <span className="flex items-center gap-3 min-w-0">
-                              <FileText className="w-4 h-4 text-primary shrink-0" />
-                              <span className="text-secondary group-hover:text-primary truncate">
-                                {it.label}
+                          {it.url.startsWith("/") ? (
+                            <Link
+                              to={it.url}
+                              className="flex items-center justify-between gap-3 px-5 py-3 text-sm hover:bg-secondary/5 transition-colors group"
+                            >
+                              <span className="flex items-center gap-3 min-w-0">
+                                <FileText className="w-4 h-4 text-primary shrink-0" />
+                                <span className="text-secondary group-hover:text-primary truncate font-medium">
+                                  {it.label}
+                                </span>
                               </span>
-                            </span>
-                            <ExternalLink className="w-3.5 h-3.5 text-secondary/50 group-hover:text-primary shrink-0" />
-                          </a>
+                              <ExternalLink className="w-3.5 h-3.5 text-secondary/50 group-hover:text-primary shrink-0" />
+                            </Link>
+                          ) : (
+                            <a
+                              href={it.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between gap-3 px-5 py-3 text-sm hover:bg-secondary/5 transition-colors group"
+                            >
+                              <span className="flex items-center gap-3 min-w-0">
+                                <FileText className="w-4 h-4 text-primary shrink-0" />
+                                <span className="text-secondary group-hover:text-primary truncate">
+                                  {it.label}
+                                </span>
+                              </span>
+                              <ExternalLink className="w-3.5 h-3.5 text-secondary/50 group-hover:text-primary shrink-0" />
+                            </a>
+                          )}
                         </li>
                       ))}
                     </ul>

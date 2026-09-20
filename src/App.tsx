@@ -39,6 +39,8 @@ const AcademicCouncil = lazy(() => import("./pages/about/AcademicCouncil"));
 const BoardOfStudies = lazy(() => import("./pages/about/BoardOfStudies"));
 const Organogram = lazy(() => import("./pages/about/Organogram"));
 const MandatoryDisclosures = lazy(() => import("./pages/about/MandatoryDisclosures"));
+const BogPage = lazy(() => import("./pages/about/BogPage"));
+const MinutesAcPage = lazy(() => import("./pages/about/MinutesAcPage"));
 const NIRF = lazy(() => import("./pages/NIRF"));
 const NAAC = lazy(() => import("./pages/NAAC"));
 const IQAC = lazy(() => import("./pages/IQAC"));
@@ -106,6 +108,8 @@ const App = () => (
             <Route path="/about/bos" element={<BoardOfStudies />} />
             <Route path="/about/organogram" element={<Organogram />} />
             <Route path="/about/mandatory-disclosures" element={<MandatoryDisclosures />} />
+            <Route path="/bog" element={<BogPage />} />
+            <Route path="/minutes-ac" element={<MinutesAcPage />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/academic-regulations" element={<AcademicRegulations />} />
             <Route path="/admissions" element={<Admissions />} />
