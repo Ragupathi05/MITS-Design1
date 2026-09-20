@@ -5,10 +5,9 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Trophy, Bus, Heart, UtensilsCrossed, Library, Radio,
   Lightbulb, Monitor, MessageSquare, Wifi, ChevronLeft, ChevronRight,
-  ZoomIn, X, ExternalLink,
+  ZoomIn, X, ExternalLink, MapPin, ClipboardList, FileText, CheckCircle2, Info,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
-import SportsFacilities from "@/components/SportsFacilities";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -138,14 +137,14 @@ const infrastructureItems = [
   },
   {
     key: "transport", label: "Transport", icon: Bus, title: "Transport Facilities",
-    desc: "MITS provides safe and reliable transportation services covering Madanapalle and surrounding areas.",
+    desc: "The Transport Division ensures the smooth operation of vehicles for students and staff travelling to and from MITS, Angallu.",
     points: [
-      "Fleet of 40+ buses covering 80+ km radius",
-      "Routes covering Madanapalle, Tirupati, Chittoor, and nearby towns",
-      "GPS-enabled buses for real-time tracking",
-      "Dedicated routes for day scholars and staff",
-      "Well-maintained vehicles with trained drivers",
-      "Special transport for examination and events",
+      "Fleet of 35 buses and 20 cars for students and staff",
+      "Regular services to eight towns in the surrounding region",
+      "Additional town-corner services available on demand",
+      "Seats allotted annually through a transport application",
+      "Separate transport identity cards for enrolled students",
+      "Dedicated student and staff transport services",
     ],
   },
   {
@@ -606,6 +605,100 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
 };
 
 // ─── Main Component ─────────────────────────────────────────────────────────
+const transportRoutes = ["Madanapalle", "Punganur", "Kalikiri", "Vayalpadu", "Rayachoti", "Kadiri", "B-Kothakota", "Pileru"];
+
+const parentInstructions = [
+  "The college reserves the right to modify, merge, or cancel any proposed route without assigning a reason.",
+  "Seats are allotted for each academic year on a first-come, first-served basis through an application.",
+  "New routes or buses are introduced subject to student strength and bus availability; the institute's decision is final.",
+  "Requests for route extensions, diversions, or additional stops will not be considered for existing routes.",
+  "Suggestions, requests, and complaints must be raised only with the Transport Manager or Principal. Arguing with faculty in-charges or drivers can lead to cancellation of the facility.",
+];
+
+const studentInstructions = [
+  "Carry both college and transport identity cards and present them whenever requested by the faculty in-charge or driver.",
+  "Seats are allotted for each academic year on a first-come, first-served basis through an application.",
+  "Ragging and indecent behaviour on buses are strictly prohibited.",
+  "Be at the assigned bus stop 10 minutes before the scheduled time. Chasing a bus or forcing the driver to stop is not permitted.",
+  "Do not use mobile-phone or iPod loudspeakers in the bus; clapping, whistling, shouting, and abusive language are prohibited.",
+  "Do not keep hands or any other body parts outside the windows. Boys and girls must occupy separate seats.",
+  "Do not argue with faculty in-charges or drivers. All complaints must be submitted in writing to the Transport Department, MITS.",
+  "Damage to seats, window glass, or other bus components, including writing on the bus, will be charged at double the cost.",
+  "Deboard immediately upon reaching the college and board again only after 4:00 pm.",
+  "Do not leave bags, books, drafters, or other belongings on buses. The Transport Department is not responsible for loss of belongings.",
+  "In case of a breakdown, follow the in-charge's or driver's instructions and make your own arrangements if an alternative is not provided.",
+];
+
+const transportDocuments = [
+  { label: "Annexure 2: Route Time-table", href: "https://mits.ac.in/public/uploads/facilites/STUDENTS.pdf" },
+  { label: "Annexure: Staff Special Buses", href: "https://mits.ac.in/public/uploads/facilites/STAFF.pdf" },
+  { label: "Transport Request Form", href: "https://mits.ac.in/public/uploads/facilites/transportindent.pdf" },
+  { label: "Application for Bus Pass", href: "https://mits.ac.in/public/uploads/facilites/Bus%20Pass%20Application%20format%20%281%29%20%281%29.pdf" },
+  { label: "Transport Committee", href: "https://mits.ac.in/public/uploads/facilites/transportcommittee-2024.pdf" },
+];
+
+const TransportInformation = () => (
+  <section className="mb-5 overflow-hidden rounded-xl border bg-white shadow-sm" style={{ borderColor: BORDER }}>
+    <div className="border-b px-5 py-4 md:px-6" style={{ borderColor: BORDER, background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)` }}>
+      <div className="flex items-center gap-3">
+        <span className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ background: `${GOLD}18` }}><Bus className="h-4 w-4" style={{ color: MITS_RED }} /></span>
+        <div>
+          <h3 className="font-display text-lg font-bold" style={{ color: DARK_NAVY }}>Transport Information</h3>
+          <p className="text-xs text-slate-500">Routes, guidance, applications, and transport documents</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="space-y-7 p-5 md:p-6">
+      <div className="rounded-xl border p-4 md:p-5" style={{ borderColor: `${GOLD}55`, background: `${GOLD}0c` }}>
+        <p className="text-sm font-semibold leading-relaxed" style={{ color: DARK_NAVY }}>MITS - Deemed to be University operates a fleet of 35 buses and 20 cars to transport students and staff from MITS, Angallu to various places and back.</p>
+      </div>
+
+      <div>
+        <div className="mb-3 flex items-center gap-2"><MapPin className="h-4 w-4" style={{ color: MITS_RED }} /><h4 className="font-display font-bold" style={{ color: DARK_NAVY }}>List of Routes</h4></div>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+          {transportRoutes.map((route) => <div key={route} className="rounded-lg border bg-slate-50 px-3 py-2 text-center text-sm font-medium text-slate-700" style={{ borderColor: BORDER }}>{route}</div>)}
+        </div>
+        <p className="mt-3 text-xs leading-relaxed text-slate-500">Additional route-bus services from different corners of the town will be made available on a demand basis.</p>
+      </div>
+
+      <div className="grid gap-5 lg:grid-cols-2">
+        <GuidanceCard title="Instructions to Parents" items={parentInstructions} />
+        <GuidanceCard title="Instructions to Students" items={studentInstructions} />
+      </div>
+
+      <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3.5">
+        <div className="flex gap-2.5"><Info className="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-700" /><p className="text-xs leading-relaxed text-amber-900"><span className="font-bold">Note:</span> Students must follow these instructions and cooperate with faculty in-charges and drivers for the smooth operation of buses. Failure to do so may result in withdrawal of the transport facility.</p></div>
+      </div>
+
+      <div className="grid gap-5 lg:grid-cols-[1fr_1.15fr]">
+        <div className="rounded-xl border p-4" style={{ borderColor: BORDER }}>
+          <div className="mb-3 flex items-center gap-2"><ClipboardList className="h-4 w-4" style={{ color: MITS_RED }} /><h4 className="font-display font-bold" style={{ color: DARK_NAVY }}>How to Apply</h4></div>
+          <ol className="space-y-2.5 text-xs leading-relaxed text-slate-600">
+            <li className="flex gap-2"><span className="font-bold" style={{ color: MITS_RED }}>01</span><span>Submit the completed application to the In-charge, Students Transport Facility, with two passport-size photographs for seat allocation.</span></li>
+            <li className="flex gap-2"><span className="font-bold" style={{ color: MITS_RED }}>02</span><span>Students enrolled for transport receive a separate transport identity card.</span></li>
+          </ol>
+        </div>
+        <div className="rounded-xl border p-4" style={{ borderColor: BORDER }}>
+          <div className="mb-3 flex items-center gap-2"><FileText className="h-4 w-4" style={{ color: MITS_RED }} /><h4 className="font-display font-bold" style={{ color: DARK_NAVY }}>Transport Documents</h4></div>
+          <div className="grid gap-2 sm:grid-cols-2">
+            {transportDocuments.map((document) => <a key={document.label} href={document.href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between gap-2 rounded-lg border bg-slate-50 px-3 py-2.5 text-xs font-semibold text-slate-700 transition-colors hover:text-white" style={{ borderColor: BORDER }} onMouseEnter={(event) => { event.currentTarget.style.background = DARK_NAVY; event.currentTarget.style.borderColor = DARK_NAVY; }} onMouseLeave={(event) => { event.currentTarget.style.background = "#f8fafc"; event.currentTarget.style.borderColor = BORDER; }}><span>{document.label}</span><ExternalLink className="h-3.5 w-3.5 flex-shrink-0" /></a>)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const GuidanceCard = ({ title, items }: { title: string; items: string[] }) => (
+  <div className="rounded-xl border p-4" style={{ borderColor: BORDER }}>
+    <h4 className="mb-3 font-display font-bold" style={{ color: DARK_NAVY }}>{title}</h4>
+    <ul className="space-y-2.5">
+      {items.map((item) => <li key={item} className="flex gap-2 text-xs leading-relaxed text-slate-600"><CheckCircle2 className="mt-0.5 h-3.5 w-3.5 flex-shrink-0" style={{ color: GOLD }} /><span>{item}</span></li>)}
+    </ul>
+  </div>
+);
+
 const Infrastructure = () => {
   const location = useLocation();
   const getInitialTab = () => {
@@ -875,6 +968,20 @@ const Infrastructure = () => {
                       </Link>
                     </div>
                   )}
+
+                  {current.key === "sports" && (
+                    <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
+                      <span className="text-sm font-medium text-slate-500">Facilities, events, sports committees, gymnasium, and fitness initiatives</span>
+                      <Link
+                        to="/sports-athletics"
+                        className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-[1.02] hover:shadow-md"
+                        style={{ background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})` }}
+                      >
+                        Explore Sports &amp; Athletics
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
 
                 {/* ── PHOTO GALLERY CAROUSEL ── */}
@@ -948,7 +1055,7 @@ const Infrastructure = () => {
                 </div>
 
                 {/* ── DEPARTMENT OF PHYSICAL EDUCATION & SPORTS (13 SUBSECTIONS & 2026-27 EVENTS) ── */}
-                {current.key === "sports" && <SportsFacilities />}
+                {current.key === "transport" && <TransportInformation />}
 
                 {/* ── BOTTOM NAV: Prev · Dots · Next ── */}
                 <div className="flex items-center justify-between gap-3 pt-1">
