@@ -679,7 +679,7 @@ const Infrastructure = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-[#0f2a44]/80 bg-gradient-to-b from-[#0f2a44]/85 via-[#0f2a44]/75 to-[#0f2a44]/90" />
+          <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
               Campus Life

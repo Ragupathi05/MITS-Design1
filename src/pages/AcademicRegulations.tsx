@@ -71,16 +71,16 @@ const AcademicRegulations = () => {
       />
 
       <main className="pt-0">
-        {/* HERO SECTION - Exact match to Library page layout and typography */}
+        {/* HERO SECTION - Exact match to standard Academic hero layout and styling */}
         <section
           className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
           style={{
-            backgroundImage: `url("${BASE}Hero-Section/image-4.jpg")`,
+            backgroundImage: `url("${BASE}Hero-Section/image-2.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-[#0f2a44]/80 bg-gradient-to-b from-[#0f2a44]/85 via-[#0f2a44]/75 to-[#0f2a44]/90" />
+          <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">
               ACADEMIC GOVERNANCE
