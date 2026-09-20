@@ -401,6 +401,9 @@ const NIRF = () => {
                       </div>
                       <div>
                         <p className="font-display text-xl font-bold text-white leading-tight">{nirfCoordinator.name}</p>
+                        {nirfCoordinator.designation && (
+                          <p className="text-[#f7df8a] text-sm font-medium mt-1">{nirfCoordinator.designation}</p>
+                        )}
                       </div>
                     </div>
 

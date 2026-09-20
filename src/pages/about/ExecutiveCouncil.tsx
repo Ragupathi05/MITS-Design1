@@ -37,6 +37,11 @@ const ExecutiveCouncil = () => {
             <div className="space-y-4">
               {[
                 {
+                  title: "Minutes of 4th Executive Council Meeting",
+                  date: "August 2026",
+                  url: "https://mits.ac.in/assets/pdf/admin/Minutes%204th%20EC%20Meeting.pdf",
+                },
+                {
                   title: "Minutes of 3rd Executive Council Meeting",
                   date: "March 11, 2026",
                   url: "https://mits.ac.in/assets/pdf/admin/MoM -Scan-3rd EC- 11.03.2026-MITS DTBU.pdf",

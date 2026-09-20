@@ -339,6 +339,7 @@ export const mandatoryDisclosures: DisclosureCategory[] = [
     category: "Governance & Finance",
     items: [
       { label: "Executive Council Constitution 2025", url: "https://mits.ac.in/assets/pdf/admin/Executive%20Council%20Constitution-2025.pdf" },
+      { label: "Minutes of 4th Executive Council Meeting", url: "https://mits.ac.in/assets/pdf/admin/Minutes%204th%20EC%20Meeting.pdf" },
       { label: "Minutes of 3rd Executive Council Meeting", url: "https://mits.ac.in/assets/pdf/admin/MoM%20-Scan-3rd%20EC-%2011.03.2026-MITS%20DTBU.pdf" },
       { label: "Minutes of 2nd Executive Council Meeting", url: "https://mits.ac.in/assets/pdf/admin/EC-Minutes-2nd-Meeting-25.8.2025.pdf" },
       { label: "Minutes of 1st Executive Council Meeting", url: "https://mits.ac.in/assets/pdf/admin/EC-Minutes-1st%20Meeting-5.08.2025.pdf" },
@@ -457,7 +458,7 @@ export const mandatoryDisclosures: DisclosureCategory[] = [
 export const bosPdfUrl =
   "https://mits.ac.in/assets/pdf/admin/MITS-DTBU-BOS-AY(2025-2026).pdf";
 export const organogramPdfUrl =
-  "https://mits.ac.in/assets/pdf/admin/Organogram%20-%20MITS%20Deemed%20to%20be%20University.pdf";
+  "https://mits.ac.in/assets/pdf/admin/Organogram-MITS%20DTBU.pdf";
 
 // ── About sections (used for mega menu & hub page) ───────────────────
 export interface AboutSectionDef {

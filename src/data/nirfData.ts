@@ -138,8 +138,9 @@ export const nirfHighlights = [
 ];
 
 export const nirfCoordinator = {
-  name: "Dr. G. Sreenivasulu",
-  role: "NIRF – Coordinator",
-  email: "feedback-nirf@mits.ac.in",
+  name: "Dr. A. V. Pavan Kumar",
+  role: "NIRF Coordinator",
+  designation: "Professor & Assistant Dean",
+  email: "nirf@mits.ac.in",
   institute: "Madanapalle Institute of Technology & Science",
 };
