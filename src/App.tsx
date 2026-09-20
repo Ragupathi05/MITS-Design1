@@ -63,6 +63,7 @@ const CellDetail = lazy(() => import("./pages/CellDetail"));
 const Careers = lazy(() => import("./pages/Careers"));
 const CiscoNetworkingAcademy = lazy(() => import("./pages/CiscoNetworkingAcademy"));
 const CiscoSelfPacedCourses = lazy(() => import("./pages/CiscoSelfPacedCourses"));
+const CurriculumSyllabus = lazy(() => import("./pages/CurriculumSyllabus"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -112,6 +113,9 @@ const App = () => (
             <Route path="/minutes-ac" element={<MinutesAcPage />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/academic-regulations" element={<AcademicRegulations />} />
+            <Route path="/curriculum-academic-syllabus" element={<CurriculumSyllabus />} />
+            <Route path="/academic-syllabus" element={<CurriculumSyllabus />} />
+            <Route path="/syllabus" element={<CurriculumSyllabus />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/research" element={<Research />} />
             <Route path="/placements" element={<Placements />} />
@@ -125,6 +129,7 @@ const App = () => (
             <Route path="/hostels" element={<CampusLife />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/infrastructure" element={<Infrastructure />} />
+            <Route path="/facilities" element={<Infrastructure />} />
             <Route path="/departments" element={<Departments />} />
             <Route path="/library" element={<Library />} />
             <Route path="/examinations" element={<Examinations />} />

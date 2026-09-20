@@ -78,9 +78,9 @@ const EligibilityAndFees = () => (
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
+        <div className="absolute inset-0 bg-[#0f2a44]/80 bg-gradient-to-b from-[#0f2a44]/85 via-[#0f2a44]/75 to-[#0f2a44]/90" />
         <div className="relative z-10 container mx-auto px-4 md:px-8 text-center space-y-4">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm">
+          <p className="text-[#ffd15c] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm">
             AY 2026-27 Admissions
           </p>
           <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
@@ -149,7 +149,7 @@ const EligibilityAndFees = () => (
 
       {/* FEE STRUCTURE SECTION */}
       <section className="py-16 bg-slate-50 border-t border-slate-200/50">
-        <div className="container mx-auto px-4 md:px-8 space-y-16">
+        <div className="container mx-auto px-4 md:px-8 space-y-12">
           <ScrollReveal>
             <div className="text-center space-y-2">
               <p className="text-[#b31317] font-bold tracking-widest uppercase text-sm md:text-sm">Concessions &amp; Fees</p>
@@ -158,20 +158,54 @@ const EligibilityAndFees = () => (
             </div>
           </ScrollReveal>
 
+          {/* Official Fee Structure PDF Download Card */}
+          <ScrollReveal>
+            <div className="p-5 md:p-6 rounded-2xl bg-[#0f2a44] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg border border-amber-400/30">
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center shrink-0">
+                  <Award className="w-6 h-6 text-[#ffd15c]" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 text-[11px] font-bold uppercase tracking-wider">
+                      Official Document
+                    </span>
+                    <span className="text-xs text-slate-300">• Approved by Competent Authority</span>
+                  </div>
+                  <h3 className="text-base md:text-lg font-bold text-white mt-1">
+                    MITS Deemed to be University Fee Structure (AY 2026-27)
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 mt-0.5">
+                    Download the official notified fee schedule, tuition rules, and scholarship criteria PDF.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://mits.ac.in/assets/pdf/admin/Fee_str_2026-27.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.02]"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download Fee Structure PDF</span>
+              </a>
+            </div>
+          </ScrollReveal>
+
           {/* TABLE 1: B.Tech Regular Group 1 */}
           <ScrollReveal>
             <div className="space-y-4">
               <h3 className="text-lg md:text-xl font-bold text-[#0f2a44] flex items-center gap-2 font-sans">
-                <Layers className="w-5 h-5 text-[#caa74d]" /> 1. B.Tech. Regular Fee (Engineering Group 1 &amp; Core Group)
+                <Layers className="w-5 h-5 text-[#caa74d]" /> 1. UG Fee Structure — School of Engineering, Computing
               </h3>
               <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
                 <table className="w-full border-collapse text-sm md:text-sm">
                   <thead>
                     <tr>
-                      <th className={TH} rowSpan={2}>Program Group</th>
-                      <th className={TH} rowSpan={2}>Base Fee / Sem</th>
+                      <th className={TH} rowSpan={2}>Program Name</th>
+                      <th className={TH} rowSpan={2}>Base Fee / Sem (₹)</th>
                       <th className={TH} colSpan={4}>Scholarship Criteria (Any One)</th>
-                      <th className={TH} rowSpan={2}>Final Fee / Sem</th>
+                      <th className={TH} rowSpan={2}>Final Fee / Sem (₹)</th>
                     </tr>
                     <tr className="bg-slate-800 text-white/90 text-[11px] font-semibold">
                       <th className="py-2.5 px-3 border border-slate-700 text-center">10+2 %</th>
@@ -181,12 +215,62 @@ const EligibilityAndFees = () => (
                     </tr>
                   </thead>
                   <tbody>
+                    {/* Civil, Mech, EEE */}
                     <tr>
+                      <td className={PROG_TD} rowSpan={2}>
+                        1. B.Tech. Civil Engineering<br />
+                        2. B.Tech. Mechanical Engineering<br />
+                        3. B.Tech. Electrical &amp; Electronics Engineering
+                      </td>
+                      <td className={BASE_TD} rowSpan={2}>₹ 50,000</td>
+                      <td className={TD}>75 – 100</td>
+                      <td className={TD}>&ge; 7</td>
+                      <td className={TD}>&le; 10,000</td>
+                      <td className={TD}>&le; 50,000</td>
+                      <td className={FINAL_TD}>₹ 45,000</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD} colSpan={4}>Other eligible candidates</td>
+                      <td className={FINAL_TD}>₹ 50,000</td>
+                    </tr>
+
+                    {/* Bioinformatics, CSE (AI & Robotics) */}
+                    <tr className="border-t-2 border-slate-200">
+                      <td className={PROG_TD} rowSpan={4}>
+                        1. B.Tech. Bioinformatics<br />
+                        2. B.Tech. CSE (AI &amp; Robotics)
+                      </td>
+                      <td className={BASE_TD} rowSpan={4}>₹ 80,000</td>
+                      <td className={TD}>90 – 100</td>
+                      <td className={TD}>&ge; 8</td>
+                      <td className={TD}>&le; 25,000</td>
+                      <td className={TD}>&le; 50,000</td>
+                      <td className={FINAL_TD}>₹ 65,000</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD}>80 – 89.99</td>
+                      <td className={TD}>&ge; 7</td>
+                      <td className={TD}>25,001 – 50,000</td>
+                      <td className={TD}>50,001 – 70,000</td>
+                      <td className={FINAL_TD}>₹ 70,000</td>
+                    </tr>
+                    <tr>
+                      <td className={TD}>70 – 79.99</td>
+                      <td className={TD}>&ge; 6</td>
+                      <td className={TD}>50,001 – 70,000</td>
+                      <td className={TD}>70,001 – 90,000</td>
+                      <td className={FINAL_TD}>₹ 75,000</td>
+                    </tr>
+                    <tr className="bg-slate-50/40">
+                      <td className={TD} colSpan={4}>Other eligible candidates</td>
+                      <td className={FINAL_TD}>₹ 80,000</td>
+                    </tr>
+
+                    {/* CSE, ECE */}
+                    <tr className="border-t-2 border-slate-200">
                       <td className={PROG_TD} rowSpan={5}>
-                        1. B.Tech. Electronics &amp; Communication Engg.<br />
-                        2. B.Tech. Bioinformatics<br />
-                        3. B.Tech. Computer Science &amp; Engg.<br />
-                        4. B.Tech. CSE (AI &amp; Robotics)
+                        1. B.Tech. Computer Science &amp; Engineering<br />
+                        2. B.Tech. Electronics &amp; Communication Engineering
                       </td>
                       <td className={BASE_TD} rowSpan={5}>₹ 99,000</td>
                       <td className={TD}>90 – 100</td>
@@ -219,38 +303,6 @@ const EligibilityAndFees = () => (
                     <tr>
                       <td className={TD} colSpan={4}>Other eligible candidates</td>
                       <td className={FINAL_TD}>₹ 99,000</td>
-                    </tr>
-
-                    <tr className="border-t-2 border-slate-200">
-                      <td className={PROG_TD} rowSpan={4}>
-                        1. B.Tech. Civil Engineering<br />
-                        2. B.Tech. Mechanical Engineering<br />
-                        3. B.Tech. Electrical &amp; Electronics Engg.
-                      </td>
-                      <td className={BASE_TD} rowSpan={4}>₹ 65,000</td>
-                      <td className={TD}>85 – 100</td>
-                      <td className={TD}>&ge; 8</td>
-                      <td className={TD}>&le; 10,000</td>
-                      <td className={TD}>&le; 50,000</td>
-                      <td className={FINAL_TD}>₹ 50,000</td>
-                    </tr>
-                    <tr className="bg-slate-50/40">
-                      <td className={TD}>75 – 84.99</td>
-                      <td className={TD}>&ge; 7</td>
-                      <td className={TD}>&le; 30,000</td>
-                      <td className={TD}>50,001 – 80,000</td>
-                      <td className={FINAL_TD}>₹ 55,000</td>
-                    </tr>
-                    <tr>
-                      <td className={TD}>65 – 74.99</td>
-                      <td className={TD}>&ge; 6</td>
-                      <td className={TD}>&le; 50,000</td>
-                      <td className={TD}>80,001 – 1,20,000</td>
-                      <td className={FINAL_TD}>₹ 60,000</td>
-                    </tr>
-                    <tr className="bg-slate-50/40">
-                      <td className={TD} colSpan={4}>Other eligible candidates</td>
-                      <td className={FINAL_TD}>₹ 65,000</td>
                     </tr>
                   </tbody>
                 </table>

@@ -25,6 +25,7 @@ const navItems: NavItem[] = [
       { label: "Programs Offered", href: "/academics" },
       { label: "Departments", href: "/departments" },
       { label: "Academic Regulations", href: "/academic-regulations" },
+      { label: "Curriculum & Syllabus", href: "/curriculum-academic-syllabus" },
       { label: "Academic Calendar", href: "/academic-calendar" },
       { label: "Examinations", href: "/examinations" },
       { label: "Library", href: "/library" },

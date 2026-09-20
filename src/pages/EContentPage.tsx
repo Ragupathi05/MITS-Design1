@@ -93,7 +93,7 @@ const EContentPage: React.FC = () => {
     <div className="min-h-screen bg-[#faf7f2] flex flex-col font-body">
       <Header />
 
-      {/* Hero Section — Matches About & IQAC pages exact layout */}
+      {/* Hero Section — Rich dark navy overlay for crystal clear contrast */}
       <section
         className="relative pt-32 md:pt-44 pb-24 overflow-hidden"
         style={{
@@ -102,24 +102,24 @@ const EContentPage: React.FC = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
+        <div className="absolute inset-0 bg-[#0f2a44]/85 bg-gradient-to-b from-[#0f2a44]/90 via-[#0f2a44]/75 to-[#0f2a44]/95" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
+          <p className="text-[#ffd15c] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4 drop-shadow-sm">
             E-Content Development Center
           </p>
           <h1
-            className="font-display text-3xl sm:text-4xl md:text-6xl font-bold mb-5 text-white tracking-tight"
+            className="font-display text-3xl sm:text-4xl md:text-6xl font-bold mb-5 text-white tracking-tight drop-shadow-md"
             style={{ fontFamily: "var(--font-display)" }}
           >
             E-Content Developed by{" "}
-            <span className="text-[#ffd15c]">MITS Faculty</span>
+            <span className="text-[#ffd15c] drop-shadow-md">MITS Faculty</span>
           </h1>
-          <p className="text-white/90 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mt-4">
+          <p className="text-white/95 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mt-4 font-medium drop-shadow-sm">
             Comprehensive digital repository of video lectures, interactive courseware,
             and specialized e-learning modules recorded at MITS Audio-Visual Studio.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 mt-8 max-w-2xl mx-auto">
             {[
               { k: "Departments", v: "20 Active" },
               { k: "Faculty", v: "260+ Members" },
@@ -128,12 +128,12 @@ const EContentPage: React.FC = () => {
             ].map((s) => (
               <div
                 key={s.k}
-                className="p-3 rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 text-center"
+                className="p-3.5 rounded-xl bg-white/15 backdrop-blur-md border border-white/30 text-center shadow-lg hover:bg-white/20 transition-all"
               >
-                <p className="font-display font-extrabold text-[#ffd15c] text-sm md:text-base">
+                <p className="font-display font-extrabold text-[#ffd15c] text-sm md:text-base drop-shadow-sm">
                   {s.v}
                 </p>
-                <p className="font-body text-[11px] text-white/80 font-medium uppercase tracking-wider">
+                <p className="font-body text-[11px] text-white/90 font-semibold uppercase tracking-wider mt-0.5">
                   {s.k}
                 </p>
               </div>

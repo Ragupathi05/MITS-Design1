@@ -97,22 +97,6 @@ const placementTeam: TeamMember[] = [
     image: "https://mits.ac.in/public/uploads/faculty/Dr. S. V. S. Ganga Devi.JPG",
   },
   {
-    name: "Dr. S. Rajasekaran",
-    qualification: "Ph.D. (Anna University, Chennai)",
-    designation: "Associate Director (I/c) – Placements",
-    department: "Placements",
-    profileUrl: "https://mits.ac.in/facultyprofile/173",
-    image: "public/uploads/faculty/f8983b3c4255e5b248d9b51eb8f62e38.jpeg",
-  },
-  {
-    name: "Mrs. Mythili N",
-    qualification: "M.B.A. (Bangalore University)",
-    designation: "Sr. Placement Officer",
-    department: "Placements",
-    profileUrl: "https://mits.ac.in/facultyprofile/1079",
-    image: "https://mits.ac.in/public/uploads/faculty/myth.JPG",
-  },
-  {
     name: "Mr. J. T. Drupad",
     qualification: "M.B.A. (Madurai Kamaraj University)",
     designation: "Placement Officer",

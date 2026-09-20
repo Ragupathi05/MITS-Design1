@@ -1,13 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Trophy, Bus, Heart, UtensilsCrossed, Library, Radio,
   Lightbulb, Monitor, MessageSquare, Wifi, ChevronLeft, ChevronRight,
   ZoomIn, X, ExternalLink,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
+import SportsFacilities from "@/components/SportsFacilities";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -386,7 +387,7 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
               style={{
                 background: "rgba(15,42,68,0.85)",
                 backdropFilter: "blur(8px)",
-                boxShadow: "0 4px 16px rgba(0,0,0,0.25)",
+                boxShadow: "0 4px 16px rgba(15,42,68,0.25)",
               }}
               aria-label="Previous image"
             >
@@ -402,7 +403,7 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
               style={{
                 background: "rgba(15,42,68,0.85)",
                 backdropFilter: "blur(8px)",
-                boxShadow: "0 4px 16px rgba(0,0,0,0.25)",
+                boxShadow: "0 4px 16px rgba(15,42,68,0.25)",
               }}
               aria-label="Next image"
             >
@@ -505,7 +506,7 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
       {lightboxOpen && (
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center"
-          style={{ background: "rgba(0,0,0,0.92)", backdropFilter: "blur(12px)" }}
+          style={{ background: "rgba(15,42,68,0.96)", backdropFilter: "blur(12px)" }}
           onClick={closeLightbox}
         >
           {/* Close button */}
@@ -562,7 +563,7 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
               src={images[lightboxIdx].src}
               alt={images[lightboxIdx].alt}
               className="max-w-full max-h-[80vh] object-contain rounded-lg"
-              style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.5)" }}
+              style={{ boxShadow: "0 8px 40px rgba(15,42,68,0.5)" }}
             />
           </div>
 
@@ -606,10 +607,40 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
 
 // ─── Main Component ─────────────────────────────────────────────────────────
 const Infrastructure = () => {
-  const [activeInfra, setActiveInfra] = useState(infrastructureItems[0].key);
-  const current = infrastructureItems.find((i) => i.key === activeInfra)!;
+  const location = useLocation();
+  const getInitialTab = () => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash;
+      const search = new URLSearchParams(window.location.search);
+      if (
+        hash === "#tab-2" ||
+        hash === "#sports" ||
+        search.get("tab") === "sports" ||
+        location.pathname === "/sports" ||
+        location.pathname === "/facilities"
+      ) {
+        return "sports";
+      }
+      const match = infrastructureItems.find(
+        (i) => hash === `#${i.key}` || search.get("tab") === i.key
+      );
+      if (match) return match.key;
+    }
+    return infrastructureItems[0].key;
+  };
+
+  const [activeInfra, setActiveInfra] = useState<string>(getInitialTab);
+  const current = infrastructureItems.find((i) => i.key === activeInfra) || infrastructureItems[0];
   const currentIdx = infrastructureItems.findIndex((i) => i.key === activeInfra);
   const tabsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    const search = new URLSearchParams(window.location.search);
+    if (hash === "#tab-2" || search.get("tab") === "sports" || hash === "#sports") {
+      setActiveInfra("sports");
+    }
+  }, [location]);
 
   useEffect(() => {
     const el = tabsRef.current?.querySelector<HTMLButtonElement>(
@@ -648,7 +679,7 @@ const Infrastructure = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
+          <div className="absolute inset-0 bg-[#0f2a44]/80 bg-gradient-to-b from-[#0f2a44]/85 via-[#0f2a44]/75 to-[#0f2a44]/90" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
               Campus Life
@@ -915,6 +946,9 @@ const Infrastructure = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* ── DEPARTMENT OF PHYSICAL EDUCATION & SPORTS (13 SUBSECTIONS & 2026-27 EVENTS) ── */}
+                {current.key === "sports" && <SportsFacilities />}
 
                 {/* ── BOTTOM NAV: Prev · Dots · Next ── */}
                 <div className="flex items-center justify-between gap-3 pt-1">
