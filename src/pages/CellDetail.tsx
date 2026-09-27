@@ -10,6 +10,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { cellsDetailData } from "@/data/cellsDetailData";
 import { cellCategories } from "@/data/cellsData";
 import IeiView from "@/components/cells/IeiView";
+import SacView from "@/components/cells/SacView";
 
 type TabId = "home" | "vidya-laxmi" | "scholarships" | "documents" | "events" | "gallery" | "financial-aid" | "contact";
 
@@ -78,6 +79,10 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
 
   if (targetId === "iei") {
     return <IeiView />;
+  }
+
+  if (targetId === "sac") {
+    return <SacView />;
   }
 
   if (!cell) {

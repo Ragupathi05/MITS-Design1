@@ -68,6 +68,7 @@ const CiscoSelfPacedCourses = lazy(() => import("./pages/CiscoSelfPacedCourses")
 const CurriculumSyllabus = lazy(() => import("./pages/CurriculumSyllabus"));
 const SportsAthletics = lazy(() => import("./pages/SportsAthletics"));
 const VentureStudio = lazy(() => import("./pages/VentureStudio"));
+const StudentClubs = lazy(() => import("./pages/StudentClubs"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -174,6 +175,7 @@ const App = () => (
             <Route path="/newsletter" element={<NewsletterPage />} />
             <Route path="/cells" element={<Cells />} />
             <Route path="/cells/:id" element={<CellDetail />} />
+            <Route path="/student-clubs-sac" element={<StudentClubs />} />
             <Route path="/iei" element={<CellDetail overrideId="iei" />} />
             <Route path="/career" element={<Careers />} />
             <Route path="/careers" element={<Careers />} />
