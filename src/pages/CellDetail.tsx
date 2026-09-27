@@ -12,6 +12,7 @@ import { cellCategories } from "@/data/cellsData";
 import IeiView from "@/components/cells/IeiView";
 import SacView from "@/components/cells/SacView";
 import MmcView from "@/components/cells/MmcView";
+import MinorityView from "@/components/cells/MinorityView";
 
 type TabId = "home" | "vidya-laxmi" | "scholarships" | "documents" | "events" | "gallery" | "financial-aid" | "contact";
 
@@ -88,6 +89,10 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
 
   if (targetId === "mmc") {
     return <MmcView />;
+  }
+
+  if (targetId === "minority") {
+    return <MinorityView />;
   }
 
   if (!cell) {
