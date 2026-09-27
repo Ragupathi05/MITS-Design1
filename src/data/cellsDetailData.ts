@@ -1114,127 +1114,79 @@ export const cellsDetailData: Record<string, CellDetail> = {
   },
   "mmc": {
     "name": "Mentor - Mentee Cell",
-    "aboutText": [
-      "The Mentor-Mentee Cell (MMC) at Madanapalle Institute of Technology & Science drives a comprehensive student mentoring system that guarantees continuous personalized guidance, academic tracking, psycho-social counsel, and professional mentoring for every enrolled learner.",
-      "Upon admission, each student is mapped to a dedicated faculty mentor who remains their trusted advisor throughout their multi-year academic journey.",
-      "The Cell organizes regular one-on-one mentor-mentee interaction sessions, records holistic student profiles in customized mentoring logbooks, coordinates with parents, and collaborates with career counseling cells to ensure high academic success and emotional resilience."
-    ],
+    "aboutText": [],
     "members": [
-      {
-        "sno": "1",
-        "name": "Dr. C. Yuvaraj",
-        "designation": "Vice Chancellor (I/c)",
-        "position": "Chairperson",
-        "email": ""
-      },
-      {
-        "sno": "2",
-        "name": "Dr. M. Parvathi",
-        "designation": "Assistant Professor, Dept. of English & Foreign Languages",
-        "position": "Coordinator",
-        "email": ""
-      },
-      {
-        "sno": "3",
-        "name": "Dr. K. Arul kumar",
-        "designation": "Associate Professor, Dept. of EEE",
-        "position": "Co-Coordinator",
-        "email": ""
-      },
-      {
-        "sno": "4",
-        "name": "Dr. P. Ramanathan",
-        "designation": "Vice-Principal (Administration)",
-        "position": "Member",
-        "email": ""
-      },
-      {
-        "sno": "5",
-        "name": "Dr. C. Kamal Basha",
-        "designation": "Dean Quality Assurance",
-        "position": "Member",
-        "email": ""
-      }
+      { "sno": "1", "name": "Dr. P. Ramanathan", "designation": "Principal", "position": "Chairman", "email": "principal@mits.ac.in" },
+      { "sno": "2", "name": "Mrs. U. Vijaya Lakshmi", "designation": "Senior Manager - Student Counsellor", "position": "Member", "email": "vijayalakshmiu@mits.ac.in" },
+      { "sno": "3", "name": "Dr. Sudheer Kumar Y", "designation": "Assistant Professor - CIVIL", "position": "Member", "email": "sudheerkumary@mits.ac.in" },
+      { "sno": "4", "name": "Mr. G. Mahammed Rafi", "designation": "Assistant Professor - EEE", "position": "Member", "email": "mahammedrafig@mits.ac.in" },
+      { "sno": "5", "name": "Dr. Smriti Baruah", "designation": "Assistant Professor - ECE", "position": "Member", "email": "smritib@mits.ac.in" },
+      { "sno": "6", "name": "Dr. G. Veeresalingam", "designation": "Assistant Professor - MECH", "position": "Member", "email": "drveerasalingamg@mits.ac.in" },
+      { "sno": "7", "name": "Mrs. G. Vasundara Devi", "designation": "Assistant Professor - CSE", "position": "Member", "email": "vasundaradevig@mits.ac.in" },
+      { "sno": "8", "name": "Mr. Sreenath K.", "designation": "Assistant Professor - AI", "position": "Member", "email": "sreenathk@mits.ac.in" },
+      { "sno": "9", "name": "Dr. M. Kiran Kumar", "designation": "Assistant Professor - DS", "position": "Member", "email": "kirankumarm@mits.ac.in" },
+      { "sno": "10", "name": "Mr. T. Niranjan Babu", "designation": "Assistant Professor - CS", "position": "Member", "email": "niranjanbabut@mits.ac.in" },
+      { "sno": "11", "name": "Mr. Roni Das", "designation": "Assistant Professor - AI & ML", "position": "Member", "email": "ronidas@mits.ac.in" },
+      { "sno": "12", "name": "Mr. Ashok Dasari", "designation": "Assistant Professor - CST", "position": "Member", "email": "ashokd@mits.ac.in" },
+      { "sno": "13", "name": "Dr. D. Rajesh Kumar", "designation": "Assistant Professor - MBA", "position": "Member", "email": "drrajeshkumar@mits.ac.in" },
+      { "sno": "14", "name": "Mrs. Roopa Prasad", "designation": "Assistant Professor - MCA", "position": "Member", "email": "roopak@mits.ac.in" },
+      { "sno": "15", "name": "Dr. Sunku Sreedhar", "designation": "Assistant Professor - Physics", "position": "Member", "email": "drsreedhars@mits.ac.in" },
+      { "sno": "16", "name": "Dr. C. V. Raju", "designation": "Assistant Professor - Chemistry", "position": "Member", "email": "drvenkateswararajuc@mits.ac.in" },
+      { "sno": "17", "name": "Dr. B. Anitha", "designation": "Sr. Assistant Professor", "position": "Member", "email": "dranithab@mits.ac.in" },
+      { "sno": "18", "name": "Dr. Bibin Mathew", "designation": "Assistant Professor - Maths", "position": "Member", "email": "drbibinmathew@mits.ac.in" },
+      { "sno": "19", "name": "Dr. M. Parvathi", "designation": "Assistant Professor - English", "position": "Coordinator", "email": "parvathim@mits.ac.in" }
     ],
     "documents": [
-      {
-        "title": "Mentor Mentee Office Order 2025",
-        "href": "https://mits.ac.in/assets/pdf/admin/Mentor Mentee Cell-office order-feb 2025.pdf"
-      },
-      {
-        "title": "Mentor Mentee Office Order 2024",
-        "href": "https://mits.ac.in/assets/pdf/admin/Mentor Mentee office Order.pdf"
-      },
-      {
-        "title": "Mentoring System Policy & SOP",
-        "href": "https://mits.ac.in/assets/pdf/admin/Mentoring System scan-min.pdf"
-      },
-      {
-        "title": "Mentor Coordinators Roster",
-        "href": "https://mits.ac.in/assets/pdf/admin/Mentor Coordinators.pdf"
-      },
-      {
-        "title": "Mentor-Mentee Interaction Forms",
-        "href": "https://www.mits.ac.in/assets/pdf/admin/Mentor-Mentee Interaction Forms.pdf"
-      },
-      {
-        "title": "Student (Mentee) Information Booklet",
-        "href": "https://www.mits.ac.in/assets/pdf/admin/STUDENT (MENTEE) INFORMATION.pdf"
-      }
+      { "title": "Mentoring System", "href": "https://mits.ac.in/assets/pdf/admin/Mentoring System scan-min.pdf" },
+      { "title": "Mentor Mentee Office Order 2025", "href": "https://mits.ac.in/assets/pdf/admin/Mentor Mentee Cell-office order-feb 2025.pdf" },
+      { "title": "Mentor Mentee Office Order 2024", "href": "https://mits.ac.in/assets/pdf/admin/Mentor Mentee office Order.pdf" },
+      { "title": "Mentor Coordinators", "href": "https://mits.ac.in/assets/pdf/admin/Mentor Coordinators.pdf" },
+      { "title": "Student Mentoring Brochure Guidelines", "href": "https://mits.ac.in/assets/pdf/admin/Student Mentoring Brochure Guidelines.pdf" },
+      { "title": "Mentor-Mentee Interaction Forms", "href": "http://www.mits.ac.in/assets/pdf/admin/Mentor-Mentee Interaction Forms.pdf" },
+      { "title": "Grading Details", "href": "http://www.mits.ac.in/assets/pdf/admin/Grading Details.pdf" },
+      { "title": "Remarks by the Mentor", "href": "http://www.mits.ac.in/assets/pdf/admin/Remarks by the Mentor.pdf" },
+      { "title": "MITS-Consolidated Mentoring Meeting Schedules", "href": "http://www.mits.ac.in/assets/pdf/admin/MITS-Consolidated Mentoring meeting schedules.pdf" }
     ],
     "contacts": [
       {
         "name": "Dr. M. Parvathi",
-        "designation": "Assistant Professor, Dept. of English & Foreign Languages & Coordinator",
-        "address": "Madanapalle Institute of Technology & Science, Madanapalle - 517325",
-        "phone": "+91-8571-280255",
+        "designation": "Coordinator, Assistant Professor - Department of English & Foreign Languages",
+        "address": "Madanapalle Institute of Technology & Science, Deemed to be University, Madanapalle-Kadiri Road, kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India",
+        "phone": "+91-8571-280255, 280706",
         "email": "parvathim@mits.ac.in"
-      },
-      {
-        "name": "Dr. K. Arul kumar",
-        "designation": "Associate Professor, Dept. of EEE & Co-Coordinator",
-        "address": "Madanapalle Institute of Technology & Science, Madanapalle - 517325",
-        "phone": "+91-8571-280255",
-        "email": "arulkumark@mits.ac.in"
       }
     ],
     "id": "mmc",
-    "url": "https://mits.ac.in/mmc",
+    "url": "https://mits.ac.in/mentor-menteecell",
     "sections": [
       {
-        "title": "Vision & Mission",
+        "title": "About Mentor - Mentee Cell",
         "paragraphs": [
-          "Vision: To establish an empathetic, student-centric academic culture where individualized mentorship empowers students to excel academically, professionally, and personally.",
-          "Mission: To provide structured faculty mentorship that addresses learning bottlenecks, nurtures innate talents, and prepares graduates with strong ethical and career competencies."
+          "The Mentor-Mentee Program is a crucial element for a successful academic journey and fostering closer connections between faculty and students. Through mentoring, students receive vital support, guidance, and encouragement, enriching their academic experience. Mentors serve as counsellors, helping students stay motivated and excel in their studies. Students can rely on their mentors for assistance with both academic and personal challenges. This program focuses on nurturing student growth and competence while strengthening the bonds between faculty and students."
         ]
       },
       {
-        "title": "Preamble & Comprehensive Mentoring System",
+        "title": "Mentoring System",
         "paragraphs": [
-          "The Institution adheres to a healthy mentor-mentee ratio (1:15 to 1:20) ensuring personalized attention.",
-          "Faculty mentors maintain confidential Mentee Information Forms recording academic milestones, co-curricular inclinations, attendance patterns, and psycho-social observations.",
-          "Mentors conduct fortnightly scheduled interactions and open-door counseling to identify slow learners, advanced learners, and students requiring specialized interventions.",
-          "Mentors liaise constructively with heads of departments, parents, hostel wardens, and placement officers to optimize student outcomes."
+          "The institute has an effective and well-structured mentoring system in place. Mentor-Mentee Cell - MITS has been a structured initiative since 2016, designed to support and guide students throughout their academic journey. It promotes a professional relationship between mentors and mentees, ensuring holistic development.",
+          "• The mentoring system caters to students' professional, career, personal, and holistic development.",
+          "• Faculty members are acquainted with the institute's mentoring system during their induction program through structured orientation sessions, and each faculty member actively participates in the mentoring process as a mentor at their concerned department.",
+          "• On average, 20 - 25 students are allotted to each faculty member for mentoring.",
+          "• The mentor in-charge convenes a meeting once a month, in addition to holding regular, unscheduled meetings with student mentees three to four times per semester.",
+          "• Currently, the proctoring system at the institutional level is headed by Dr. M. Parvathi, Assistant Professor of English, Department of English & Foreign Languages."
+        ]
+      },
+      {
+        "title": "Comprehensive Mentoring System at the Institution",
+        "paragraphs": [
+          "The revised mentoring system, implemented through AviScio :: MITS (172.16.0.222) - an integrated digital platform, has been operational since February 2025 to monitor and document mentoring interactions for all B. Tech., students. From the odd semester of the academic year 2025-26, M. Tech., MBA, and MCA students are being mapped to mentors and engaged through this platform.",
+          "The shift to this digital platform marks a significant improvement over the traditional one-page hard copy records and the earlier IMS system. The new digital system provides mentors with comprehensive, real-time access to student data, allowing for deeper analysis, personalized mentoring, and better documentation. This ensures transparency, scalability, and a more structured approach to student support.",
+          "This system serves as a centralized digital repository, recording key metrics such as academic progress, attendance records, and mentor-mentee engagements. The platform automatically synchronizes real-time academic data — including attendance, academic grades, backlog status, and achievements — into individual student profiles, enabling mentors to analyze performance trends and provide personalized, data-driven guidance.",
+          "In the system, mentors play a multifaceted role, focusing not only on academic improvement through remedial suggestions, time management strategies, and study plans, but also on holistic development. They guide students in career planning, personality development, and behavioral aspects. Recognizing the importance of parental involvement, the institution facilitates periodic parent meetings two to three times a semester, either in person or virtually, to discuss their wards' progress and address concerns collaboratively."
         ]
       }
     ],
-    "events": [
-      {
-        "title": "Faculty Mentor Orientation on Empathetic Mentoring and Behavioral Tracking",
-        "href": "https://mits.ac.in/assets/pdf/admin/Mentor Mentee Cell-office order-feb 2025.pdf",
-        "date": "22-08-2025"
-      },
-      {
-        "title": "Mid-Semester Academic Progress & Peer Support Review Session",
-        "href": "https://mits.ac.in/assets/pdf/admin/Mentoring System scan-min.pdf",
-        "date": "14-11-2025"
-      },
-      {
-        "title": "Parent-Mentor Interactive Conclave for First-Year Undergraduates",
-        "href": "https://mits.ac.in/assets/pdf/admin/Mentor Mentee office Order.pdf",
-        "date": "18-10-2025"
-      }
-    ]
+    "events": []
   },
   "alumni": {
     "name": "Alumni Cell",
