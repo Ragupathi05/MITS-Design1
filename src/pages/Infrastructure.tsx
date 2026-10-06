@@ -6,6 +6,7 @@ import {
   Trophy, Bus, Heart, UtensilsCrossed, Library, Radio,
   Lightbulb, Monitor, MessageSquare, Wifi, ChevronLeft, ChevronRight,
   ZoomIn, X, ExternalLink, MapPin, ClipboardList, FileText, CheckCircle2, Info,
+  Server, ShieldCheck, Laptop, Network, HardDrive, Cpu, Cloud, Globe, Lock,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 
@@ -173,14 +174,14 @@ const infrastructureItems = [
   },
   {
     key: "wifi", label: "Wi-Fi", icon: Wifi, title: "Wi-Fi & Connectivity",
-    desc: "High-speed internet connectivity is available across the entire campus for seamless academic and research activities.",
+    desc: "High-speed 2 Gbps internet connectivity, CISCO Meraki MX450 firewall security, and 192 Ruckus R650 Wi-Fi 6 access points provide robust, uninterrupted digital infrastructure across the campus.",
     points: [
-      "Campus-wide Wi-Fi with 1 Gbps internet bandwidth",
-      "500+ access points across academic and administrative blocks",
-      "24/7 connectivity for students and faculty",
-      "Secure network with firewall and content filtering",
-      "Dedicated bandwidth for research and labs",
-      "NKN (National Knowledge Network) connectivity",
+      "Dedicated 2 Gbps symmetric high-speed internet bandwidth with NKN connectivity",
+      "192 Ruckus R650 enterprise Wi-Fi 6 access points across all academic & hostel blocks",
+      "Enterprise perimeter security powered by CISCO Meraki MX450 Next-Gen Firewall",
+      "Network infrastructure supporting 2,095 desktops (832 Circular Block + 1,263 Departments)",
+      "Dedicated institutional fleet of 80 laptops for faculty mobility and digital seminars",
+      "Enterprise server farm with 6 Dell PowerEdge physical servers and 2 dedicated cloud servers (IMS & Moodle)",
     ],
   },
   {
@@ -233,14 +234,14 @@ const infrastructureItems = [
   },
   {
     key: "computer", label: "Computer Infrastructure", icon: Monitor, title: "Computer Infrastructure",
-    desc: "MITS maintains cutting-edge computing infrastructure to support academic, research, and innovation activities.",
+    desc: "MITS maintains cutting-edge computing infrastructure with 2,095 networked desktop workstations, 80 institutional laptops, and 8 enterprise servers.",
     points: [
-      "3000+ computing systems across departments",
-      "High-performance GPU servers for AI/ML research",
-      "Licensed software: MATLAB, AutoCAD, ANSYS, and more",
-      "Cloud computing lab with AWS and Azure access",
-      "24/7 lab access for project and research work",
-      "Regular hardware and software upgrades",
+      "2,095 networked desktop workstations across campus",
+      "832 high-performance systems in Circular Block Central Computing Center",
+      "1,263 systems equipped across all departmental laboratories",
+      "80 dedicated institutional laptops for faculty & mobility",
+      "8 enterprise servers (Dell PowerEdge R740, R730, R710 & Cloud Servers)",
+      "High-speed 2 Gbps internet and Cisco Meraki MX450 firewall security",
     ],
   },
   {
@@ -699,6 +700,412 @@ const GuidanceCard = ({ title, items }: { title: string; items: string[] }) => (
   </div>
 );
 
+// ─── Wi-Fi & IT Infrastructure Detailed Information ─────────────────────────
+const wifiOverviewMetrics = [
+  { label: "Total Bandwidth", value: "2 Gbps", sub: "Dedicated Leased Line & NKN", badge: "Symmetric Speed", icon: Globe, color: "#0070f3" },
+  { label: "Enterprise Firewall", value: "Meraki MX450", sub: "CISCO Security & SD-WAN Appliance", badge: "Next-Gen Defense", icon: ShieldCheck, color: MITS_RED },
+  { label: "Wi-Fi Access Points", value: "192 APs", sub: "Ruckus R650 Enterprise Wi-Fi 6", badge: "100% Coverage", icon: Wifi, color: GOLD },
+  { label: "Total Desktops", value: "2,095", sub: "832 Circular + 1,263 Dept Labs", badge: "Gigabit LAN", icon: Monitor, color: DARK_NAVY },
+  { label: "Institutional Laptops", value: "80 Units", sub: "Academic & Administrative Mobility", badge: "Portable Fleet", icon: Laptop, color: "#10b981" },
+  { label: "Core Servers", value: "8 Servers", sub: "6 Physical + 2 Dedicated Cloud", badge: "High Availability", icon: Server, color: "#8b5cf6" },
+];
+
+const physicalServersData = [
+  {
+    server: "Server 1",
+    name: "Dell PowerEdge R730 / VIKRANTH",
+    badge: "High-End Server",
+    processor: "Intel(R) Xeon(R) CPU E5-2620 V4 @ 2.10GHz",
+    cpus: "8 CPUs x 2.099GHz",
+    ram: "128 GB RAM",
+    hdd: "2TB x 2 SAS (RAID 1)",
+    lan: "10/100/1000 Mbps x 4 Ports",
+    role: "Core Institutional Database, Compute-Intensive Services & Central Gateway",
+  },
+  {
+    server: "Server 2",
+    name: "Dell PowerEdge R710 / TRISHUL",
+    badge: "Enterprise Server",
+    processor: "Intel Xeon Enterprise Multi-Core Processor",
+    cpus: "High-Throughput Multi-Core",
+    ram: "High-Capacity Enterprise ECC",
+    hdd: "Enterprise SAS RAID Storage",
+    lan: "Multi-Port Gigabit LAN",
+    role: "Central Authentication, Identity Management & Campus Network Operations",
+  },
+  {
+    server: "Server 3",
+    name: "Dell PowerEdge R730",
+    badge: "High Performance",
+    processor: "Intel Xeon Multi-Core Processor",
+    cpus: "8 CPUs x 2.099GHz",
+    ram: "128 GB RAM",
+    hdd: "High-Speed Enterprise SAS",
+    lan: "10/100/1000 Mbps Quad LAN",
+    role: "Academic Computing, Virtualization Node & Departmental Software Hosting",
+  },
+  {
+    server: "Server 4",
+    name: "Dell PowerEdge R740",
+    badge: "Scalable Compute",
+    processor: "Dual Intel Xeon Scalable Processors",
+    cpus: "High-Density Multi-Threading",
+    ram: "Enterprise Registered ECC RAM",
+    hdd: "High-IOPS Enterprise Storage",
+    lan: "High-Speed Gigabit LAN",
+    role: "Campus-Wide Digital Platform & Virtual Lab Environment",
+  },
+  {
+    server: "Server 5",
+    name: "Dell PowerEdge R740",
+    badge: "Redundant Cluster",
+    processor: "Dual Intel Xeon Scalable Processors",
+    cpus: "High-Density Multi-Threading",
+    ram: "Enterprise Registered ECC RAM",
+    hdd: "Redundant SAS Array (RAID Protected)",
+    lan: "High-Speed Gigabit LAN",
+    role: "High-Availability Failover, Automated Backups & Core Services Continuity",
+  },
+  {
+    server: "Server 6",
+    name: "GDLC Server",
+    badge: "Academic Controller",
+    processor: "Multi-Core Enterprise Processor Architecture",
+    cpus: "Lab Dedicated Compute",
+    ram: "Lab Workload Optimized Memory",
+    hdd: "High-Capacity Dedicated Storage",
+    lan: "Gigabit Ethernet Controller",
+    role: "Global Development & Digital Learning Center (GDLC) Lab Services & Media Streaming",
+  },
+];
+
+const cloudServersData = [
+  {
+    server: "Cloud Server 1",
+    name: "IMS SERVER",
+    title: "Institute Management System (IMS)",
+    processor: "Intel Core i5",
+    ram: "8 GB RAM",
+    hdd: "1 TB Storage",
+    badge: "Cloud Hosted",
+    description: "Centralized cloud enterprise ERP managing student lifecycles, admissions, exam registrations, grading, attendance tracking, fee payments, and staff administrative governance.",
+  },
+  {
+    server: "Cloud Server 2",
+    name: "MOODLE SERVER",
+    title: "Learning Management System (LMS)",
+    processor: "Intel Xeon Processor",
+    ram: "8 GB RAM",
+    hdd: "Dynamic Scalable Storage",
+    badge: "24/7 E-Learning",
+    description: "Interactive online academic portal hosting e-courses, syllabus notes, video modules, assignments, proctored digital quizzes, student assessments, and outcome evaluations.",
+  },
+];
+
+const WifiInfrastructureInformation = () => (
+  <section className="mb-5 overflow-hidden rounded-xl border bg-white shadow-sm" style={{ borderColor: BORDER }}>
+    {/* Header */}
+    <div className="border-b px-5 py-4 md:px-6" style={{ borderColor: BORDER, background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)` }}>
+      <div className="flex items-center gap-3">
+        <span className="flex h-10 w-10 items-center justify-center rounded-lg" style={{ background: `${GOLD}18` }}>
+          <Wifi className="h-5 w-5" style={{ color: MITS_RED }} />
+        </span>
+        <div>
+          <h3 className="font-display text-lg font-bold" style={{ color: DARK_NAVY }}>
+            Wi-Fi &amp; Digital IT Infrastructure
+          </h3>
+          <p className="text-xs text-slate-500">
+            High-speed 2 Gbps connectivity, Cisco Meraki firewall security, server farm, and computing fleet
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="space-y-7 p-5 md:p-6">
+      {/* ── Key Metrics 6-Card Grid ── */}
+      <div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {wifiOverviewMetrics.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.label}
+                className="rounded-xl border p-3.5 transition-all duration-200 hover:shadow-sm"
+                style={{ borderColor: BORDER, background: "#fafbfc" }}
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-7 h-7 rounded-md flex items-center justify-center bg-white border shadow-xs" style={{ borderColor: BORDER }}>
+                    <Icon className="w-3.5 h-3.5" style={{ color: item.color }} />
+                  </div>
+                  <span className="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded text-white" style={{ background: DARK_NAVY }}>
+                    {item.badge}
+                  </span>
+                </div>
+                <div className="text-xl md:text-2xl font-extrabold tracking-tight" style={{ color: DARK_NAVY }}>
+                  {item.value}
+                </div>
+                <div className="text-[11px] font-bold text-slate-700 mt-0.5 leading-snug">
+                  {item.label}
+                </div>
+                <div className="text-[10px] text-slate-500 mt-1 leading-tight line-clamp-1">
+                  {item.sub}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* ── Computing Fleet Distribution ── */}
+      <div className="rounded-xl border p-5" style={{ borderColor: BORDER, background: "#fff" }}>
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100">
+          <div className="flex items-center gap-2">
+            <Monitor className="h-4 w-4" style={{ color: MITS_RED }} />
+            <h4 className="font-display font-bold text-base" style={{ color: DARK_NAVY }}>
+              Computing &amp; Desktop Infrastructure
+            </h4>
+          </div>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-white shadow-xs" style={{ background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})` }}>
+            <span>Total Fleet:</span>
+            <span className="text-[#ffd15c]">2,095 Desktops + 80 Laptops</span>
+          </span>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3 mb-4">
+          {/* Circular Block Card */}
+          <div className="rounded-xl border p-4 bg-slate-50/70" style={{ borderColor: BORDER }}>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Central Facility</span>
+              <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-blue-100 text-blue-800">Circular Block</span>
+            </div>
+            <div className="text-2xl md:text-3xl font-extrabold text-[#005bb5]">832</div>
+            <p className="text-xs font-semibold text-slate-700 mt-0.5">Desktops in Circular Block</p>
+            <p className="text-[11px] text-slate-500 mt-2 leading-relaxed">
+              Equipped for institutional online examinations, campus placement coding assessments, centralized lab programs, and digital evaluations.
+            </p>
+          </div>
+
+          {/* Departmental Desktops Card */}
+          <div className="rounded-xl border p-4 bg-slate-50/70" style={{ borderColor: BORDER }}>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Departmental Labs</span>
+              <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-emerald-100 text-emerald-800">All Depts</span>
+            </div>
+            <div className="text-2xl md:text-3xl font-extrabold" style={{ color: MITS_RED }}>1,263</div>
+            <p className="text-xs font-semibold text-slate-700 mt-0.5">Desktops in Departments</p>
+            <p className="text-[11px] text-slate-500 mt-2 leading-relaxed">
+              Distributed across CSE, ECE, EEE, ME, CE, AI&amp;DS, and allied academic departments for specialized curriculum software, simulation, and research.
+            </p>
+          </div>
+
+          {/* Laptops Mobility Card */}
+          <div className="rounded-xl border p-4 bg-slate-50/70" style={{ borderColor: BORDER }}>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Mobility Fleet</span>
+              <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-amber-100 text-amber-800">Institutional</span>
+            </div>
+            <div className="text-2xl md:text-3xl font-extrabold" style={{ color: GOLD }}>80</div>
+            <p className="text-xs font-semibold text-slate-700 mt-0.5">High-Performance Laptops</p>
+            <p className="text-[11px] text-slate-500 mt-2 leading-relaxed">
+              Dedicated institutional laptops deployed for faculty research, international conferences, mobile digital evaluation, seminars, and technical workshops.
+            </p>
+          </div>
+        </div>
+
+        {/* Visual Distribution Ratio Bar */}
+        <div className="rounded-lg border p-3.5 bg-slate-50" style={{ borderColor: BORDER }}>
+          <div className="flex items-center justify-between text-xs font-semibold mb-2" style={{ color: DARK_NAVY }}>
+            <span>Distribution Ratio: Circular Block (832) vs All Departments (1,263)</span>
+            <span className="text-slate-500">Total = 2,095 Desktops</span>
+          </div>
+          <div className="h-3 w-full rounded-full overflow-hidden flex bg-slate-200">
+            <div className="h-full transition-all duration-500 bg-[#005bb5]" style={{ width: "39.7%" }} title="Circular Block: 832 (39.7%)" />
+            <div className="h-full transition-all duration-500 bg-[#b30000]" style={{ width: "60.3%" }} title="All Departments: 1,263 (60.3%)" />
+          </div>
+          <div className="flex items-center justify-between text-[11px] font-medium text-slate-600 mt-2">
+            <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full inline-block bg-[#005bb5]" /> Circular Block: 832 Desktops (39.7%)</span>
+            <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full inline-block bg-[#b30000]" /> All Departments: 1,263 Desktops (60.3%)</span>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Enterprise Servers Infrastructure (From Provided Specs) ── */}
+      <div className="rounded-xl border p-5" style={{ borderColor: BORDER, background: "#fff" }}>
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100">
+          <div className="flex items-center gap-2">
+            <Server className="h-4 w-4" style={{ color: MITS_RED }} />
+            <h4 className="font-display font-bold text-base" style={{ color: DARK_NAVY }}>
+              Server Infrastructure (8 Enterprise Servers)
+            </h4>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="px-2.5 py-0.5 text-xs font-bold rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+              6 Physical Servers
+            </span>
+            <span className="px-2.5 py-0.5 text-xs font-bold rounded-full bg-purple-50 text-purple-700 border border-purple-200">
+              2 Cloud Servers
+            </span>
+          </div>
+        </div>
+
+        {/* Physical Servers Table / Cards */}
+        <div className="mb-6">
+          <div className="flex items-center gap-2 mb-3">
+            <HardDrive className="w-4 h-4" style={{ color: GOLD }} />
+            <h5 className="font-display font-bold text-sm" style={{ color: DARK_NAVY }}>
+              Physical Servers (Dell PowerEdge Enterprise Fleet)
+            </h5>
+          </div>
+
+          <div className="overflow-x-auto rounded-xl border" style={{ borderColor: BORDER }}>
+            <table className="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr className="border-b text-slate-700 font-bold uppercase text-[10px] tracking-wider" style={{ background: `linear-gradient(90deg, #f8fafc, #edf2f7)`, borderColor: BORDER }}>
+                  <th className="py-3 px-3.5">Physical Server</th>
+                  <th className="py-3 px-3.5">Server Name</th>
+                  <th className="py-3 px-3.5">Equipment Description &amp; Specifications</th>
+                  <th className="py-3 px-3.5 hidden md:table-cell">Primary Operational Role</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-700">
+                {physicalServersData.map((srv, idx) => (
+                  <tr key={srv.server} className={idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
+                    <td className="py-3 px-3.5 font-bold whitespace-nowrap text-slate-900">
+                      <span className="inline-block px-2 py-0.5 rounded text-[10px] font-extrabold bg-slate-100 text-slate-700 border border-slate-200">
+                        {srv.server}
+                      </span>
+                    </td>
+                    <td className="py-3 px-3.5 font-bold whitespace-nowrap" style={{ color: DARK_NAVY }}>
+                      {srv.name}
+                    </td>
+                    <td className="py-3 px-3.5 leading-relaxed">
+                      <div className="font-semibold text-slate-800">{srv.badge}: {srv.name.split("/")[0]}</div>
+                      <div className="text-[11px] text-slate-600 mt-0.5">
+                        <span className="font-medium text-slate-700">Processor:</span> {srv.processor}
+                      </div>
+                      <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-[11px] text-slate-500 mt-0.5">
+                        <span><strong className="text-slate-700">CPUs:</strong> {srv.cpus}</span>
+                        <span>•</span>
+                        <span><strong className="text-slate-700">RAM:</strong> {srv.ram}</span>
+                        <span>•</span>
+                        <span><strong className="text-slate-700">HDD:</strong> {srv.hdd}</span>
+                        <span>•</span>
+                        <span><strong className="text-slate-700">LAN:</strong> {srv.lan}</span>
+                      </div>
+                    </td>
+                    <td className="py-3 px-3.5 text-[11px] text-slate-600 leading-snug hidden md:table-cell">
+                      {srv.role}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Cloud Servers Cards */}
+        <div>
+          <div className="flex items-center gap-2 mb-3">
+            <Cloud className="w-4 h-4 text-purple-600" />
+            <h5 className="font-display font-bold text-sm" style={{ color: DARK_NAVY }}>
+              Cloud Servers (Institutional Portals &amp; E-Learning)
+            </h5>
+          </div>
+
+          <div className="grid gap-3.5 md:grid-cols-2">
+            {cloudServersData.map((cloud) => (
+              <div key={cloud.server} className="rounded-xl border p-4.5 bg-gradient-to-br from-purple-50/40 via-white to-white" style={{ borderColor: BORDER }}>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-purple-100 text-purple-800">
+                    {cloud.server}
+                  </span>
+                  <span className="text-xs font-bold" style={{ color: DARK_NAVY }}>{cloud.name}</span>
+                </div>
+                <h6 className="font-display font-bold text-sm text-slate-900 mb-1">{cloud.title}</h6>
+                <p className="text-xs text-slate-600 leading-relaxed mb-3">{cloud.description}</p>
+                <div className="pt-2 border-t border-purple-100/70 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-slate-700">
+                  <span><strong>Processor:</strong> {cloud.processor}</span>
+                  <span><strong>RAM:</strong> {cloud.ram}</span>
+                  <span><strong>Storage:</strong> {cloud.hdd}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Network Security & Wireless Access Deep Dive ── */}
+      <div className="grid gap-5 md:grid-cols-2">
+        {/* Firewall Card */}
+        <div className="rounded-xl border p-5 bg-gradient-to-br from-red-50/30 via-white to-white" style={{ borderColor: BORDER }}>
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-red-100 text-red-700">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="font-display font-bold text-base" style={{ color: DARK_NAVY }}>
+                Perimeter Firewall &amp; Security
+              </h4>
+              <p className="text-xs text-slate-500">CISCO Meraki MX450 Next-Gen Security Appliance</p>
+            </div>
+          </div>
+          <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
+            <li className="flex gap-2">
+              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+              <span><strong>10G-Capable Stateful Firewall:</strong> High-throughput Deep Packet Inspection ensuring zero latency across high-bandwidth traffic.</span>
+            </li>
+            <li className="flex gap-2">
+              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+              <span><strong>Snort-Based Threat Protection:</strong> Real-time Intrusion Detection and Prevention (IDS/IPS) defending all on-campus servers and databases.</span>
+            </li>
+            <li className="flex gap-2">
+              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+              <span><strong>Content Filtering &amp; Policy Control:</strong> Granular Layer-7 application visibility and content filtering for academic compliance.</span>
+            </li>
+            <li className="flex gap-2">
+              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+              <span><strong>Isolated VLAN Segments:</strong> Dedicated subnets for research labs, administrative servers, examination systems, and student Wi-Fi.</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Wireless APs Card */}
+        <div className="rounded-xl border p-5 bg-gradient-to-br from-amber-50/30 via-white to-white" style={{ borderColor: BORDER }}>
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-amber-100" style={{ color: GOLD }}>
+              <Wifi className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="font-display font-bold text-base" style={{ color: DARK_NAVY }}>
+                High-Density Wi-Fi 6 Access Points
+              </h4>
+              <p className="text-xs text-slate-500">192 Ruckus R650 Enterprise Access Points</p>
+            </div>
+          </div>
+          <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
+            <li className="flex gap-2">
+              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+              <span><strong>192 Enterprise APs:</strong> Total coverage across all instructional blocks, seminar halls, library, hostels, and administrative premises.</span>
+            </li>
+            <li className="flex gap-2">
+              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+              <span><strong>Ruckus R650 Wi-Fi 6 (802.11ax):</strong> Dual-band concurrent technology providing gigabit wireless throughput and ultra-low latency.</span>
+            </li>
+            <li className="flex gap-2">
+              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+              <span><strong>BeamFlex+ Adaptive Antennas:</strong> Dynamic multi-directional signal steering preventing physical interference and dead zones.</span>
+            </li>
+            <li className="flex gap-2">
+              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+              <span><strong>High Concurrency &amp; Roaming:</strong> Designed for high-density student assemblies with seamless handoff and 24/7 connectivity.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const Infrastructure = () => {
   const location = useLocation();
   const getInitialTab = () => {
@@ -756,7 +1163,7 @@ const Infrastructure = () => {
       <Header />
       <SEO
         title="MITS Campus Infrastructure – Labs, Library, Sports & Facilities"
-        description="Explore MITS Madanapalle infrastructure: 26.17-acre campus, 3,000+ computers, 1 Gbps Wi-Fi, central library with 50,000+ volumes, AICTE Idea Lab, auditoriums, and sports grounds."
+        description="Explore MITS Madanapalle infrastructure: 26.17-acre campus, 2,095+ computers, 2 Gbps Wi-Fi, central library with 50,000+ volumes, AICTE Idea Lab, auditoriums, and sports grounds."
         canonical="/infrastructure"
       />
       <main>
@@ -813,8 +1220,8 @@ const Infrastructure = () => {
               {[
                 { label: "Acre Campus",  value: "26.17+" },
                 { label: "Buses",        value: "40+"    },
-                { label: "Computers",    value: "3000+"  },
-                { label: "Internet Speed", value: "1 Gbps" },
+                { label: "Computers",    value: "2,095+" },
+                { label: "Internet Speed", value: "2 Gbps" },
               ].map((s, i) => (
                 <div
                   key={s.label}
@@ -1056,6 +1463,9 @@ const Infrastructure = () => {
 
                 {/* ── DEPARTMENT OF PHYSICAL EDUCATION & SPORTS (13 SUBSECTIONS & 2026-27 EVENTS) ── */}
                 {current.key === "transport" && <TransportInformation />}
+
+                {/* ── WI-FI & IT INFRASTRUCTURE DETAILED SPECIFICATIONS ── */}
+                {(current.key === "wifi" || current.key === "computer") && <WifiInfrastructureInformation />}
 
                 {/* ── BOTTOM NAV: Prev · Dots · Next ── */}
                 <div className="flex items-center justify-between gap-3 pt-1">
