@@ -197,19 +197,17 @@ export default function WecView() {
                   <BookOpen className="w-5 h-5 text-[#b31317]" />
                   Events Organized
                 </h2>
-                <ol className="space-y-3">
+                <ul className="space-y-4">
                   {events.map((ev, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="w-6 h-6 rounded-full bg-[#0f2a44] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-                        {i + 1}
-                      </span>
-                      <div className="text-sm text-slate-700 leading-relaxed text-justify">
-                        <span>{ev.title}</span>{" "}
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#b31317] shrink-0 mt-1.5" />
+                      <div>
+                        <p className="text-sm text-slate-700 leading-relaxed text-justify">{ev.title}</p>
                         <a
                           href={ev.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[#b31317] hover:underline font-semibold whitespace-nowrap"
+                          className="inline-flex items-center gap-1 text-[#b31317] hover:underline text-sm font-medium mt-0.5"
                         >
                           Click here for Report on Event
                           <ExternalLink className="w-3 h-3" />
@@ -217,7 +215,7 @@ export default function WecView() {
                       </div>
                     </li>
                   ))}
-                </ol>
+                </ul>
               </section>
             </ScrollReveal>
 
