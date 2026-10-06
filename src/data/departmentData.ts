@@ -1764,7 +1764,7 @@ percentage: "96%", avgPackage: "₹8 LPA", highestPackage: "₹20 LPA", recruite
     hod: { name: "Dr. S. Padma", designation: "Assoc. Professor & Head", qualification: "Ph.D. (Bharathiar University)", image: "https://mits.ac.in/public/uploads/faculty/Dr. S. Padma.JPG", profileUrl: "https://mits.ac.in/facultyprofile/144" },
     achievements: { consultancyAmount: "₹8+ Lakhs", researchProjects: "8+", patents: "6+", publications: "80+" },
     teachingApproach: { description: "Research-driven approach with GPU cluster access, Kaggle competitions, and generative AI projects.", points: ["GPU cluster computing access", "Kaggle & competitive ML", "Generative AI hands-on projects", "Industry capstone projects", "Research paper writing workshops"] },
-    courses: ["B.Tech in Artificial Intelligence and Machine Learning"],
+    courses: ["B.Tech in Artificial Intelligence and Machine Learning","M.Tech in Artificial Intelligence and Machine Learning"],
     contactInfo: { email: "aimlhod@mits.ac.in", phone: "+91-9154291788; 8571-280255; 280706" },
     faculty: [
       /*

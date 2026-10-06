@@ -45,12 +45,34 @@ import PatentDetailModal from "@/components/PatentDetailModal";
 import PublicationDetailModal from "@/components/PublicationDetailModal";
 import PlacementDetailModal from "@/components/PlacementDetailModal";
 import ProjectDetailModal from "@/components/ProjectDetailModal";
+import { getDepartmentUnderGraduate } from "@/data/departmentUnderGraduateData";
 import {
-  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, ExternalLink, Search, Filter, Sparkles, RefreshCw
+  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, ExternalLink, Search, Filter, Sparkles, RefreshCw, ChevronDown, Layers
 } from "lucide-react";
 
-const sidebarItems = [
+interface SidebarSubItem {
+  id: "ug" | "course-syllabus";
+  label: string;
+}
+
+interface SidebarItem {
+  id: string;
+  label: string;
+  icon: any;
+  subItems?: SidebarSubItem[];
+}
+
+const sidebarItems: SidebarItem[] = [
   { id: "about", label: "About Department", icon: Building2 },
+  {
+    id: "under-graduate",
+    label: "Under Graduate",
+    icon: GraduationCap,
+    subItems: [
+      { id: "ug", label: "UG" },
+      { id: "course-syllabus", label: "Course Syllabus" },
+    ],
+  },
   { id: "faculty", label: "People / Faculty", icon: Users },
   { id: "achievements", label: "Achievements", icon: Award },
   { id: "facilities", label: "Facilities", icon: FlaskConical },
@@ -61,7 +83,7 @@ const sidebarItems = [
   { id: "mou", label: "MoU", icon: Handshake },
   { id: "placement", label: "Placement / Internship", icon: Trophy },
   { id: "projects", label: "Student Projects", icon: FolderOpen },
-  { id: "subjects", label: "Subjects", icon: GraduationCap },
+  { id: "subjects", label: "Subjects", icon: Layers },
 ];
 
 const DepartmentPage = () => {
@@ -69,6 +91,9 @@ const DepartmentPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("about");
+  const [activeUgTab, setActiveUgTab] = useState<"ug" | "course-syllabus">("ug");
+  const [ugDropdownOpen, setUgDropdownOpen] = useState(false);
+  const [ugHovered, setUgHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProfile, setSelectedProfile] = useState<FacultyProfile | null>(null);
   const [facultySearch, setFacultySearch] = useState("");
@@ -81,6 +106,7 @@ const DepartmentPage = () => {
   const [selectedPlacement, setSelectedPlacement] = useState<CMSPlacement | null>(null);
   const [selectedProject, setSelectedProject] = useState<CMSProject | null>(null);
   const dept = getDepartmentByKey(deptKey || "");
+  const ugData = getDepartmentUnderGraduate(deptKey || "", dept?.subjects || []);
   const { data: cms, loading: cmsLoading } = useDeptCMSData(deptKey || "");
   const { getFacultyByDept, getFacultyProfileBySlug, getDepartmentHod, loading: facultyLoading, refresh: refreshFaculty } = useFacultyData();
 
@@ -97,11 +123,33 @@ const DepartmentPage = () => {
     }
     const pathParts = location.pathname.split('/');
     const lastPart = pathParts[pathParts.length - 1];
-    if (lastPart && sidebarItems.some(item => item.id === lastPart)) {
+    if (lastPart === "ug") {
+      setActiveSection("under-graduate");
+      setActiveUgTab("ug");
+      setUgDropdownOpen(true);
+    } else if (lastPart === "course-syllabus") {
+      setActiveSection("under-graduate");
+      setActiveUgTab("course-syllabus");
+      setUgDropdownOpen(true);
+    } else if (lastPart === "under-graduate") {
+      setActiveSection("under-graduate");
+      setUgDropdownOpen(true);
+    } else if (lastPart && sidebarItems.some(item => item.id === lastPart)) {
       setActiveSection(lastPart);
     } else if (location.hash) {
       const hash = location.hash.replace('#', '');
-      if (hash && sidebarItems.some(item => item.id === hash)) {
+      if (hash === "ug" || hash === "ug-tab20") {
+        setActiveSection("under-graduate");
+        setActiveUgTab("ug");
+        setUgDropdownOpen(true);
+      } else if (hash === "course-syllabus" || hash === "ug-tab50") {
+        setActiveSection("under-graduate");
+        setActiveUgTab("course-syllabus");
+        setUgDropdownOpen(true);
+      } else if (hash === "under-graduate") {
+        setActiveSection("under-graduate");
+        setUgDropdownOpen(true);
+      } else if (hash && sidebarItems.some(item => item.id === hash)) {
         setActiveSection(hash);
       }
     }
@@ -117,9 +165,24 @@ const DepartmentPage = () => {
     }
   }, [location.pathname, location.hash, location.search, deptKey, dept, navigate, getFacultyProfileBySlug]);
 
+  const handleUgSubItemClick = (tabId: "ug" | "course-syllabus") => {
+    setActiveSection("under-graduate");
+    setActiveUgTab(tabId);
+    setUgDropdownOpen(true);
+    setMobileMenuOpen(false);
+    const basePath = `/department/${deptKey}`;
+    navigate(`${basePath}/${tabId}`, { replace: true });
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 10);
+  };
+
   const handleSectionChange = (sectionId: string) => {
     setActiveSection(sectionId);
     setMobileMenuOpen(false);
+    if (sectionId === "under-graduate") {
+      setUgDropdownOpen(prev => !prev);
+    }
     const basePath = `/department/${deptKey}`;
     const newPath = sectionId === "about" ? basePath : `${basePath}/${sectionId}`;
     navigate(newPath, { replace: true });
@@ -278,19 +341,60 @@ const DepartmentPage = () => {
           <ChevronRight className={`w-4 h-4 transition-transform ${mobileMenuOpen ? "rotate-90" : ""}`} />
         </button>
         {mobileMenuOpen && (
-          <div className="bg-card border-t border-border max-h-[50vh] overflow-y-auto">
-            {sidebarItems.map(item => (
-              <button
-                key={item.id}
-                onClick={() => handleSectionChange(item.id)}
-                className={`w-full flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${
-                  activeSection === item.id ? "text-primary bg-primary/5 font-semibold" : "text-muted-foreground hover:text-primary"
-                }`}
-              >
-                <item.icon className="w-4 h-4" />
-                {item.label}
-              </button>
-            ))}
+          <div className="bg-card border-t border-border max-h-[60vh] overflow-y-auto">
+            {sidebarItems.map(item => {
+              if (item.subItems) {
+                const isParentActive = activeSection === item.id;
+                return (
+                  <div key={item.id} className="border-b border-border/40">
+                    <button
+                      onClick={() => {
+                        handleSectionChange(item.id);
+                      }}
+                      className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
+                        isParentActive ? "text-primary bg-primary/5 font-semibold" : "text-muted-foreground hover:text-primary"
+                      }`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <item.icon className="w-4 h-4" />
+                        {item.label}
+                      </span>
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform ${ugDropdownOpen || isParentActive ? "rotate-180 text-primary" : ""}`} />
+                    </button>
+                    {(ugDropdownOpen || isParentActive) && (
+                      <div className="bg-muted/30 pl-9 pr-4 py-1 space-y-1">
+                        {item.subItems.map(sub => (
+                          <button
+                            key={sub.id}
+                            onClick={() => handleUgSubItemClick(sub.id)}
+                            className={`w-full flex items-center justify-between py-1.5 text-xs transition-colors ${
+                              isParentActive && activeUgTab === sub.id
+                                ? "text-primary font-bold"
+                                : "text-muted-foreground hover:text-primary"
+                            }`}
+                          >
+                            <span>{sub.label}</span>
+                            <ChevronRight className="w-3 h-3" />
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleSectionChange(item.id)}
+                  className={`w-full flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${
+                    activeSection === item.id ? "text-primary bg-primary/5 font-semibold" : "text-muted-foreground hover:text-primary"
+                  }`}
+                >
+                  <item.icon className="w-4 h-4" />
+                  {item.label}
+                </button>
+              );
+            })}
           </div>
         )}
       </div>
@@ -304,20 +408,115 @@ const DepartmentPage = () => {
                 <div className="bg-primary px-4 py-3">
                   <h3 className="text-primary-foreground font-bold text-sm">Quick Navigation</h3>
                 </div>
-                {sidebarItems.map(item => (
-                  <button
-                    key={item.id}
-                    onClick={() => handleSectionChange(item.id)}
-                    className={`w-full flex items-center gap-2.5 px-4 py-2.5 text-sm transition-all duration-200 border-l-3 ${
-                      activeSection === item.id
-                        ? "text-primary bg-primary/5 font-semibold border-l-primary border-l-[3px]"
-                        : "text-muted-foreground hover:text-primary hover:bg-primary/5 border-l-transparent border-l-[3px]"
-                    }`}
-                  >
-                    <item.icon className="w-4 h-4 shrink-0" />
-                    <span className="text-left">{item.label}</span>
-                  </button>
-                ))}
+                {sidebarItems.map(item => {
+                  if (item.subItems) {
+                    const isParentActive = activeSection === item.id;
+                    return (
+                      <div
+                        key={item.id}
+                        className="relative"
+                        onMouseEnter={() => setUgHovered(true)}
+                        onMouseLeave={() => setUgHovered(false)}
+                      >
+                        <button
+                          onClick={() => {
+                            if (activeSection !== item.id) {
+                              handleSectionChange(item.id);
+                            } else {
+                              setUgDropdownOpen(prev => !prev);
+                            }
+                          }}
+                          className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-all duration-200 border-l-3 ${
+                            isParentActive
+                              ? "text-primary bg-primary/5 font-semibold border-l-primary border-l-[3px]"
+                              : "text-muted-foreground hover:text-primary hover:bg-primary/5 border-l-transparent border-l-[3px]"
+                          }`}
+                        >
+                          <div className="flex items-center gap-2.5">
+                            <item.icon className="w-4 h-4 shrink-0" />
+                            <span className="text-left">{item.label}</span>
+                          </div>
+                          <ChevronDown
+                            className={`w-3.5 h-3.5 text-muted-foreground transition-transform duration-200 ${
+                              ugDropdownOpen || isParentActive ? "rotate-180 text-primary" : ""
+                            }`}
+                          />
+                        </button>
+
+                        {/* Accordion / Dropdown inside sidebar */}
+                        {(ugDropdownOpen || isParentActive) && (
+                          <div className="bg-muted/30 border-y border-border/40 py-1 space-y-0.5">
+                            {item.subItems.map(sub => {
+                              const isSubActive = isParentActive && activeUgTab === sub.id;
+                              return (
+                                <button
+                                  key={sub.id}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleUgSubItemClick(sub.id);
+                                  }}
+                                  className={`w-full flex items-center justify-between pl-10 pr-4 py-2 text-xs transition-colors ${
+                                    isSubActive
+                                      ? "text-primary font-bold bg-primary/10"
+                                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                                  }`}
+                                >
+                                  <span>{sub.label}</span>
+                                  <ChevronRight className={`w-3 h-3 ${isSubActive ? "text-primary" : "text-muted-foreground/40"}`} />
+                                </button>
+                              );
+                            })}
+                          </div>
+                        )}
+
+                        {/* Hover flyout menu on right side of menu bar */}
+                        {ugHovered && (
+                          <div className="absolute left-full top-0 ml-1.5 w-48 bg-card border border-border shadow-xl rounded-xl py-1.5 z-50 animate-in fade-in slide-in-from-left-2 duration-150">
+                            <div className="px-3 py-1 text-[11px] font-semibold text-muted-foreground uppercase tracking-wider border-b border-border/50 mb-1">
+                              Under Graduate
+                            </div>
+                            {item.subItems.map(sub => {
+                              const isSubActive = isParentActive && activeUgTab === sub.id;
+                              return (
+                                <button
+                                  key={sub.id}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleUgSubItemClick(sub.id);
+                                    setUgHovered(false);
+                                  }}
+                                  className={`w-full flex items-center justify-between px-3 py-2 text-xs font-medium transition-colors text-left ${
+                                    isSubActive
+                                      ? "text-primary bg-primary/10 font-bold"
+                                      : "text-secondary hover:text-primary hover:bg-primary/5"
+                                  }`}
+                                >
+                                  <span>{sub.label}</span>
+                                  <ChevronRight className="w-3.5 h-3.5 text-primary/70" />
+                                </button>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => handleSectionChange(item.id)}
+                      className={`w-full flex items-center gap-2.5 px-4 py-2.5 text-sm transition-all duration-200 border-l-3 ${
+                        activeSection === item.id
+                          ? "text-primary bg-primary/5 font-semibold border-l-primary border-l-[3px]"
+                          : "text-muted-foreground hover:text-primary hover:bg-primary/5 border-l-transparent border-l-[3px]"
+                      }`}
+                    >
+                      <item.icon className="w-4 h-4 shrink-0" />
+                      <span className="text-left">{item.label}</span>
+                    </button>
+                  );
+                })}
               </nav>
             </div>
           </aside>
@@ -481,6 +680,117 @@ const DepartmentPage = () => {
                       </div>
                     </CardContent>
                   </Card>
+                </div>
+              </motion.div>
+            )}
+
+            {activeSection === "under-graduate" && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-8"
+              >
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-secondary mb-2" style={{ fontFamily: "var(--font-display)" }}>
+                    Under <span className="text-primary">Graduate</span>
+                  </h2>
+                  <div className="w-16 h-1 bg-accent rounded-full mt-2" />
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                  {/* Left Side Sub-Navigation Box (Matching Screenshot 2, 3, 4) */}
+                  <div className="lg:col-span-1">
+                    <div className="bg-card rounded-xl border border-border shadow-sm p-2 space-y-1.5 lg:sticky lg:top-[140px]">
+                      <button
+                        onClick={() => setActiveUgTab("ug")}
+                        className={`w-full flex items-center justify-between px-3.5 py-3 rounded-lg text-sm font-semibold transition-all ${
+                          activeUgTab === "ug"
+                            ? "bg-primary text-primary-foreground shadow-sm"
+                            : "text-secondary hover:text-primary hover:bg-primary/5"
+                        }`}
+                      >
+                        <span>UG</span>
+                        <ChevronRight className="w-4 h-4 shrink-0" />
+                      </button>
+                      <button
+                        onClick={() => setActiveUgTab("course-syllabus")}
+                        className={`w-full flex items-center justify-between px-3.5 py-3 rounded-lg text-sm font-semibold transition-all ${
+                          activeUgTab === "course-syllabus"
+                            ? "bg-primary text-primary-foreground shadow-sm"
+                            : "text-secondary hover:text-primary hover:bg-primary/5"
+                        }`}
+                      >
+                        <span>Course Syllabus</span>
+                        <ChevronRight className="w-4 h-4 shrink-0" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Right Side Content Display */}
+                  <div className="lg:col-span-3">
+                    {activeUgTab === "ug" ? (
+                      <Card className="border border-border/80 shadow-sm p-6 sm:p-8 bg-card">
+                        <h3 className="text-xl sm:text-2xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>
+                          {ugData.programTitle}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed text-base">
+                          {ugData.programOverview}
+                        </p>
+                      </Card>
+                    ) : (
+                      <div className="space-y-8">
+                        {ugData.syllabusTables && ugData.syllabusTables.length > 0 ? (
+                          ugData.syllabusTables.map((table, tIdx) => (
+                            <div key={tIdx} className="bg-card rounded-xl border border-border shadow-sm overflow-hidden">
+                              <div className="bg-gradient-to-r from-[#8b0000] to-[#b31317] px-6 py-4">
+                                <h3 className="text-white font-bold text-base md:text-lg tracking-wide">
+                                  {table.title}
+                                </h3>
+                              </div>
+                              <div className="overflow-x-auto">
+                                <table className="w-full text-sm border-collapse">
+                                  <thead>
+                                    <tr className="bg-[#8b0000]/10 text-secondary border-b border-border text-xs uppercase font-bold tracking-wider">
+                                      <th className="py-3.5 px-4 text-center w-16">S.No</th>
+                                      <th className="py-3.5 px-4 text-left">Name of the Subject</th>
+                                      <th className="py-3.5 px-4 text-center w-32">Theory/Lab</th>
+                                      <th className="py-3.5 px-4 text-center w-24">Credits</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody className="divide-y divide-border/60">
+                                    {table.rows.map((row, rIdx) => (
+                                      <tr key={rIdx} className="hover:bg-primary/[0.03] transition-colors even:bg-muted/20">
+                                        <td className="py-3 px-4 text-center text-muted-foreground font-medium">{row.sno}</td>
+                                        <td className="py-3 px-4 font-medium text-secondary">{row.name}</td>
+                                        <td className="py-3 px-4 text-center">
+                                          <span className={`inline-block px-2.5 py-0.5 rounded text-xs font-semibold ${
+                                            row.type.toLowerCase().includes('lab') || row.type.toLowerCase().includes('workshop')
+                                              ? 'bg-amber-100 text-amber-900 border border-amber-200'
+                                              : row.type.toLowerCase().includes('theory')
+                                              ? 'bg-blue-50 text-blue-900 border border-blue-200'
+                                              : 'bg-emerald-50 text-emerald-900 border border-emerald-200'
+                                          }`}>
+                                            {row.type}
+                                          </span>
+                                        </td>
+                                        <td className="py-3 px-4 text-center font-bold text-primary">{row.credits}</td>
+                                      </tr>
+                                    ))}
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          ))
+                        ) : (
+                          <Card className="p-8 text-center text-muted-foreground">
+                            <GraduationCap className="w-12 h-12 mx-auto mb-3 text-muted-foreground/50" />
+                            <p className="font-semibold text-lg">Course Syllabus will be updated soon.</p>
+                          </Card>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             )}
