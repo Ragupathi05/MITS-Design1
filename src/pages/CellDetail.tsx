@@ -15,6 +15,7 @@ import MmcView from "@/components/cells/MmcView";
 import MinorityView from "@/components/cells/MinorityView";
 import ScStView from "@/components/cells/ScStView";
 import WecView from "@/components/cells/WecView";
+import SedgView from "@/components/cells/SedgView";
 
 type TabId = "home" | "vidya-laxmi" | "scholarships" | "documents" | "events" | "gallery" | "financial-aid" | "contact";
 
@@ -103,6 +104,10 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
 
   if (targetId === "wec") {
     return <WecView />;
+  }
+
+  if (targetId === "sedg") {
+    return <SedgView />;
   }
 
   if (!cell) {
