@@ -31,3 +31,4 @@ tmp/
 scratch/
 faculty_response.json
 dist.zip
+*.zip

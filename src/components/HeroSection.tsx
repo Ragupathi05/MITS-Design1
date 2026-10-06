@@ -24,8 +24,7 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: "identity",
-    video: `${BASE}Hero-Section/MITS%20first-Slide.mp4`,
-    image: `${BASE}Hero-Section/image-1.jpg`,
+    image: `${BASE}Hero-Section/home%20page%20img1.png`,
     overlay: "",
     eyebrow: "",
     title: "",
@@ -173,8 +172,8 @@ const HeroSection = () => {
   useEffect(() => {
     if (!isPlaying || !isTabVisible) return;
 
-    // Pause slide transition if hovered (except on first slide)
-    if (isHovered && current !== 0) return;
+    // Pause slide transition if hovered
+    if (isHovered) return;
 
     const currentSlide = slides[current];
     if (currentSlide.video) {
@@ -263,10 +262,10 @@ className="w-full h-full object-cover"
               className="w-full h-full"
               style={{
                 objectFit: "cover",
-                objectPosition: s.id === "admissions" ? "center 30%" : s.id === "placements" ? "center 20%" : "center center",
+                objectPosition: s.id === "identity" ? "center top" : s.id === "admissions" ? "center 30%" : s.id === "placements" ? "center 20%" : "center center",
               }}
               initial={false}
-              animate={{ scale: (s.id === "admissions" || s.id === "placements") ? 1 : (i === current ? 1.04 : 1) }}
+              animate={{ scale: (s.id === "admissions" || s.id === "placements" || s.id === "identity") ? 1 : (i === current ? 1.04 : 1) }}
               transition={{ duration: 7, ease: "easeOut" }}
             />
           )}
@@ -324,7 +323,7 @@ className="w-full h-full object-cover"
           )}
 
           {/* ── Non-campus slides ── */}
-          {slide.id !== "campus" && (
+          {slide.id !== "campus" && slide.id !== "identity" && (
             <AnimatePresence mode="wait">
               <div
                 key={current}
