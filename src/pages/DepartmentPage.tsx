@@ -35,7 +35,7 @@ import { getDepartmentByKey } from "@/data/departmentData";
 import { Card, CardContent } from "@/components/ui/card";
 import InlineFacultyProfile from "@/components/InlineFacultyProfile";
 import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfiles";
-import { slugifyFaculty } from "@/lib/facultySlug";
+import { slugifyFaculty, cleanFacultyName } from "@/lib/facultySlug";
 import { useDeptCMSData, type CMSMoU, type CMSAchievement, type CMSPatent, type CMSPublication, type CMSPlacement, type CMSProject } from "@/hooks/useDeptCMSData";
 import { useFacultyData } from "@/hooks/useFacultyData";
 import EventDetailModal from "@/components/EventDetailModal";
@@ -230,7 +230,7 @@ const DepartmentPage = () => {
   };
 
   const dynamicHod = getDepartmentHod(deptKey || "");
-  const hod = dynamicHod || dept.hod;
+  const hod = dynamicHod || (dept.hod ? { ...dept.hod, name: cleanFacultyName(dept.hod.name), image: undefined } : { name: "", designation: "" });
 
   const liveFaculty = getFacultyByDept(deptKey || "");
   const effectiveFaculty =
@@ -238,7 +238,7 @@ const DepartmentPage = () => {
       ? liveFaculty
       : liveFaculty.length > 0
       ? liveFaculty
-      : dept.faculty || [];
+      : (dept.faculty || []).map((f) => ({ ...f, name: cleanFacultyName(f.name), image: undefined }));
 
   const filteredFaculty = effectiveFaculty.filter((f) => {
     const q = facultySearch.toLowerCase().trim();
@@ -537,21 +537,34 @@ const DepartmentPage = () => {
                   <div>
                     <Card className="overflow-hidden border-2 border-primary/10 group hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md">
                       <div className="bg-gradient-to-br from-primary to-primary/80 p-4 text-center">
-                        <div className="w-20 h-20 mx-auto rounded-full bg-white/20 flex items-center justify-center overflow-hidden mb-2 ring-2 ring-white/30">
+                        <div className="w-20 h-20 mx-auto rounded-full bg-white/20 flex items-center justify-center overflow-hidden mb-2 ring-2 ring-white/30 relative">
                           {hod.image ? (
                             <img
                               src={hod.image}
-                              alt={hod.name}
+                              alt={cleanFacultyName(hod.name)}
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                               onError={(e) => {
-                                if (dept.hod?.image && (e.currentTarget as HTMLImageElement).src !== dept.hod.image) {
-                                  (e.currentTarget as HTMLImageElement).src = dept.hod.image;
-                                }
+                                (e.currentTarget as HTMLElement).style.display = "none";
+                                const fallback = e.currentTarget.parentElement?.querySelector(".avatar-fallback") as HTMLElement;
+                                if (fallback) fallback.style.display = "flex";
                               }}
                             />
-                          ) : (
-                            <Users className="w-8 h-8 text-primary-foreground" />
-                          )}
+                          ) : null}
+                          <div
+                            className={`avatar-fallback w-full h-full ${
+                              hod.image ? "hidden" : "flex"
+                            } items-center justify-center bg-white/20 text-white font-bold text-xl select-none`}
+                          >
+                            {cleanFacultyName(hod.name)
+                              .replace(/^Dr\.?\s*/i, "")
+                              .replace(/^Prof\.?\s*/i, "")
+                              .split(" ")
+                              .filter(Boolean)
+                              .slice(0, 2)
+                              .map((n) => n[0])
+                              .join("")
+                              .toUpperCase() || <Users className="w-8 h-8 text-primary-foreground" />}
+                          </div>
                         </div>
                         <h4 className="text-primary-foreground font-bold text-sm">{hod.name}</h4>
                         <p className="text-primary-foreground/80 text-xs mt-0.5">{hod.designation}</p>

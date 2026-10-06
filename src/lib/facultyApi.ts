@@ -4,7 +4,7 @@
  */
 
 import fallbackData from "@/data/facultyApiFallback.json";
-import { slugifyFaculty } from "./facultySlug";
+import { slugifyFaculty, cleanFacultyName } from "./facultySlug";
 import type { FacultyMember } from "@/data/departmentData";
 import type { FacultyProfile, FacultySection } from "@/data/facultyProfiles";
 
@@ -228,15 +228,17 @@ export function apiFacultyToFacultyMember(f: APIFacultyMember, staticImageFallba
   const deptKey = mapApiDeptToDeptKey(f.department?.code, f.department?.name);
   const subDept = deptKey === "bsh" ? getBshSubDepartment(f.department?.code, f.department?.name) : undefined;
   const qualification = f.phd?.status === "Awarded" || f.phd?.topic ? "Ph.D." : (f.pg?.degree || f.ug?.degree || "M.Tech / M.Sc");
+  const name = cleanFacultyName(f.fullName);
 
   return {
-    name: f.fullName,
+    name,
     designation: f.designation,
     qualification,
     email: f.email,
-    image: getFacultyPhotoUrl(f.profilePhoto) || staticImageFallback,
+    // Strictly only display profile photo if available in the database; no alternative static fallbacks
+    image: getFacultyPhotoUrl(f.profilePhoto) || undefined,
     subDepartment: subDept,
-    profileUrl: `/department/${deptKey}/faculty/${slugifyFaculty(f.fullName)}`,
+    profileUrl: `/department/${deptKey}/faculty/${slugifyFaculty(name)}`,
     profile: {
       researchAreas: f.specialization?.join(", "),
       publications: f.publications?.map((p) => ({
@@ -420,11 +422,13 @@ export function apiFacultyToFacultyProfile(f: APIFacultyMember): FacultyProfile 
     });
   }
 
+  const name = cleanFacultyName(f.fullName);
   return {
-    name: f.fullName,
+    name,
     designation: f.designation,
     email: f.email,
-    image: getFacultyPhotoUrl(f.profilePhoto),
+    // Strictly only display profile photo if available in the database; no alternative static fallbacks
+    image: getFacultyPhotoUrl(f.profilePhoto) || undefined,
     officeAddress: `Department of ${f.department?.name || "Engineering"}, MITS Madanapalle`,
     sections,
   };
@@ -433,6 +437,26 @@ export function apiFacultyToFacultyProfile(f: APIFacultyMember): FacultyProfile 
 const CACHE_KEY = "mits_faculty_api_cache_v1";
 const CACHE_TIME_KEY = "mits_faculty_api_cache_time_v1";
 const CACHE_TTL_MS = 1000 * 60 * 30; // 30 minutes
+
+/**
+ * Sanitizes faculty names in a list to prevent trailing 'a' artifacts
+ */
+export function sanitizeFacultyList(list: APIFacultyMember[]): APIFacultyMember[] {
+  return list.map((f) => ({
+    ...f,
+    fullName: cleanFacultyName(f.fullName),
+  }));
+}
+
+/**
+ * Returns immediate initial faculty dataset for 0ms page rendering
+ */
+export function getInitialFacultyData(): APIFacultyMember[] {
+  if (fallbackData && Array.isArray((fallbackData as APIFacultyResponse).data)) {
+    return sanitizeFacultyList((fallbackData as APIFacultyResponse).data);
+  }
+  return [];
+}
 
 /**
  * Fetches all faculty profiles from the live API with caching and fallback
@@ -446,7 +470,7 @@ export async function fetchFacultyProfiles(forceRefresh = false): Promise<APIFac
       if (cached && cacheTime && Date.now() - parseInt(cacheTime, 10) < CACHE_TTL_MS) {
         const parsed = JSON.parse(cached) as APIFacultyMember[];
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          return sanitizeFacultyList(parsed);
         }
       }
     } catch {
@@ -460,7 +484,8 @@ export async function fetchFacultyProfiles(forceRefresh = false): Promise<APIFac
 
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 12000);
+    // Fast 3.5s timeout prevents sluggish UI when origin database is experiencing latency
+    const timeoutId = setTimeout(() => controller.abort(), 3500);
 
     const res = await fetch(endpoint, {
       method: "GET",
@@ -476,25 +501,22 @@ export async function fetchFacultyProfiles(forceRefresh = false): Promise<APIFac
     if (res.ok) {
       const json = (await res.json()) as APIFacultyResponse;
       if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+        const cleaned = sanitizeFacultyList(json.data);
         if (typeof window !== "undefined") {
           try {
-            localStorage.setItem(CACHE_KEY, JSON.stringify(json.data));
+            localStorage.setItem(CACHE_KEY, JSON.stringify(cleaned));
             localStorage.setItem(CACHE_TIME_KEY, String(Date.now()));
           } catch {
             // storage limit or disabled
           }
         }
-        return json.data;
+        return cleaned;
       }
     }
   } catch {
-    // API request failed or timed out, fallback gracefully
+    // API request failed or timed out, fallback gracefully without blocking UI
   }
 
   // 3. Fallback to bundled fallback snapshot
-  if (fallbackData && Array.isArray((fallbackData as APIFacultyResponse).data)) {
-    return (fallbackData as APIFacultyResponse).data;
-  }
-
-  return [];
+  return getInitialFacultyData();
 }

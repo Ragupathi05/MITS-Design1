@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import PageShell from "@/components/about/PageShell";
 import { deansList } from "@/data/aboutData";
-import { slugifyFaculty } from "@/lib/facultySlug";
+import { slugifyFaculty, cleanFacultyName } from "@/lib/facultySlug";
 import { useFacultyData } from "@/hooks/useFacultyData";
 import { getFacultyPhotoUrl } from "@/lib/facultyApi";
 
@@ -17,11 +17,13 @@ const Deans = () => {
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {deansList.map((d, i) => {
-          const apiMatch = findFacultyByName(d.facultyName || d.name);
+          const rawTargetName = d.facultyName || d.name;
+          const targetName = cleanFacultyName(rawTargetName);
+          const apiMatch = findFacultyByName(targetName);
           const dynamicPhoto = (apiMatch?.profilePhoto && getFacultyPhotoUrl(apiMatch.profilePhoto)) || d.image;
           const dynamicQualification = apiMatch?.phd?.topic || apiMatch?.phd?.status === "Awarded" ? "Ph.D." : d.qualification;
           const targetDeptKey = d.deptKey || (apiMatch?.department?.code ? apiMatch.department.code.toLowerCase() : "cse");
-          const targetName = d.facultyName || d.name;
+          const displayName = cleanFacultyName(d.name);
 
           return (
             <motion.article
@@ -54,7 +56,7 @@ const Deans = () => {
                   className="text-xl font-bold text-[#0f2a44] leading-tight group-hover:text-primary transition-colors"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  {d.name}
+                  {displayName}
                 </h3>
                 <p className="text-sm text-muted-foreground font-semibold mt-1">{d.designation}</p>
                 <p className="text-sm text-secondary/70 mt-1">{dynamicQualification}</p>

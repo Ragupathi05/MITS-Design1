@@ -4,60 +4,24 @@ import {
   apiFacultyToFacultyMember,
   apiFacultyToFacultyProfile,
   mapApiDeptToDeptKey,
+  getInitialFacultyData,
+  getFacultyPhotoUrl,
   type APIFacultyMember,
 } from "@/lib/facultyApi";
-import { slugifyFaculty } from "@/lib/facultySlug";
+import { slugifyFaculty, cleanFacultyName } from "@/lib/facultySlug";
 import { departmentsData, type FacultyMember } from "@/data/departmentData";
-import { facultyProfiles, type FacultyProfile } from "@/data/facultyProfiles";
-import { departmentHeads, deansList } from "@/data/aboutData";
+import { departmentHeads } from "@/data/aboutData";
 
-// Shared in-memory cache to avoid duplicate network fetches across components
-let sharedFacultyCache: APIFacultyMember[] | null = null;
+// Shared in-memory cache pre-populated with bundled snapshot for instant 0ms initial render
+let sharedFacultyCache: APIFacultyMember[] = getInitialFacultyData();
 let sharedFetchPromise: Promise<APIFacultyMember[]> | null = null;
-
-// Precompute static images map for seamless fallback across departments, heads, and deans
-const staticImageMap: Record<string, string> = {};
-if (typeof window !== "undefined" || true) {
-  try {
-    Object.values(departmentsData).forEach((dept) => {
-      if (dept.hod?.image && dept.hod?.name) {
-        staticImageMap[slugifyFaculty(dept.hod.name)] = dept.hod.image;
-      }
-      dept.faculty?.forEach((f) => {
-        if (f.image) {
-          staticImageMap[slugifyFaculty(f.name)] = f.image;
-        }
-      });
-    });
-    Object.values(facultyProfiles).forEach((deptProfiles) => {
-      Object.values(deptProfiles).forEach((p) => {
-        if (p.image) {
-          staticImageMap[slugifyFaculty(p.name)] = p.image;
-        }
-      });
-    });
-    departmentHeads.forEach((h) => {
-      if (h.image && h.name) {
-        staticImageMap[slugifyFaculty(h.name)] = h.image;
-      }
-    });
-    deansList.forEach((d) => {
-      if (d.image) {
-        if (d.name) staticImageMap[slugifyFaculty(d.name)] = d.image;
-        if (d.facultyName) staticImageMap[slugifyFaculty(d.facultyName)] = d.image;
-      }
-    });
-  } catch {
-    // ignore
-  }
-}
 
 /**
  * Robust token-based matching score between two Indian faculty names
  */
 export function matchFacultyNameScore(name1: string, name2: string): number {
   const tokenize = (n: string) =>
-    n
+    cleanFacultyName(n)
       .replace(/^Dr\.?\s*/i, "")
       .replace(/^Prof\.?\s*/i, "")
       .replace(/\b[A-Za-z]\b/g, "")
@@ -88,26 +52,21 @@ export function matchFacultyNameScore(name1: string, name2: string): number {
 }
 
 export function useFacultyData() {
-  const [facultyList, setFacultyList] = useState<APIFacultyMember[]>(sharedFacultyCache || []);
-  const [loading, setLoading] = useState<boolean>(!sharedFacultyCache);
+  const [facultyList, setFacultyList] = useState<APIFacultyMember[]>(sharedFacultyCache);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
   const loadData = useCallback(async (forceRefresh = false) => {
-    if (!forceRefresh && sharedFacultyCache) {
-      setFacultyList(sharedFacultyCache);
-      setLoading(false);
-      return;
-    }
-
     try {
-      setLoading(true);
       if (!sharedFetchPromise || forceRefresh) {
         sharedFetchPromise = fetchFacultyProfiles(forceRefresh);
       }
       const data = await sharedFetchPromise;
-      sharedFacultyCache = data;
-      setFacultyList(data);
-      setError(null);
+      if (Array.isArray(data) && data.length > 0) {
+        sharedFacultyCache = data;
+        setFacultyList(data);
+        setError(null);
+      }
     } catch (err) {
       setError(err instanceof Error ? err : new Error("Failed to load faculty profiles"));
     } finally {
@@ -117,6 +76,7 @@ export function useFacultyData() {
   }, []);
 
   useEffect(() => {
+    // Non-blocking background sync with live API
     loadData();
   }, [loadData]);
 
@@ -146,11 +106,11 @@ export function useFacultyData() {
           const pA = getPriority(a.designation);
           const pB = getPriority(b.designation);
           if (pA !== pB) return pA - pB;
-          return a.fullName.localeCompare(b.fullName);
+          return cleanFacultyName(a.fullName).localeCompare(cleanFacultyName(b.fullName));
         })
         .map((f) => {
-          const slug = slugifyFaculty(f.fullName);
-          return apiFacultyToFacultyMember(f, staticImageMap[slug]);
+          // Strictly only database images; no old static image fallback
+          return apiFacultyToFacultyMember(f);
         });
     },
     [facultyList]
@@ -174,7 +134,7 @@ export function useFacultyData() {
    * Finds a faculty member by URL slug and builds their rich profile
    */
   const getFacultyProfileBySlug = useCallback(
-    (deptKey: string, slug: string): FacultyProfile | undefined => {
+    (deptKey: string, slug: string): ReturnType<typeof apiFacultyToFacultyProfile> | undefined => {
       const normalizedKey = deptKey.toLowerCase().trim();
       const match = facultyList.find((f) => {
         const memberDept = mapApiDeptToDeptKey(f.department?.code, f.department?.name);
@@ -184,12 +144,7 @@ export function useFacultyData() {
       }) || facultyList.find((f) => slugifyFaculty(f.fullName) === slug);
 
       if (match) {
-        const profile = apiFacultyToFacultyProfile(match);
-        if (!profile.image) {
-          const s = slugifyFaculty(match.fullName);
-          profile.image = staticImageMap[s];
-        }
-        return profile;
+        return apiFacultyToFacultyProfile(match);
       }
       return undefined;
     },
@@ -222,14 +177,15 @@ export function useFacultyData() {
   const findFacultyByName = useCallback(
     (name: string): APIFacultyMember | undefined => {
       if (!name) return undefined;
-      const targetSlug = slugifyFaculty(name);
+      const cleanName = cleanFacultyName(name);
+      const targetSlug = slugifyFaculty(cleanName);
       const direct = facultyList.find((f) => slugifyFaculty(f.fullName) === targetSlug);
       if (direct) return direct;
 
       let best: APIFacultyMember | undefined;
       let bestScore = 0;
       for (const f of facultyList) {
-        const score = matchFacultyNameScore(name, f.fullName);
+        const score = matchFacultyNameScore(cleanName, f.fullName);
         if (score > bestScore) {
           bestScore = score;
           best = f;
@@ -242,8 +198,8 @@ export function useFacultyData() {
 
   /**
    * Dynamically resolves the HOD for any department from live API data,
-   * checking HOD roles/designations first, matching with known HOD name,
-   * and providing clean static fallback.
+   * checking HOD roles/designations first, matching with known HOD name.
+   * Strictly keeps image blank if not present in the database.
    */
   const getDepartmentHod = useCallback(
     (deptKey: string): FacultyMember | undefined => {
@@ -270,9 +226,10 @@ export function useFacultyData() {
 
       // 3. If not found inside this department with an explicit HOD designation, match by known HOD name
       if (!apiHodMatch && hodTargetName) {
+        const cleanTarget = cleanFacultyName(hodTargetName);
         let bestScore = 0;
         for (const f of deptRawFaculty) {
-          const score = matchFacultyNameScore(hodTargetName, f.fullName);
+          const score = matchFacultyNameScore(cleanTarget, f.fullName);
           if (score > bestScore) {
             bestScore = score;
             apiHodMatch = f;
@@ -282,11 +239,11 @@ export function useFacultyData() {
           apiHodMatch = undefined;
         }
 
-        // Check globally if needed
+        // Check globally across all departments if needed
         if (!apiHodMatch) {
           let globalBestScore = 0;
           for (const f of facultyList) {
-            const score = matchFacultyNameScore(hodTargetName, f.fullName);
+            const score = matchFacultyNameScore(cleanTarget, f.fullName);
             if (score > globalBestScore) {
               globalBestScore = score;
               apiHodMatch = f;
@@ -298,16 +255,13 @@ export function useFacultyData() {
         }
       }
 
-      // 4. If we found an API match, build the enriched FacultyMember
+      // 4. If an API match is found, build the enriched FacultyMember
       if (apiHodMatch) {
-        const fallbackImg =
-          staticImageMap[slugifyFaculty(apiHodMatch.fullName)] ||
-          (hodTargetName ? staticImageMap[slugifyFaculty(hodTargetName)] : undefined) ||
-          staticHod?.image ||
-          knownHead?.image;
-
-        const member = apiFacultyToFacultyMember(apiHodMatch, fallbackImg);
-        member.profileUrl = `/department/${normalizedKey}/faculty/${slugifyFaculty(apiHodMatch.fullName)}`;
+        const member = apiFacultyToFacultyMember(apiHodMatch);
+        // Only set image if API match has a profile photo in the database; do not use any old URL
+        member.image = getFacultyPhotoUrl(apiHodMatch.profilePhoto) || undefined;
+        member.name = cleanFacultyName(apiHodMatch.fullName);
+        member.profileUrl = `/department/${normalizedKey}/faculty/${slugifyFaculty(member.name)}`;
 
         const desLower = member.designation.toLowerCase();
         if (!desLower.includes("head") && !desLower.includes("hod")) {
@@ -316,8 +270,17 @@ export function useFacultyData() {
         return member;
       }
 
-      // 5. Fallback to static department HOD
-      return staticHod;
+      // 5. Fallback to static department HOD if no API match found,
+      // but strictly keep the image blank (no old mits.ac.in link fallback)
+      if (staticHod) {
+        return {
+          ...staticHod,
+          name: cleanFacultyName(staticHod.name),
+          image: undefined, // Blank image if not in database
+        };
+      }
+
+      return undefined;
     },
     [facultyList]
   );
@@ -338,7 +301,7 @@ export function useFacultyData() {
         }
         if (!q) return true;
 
-        const nameMatch = f.fullName.toLowerCase().includes(q);
+        const nameMatch = cleanFacultyName(f.fullName).toLowerCase().includes(q);
         const desMatch = f.designation?.toLowerCase().includes(q);
         const emailMatch = f.email?.toLowerCase().includes(q);
         const specMatch = f.specialization?.some((s) => s.toLowerCase().includes(q));
@@ -350,32 +313,17 @@ export function useFacultyData() {
     [facultyList]
   );
 
-  return useMemo(
-    () => ({
-      facultyList,
-      loading,
-      error,
-      refresh: () => loadData(true),
-      getFacultyByDept,
-      getRawFacultyByDept,
-      getFacultyProfileBySlug,
-      getRawFacultyBySlug,
-      searchFaculty,
-      findFacultyByName,
-      getDepartmentHod,
-    }),
-    [
-      facultyList,
-      loading,
-      error,
-      loadData,
-      getFacultyByDept,
-      getRawFacultyByDept,
-      getFacultyProfileBySlug,
-      getRawFacultyBySlug,
-      searchFaculty,
-      findFacultyByName,
-      getDepartmentHod,
-    ]
-  );
+  return {
+    facultyList,
+    loading,
+    error,
+    refresh: () => loadData(true),
+    getFacultyByDept,
+    getRawFacultyByDept,
+    getFacultyProfileBySlug,
+    getRawFacultyBySlug,
+    findFacultyByName,
+    getDepartmentHod,
+    searchFaculty,
+  };
 }

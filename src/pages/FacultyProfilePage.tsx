@@ -7,7 +7,7 @@ import SEO from "@/components/SEO";
 import { getDepartmentByKey, type FacultyMember } from "@/data/departmentData";
 import { facultyProfiles, getFacultyProfile, type FacultyProfile, type FacultySection } from "@/data/facultyProfiles";
 import { departmentHeads, deansList } from "@/data/aboutData";
-import { slugifyFaculty } from "@/lib/facultySlug";
+import { slugifyFaculty, cleanFacultyName } from "@/lib/facultySlug";
 import { useFacultyData } from "@/hooks/useFacultyData";
 import {
   ArrowLeft, ArrowRight, Mail, GraduationCap, BookOpen,
@@ -264,7 +264,7 @@ const FacultyProfilePage = () => {
     if (!f) {
       if (liveProfile) {
         f = {
-          name: liveProfile.name,
+          name: cleanFacultyName(liveProfile.name),
           designation: liveProfile.designation,
           qualification: "Ph.D.",
           email: liveProfile.email,
@@ -272,33 +272,38 @@ const FacultyProfilePage = () => {
         };
       } else if (staticProfile) {
         f = {
-          name: staticProfile.name,
+          name: cleanFacultyName(staticProfile.name),
           designation: staticProfile.designation,
           qualification: "Ph.D.",
           email: staticProfile.email,
-          image: staticProfile.image,
+          image: undefined,
         };
       } else if (headMatch) {
         f = {
-          name: headMatch.name,
+          name: cleanFacultyName(headMatch.name),
           designation: `Head of Department — ${headMatch.department}`,
           qualification: "Ph.D.",
-          image: headMatch.image,
+          image: undefined,
         };
       } else if (deanMatch) {
         f = {
-          name: deanMatch.facultyName || deanMatch.name,
+          name: cleanFacultyName(deanMatch.facultyName || deanMatch.name),
           designation: deanMatch.designation,
           qualification: deanMatch.qualification || "Ph.D.",
-          image: deanMatch.image,
+          image: undefined,
         };
       }
+    } else {
+      f = {
+        ...f,
+        name: cleanFacultyName(f.name),
+      };
     }
 
     // 3. Resolve rich profile: live API profile -> static Profile -> static getFacultyProfile -> buildFromFacultyMember
     const rich = liveProfile || staticProfile || getFacultyProfile(deptKey || "", f?.name || "");
     const merged: FacultyProfile | undefined = rich
-      ? { ...rich, image: rich.image || f?.image, email: rich.email || f?.email }
+      ? { ...rich, name: cleanFacultyName(rich.name), image: rich.image || f?.image, email: rich.email || f?.email }
       : f ? buildFromFacultyMember(f) : undefined;
 
     return {
