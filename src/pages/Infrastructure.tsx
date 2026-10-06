@@ -1,16 +1,23 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { cn } from "@/lib/utils";
 import {
   Trophy, Bus, Heart, UtensilsCrossed, Library, Radio,
   Lightbulb, Monitor, MessageSquare, Wifi, ChevronLeft, ChevronRight,
   ZoomIn, X, ExternalLink, MapPin, ClipboardList, FileText, CheckCircle2, Info,
   Server, ShieldCheck, Laptop, Network, HardDrive, Cpu, Cloud, Globe, Lock,
+  Home, Sparkles, ArrowRight,
+  type LucideIcon,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 
 const BASE = import.meta.env.BASE_URL;
+
+// ─── Full-Bleed Layout Container (Matching International Relations) ───────────
+const WIDE = "w-full max-w-[1900px] mx-auto px-3 sm:px-6 lg:px-10 xl:px-16";
 
 // ─── Palette ────────────────────────────────────────────────────────────────
 const DARK_NAVY   = "#0f2a44";
@@ -18,6 +25,187 @@ const MITS_RED    = "#b30000";
 const GOLD        = "#caa74d";
 const SLATE       = "#475569";
 const BORDER      = "#e2e8f0";
+
+// ─── Distinct Tab Themes per Facility (Selected by User) ────────────────────
+const TAB_THEMES: Record<
+  string,
+  {
+    solid: string;
+    soft: string;
+    text: string;
+    ring: string;
+    glow: string;
+    badge: string;
+    border: string;
+    gradient: string;
+  }
+> = {
+  sports: {
+    solid: "bg-emerald-600",
+    soft: "bg-emerald-50",
+    text: "text-emerald-700",
+    ring: "ring-emerald-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(5,150,105,0.45)]",
+    badge: "bg-emerald-100 text-emerald-800",
+    border: "border-emerald-200",
+    gradient: "from-emerald-600 to-teal-700",
+  },
+  transport: {
+    solid: "bg-amber-600",
+    soft: "bg-amber-50",
+    text: "text-amber-700",
+    ring: "ring-amber-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(217,119,6,0.45)]",
+    badge: "bg-amber-100 text-amber-800",
+    border: "border-amber-200",
+    gradient: "from-amber-600 to-orange-700",
+  },
+  dispensary: {
+    solid: "bg-rose-600",
+    soft: "bg-rose-50",
+    text: "text-rose-700",
+    ring: "ring-rose-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(225,29,72,0.45)]",
+    badge: "bg-rose-100 text-rose-800",
+    border: "border-rose-200",
+    gradient: "from-rose-600 to-red-700",
+  },
+  canteen: {
+    solid: "bg-orange-600",
+    soft: "bg-orange-50",
+    text: "text-orange-700",
+    ring: "ring-orange-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(234,88,12,0.45)]",
+    badge: "bg-orange-100 text-orange-800",
+    border: "border-orange-200",
+    gradient: "from-orange-600 to-amber-700",
+  },
+  wifi: {
+    solid: "bg-sky-600",
+    soft: "bg-sky-50",
+    text: "text-sky-700",
+    ring: "ring-sky-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(2,132,199,0.45)]",
+    badge: "bg-sky-100 text-sky-800",
+    border: "border-sky-200",
+    gradient: "from-sky-600 to-blue-700",
+  },
+  library: {
+    solid: "bg-[#0f2a44]",
+    soft: "bg-[#0f2a44]/10",
+    text: "text-[#0f2a44]",
+    ring: "ring-[#0f2a44]/30",
+    glow: "shadow-[0_8px_25px_-5px_rgba(15,42,68,0.5)]",
+    badge: "bg-[#0f2a44]/15 text-[#0f2a44]",
+    border: "border-slate-300",
+    gradient: "from-[#0f2a44] to-[#caa74d]",
+  },
+  "digital-library": {
+    solid: "bg-purple-600",
+    soft: "bg-purple-50",
+    text: "text-purple-700",
+    ring: "ring-purple-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(147,51,234,0.45)]",
+    badge: "bg-purple-100 text-purple-800",
+    border: "border-purple-200",
+    gradient: "from-purple-600 to-indigo-700",
+  },
+  radio: {
+    solid: "bg-pink-600",
+    soft: "bg-pink-50",
+    text: "text-pink-700",
+    ring: "ring-pink-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(219,39,119,0.45)]",
+    badge: "bg-pink-100 text-pink-800",
+    border: "border-pink-200",
+    gradient: "from-pink-600 to-rose-700",
+  },
+  "aicte-idea": {
+    solid: "bg-indigo-600",
+    soft: "bg-indigo-50",
+    text: "text-indigo-700",
+    ring: "ring-indigo-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(79,70,229,0.45)]",
+    badge: "bg-indigo-100 text-indigo-800",
+    border: "border-indigo-200",
+    gradient: "from-indigo-600 to-violet-700",
+  },
+  computer: {
+    solid: "bg-blue-600",
+    soft: "bg-blue-50",
+    text: "text-blue-700",
+    ring: "ring-blue-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(37,99,235,0.45)]",
+    badge: "bg-blue-100 text-blue-800",
+    border: "border-blue-200",
+    gradient: "from-blue-600 to-cyan-700",
+  },
+  "comm-lab": {
+    solid: "bg-teal-600",
+    soft: "bg-teal-50",
+    text: "text-teal-700",
+    ring: "ring-teal-400/40",
+    glow: "shadow-[0_8px_25px_-5px_rgba(13,148,136,0.45)]",
+    badge: "bg-teal-100 text-teal-800",
+    border: "border-teal-200",
+    gradient: "from-teal-600 to-emerald-700",
+  },
+};
+
+// ─── Hero Key Metrics (Professional Sans-Serif) ──────────────────────────────
+const heroStats = [
+  { label: "Campus Sprawl", value: "26.17+ Acres" },
+  { label: "Fleet Transport", value: "40+ Buses & Cars" },
+  { label: "Computing Workstations", value: "2,095+ Desktops" },
+  { label: "High-Speed Wi-Fi & IT", value: "2 Gbps Bandwidth" },
+];
+
+// ─── Animated Stat Counter (Professional Clean Sans-Serif Font) ─────────────
+const AnimatedStat = ({ value, label }: { value: string; label: string }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-40px" });
+  const match = value.match(/^([\d,.]+)(.*)$/);
+  const numericStr = match ? match[1].replace(/,/g, "") : "0";
+  const target = parseFloat(numericStr) || 0;
+  const isFloat = numericStr.includes(".");
+  const suffix = match ? match[2] : "";
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const duration = 1100;
+    const stepMs = 18;
+    const steps = Math.max(1, Math.round(duration / stepMs));
+    const increment = target / steps;
+    let current = 0;
+    let step = 0;
+    const timer = setInterval(() => {
+      step += 1;
+      current += increment;
+      if (step >= steps) {
+        setDisplay(target);
+        clearInterval(timer);
+      } else {
+        setDisplay(current);
+      }
+    }, stepMs);
+    return () => clearInterval(timer);
+  }, [isInView, target]);
+
+  return (
+    <div ref={ref} className="text-center py-2 px-3">
+      <div
+        className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#0f2a44] font-sans [font-family:var(--font-body)]"
+      >
+        {isFloat ? display.toFixed(2) : Math.floor(display).toLocaleString()}
+        {suffix}
+      </div>
+      <div className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider mt-1.5 font-sans [font-family:var(--font-body)]">
+        {label}
+      </div>
+    </div>
+  );
+};
 
 // ─── Campus Detail Images (hero per section) ────────────────────────────────
 const campusImages: Record<string, string> = {
@@ -123,9 +311,19 @@ const galleryImages: Record<string, { src: string; alt: string }[]> = {
 };
 
 // ─── Facilities Data ─────────────────────────────────────────────────────────
-const infrastructureItems = [
+const infrastructureItems: {
+  key: string;
+  label: string;
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+  points: string[];
+}[] = [
   {
-    key: "sports", label: "Sports", icon: Trophy, title: "Sports & Athletics",
+    key: "sports",
+    label: "Sports",
+    icon: Trophy,
+    title: "Sports & Athletics",
     desc: "MITS offers world-class sports infrastructure to promote physical fitness and competitive spirit among students.",
     points: [
       "Cricket ground with practice nets and pavilion",
@@ -137,7 +335,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "transport", label: "Transport", icon: Bus, title: "Transport Facilities",
+    key: "transport",
+    label: "Transport",
+    icon: Bus,
+    title: "Transport Facilities",
     desc: "The Transport Division ensures the smooth operation of vehicles for students and staff travelling to and from MITS, Angallu.",
     points: [
       "Fleet of 35 buses and 20 cars for students and staff",
@@ -149,7 +350,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "dispensary", label: "Dispensary", icon: Heart, title: "Health & Dispensary",
+    key: "dispensary",
+    label: "Dispensary",
+    icon: Heart,
+    title: "Health & Dispensary",
     desc: "A fully equipped on-campus dispensary ensures the health and well-being of all students and staff.",
     points: [
       "24/7 medical assistance on campus",
@@ -161,7 +365,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "canteen", label: "Canteen", icon: UtensilsCrossed, title: "Canteen & Dining",
+    key: "canteen",
+    label: "Canteen",
+    icon: UtensilsCrossed,
+    title: "Canteen & Dining",
     desc: "Hygienic and affordable food services are available across the campus to cater to diverse tastes.",
     points: [
       "Main canteen with seating capacity of 500+",
@@ -173,7 +380,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "wifi", label: "Wi-Fi", icon: Wifi, title: "Wi-Fi & Connectivity",
+    key: "wifi",
+    label: "Wi-Fi",
+    icon: Wifi,
+    title: "Wi-Fi & Connectivity",
     desc: "High-speed 2 Gbps internet connectivity, CISCO Meraki MX450 firewall security, and 192 Ruckus R650 Wi-Fi 6 access points provide robust, uninterrupted digital infrastructure across the campus.",
     points: [
       "Dedicated 2 Gbps symmetric high-speed internet bandwidth with NKN connectivity",
@@ -185,7 +395,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "library", label: "Library", icon: Library, title: "Central Library",
+    key: "library",
+    label: "Library",
+    icon: Library,
+    title: "Central Library",
     desc: "The MITS Central Library is a knowledge hub with an extensive collection of books, journals, and digital resources.",
     points: [
       "50,000+ volumes across all disciplines",
@@ -197,7 +410,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "digital-library", label: "Digital Library", icon: Monitor, title: "Digital Library",
+    key: "digital-library",
+    label: "Digital Library",
+    icon: Monitor,
+    title: "Digital Library",
     desc: "The Digital Library provides access to a vast repository of e-resources, online databases, and research tools.",
     points: [
       "Access to NPTEL, DELNET, and INFLIBNET N-LIST",
@@ -209,7 +425,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "radio", label: "Radio Station", icon: Radio, title: "Campus Radio Station",
+    key: "radio",
+    label: "Radio Station",
+    icon: Radio,
+    title: "Campus Radio Station",
     desc: "MITS operates a vibrant campus radio station that serves as a creative and communicative platform for students.",
     points: [
       "Licensed FM community radio station",
@@ -221,7 +440,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "aicte-idea", label: "AICTE Idea Lab", icon: Lightbulb, title: "AICTE Idea Lab",
+    key: "aicte-idea",
+    label: "AICTE Idea Lab",
+    icon: Lightbulb,
+    title: "AICTE Idea Lab",
     desc: "The AICTE Idea Lab at MITS is a state-of-the-art innovation hub that fosters creativity, prototyping, and entrepreneurship.",
     points: [
       "Equipped with 3D printers, laser cutters, and CNC machines",
@@ -233,7 +455,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "computer", label: "Computer Infrastructure", icon: Monitor, title: "Computer Infrastructure",
+    key: "computer",
+    label: "Computer Infrastructure",
+    icon: Monitor,
+    title: "Computer Infrastructure",
     desc: "MITS maintains cutting-edge computing infrastructure with 2,095 networked desktop workstations, 80 institutional laptops, and 8 enterprise servers.",
     points: [
       "2,095 networked desktop workstations across campus",
@@ -245,7 +470,10 @@ const infrastructureItems = [
     ],
   },
   {
-    key: "comm-lab", label: "Communication Lab", icon: MessageSquare, title: "Communication Lab",
+    key: "comm-lab",
+    label: "Communication Lab",
+    icon: MessageSquare,
+    title: "Communication Lab",
     desc: "The Communication Lab at MITS is designed to enhance the language, presentation, and interpersonal skills of students.",
     points: [
       "State-of-the-art language lab with 60+ terminals",
@@ -258,12 +486,14 @@ const infrastructureItems = [
   },
 ];
 
-// ─── Normalise class list ───────────────────────────────────────────────────
-const cx = (...classes: (string | false | null | undefined)[]): string =>
-  classes.filter(Boolean).join(" ");
-
-// ─── Image Gallery Carousel Component ───────────────────────────────────────
-const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: string }[]; sectionTitle: string }) => {
+// ─── Image Gallery Carousel (Widescreen Full-Width) ─────────────────────────
+const ImageGallery = ({
+  images,
+  sectionTitle,
+}: {
+  images: { src: string; alt: string }[];
+  sectionTitle: string;
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIdx, setLightboxIdx] = useState(0);
@@ -272,7 +502,6 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
-  // Reset slide when images change
   useEffect(() => {
     setCurrentSlide(0);
     if (scrollRef.current) {
@@ -283,25 +512,36 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
   const scrollToSlide = useCallback((idx: number) => {
     if (!scrollRef.current) return;
     const container = scrollRef.current;
-    const slideWidth = container.offsetWidth * 0.72; // matches the slide width
-    const gap = 12;
-    container.scrollTo({
-      left: idx * (slideWidth + gap),
-      behavior: "smooth",
-    });
-    setCurrentSlide(idx);
+    const cards = container.children;
+    if (cards[idx]) {
+      (cards[idx] as HTMLElement).scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+      setCurrentSlide(idx);
+    }
   }, []);
 
   const handleScroll = useCallback(() => {
     if (!scrollRef.current || isDragging) return;
     const container = scrollRef.current;
-    const slideWidth = container.offsetWidth * 0.72;
-    const gap = 12;
-    const idx = Math.round(container.scrollLeft / (slideWidth + gap));
-    setCurrentSlide(Math.min(idx, images.length - 1));
-  }, [images.length, isDragging]);
+    const cards = Array.from(container.children) as HTMLElement[];
+    if (cards.length === 0) return;
+    const containerCenter = container.scrollLeft + container.offsetWidth / 2;
+    let closestIdx = 0;
+    let minDiff = Infinity;
+    cards.forEach((card, idx) => {
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const diff = Math.abs(containerCenter - cardCenter);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closestIdx = idx;
+      }
+    });
+    setCurrentSlide(closestIdx);
+  }, [isDragging]);
 
-  // Mouse drag for desktop
   const onMouseDown = (e: React.MouseEvent) => {
     if (!scrollRef.current) return;
     setIsDragging(true);
@@ -332,7 +572,6 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
     document.body.style.overflow = "";
   };
 
-  // Keyboard navigation for lightbox
   useEffect(() => {
     if (!lightboxOpen) return;
     const handler = (e: KeyboardEvent) => {
@@ -342,56 +581,36 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-}, [lightboxOpen, images.length]);
+  }, [lightboxOpen, images.length]);
 
   if (!images || images.length === 0) return null;
 
   return (
     <>
-      <div
-        className="rounded-xl overflow-hidden mb-5 shadow-sm"
-        style={{ background: "#fff", border: `1px solid ${BORDER}` }}
-      >
+      <div className="rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200/80 bg-white shadow-sm">
         {/* Header */}
-        <div
-          className="px-6 py-3.5 flex items-center gap-2.5"
-          style={{
-            borderBottom: `1px solid ${BORDER}`,
-            background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)`,
-          }}
-        >
-          <ZoomIn className="w-4 h-4" style={{ color: GOLD }} />
-          <span
-            className="font-bold text-[15px]"
-            style={{ color: DARK_NAVY, fontFamily: "var(--font-display)" }}
-          >
-            Photo Gallery
-          </span>
-          <span
-            className="ml-auto text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded-full"
-            style={{
-              background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})`,
-            }}
-          >
+        <div className="px-6 md:px-8 py-4 border-b border-slate-100 flex items-center justify-between gap-3 bg-slate-50/60">
+          <div className="flex items-center gap-2">
+            <ZoomIn className="w-4 h-4 text-[#caa74d]" />
+            <h3 className="font-bold text-sm md:text-base text-slate-800 font-sans [font-family:var(--font-body)]">
+              Photo &amp; Facility Gallery
+            </h3>
+          </div>
+          <span className="text-[11px] font-bold uppercase tracking-wider text-slate-600 bg-white border border-slate-200 px-3 py-1 rounded-full font-sans">
             {images.length} Photos
           </span>
         </div>
 
         {/* Carousel */}
-        <div className="relative px-4 py-5">
+        <div className="relative p-4 md:p-6 group/gallery">
           {/* Left arrow */}
           {currentSlide > 0 && (
             <button
               onClick={() => scrollToSlide(currentSlide - 1)}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
-              style={{
-                background: "rgba(15,42,68,0.85)",
-                backdropFilter: "blur(8px)",
-                boxShadow: "0 4px 16px rgba(15,42,68,0.25)",
-              }}
+              className="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center bg-slate-900/80 hover:bg-slate-900 text-white backdrop-blur-md shadow-lg transition-all"
               aria-label="Previous image"
             >
-              <ChevronLeft className="w-5 h-5 text-white" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
           )}
 
@@ -399,15 +618,10 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
           {currentSlide < images.length - 1 && (
             <button
               onClick={() => scrollToSlide(currentSlide + 1)}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
-              style={{
-                background: "rgba(15,42,68,0.85)",
-                backdropFilter: "blur(8px)",
-                boxShadow: "0 4px 16px rgba(15,42,68,0.25)",
-              }}
+              className="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center bg-slate-900/80 hover:bg-slate-900 text-white backdrop-blur-md shadow-lg transition-all"
               aria-label="Next image"
             >
-              <ChevronRight className="w-5 h-5 text-white" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           )}
 
@@ -419,10 +633,8 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
             onMouseMove={onMouseMove}
             onMouseUp={onMouseUp}
             onMouseLeave={onMouseUp}
-            className="flex gap-3 overflow-x-auto scroll-smooth"
+            className="flex gap-4 overflow-x-auto scroll-smooth py-1 px-1 scrollbar-none"
             style={{
-              scrollbarWidth: "none",
-              WebkitOverflowScrolling: "touch",
               cursor: isDragging ? "grabbing" : "grab",
               userSelect: "none",
             }}
@@ -430,13 +642,8 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
             {images.map((img, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 relative group rounded-lg overflow-hidden"
-                style={{
-                  width: "72%",
-                  minWidth: "260px",
-                  maxWidth: "560px",
-                  aspectRatio: "16/10",
-                }}
+                onClick={() => openLightbox(i)}
+                className="shrink-0 relative group rounded-2xl overflow-hidden shadow-sm border border-slate-200/70 hover:shadow-md transition-all duration-300 w-[85%] sm:w-[48%] lg:w-[32%] aspect-[16/10] bg-slate-100 cursor-pointer"
               >
                 <img
                   src={img.src}
@@ -449,28 +656,18 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
                   }}
                 />
                 {/* Hover overlay */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end cursor-pointer"
-                  onClick={() => openLightbox(i)}
-                >
-                  <div className="p-4 flex items-center justify-between w-full">
-                    <p className="text-white text-[13px] font-medium">{img.alt}</p>
-                    <div
-                      className="w-8 h-8 rounded-full flex items-center justify-center"
-                      style={{ background: `${GOLD}cc` }}
-                    >
-                      <ZoomIn className="w-4 h-4 text-white" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div className="flex items-center justify-between w-full text-white">
+                    <p className="text-xs md:text-sm font-medium line-clamp-1 font-sans">{img.alt}</p>
+                    <div className="w-7 h-7 rounded-full flex items-center justify-center bg-[#caa74d] text-slate-900 shrink-0 ml-2">
+                      <ZoomIn className="w-3.5 h-3.5" />
                     </div>
                   </div>
                 </div>
-                {/* Active slide indicator */}
+
+                {/* Active indicator bar */}
                 {i === currentSlide && (
-                  <div
-                    className="absolute bottom-0 left-0 right-0 h-[3px]"
-                    style={{
-                      background: `linear-gradient(90deg, ${MITS_RED}, ${GOLD})`,
-                    }}
-                  />
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0f2a44] via-[#caa74d] to-[#b30000]" />
                 )}
               </div>
             ))}
@@ -484,17 +681,11 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
                 <button
                   key={i}
                   onClick={() => scrollToSlide(i)}
-                  className="rounded-full transition-all duration-200 cursor-pointer"
+                  className={cn(
+                    "h-1.5 rounded-full transition-all duration-200 cursor-pointer",
+                    on ? "w-6 bg-[#0f2a44]" : "w-1.5 bg-slate-300 hover:bg-slate-400"
+                  )}
                   aria-label={`Go to image ${i + 1}`}
-                  style={{
-                    width: on ? 20 : 6,
-                    height: 6,
-                    borderRadius: 99,
-                    background: on
-                      ? `linear-gradient(90deg, ${DARK_NAVY} 0%, ${MITS_RED} 60%, ${GOLD} 100%)`
-                      : "#d1d5db",
-                    boxShadow: on ? `0 2px 6px ${MITS_RED}30` : "none",
-                  }}
                 />
               );
             })}
@@ -502,100 +693,76 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
         </div>
       </div>
 
-      {/* ── LIGHTBOX ── */}
+      {/* ── LIGHTBOX MODAL ── */}
       {lightboxOpen && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center"
-          style={{ background: "rgba(15,42,68,0.96)", backdropFilter: "blur(12px)" }}
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-950/95 backdrop-blur-md p-4"
           onClick={closeLightbox}
         >
-          {/* Close button */}
           <button
             onClick={closeLightbox}
-            className="absolute top-5 right-5 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 z-10"
-            style={{ background: "rgba(255,255,255,0.15)" }}
+            className="absolute top-5 right-5 w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 text-white cursor-pointer transition-all z-10"
             aria-label="Close lightbox"
           >
-            <X className="w-5 h-5 text-white" />
+            <X className="w-5 h-5" />
           </button>
 
-          {/* Counter */}
-          <div className="absolute top-6 left-6 text-white/70 text-[13px] font-medium z-10">
+          <div className="absolute top-6 left-6 text-white/80 text-xs sm:text-sm font-semibold z-10 font-sans">
             {lightboxIdx + 1} / {images.length} — {sectionTitle}
           </div>
 
-          {/* Prev */}
           {lightboxIdx > 0 && (
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 setLightboxIdx((p) => p - 1);
               }}
-              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 z-10"
-              style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(4px)" }}
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/25 text-white cursor-pointer transition-all z-10"
               aria-label="Previous image"
             >
-              <ChevronLeft className="w-6 h-6 text-white" />
+              <ChevronLeft className="w-6 h-6" />
             </button>
           )}
 
-          {/* Next */}
           {lightboxIdx < images.length - 1 && (
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 setLightboxIdx((p) => p + 1);
               }}
-              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 z-10"
-              style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(4px)" }}
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/25 text-white cursor-pointer transition-all z-10"
               aria-label="Next image"
             >
-              <ChevronRight className="w-6 h-6 text-white" />
+              <ChevronRight className="w-6 h-6" />
             </button>
           )}
 
-          {/* Image */}
-          <div
-            className="max-w-[90vw] max-h-[85vh] flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="max-w-[92vw] max-h-[82vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
             <img
               src={images[lightboxIdx].src}
               alt={images[lightboxIdx].alt}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg"
-              style={{ boxShadow: "0 8px 40px rgba(15,42,68,0.5)" }}
+              className="max-w-full max-h-[78vh] object-contain rounded-xl shadow-2xl"
             />
           </div>
 
-          {/* Caption */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-sm font-medium z-10 text-center px-4">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/90 text-sm font-medium z-10 text-center px-4 font-sans">
             {images[lightboxIdx].alt}
           </div>
 
-          {/* Thumbnail strip */}
-          <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-2 z-10 max-w-[90vw] overflow-x-auto py-2 px-3"
-            style={{ scrollbarWidth: "none" }}
+          <div
+            className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-2 z-10 max-w-[90vw] overflow-x-auto py-2 px-3 scrollbar-none"
             onClick={(e) => e.stopPropagation()}
           >
             {images.map((img, i) => (
               <button
                 key={i}
                 onClick={() => setLightboxIdx(i)}
-                className="flex-shrink-0 rounded-md overflow-hidden transition-all duration-200 cursor-pointer"
-                style={{
-                  width: 48,
-                  height: 36,
-                  border: i === lightboxIdx ? `2px solid ${GOLD}` : "2px solid transparent",
-                  opacity: i === lightboxIdx ? 1 : 0.5,
-                }}
+                className={cn(
+                  "shrink-0 rounded-lg overflow-hidden transition-all cursor-pointer w-12 h-9",
+                  i === lightboxIdx ? "ring-2 ring-[#caa74d] opacity-100" : "opacity-40 hover:opacity-80"
+                )}
               >
-                <img
-                  src={img.src}
-                  alt=""
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  draggable={false}
-                />
+                <img src={img.src} alt="" className="w-full h-full object-cover" />
               </button>
             ))}
           </div>
@@ -605,7 +772,7 @@ const ImageGallery = ({ images, sectionTitle }: { images: { src: string; alt: st
   );
 };
 
-// ─── Main Component ─────────────────────────────────────────────────────────
+// ─── Transport Information Component ─────────────────────────────────────────
 const transportRoutes = ["Madanapalle", "Punganur", "Kalikiri", "Vayalpadu", "Rayachoti", "Kadiri", "B-Kothakota", "Pileru"];
 
 const parentInstructions = [
@@ -638,52 +805,127 @@ const transportDocuments = [
   { label: "Transport Committee", href: "https://mits.ac.in/public/uploads/facilites/transportcommittee-2024.pdf" },
 ];
 
+const GuidanceCard = ({ title, items }: { title: string; items: string[] }) => (
+  <div className="rounded-2xl border p-5 md:p-6 bg-white" style={{ borderColor: BORDER }}>
+    <h4 className="mb-3.5 font-sans font-bold text-base text-[#0f2a44] [font-family:var(--font-body)]">{title}</h4>
+    <ul className="space-y-2.5">
+      {items.map((item) => (
+        <li key={item} className="flex gap-2.5 text-xs md:text-sm leading-relaxed text-slate-600 font-sans">
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" style={{ color: GOLD }} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 const TransportInformation = () => (
-  <section className="mb-5 overflow-hidden rounded-xl border bg-white shadow-sm" style={{ borderColor: BORDER }}>
-    <div className="border-b px-5 py-4 md:px-6" style={{ borderColor: BORDER, background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)` }}>
+  <section className="overflow-hidden rounded-2xl md:rounded-3xl border bg-white shadow-sm font-sans" style={{ borderColor: BORDER }}>
+    <div className="border-b px-6 py-5 md:px-8" style={{ borderColor: BORDER, background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)` }}>
       <div className="flex items-center gap-3">
-        <span className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ background: `${GOLD}18` }}><Bus className="h-4 w-4" style={{ color: MITS_RED }} /></span>
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
+          <Bus className="h-5 w-5" />
+        </span>
         <div>
-          <h3 className="font-display text-lg font-bold" style={{ color: DARK_NAVY }}>Transport Information</h3>
-          <p className="text-xs text-slate-500">Routes, guidance, applications, and transport documents</p>
+          <h3 className="font-sans font-bold text-lg md:text-xl [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+            Transport &amp; Bus Fleet Operations
+          </h3>
+          <p className="text-xs md:text-sm text-slate-500 font-sans">
+            Network coverage, towns, guidance, rules, and application documents
+          </p>
         </div>
       </div>
     </div>
 
-    <div className="space-y-7 p-5 md:p-6">
-      <div className="rounded-xl border p-4 md:p-5" style={{ borderColor: `${GOLD}55`, background: `${GOLD}0c` }}>
-        <p className="text-sm font-semibold leading-relaxed" style={{ color: DARK_NAVY }}>MITS - Deemed to be University operates a fleet of 35 buses and 20 cars to transport students and staff from MITS, Angallu to various places and back.</p>
+    <div className="space-y-7 p-6 md:p-8">
+      <div className="rounded-2xl border p-5 bg-gradient-to-r from-amber-50/70 via-amber-50/30 to-white" style={{ borderColor: `${GOLD}55` }}>
+        <p className="text-sm md:text-base font-semibold leading-relaxed font-sans" style={{ color: DARK_NAVY }}>
+          MITS - Deemed to be University operates an extensive fleet of 35 dedicated buses and 20 institutional cars to transport students and faculty members across Rayalaseema to and from the campus at Angallu.
+        </p>
       </div>
 
+      {/* Routes Grid */}
       <div>
-        <div className="mb-3 flex items-center gap-2"><MapPin className="h-4 w-4" style={{ color: MITS_RED }} /><h4 className="font-display font-bold" style={{ color: DARK_NAVY }}>List of Routes</h4></div>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {transportRoutes.map((route) => <div key={route} className="rounded-lg border bg-slate-50 px-3 py-2 text-center text-sm font-medium text-slate-700" style={{ borderColor: BORDER }}>{route}</div>)}
+        <div className="mb-3.5 flex items-center gap-2">
+          <MapPin className="h-4 w-4" style={{ color: MITS_RED }} />
+          <h4 className="font-sans font-bold text-base [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+            Operational Route Network (8 Regional Towns)
+          </h4>
         </div>
-        <p className="mt-3 text-xs leading-relaxed text-slate-500">Additional route-bus services from different corners of the town will be made available on a demand basis.</p>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {transportRoutes.map((route) => (
+            <div
+              key={route}
+              className="rounded-xl border bg-slate-50/80 hover:bg-white hover:border-[#caa74d] hover:shadow-xs px-4 py-3 text-center text-sm font-bold text-slate-800 transition-all font-sans"
+              style={{ borderColor: BORDER }}
+            >
+              {route}
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-xs leading-relaxed text-slate-500 font-sans">
+          * Additional town-corner and pickup shuttle services are regularly provisioned on student demand basis.
+        </p>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-2">
+      {/* Instructions */}
+      <div className="grid gap-6 lg:grid-cols-2">
         <GuidanceCard title="Instructions to Parents" items={parentInstructions} />
         <GuidanceCard title="Instructions to Students" items={studentInstructions} />
       </div>
 
-      <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3.5">
-        <div className="flex gap-2.5"><Info className="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-700" /><p className="text-xs leading-relaxed text-amber-900"><span className="font-bold">Note:</span> Students must follow these instructions and cooperate with faculty in-charges and drivers for the smooth operation of buses. Failure to do so may result in withdrawal of the transport facility.</p></div>
+      {/* Note Callout */}
+      <div className="rounded-2xl border border-amber-200 bg-amber-50/90 px-5 py-4">
+        <div className="flex gap-3">
+          <Info className="mt-0.5 h-5 w-5 shrink-0 text-amber-700" />
+          <p className="text-xs md:text-sm leading-relaxed text-amber-900 font-sans">
+            <span className="font-bold">Important Notice:</span> Students must carry their valid transport ID card at all times and adhere to safe conduct. Any indiscipline or violation of guidelines may lead to immediate revocation of bus privileges.
+          </p>
+        </div>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-[1fr_1.15fr]">
-        <div className="rounded-xl border p-4" style={{ borderColor: BORDER }}>
-          <div className="mb-3 flex items-center gap-2"><ClipboardList className="h-4 w-4" style={{ color: MITS_RED }} /><h4 className="font-display font-bold" style={{ color: DARK_NAVY }}>How to Apply</h4></div>
-          <ol className="space-y-2.5 text-xs leading-relaxed text-slate-600">
-            <li className="flex gap-2"><span className="font-bold" style={{ color: MITS_RED }}>01</span><span>Submit the completed application to the In-charge, Students Transport Facility, with two passport-size photographs for seat allocation.</span></li>
-            <li className="flex gap-2"><span className="font-bold" style={{ color: MITS_RED }}>02</span><span>Students enrolled for transport receive a separate transport identity card.</span></li>
+      {/* Application & Documents */}
+      <div className="grid gap-6 lg:grid-cols-[1fr_1.15fr]">
+        <div className="rounded-2xl border p-5 md:p-6" style={{ borderColor: BORDER }}>
+          <div className="mb-3.5 flex items-center gap-2">
+            <ClipboardList className="h-4 w-4" style={{ color: MITS_RED }} />
+            <h4 className="font-sans font-bold text-base [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+              How to Apply for Bus Pass
+            </h4>
+          </div>
+          <ol className="space-y-3 text-xs md:text-sm leading-relaxed text-slate-600 font-sans">
+            <li className="flex gap-2.5">
+              <span className="font-bold text-sm" style={{ color: MITS_RED }}>01</span>
+              <span>Submit the completed application form to the In-charge, Students Transport Facility, accompanied by two passport-size photographs.</span>
+            </li>
+            <li className="flex gap-2.5">
+              <span className="font-bold text-sm" style={{ color: MITS_RED }}>02</span>
+              <span>Upon seat confirmation and fee verification, an official personalized Transport Identity Card is issued.</span>
+            </li>
           </ol>
         </div>
-        <div className="rounded-xl border p-4" style={{ borderColor: BORDER }}>
-          <div className="mb-3 flex items-center gap-2"><FileText className="h-4 w-4" style={{ color: MITS_RED }} /><h4 className="font-display font-bold" style={{ color: DARK_NAVY }}>Transport Documents</h4></div>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {transportDocuments.map((document) => <a key={document.label} href={document.href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between gap-2 rounded-lg border bg-slate-50 px-3 py-2.5 text-xs font-semibold text-slate-700 transition-colors hover:text-white" style={{ borderColor: BORDER }} onMouseEnter={(event) => { event.currentTarget.style.background = DARK_NAVY; event.currentTarget.style.borderColor = DARK_NAVY; }} onMouseLeave={(event) => { event.currentTarget.style.background = "#f8fafc"; event.currentTarget.style.borderColor = BORDER; }}><span>{document.label}</span><ExternalLink className="h-3.5 w-3.5 flex-shrink-0" /></a>)}
+
+        <div className="rounded-2xl border p-5 md:p-6" style={{ borderColor: BORDER }}>
+          <div className="mb-3.5 flex items-center gap-2">
+            <FileText className="h-4 w-4" style={{ color: MITS_RED }} />
+            <h4 className="font-sans font-bold text-base [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+              Transport Documents &amp; Time-Tables
+            </h4>
+          </div>
+          <div className="grid gap-2.5 sm:grid-cols-2">
+            {transportDocuments.map((doc) => (
+              <a
+                key={doc.label}
+                href={doc.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between gap-2 rounded-xl border bg-slate-50/80 px-3.5 py-3 text-xs font-semibold text-slate-700 hover:bg-[#0f2a44] hover:text-white hover:border-[#0f2a44] transition-all font-sans"
+                style={{ borderColor: BORDER }}
+              >
+                <span>{doc.label}</span>
+                <ExternalLink className="h-3.5 w-3.5 shrink-0" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -691,16 +933,7 @@ const TransportInformation = () => (
   </section>
 );
 
-const GuidanceCard = ({ title, items }: { title: string; items: string[] }) => (
-  <div className="rounded-xl border p-4" style={{ borderColor: BORDER }}>
-    <h4 className="mb-3 font-display font-bold" style={{ color: DARK_NAVY }}>{title}</h4>
-    <ul className="space-y-2.5">
-      {items.map((item) => <li key={item} className="flex gap-2 text-xs leading-relaxed text-slate-600"><CheckCircle2 className="mt-0.5 h-3.5 w-3.5 flex-shrink-0" style={{ color: GOLD }} /><span>{item}</span></li>)}
-    </ul>
-  </div>
-);
-
-// ─── Wi-Fi & IT Infrastructure Detailed Information ─────────────────────────
+// ─── Wi-Fi & IT Infrastructure Detailed Specs ────────────────────────────────
 const wifiOverviewMetrics = [
   { label: "Total Bandwidth", value: "2 Gbps", sub: "Dedicated Leased Line & NKN", badge: "Symmetric Speed", icon: Globe, color: "#0070f3" },
   { label: "Enterprise Firewall", value: "Meraki MX450", sub: "CISCO Security & SD-WAN Appliance", badge: "Next-Gen Defense", icon: ShieldCheck, color: MITS_RED },
@@ -803,51 +1036,51 @@ const cloudServersData = [
 ];
 
 const WifiInfrastructureInformation = () => (
-  <section className="mb-5 overflow-hidden rounded-xl border bg-white shadow-sm" style={{ borderColor: BORDER }}>
+  <section className="overflow-hidden rounded-2xl md:rounded-3xl border bg-white shadow-sm font-sans" style={{ borderColor: BORDER }}>
     {/* Header */}
-    <div className="border-b px-5 py-4 md:px-6" style={{ borderColor: BORDER, background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)` }}>
+    <div className="border-b px-6 py-5 md:px-8" style={{ borderColor: BORDER, background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)` }}>
       <div className="flex items-center gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-lg" style={{ background: `${GOLD}18` }}>
-          <Wifi className="h-5 w-5" style={{ color: MITS_RED }} />
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-100 text-sky-700">
+          <Wifi className="h-5 w-5" />
         </span>
         <div>
-          <h3 className="font-display text-lg font-bold" style={{ color: DARK_NAVY }}>
-            Wi-Fi &amp; Digital IT Infrastructure
+          <h3 className="font-sans font-bold text-lg md:text-xl [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+            Wi-Fi &amp; Digital IT Infrastructure Specifications
           </h3>
-          <p className="text-xs text-slate-500">
-            High-speed 2 Gbps connectivity, Cisco Meraki firewall security, server farm, and computing fleet
+          <p className="text-xs md:text-sm text-slate-500 font-sans">
+            2 Gbps connectivity, Cisco Meraki firewall security, server farm, and computing fleet
           </p>
         </div>
       </div>
     </div>
 
-    <div className="space-y-7 p-5 md:p-6">
+    <div className="space-y-8 p-6 md:p-8">
       {/* ── Key Metrics 6-Card Grid ── */}
       <div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
           {wifiOverviewMetrics.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.label}
-                className="rounded-xl border p-3.5 transition-all duration-200 hover:shadow-sm"
-                style={{ borderColor: BORDER, background: "#fafbfc" }}
+                className="rounded-2xl border p-4 transition-all duration-200 hover:shadow-sm bg-slate-50/70"
+                style={{ borderColor: BORDER }}
               >
-                <div className="flex items-center justify-between mb-2">
-                  <div className="w-7 h-7 rounded-md flex items-center justify-center bg-white border shadow-xs" style={{ borderColor: BORDER }}>
-                    <Icon className="w-3.5 h-3.5" style={{ color: item.color }} />
+                <div className="flex items-center justify-between mb-2.5">
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-white border shadow-xs" style={{ borderColor: BORDER }}>
+                    <Icon className="w-4 h-4" style={{ color: item.color }} />
                   </div>
-                  <span className="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded text-white" style={{ background: DARK_NAVY }}>
+                  <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded text-white font-sans" style={{ background: DARK_NAVY }}>
                     {item.badge}
                   </span>
                 </div>
-                <div className="text-xl md:text-2xl font-extrabold tracking-tight" style={{ color: DARK_NAVY }}>
+                <div className="text-xl md:text-2xl font-extrabold tracking-tight font-sans [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
                   {item.value}
                 </div>
-                <div className="text-[11px] font-bold text-slate-700 mt-0.5 leading-snug">
+                <div className="text-xs font-bold text-slate-700 mt-1 leading-snug font-sans">
                   {item.label}
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1 leading-tight line-clamp-1">
+                <div className="text-[11px] text-slate-500 mt-1 leading-tight line-clamp-1 font-sans">
                   {item.sub}
                 </div>
               </div>
@@ -857,128 +1090,128 @@ const WifiInfrastructureInformation = () => (
       </div>
 
       {/* ── Computing Fleet Distribution ── */}
-      <div className="rounded-xl border p-5" style={{ borderColor: BORDER, background: "#fff" }}>
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100">
-          <div className="flex items-center gap-2">
-            <Monitor className="h-4 w-4" style={{ color: MITS_RED }} />
-            <h4 className="font-display font-bold text-base" style={{ color: DARK_NAVY }}>
-              Computing &amp; Desktop Infrastructure
+      <div className="rounded-2xl border p-6 bg-white" style={{ borderColor: BORDER }}>
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-5 pb-3 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <Monitor className="h-5 w-5" style={{ color: MITS_RED }} />
+            <h4 className="font-sans font-bold text-base md:text-lg [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+              Computing &amp; Desktop Infrastructure Fleet
             </h4>
           </div>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-white shadow-xs" style={{ background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})` }}>
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold text-white shadow-xs font-sans" style={{ background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})` }}>
             <span>Total Fleet:</span>
             <span className="text-[#ffd15c]">2,095 Desktops + 80 Laptops</span>
           </span>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3 mb-4">
+        <div className="grid gap-4 md:grid-cols-3 mb-5">
           {/* Circular Block Card */}
-          <div className="rounded-xl border p-4 bg-slate-50/70" style={{ borderColor: BORDER }}>
+          <div className="rounded-xl border p-4.5 bg-slate-50/70" style={{ borderColor: BORDER }}>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Central Facility</span>
-              <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-blue-100 text-blue-800">Circular Block</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 font-sans">Central Facility</span>
+              <span className="px-2.5 py-0.5 text-[10px] font-bold rounded-full bg-blue-100 text-blue-800 font-sans">Circular Block</span>
             </div>
-            <div className="text-2xl md:text-3xl font-extrabold text-[#005bb5]">832</div>
-            <p className="text-xs font-semibold text-slate-700 mt-0.5">Desktops in Circular Block</p>
-            <p className="text-[11px] text-slate-500 mt-2 leading-relaxed">
+            <div className="text-2xl md:text-3xl font-extrabold text-[#005bb5] font-sans [font-family:var(--font-body)]">832</div>
+            <p className="text-xs font-bold text-slate-700 mt-0.5 font-sans">Desktops in Circular Block</p>
+            <p className="text-xs text-slate-500 mt-2 leading-relaxed font-sans">
               Equipped for institutional online examinations, campus placement coding assessments, centralized lab programs, and digital evaluations.
             </p>
           </div>
 
           {/* Departmental Desktops Card */}
-          <div className="rounded-xl border p-4 bg-slate-50/70" style={{ borderColor: BORDER }}>
+          <div className="rounded-xl border p-4.5 bg-slate-50/70" style={{ borderColor: BORDER }}>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Departmental Labs</span>
-              <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-emerald-100 text-emerald-800">All Depts</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 font-sans">Departmental Labs</span>
+              <span className="px-2.5 py-0.5 text-[10px] font-bold rounded-full bg-emerald-100 text-emerald-800 font-sans">All Depts</span>
             </div>
-            <div className="text-2xl md:text-3xl font-extrabold" style={{ color: MITS_RED }}>1,263</div>
-            <p className="text-xs font-semibold text-slate-700 mt-0.5">Desktops in Departments</p>
-            <p className="text-[11px] text-slate-500 mt-2 leading-relaxed">
+            <div className="text-2xl md:text-3xl font-extrabold font-sans [font-family:var(--font-body)]" style={{ color: MITS_RED }}>1,263</div>
+            <p className="text-xs font-bold text-slate-700 mt-0.5 font-sans">Desktops in Department Labs</p>
+            <p className="text-xs text-slate-500 mt-2 leading-relaxed font-sans">
               Distributed across CSE, ECE, EEE, ME, CE, AI&amp;DS, and allied academic departments for specialized curriculum software, simulation, and research.
             </p>
           </div>
 
           {/* Laptops Mobility Card */}
-          <div className="rounded-xl border p-4 bg-slate-50/70" style={{ borderColor: BORDER }}>
+          <div className="rounded-xl border p-4.5 bg-slate-50/70" style={{ borderColor: BORDER }}>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Mobility Fleet</span>
-              <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-amber-100 text-amber-800">Institutional</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 font-sans">Mobility Fleet</span>
+              <span className="px-2.5 py-0.5 text-[10px] font-bold rounded-full bg-amber-100 text-amber-800 font-sans">Institutional</span>
             </div>
-            <div className="text-2xl md:text-3xl font-extrabold" style={{ color: GOLD }}>80</div>
-            <p className="text-xs font-semibold text-slate-700 mt-0.5">High-Performance Laptops</p>
-            <p className="text-[11px] text-slate-500 mt-2 leading-relaxed">
+            <div className="text-2xl md:text-3xl font-extrabold font-sans [font-family:var(--font-body)]" style={{ color: GOLD }}>80</div>
+            <p className="text-xs font-bold text-slate-700 mt-0.5 font-sans">High-Performance Laptops</p>
+            <p className="text-xs text-slate-500 mt-2 leading-relaxed font-sans">
               Dedicated institutional laptops deployed for faculty research, international conferences, mobile digital evaluation, seminars, and technical workshops.
             </p>
           </div>
         </div>
 
         {/* Visual Distribution Ratio Bar */}
-        <div className="rounded-lg border p-3.5 bg-slate-50" style={{ borderColor: BORDER }}>
-          <div className="flex items-center justify-between text-xs font-semibold mb-2" style={{ color: DARK_NAVY }}>
+        <div className="rounded-xl border p-4 bg-slate-50 font-sans" style={{ borderColor: BORDER }}>
+          <div className="flex items-center justify-between text-xs font-bold mb-2.5" style={{ color: DARK_NAVY }}>
             <span>Distribution Ratio: Circular Block (832) vs All Departments (1,263)</span>
             <span className="text-slate-500">Total = 2,095 Desktops</span>
           </div>
-          <div className="h-3 w-full rounded-full overflow-hidden flex bg-slate-200">
+          <div className="h-3.5 w-full rounded-full overflow-hidden flex bg-slate-200">
             <div className="h-full transition-all duration-500 bg-[#005bb5]" style={{ width: "39.7%" }} title="Circular Block: 832 (39.7%)" />
             <div className="h-full transition-all duration-500 bg-[#b30000]" style={{ width: "60.3%" }} title="All Departments: 1,263 (60.3%)" />
           </div>
-          <div className="flex items-center justify-between text-[11px] font-medium text-slate-600 mt-2">
-            <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full inline-block bg-[#005bb5]" /> Circular Block: 832 Desktops (39.7%)</span>
-            <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full inline-block bg-[#b30000]" /> All Departments: 1,263 Desktops (60.3%)</span>
+          <div className="flex items-center justify-between text-xs font-medium text-slate-600 mt-2.5">
+            <span className="flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-full inline-block bg-[#005bb5]" /> Circular Block: 832 Desktops (39.7%)</span>
+            <span className="flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-full inline-block bg-[#b30000]" /> All Departments: 1,263 Desktops (60.3%)</span>
           </div>
         </div>
       </div>
 
-      {/* ── Enterprise Servers Infrastructure (From Provided Specs) ── */}
-      <div className="rounded-xl border p-5" style={{ borderColor: BORDER, background: "#fff" }}>
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100">
-          <div className="flex items-center gap-2">
-            <Server className="h-4 w-4" style={{ color: MITS_RED }} />
-            <h4 className="font-display font-bold text-base" style={{ color: DARK_NAVY }}>
-              Server Infrastructure (8 Enterprise Servers)
+      {/* ── Enterprise Servers Infrastructure ── */}
+      <div className="rounded-2xl border p-6 bg-white font-sans" style={{ borderColor: BORDER }}>
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-5 pb-3 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <Server className="h-5 w-5" style={{ color: MITS_RED }} />
+            <h4 className="font-sans font-bold text-base md:text-lg [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+              Enterprise Server Infrastructure (8 High-Availability Servers)
             </h4>
           </div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 text-xs font-bold rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+            <span className="px-3 py-1 text-xs font-bold rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-sans">
               6 Physical Servers
             </span>
-            <span className="px-2.5 py-0.5 text-xs font-bold rounded-full bg-purple-50 text-purple-700 border border-purple-200">
+            <span className="px-3 py-1 text-xs font-bold rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-sans">
               2 Cloud Servers
             </span>
           </div>
         </div>
 
-        {/* Physical Servers Table / Cards */}
+        {/* Physical Servers Table */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
             <HardDrive className="w-4 h-4" style={{ color: GOLD }} />
-            <h5 className="font-display font-bold text-sm" style={{ color: DARK_NAVY }}>
+            <h5 className="font-sans font-bold text-sm [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
               Physical Servers (Dell PowerEdge Enterprise Fleet)
             </h5>
           </div>
 
           <div className="overflow-x-auto rounded-xl border" style={{ borderColor: BORDER }}>
-            <table className="w-full text-left text-xs border-collapse">
+            <table className="w-full text-left text-xs border-collapse font-sans">
               <thead>
                 <tr className="border-b text-slate-700 font-bold uppercase text-[10px] tracking-wider" style={{ background: `linear-gradient(90deg, #f8fafc, #edf2f7)`, borderColor: BORDER }}>
-                  <th className="py-3 px-3.5">Physical Server</th>
-                  <th className="py-3 px-3.5">Server Name</th>
-                  <th className="py-3 px-3.5">Equipment Description &amp; Specifications</th>
-                  <th className="py-3 px-3.5 hidden md:table-cell">Primary Operational Role</th>
+                  <th className="py-3.5 px-4">Physical Server</th>
+                  <th className="py-3.5 px-4">Server Name</th>
+                  <th className="py-3.5 px-4">Equipment Description &amp; Specifications</th>
+                  <th className="py-3.5 px-4 hidden md:table-cell">Primary Operational Role</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
                 {physicalServersData.map((srv, idx) => (
                   <tr key={srv.server} className={idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
-                    <td className="py-3 px-3.5 font-bold whitespace-nowrap text-slate-900">
+                    <td className="py-3.5 px-4 font-bold whitespace-nowrap text-slate-900">
                       <span className="inline-block px-2 py-0.5 rounded text-[10px] font-extrabold bg-slate-100 text-slate-700 border border-slate-200">
                         {srv.server}
                       </span>
                     </td>
-                    <td className="py-3 px-3.5 font-bold whitespace-nowrap" style={{ color: DARK_NAVY }}>
+                    <td className="py-3.5 px-4 font-bold whitespace-nowrap" style={{ color: DARK_NAVY }}>
                       {srv.name}
                     </td>
-                    <td className="py-3 px-3.5 leading-relaxed">
+                    <td className="py-3.5 px-4 leading-relaxed">
                       <div className="font-semibold text-slate-800">{srv.badge}: {srv.name.split("/")[0]}</div>
                       <div className="text-[11px] text-slate-600 mt-0.5">
                         <span className="font-medium text-slate-700">Processor:</span> {srv.processor}
@@ -993,7 +1226,7 @@ const WifiInfrastructureInformation = () => (
                         <span><strong className="text-slate-700">LAN:</strong> {srv.lan}</span>
                       </div>
                     </td>
-                    <td className="py-3 px-3.5 text-[11px] text-slate-600 leading-snug hidden md:table-cell">
+                    <td className="py-3.5 px-4 text-xs text-slate-600 leading-snug hidden md:table-cell">
                       {srv.role}
                     </td>
                   </tr>
@@ -1007,23 +1240,23 @@ const WifiInfrastructureInformation = () => (
         <div>
           <div className="flex items-center gap-2 mb-3">
             <Cloud className="w-4 h-4 text-purple-600" />
-            <h5 className="font-display font-bold text-sm" style={{ color: DARK_NAVY }}>
+            <h5 className="font-sans font-bold text-sm [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
               Cloud Servers (Institutional Portals &amp; E-Learning)
             </h5>
           </div>
 
-          <div className="grid gap-3.5 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             {cloudServersData.map((cloud) => (
-              <div key={cloud.server} className="rounded-xl border p-4.5 bg-gradient-to-br from-purple-50/40 via-white to-white" style={{ borderColor: BORDER }}>
+              <div key={cloud.server} className="rounded-2xl border p-5 bg-gradient-to-br from-purple-50/40 via-white to-white font-sans" style={{ borderColor: BORDER }}>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-purple-100 text-purple-800">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-purple-100 text-purple-800">
                     {cloud.server}
                   </span>
                   <span className="text-xs font-bold" style={{ color: DARK_NAVY }}>{cloud.name}</span>
                 </div>
-                <h6 className="font-display font-bold text-sm text-slate-900 mb-1">{cloud.title}</h6>
+                <h6 className="font-sans font-bold text-base text-slate-900 mb-1 [font-family:var(--font-body)]">{cloud.title}</h6>
                 <p className="text-xs text-slate-600 leading-relaxed mb-3">{cloud.description}</p>
-                <div className="pt-2 border-t border-purple-100/70 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-slate-700">
+                <div className="pt-2.5 border-t border-purple-100/70 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
                   <span><strong>Processor:</strong> {cloud.processor}</span>
                   <span><strong>RAM:</strong> {cloud.ram}</span>
                   <span><strong>Storage:</strong> {cloud.hdd}</span>
@@ -1035,68 +1268,68 @@ const WifiInfrastructureInformation = () => (
       </div>
 
       {/* ── Network Security & Wireless Access Deep Dive ── */}
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2 font-sans">
         {/* Firewall Card */}
-        <div className="rounded-xl border p-5 bg-gradient-to-br from-red-50/30 via-white to-white" style={{ borderColor: BORDER }}>
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-red-100 text-red-700">
+        <div className="rounded-2xl border p-6 bg-gradient-to-br from-red-50/30 via-white to-white" style={{ borderColor: BORDER }}>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-red-100 text-red-700">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="font-display font-bold text-base" style={{ color: DARK_NAVY }}>
-                Perimeter Firewall &amp; Security
+              <h4 className="font-sans font-bold text-base md:text-lg [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+                Perimeter Firewall &amp; Threat Defense
               </h4>
-              <p className="text-xs text-slate-500">CISCO Meraki MX450 Next-Gen Security Appliance</p>
+              <p className="text-xs text-slate-500 font-sans">CISCO Meraki MX450 Next-Gen Security Appliance</p>
             </div>
           </div>
-          <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
-            <li className="flex gap-2">
-              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+          <ul className="space-y-2.5 text-xs md:text-sm text-slate-600 leading-relaxed">
+            <li className="flex gap-2.5">
+              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600" />
               <span><strong>10G-Capable Stateful Firewall:</strong> High-throughput Deep Packet Inspection ensuring zero latency across high-bandwidth traffic.</span>
             </li>
-            <li className="flex gap-2">
-              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+            <li className="flex gap-2.5">
+              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600" />
               <span><strong>Snort-Based Threat Protection:</strong> Real-time Intrusion Detection and Prevention (IDS/IPS) defending all on-campus servers and databases.</span>
             </li>
-            <li className="flex gap-2">
-              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+            <li className="flex gap-2.5">
+              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600" />
               <span><strong>Content Filtering &amp; Policy Control:</strong> Granular Layer-7 application visibility and content filtering for academic compliance.</span>
             </li>
-            <li className="flex gap-2">
-              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+            <li className="flex gap-2.5">
+              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600" />
               <span><strong>Isolated VLAN Segments:</strong> Dedicated subnets for research labs, administrative servers, examination systems, and student Wi-Fi.</span>
             </li>
           </ul>
         </div>
 
         {/* Wireless APs Card */}
-        <div className="rounded-xl border p-5 bg-gradient-to-br from-amber-50/30 via-white to-white" style={{ borderColor: BORDER }}>
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-amber-100" style={{ color: GOLD }}>
+        <div className="rounded-2xl border p-6 bg-gradient-to-br from-amber-50/30 via-white to-white" style={{ borderColor: BORDER }}>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-amber-100 text-amber-700">
               <Wifi className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="font-display font-bold text-base" style={{ color: DARK_NAVY }}>
-                High-Density Wi-Fi 6 Access Points
+              <h4 className="font-sans font-bold text-base md:text-lg [font-family:var(--font-body)]" style={{ color: DARK_NAVY }}>
+                High-Density Wi-Fi 6 Enterprise APs
               </h4>
-              <p className="text-xs text-slate-500">192 Ruckus R650 Enterprise Access Points</p>
+              <p className="text-xs text-slate-500 font-sans">192 Ruckus R650 Enterprise Access Points</p>
             </div>
           </div>
-          <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
-            <li className="flex gap-2">
-              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+          <ul className="space-y-2.5 text-xs md:text-sm text-slate-600 leading-relaxed">
+            <li className="flex gap-2.5">
+              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600" />
               <span><strong>192 Enterprise APs:</strong> Total coverage across all instructional blocks, seminar halls, library, hostels, and administrative premises.</span>
             </li>
-            <li className="flex gap-2">
-              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+            <li className="flex gap-2.5">
+              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600" />
               <span><strong>Ruckus R650 Wi-Fi 6 (802.11ax):</strong> Dual-band concurrent technology providing gigabit wireless throughput and ultra-low latency.</span>
             </li>
-            <li className="flex gap-2">
-              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+            <li className="flex gap-2.5">
+              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600" />
               <span><strong>BeamFlex+ Adaptive Antennas:</strong> Dynamic multi-directional signal steering preventing physical interference and dead zones.</span>
             </li>
-            <li className="flex gap-2">
-              <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-emerald-600" />
+            <li className="flex gap-2.5">
+              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600" />
               <span><strong>High Concurrency &amp; Roaming:</strong> Designed for high-density student assemblies with seamless handoff and 24/7 connectivity.</span>
             </li>
           </ul>
@@ -1106,23 +1339,27 @@ const WifiInfrastructureInformation = () => (
   </section>
 );
 
+// ─── MAIN INFRASTRUCTURE PAGE COMPONENT ──────────────────────────────────────
 const Infrastructure = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const getInitialTab = () => {
     if (typeof window !== "undefined") {
-      const hash = window.location.hash;
+      const hash = window.location.hash.replace("#", "");
       const search = new URLSearchParams(window.location.search);
+      const tabParam = search.get("tab");
       if (
-        hash === "#tab-2" ||
-        hash === "#sports" ||
-        search.get("tab") === "sports" ||
+        hash === "tab-2" ||
+        hash === "sports" ||
+        tabParam === "sports" ||
         location.pathname === "/sports" ||
         location.pathname === "/facilities"
       ) {
         return "sports";
       }
       const match = infrastructureItems.find(
-        (i) => hash === `#${i.key}` || search.get("tab") === i.key
+        (i) => hash === i.key || tabParam === i.key
       );
       if (match) return match.key;
     }
@@ -1132,34 +1369,44 @@ const Infrastructure = () => {
   const [activeInfra, setActiveInfra] = useState<string>(getInitialTab);
   const current = infrastructureItems.find((i) => i.key === activeInfra) || infrastructureItems[0];
   const currentIdx = infrastructureItems.findIndex((i) => i.key === activeInfra);
-  const tabsRef = useRef<HTMLDivElement>(null);
+  const theme = TAB_THEMES[current.key] || TAB_THEMES.sports;
+  const currentGallery = galleryImages[current.key] || [];
 
   useEffect(() => {
-    const hash = window.location.hash;
-    const search = new URLSearchParams(window.location.search);
-    if (hash === "#tab-2" || search.get("tab") === "sports" || hash === "#sports") {
+    const hash = location.hash.replace("#", "");
+    const search = new URLSearchParams(location.search);
+    const tabParam = search.get("tab");
+    if (hash === "tab-2" || tabParam === "sports" || hash === "sports") {
       setActiveInfra("sports");
+    } else if (tabParam && infrastructureItems.some((i) => i.key === tabParam)) {
+      setActiveInfra(tabParam);
+    } else if (hash && infrastructureItems.some((i) => i.key === hash)) {
+      setActiveInfra(hash);
     }
   }, [location]);
 
-  useEffect(() => {
-    const el = tabsRef.current?.querySelector<HTMLButtonElement>(
-      `[data-key="${activeInfra}"]`
-    );
-    el?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-  }, [activeInfra]);
-
-  const go = (dir: -1 | 1) => {
-    const next = currentIdx + dir;
-    if (next >= 0 && next < infrastructureItems.length) {
-      setActiveInfra(infrastructureItems[next].key);
+  const handleNav = (key: string) => {
+    setActiveInfra(key);
+    navigate({ hash: key }, { replace: false });
+    const bar = document.getElementById("facility-tabs-bar");
+    if (bar) {
+      const topOffset = bar.getBoundingClientRect().top + window.pageYOffset - 100;
+      window.scrollTo({ top: Math.max(0, topOffset), behavior: "smooth" });
     }
   };
 
-  const currentGallery = galleryImages[current.key] || [];
+  const go = (dir: -1 | 1) => {
+    const next = (currentIdx + dir + infrastructureItems.length) % infrastructureItems.length;
+    handleNav(infrastructureItems[next].key);
+  };
+
+  const prevIdx = (currentIdx - 1 + infrastructureItems.length) % infrastructureItems.length;
+  const nextIdx = (currentIdx + 1) % infrastructureItems.length;
+  const prevItem = infrastructureItems[prevIdx];
+  const nextItem = infrastructureItems[nextIdx];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fdfbf7] via-white to-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#fdfbf7] via-white to-white font-sans [font-family:var(--font-body)]">
       <Header />
       <SEO
         title="MITS Campus Infrastructure – Labs, Library, Sports & Facilities"
@@ -1167,399 +1414,279 @@ const Infrastructure = () => {
         canonical="/infrastructure"
       />
       <main>
-
         {/* ══════════════════════════════════════════════════════
-            HERO  — matching About page design system
+            HERO — matching International Relations executive style
            ══════════════════════════════════════════════════════ */}
-        <section
-          className="relative pt-32 md:pt-44 pb-24 overflow-hidden bg-[#0f2a44]"
-          style={{
-            backgroundImage: `url("${BASE}Hero-Section/image-5.jpg")`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/15 bg-gradient-to-b from-black/10 via-black/5 to-black/20" />
-          <div className="relative z-10 container mx-auto px-4 text-center">
-            <p className="text-[#ffb300] font-bold tracking-[0.2em] uppercase text-sm sm:text-sm mb-4">
-              Campus Life
-            </p>
-            <h1
-              className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              Campus <span className="text-[#ffd15c]">Infrastructure</span>
-            </h1>
-            <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto mt-4 leading-relaxed">
-              World-class facilities designed for academic excellence and holistic development.
-            </p>
-          </div>
+        <section className="relative min-h-[440px] md:min-h-[500px] overflow-hidden bg-gradient-to-br from-[#0f2a44] via-[#143557] to-[#0a1f33] text-white pt-28 md:pt-36 pb-20 md:pb-24 flex items-center font-sans">
+          {/* Background image overlay */}
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-overlay"
+            style={{ backgroundImage: `url("${BASE}Hero-Section/image-5.jpg")` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0f2a44]/95 via-[#0f2a44]/80 to-[#0a1f33]/95" />
+          <div
+            className="absolute inset-0 opacity-15"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 20% 20%, #caa74d 0%, transparent 40%), radial-gradient(circle at 80% 80%, #b30000 0%, transparent 50%)",
+            }}
+          />
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22><path d=%22M0 0h60v60H0z%22 fill=%22none%22/><path d=%22M30 0v60M0 30h60%22 stroke=%22%23ffffff%22 stroke-opacity=%220.04%22/></svg>')]" />
+          <div className="absolute -right-32 -bottom-40 h-[32rem] w-[32rem] rounded-full border border-white/10 bg-white/5" />
 
-          <div className="absolute bottom-4 left-6 z-10">
-            <nav aria-label="Breadcrumb">
-              <ol className="flex items-center gap-1.5 text-sm text-white/90">
-                <li>
-                  <Link to="/" className="text-white/70 hover:text-white transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li className="text-white/50">›</li>
-                <li className="text-[#ffd15c] font-semibold">Infrastructure</li>
-              </ol>
+          <div className={cn(WIDE, "relative z-10")}>
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs md:text-sm text-white/70 mb-5 font-sans">
+              <Link to="/" className="hover:text-[#caa74d] transition-colors inline-flex items-center gap-1.5">
+                <Home className="w-3.5 h-3.5" />Home
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-white/40" />
+              <span className="text-white/60">Campus</span>
+              <ChevronRight className="w-3.5 h-3.5 text-white/40" />
+              <span className="text-[#caa74d] font-semibold">{current.label}</span>
             </nav>
+
+            <div className="max-w-4xl">
+              <p className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#caa74d]/15 border border-[#caa74d]/30 text-[#caa74d] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-4 font-sans">
+                <Sparkles className="w-3.5 h-3.5" /> Campus Excellence &amp; Facilities
+              </p>
+              <motion.h1
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="font-sans text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight text-white tracking-tight [font-family:var(--font-body)]"
+              >
+                Campus <span className="text-[#ffd15c]">Infrastructure</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.12 }}
+                className="font-sans text-sm md:text-base text-white/80 mt-4 max-w-2xl leading-relaxed"
+              >
+                Sprawled across 26.17+ acres of lush green campus, offering state-of-the-art academic laboratories, high-speed 2 Gbps network infrastructure, central library, and comprehensive athletic facilities.
+              </motion.p>
+            </div>
           </div>
         </section>
 
         {/* ══════════════════════════════════════════════════════
-            LIVE STATS STRIP
+            GLASS STAT STRIP — floating on the seam between hero & page
            ══════════════════════════════════════════════════════ */}
-        <div className="border-y" style={{ background: DARK_NAVY, borderColor: "rgba(202,167,77,0.2)" }}>
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x"
-              style={{ borderColor: "rgba(202,167,77,0.15)" }}>
-              {[
-                { label: "Acre Campus",  value: "26.17+" },
-                { label: "Buses",        value: "40+"    },
-                { label: "Computers",    value: "2,095+" },
-                { label: "Internet Speed", value: "2 Gbps" },
-              ].map((s, i) => (
-                <div
-                  key={s.label}
-                  className={cx(
-                    "py-5 px-4 text-center",
-                    i > 0 ? "border-t md:border-t-0" : "",
-                    i < 3 ? "md:border-r" : ""
-                  )}
-                >
-                  <p className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-none text-white">
-                    {s.value}
-                  </p>
-                  <p className="text-[10px] md:text-sm mt-2 font-medium uppercase tracking-wider"
-                    style={{ color: GOLD }}>
-                    {s.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+        <div className={cn(WIDE, "-mt-10 md:-mt-14 relative z-20 font-sans")}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 bg-white/75 backdrop-blur-xl rounded-2xl md:rounded-3xl shadow-2xl border border-white/70 p-4 md:p-6 divide-x-0 md:divide-x divide-slate-100">
+            {heroStats.map((s) => (
+              <AnimatedStat key={s.label} value={s.value} label={s.label} />
+            ))}
           </div>
         </div>
 
         {/* ══════════════════════════════════════════════════════
-            MAIN FACILITIES — sidebar + detail + highlights
+            STICKY HORIZONTAL FACILITIES TAB BAR (Exact IR style)
            ══════════════════════════════════════════════════════ */}
-        <section className="py-10 md:py-14">
-          <div className="container mx-auto px-4">
-
-            {/* ── Mobile tab strip ── */}
-            <div className="lg:hidden mb-7 -mx-4 px-4">
-              <div
-                ref={tabsRef}
-                className="flex gap-2 overflow-x-auto pb-1.5 snap-x snap-mandatory scroll-smooth"
-                style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
-              >
-                {infrastructureItems.map((item) => {
-                  const IconComp = item.icon as React.ElementType;
-                  const on = activeInfra === item.key;
-                  return (
-                    <button
-                      key={item.key}
-                      data-key={item.key}
-                      onClick={() => setActiveInfra(item.key)}
-                      className={cx(
-                        "snap-start flex items-center gap-2 px-4 py-2.5 rounded-full text-[11px] font-semibold",
-                        "whitespace-nowrap transition-all duration-200 flex-shrink-0 border",
-                        on
-                          ? "text-white border-transparent shadow-md"
-                          : cx("text-[#0f2a44] border-white/60 bg-white/80")
-                      )}
-                      style={on ? { background: DARK_NAVY } : undefined}
-                    >
-                      <IconComp className="w-3.5 h-3.5" />
-                      {item.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
-
-              {/* ══════════════════════════════════════════════════════
-                  LEFT SIDEBAR  — sticky
-                  navy bg · gold left-bar on active
-               ══════════════════════════════════════════════════════ */}
-              <aside className="hidden lg:block lg:w-[270px] flex-shrink-0">
-                <div
-                  className="sticky top-24 rounded-xl overflow-hidden shadow-sm"
-                  style={{ background: DARK_NAVY, border: `1px solid rgba(202,167,77,0.2)` }}
+        <div id="facility-tabs-bar" className={cn(WIDE, "mt-8 md:mt-12 font-sans")}>
+          <div
+            className="sticky top-16 md:top-[100px] xl:top-[116px] z-30 flex items-center overflow-x-auto md:flex-wrap md:justify-center gap-2 md:gap-2.5 p-2 md:p-2.5 rounded-2xl bg-white/75 backdrop-blur-xl border border-white/80 shadow-xl scrollbar-none"
+            style={{ transformStyle: "preserve-3d" }}
+          >
+            {infrastructureItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeInfra === item.key;
+              const tabTheme = TAB_THEMES[item.key] || TAB_THEMES.sports;
+              return (
+                <motion.button
+                  key={item.key}
+                  onClick={() => handleNav(item.key)}
+                  whileHover={isActive ? {} : { y: -2 }}
+                  whileTap={{ scale: 0.96 }}
+                  className={cn(
+                    "relative flex items-center gap-2 px-3.5 md:px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 shrink-0 font-sans",
+                    isActive
+                      ? cn(tabTheme.solid, "text-white", tabTheme.glow, "ring-1 ring-white/40")
+                      : "bg-white/80 text-slate-700 hover:text-[#0f2a44] hover:bg-white border border-slate-200/70 shadow-xs"
+                  )}
                 >
-                  <div className="px-5 py-3 flex items-center gap-2"
-                    style={{ borderBottom: `1px solid rgba(202,167,77,0.15)` }}>
-                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: GOLD }} />
-                    <p className="text-white font-bold text-[11px] uppercase tracking-[0.26em]">
-                      Facilities
-                    </p>
+                  <Icon className={cn("w-4 h-4", isActive ? "text-white" : "text-slate-500")} />
+                  <span>{item.label}</span>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ══════════════════════════════════════════════════════
+            FULL-WIDTH FACILITY CONTENT VIEW
+           ══════════════════════════════════════════════════════ */}
+        <section className={cn(WIDE, "py-8 md:py-12 font-sans")}>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current.key}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -14 }}
+              transition={{ duration: 0.28 }}
+              className="space-y-8"
+            >
+              {/* ── FACILITY HEADER BANNER CARD ── */}
+              <div
+                className={cn(
+                  "p-6 md:p-8 rounded-2xl md:rounded-3xl border bg-white shadow-sm transition-all duration-300 relative overflow-hidden font-sans",
+                  theme.border
+                )}
+              >
+                {/* Subtle accent bar at the top */}
+                <div className={cn("absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r", theme.gradient)} />
+
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+                  <div className="flex items-start gap-4">
+                    <div
+                      className={cn(
+                        "w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 text-white shadow-md",
+                        theme.solid
+                      )}
+                    >
+                      {(() => {
+                        const IconComp = current.icon;
+                        return <IconComp className="w-7 h-7" />;
+                      })()}
+                    </div>
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                        <span className={cn("text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full font-sans", theme.badge)}>
+                          Facility {String(currentIdx + 1).padStart(2, "0")} / {String(infrastructureItems.length).padStart(2, "0")}
+                        </span>
+                        <span className="text-[11px] font-semibold text-slate-400 font-sans">
+                          Campus Asset &amp; Student Service
+                        </span>
+                      </div>
+                      <h2
+                        className="font-sans text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight [font-family:var(--font-body)]"
+                      >
+                        {current.title}
+                      </h2>
+                      <p className="text-slate-600 text-sm md:text-base leading-relaxed mt-2.5 max-w-4xl font-sans">
+                        {current.desc}
+                      </p>
+                    </div>
                   </div>
-                  <nav className="py-1.5">
-                    {infrastructureItems.map((item) => {
-                      const SidebarIcon = item.icon as React.ElementType;
-                      const on = activeInfra === item.key;
-                      return (
-                        <button
-                          key={item.key}
-                          onClick={() => setActiveInfra(item.key)}
-                          className={cx(
-                            "w-full flex items-center gap-3 px-5 py-2.5 text-left text-[13px]",
-                            "transition-colors duration-150 group",
-                            on ? "text-white" : "text-white/65 hover:text-white hover:bg-white/[0.07]"
-                          )}
-                        >
-                          <span
-                            className="absolute left-0 top-3 bottom-3 w-[3px] rounded-full transition-all duration-300"
-                            style={{
-                              background: on ? GOLD : "transparent",
-                              opacity: on ? 1 : 0,
-                              boxShadow: on ? `0 0 10px ${GOLD}90` : "none",
-                            }}
-                          />
-                          <SidebarIcon
-                            className="w-4 h-4 flex-shrink-0 relative z-10"
-                            style={{ color: on ? GOLD : "rgba(255,255,255,0.45)" }}
-                          />
-                          <span className="flex-1 relative z-10 font-medium">{item.label}</span>
-                        </button>
-                      );
-                    })}
-                  </nav>
-                </div>
-              </aside>
 
-              {/* ══════════════════════════════════════════════════════
-                  RIGHT CONTENT
-               ══════════════════════════════════════════════════════ */}
-              <div className="flex-1 min-w-0">
-
-                {/* ── FACILITY HEADER ── */}
-                <div className="mb-6 p-6 rounded-xl border shadow-sm transition-all duration-300" style={{ borderColor: BORDER, background: "#fff" }}>
-                  <div className="flex items-center gap-3 mb-3">
-                    {(() => {
-                      const IconComp = current.icon as React.ElementType;
-                      return (
-                        <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: `${GOLD}15` }}>
-                          <IconComp className="w-5.5 h-5.5 flex-shrink-0" style={{ color: MITS_RED }} />
-                        </div>
-                      );
-                    })()}
-                    <h2 className="font-display text-xl md:text-2xl font-bold" style={{ color: DARK_NAVY, fontFamily: "var(--font-display)" }}>
-                      {current.title}
-                    </h2>
-                    <span className="ml-auto text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-50 border border-slate-100" style={{ color: SLATE }}>
-                      {String(currentIdx + 1).padStart(2, "0")} / {String(infrastructureItems.length).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <div className="h-[2px] w-12 mb-4 rounded-full" style={{ background: `linear-gradient(90deg, ${MITS_RED}, ${GOLD})` }} />
-                  <p className="text-[14px] md:text-[15px] leading-relaxed" style={{ color: SLATE }}>
-                    {current.desc}
-                  </p>
-
+                  {/* Quick Action Link for specific facilities */}
                   {(current.key === "library" || current.key === "digital-library") && (
-                    <div className="mt-4 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
-                      <span className="text-sm text-slate-500 font-medium">Explore collections, digital databases, e-journals, and services</span>
+                    <div className="shrink-0 pt-2 lg:pt-0">
                       <Link
                         to="/library"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all shadow-sm hover:shadow-md hover:scale-[1.02]"
-                        style={{ background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})` }}
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white shadow-sm hover:shadow-md hover:scale-[1.02] transition-all bg-[#0f2a44] font-sans"
                       >
-                        View Central Library Page
-                        <ExternalLink className="w-3.5 h-3.5" />
+                        Explore Central Library Page
+                        <ExternalLink className="w-4 h-4" />
                       </Link>
                     </div>
                   )}
 
                   {current.key === "sports" && (
-                    <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
-                      <span className="text-sm font-medium text-slate-500">Facilities, events, sports committees, gymnasium, and fitness initiatives</span>
+                    <div className="shrink-0 pt-2 lg:pt-0">
                       <Link
                         to="/sports-athletics"
-                        className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-[1.02] hover:shadow-md"
-                        style={{ background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})` }}
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white shadow-sm hover:shadow-md hover:scale-[1.02] transition-all bg-emerald-700 font-sans"
                       >
                         Explore Sports &amp; Athletics
-                        <ExternalLink className="h-3.5 w-3.5" />
+                        <ExternalLink className="w-4 h-4" />
                       </Link>
                     </div>
                   )}
                 </div>
+              </div>
 
-                {/* ── PHOTO GALLERY CAROUSEL ── */}
-                <ImageGallery images={currentGallery} sectionTitle={current.title} />
+              {/* ── PHOTO GALLERY CAROUSEL (Widescreen Full Width) ── */}
+              <ImageGallery images={currentGallery} sectionTitle={current.title} />
 
-                {/* ── KEY HIGHLIGHTS ── */}
-                <div
-                  className="rounded-xl overflow-hidden mb-5 shadow-sm"
-                  style={{ background: "#fff", border: `1px solid ${BORDER}` }}
-                >
-                  <div
-                    className="px-6 py-3.5 flex items-center gap-2.5"
-                    style={{
-                      borderBottom: `1px solid ${BORDER}`,
-                      background: `linear-gradient(90deg, rgba(15,42,68,0.03), transparent)`,
-                    }}
-                  >
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path
-                        d="M7 1L8.5 5H9.5L8 7.5L7 12L6 7.5L4.5 5H5.5L7 1Z"
-                        fill={GOLD} stroke={MITS_RED} strokeWidth="0.6"
-                      />
-                    </svg>
-                    <span
-                      className="font-bold text-[15px]"
-                      style={{ color: DARK_NAVY, fontFamily: "var(--font-display)" }}
-                    >
-                      Key Highlights
-                    </span>
-                    <span
-                      className="ml-auto text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded-full"
-                      style={{
-                        background: `linear-gradient(135deg, ${DARK_NAVY}, ${MITS_RED})`,
-                      }}
-                    >
-                      {current.points.length} Points
-                    </span>
+              {/* ── KEY HIGHLIGHTS (Responsive 3-Column Grid) ── */}
+              <div className="rounded-2xl md:rounded-3xl border border-slate-200/80 bg-white shadow-sm overflow-hidden font-sans">
+                <div className="px-6 md:px-8 py-4 md:py-5 border-b border-slate-100 flex flex-wrap items-center justify-between gap-3 bg-slate-50/60">
+                  <div className="flex items-center gap-2.5">
+                    <div className={cn("w-7 h-7 rounded-lg flex items-center justify-center text-white", theme.solid)}>
+                      <Sparkles className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h3 className="font-sans font-bold text-base md:text-lg text-slate-900 [font-family:var(--font-body)]">
+                        Key Highlights &amp; Capabilities
+                      </h3>
+                      <p className="text-xs text-slate-500 font-sans">Core features, amenities, and operational metrics</p>
+                    </div>
                   </div>
+                  <span className={cn("text-xs font-bold px-3 py-1 rounded-full font-sans", theme.badge)}>
+                    {current.points.length} Highlights
+                  </span>
+                </div>
 
-                  <div className="p-5 md:p-6 grid sm:grid-cols-2 gap-2.5 md:gap-3">
-                    {current.points.map((text, i) => (
-                      <div
-                        key={i}
-                        className="flex items-start gap-3 px-5 py-3.5 rounded-xl border transition-all duration-200 group/card cursor-default"
-                        style={{ borderColor: BORDER, background: "#fff" }}
-                        onMouseEnter={(e) => {
-                          const el = e.currentTarget;
-                          el.style.borderColor = GOLD;
-                          el.style.background = `${GOLD}0c`;
-                        }}
-                        onMouseLeave={(e) => {
-                          const el = e.currentTarget;
-                          el.style.borderColor = BORDER;
-                          el.style.background = "#fff";
-                        }}
+                <div className="p-6 md:p-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5 md:gap-4">
+                  {current.points.map((text, i) => (
+                    <div
+                      key={i}
+                      className="flex items-start gap-3.5 p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-slate-300 hover:shadow-sm transition-all duration-200 group font-sans"
+                    >
+                      <span
+                        className={cn(
+                          "shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-extrabold text-white mt-0.5 shadow-xs font-sans",
+                          theme.solid
+                        )}
                       >
-                        <span
-                          className="flex-shrink-0 w-6 h-6 rounded-md flex items-center justify-center text-[10px] font-extrabold text-white mt-0.5"
-                          style={{
-                            background: `linear-gradient(135deg, ${DARK_NAVY} 0%, ${MITS_RED} 100%)`,
-                          }}
-                        >
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <p className="text-[13px] leading-relaxed flex-1" style={{ color: SLATE }}>
-                          {text}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <p className="text-xs md:text-sm text-slate-700 font-medium leading-relaxed group-hover:text-slate-900 font-sans">
+                        {text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* ── TRANSPORT SPECIALIZED DEEP-DIVE ── */}
+              {current.key === "transport" && <TransportInformation />}
+
+              {/* ── WI-FI & IT INFRASTRUCTURE SPECIALIZED DEEP-DIVE ── */}
+              {(current.key === "wifi" || current.key === "computer") && <WifiInfrastructureInformation />}
+
+              {/* ── BOTTOM SEQUENTIAL NAVIGATOR ── */}
+              <div className="pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-4 font-sans">
+                <button
+                  onClick={() => go(-1)}
+                  className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 text-xs sm:text-sm font-bold shadow-xs hover:shadow transition-all font-sans"
+                >
+                  <ChevronLeft className="w-4 h-4 text-slate-500" />
+                  <span className="text-slate-500 hidden sm:inline">Previous:</span>
+                  <span>{prevItem.label}</span>
+                </button>
+
+                {/* Dots indicator */}
+                <div className="flex items-center gap-1.5 py-1">
+                  {infrastructureItems.map((item, i) => {
+                    const on = i === currentIdx;
+                    const itemTheme = TAB_THEMES[item.key] || TAB_THEMES.sports;
+                    return (
+                      <button
+                        key={item.key}
+                        onClick={() => handleNav(item.key)}
+                        title={item.label}
+                        className={cn(
+                          "h-2 rounded-full transition-all duration-300 cursor-pointer",
+                          on ? cn("w-6", itemTheme.solid) : "w-2 bg-slate-200 hover:bg-slate-300"
+                        )}
+                      />
+                    );
+                  })}
                 </div>
 
-                {/* ── DEPARTMENT OF PHYSICAL EDUCATION & SPORTS (13 SUBSECTIONS & 2026-27 EVENTS) ── */}
-                {current.key === "transport" && <TransportInformation />}
-
-                {/* ── WI-FI & IT INFRASTRUCTURE DETAILED SPECIFICATIONS ── */}
-                {(current.key === "wifi" || current.key === "computer") && <WifiInfrastructureInformation />}
-
-                {/* ── BOTTOM NAV: Prev · Dots · Next ── */}
-                <div className="flex items-center justify-between gap-3 pt-1">
-                  <button
-                    onClick={() => go(-1)}
-                    disabled={currentIdx === 0}
-                    className={cx(
-                      "px-5 py-2.5 flex items-center gap-2 rounded-full text-[13px] font-semibold",
-                      "transition-all duration-200 cursor-pointer select-none disabled:cursor-not-allowed"
-                    )}
-                    style={{
-                      border: `1px solid ${BORDER}`,
-                      color: DARK_NAVY,
-                      background: "#fff",
-                      opacity: currentIdx === 0 ? 0.35 : 1,
-                    }}
-                    onMouseEnter={(e) => {
-                      if (currentIdx === 0) return;
-                      const el = e.currentTarget;
-                      el.style.background = DARK_NAVY;
-                      el.style.color = "#fff";
-                      el.style.borderColor = DARK_NAVY;
-                      el.style.boxShadow = `0 6px 18px ${DARK_NAVY}20`;
-                    }}
-                    onMouseLeave={(e) => {
-                      const el = e.currentTarget;
-                      el.style.background = "#fff";
-                      el.style.color = DARK_NAVY;
-                      el.style.borderColor = BORDER;
-                      el.style.boxShadow = "none";
-                    }}
-                  >
-                    <ChevronLeft className="w-4 h-4" />
-                    <span className="hidden sm:inline">Previous</span>
-                  </button>
-
-                  <div className="flex gap-1.5 items-center py-2">
-                    {infrastructureItems.map((_, i) => {
-                      const on = i === currentIdx;
-                      return (
-                        <button
-                          key={i}
-                          onClick={() => setActiveInfra(infrastructureItems[i].key)}
-                          aria-label={infrastructureItems[i].label}
-                          className="rounded-full transition-all duration-200 cursor-pointer"
-                          style={{
-                            width: on ? 22 : 7,
-                            height: 7,
-                            borderRadius: 99,
-                            background: on
-                              ? `linear-gradient(90deg, ${DARK_NAVY} 0%, ${MITS_RED} 60%, ${GOLD} 100%)`
-                              : BORDER,
-                            boxShadow: on ? `0 2px 8px ${MITS_RED}35` : "none",
-                          }}
-                        />
-                      );
-                    })}
-                  </div>
-
-                  <button
-                    onClick={() => go(1)}
-                    disabled={currentIdx === infrastructureItems.length - 1}
-                    className={cx(
-                      "px-5 py-2.5 flex items-center gap-2 rounded-full text-[13px] font-semibold",
-                      "transition-all duration-200 cursor-pointer select-none disabled:cursor-not-allowed"
-                    )}
-                    style={{
-                      border: `1px solid ${BORDER}`,
-                      color: DARK_NAVY,
-                      background: "#fff",
-                      opacity: currentIdx === infrastructureItems.length - 1 ? 0.35 : 1,
-                    }}
-                    onMouseEnter={(e) => {
-                      if (currentIdx === infrastructureItems.length - 1) return;
-                      const el = e.currentTarget;
-                      el.style.background = DARK_NAVY;
-                      el.style.color = "#fff";
-                      el.style.borderColor = DARK_NAVY;
-                    }}
-                    onMouseLeave={(e) => {
-                      const el = e.currentTarget;
-                      el.style.background = "#fff";
-                      el.style.color = DARK_NAVY;
-                      el.style.borderColor = BORDER;
-                    }}
-                  >
-                    <span className="hidden sm:inline">Next</span>
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
-
-              </div>{/* /flex-1 */}
-            </div>{/* /flex-row */}
-          </div>
+                <button
+                  onClick={() => go(1)}
+                  className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 text-xs sm:text-sm font-bold shadow-xs hover:shadow transition-all font-sans"
+                >
+                  <span className="text-slate-500 hidden sm:inline">Next:</span>
+                  <span>{nextItem.label}</span>
+                  <ChevronRight className="w-4 h-4 text-slate-500" />
+                </button>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </section>
       </main>
       <Footer />
