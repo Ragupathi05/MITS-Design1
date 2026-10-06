@@ -1344,57 +1344,31 @@ export const cellsDetailData: Record<string, CellDetail> = {
     ]
   },
   "wec": {
-    "name": "Women Empowerment Cell (WEC)",
+    "name": "Women Empowerment Cell",
     "aboutText": [
-      "The Women Empowerment Cell (WEC) at Madanapalle Institute of Technology & Science is dedicated to creating an empowering, egalitarian, and secure environment that enables women students and female faculty to realize their potential in leadership, innovation, and academics.",
-      "The Cell conducts proactive workshops on women's legal rights, self-defense, health and hygiene, entrepreneurship, and leadership development, celebrating achievements and ensuring zero-tolerance for gender discrimination."
+      "MITS - Deemed to be University has constituted Women Empowerment Cell (WEC) to empower and safeguard the rights of female students and staff members of the college.",
+      "With a view to taking up women's issues and problems, the cell aims at creating awareness of their rights and duties. It also provides a platform for women to share their experiences and views regarding their status in the society and to suggest ways to improve and empower themselves.",
+      "Aiming at intellectual and social upliftment of the female students, the cell stands for facilitating women's empowerment through guest lectures, seminars, awareness programmes and other welfare activities."
     ],
     "members": [
-      {
-        "sno": "1",
-        "name": "Dr. C. Yuvaraj",
-        "designation": "Vice Chancellor (I/c)",
-        "position": "Patron",
-        "email": ""
-      },
-      {
-        "sno": "2",
-        "name": "Dr. P. Athahar",
-        "designation": "Senior Manager – Student Affairs",
-        "position": "Coordinator",
-        "email": ""
-      },
-      {
-        "sno": "3",
-        "name": "Dr. M. Parvathi",
-        "designation": "Assistant Professor, Dept. of English",
-        "position": "Member",
-        "email": ""
-      },
-      {
-        "sno": "4",
-        "name": "Mrs. K. Revathi",
-        "designation": "Assistant Professor, Dept. of EEE",
-        "position": "Member",
-        "email": ""
-      }
+      { "sno": "1", "name": "Dr. S. Shanmuga Priya", "designation": "WEC Coordinator", "position": "Chair Person", "email": "" },
+      { "sno": "2", "name": "Mrs. M. Sangeetha", "designation": "Asst Professor, CSE", "position": "Member", "email": "" },
+      { "sno": "3", "name": "Mrs. Anitha K", "designation": "Asst Professor, Civil", "position": "Member", "email": "" }
     ],
     "documents": [
-      {
-        "title": "WEC Committee Office Order 2025-26",
-        "href": "https://mits.ac.in/assets/pdf/assoc/WEC Committee Office Order 2025.pdf"
-      },
-      {
-        "title": "POSH Act Compliance & Women Rights Directive",
-        "href": "https://mits.ac.in/assets/pdf/assoc/WEC Committee Office Order 2025.pdf"
-      }
+      { "title": "Office Order - Women helpline 24X7 - 15.08.2025", "href": "https://mits.ac.in/assets/pdf/assoc/Women Helpline-16-8-2025.pdf" },
+      { "title": "Office Order - Women helpline 24X7 - 02.09.2024", "href": "https://mits.ac.in/public/uploads/wec/Women helpline 24-7 -Office order- Sep 2024.pdf" },
+      { "title": "Office Order - Women Empowerment Cell - 05.11.2025", "href": "https://mits.ac.in/public/uploads/wec/Women Empowerment Cell-5-11-2025.pdf" },
+      { "title": "Office Order - Women Empowerment Cell - 02.09.2024", "href": "https://mits.ac.in/public/uploads/wec/Women Empowerment Committee-sep 2024.pdf" },
+      { "title": "Office Order - Women Empowerment Cell - 22.07.2024", "href": "https://mits.ac.in/public/uploads/wec/Office order - Women  Empowerment Cell- July 2024.pdf" },
+      { "title": "Office Order - Women Empowerment Cell - 19.01.2024", "href": "https://mits.ac.in/public/uploads/wec/WEC-Members office order.pdf" }
     ],
     "contacts": [
       {
-        "name": "Dr. P. Athahar",
-        "designation": "Senior Manager – Student Affairs & Coordinator - WEC",
-        "address": "Madanapalle Institute of Technology & Science, Madanapalle - 517325",
-        "phone": "+91-8571-280255",
+        "name": "Dr. S. Shanmuga Priya",
+        "designation": "WEC Coordinator - Chair Person",
+        "address": "Madanapalle Institute of Technology & Science, Deemed to be University, Madanapalle-Kadiri Road, Kurabalakota Mandal, Madanapalle-517325, Andhra Pradesh, India",
+        "phone": "+91-9100973251; 8571-280255; 280706",
         "email": "wec@mits.ac.in"
       }
     ],
@@ -1402,30 +1376,49 @@ export const cellsDetailData: Record<string, CellDetail> = {
     "url": "https://mits.ac.in/wec",
     "sections": [
       {
-        "title": "Objectives & Activities",
+        "title": "Vision",
         "paragraphs": [
-          "Creating gender sensitization and awareness on POSH Act, women rights, and equal opportunity laws.",
-          "Organizing professional skill development sessions tailored for female engineers and researchers.",
-          "Fostering a mentorship network connecting female students with successful women industry leaders and alumni."
+          "To promote general well-being of female students, teaching and non-teaching women staff of the College and to provide and maintain a dignified, congenial working environment for women and enable them to explore their imminent potential in all aspects."
+        ]
+      },
+      {
+        "title": "Mission",
+        "paragraphs": [
+          "To train women to acquire wide range of skills and knowledge and to develop and increase their social, economic and intellectual capacities for amity, security and prosperity of mankind."
+        ]
+      },
+      {
+        "title": "Objectives",
+        "paragraphs": [
+          "Identification of strong leadership and change makers and building their capacity.",
+          "To promote a culture of respect and equality for female gender.",
+          "The provision of opportunities and programs for female gender to be financially, mentally and emotionally empowered so as to promote their growth as individuals in their own right.",
+          "To make them aware about the guidelines of Supreme Court and to ensure that sexual harassment is treated as an unacceptable social behavior within the institution and the society.",
+          "To conduct seminar, workshop to impart knowledge of opportunities and tools available and train the women.",
+          "To inculcate entrepreneurial attitude among young girls, at the earliest so that they can be job givers rather than job takers.",
+          "To make women understand that Empowered and educated women are less likely to fall prey to sexual abuse, workplace harassment, domestic abuse and many more.",
+          "To show that the Empowered women can have happier families.",
+          "To imbibe the idea that child marriage, dowry killings, discrimination, female feticide, etc., and other harmful acts can be stopped by women empowerment."
         ]
       }
     ],
     "events": [
-      {
-        "title": "International Women’s Day Celebrations & Inspiring Women Leadership Summit",
-        "href": "https://mits.ac.in/assets/pdf/assoc/WEC Committee Office Order 2025.pdf",
-        "date": "08-03-2025"
-      },
-      {
-        "title": "Self-Defense & Personal Safety Practical Masterclass for Female Students",
-        "href": "https://mits.ac.in/assets/pdf/assoc/WEC Committee Office Order 2025.pdf",
-        "date": "12-10-2025"
-      },
-      {
-        "title": "Women in STEM: Careers in Deep Tech, AI, and Entrepreneurship",
-        "href": "https://mits.ac.in/assets/pdf/assoc/WEC Committee Office Order 2025.pdf",
-        "date": "25-01-2025"
-      }
+      { "title": "An International Women's Day Celebration - 2026 was organized by Women Empowerment Cell on 07th March 2026.", "href": "https://mits.ac.in/assets/pdf/assoc/International Women's Day Celebration-2026.pdf" },
+      { "title": "An awareness programme Women Health and Self-Hygiene was organized by Women Empowerment Cell on 04th December 2025.", "href": "https://mits.ac.in/assets/pdf/assoc/Women Health and Self-Hygiene-2025.pdf" },
+      { "title": "An Awareness Program on Building Gender Sensitivity: Towards an inclusive Campus was organized by WEC in Collaboration with GRC and ICC on 27th & 28th October 2025.", "href": "https://mits.ac.in/assets/pdf/aids/Building Gender Sensitivity Towards an inclusive Campus.pdf" },
+      { "title": "An event on Nurturing Minds, Empowering Futures was organized by Dept. of CSE-AI in association with WEC and IEEE-RAS Student Chapter on 06th August 2025.", "href": "https://mits.ac.in/assets/pdf/aids/Nurturing Minds, Empowering Futures.pdf" },
+      { "title": "An Awareness Program on Wired For Success: Empowering Girls in ICT was organized by WEC in association with Dept. of ECE on 24th April 2025.", "href": "https://mits.ac.in/assets/pdf/assoc/Wired For Success Empowering Girls in ICT.pdf" },
+      { "title": "An International Women's Day Celebration - 2025 was organized by Women Empowerment Cell on 07th March 2025.", "href": "https://mits.ac.in/assets/pdf/assoc/International Women's Day Celebration-2025.pdf" },
+      { "title": "An Awareness program on Menstrual Hygiene Management was organised by Women Empowerment Cell on 12th December 2024.", "href": "https://mits.ac.in/assets/pdf/aids/Menstrual Hygiene Management.pdf" },
+      { "title": "An Awareness program on Health and Hygiene for Women was organised by Women Empowerment Cell on 22nd October 2024.", "href": "https://mits.ac.in/assets/pdf/aids/Health and Hygiene for Women.pdf" },
+      { "title": "An Expert talk on Fortify, Hygiene, Etiquette, and Safety Triad was organized by Dept. of CSE-AI in association with WEC on 20th August 2024.", "href": "https://mits.ac.in/assets/pdf/aids/Fortify Hygiene Etiquette and Safety Triad.pdf" },
+      { "title": "International Women's Day was organized by ICC of MITS on 7th March, 2024.", "href": "https://mits.ac.in/assets/pdf/assoc/International Womens Day-2024.pdf" },
+      { "title": "An Awareness Programme on She Leads: Empowering Women for a Better Tomorrow was organized by WEC of MITS on 16th November 2023.", "href": "https://mits.ac.in/assets/pdf/assoc/SHE LEADS EMPOWERING WOMEN FOR A BETTER TOMORROW.pdf" },
+      { "title": "International Women's Day was organized by ICC of MITS on 8th March, 2023.", "href": "https://mits.ac.in/assets/pdf/assoc/International Womens Day 2023.pdf" },
+      { "title": "An Awareness Programme on Step Forwarding and Championing - Women's Rights and Opportunities was organized by WEC of MITS on 24th February 2023.", "href": "https://mits.ac.in/assets/pdf/assoc/STEP FORWARDING AND CHAMPIONING.pdf" },
+      { "title": "An awareness session on DISHA App was organized by Women Empowerment Cell on 2-08-2021.", "href": "https://mits.ac.in/assets/pdf/assoc/DISHA-App-02-08-2021.pdf" },
+      { "title": "An awareness session on DISHA App was organized by Women Empowerment Cell on 12-07-2021.", "href": "https://mits.ac.in/assets/pdf/assoc/DISHA App-min.pdf" },
+      { "title": "National Girl Child Day was organized by ICC on 24th January 2020.", "href": "https://mits.ac.in/assets/pdf/assoc/National Girl Child Day 20 by ICC _ WEC.pdf" }
     ]
   },
   "sedg": {
