@@ -16,6 +16,7 @@ import MinorityView from "@/components/cells/MinorityView";
 import ScStView from "@/components/cells/ScStView";
 import WecView from "@/components/cells/WecView";
 import SedgView from "@/components/cells/SedgView";
+import EofcView from "@/components/cells/EofcView";
 
 type TabId = "home" | "vidya-laxmi" | "scholarships" | "documents" | "events" | "gallery" | "financial-aid" | "contact";
 
@@ -108,6 +109,10 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
 
   if (targetId === "sedg") {
     return <SedgView />;
+  }
+
+  if (targetId === "eof") {
+    return <EofcView />;
   }
 
   if (!cell) {
