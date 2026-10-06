@@ -262,7 +262,7 @@ className="w-full h-full object-cover"
               className="w-full h-full"
               style={{
                 objectFit: "cover",
-                objectPosition: s.id === "identity" ? "center top" : s.id === "admissions" ? "center 30%" : s.id === "placements" ? "center 20%" : "center center",
+                objectPosition: s.id === "identity" ? "center 18%" : s.id === "admissions" ? "center 30%" : s.id === "placements" ? "center 20%" : "center center",
               }}
               initial={false}
               animate={{ scale: (s.id === "admissions" || s.id === "placements" || s.id === "identity") ? 1 : (i === current ? 1.04 : 1) }}
