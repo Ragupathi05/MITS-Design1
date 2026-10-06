@@ -137,6 +137,82 @@ export interface DepartmentData {
   studentProjects: StudentProject[];
   subjects: Subject[];
   documents: { title: string; url: string }[];
+  underGraduate?: UnderGraduateData;
+  more?: DepartmentMoreData;
+  topTabs?: DepartmentTopTab[];
+}
+
+export interface SyllabusRow {
+  sno: string;
+  name: string;
+  type: string;
+  credits: string;
+}
+
+export interface SyllabusTable {
+  title: string;
+  headers: string[];
+  rows: SyllabusRow[];
+}
+
+export interface UnderGraduateTimeTableItem {
+  title: string;
+  pdfUrl: string;
+  academicYear?: string;
+  category?: string;
+}
+
+export interface UnderGraduateTimeTableGroup {
+  groupTitle: string;
+  items: UnderGraduateTimeTableItem[];
+}
+
+export interface UnderGraduateData {
+  programTitle: string;
+  programOverview: string;
+  syllabusTables?: SyllabusTable[];
+  subTabs?: { id: string; label: string }[];
+  timeTables?: UnderGraduateTimeTableGroup[];
+}
+
+export interface DepartmentTopTabDoc {
+  title: string;
+  url: string;
+}
+
+export interface DepartmentTopTab {
+  id: string;
+  label: string;
+  title?: string;
+  documents?: DepartmentTopTabDoc[];
+}
+
+export interface DepartmentMoreItem {
+  title: string;
+  pdfUrl: string;
+  academicYear?: string;
+  category?: string;
+}
+
+export interface DepartmentMoreGroup {
+  groupTitle: string;
+  items: DepartmentMoreItem[];
+}
+
+export interface DepartmentMoreMinor {
+  title: string;
+  tagline: string;
+  overview: string;
+  highlights: { title: string; points: string[] }[];
+  pdfUrl?: string;
+  pdfLabel?: string;
+}
+
+export interface DepartmentMoreData {
+  subTabs: { id: string; label: string; externalUrl?: string; directPdf?: boolean }[];
+  mentorMentee: DepartmentMoreGroup[];
+  minor?: DepartmentMoreMinor;
+  interdisciplinaryProjects?: DepartmentMoreGroup[];
 }
 
 // Helper to get dept image
@@ -2484,5 +2560,461 @@ export const getAllDepartmentKeys = () => Object.keys(departmentsData);
 
 // Helper to find department by key
 export const getDepartmentByKey = (key: string): DepartmentData | undefined => departmentsData[key];
+
+export const aimlUnderGraduateData: UnderGraduateData = {
+  programTitle: "Bachelor of Technology (B.Tech) - Computer Science & Engineering (AI & ML)",
+  programOverview:
+    "The Department of Computer Science and Engineering (Artificial Intelligence & Machine Learning) offers a 4-year undergraduate B.Tech program aligned with modern industry standards and emerging technology paradigms. The curriculum combines core computer science fundamentals with specialized topics in Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, and Generative AI. Designed under the autonomous R23 scheme, the course ensures hands-on practical mastery through GPU-enabled lab sessions, industry capstone projects, and research opportunities.",
+  subTabs: [
+    { id: "ug", label: "UG" },
+    { id: "course-syllabus", label: "Course Syllabus" },
+    { id: "timetable", label: "Timetable" }
+  ],
+  timeTables: [
+    {
+      groupTitle: "Academic Year 2024-25 Timetables",
+      items: [
+        {
+          title: "B.Tech II Year II Sem Class Time Table (CSE-AI & ML) 2024-25",
+          pdfUrl: "https://mits.ac.in/assets/pdf/cse/CSE%20AI%20&%20ML%20II%20Year%20II%20Sem%20Class%20TimeTable.pdf",
+          academicYear: "2024-25",
+          category: "Class Time Table"
+        },
+        {
+          title: "B.Tech II Year I Sem Class Time Table (CSE-AI & ML) 2024-25",
+          pdfUrl: "https://mits.ac.in/assets/pdf/cse/CSE%20AI%20&%20ML%20II%20Year%20I%20Sem%20Class%20TimeTable.pdf",
+          academicYear: "2024-25",
+          category: "Class Time Table"
+        },
+        {
+          title: "Individual Faculty Time Tables (CSE-AI & ML) 2024-25",
+          pdfUrl: "https://mits.ac.in/assets/pdf/cse/CSE%20AI%20&%20ML%20Faculty%20Individual%20TimeTable.pdf",
+          academicYear: "2024-25",
+          category: "Faculty Time Table"
+        }
+      ]
+    }
+  ],
+  syllabusTables: [
+    {
+      title: "CSE - (AI & ML) First Year I Semester - R23",
+      headers: ["S.No", "Name of the Subject", "Theory/Lab", "Credits"],
+      rows: [
+        { sno: "1", name: "Linear Algebra and Calculus", type: "Theory", credits: "3" },
+        { sno: "2", name: "Engineering Physics", type: "Theory", credits: "3" },
+        { sno: "3", name: "Basic Electrical and Electronics Engineering", type: "Theory", credits: "3" },
+        { sno: "4", name: "Introduction to Programming", type: "Theory", credits: "3" },
+        { sno: "5", name: "Engineering Graphics", type: "Theory", credits: "3" },
+        { sno: "6", name: "Engineering Physics Laboratory", type: "Lab", credits: "1" },
+        { sno: "7", name: "Electrical and Electronics Engineering Workshop", type: "Lab", credits: "1.5" },
+        { sno: "8", name: "Computer Programming Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "9", name: "IT Workshop", type: "Lab", credits: "1" },
+        { sno: "10", name: "NSS / NCC / Scouts and Guides / Community Service", type: "Activity", credits: "0.5" }
+      ]
+    },
+    {
+      title: "CSE - (AI & ML) First Year II Semester - R23",
+      headers: ["S.No", "Name of the Subject", "Theory/Lab", "Credits"],
+      rows: [
+        { sno: "1", name: "Communicative English", type: "Theory", credits: "2" },
+        { sno: "2", name: "Differential Equations and Vector Calculus", type: "Theory", credits: "3" },
+        { sno: "3", name: "Chemistry", type: "Theory", credits: "3" },
+        { sno: "4", name: "Basic Civil and Mechanical Engineering", type: "Theory", credits: "3" },
+        { sno: "5", name: "Data Structures", type: "Theory", credits: "3" },
+        { sno: "6", name: "Communicative English Laboratory", type: "Lab", credits: "1" },
+        { sno: "7", name: "Chemistry Laboratory", type: "Lab", credits: "1" },
+        { sno: "8", name: "Engineering Workshop", type: "Lab", credits: "1.5" },
+        { sno: "9", name: "Data Structures Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "10", name: "Health and Wellness, Yoga and Sports", type: "Activity", credits: "0.5" }
+      ]
+    },
+    {
+      title: "CSE - (AI & ML) Second Year I Semester - R23",
+      headers: ["S.No", "Name of the Subject", "Theory/Lab", "Credits"],
+      rows: [
+        { sno: "1", name: "Universal Human Values", type: "Theory", credits: "3" },
+        { sno: "2", name: "Economics and Financial Accounting For Engineers", type: "Theory", credits: "2" },
+        { sno: "3", name: "Probability and Statistics for Computer Science", type: "Theory", credits: "3" },
+        { sno: "4", name: "Digital Logic and Computer Organization", type: "Theory", credits: "3" },
+        { sno: "5", name: "Python Programming", type: "Theory", credits: "3" },
+        { sno: "6", name: "Python Programming Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "7", name: "Database Management Systems Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "8", name: "JAVA Programming", type: "Theory", credits: "2" }
+      ]
+    },
+    {
+      title: "CSE - (AI & ML) Second Year II Semester - R23",
+      headers: ["S.No", "Name of the Subject", "Theory/Lab", "Credits"],
+      rows: [
+        { sno: "1", name: "Discrete Mathematical Structures", type: "Theory", credits: "3" },
+        { sno: "2", name: "Innovation and Incubation Courses", type: "Theory", credits: "2" },
+        { sno: "3", name: "Machine Learning", type: "Theory", credits: "3" },
+        { sno: "4", name: "Principles of Artificial Intelligence", type: "Theory", credits: "3" },
+        { sno: "5", name: "Advanced Data Structures and Algorithms Analysis", type: "Theory", credits: "3" },
+        { sno: "6", name: "Artificial Intelligence and Machine Learning Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "7", name: "Advanced Data Structures and Algorithms Analysis Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "8", name: "Full Stack Development - I", type: "Theory", credits: "2" },
+        { sno: "9", name: "Environmental Science", type: "Theory", credits: "-" }
+      ]
+    },
+    {
+      title: "CSE - (Networks) First Year I Semester - R23",
+      headers: ["S.No", "Name of the Subject", "Theory/Lab", "Credits"],
+      rows: [
+        { sno: "1", name: "Linear Algebra and Calculus", type: "Theory", credits: "3" },
+        { sno: "2", name: "Engineering Physics", type: "Theory", credits: "3" },
+        { sno: "3", name: "Basic Electrical and Electronics Engineering", type: "Theory", credits: "3" },
+        { sno: "4", name: "Introduction to Programming", type: "Theory", credits: "3" },
+        { sno: "5", name: "Engineering Graphics", type: "Theory", credits: "3" },
+        { sno: "6", name: "Engineering Physics Laboratory", type: "Lab", credits: "1" },
+        { sno: "7", name: "Electrical and Electronics Engineering Workshop", type: "Lab", credits: "1.5" },
+        { sno: "8", name: "Computer Programming Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "9", name: "IT Workshop", type: "Lab", credits: "1" },
+        { sno: "10", name: "NSS / NCC / Scouts and Guides / Community Service", type: "Activity", credits: "0.5" }
+      ]
+    },
+    {
+      title: "CSE - (Networks) First Year II Semester - R23",
+      headers: ["S.No", "Name of the Subject", "Theory/Lab", "Credits"],
+      rows: [
+        { sno: "1", name: "Communicative English", type: "Theory", credits: "2" },
+        { sno: "2", name: "Differential Equations and Vector Calculus", type: "Theory", credits: "3" },
+        { sno: "3", name: "Chemistry", type: "Theory", credits: "3" },
+        { sno: "4", name: "Basic Civil and Mechanical Engineering", type: "Theory", credits: "3" },
+        { sno: "5", name: "Data Structures", type: "Theory", credits: "3" },
+        { sno: "6", name: "Communicative English Laboratory", type: "Lab", credits: "1" },
+        { sno: "7", name: "Chemistry Laboratory", type: "Lab", credits: "1" },
+        { sno: "8", name: "Engineering Workshop", type: "Lab", credits: "1.5" },
+        { sno: "9", name: "Data Structures Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "10", name: "Health and Wellness, Yoga and Sports", type: "Activity", credits: "0.5" }
+      ]
+    },
+    {
+      title: "CSE - (Networks) Second Year I Semester - R23",
+      headers: ["S.No", "Name of the Subject", "Theory/Lab", "Credits"],
+      rows: [
+        { sno: "1", name: "Universal Human Values", type: "Theory", credits: "3" },
+        { sno: "2", name: "Economics and Financial Accounting For Engineers", type: "Theory", credits: "2" },
+        { sno: "3", name: "Probability and Statistics for Computer Science", type: "Theory", credits: "3" },
+        { sno: "4", name: "Digital Logic and Computer Organization", type: "Theory", credits: "3" },
+        { sno: "5", name: "Object-Oriented Programming Through JAVA", type: "Theory", credits: "3" },
+        { sno: "6", name: "Operating Systems", type: "Lab", credits: "1.5" },
+        { sno: "7", name: "Object-Oriented Programming Through JAVA Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "8", name: "Operating Systems Laboratory", type: "Theory", credits: "2" },
+        { sno: "9", name: "Python Programming", type: "Theory", credits: "2" }
+      ]
+    },
+    {
+      title: "CSE - (Networks) Second Year II Semester - R23",
+      headers: ["S.No", "Name of the Subject", "Theory/Lab", "Credits"],
+      rows: [
+        { sno: "1", name: "Discrete Mathematical Structures", type: "Theory", credits: "3" },
+        { sno: "2", name: "Innovation and Incubation Courses", type: "Theory", credits: "2" },
+        { sno: "3", name: "Data Communications and Computer Networks", type: "Theory", credits: "3" },
+        { sno: "4", name: "Automata Theory and Compiler Design", type: "Theory", credits: "3" },
+        { sno: "5", name: "Advanced Data Structures and Algorithms Analysis", type: "Theory", credits: "3" },
+        { sno: "6", name: "Computer Networks Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "7", name: "Advanced Data Structures and Algorithms Analysis Laboratory", type: "Lab", credits: "1.5" },
+        { sno: "8", name: "Data Science using Python", type: "Theory", credits: "2" },
+        { sno: "9", name: "Environmental Science", type: "Theory", credits: "-" }
+      ]
+    }
+  ]
+};
+
+/**
+ * Returns undergraduate program and syllabus data for any department.
+ */
+export function getDepartmentUnderGraduate(deptKey: string, deptSubjects: Subject[] = []): UnderGraduateData {
+  const dept = departmentsData[deptKey];
+  if (dept && dept.underGraduate) {
+    return dept.underGraduate;
+  }
+  if (deptKey === "aiml" || deptKey === "cse-ai-ml" || deptKey === "ai") {
+    return aimlUnderGraduateData;
+  }
+
+  const semMap = new Map<number, Subject[]>();
+  deptSubjects.forEach(s => {
+    const list = semMap.get(s.semester) || [];
+    list.push(s);
+    semMap.set(s.semester, list);
+  });
+
+  const syllabusTables: SyllabusTable[] = [];
+  const semNumbers = Array.from(semMap.keys()).sort((a, b) => a - b);
+
+  if (semNumbers.length > 0) {
+    semNumbers.forEach(sem => {
+      const subs = semMap.get(sem) || [];
+      syllabusTables.push({
+        title: `Semester ${sem} Curriculum`,
+        headers: ["S.No", "Name of the Subject", "Type", "Credits"],
+        rows: subs.map((sub, idx) => ({
+          sno: String(idx + 1),
+          name: sub.name,
+          type: sub.type.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase()),
+          credits: sub.type === "core" ? "3" : sub.type === "elective" ? "3" : "1.5"
+        }))
+      });
+    });
+  }
+
+  return {
+    programTitle: `Bachelor of Technology (B.Tech) - ${dept?.name || "Program"}`,
+    programOverview:
+      dept?.about ||
+      "The Department offers an outstanding undergraduate program aligned with the evolving needs of the IT industry. The curriculum is designed to be flexible, enabling students to prepare for advanced specializations. A wide range of elective courses is offered, allowing students to plan their academic journey effectively.",
+    syllabusTables: syllabusTables.length > 0 ? syllabusTables : undefined
+  };
+}
+
+export const aimlMoreData: DepartmentMoreData = {
+  subTabs: [
+    { id: "mentor-mentee", label: "Mentor & Mentee" },
+    { id: "minor", label: "Minor" },
+    { id: "interdisciplinary-projects", label: "Interdisciplinary Projects" },
+    {
+      id: "stock-register",
+      label: "Stock Register",
+      externalUrl: "https://mits.ac.in/assets/pdf/stock-registers/Stock_Register_CSE_AIML.pdf",
+      directPdf: true
+    }
+  ],
+  mentorMentee: [
+    {
+      groupTitle: "Mentor & Mentee Allocation",
+      items: [
+        {
+          title: "B.Tech II Year II Semester Mentor-Mentee Allocation (CSE-AI & ML) 2024-25",
+          pdfUrl: "https://mits.ac.in/public/uploads/menteementors/2nd%20Year%202nd%20Sem%20Mentor-Mentee%20Allocation-CSE-AI%20&%20ML-2024-25.pdf",
+          academicYear: "2024-25",
+          category: "CSE - AI & ML"
+        },
+        {
+          title: "B.Tech II Year I Semester Mentor-Mentee Allocation (CSE-AI & ML) 2024-25",
+          pdfUrl: "https://mits.ac.in/public/uploads/menteementors/2nd%20Year%201st%20Sem%20Mentor-Mentee%20Allocation-CSE-AI%20&%20ML-2024-25.pdf",
+          academicYear: "2024-25",
+          category: "CSE - AI & ML"
+        }
+      ]
+    }
+  ],
+  minor: {
+    title: "Minor Degree in AI-ML",
+    tagline: "Additional Specialization Alongside Core B.Tech Degree",
+    overview:
+      "A Minor Degree is an additional specialization pursued alongside your core degree. It allows you to gain expertise in a focused domain without changing your primary field of study. In today’s rapidly evolving digital world, Artificial Intelligence (AI) and Machine Learning (ML) are transforming every industry—from healthcare and finance to transportation and smart cities. Our Minor Degree in AI & ML is designed to equip students with cutting-edge skills, enabling them to stay ahead in the competitive job market.",
+    highlights: [
+      {
+        title: "Key Highlights of Our Program",
+        points: [
+          "Industry-relevant curriculum aligned with current trends",
+          "Hands-on learning with real-time projects",
+          "Exposure to tools like Python, TensorFlow, and data analytics",
+          "Guidance from experienced faculty and industry experts",
+          "Opportunities to work on interdisciplinary applications"
+        ]
+      },
+      {
+        title: "Career Opportunities",
+        points: [
+          "Opens doors to roles like AI Engineer, Data Scientist, ML Developer",
+          "Enhances employability across industries"
+        ]
+      },
+      {
+        title: "Skill Enhancement",
+        points: [
+          "Develops problem-solving and analytical thinking",
+          "Builds strong programming and data handling skills"
+        ]
+      },
+      {
+        title: "Interdisciplinary Learning",
+        points: [
+          "Combine AI & ML with your core branch (CSE, ECE, Mechanical, etc.)",
+          "Apply AI solutions in diverse domains"
+        ]
+      },
+      {
+        title: "Higher Studies & Research",
+        points: [
+          "Strong foundation for pursuing MS, M.Tech, or research in AI fields",
+          "Prepares students for innovation and entrepreneurship"
+        ]
+      },
+      {
+        title: "Competitive Edge",
+        points: [
+          "Stand out in placements and internships",
+          "Adds value to your academic profile"
+        ]
+      },
+      {
+        title: "Who Can Enrol?",
+        points: [
+          "Students from all engineering disciplines",
+          "Those interested in AI, ML, Data Science, and emerging technologies",
+          "Learners eager to build future-ready skills"
+        ]
+      }
+    ],
+    pdfUrl: "https://mits.ac.in/assets/pdf/aids/Minor%20in%20AIML.pdf",
+    pdfLabel: "Minor - 2025-26"
+  },
+  interdisciplinaryProjects: [
+    {
+      groupTitle: "Interdisciplinary Projects",
+      items: [
+        {
+          title: "Interdisciplinary Projects (2024-25)",
+          pdfUrl: "https://mits.ac.in/assets/pdf/aids/Interdisciplinary%20Projects-2024-25.pdf",
+          academicYear: "2024-25",
+          category: "Projects"
+        }
+      ]
+    }
+  ]
+};
+
+/**
+ * Returns customized "More" section data (Mentor & Mentee, Minor, etc.) for any department.
+ */
+export function getDepartmentMore(deptKey: string): DepartmentMoreData {
+  const dept = departmentsData[deptKey];
+  if (dept && dept.more) {
+    return dept.more;
+  }
+  if (deptKey === "aiml" || deptKey === "cse-ai-ml" || deptKey === "ai") {
+    return aimlMoreData;
+  }
+  return {
+    subTabs: [
+      { id: "mentor-mentee", label: "Mentor & Mentee" },
+      { id: "minor", label: "Minor" }
+    ],
+    mentorMentee: [],
+    minor: undefined
+  };
+}
+
+export const aimlTopTabs: DepartmentTopTab[] = [
+  {
+    id: "department",
+    label: "Department"
+  },
+  {
+    id: "bos",
+    label: "BoS",
+    title: "Board Of Studies",
+    documents: [
+      {
+        title: "BoS CSE (AI and ML) DTBU 2026-27",
+        url: "https://mits.ac.in/public/uploads/departments/BoS%20CSE(AI%20and%20ML)%20DTBU%202026-27.pdf"
+      },
+      {
+        title: "BoS CSE (AI and ML) DTBU 2025-26",
+        url: "https://mits.ac.in/public/uploads/departments/MITS_Univ_CSE_AIML_BOS_AY_2025-2026.pdf"
+      },
+      {
+        title: "BoS CSE (AI and ML) 2026-27",
+        url: "https://mits.ac.in/public/uploads/departments/BoS%20CSE(AIML)%202026-27.pdf"
+      },
+      {
+        title: "BoS CSE (AI and ML) 2025-26",
+        url: "https://mits.ac.in/public/uploads/departments/CSE_AIML_BOS_AY_2025-2026.pdf"
+      },
+      {
+        title: "BoS CSE (AI and ML) 2024-25",
+        url: "https://mits.ac.in/public/uploads/departments/CSE_AIML_BOS_AY_2024-2025.pdf"
+      },
+      {
+        title: "BoS CSE (AI and ML) 2023-24",
+        url: "https://mits.ac.in/public/uploads/departments/CSE_AIML_BOS_AY_2023-2024.pdf"
+      },
+      {
+        title: "BoS CSE (Networks) 2026-27",
+        url: "https://mits.ac.in/public/uploads/departments/BoS%20CSE(Networks)%202026-27.pdf"
+      },
+      {
+        title: "BoS CSE (Networks) 2025-26",
+        url: "https://mits.ac.in/public/uploads/departments/BoS%20CSE(Networks)-2025-26.pdf"
+      },
+      {
+        title: "BoS CSE (Networks) 2024-25",
+        url: "https://mits.ac.in/public/uploads/departments/BoS%20CSE(NETWORKS)-2024-25.pdf"
+      },
+      {
+        title: "BoS CSE (Networks) 2023-24",
+        url: "https://mits.ac.in/public/uploads/departments/BoS%20CSE(Networks)-2023-24.pdf"
+      }
+    ]
+  },
+  {
+    id: "iaab",
+    label: "IAAB",
+    title: "Industry Alumni Advisory Board",
+    documents: [
+      {
+        title: "IAAB CSE (AI and ML) DTBU 2026-27",
+        url: "https://mits.ac.in/public/uploads/departments/IAAB%20CSE(AI%20and%20ML)%20DTBU%202026-27.pdf"
+      },
+      {
+        title: "IAAB CSE (AI and ML) 2026-27",
+        url: "https://mits.ac.in/public/uploads/departments/IAAB%20CSE(AIML)%202026-27.pdf"
+      },
+      {
+        title: "IAAB CSE (Networks) 2026-27",
+        url: "https://mits.ac.in/public/uploads/departments/IAAB%20CSE(Networks)%202026-27.pdf"
+      },
+      {
+        title: "IAAB CSE (AI and ML) 2025-26",
+        url: "https://mits.ac.in/public/uploads/departments/CSE(AI%20and%20ML)%20IAAB%202025-26.pdf"
+      },
+      {
+        title: "IAAB CSE (AI and ML) 2024-25",
+        url: "https://mits.ac.in/public/uploads/departments/CSE(AI%20and%20ML)%20IAAB%202024-25.pdf"
+      },
+      {
+        title: "IAAB CSE (Networks) 2025-26",
+        url: "https://mits.ac.in/public/uploads/departments/CSE(Networks)%20IAAB%202025-26.pdf"
+      },
+      {
+        title: "IAAB CSE (Networks) 2024-25",
+        url: "https://mits.ac.in/public/uploads/departments/CSE(Networks)%20IAAB%202024-25.pdf"
+      }
+    ]
+  },
+  {
+    id: "magazine",
+    label: "Magazine",
+    title: "Magazine",
+    documents: [
+      {
+        title: "AIXpert Magazine - 2026",
+        url: "https://mits.ac.in/public/uploads/departments/AIMEX%202k26.pdf"
+      },
+      {
+        title: "AIXpert Magazine - 2025",
+        url: "https://mits.ac.in/public/uploads/departments/AIMEX%202k25.pdf"
+      }
+    ]
+  }
+];
+
+/**
+ * Returns top tabs data (Department, BoS, IAAB, Magazine, etc.) for any department.
+ */
+export function getDepartmentTopTabs(deptKey: string): DepartmentTopTab[] | undefined {
+  const dept = departmentsData[deptKey];
+  if (dept && dept.topTabs && dept.topTabs.length > 0) {
+    return dept.topTabs;
+  }
+  if (deptKey === "aiml" || deptKey === "cse-ai-ml" || deptKey === "ai") {
+    return aimlTopTabs;
+  }
+  return undefined;
+}
 
 
