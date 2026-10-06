@@ -45,7 +45,7 @@ import PatentDetailModal from "@/components/PatentDetailModal";
 import PublicationDetailModal from "@/components/PublicationDetailModal";
 import PlacementDetailModal from "@/components/PlacementDetailModal";
 import ProjectDetailModal from "@/components/ProjectDetailModal";
-import { getDepartmentUnderGraduate } from "@/data/departmentUnderGraduateData";
+import { getDepartmentUnderGraduate } from "@/data/departmentData";
 import {
   Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, ExternalLink, Search, Filter, Sparkles, RefreshCw, ChevronDown, Layers
 } from "lucide-react";
