@@ -17,6 +17,7 @@ import ScStView from "@/components/cells/ScStView";
 import WecView from "@/components/cells/WecView";
 import SedgView from "@/components/cells/SedgView";
 import EofcView from "@/components/cells/EofcView";
+import PaarcView from "@/components/cells/PaarcView";
 
 type TabId = "home" | "vidya-laxmi" | "scholarships" | "documents" | "events" | "gallery" | "financial-aid" | "contact";
 
@@ -113,6 +114,10 @@ export default function CellDetail({ overrideId }: { overrideId?: string } = {})
 
   if (targetId === "eof") {
     return <EofcView />;
+  }
+
+  if (targetId === "paarcc") {
+    return <PaarcView />;
   }
 
   if (!cell) {
