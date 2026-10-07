@@ -1009,49 +1009,7 @@ const DepartmentPage = () => {
                       </Card>
                     )}
                   </div>
-                ) : (
-                  <div className="space-y-6">
-                    {/* Program Overview Card */}
-                    <Card className="border border-border/80 shadow-xs overflow-hidden bg-card">
-                      <div className="bg-muted/30 border-b border-border/70 p-6 flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
-                          <GraduationCap className="w-6 h-6 text-primary" />
-                        </div>
-                        <div>
-                          <span className="text-xs uppercase font-bold tracking-widest text-primary">Under Graduate Program</span>
-                          <h3 className="text-xl sm:text-2xl font-bold text-secondary mt-0.5" style={{ fontFamily: "var(--font-display)" }}>
-                            {ugData.programTitle}
-                          </h3>
-                        </div>
-                      </div>
-                      <CardContent className="p-6 sm:p-8 space-y-6">
-                        <div>
-                          <h4 className="text-base font-bold text-secondary mb-2 flex items-center gap-2">
-                            <Eye className="w-4 h-4 text-primary" /> Program Overview & Philosophy
-                          </h4>
-                          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                            {ugData.programOverview}
-                          </p>
-                        </div>
-
-                        <div className="grid sm:grid-cols-3 gap-4 pt-4 border-t border-border/60">
-                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
-                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Degree Type</span>
-                            <span className="text-sm font-bold text-secondary">B.Tech (4 Years / 8 Semesters)</span>
-                          </div>
-                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
-                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Regulation</span>
-                            <span className="text-sm font-bold text-secondary">R23 Autonomous Scheme</span>
-                          </div>
-                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
-                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Total Schemes</span>
-                            <span className="text-sm font-bold text-primary flex items-center gap-1 mt-0.5">
-                              {ugData.syllabusTables?.length || 0} Semester Matrices
-                            </span>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+                ) : activeUgTab === "course-syllabus" ? (
                   <div className="space-y-6">
                     {/* Toolbar: Program Stream Filter & Subject Search */}
                     {ugData.syllabusTables && ugData.syllabusTables.length > 0 && (
@@ -1236,8 +1194,55 @@ const DepartmentPage = () => {
                       );
                     })()}
                   </div>
-                </div>
-              )}
+                ) : (
+                  <div className="space-y-6">
+                    {/* Program Overview Card */}
+                    <Card className="border border-border/80 shadow-xs overflow-hidden bg-card">
+                      <div className="bg-muted/30 border-b border-border/70 p-6 flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                          <GraduationCap className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <span className="text-xs uppercase font-bold tracking-widest text-primary">Under Graduate Program</span>
+                          <h3 className="text-xl sm:text-2xl font-bold text-secondary mt-0.5" style={{ fontFamily: "var(--font-display)" }}>
+                            {ugData.programTitle}
+                          </h3>
+                        </div>
+                      </div>
+                      <CardContent className="p-6 sm:p-8 space-y-6">
+                        <div>
+                          <h4 className="text-base font-bold text-secondary mb-2 flex items-center gap-2">
+                            <Eye className="w-4 h-4 text-primary" /> Program Overview & Philosophy
+                          </h4>
+                          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                            {ugData.programOverview}
+                          </p>
+                        </div>
+
+                        <div className="grid sm:grid-cols-3 gap-4 pt-4 border-t border-border/60">
+                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
+                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Degree Type</span>
+                            <span className="text-sm font-bold text-secondary">B.Tech (4 Years / 8 Semesters)</span>
+                          </div>
+                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
+                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Regulation</span>
+                            <span className="text-sm font-bold text-secondary">R23 Autonomous Scheme</span>
+                          </div>
+                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
+                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Curriculum</span>
+                            <button
+                              onClick={() => handleUgSubItemClick("course-syllabus")}
+                              className="text-sm font-bold text-primary hover:underline flex items-center gap-1 mt-0.5"
+                            >
+                              <span>Explore Syllabi</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                )}
             </motion.div>
           )}
 
