@@ -142,17 +142,68 @@ export interface DepartmentData {
   topTabs?: DepartmentTopTab[];
 }
 
-export interface SyllabusRow {
-  sno: string;
-  name: string;
-  type: string;
-  credits: string;
+export interface DepartmentTopTabDoc {
+  title: string;
+  url: string;
 }
 
-export interface SyllabusTable {
+export interface DepartmentTopTab {
+  id: string;
+  label: string;
+  title?: string;
+  documents?: DepartmentTopTabDoc[];
+}
+
+export interface MentorMenteeItem {
   title: string;
-  headers: string[];
-  rows: SyllabusRow[];
+  pdfUrl: string;
+  academicYear?: string;
+  category?: string;
+}
+
+export interface MentorMenteeGroup {
+  groupTitle: string;
+  items: MentorMenteeItem[];
+}
+
+export interface MinorHighlight {
+  title: string;
+  points: string[];
+}
+
+export interface MinorDegreeData {
+  title: string;
+  tagline: string;
+  overview: string;
+  highlights: MinorHighlight[];
+  pdfUrl?: string;
+  pdfLabel?: string;
+}
+
+export interface InterdisciplinaryProjectItem {
+  title: string;
+  pdfUrl: string;
+  academicYear?: string;
+  category?: string;
+}
+
+export interface InterdisciplinaryProjectGroup {
+  groupTitle: string;
+  items: InterdisciplinaryProjectItem[];
+}
+
+export interface DepartmentMoreSubTab {
+  id: string;
+  label: string;
+  externalUrl?: string;
+  directPdf?: boolean;
+}
+
+export interface DepartmentMoreData {
+  subTabs: DepartmentMoreSubTab[];
+  mentorMentee: MentorMenteeGroup[];
+  minor?: MinorDegreeData;
+  interdisciplinaryProjects?: InterdisciplinaryProjectGroup[];
 }
 
 export interface UnderGraduateTimeTableItem {
@@ -167,52 +218,25 @@ export interface UnderGraduateTimeTableGroup {
   items: UnderGraduateTimeTableItem[];
 }
 
+export interface SyllabusRow {
+  sno: string;
+  name: string;
+  type: string;
+  credits: string;
+}
+
+export interface SyllabusTable {
+  title: string;
+  headers: string[];
+  rows: SyllabusRow[];
+}
+
 export interface UnderGraduateData {
   programTitle: string;
   programOverview: string;
   syllabusTables?: SyllabusTable[];
   subTabs?: { id: string; label: string }[];
   timeTables?: UnderGraduateTimeTableGroup[];
-}
-
-export interface DepartmentTopTabDoc {
-  title: string;
-  url: string;
-}
-
-export interface DepartmentTopTab {
-  id: string;
-  label: string;
-  title?: string;
-  documents?: DepartmentTopTabDoc[];
-}
-
-export interface DepartmentMoreItem {
-  title: string;
-  pdfUrl: string;
-  academicYear?: string;
-  category?: string;
-}
-
-export interface DepartmentMoreGroup {
-  groupTitle: string;
-  items: DepartmentMoreItem[];
-}
-
-export interface DepartmentMoreMinor {
-  title: string;
-  tagline: string;
-  overview: string;
-  highlights: { title: string; points: string[] }[];
-  pdfUrl?: string;
-  pdfLabel?: string;
-}
-
-export interface DepartmentMoreData {
-  subTabs: { id: string; label: string; externalUrl?: string; directPdf?: boolean }[];
-  mentorMentee: DepartmentMoreGroup[];
-  minor?: DepartmentMoreMinor;
-  interdisciplinaryProjects?: DepartmentMoreGroup[];
 }
 
 // Helper to get dept image
@@ -3016,5 +3040,6 @@ export function getDepartmentTopTabs(deptKey: string): DepartmentTopTab[] | unde
   }
   return undefined;
 }
+
 
 
