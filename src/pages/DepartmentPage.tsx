@@ -25,17 +25,17 @@
  *    - To filter them (e.g., show HOD at the top), the data file already places HOD as the first item,
  *      which is the best practice.
  */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { getDepartmentByKey } from "@/data/departmentData";
+import { getDepartmentByKey, getDepartmentUnderGraduate, getDepartmentMore, getDepartmentTopTabs } from "@/data/departmentData";
 import { Card, CardContent } from "@/components/ui/card";
 import InlineFacultyProfile from "@/components/InlineFacultyProfile";
 import { getFacultyProfile, type FacultyProfile } from "@/data/facultyProfiles";
-import { slugifyFaculty, cleanFacultyName } from "@/lib/facultySlug";
+import { slugifyFaculty } from "@/lib/facultySlug";
 import { useDeptCMSData, type CMSMoU, type CMSAchievement, type CMSPatent, type CMSPublication, type CMSPlacement, type CMSProject } from "@/hooks/useDeptCMSData";
 import { useFacultyData } from "@/hooks/useFacultyData";
 import EventDetailModal from "@/components/EventDetailModal";
@@ -45,14 +45,15 @@ import PatentDetailModal from "@/components/PatentDetailModal";
 import PublicationDetailModal from "@/components/PublicationDetailModal";
 import PlacementDetailModal from "@/components/PlacementDetailModal";
 import ProjectDetailModal from "@/components/ProjectDetailModal";
-import { getDepartmentUnderGraduate } from "@/data/departmentData";
 import {
-  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, ExternalLink, Search, Filter, Sparkles, RefreshCw, ChevronDown, Layers
+  Users, Award, FlaskConical, FileText, BookOpen, Calendar, Handshake, Briefcase, FolderOpen, GraduationCap, Building2, ChevronRight, Eye, Target, Trophy, Lightbulb, Mail, Phone, ExternalLink, Search, Filter, Sparkles, RefreshCw, ChevronDown, Layers, Download, Clock, MoreHorizontal
 } from "lucide-react";
 
 interface SidebarSubItem {
-  id: "ug" | "course-syllabus";
+  id: string;
   label: string;
+  externalUrl?: string;
+  directPdf?: boolean;
 }
 
 interface SidebarItem {
@@ -84,6 +85,15 @@ const sidebarItems: SidebarItem[] = [
   { id: "placement", label: "Placement / Internship", icon: Trophy },
   { id: "projects", label: "Student Projects", icon: FolderOpen },
   { id: "subjects", label: "Subjects", icon: Layers },
+  {
+    id: "more",
+    label: "More",
+    icon: MoreHorizontal,
+    subItems: [
+      { id: "mentor-mentee", label: "Mentor & Mentee" },
+      { id: "minor", label: "Minor" },
+    ],
+  },
 ];
 
 const DepartmentPage = () => {
@@ -91,9 +101,14 @@ const DepartmentPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("about");
-  const [activeUgTab, setActiveUgTab] = useState<"ug" | "course-syllabus">("ug");
+  const [activeUgTab, setActiveUgTab] = useState<string>("ug");
   const [ugDropdownOpen, setUgDropdownOpen] = useState(false);
   const [ugHovered, setUgHovered] = useState(false);
+  const [activeMoreTab, setActiveMoreTab] = useState<string>("mentor-mentee");
+  const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
+  const [moreHovered, setMoreHovered] = useState(false);
+  const [syllabusFilter, setSyllabusFilter] = useState("all");
+  const [syllabusSearch, setSyllabusSearch] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProfile, setSelectedProfile] = useState<FacultyProfile | null>(null);
   const [facultySearch, setFacultySearch] = useState("");
@@ -105,10 +120,55 @@ const DepartmentPage = () => {
   const [selectedPublication, setSelectedPublication] = useState<CMSPublication | null>(null);
   const [selectedPlacement, setSelectedPlacement] = useState<CMSPlacement | null>(null);
   const [selectedProject, setSelectedProject] = useState<CMSProject | null>(null);
+  const [activeTopTab, setActiveTopTab] = useState<string>("department");
   const dept = getDepartmentByKey(deptKey || "");
   const ugData = getDepartmentUnderGraduate(deptKey || "", dept?.subjects || []);
+  const moreData = getDepartmentMore(deptKey || "");
+  const topTabs = getDepartmentTopTabs(deptKey || "");
   const { data: cms, loading: cmsLoading } = useDeptCMSData(deptKey || "");
   const { getFacultyByDept, getFacultyProfileBySlug, getDepartmentHod, loading: facultyLoading, refresh: refreshFaculty } = useFacultyData();
+
+  const currentSidebarItems = useMemo(() => {
+    return sidebarItems.map(item => {
+      if (item.id === "under-graduate") {
+        return {
+          ...item,
+          subItems: ugData.subTabs || [
+            { id: "ug", label: "UG" },
+            { id: "course-syllabus", label: "Course Syllabus" },
+          ]
+        };
+      }
+      if (item.id === "more") {
+        return {
+          ...item,
+          subItems: moreData.subTabs || [
+            { id: "mentor-mentee", label: "Mentor & Mentee" },
+            { id: "minor", label: "Minor" },
+          ]
+        };
+      }
+      return item;
+    });
+  }, [ugData.subTabs, moreData.subTabs]);
+
+  const specializations = useMemo(() => {
+    if (!ugData.syllabusTables || ugData.syllabusTables.length === 0) return [];
+    const specs = new Set<string>();
+    ugData.syllabusTables.forEach(t => {
+      if (t.title.includes("AI & ML") || t.title.includes("AI&ML")) specs.add("CSE (AI & ML)");
+      else if (t.title.includes("Networks")) specs.add("CSE (Networks)");
+    });
+    return Array.from(specs);
+  }, [ugData.syllabusTables]);
+
+  const calculateTableCredits = (rows: { credits: string }[]) => {
+    const sum = rows.reduce((acc, row) => {
+      const num = parseFloat(row.credits);
+      return isNaN(num) ? acc : acc + num;
+    }, 0);
+    return sum > 0 ? (Number.isInteger(sum) ? `${sum}` : `${sum.toFixed(1)}`) : "-";
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -127,13 +187,44 @@ const DepartmentPage = () => {
       setActiveSection("under-graduate");
       setActiveUgTab("ug");
       setUgDropdownOpen(true);
-    } else if (lastPart === "course-syllabus") {
+    } else if (lastPart === "course-syllabus" || lastPart === "syllabus") {
       setActiveSection("under-graduate");
       setActiveUgTab("course-syllabus");
+      setUgDropdownOpen(true);
+    } else if (lastPart === "timetable" || lastPart === "time-table") {
+      setActiveSection("under-graduate");
+      setActiveUgTab("timetable");
       setUgDropdownOpen(true);
     } else if (lastPart === "under-graduate") {
       setActiveSection("under-graduate");
       setUgDropdownOpen(true);
+    } else if (lastPart === "mentor-mentee" || lastPart === "mentor-and-mentee" || lastPart === "mentee") {
+      setActiveSection("more");
+      setActiveMoreTab("mentor-mentee");
+      setMoreDropdownOpen(true);
+    } else if (lastPart === "minor" || lastPart === "minor-degree") {
+      setActiveSection("more");
+      setActiveMoreTab("minor");
+      setMoreDropdownOpen(true);
+    } else if (lastPart === "interdisciplinary-projects" || lastPart === "interdisciplinary") {
+      setActiveSection("more");
+      setActiveMoreTab("interdisciplinary-projects");
+      setMoreDropdownOpen(true);
+    } else if (lastPart === "more") {
+      setActiveSection("more");
+      setMoreDropdownOpen(true);
+    } else if (lastPart === "bos" || lastPart === "board-of-studies") {
+      setActiveSection("about");
+      setActiveTopTab("bos");
+    } else if (lastPart === "iaab") {
+      setActiveSection("about");
+      setActiveTopTab("iaab");
+    } else if (lastPart === "magazine" || lastPart === "magazines") {
+      setActiveSection("about");
+      setActiveTopTab("magazine");
+    } else if (lastPart === "department" || lastPart === "about") {
+      setActiveSection("about");
+      setActiveTopTab("department");
     } else if (lastPart && sidebarItems.some(item => item.id === lastPart)) {
       setActiveSection(lastPart);
     } else if (location.hash) {
@@ -142,13 +233,44 @@ const DepartmentPage = () => {
         setActiveSection("under-graduate");
         setActiveUgTab("ug");
         setUgDropdownOpen(true);
-      } else if (hash === "course-syllabus" || hash === "ug-tab50") {
+      } else if (hash === "course-syllabus" || hash === "ug-tab50" || hash === "syllabus") {
         setActiveSection("under-graduate");
         setActiveUgTab("course-syllabus");
+        setUgDropdownOpen(true);
+      } else if (hash === "timetable" || hash === "time-table" || hash === "ug-tab60") {
+        setActiveSection("under-graduate");
+        setActiveUgTab("timetable");
         setUgDropdownOpen(true);
       } else if (hash === "under-graduate") {
         setActiveSection("under-graduate");
         setUgDropdownOpen(true);
+      } else if (hash === "mentor-mentee" || hash === "mentors") {
+        setActiveSection("more");
+        setActiveMoreTab("mentor-mentee");
+        setMoreDropdownOpen(true);
+      } else if (hash === "minor") {
+        setActiveSection("more");
+        setActiveMoreTab("minor");
+        setMoreDropdownOpen(true);
+      } else if (hash === "interdisciplinary-projects" || hash === "interdisciplinary") {
+        setActiveSection("more");
+        setActiveMoreTab("interdisciplinary-projects");
+        setMoreDropdownOpen(true);
+      } else if (hash === "more") {
+        setActiveSection("more");
+        setMoreDropdownOpen(true);
+      } else if (hash === "bos" || hash === "board-of-studies") {
+        setActiveSection("about");
+        setActiveTopTab("bos");
+      } else if (hash === "iaab") {
+        setActiveSection("about");
+        setActiveTopTab("iaab");
+      } else if (hash === "magazine") {
+        setActiveSection("about");
+        setActiveTopTab("magazine");
+      } else if (hash === "department") {
+        setActiveSection("about");
+        setActiveTopTab("department");
       } else if (hash && sidebarItems.some(item => item.id === hash)) {
         setActiveSection(hash);
       }
@@ -165,10 +287,39 @@ const DepartmentPage = () => {
     }
   }, [location.pathname, location.hash, location.search, deptKey, dept, navigate, getFacultyProfileBySlug]);
 
-  const handleUgSubItemClick = (tabId: "ug" | "course-syllabus") => {
+  const handleTopTabClick = (tabId: string) => {
+    setActiveTopTab(tabId);
+    if (activeSection !== "about") {
+      setActiveSection("about");
+    }
+    const basePath = `/department/${deptKey}`;
+    const newPath = tabId === "department" ? basePath : `${basePath}/${tabId}`;
+    navigate(newPath, { replace: true });
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 10);
+  };
+
+  const handleUgSubItemClick = (tabId: string) => {
     setActiveSection("under-graduate");
     setActiveUgTab(tabId);
     setUgDropdownOpen(true);
+    setMobileMenuOpen(false);
+    const basePath = `/department/${deptKey}`;
+    navigate(`${basePath}/${tabId}`, { replace: true });
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 10);
+  };
+
+  const handleMoreSubItemClick = (tabId: string, externalUrl?: string) => {
+    if (externalUrl) {
+      window.open(externalUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+    setActiveSection("more");
+    setActiveMoreTab(tabId);
+    setMoreDropdownOpen(true);
     setMobileMenuOpen(false);
     const basePath = `/department/${deptKey}`;
     navigate(`${basePath}/${tabId}`, { replace: true });
@@ -181,7 +332,14 @@ const DepartmentPage = () => {
     setActiveSection(sectionId);
     setMobileMenuOpen(false);
     if (sectionId === "under-graduate") {
-      setUgDropdownOpen(prev => !prev);
+      setUgDropdownOpen(true);
+      setMoreDropdownOpen(false);
+    } else if (sectionId === "more") {
+      setMoreDropdownOpen(true);
+      setUgDropdownOpen(false);
+    } else {
+      setUgDropdownOpen(false);
+      setMoreDropdownOpen(false);
     }
     const basePath = `/department/${deptKey}`;
     const newPath = sectionId === "about" ? basePath : `${basePath}/${sectionId}`;
@@ -230,7 +388,7 @@ const DepartmentPage = () => {
   };
 
   const dynamicHod = getDepartmentHod(deptKey || "");
-  const hod = dynamicHod || (dept.hod ? { ...dept.hod, name: cleanFacultyName(dept.hod.name), image: undefined } : { name: "", designation: "" });
+  const hod = dynamicHod || dept.hod;
 
   const liveFaculty = getFacultyByDept(deptKey || "");
   const effectiveFaculty =
@@ -238,7 +396,7 @@ const DepartmentPage = () => {
       ? liveFaculty
       : liveFaculty.length > 0
       ? liveFaculty
-      : (dept.faculty || []).map((f) => ({ ...f, name: cleanFacultyName(f.name), image: undefined }));
+      : dept.faculty || [];
 
   const filteredFaculty = effectiveFaculty.filter((f) => {
     const q = facultySearch.toLowerCase().trim();
@@ -342,14 +500,24 @@ const DepartmentPage = () => {
         </button>
         {mobileMenuOpen && (
           <div className="bg-card border-t border-border max-h-[60vh] overflow-y-auto">
-            {sidebarItems.map(item => {
+            {currentSidebarItems.map(item => {
               if (item.subItems) {
                 const isParentActive = activeSection === item.id;
+                const isUg = item.id === "under-graduate";
+                const isDropdownOpen = isUg ? ugDropdownOpen : moreDropdownOpen;
+                const activeSubTab = isUg ? activeUgTab : activeMoreTab;
+                const handleSubClick = isUg ? handleUgSubItemClick : handleMoreSubItemClick;
+
                 return (
                   <div key={item.id} className="border-b border-border/40">
                     <button
                       onClick={() => {
-                        handleSectionChange(item.id);
+                        if (activeSection !== item.id) {
+                          handleSectionChange(item.id);
+                        } else {
+                          if (isUg) setUgDropdownOpen(prev => !prev);
+                          else setMoreDropdownOpen(prev => !prev);
+                        }
                       }}
                       className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
                         isParentActive ? "text-primary bg-primary/5 font-semibold" : "text-muted-foreground hover:text-primary"
@@ -359,16 +527,16 @@ const DepartmentPage = () => {
                         <item.icon className="w-4 h-4" />
                         {item.label}
                       </span>
-                      <ChevronDown className={`w-3.5 h-3.5 transition-transform ${ugDropdownOpen || isParentActive ? "rotate-180 text-primary" : ""}`} />
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isDropdownOpen ? "rotate-180 text-primary" : ""}`} />
                     </button>
-                    {(ugDropdownOpen || isParentActive) && (
+                    {isDropdownOpen && (
                       <div className="bg-muted/30 pl-9 pr-4 py-1 space-y-1">
                         {item.subItems.map(sub => (
                           <button
                             key={sub.id}
-                            onClick={() => handleUgSubItemClick(sub.id)}
+                            onClick={() => handleSubClick(sub.id, sub.externalUrl)}
                             className={`w-full flex items-center justify-between py-1.5 text-xs transition-colors ${
-                              isParentActive && activeUgTab === sub.id
+                              isParentActive && activeSubTab === sub.id
                                 ? "text-primary font-bold"
                                 : "text-muted-foreground hover:text-primary"
                             }`}
@@ -408,22 +576,30 @@ const DepartmentPage = () => {
                 <div className="bg-primary px-4 py-3">
                   <h3 className="text-primary-foreground font-bold text-sm">Quick Navigation</h3>
                 </div>
-                {sidebarItems.map(item => {
+                {currentSidebarItems.map(item => {
                   if (item.subItems) {
                     const isParentActive = activeSection === item.id;
+                    const isUg = item.id === "under-graduate";
+                    const isDropdownOpen = isUg ? ugDropdownOpen : moreDropdownOpen;
+                    const isHovered = isUg ? ugHovered : moreHovered;
+                    const setHovered = isUg ? setUgHovered : setMoreHovered;
+                    const activeSubTab = isUg ? activeUgTab : activeMoreTab;
+                    const handleSubClick = isUg ? handleUgSubItemClick : handleMoreSubItemClick;
+
                     return (
                       <div
                         key={item.id}
                         className="relative"
-                        onMouseEnter={() => setUgHovered(true)}
-                        onMouseLeave={() => setUgHovered(false)}
+                        onMouseEnter={() => setHovered(true)}
+                        onMouseLeave={() => setHovered(false)}
                       >
                         <button
                           onClick={() => {
                             if (activeSection !== item.id) {
                               handleSectionChange(item.id);
                             } else {
-                              setUgDropdownOpen(prev => !prev);
+                              if (isUg) setUgDropdownOpen(prev => !prev);
+                              else setMoreDropdownOpen(prev => !prev);
                             }
                           }}
                           className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-all duration-200 border-l-3 ${
@@ -438,22 +614,22 @@ const DepartmentPage = () => {
                           </div>
                           <ChevronDown
                             className={`w-3.5 h-3.5 text-muted-foreground transition-transform duration-200 ${
-                              ugDropdownOpen || isParentActive ? "rotate-180 text-primary" : ""
+                              isDropdownOpen ? "rotate-180 text-primary" : ""
                             }`}
                           />
                         </button>
 
                         {/* Accordion / Dropdown inside sidebar */}
-                        {(ugDropdownOpen || isParentActive) && (
+                        {isDropdownOpen && (
                           <div className="bg-muted/30 border-y border-border/40 py-1 space-y-0.5">
                             {item.subItems.map(sub => {
-                              const isSubActive = isParentActive && activeUgTab === sub.id;
+                              const isSubActive = isParentActive && activeSubTab === sub.id;
                               return (
                                 <button
                                   key={sub.id}
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    handleUgSubItemClick(sub.id);
+                                    handleSubClick(sub.id, sub.externalUrl);
                                   }}
                                   className={`w-full flex items-center justify-between pl-10 pr-4 py-2 text-xs transition-colors ${
                                     isSubActive
@@ -470,20 +646,20 @@ const DepartmentPage = () => {
                         )}
 
                         {/* Hover flyout menu on right side of menu bar */}
-                        {ugHovered && (
-                          <div className="absolute left-full top-0 ml-1.5 w-48 bg-card border border-border shadow-xl rounded-xl py-1.5 z-50 animate-in fade-in slide-in-from-left-2 duration-150">
+                        {isHovered && (
+                          <div className="absolute left-full top-0 ml-1.5 w-52 bg-card border border-border shadow-xl rounded-xl py-1.5 z-50 animate-in fade-in slide-in-from-left-2 duration-150">
                             <div className="px-3 py-1 text-[11px] font-semibold text-muted-foreground uppercase tracking-wider border-b border-border/50 mb-1">
-                              Under Graduate
+                              {item.label}
                             </div>
                             {item.subItems.map(sub => {
-                              const isSubActive = isParentActive && activeUgTab === sub.id;
+                              const isSubActive = isParentActive && activeSubTab === sub.id;
                               return (
                                 <button
                                   key={sub.id}
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    handleUgSubItemClick(sub.id);
-                                    setUgHovered(false);
+                                    handleSubClick(sub.id, sub.externalUrl);
+                                    setHovered(false);
                                   }}
                                   className={`w-full flex items-center justify-between px-3 py-2 text-xs font-medium transition-colors text-left ${
                                     isSubActive
@@ -529,171 +705,226 @@ const DepartmentPage = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="md:col-span-2">
-                    <h2 className="text-2xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>About Us</h2>
-                    <p className="text-muted-foreground leading-relaxed">{dept.about}</p>
+                {/* Modern Segmented Tab Switcher (Department, BoS, IAAB, Magazine) */}
+                {topTabs && topTabs.length > 1 && (
+                  <div className="inline-flex flex-wrap items-center gap-1.5 p-1 bg-muted/40 border border-border/60 rounded-xl mb-6">
+                    {topTabs.map((tab) => {
+                      const isActive = activeTopTab === tab.id;
+                      return (
+                        <button
+                          key={tab.id}
+                          onClick={() => handleTopTabClick(tab.id)}
+                          className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
+                            isActive
+                              ? "bg-primary text-white shadow-xs"
+                              : "text-muted-foreground hover:text-primary hover:bg-card/80"
+                          }`}
+                        >
+                          {tab.label}
+                        </button>
+                      );
+                    })}
                   </div>
-                  <div>
-                    <Card className="overflow-hidden border-2 border-primary/10 group hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md">
-                      <div className="bg-gradient-to-br from-primary to-primary/80 p-4 text-center">
-                        <div className="w-20 h-20 mx-auto rounded-full bg-white/20 flex items-center justify-center overflow-hidden mb-2 ring-2 ring-white/30 relative">
-                          {hod.image ? (
-                            <img
-                              src={hod.image}
-                              alt={cleanFacultyName(hod.name)}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                              onError={(e) => {
-                                (e.currentTarget as HTMLElement).style.display = "none";
-                                const fallback = e.currentTarget.parentElement?.querySelector(".avatar-fallback") as HTMLElement;
-                                if (fallback) fallback.style.display = "flex";
-                              }}
-                            />
-                          ) : null}
-                          <div
-                            className={`avatar-fallback w-full h-full ${
-                              hod.image ? "hidden" : "flex"
-                            } items-center justify-center bg-white/20 text-white font-bold text-xl select-none`}
-                          >
-                            {cleanFacultyName(hod.name)
-                              .replace(/^Dr\.?\s*/i, "")
-                              .replace(/^Prof\.?\s*/i, "")
-                              .split(" ")
-                              .filter(Boolean)
-                              .slice(0, 2)
-                              .map((n) => n[0])
-                              .join("")
-                              .toUpperCase() || <Users className="w-8 h-8 text-primary-foreground" />}
-                          </div>
-                        </div>
-                        <h4 className="text-primary-foreground font-bold text-sm">{hod.name}</h4>
-                        <p className="text-primary-foreground/80 text-xs mt-0.5">{hod.designation}</p>
-                        {hod.qualification && (
-                          <p className="text-primary-foreground/60 text-xs mt-0.5">{hod.qualification}</p>
-                        )}
-                      </div>
-                      <CardContent className="p-3 text-center bg-card">
-                        <span className="inline-block text-xs font-semibold text-accent-foreground bg-accent/20 px-2.5 py-1 rounded-full mb-2">
-                          Head of Department
-                        </span>
-                        {hod.name && (
-                          <div>
-                            <Link
-                              to={hod.profileUrl || `/department/${deptKey}/faculty/${slugifyFaculty(hod.name)}`}
-                              className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
-                            >
-                              <span>View Profile</span>
-                              <ChevronRight className="w-3.5 h-3.5" />
-                            </Link>
-                          </div>
-                        )}
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
+                )}
 
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                  <Card className="h-full border-l-4 border-l-primary">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Eye className="w-5 h-5 text-primary" />
-                        <h3 className="font-bold text-lg text-secondary">Vision</h3>
+                {activeTopTab === "department" ? (
+                  <>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="md:col-span-2">
+                        <h2 className="text-2xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>About Us</h2>
+                        <p className="text-muted-foreground leading-relaxed">{dept.about}</p>
                       </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{dept.vision}</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="h-full border-l-4 border-l-accent">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Target className="w-5 h-5 text-accent-foreground" />
-                        <h3 className="font-bold text-lg text-secondary">Mission</h3>
+                      <div>
+                        <Card className="overflow-hidden border-2 border-primary/10 group hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md">
+                          <div className="bg-gradient-to-br from-primary to-primary/80 p-4 text-center">
+                            <div className="w-20 h-20 mx-auto rounded-full bg-white/20 flex items-center justify-center overflow-hidden mb-2 ring-2 ring-white/30">
+                              {hod.image ? (
+                                <img
+                                  src={hod.image}
+                                  alt={hod.name}
+                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                  onError={(e) => {
+                                    if (dept.hod?.image && (e.currentTarget as HTMLImageElement).src !== dept.hod.image) {
+                                      (e.currentTarget as HTMLImageElement).src = dept.hod.image;
+                                    }
+                                  }}
+                                />
+                              ) : (
+                                <Users className="w-8 h-8 text-primary-foreground" />
+                              )}
+                            </div>
+                            <h4 className="text-primary-foreground font-bold text-sm">{hod.name}</h4>
+                            <p className="text-primary-foreground/80 text-xs mt-0.5">{hod.designation}</p>
+                            {hod.qualification && (
+                              <p className="text-primary-foreground/60 text-xs mt-0.5">{hod.qualification}</p>
+                            )}
+                          </div>
+                          <CardContent className="p-3 text-center bg-card">
+                            <span className="inline-block text-xs font-semibold text-accent-foreground bg-accent/20 px-2.5 py-1 rounded-full mb-2">
+                              Head of Department
+                            </span>
+                            {hod.name && (
+                              <div>
+                                <Link
+                                  to={hod.profileUrl || `/department/${deptKey}/faculty/${slugifyFaculty(hod.name)}`}
+                                  className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+                                >
+                                  <span>View Profile</span>
+                                  <ChevronRight className="w-3.5 h-3.5" />
+                                </Link>
+                              </div>
+                            )}
+                          </CardContent>
+                        </Card>
                       </div>
-                      <ul className="space-y-2">
-                        {dept.mission.map((m, i) => (
-                          <li key={i} className="text-muted-foreground text-sm flex gap-2">
-                            <span className="text-primary font-bold shrink-0">M{i + 1}:</span>
-                            <span>{m}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
+                    </div>
 
-                <div className="mt-8">
-                  <h3 className="text-xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>Key Achievements</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {[
-                      { label: "Consultancy", value: dept.achievements.consultancyAmount, icon: Briefcase },
-                      { label: "Research Projects", value: dept.achievements.researchProjects, icon: FlaskConical },
-                      { label: "Patents", value: dept.achievements.patents, icon: FileText },
-                      { label: "Publications", value: dept.achievements.publications, icon: BookOpen },
-                    ].map((stat) => (
-                      <Card key={stat.label} className="text-center hover:shadow-lg transition-shadow duration-300">
-                        <CardContent className="p-4">
-                          <stat.icon className="w-8 h-8 mx-auto text-primary mb-2" />
-                          <p className="text-xl md:text-2xl font-bold text-secondary">{stat.value}</p>
-                          <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                    <div className="grid md:grid-cols-2 gap-6 mt-8">
+                      <Card className="h-full border-l-4 border-l-primary">
+                        <CardContent className="p-6">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Eye className="w-5 h-5 text-primary" />
+                            <h3 className="font-bold text-lg text-secondary">Vision</h3>
+                          </div>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{dept.vision}</p>
                         </CardContent>
                       </Card>
-                    ))}
-                  </div>
-                </div>
+                      <Card className="h-full border-l-4 border-l-accent">
+                        <CardContent className="p-6">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Target className="w-5 h-5 text-accent-foreground" />
+                            <h3 className="font-bold text-lg text-secondary">Mission</h3>
+                          </div>
+                          <ul className="space-y-2">
+                            {dept.mission.map((m, i) => (
+                              <li key={i} className="text-muted-foreground text-sm flex gap-2">
+                                <span className="text-primary font-bold shrink-0">M{i + 1}:</span>
+                                <span>{m}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </div>
 
-                <div className="mt-8">
-                  <Card>
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Lightbulb className="w-5 h-5 text-accent-foreground" />
-                        <h3 className="font-bold text-lg text-secondary">Teaching Approach</h3>
-                      </div>
-                      <p className="text-muted-foreground text-sm mb-3">{dept.teachingApproach.description}</p>
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {dept.teachingApproach.points.map((p, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <ChevronRight className="w-3 h-3 text-primary shrink-0" />
-                            {p}
-                          </li>
+                    <div className="mt-8">
+                      <h3 className="text-xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>Key Achievements</h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {[
+                          { label: "Consultancy", value: dept.achievements.consultancyAmount, icon: Briefcase },
+                          { label: "Research Projects", value: dept.achievements.researchProjects, icon: FlaskConical },
+                          { label: "Patents", value: dept.achievements.patents, icon: FileText },
+                          { label: "Publications", value: dept.achievements.publications, icon: BookOpen },
+                        ].map((stat) => (
+                          <Card key={stat.label} className="text-center hover:shadow-lg transition-shadow duration-300">
+                            <CardContent className="p-4">
+                              <stat.icon className="w-8 h-8 mx-auto text-primary mb-2" />
+                              <p className="text-xl md:text-2xl font-bold text-secondary">{stat.value}</p>
+                              <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                            </CardContent>
+                          </Card>
                         ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
+                      </div>
+                    </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                  <Card className="h-full">
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-lg text-secondary mb-3">Courses Offered</h3>
-                      <ul className="space-y-2">
-                        {dept.courses.map((c, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <GraduationCap className="w-4 h-4 text-primary shrink-0" />
-                            {c}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                  <Card className="h-full">
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-lg text-secondary mb-3">Contact Us</h3>
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Mail className="w-4 h-4 text-primary shrink-0" />
-                          <a href={`mailto:${dept.contactInfo.email}`} className="hover:text-primary transition-colors">{dept.contactInfo.email}</a>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Phone className="w-4 h-4 text-primary shrink-0" />
-                          {dept.contactInfo.phone}
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Building2 className="w-4 h-4 text-primary shrink-0" />
-                          MITS, Madanapalle, Andhra Pradesh
-                        </div>
+                    <div className="mt-8">
+                      <Card>
+                        <CardContent className="p-6">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Lightbulb className="w-5 h-5 text-accent-foreground" />
+                            <h3 className="font-bold text-lg text-secondary">Teaching Approach</h3>
+                          </div>
+                          <p className="text-muted-foreground text-sm mb-3">{dept.teachingApproach.description}</p>
+                          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            {dept.teachingApproach.points.map((p, i) => (
+                              <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                <ChevronRight className="w-3 h-3 text-primary shrink-0" />
+                                {p}
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6 mt-8">
+                      <Card className="h-full">
+                        <CardContent className="p-6">
+                          <h3 className="font-bold text-lg text-secondary mb-3">Courses Offered</h3>
+                          <ul className="space-y-2">
+                            {dept.courses.map((c, i) => (
+                              <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                <GraduationCap className="w-4 h-4 text-primary shrink-0" />
+                                {c}
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+                      <Card className="h-full">
+                        <CardContent className="p-6">
+                          <h3 className="font-bold text-lg text-secondary mb-3">Contact Us</h3>
+                          <div className="space-y-3">
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <Mail className="w-4 h-4 text-primary shrink-0" />
+                              <a href={`mailto:${dept.contactInfo.email}`} className="hover:text-primary transition-colors">{dept.contactInfo.email}</a>
+                            </div>
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <Phone className="w-4 h-4 text-primary shrink-0" />
+                              {dept.contactInfo.phone}
+                            </div>
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <Building2 className="w-4 h-4 text-primary shrink-0" />
+                              MITS, Madanapalle, Andhra Pradesh
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </>
+                ) : (
+                  /* When BoS, IAAB, Magazine, etc. is active - Styled identically to Timetable / Mentor & Mentee */
+                  (() => {
+                    const currentTab = topTabs?.find(t => t.id === activeTopTab);
+                    return (
+                      <div className="space-y-6">
+                        {currentTab?.documents && currentTab.documents.length > 0 ? (
+                          <Card className="border border-border/80 shadow-xs bg-card p-6 sm:p-8">
+                            <div className="space-y-6">
+                              <h3 className="text-xl font-bold text-secondary tracking-tight">
+                                {currentTab.title || currentTab.label}
+                              </h3>
+
+                              <div className="space-y-3 pl-1">
+                                {currentTab.documents.map((doc, dIdx) => (
+                                  <a
+                                    key={dIdx}
+                                    href={doc.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 py-1 text-secondary hover:text-primary transition-colors text-sm sm:text-base"
+                                  >
+                                    <div className="w-4.5 h-4.5 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                                      <ChevronRight className="w-3 h-3 stroke-[3]" />
+                                    </div>
+                                    <span className="font-medium text-muted-foreground group-hover:text-primary group-hover:underline transition-colors">
+                                      {doc.title}
+                                    </span>
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          </Card>
+                        ) : (
+                          <Card className="p-10 text-center text-muted-foreground bg-card">
+                            <FileText className="w-12 h-12 mx-auto mb-3 text-muted-foreground/40" />
+                            <p className="font-semibold text-base text-secondary">{currentTab?.label || "Information"} details will be uploaded soon.</p>
+                          </Card>
+                        )}
                       </div>
-                    </CardContent>
-                  </Card>
-                </div>
+                    );
+                  })()
+                )}
               </motion.div>
             )}
 
@@ -702,111 +933,313 @@ const DepartmentPage = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
-                className="space-y-8"
+                className="space-y-6"
               >
-                <div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-secondary mb-2" style={{ fontFamily: "var(--font-display)" }}>
-                    Under <span className="text-primary">Graduate</span>
-                  </h2>
-                  <div className="w-16 h-1 bg-accent rounded-full mt-2" />
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                  {/* Left Side Sub-Navigation Box (Matching Screenshot 2, 3, 4) */}
-                  <div className="lg:col-span-1">
-                    <div className="bg-card rounded-xl border border-border shadow-sm p-2 space-y-1.5 lg:sticky lg:top-[140px]">
-                      <button
-                        onClick={() => setActiveUgTab("ug")}
-                        className={`w-full flex items-center justify-between px-3.5 py-3 rounded-lg text-sm font-semibold transition-all ${
-                          activeUgTab === "ug"
-                            ? "bg-primary text-primary-foreground shadow-sm"
-                            : "text-secondary hover:text-primary hover:bg-primary/5"
-                        }`}
-                      >
-                        <span>UG</span>
-                        <ChevronRight className="w-4 h-4 shrink-0" />
-                      </button>
-                      <button
-                        onClick={() => setActiveUgTab("course-syllabus")}
-                        className={`w-full flex items-center justify-between px-3.5 py-3 rounded-lg text-sm font-semibold transition-all ${
-                          activeUgTab === "course-syllabus"
-                            ? "bg-primary text-primary-foreground shadow-sm"
-                            : "text-secondary hover:text-primary hover:bg-primary/5"
-                        }`}
-                      >
-                        <span>Course Syllabus</span>
-                        <ChevronRight className="w-4 h-4 shrink-0" />
-                      </button>
-                    </div>
+                {/* Header & Section Title */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-border/60">
+                  <div>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-secondary flex items-center gap-2.5" style={{ fontFamily: "var(--font-display)" }}>
+                      <GraduationCap className="w-7 h-7 text-primary" />
+                      Under <span className="text-primary">Graduate</span>
+                    </h2>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Academic programs, curriculum structure, and official course syllabi for {dept.name}
+                    </p>
                   </div>
 
-                  {/* Right Side Content Display */}
-                  <div className="lg:col-span-3">
-                    {activeUgTab === "ug" ? (
-                      <Card className="border border-border/80 shadow-sm p-6 sm:p-8 bg-card">
-                        <h3 className="text-xl sm:text-2xl font-bold text-secondary mb-4" style={{ fontFamily: "var(--font-display)" }}>
-                          {ugData.programTitle}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed text-base">
-                          {ugData.programOverview}
-                        </p>
+                  {/* Top Segmented Tab Switcher */}
+                  <div className="inline-flex p-1 bg-muted/60 rounded-xl border border-border/80 shrink-0 self-start sm:self-center shadow-xs flex-wrap gap-1">
+                    {(ugData.subTabs || [
+                      { id: "ug", label: "UG" },
+                      { id: "course-syllabus", label: "Course Syllabus" },
+                    ]).map((tab) => (
+                      <button
+                        key={tab.id}
+                        onClick={() => handleUgSubItemClick(tab.id)}
+                        className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 ${
+                          activeUgTab === tab.id
+                            ? "bg-primary text-white shadow-xs"
+                            : "text-muted-foreground hover:text-primary hover:bg-card"
+                        }`}
+                      >
+                        {tab.id === "ug" ? "UG Overview" : tab.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Content Area - FULL WIDTH */}
+                {activeUgTab === "timetable" ? (
+                  <div className="space-y-6">
+                    {ugData.timeTables && ugData.timeTables.length > 0 ? (
+                      <Card className="border border-border/80 shadow-xs bg-card p-6 sm:p-8">
+                        <div className="space-y-8">
+                          {ugData.timeTables.map((group, gIdx) => (
+                            <div key={gIdx} className="space-y-4">
+                              <h3 className="text-xl font-bold text-secondary tracking-tight">
+                                {group.groupTitle}
+                              </h3>
+
+                              <div className="space-y-3 pl-1">
+                                {group.items.map((item, iIdx) => (
+                                  <a
+                                    key={iIdx}
+                                    href={item.pdfUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 py-1 text-secondary hover:text-primary transition-colors text-sm sm:text-base"
+                                  >
+                                    <div className="w-4.5 h-4.5 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                                      <ChevronRight className="w-3 h-3 stroke-[3]" />
+                                    </div>
+                                    <span className="font-medium text-muted-foreground group-hover:text-primary group-hover:underline transition-colors">
+                                      {item.title}
+                                    </span>
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </Card>
                     ) : (
-                      <div className="space-y-8">
-                        {ugData.syllabusTables && ugData.syllabusTables.length > 0 ? (
-                          ugData.syllabusTables.map((table, tIdx) => (
-                            <div key={tIdx} className="bg-card rounded-xl border border-border shadow-sm overflow-hidden">
-                              <div className="bg-gradient-to-r from-[#8b0000] to-[#b31317] px-6 py-4">
-                                <h3 className="text-white font-bold text-base md:text-lg tracking-wide">
-                                  {table.title}
-                                </h3>
+                      <Card className="p-10 text-center text-muted-foreground bg-card">
+                        <Calendar className="w-12 h-12 mx-auto mb-3 text-muted-foreground/40" />
+                        <p className="font-semibold text-base text-secondary">Department Timetables will be uploaded soon.</p>
+                      </Card>
+                    )}
+                  </div>
+                ) : (
+                  <div className="space-y-6">
+                    {/* Program Overview Card */}
+                    <Card className="border border-border/80 shadow-xs overflow-hidden bg-card">
+                      <div className="bg-muted/30 border-b border-border/70 p-6 flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                          <GraduationCap className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <span className="text-xs uppercase font-bold tracking-widest text-primary">Under Graduate Program</span>
+                          <h3 className="text-xl sm:text-2xl font-bold text-secondary mt-0.5" style={{ fontFamily: "var(--font-display)" }}>
+                            {ugData.programTitle}
+                          </h3>
+                        </div>
+                      </div>
+                      <CardContent className="p-6 sm:p-8 space-y-6">
+                        <div>
+                          <h4 className="text-base font-bold text-secondary mb-2 flex items-center gap-2">
+                            <Eye className="w-4 h-4 text-primary" /> Program Overview & Philosophy
+                          </h4>
+                          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                            {ugData.programOverview}
+                          </p>
+                        </div>
+
+                        <div className="grid sm:grid-cols-3 gap-4 pt-4 border-t border-border/60">
+                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
+                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Degree Type</span>
+                            <span className="text-sm font-bold text-secondary">B.Tech (4 Years / 8 Semesters)</span>
+                          </div>
+                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
+                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Regulation</span>
+                            <span className="text-sm font-bold text-secondary">R23 Autonomous Scheme</span>
+                          </div>
+                          <div className="bg-muted/20 border border-border/70 rounded-xl p-4">
+                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Total Schemes</span>
+                            <span className="text-sm font-bold text-primary flex items-center gap-1 mt-0.5">
+                              {ugData.syllabusTables?.length || 0} Semester Matrices
+                            </span>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  <div className="space-y-6">
+                    {/* Toolbar: Program Stream Filter & Subject Search */}
+                    {ugData.syllabusTables && ugData.syllabusTables.length > 0 && (
+                      <div className="bg-card border border-border/80 rounded-2xl p-4 sm:p-5 space-y-4 shadow-xs">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                          {/* Search Input */}
+                          <div className="relative flex-1">
+                            <Search className="w-4 h-4 text-muted-foreground absolute left-3.5 top-1/2 -translate-y-1/2" />
+                            <input
+                              type="text"
+                              value={syllabusSearch}
+                              onChange={(e) => setSyllabusSearch(e.target.value)}
+                              placeholder="Search subjects by name, type (Theory/Lab), or credits..."
+                              className="w-full pl-10 pr-4 py-2.5 bg-muted/20 border border-border/80 rounded-xl text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-card transition-all"
+                            />
+                            {syllabusSearch && (
+                              <button
+                                onClick={() => setSyllabusSearch("")}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-muted-foreground hover:text-foreground bg-muted px-2 py-1 rounded-md transition-colors"
+                              >
+                                Clear
+                              </button>
+                            )}
+                          </div>
+
+                          {/* Regulation indicator */}
+                          <div className="text-xs font-semibold text-muted-foreground px-3.5 py-2 bg-muted/30 border border-border/70 rounded-xl shrink-0">
+                            Academic Regulation: <span className="text-primary font-bold">R23 Autonomous Scheme</span>
+                          </div>
+                        </div>
+
+                        {/* Stream Filter Pills if multiple streams exist */}
+                        {specializations.length > 1 && (
+                          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-border/50">
+                            <span className="text-xs font-semibold text-muted-foreground flex items-center gap-1 mr-1">
+                              <Filter className="w-3.5 h-3.5 text-primary" /> Program Stream:
+                            </span>
+                            <button
+                              onClick={() => setSyllabusFilter("all")}
+                              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                                syllabusFilter === "all"
+                                  ? "bg-primary text-white shadow-xs"
+                                  : "bg-muted/40 text-muted-foreground border border-border/70 hover:bg-muted hover:text-foreground"
+                              }`}
+                            >
+                              All Schemes ({ugData.syllabusTables.length})
+                            </button>
+                            {specializations.map((spec) => {
+                              const cleanSpec = spec.toLowerCase().replace("cse", "").replace(/[()]/g, "").trim();
+                              const count = ugData.syllabusTables?.filter(t => t.title.toLowerCase().includes(cleanSpec)).length || 0;
+                              return (
+                                <button
+                                  key={spec}
+                                  onClick={() => setSyllabusFilter(spec)}
+                                  className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                                    syllabusFilter === spec
+                                      ? "bg-primary text-white shadow-xs"
+                                      : "bg-muted/40 text-muted-foreground border border-border/70 hover:bg-muted hover:text-foreground"
+                                  }`}
+                                >
+                                  {spec} {count > 0 ? `(${count})` : ""}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Syllabus Tables List */}
+                    {(() => {
+                      if (!ugData.syllabusTables || ugData.syllabusTables.length === 0) {
+                        return (
+                          <Card className="p-10 text-center text-muted-foreground bg-card">
+                            <GraduationCap className="w-12 h-12 mx-auto mb-3 text-muted-foreground/40" />
+                            <p className="font-semibold text-base text-secondary">Course Syllabus will be updated soon.</p>
+                          </Card>
+                        );
+                      }
+
+                      // Filter tables by stream
+                      const filteredTables = ugData.syllabusTables.filter((table) => {
+                        if (syllabusFilter === "all") return true;
+                        const cleanSpec = syllabusFilter.toLowerCase().replace("cse", "").replace(/[()]/g, "").trim();
+                        return table.title.toLowerCase().includes(cleanSpec);
+                      });
+
+                      // Filter rows within table by search query
+                      const q = syllabusSearch.toLowerCase().trim();
+                      const tablesWithMatchingRows = filteredTables.map((table) => {
+                        if (!q) return { table, matchingRows: table.rows };
+                        const matching = table.rows.filter(
+                          (r) =>
+                            r.name.toLowerCase().includes(q) ||
+                            r.type.toLowerCase().includes(q) ||
+                            r.credits.toLowerCase().includes(q) ||
+                            table.title.toLowerCase().includes(q)
+                        );
+                        return { table, matchingRows: matching };
+                      }).filter(item => item.matchingRows.length > 0 || table.title.toLowerCase().includes(q));
+
+                      if (tablesWithMatchingRows.length === 0) {
+                        return (
+                          <div className="bg-card border border-border rounded-2xl p-8 text-center shadow-sm">
+                            <p className="text-muted-foreground font-medium">No subjects found matching "{syllabusSearch}".</p>
+                            <button
+                              onClick={() => {
+                                setSyllabusSearch("");
+                                setSyllabusFilter("all");
+                              }}
+                              className="mt-3 text-xs font-bold text-primary hover:underline"
+                            >
+                              Reset filters
+                            </button>
+                          </div>
+                        );
+                      }
+
+                      return (
+                        <div className="space-y-6">
+                          {tablesWithMatchingRows.map(({ table, matchingRows }, tIdx) => (
+                            <div
+                              key={tIdx}
+                              className="bg-card rounded-2xl border border-border/80 shadow-xs hover:shadow-sm transition-all duration-300 overflow-hidden"
+                            >
+                              {/* Table Header Bar - Clean Institutional Standard */}
+                              <div className="bg-muted/30 border-b border-border/80 px-5 py-4 sm:px-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                <div className="space-y-0.5">
+                                  <h3 className="text-base sm:text-lg font-bold text-secondary tracking-wide">
+                                    {table.title}
+                                  </h3>
+                                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                                    <span>Curriculum Matrix</span>
+                                    <span>•</span>
+                                    <span>{table.rows.length} Subjects</span>
+                                  </div>
+                                </div>
+                                <div className="flex items-center gap-2 shrink-0">
+                                  <span className="px-2.5 py-1 bg-card border border-border text-secondary rounded-full text-xs font-bold">
+                                    R23
+                                  </span>
+                                  <span className="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-xs font-bold shadow-xs">
+                                    Total: {calculateTableCredits(table.rows)} Credits
+                                  </span>
+                                </div>
                               </div>
+
+                              {/* Table Content */}
                               <div className="overflow-x-auto">
-                                <table className="w-full text-sm border-collapse">
+                                <table className="w-full text-sm border-collapse text-left">
                                   <thead>
-                                    <tr className="bg-[#8b0000]/10 text-secondary border-b border-border text-xs uppercase font-bold tracking-wider">
+                                    <tr className="bg-muted/40 text-secondary border-b border-border text-xs uppercase font-bold tracking-wider divide-x divide-border/60">
                                       <th className="py-3.5 px-4 text-center w-16">S.No</th>
-                                      <th className="py-3.5 px-4 text-left">Name of the Subject</th>
-                                      <th className="py-3.5 px-4 text-center w-32">Theory/Lab</th>
-                                      <th className="py-3.5 px-4 text-center w-24">Credits</th>
+                                      <th className="py-3.5 px-6">Name of the Subject</th>
+                                      <th className="py-3.5 px-4 text-center w-36">Theory / Lab</th>
+                                      <th className="py-3.5 px-4 text-center w-28">Credits</th>
                                     </tr>
                                   </thead>
                                   <tbody className="divide-y divide-border/60">
-                                    {table.rows.map((row, rIdx) => (
-                                      <tr key={rIdx} className="hover:bg-primary/[0.03] transition-colors even:bg-muted/20">
-                                        <td className="py-3 px-4 text-center text-muted-foreground font-medium">{row.sno}</td>
-                                        <td className="py-3 px-4 font-medium text-secondary">{row.name}</td>
-                                        <td className="py-3 px-4 text-center">
-                                          <span className={`inline-block px-2.5 py-0.5 rounded text-xs font-semibold ${
-                                            row.type.toLowerCase().includes('lab') || row.type.toLowerCase().includes('workshop')
-                                              ? 'bg-amber-100 text-amber-900 border border-amber-200'
-                                              : row.type.toLowerCase().includes('theory')
-                                              ? 'bg-blue-50 text-blue-900 border border-blue-200'
-                                              : 'bg-emerald-50 text-emerald-900 border border-emerald-200'
-                                          }`}>
-                                            {row.type}
-                                          </span>
+                                    {matchingRows.map((row, rIdx) => (
+                                      <tr key={rIdx} className="hover:bg-muted/20 transition-colors even:bg-muted/10 divide-x divide-border/60">
+                                        <td className="py-3.5 px-4 text-center font-medium text-muted-foreground text-xs">
+                                          {row.sno}
                                         </td>
-                                        <td className="py-3 px-4 text-center font-bold text-primary">{row.credits}</td>
+                                        <td className="py-3.5 px-6 font-semibold text-secondary">
+                                          {row.name}
+                                        </td>
+                                        <td className="py-3.5 px-4 text-center text-sm font-medium text-muted-foreground">
+                                          {row.type}
+                                        </td>
+                                        <td className="py-3.5 px-4 text-center text-sm font-bold text-secondary">
+                                          {row.credits}
+                                        </td>
                                       </tr>
                                     ))}
                                   </tbody>
                                 </table>
                               </div>
                             </div>
-                          ))
-                        ) : (
-                          <Card className="p-8 text-center text-muted-foreground">
-                            <GraduationCap className="w-12 h-12 mx-auto mb-3 text-muted-foreground/50" />
-                            <p className="font-semibold text-lg">Course Syllabus will be updated soon.</p>
-                          </Card>
-                        )}
-                      </div>
-                    )}
+                          ))}
+                        </div>
+                      );
+                    })()}
                   </div>
                 </div>
-              </motion.div>
-            )}
+              )}
+            </motion.div>
+          )}
 
             {activeSection === "faculty" && (
               <motion.div
@@ -1505,6 +1938,211 @@ const DepartmentPage = () => {
                     </div>
                   );
                 }))}
+              </motion.div>
+            )}
+
+            {activeSection === "more" && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-6"
+              >
+                {/* Header & Section Title - Clean title only */}
+                <div className="pb-4 border-b border-border/60">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-secondary flex items-center gap-2.5" style={{ fontFamily: "var(--font-display)" }}>
+                    <Layers className="w-7 h-7 text-primary" />
+                    {activeMoreTab === "minor" ? (
+                      <span>Minor <span className="text-primary">Degree</span></span>
+                    ) : activeMoreTab === "mentor-mentee" ? (
+                      <span>Mentor & <span className="text-primary">Mentee</span></span>
+                    ) : activeMoreTab === "interdisciplinary-projects" ? (
+                      <span>Interdisciplinary <span className="text-primary">Projects</span></span>
+                    ) : (
+                      <span>More <span className="text-primary">Information</span></span>
+                    )}
+                  </h2>
+                </div>
+
+                {/* Content Area */}
+                {activeMoreTab === "mentor-mentee" ? (
+                  <div className="space-y-6">
+                    {moreData.mentorMentee && moreData.mentorMentee.length > 0 ? (
+                      <Card className="border border-border/80 shadow-xs bg-card p-6 sm:p-8">
+                        <div className="space-y-8">
+                          {moreData.mentorMentee.map((group, gIdx) => (
+                            <div key={gIdx} className="space-y-4">
+                              <h3 className="text-xl font-bold text-secondary tracking-tight">
+                                {group.groupTitle}
+                              </h3>
+
+                              <div className="space-y-3 pl-1">
+                                {group.items.map((item, iIdx) => (
+                                  <a
+                                    key={iIdx}
+                                    href={item.pdfUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 py-1 text-secondary hover:text-primary transition-colors text-sm sm:text-base"
+                                  >
+                                    <div className="w-4.5 h-4.5 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                                      <ChevronRight className="w-3 h-3 stroke-[3]" />
+                                    </div>
+                                    <span className="font-medium text-muted-foreground group-hover:text-primary group-hover:underline transition-colors">
+                                      {item.title}
+                                    </span>
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </Card>
+                    ) : (
+                      <Card className="p-10 text-center text-muted-foreground bg-card">
+                        <Users className="w-12 h-12 mx-auto mb-3 text-muted-foreground/40" />
+                        <p className="font-semibold text-base text-secondary">Mentor-Mentee allocation details will be uploaded soon.</p>
+                      </Card>
+                    )}
+                  </div>
+                ) : activeMoreTab === "minor" ? (
+                  <div className="space-y-6">
+                    {moreData.minor ? (
+                      <Card className="border border-border/80 shadow-xs overflow-hidden bg-card">
+                        {/* Header */}
+                        <div className="bg-muted/30 border-b border-border/70 p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                          <div className="flex items-start gap-4">
+                            <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 mt-0.5">
+                              <GraduationCap className="w-6 h-6 text-primary" />
+                            </div>
+                            <div>
+                              <span className="text-xs uppercase font-bold tracking-widest text-primary">Interdisciplinary Specialization</span>
+                              <h3 className="text-2xl sm:text-3xl font-bold text-secondary mt-0.5" style={{ fontFamily: "var(--font-display)" }}>
+                                {moreData.minor.title}
+                              </h3>
+                              {moreData.minor.tagline && (
+                                <p className="text-xs sm:text-sm font-medium text-muted-foreground mt-1">
+                                  {moreData.minor.tagline}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+
+                          {moreData.minor.pdfUrl && (
+                            <a
+                              href={moreData.minor.pdfUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm shadow-xs transition-colors shrink-0 self-start md:self-center"
+                            >
+                              <FileText className="w-4 h-4" />
+                              <span>{moreData.minor.pdfLabel || "Download Minor Syllabus"}</span>
+                            </a>
+                          )}
+                        </div>
+
+                        <CardContent className="p-6 sm:p-8 space-y-8">
+                          {/* Overview */}
+                          <div>
+                            <h4 className="text-base font-bold text-secondary mb-3 flex items-center gap-2">
+                              <Eye className="w-4 h-4 text-primary" /> Overview & Purpose
+                            </h4>
+                            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                              {moreData.minor.overview}
+                            </p>
+                          </div>
+
+                          {/* Sections / Highlights Grid */}
+                          {moreData.minor.highlights && moreData.minor.highlights.length > 0 && (
+                            <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-border/60">
+                              {moreData.minor.highlights.map((sec, sIdx) => (
+                                <div key={sIdx} className="bg-muted/20 border border-border/70 rounded-xl p-5 space-y-3">
+                                  <h5 className="font-bold text-secondary text-sm sm:text-base flex items-center gap-2">
+                                    <div className="w-2 h-2 rounded-full bg-primary" />
+                                    {sec.title}
+                                  </h5>
+                                  <ul className="space-y-2 pl-1">
+                                    {sec.points.map((pt, pIdx) => (
+                                      <li key={pIdx} className="text-xs sm:text-sm text-muted-foreground flex items-start gap-2 leading-relaxed">
+                                        <span className="text-primary font-bold mt-0.5">•</span>
+                                        <span>{pt}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* PDF Document direct bullet link */}
+                          {moreData.minor.pdfUrl && (
+                            <div className="pt-4 border-t border-border/60">
+                              <h5 className="text-sm font-bold text-secondary mb-3">Official Curriculum & Regulations</h5>
+                              <a
+                                href={moreData.minor.pdfUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex items-center gap-3 py-1 text-secondary hover:text-primary transition-colors text-sm sm:text-base"
+                              >
+                                <div className="w-4.5 h-4.5 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                                  <ChevronRight className="w-3 h-3 stroke-[3]" />
+                                </div>
+                                <span className="font-medium text-muted-foreground group-hover:text-primary group-hover:underline transition-colors">
+                                  {moreData.minor.pdfLabel || "Minor - 2025-26"}
+                                </span>
+                              </a>
+                            </div>
+                          )}
+                        </CardContent>
+                      </Card>
+                    ) : (
+                      <Card className="p-10 text-center text-muted-foreground bg-card">
+                        <GraduationCap className="w-12 h-12 mx-auto mb-3 text-muted-foreground/40" />
+                        <p className="font-semibold text-base text-secondary">Minor degree program details will be updated soon.</p>
+                      </Card>
+                    )}
+                  </div>
+                ) : activeMoreTab === "interdisciplinary-projects" ? (
+                  <div className="space-y-6">
+                    {moreData.interdisciplinaryProjects && moreData.interdisciplinaryProjects.length > 0 ? (
+                      <Card className="border border-border/80 shadow-xs bg-card p-6 sm:p-8">
+                        <div className="space-y-8">
+                          {moreData.interdisciplinaryProjects.map((group, gIdx) => (
+                            <div key={gIdx} className="space-y-4">
+                              <h3 className="text-xl font-bold text-secondary tracking-tight">
+                                {group.groupTitle}
+                              </h3>
+
+                              <div className="space-y-3 pl-1">
+                                {group.items.map((item, iIdx) => (
+                                  <a
+                                    key={iIdx}
+                                    href={item.pdfUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 py-1 text-secondary hover:text-primary transition-colors text-sm sm:text-base"
+                                  >
+                                    <div className="w-4.5 h-4.5 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                                      <ChevronRight className="w-3 h-3 stroke-[3]" />
+                                    </div>
+                                    <span className="font-medium text-muted-foreground group-hover:text-primary group-hover:underline transition-colors">
+                                      {item.title}
+                                    </span>
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </Card>
+                    ) : (
+                      <Card className="p-10 text-center text-muted-foreground bg-card">
+                        <Layers className="w-12 h-12 mx-auto mb-3 text-muted-foreground/40" />
+                        <p className="font-semibold text-base text-secondary">Interdisciplinary project details will be uploaded soon.</p>
+                      </Card>
+                    )}
+                  </div>
+                ) : null}
               </motion.div>
             )}
           </main>
